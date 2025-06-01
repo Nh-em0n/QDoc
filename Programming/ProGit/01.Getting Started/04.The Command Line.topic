@@ -1,1 +1,30 @@
-<sn></sn><config style='display:none'><tags>#04.the command line</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 18:36:53 GMT+0600 (Bangladesh Standard Time)</udate><id>article-0nI05jjQCR</id><duration></duration></config>
+<sn><md>## The Command Line
+---
+
+There are a lot of different ways to use Git.
+There are the original **command-line tools**, and there are many **graphical user interfaces** of varying capabilities.
+
+For this book, we will be using Git on the **command line**.
+
+---
+
+### Why Use the Command Line?
+---
+
+* The command line is the **only place you can run all Git commands** — most of the GUIs implement only a **partial subset** of Git functionality for simplicity.
+* If you know how to run the **command-line version**, you can probably also figure out how to run the GUI version, while the **opposite is not necessarily true**.
+* While your choice of graphical client is a matter of **personal taste**, all users will have the **command-line tools installed and available**.
+
+---
+
+### Prerequisite
+---
+
+So we will expect you to know how to:
+
+* Open **Terminal** in macOS
+* Or open **Command Prompt** or **PowerShell** in Windows
+
+&gt; If you don’t know what we’re talking about here, you may need to **stop and research** that quickly so that you can follow the rest of the examples and descriptions in this book.
+
+</md></sn><config style="display:none"><tags>#04.the command line</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 20:19:18 GMT+0600 (Bangladesh Standard Time)</udate><id>article-0nI05jjQCR</id><duration></duration></config>
