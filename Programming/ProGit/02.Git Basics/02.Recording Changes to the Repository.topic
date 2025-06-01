@@ -92,7 +92,7 @@ The new `README` file appears under the **Untracked files** heading because:
 Git won’t include untracked files in commits until you explicitly tell it to with `git add`. This prevents accidentally committing temporary or generated files.
 
 Since you do want to start tracking `README`, you’ll need to explicitly stage it.
-^^undefined^^undefined</file></md></sn><config style="display:none"><tags>#02.recording changes to the repository</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 22:48:27 GMT+0600 (Bangladesh Standard Time)</udate><id>article-4EuNVZlCAI</id><duration></duration></config><sn><md>## Tracking New Files
+^^undefined^^undefined</file></md></sn><config style="display:none"><tags>#02.recording changes to the repository</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 22:52:56 GMT+0600 (Bangladesh Standard Time)</udate><id>article-4EuNVZlCAI</id><duration></duration></config><sn><md>## Tracking New Files
 ---
 
 #### Adding New Files to Git
@@ -584,4 +584,203 @@ Output example:
 * Anything not staged will remain as modified and can be committed later.
 
 Every commit creates a point in history you can return to or compare against, making version tracking in Git both powerful and flexible.
-</md></sn>
+</md></sn><sn><md>## Skipping the Staging Area
+
+### Quick Commits with `-a`
+
+The staging area allows precise control, but sometimes you just want to commit all your modifications quickly. Git offers a shortcut: use the `-a` flag with `git commit`.
+
+```bash
+$ git commit -a -m "Add new benchmarks"
+```
+
+This:
+
+* Automatically stages all **tracked** files with modifications.
+* Skips the need to run `git add` manually.
+
+**Example:**
+
+```bash
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file class="undefined d-none">..." to update what will be committed)
+  (use "git checkout -- <file class="undefined d-none">..." to discard changes in working directory)
+	modified:   CONTRIBUTING.md
+
+$ git commit -a -m 'Add new benchmarks'
+[master 83e38c7] Add new benchmarks
+ 1 file changed, 5 insertions(+), 0 deletions(-)
+```
+
+Be cautious: `-a` stages **all changes to tracked files**, which may include things you didn’t intend to commit.
+
+---
+
+## Removing Files
+
+To delete files from your Git project:
+
+### Simple Removal
+
+If you remove a file using `rm` and then check status:
+
+```bash
+$ rm PROJECTS.md
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file class="undefined d-none">..." to update what will be committed)
+  (use "git checkout -- <file class="undefined d-none">..." to discard changes in working directory)
+	deleted:    PROJECTS.md
+```
+
+You must then run:
+
+```bash
+$ git rm PROJECTS.md
+rm 'PROJECTS.md'
+```
+
+This stages the removal. After that:
+
+```bash
+$ git commit -m "Remove PROJECTS.md"
+```
+
+---
+
+### Force Removal with `-f`
+
+If the file was already staged or modified, you must force the removal:
+
+```bash
+$ git rm -f PROJECTS.md
+```
+
+This is a safeguard to avoid accidentally deleting unsaved work.
+
+---
+
+### Keep the File, Remove from Git
+
+To untrack a file but **keep it in your working directory**, use:
+
+```bash
+$ git rm --cached README
+```
+
+This is useful when you’ve accidentally added a file that should’ve been in `.gitignore`.
+
+---
+
+### Using Globs with `git rm`
+
+You can use patterns to remove multiple files:
+
+```bash
+$ git rm log/\*.log
+```
+
+Note the `\` before `*` — this prevents the shell from expanding the pattern before Git processes it.
+
+```bash
+$ git rm \*~
+```
+
+This command removes all files ending with `~`.
+
+---
+
+### Summary
+
+| Task                              | Command Example                     |
+| --------------------------------- | ----------------------------------- |
+| Commit all tracked file changes   | `git commit -a -m "message"`        |
+| Remove and stop tracking a file   | `git rm filename`                   |
+| Force remove staged/modified file | `git rm -f filename`                |
+| Keep file locally, untrack in Git | `git rm --cached filename`          |
+| Remove using wildcards            | `git rm dir/\*.ext` or `git rm \*~` |
+
+By combining these commands, you can manage tracked files more efficiently and keep your Git history clean.
+</file></file></file></file></md></sn><sn><md>## Moving Files
+
+### Git Doesn't Track Renames Explicitly
+
+Unlike many version control systems, Git **does not explicitly track file renames**. When you rename or move a file, Git doesn’t record metadata about the rename. Instead, it **infers** renames by comparing the content of files across commits.
+
+Despite this, Git provides a `git mv` command for convenience.
+
+---
+
+### Using `git mv`
+
+To rename or move a file:
+
+```bash
+$ git mv file_from file_to
+```
+
+Example:
+
+```bash
+$ git mv README.md README
+```
+
+Then check the status:
+
+```bash
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file class="undefined d-none">..." to unstage)
+	renamed:    README.md -&gt; README
+```
+
+Git recognizes this as a rename because the content remains similar.
+
+---
+
+### Equivalent Manual Steps
+
+The following commands achieve the same effect:
+
+```bash
+$ mv README.md README
+$ git rm README.md
+$ git add README
+```
+
+So `git mv` is essentially a shortcut for:
+
+1. Moving the file with `mv`
+2. Removing the old path with `git rm`
+3. Adding the new path with `git add`
+
+---
+
+### Key Notes
+
+* **`git mv` is a convenience**, not a requirement.
+* Git will detect renames **even if done manually**, as long as you add and commit the changes appropriately.
+* You can also use **other tools** or GUI apps to rename/move files — just remember to stage the changes before committing.
+
+---
+
+### Summary
+
+| Task                    | Command                                                       |
+| ----------------------- | ------------------------------------------------------------- |
+| Rename/move with Git    | `git mv oldname newname`                                      |
+| Rename/move manually    | `mv oldname newname`<br>`git rm oldname`<br>`git add newname` |
+| Check status after move | `git status`                                                  |
+
+Use `git mv` for simplicity, or perform the steps manually — Git handles both equally well.
+</file></md></sn>
