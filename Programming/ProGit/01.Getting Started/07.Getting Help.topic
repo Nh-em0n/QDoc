@@ -1,1 +1,73 @@
-<sn></sn><config style='display:none'><tags>#07.getting help</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 18:37:27 GMT+0600 (Bangladesh Standard Time)</udate><id>article-F5HWNfXN51</id><duration></duration></config>
+<sn><md>## Getting Help
+---
+
+If you ever need help while using Git, there are **three equivalent ways** to get the comprehensive manual page (manpage) help for any of the Git commands:
+
+```bash
+$ git help <verb>
+$ git <verb> --help
+$ man git-<verb>
+```
+
+### Example:
+---
+
+To get the manpage help for the `git config` command, run:
+
+```bash
+$ git help config
+```
+
+These commands are helpful because they are available **anywhere, even offline**.
+
+
+### In-Person Help
+---
+
+If the manpages and this book aren’t enough and you need **in-person help**, you can try the following IRC channels:
+
+* `#git`
+* `#github`
+* `#gitlab`
+
+These are located on the **Libera Chat IRC server**, which you can access at:
+[https://libera.chat/](https://libera.chat/)
+
+&gt; These channels are regularly filled with hundreds of people who are very knowledgeable about Git and often willing to help.
+
+
+### Quick Help with `-h`
+---
+
+If you don’t need the **full manpage**, but just a **quick refresher** on available options for a Git command, use the `-h` option.
+
+#### Example:
+
+```bash
+$ git add -h
+```
+
+Sample output:
+
+```
+usage: git add [<options>] [--] <pathspec>...
+
+-n, --dry-run             dry run
+-v, --verbose             be verbose
+-i, --interactive         interactive picking
+-p, --patch               select hunks interactively
+-e, --edit                edit current diff and apply
+-f, --force               allow adding otherwise ignored files
+-u, --update              update tracked files
+--renormalize             renormalize EOL of tracked files (implies -u)
+-N, --intent-to-add       record only the fact that the path will be added later
+-A, --all                 add changes from all tracked and untracked files
+--ignore-removal          ignore paths removed in the working tree (same as --no-ignore-missing)
+--refresh                 don't add, only refresh the index
+--ignore-errors           just skip files which cannot be added because of errors
+--sparse                  allow updating entries outside of the sparse-checkout cone
+--chmod (+|-)x            override the executable bit of the listed files
+--pathspec-from-file <file class="undefined d-none">  read pathspec from file
+--pathspec-file-nul       with --pathspec-from-file, pathspec elements are separated with NUL character
+```
+</file></pathspec></options></verb></verb></verb></md></sn><config style="display:none"><tags>#07.getting help</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 21:00:36 GMT+0600 (Bangladesh Standard Time)</udate><id>article-F5HWNfXN51</id><duration></duration></config>
