@@ -1,1 +1,172 @@
-<sn></sn><config style='display:none'><tags>#05.installing git</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 18:37:04 GMT+0600 (Bangladesh Standard Time)</udate><id>article-CBVVvVjHUY</id><duration></duration></config>
+<sn><md>## Installing Git
+---
+
+Before you start using Git, you have to make it available on your computer.
+Even if it’s already installed, it’s probably a good idea to update to the latest version.
+
+You can either:
+
+* Install it as a package or via another installer, or
+* Download the source code and compile it yourself.
+
+&gt; **Note:** This book was written using Git version 2. Since Git is quite excellent at preserving backwards compatibility, any recent version should work just fine.
+&gt; Though most of the commands we use should work even in ancient versions of Git, some of them might not or might act slightly differently.
+
+---
+
+### Installing on Linux
+---
+
+If you want to install the basic Git tools on Linux via a binary installer, you can generally do so through the **package management tool** that comes with your distribution.
+
+**Fedora / RHEL / CentOS:**
+
+```bash
+$ sudo dnf install git-all
+```
+
+**Debian / Ubuntu:**
+
+```bash
+$ sudo apt install git-all
+```
+
+&gt; For more options, refer to the official Git instructions for various Unix distributions at:
+&gt; [https://git-scm.com/download/linux](https://git-scm.com/download/linux)
+
+---
+
+### Installing on macOS
+---
+
+There are several ways to install Git on macOS.
+The easiest is probably to install the **Xcode Command Line Tools**.
+
+#### Option 1: Via Terminal
+
+On Mavericks (10.9) or above, run:
+
+```bash
+$ git --version
+```
+
+If you don’t have Git installed already, it will prompt you to install it.
+
+#### Option 2: macOS Git Installer
+
+You can also install a more up-to-date version via a binary installer, available at:
+[https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+
+&gt; *Figure 7. Git macOS installer*
+
+---
+
+### Installing on Windows
+---
+
+There are a few ways to install Git on Windows.
+
+#### Option 1: Official Git for Windows Installer
+
+Download it from:
+[https://git-scm.com/download/win](https://git-scm.com/download/win)
+The download starts automatically.
+
+&gt; This is a project called **Git for Windows**, which is separate from Git itself.
+&gt; Learn more at: [https://gitforwindows.org](https://gitforwindows.org)
+
+#### Option 2: Chocolatey (Automated Installation)
+
+Use the **community-maintained Chocolatey** Git package for automation.
+
+---
+
+### Installing from Source
+---
+
+Some people may find it useful to install Git from source to get the **most recent version**.
+
+&gt; The binary installers may lag behind the latest release, though this matters less today than in the past.
+
+#### Required Dependencies
+
+##### Fedora-based (using `dnf`):
+
+```bash
+$ sudo dnf install dh-autoreconf curl-devel expat-devel gettext-devel \
+openssl-devel perl-devel zlib-devel
+```
+
+##### Debian-based (using `apt`):
+
+```bash
+$ sudo apt-get install dh-autoreconf libcurl4-gnutls-dev libexpat1-dev \
+gettext libz-dev libssl-dev
+```
+
+#### Optional: Documentation Dependencies
+
+##### Fedora:
+
+```bash
+$ sudo dnf install asciidoc xmlto docbook2X
+```
+
+##### Debian:
+
+```bash
+$ sudo apt-get install asciidoc xmlto docbook2x
+```
+
+&gt; **Note:**
+&gt; Users of **RHEL** and RHEL-derivatives like **CentOS** and **Scientific Linux** will need to **enable the EPEL repository** to download the `docbook2X` package.
+
+##### Additional packages:
+
+**Debian:**
+
+```bash
+$ sudo apt-get install install-info
+```
+
+**Fedora:**
+
+```bash
+$ sudo dnf install getopt
+```
+
+Also, create a symbolic link for `docbook2x-texi`:
+
+```bash
+$ sudo ln -s /usr/bin/db2x_docbook2texi /usr/bin/docbook2x-texi
+```
+
+---
+
+#### Downloading and Compiling Git
+
+Get the **latest tagged release tarball** from either:
+
+* [https://www.kernel.org/pub/software/scm/git](https://www.kernel.org/pub/software/scm/git)
+* [https://github.com/git/git/tags](https://github.com/git/git/tags)
+
+&gt; The GitHub page is generally clearer on the latest version.
+&gt; The kernel.org page includes **release signatures** for verification.
+
+#### Compile and Install
+
+```bash
+$ tar -zxf git-2.8.0.tar.gz
+$ cd git-2.8.0
+$ make configure
+$ ./configure --prefix=/usr
+$ make all doc info
+$ sudo make install install-doc install-html install-info
+```
+
+After installation, you can get Git updates via Git itself:
+
+```bash
+$ git clone https://git.kernel.org/pub/scm/git/git.git
+```
+</md></sn><config style="display:none"><tags>#05.installing git</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 20:24:14 GMT+0600 (Bangladesh Standard Time)</udate><id>article-CBVVvVjHUY</id><duration></duration></config>
