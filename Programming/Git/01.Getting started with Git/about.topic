@@ -1,1 +1,17 @@
-<sn></sn><config style='display:none'><tags>#about</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 17:33:47 GMT+0600 (Bangladesh Standard Time)</udate><id>article-4oJQWCIvE4</id><duration></duration></config>
+<sn><md>### About
+---
+
+Here is the table of topics for Chapter 1:
+
+| Index | Topic Name                                           | Description                                                                                                      |
+| :---- | :--------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| 1.1   | Create your first repository, then add and commit files | Covers the fundamental steps of initializing a new Git repository, adding files to the staging area, and saving changes with a commit. |
+| 1.2   | Clone a repository                               | Explains how to obtain a copy of an existing Git repository from a remote server to your local machine. |
+| 1.3   | Sharing code                                     | Discusses the process of setting up a remote server repository and copying (pushing) your local repository to it for collaboration. |
+| 1.4   | Setting your user name and email                 | Details how to configure your identity (name and email address) that will be associated with your commits. |
+| 1.5   | Setting up the upstream remote                   | Explains how to configure a remote repository as the "upstream" source for fetching updates, particularly useful for working with forks. |
+| 1.6   | Learning about a command                         | Shows how to use Git's built-in help feature (`--help` or `help` options) to get documentation on commands. |
+| 1.7   | Set up SSH for Git                               | Provides instructions on generating and setting up SSH keys for secure authentication when interacting with remote repositories. |
+| 1.8   | Git Installation                                 | Covers different methods for installing Git on various operating systems, including installing from source or using package managers. |
+
+</md></sn><config style="display:none"><tags>#about</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 17:40:00 GMT+0600 (Bangladesh Standard Time)</udate><id>article-4oJQWCIvE4</id><duration></duration></config>
