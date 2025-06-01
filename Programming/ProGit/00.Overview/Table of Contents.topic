@@ -1,1 +1,103 @@
-<sn></sn><config style='display:none'><tags>#table of contents</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 18:25:47 GMT+0600 (Bangladesh Standard Time)</udate><id>article-RcoV9aMoKZ</id><duration></duration></config>
+<sn><md>### Table of Contents
+---
+
+
+| Chapter                  | Topic                                        |
+| :----------------------- | :------------------------------------------- |
+| Preface by Scott Chacon  |                                              |
+| Preface by Ben Straub    |                                              |
+| Dedications              |                                              |
+| Contributors             |                                              |
+| Introduction             |                                              |
+| Getting Started          | About Version Control                        |
+|                          | A Short History of Git                       |
+|                          | What is Git?                                 |
+|                          | The Command Line                             |
+|                          | Installing Git                               |
+|                          | First-Time Git Setup                         |
+|                          | Getting Help                                 |
+|                          | Summary                                      |
+| Git Basics               | Getting a Git Repository                     |
+|                          | Recording Changes to the Repository          |
+|                          | Viewing the Commit History                   |
+|                          | Undoing Things                               |
+|                          | Working with Remotes                         |
+|                          | Tagging                                      |
+|                          | Git Aliases                                  |
+|                          | Summary                                      |
+| Git Branching            | Branches in a Nutshell                       |
+|                          | Basic Branching and Merging                  |
+|                          | Branch Management                            |
+|                          | Branching Workflows                          |
+|                          | Remote Branches                              |
+|                          | Rebasing                                     |
+|                          | Summary                                      |
+| Git on the Server        | The Protocols                                |
+|                          | Getting Git on a Server                      |
+|                          | Generating Your SSH Public Key               |
+|                          | Setting Up the Server                        |
+|                          | Git Daemon                                   |
+|                          | Smart HTTP                                   |
+|                          | GitWeb                                       |
+|                          | GitLab                                       |
+|                          | Third Party Hosted Options                   |
+|                          | Summary                                      |
+| Distributed Git          | Distributed Workflows                        |
+|                          | Contributing to a Project                    |
+|                          | Maintaining a Project                        |
+|                          | Summary                                      |
+| GitHub                   | Account Setup and Configuration              |
+|                          | Contributing to a Project                    |
+|                          | Maintaining a Project                        |
+|                          | Managing an organization                     |
+|                          | Scripting GitHub                             |
+|                          | Summary                                      |
+| Git Tools                | Revision Selection                           |
+|                          | Interactive Staging                          |
+|                          | Stashing and Cleaning                        |
+|                          | Signing Your Work                            |
+|                          | Searching                                    |
+|                          | Rewriting History                            |
+|                          | Reset Demystified                            |
+|                          | Advanced Merging                             |
+|                          | Rerere                                       |
+|                          | Debugging with Git                           |
+|                          | Submodules                                   |
+|                          | Bundling                                     |
+|                          | Replace                                      |
+|                          | Credential Storage                           |
+|                          | Summary                                      |
+| Customizing Git          | Git Configuration                            |
+|                          | Git Attributes                               |
+|                          | Git Hooks                                    |
+|                          | An Example Git-Enforced Policy               |
+|                          | Summary                                      |
+| Git and Other Systems    | Git as a Client                              |
+|                          | Migrating to Git                             |
+|                          | Summary                                      |
+| Git Internals            | Plumbing and Porcelain                       |
+|                          | Git Objects                                  |
+|                          | Git References                               |
+|                          | Packfiles                                    |
+|                          | The Refspec                                  |
+|                          | Transfer Protocols                           |
+|                          | Maintenance and Data Recovery                |
+|                          | Environment Variables                        |
+|                          | Summary                                      |
+| Appendix A               | Git in Other Environments                    |
+| Appendix B               | Embedding Git in your Applications           |
+| Appendix C               | Git Commands                                 |
+|                          | Setup and Config                             |
+|                          | Getting and Creating Projects                |
+|                          | Basic Snapshotting                           |
+|                          | Branching and Merging                        |
+|                          | Sharing and Updating Projects                |
+|                          | Inspection and Comparison                     |
+|                          | Debugging                                    |
+|                          | Patching                                     |
+|                          | Email                                        |
+|                          | External Systems                             |
+|                          | Administration                               |
+|                          | Plumbing Commands                            |
+| Index                    |                                              |
+</md></sn><config style="display:none"><tags>#table of contents</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 18:27:26 GMT+0600 (Bangladesh Standard Time)</udate><id>article-RcoV9aMoKZ</id><duration></duration></config>
