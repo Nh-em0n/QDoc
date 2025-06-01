@@ -78,7 +78,7 @@ On branch master
 Your branch is up-to-date with 'origin/master'.
 
 Untracked files:
-  (use "git add <file class="undefined d-none">..." to include in what will be committed)
+  (use "git add <file>..." to include in what will be committed)
   README
 
 nothing added to commit but untracked files present (use "git add" to track)
@@ -92,4 +92,119 @@ The new `README` file appears under the **Untracked files** heading because:
 Git won’t include untracked files in commits until you explicitly tell it to with `git add`. This prevents accidentally committing temporary or generated files.
 
 Since you do want to start tracking `README`, you’ll need to explicitly stage it.
-</file></md></sn><config style="display:none"><tags>#02.recording changes to the repository</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 22:29:15 GMT+0600 (Bangladesh Standard Time)</udate><id>article-4EuNVZlCAI</id><duration></duration></config>
+^^undefined^^undefined</file></md></sn><config style="display:none"><tags>#02.recording changes to the repository</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 22:34:28 GMT+0600 (Bangladesh Standard Time)</udate><id>article-4EuNVZlCAI</id><duration></duration></config><sn><md>## Tracking New Files
+---
+
+#### Adding New Files to Git
+
+To begin tracking a new file, use the `git add` command. For example, to start tracking a `README` file:
+
+```
+$ git add README
+```
+
+#### Checking Status After Adding
+
+After running the `git add` command, check the status:
+
+```
+$ git status
+On branch master  
+Your branch is up-to-date with 'origin/master'.  
+Changes to be committed:  
+  (use "git restore --staged <file class="undefined d-none">..." to unstage)  
+  new file: README
+```
+
+You’ll notice that the `README` file is now tracked and **staged** for the next commit. It's listed under the **"Changes to be committed"** heading, indicating that it will be included in the next snapshot if you run `git commit`.
+
+### Behavior of `git add`
+
+The `git add` command saves the version of the file as it existed at the time of the command. Any subsequent changes must be staged again if you want them included.
+
+When you ran `git init` earlier and then executed `git add <files>`, it started tracking all existing files. The `git add` command accepts:
+
+* A single file path
+* A directory path (recursively adds all files inside)
+</files></file></md></sn><sn><md>## Staging Modified Files
+
+### Modifying a Tracked File
+
+Suppose you modify a previously tracked file, such as `CONTRIBUTING.md`, and then run:
+
+```
+$ git status
+On branch master  
+Your branch is up-to-date with 'origin/master'.  
+
+Changes to be committed:  
+  (use "git reset HEAD <file class="undefined d-none">..." to unstage)  
+  new file: README  
+
+Changes not staged for commit:  
+  (use "git add <file class="undefined d-none">..." to update what will be committed)  
+  (use "git checkout -- <file class="undefined d-none">..." to discard changes in working directory)  
+  modified: CONTRIBUTING.md
+```
+
+The file appears under **"Changes not staged for commit"**, which means it's tracked and modified but not staged.
+
+### Staging the Modified File
+
+To stage the modified file, use:
+
+```
+$ git add CONTRIBUTING.md
+$ git status
+On branch master  
+Your branch is up-to-date with 'origin/master'.  
+
+Changes to be committed:  
+  (use "git reset HEAD <file class="undefined d-none">..." to unstage)  
+  new file: README  
+  modified: CONTRIBUTING.md
+```
+
+Now both files are staged and ready for the next commit.
+
+### Editing Again After Staging
+
+Suppose you remember another edit for `CONTRIBUTING.md`, make the change, and then check the status:
+
+```
+$ vim CONTRIBUTING.md
+$ git status
+On branch master  
+Your branch is up-to-date with 'origin/master'.  
+
+Changes to be committed:  
+  (use "git reset HEAD <file class="undefined d-none">..." to unstage)  
+  new file: README  
+  modified: CONTRIBUTING.md  
+
+Changes not staged for commit:  
+  (use "git add <file class="undefined d-none">..." to update what will be committed)  
+  (use "git checkout -- <file class="undefined d-none">..." to discard changes in working directory)  
+  modified: CONTRIBUTING.md
+```
+
+Now `CONTRIBUTING.md` appears in both staged and unstaged sections.
+
+### Why This Happens
+
+Git stages the **exact version** of a file at the moment you run `git add`. If you modify the file afterward, those changes are not yet staged. To stage the updated content, run:
+
+```
+$ git add CONTRIBUTING.md
+$ git status
+On branch master  
+Your branch is up-to-date with 'origin/master'.  
+
+Changes to be committed:  
+  (use "git reset HEAD <file class="undefined d-none">..." to unstage)  
+  new file: README  
+  modified: CONTRIBUTING.md
+```
+
+Now the most recent version of the file is staged and ready to be committed.
+</file></file></file></file></file></file></file></file></md></sn>
