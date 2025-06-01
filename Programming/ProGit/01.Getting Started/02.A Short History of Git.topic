@@ -1,1 +1,38 @@
-<sn></sn><config style='display:none'><tags>#02.a short history of git</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 18:36:28 GMT+0600 (Bangladesh Standard Time)</udate><id>article-eHfzMB4Ehg</id><duration></duration></config>
+<sn><md>## A Short History of Git
+---
+
+![image](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/512px-Git-logo.svg.png?20160811101906)
+
+As with many great innovations, **Git** was born from a mix of **creative destruction** and **fiery controversy**.
+
+### Early Linux Development (1991–2002)
+
+The **Linux kernel**, a large and complex open-source project, initially relied on **patches** and **archived files** passed around between developers to manage changes. This process worked but was cumbersome and inefficient as the project grew.
+
+### The BitKeeper Era (2002–2005)
+
+In 2002, the Linux community adopted a **proprietary Distributed Version Control System (DVCS)** called **BitKeeper**. This tool was a significant improvement in workflow and collaboration for the kernel's development.
+
+However, in 2005, the relationship between the Linux community and the company behind BitKeeper deteriorated. The company revoked the tool's free-of-charge status, leaving the Linux community without a version control system that met their needs.
+
+### The Birth of Git (2005)
+
+This conflict led **Linus Torvalds** (the creator of Linux) and the Linux development community to build their own tool. Drawing on lessons learned from BitKeeper, they established a set of goals for their new system:
+
+* **Speed**
+* **Simple design**
+* **Strong support for non-linear development** (e.g., thousands of parallel branches)
+* **Fully distributed**
+* **Efficient handling of large projects** (both in terms of performance and data size)
+
+### Git's Evolution
+
+Since its creation in 2005, **Git** has matured into a powerful and widely-used version control system. It retains the qualities it was originally designed for:
+
+* **Blazing-fast operations**
+* **Efficiency at scale**
+* **Robust branching and merging system** to support non-linear workflows
+
+Git is now the **de facto standard** for version control in both open-source and enterprise software development.
+
+</md></sn><config style="display:none"><tags>#02.a short history of git</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 19:27:18 GMT+0600 (Bangladesh Standard Time)</udate><id>article-eHfzMB4Ehg</id><duration></duration></config>
