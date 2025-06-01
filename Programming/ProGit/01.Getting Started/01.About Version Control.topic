@@ -1,1 +1,80 @@
-<sn></sn><config style='display:none'><tags>#01.about version control</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 18:36:04 GMT+0600 (Bangladesh Standard Time)</udate><id>article-zrtZtcmDeP</id><duration></duration></config>
+<sn><md>## About Version Control
+---
+
+What is Version Control and Why Should You Care?Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. In this context, version control is typically used with software source code, but it can apply to almost any type of file on a computer.
+
+If you're a graphic or web designer and want to keep every version of an image or layout, a Version Control System (VCS) is invaluable. It allows you to:
+
+* Revert selected files or the entire project back to a previous state
+* Compare changes over time
+* Identify who modified what and when
+* Recover easily from errors or lost files
+
+Best of all, this functionality usually comes with very little overhead.
+
+---
+
+### Local Version Control Systems
+
+A common, albeit error-prone, method of version control is manually copying files into another directory (e.g., using time-stamped folders). This is simple but risky: you might overwrite files or save changes in the wrong location.
+
+To address these issues, local VCSs were developed. These systems maintain a simple database that tracks all changes to files under version control.
+
+![image](https://i.imgur.com/yvfPeFt.png)
+
+**Example:**
+One of the earliest and most popular local VCS tools is **RCS** (Revision Control System), which is still included in many systems today. RCS stores changes as patch sets (the differences between versions) and can reconstruct any previous state of a file using these patches.
+
+*(Figure 1. Local version control diagram)*
+
+---
+
+### Centralized Version Control Systems (CVCS)
+
+As collaboration became more common, the limitations of local VCSs became clear. Centralized Version Control Systems were introduced to enable multiple developers to work on a project from different locations.
+
+![diagram](https://i.imgur.com/xlaZJCX.png)
+
+CVCSs such as **CVS**, **Subversion (SVN)**, and **Perforce** operate with:
+
+* A **single central server** that contains all the versioned files
+* Multiple **clients** that check out and commit changes to this server
+
+**Advantages:**
+
+* Easier to see what others are working on
+* Administrators can control access and permissions more easily
+* Centralized management is simpler than handling multiple local databases
+
+**Disadvantages:**
+
+* The **central server is a single point of failure**:
+
+  * If it goes down, no one can commit changes
+  * If it’s corrupted and backups are missing, the entire history may be lost
+
+*(Figure 2. Centralized version control diagram)*
+
+---
+
+### Distributed Version Control Systems (DVCS)
+
+Distributed Version Control Systems such as **Git**, **Mercurial**, and **Darcs** solve many of the problems of centralized systems.
+
+![diagram](https://i.imgur.com/wxa2jlr.png)
+
+In a DVCS:
+
+* Clients **clone the entire repository**, including its full history
+* Each clone is a **complete backup**
+* If a server fails, any client can restore the repository to full functionality
+
+**Benefits:**
+
+* No single point of failure
+* Better support for multiple remote repositories
+* Enables complex workflows like hierarchical collaboration models
+
+*(Figure 3. Distributed version control diagram)*
+
+</md></sn><config style="display:none"><tags>#01.about version control</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 18:49:24 GMT+0600 (Bangladesh Standard Time)</udate><id>article-zrtZtcmDeP</id><duration></duration></config>
