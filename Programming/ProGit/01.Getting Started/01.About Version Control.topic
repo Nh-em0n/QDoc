@@ -77,4 +77,19 @@ In a DVCS:
 
 *(Figure 3. Distributed version control diagram)*
 
-</md></sn><config style="display:none"><tags>#01.about version control</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 18:49:24 GMT+0600 (Bangladesh Standard Time)</udate><id>article-zrtZtcmDeP</id><duration></duration></config>
+</md></sn><sn><md>Here's a clear and concise **differentiation table** comparing **Local**, **Centralized**, and **Distributed Version Control Systems (VCS)**:
+
+| Feature / Aspect                        | Local VCS                    | Centralized VCS (CVCS)                     | Distributed VCS (DVCS)                     |
+| --------------------------------------- | ---------------------------- | ------------------------------------------ | ------------------------------------------ |
+| **Repository Location**                 | On individual user’s machine | Single central server                      | Each user has a full local copy            |
+| **History Availability**                | Stored locally               | Stored on central server                   | Full history stored on every client        |
+| **Collaboration**                       | Minimal (manual sharing)     | Real-time collaboration via central server | Peer-to-peer or via multiple remotes       |
+| **Single Point of Failure**             | Yes                          | Yes (if server fails, work halts)          | No (any client can restore the repository) |
+| **Backup Capability**                   | Low                          | Moderate (requires manual backup)          | High (every clone is a full backup)        |
+| **Performance (e.g., diff/log/commit)** | Fast (local operations)      | Slower (network dependent)                 | Fast (most operations are local)           |
+| **Security / Access Control**           | Basic or none                | Centralized and manageable                 | Requires more complex setup for control    |
+| **Example Tools**                       | RCS                          | CVS, Subversion (SVN), Perforce            | Git, Mercurial, Darcs                      |
+| **Ease of Setup**                       | Very simple                  | Moderate                                   | Moderate to complex                        |
+| **Suitability for Teams**               | Poor                         | Good                                       | Excellent                                  |
+
+</md></sn><config style="display:none"><tags>#01.about version control</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 19:16:26 GMT+0600 (Bangladesh Standard Time)</udate><id>article-zrtZtcmDeP</id><duration></duration></config>
