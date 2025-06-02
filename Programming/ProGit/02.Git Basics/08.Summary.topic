@@ -1,1 +1,11 @@
-<sn></sn><config style='display:none'><tags>#08.summary</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 22:07:08 GMT+0600 (Bangladesh Standard Time)</udate><id>article-rgKPYFNK3P</id><duration></duration></config>
+<sn><md>## Summary
+
+At this stage, you are equipped to perform all the basic **local Git operations**, including:
+
+* Creating or cloning a repository
+* Making changes
+* Staging and committing those changes
+* Viewing the repository’s change history
+
+Next, we’ll dive into **Git’s most powerful feature**: its **branching model**.
+</md></sn><config style="display:none"><tags>#08.summary</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jun 02 2025 10:08:21 GMT+0600 (Bangladesh Standard Time)</udate><id>article-rgKPYFNK3P</id><duration></duration></config>
