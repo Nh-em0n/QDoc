@@ -1,1 +1,76 @@
-<sn></sn><config style='display:none'><tags>#02.9.moving files</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jun 02 2025 08:14:27 GMT+0600 (Bangladesh Standard Time)</udate><id>article-hRQt1d0eQG</id><duration></duration></config>
+<sn><md>## Moving Files
+
+### Git Doesn't Track Renames Explicitly
+
+Unlike many version control systems, Git **does not explicitly track file renames**. When you rename or move a file, Git doesn’t record metadata about the rename. Instead, it **infers** renames by comparing the content of files across commits.
+
+Despite this, Git provides a `git mv` command for convenience.
+
+---
+
+### Using `git mv`
+
+To rename or move a file:
+
+```bash
+$ git mv file_from file_to
+```
+
+Example:
+
+```bash
+$ git mv README.md README
+```
+
+Then check the status:
+
+```bash
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+	renamed:    README.md -&gt; README
+```
+
+Git recognizes this as a rename because the content remains similar.
+
+---
+
+### Equivalent Manual Steps
+
+The following commands achieve the same effect:
+
+```bash
+$ mv README.md README
+$ git rm README.md
+$ git add README
+```
+
+So `git mv` is essentially a shortcut for:
+
+1. Moving the file with `mv`
+2. Removing the old path with `git rm`
+3. Adding the new path with `git add`
+
+---
+
+### Key Notes
+
+* **`git mv` is a convenience**, not a requirement.
+* Git will detect renames **even if done manually**, as long as you add and commit the changes appropriately.
+* You can also use **other tools** or GUI apps to rename/move files — just remember to stage the changes before committing.
+
+---
+
+### Summary
+
+| Task                    | Command                                                       |
+| ----------------------- | ------------------------------------------------------------- |
+| Rename/move with Git    | `git mv oldname newname`                                      |
+| Rename/move manually    | `mv oldname newname``git rm oldname``git add newname` |
+| Check status after move | `git status`                                                  |
+
+Use `git mv` for simplicity, or perform the steps manually — Git handles both equally well.
+^^undefined^^undefined</file></md></sn><config style="display:none"><tags>#02.9.moving files</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jun 02 2025 08:14:38 GMT+0600 (Bangladesh Standard Time)</udate><id>article-hRQt1d0eQG</id><duration></duration></config>
