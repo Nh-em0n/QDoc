@@ -1,1 +1,90 @@
-<sn></sn><config style='display:none'><tags>#02.7.comitting changes</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jun 02 2025 08:12:36 GMT+0600 (Bangladesh Standard Time)</udate><id>article-BdNTT6jJuU</id><duration></duration></config>
+<sn><md>## Committing Your Changes
+
+### What Gets Committed?
+
+When you're ready to save a snapshot of your work, you use the `git commit` command. But remember:
+
+* **Only staged changes** (those added with `git add`) will be committed.
+* **Unstaged changes** will remain in your working directory.
+
+So always check your staging area with `git status` before committing.
+
+---
+
+### Committing with an Editor
+
+The basic form of the commit command:
+
+```bash
+$ git commit
+```
+
+This opens your configured text editor (such as `vim`, `nano`, or `emacs`) to write a commit message.
+
+If you're using `vim`, you may see something like this:
+
+```
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#   new file:   README
+#   modified:   CONTRIBUTING.md
+```
+
+* Lines starting with `#` are comments and will be ignored.
+* The commit message goes above or in place of the comment block.
+
+To configure your preferred editor:
+
+```bash
+$ git config --global core.editor nano  # or 'vim', 'code --wait', etc.
+```
+
+---
+
+### Adding a Diff to the Commit Editor
+
+You can use the `-v` (verbose) option to include the diff in the commit editor window:
+
+```bash
+$ git commit -v
+```
+
+This lets you see the exact changes you’re committing while writing your message.
+
+---
+
+### Inline Commit Message with `-m`
+
+To avoid opening an editor, use the `-m` flag followed by your message:
+
+```bash
+$ git commit -m "Story 182: fix benchmarks for speed"
+```
+
+Output example:
+
+```
+[master 463dc4f] Story 182: fix benchmarks for speed
+ 2 files changed, 2 insertions(+)
+ create mode 100644 README
+```
+
+* You see the branch (`master`)
+* The commit ID (`463dc4f`)
+* A summary of changes (files and lines modified)
+
+---
+
+### Summary
+
+* `git commit` saves the **staged snapshot** to history.
+* Use `git add` to select changes for the next commit.
+* Use `git commit` or `git commit -m "message"` to record those changes.
+* Anything not staged will remain as modified and can be committed later.
+
+Every commit creates a point in history you can return to or compare against, making version tracking in Git both powerful and flexible.
+</md></sn><config style="display:none"><tags>#02.7.comitting changes</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jun 02 2025 08:13:04 GMT+0600 (Bangladesh Standard Time)</udate><id>article-BdNTT6jJuU</id><duration></duration></config>
