@@ -67,7 +67,7 @@ usage: git add [<options>] [--] <pathspec>...
 --ignore-errors           just skip files which cannot be added because of errors
 --sparse                  allow updating entries outside of the sparse-checkout cone
 --chmod (+|-)x            override the executable bit of the listed files
---pathspec-from-file <file class="undefined d-none">  read pathspec from file
+--pathspec-from-file <file>  read pathspec from file
 --pathspec-file-nul       with --pathspec-from-file, pathspec elements are separated with NUL character
 ```
-</file></pathspec></options></verb></verb></verb></md></sn><config style="display:none"><tags>#07.getting help</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 21:00:36 GMT+0600 (Bangladesh Standard Time)</udate><id>article-F5HWNfXN51</id><duration></duration></config>
+^^undefined^^undefined</file></pathspec></options></verb></verb></verb></md></sn><config style="display:none"><tags>#07.getting help</tags><thumbnail></thumbnail><heading></heading><udate>Wed Jun 04 2025 12:15:50 GMT+0600 (Bangladesh Standard Time)</udate><id>article-F5HWNfXN51</id><duration></duration></config><sn><e>a + \pi = 3x^{32\pi}</e></sn>
