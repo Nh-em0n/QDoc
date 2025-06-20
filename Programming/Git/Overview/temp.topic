@@ -81,5 +81,18 @@ myMap.clear();  // Removes all key-value pairs
 | Performance | Better for frequent additions/deletions | Good for static data          |
 | Iteration   | Easier and more consistent              | Requires `Object.keys()`, etc |
 
-Let me know if you'd like to see a custom `Map` class implementation or use case examples (like LRU cache, frequency map, etc.).
-</md></sn><config style="display:none"><tags>#temp</tags><thumbnail></thumbnail><heading></heading><udate>Fri Jun 20 2025 18:10:52 GMT+0600 (Bangladesh Standard Time)</udate><id>article-1SoF8dA1fO</id><duration></duration></config>
+</md></sn><config style="display:none"><tags>#temp</tags><thumbnail></thumbnail><heading></heading><udate>Fri Jun 20 2025 18:18:06 GMT+0600 (Bangladesh Standard Time)</udate><id>article-1SoF8dA1fO</id><duration></duration></config><sn class="col-md-11 col-lg-9 content-section"><h2 class="text-center text-info">Iterating Over Map Data</h2><pre class="copy-container undefined d-none" data-v="javascript"><header class="lock-select"><span>javascript</span><i class="fa-light fa-clipboard copy-btn lock-select"></i></header><code class="language-javascript copy-text hljs"><span class="hljs-comment">// Keys</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">of</span> myMap.<span class="hljs-title function_">keys</span>()) {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(key);
+}
+
+<span class="hljs-comment">// Values</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> value <span class="hljs-keyword">of</span> myMap.<span class="hljs-title function_">values</span>()) {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(value);
+}
+
+<span class="hljs-comment">// Entries</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> [key, value] <span class="hljs-keyword">of</span> myMap.<span class="hljs-title function_">entries</span>()) {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`<span class="hljs-subst">${key}</span>: <span class="hljs-subst">${value}</span>`</span>);
+}
+</code></pre></sn>
