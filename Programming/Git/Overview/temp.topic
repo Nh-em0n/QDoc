@@ -1,1 +1,85 @@
-<sn></sn><config style='display:none'><tags>#temp</tags><thumbnail></thumbnail><heading></heading><udate>Fri Jun 20 2025 18:10:26 GMT+0600 (Bangladesh Standard Time)</udate><id>article-1SoF8dA1fO</id><duration></duration></config>
+<sn><md>In JavaScript, the `Map` class (or more accurately, the `Map` object) is a built-in data structure that allows you to store key-value pairs where keys can be of any type (not just strings or symbols, unlike regular objects).
+
+### 🔹 Creating a Map
+
+```javascript
+const myMap = new Map();
+```
+
+### 🔹 Setting Values
+
+```javascript
+myMap.set('name', 'Alice');
+myMap.set(42, 'The answer');
+myMap.set(true, 'Boolean key');
+```
+
+### 🔹 Getting Values
+
+```javascript
+console.log(myMap.get('name'));    // "Alice"
+console.log(myMap.get(42));        // "The answer"
+console.log(myMap.get(true));      // "Boolean key"
+```
+
+### 🔹 Checking for a Key
+
+```javascript
+console.log(myMap.has('name'));    // true
+console.log(myMap.has('age'));     // false
+```
+
+### 🔹 Deleting a Key
+
+```javascript
+myMap.delete(42);
+```
+
+### 🔹 Map Size
+
+```javascript
+console.log(myMap.size);  // 2
+```
+
+### 🔹 Iterating Over a Map
+
+```javascript
+// Keys
+for (let key of myMap.keys()) {
+  console.log(key);
+}
+
+// Values
+for (let value of myMap.values()) {
+  console.log(value);
+}
+
+// Entries
+for (let [key, value] of myMap.entries()) {
+  console.log(`${key}: ${value}`);
+}
+```
+
+### 🔹 Chaining `set()` Calls
+
+```javascript
+myMap.set('a', 1).set('b', 2).set('c', 3);
+```
+
+### 🔹 Clearing a Map
+
+```javascript
+myMap.clear();  // Removes all key-value pairs
+```
+
+### 🔹 Map vs Object
+
+| Feature     | `Map`                                   | `Object`                      |
+| ----------- | --------------------------------------- | ----------------------------- |
+| Key Types   | Any type                                | Strings and Symbols only      |
+| Key Order   | Ordered (insertion order)               | Unordered (ES6+ keeps order)  |
+| Performance | Better for frequent additions/deletions | Good for static data          |
+| Iteration   | Easier and more consistent              | Requires `Object.keys()`, etc |
+
+Let me know if you'd like to see a custom `Map` class implementation or use case examples (like LRU cache, frequency map, etc.).
+</md></sn><config style="display:none"><tags>#temp</tags><thumbnail></thumbnail><heading></heading><udate>Fri Jun 20 2025 18:10:52 GMT+0600 (Bangladesh Standard Time)</udate><id>article-1SoF8dA1fO</id><duration></duration></config>
