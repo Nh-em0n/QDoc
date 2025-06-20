@@ -1,5 +1,7 @@
-<sn class="col-11 bg-blur"><md>## Viewing the Commit History
+<sn class="col-6 bg-blur"><md>## Viewing the Commit History
 ---
+
+![git images](https://www.svgrepo.com/show/303548/git-icon-logo.svg)
 
 After you have created several commits, or if you have cloned a repository with an existing commit history, you’ll probably want to look back to see what has happened. The most basic and powerful tool to do this is the `git log` command.
 
@@ -263,4 +265,4 @@ Merge commits can clutter logs. To exclude them:
 ```bash
 $ git log --no-merges
 ```
-</n></schacon@gee-mail.com></schacon@gee-mail.com></schacon@gee-mail.com></md></sn><config style="display:none"><tags>#03.viewing the commit history</tags><thumbnail></thumbnail><heading></heading><udate>Fri Jun 20 2025 17:51:01 GMT+0600 (Bangladesh Standard Time)</udate><id>article-ziP8IP7UTA</id><duration></duration></config>
+</n></schacon@gee-mail.com></schacon@gee-mail.com></schacon@gee-mail.com></md></sn><config style="display:none"><tags>#03.viewing the commit history</tags><thumbnail></thumbnail><heading></heading><udate>Fri Jun 20 2025 17:54:08 GMT+0600 (Bangladesh Standard Time)</udate><id>article-ziP8IP7UTA</id><duration></duration></config>
