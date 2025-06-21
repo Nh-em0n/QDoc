@@ -1,1 +1,138 @@
-<sn></sn><config style='display:none'><tags>#chapter list</tags><thumbnail></thumbnail><heading></heading><udate>Sat Jun 21 2025 21:45:41 GMT+0600 (Bangladesh Standard Time)</udate><id>article-5YVERhqBLj</id><duration></duration></config>
+<sn><md>## Complete SASS Learning Path (Beginner to Advanced)
+
+### Chapter 1: **Introduction to SASS**
+
+* What is SASS and why use it?
+* Differences between SASS and SCSS syntax
+* Installing SASS (CLI, Node-sass, Dart Sass)
+* Compiling SASS to CSS
+
+### Chapter 2: **SASS Syntax &amp; Structure**
+
+* SCSS vs Indented (SASS) syntax
+* Nesting rules and structure
+* Basic syntax rules and conventions
+
+### Chapter 3: **Variables**
+
+* Declaring and using variables
+* Scope of variables
+* Default values with `!default`
+* Global variables and `!global`
+
+### Chapter 4: **Nesting**
+
+* Nesting selectors
+* Nesting pseudo-classes and combinators
+* Nesting properties with `&amp;`
+* Avoiding over-nesting (best practices)
+
+### Chapter 5: **Partials and Import**
+
+* Creating and using partials
+* File naming conventions (`_partial.scss`)
+* `@use` vs `@import` vs `@forward`
+* Modularizing SASS files
+
+### Chapter 6: **Mixins**
+
+* Creating reusable mixins with `@mixin`
+* Using mixins with `@include`
+* Mixins with arguments and default values
+* Content blocks with `@content`
+
+### Chapter 7: **Functions**
+
+* Creating custom functions with `@function`
+* Using built-in SASS functions (e.g. `lighten()`, `darken()`, `map-get()`)
+* Function vs Mixin (when to use each)
+
+### Chapter 8: **Inheritance with `@extend`**
+
+* Extending selectors
+* Placeholder selectors (`%placeholder`)
+* Inheritance vs Mixins (comparison)
+* When not to use `@extend`
+
+### Chapter 9: **Operators and Interpolation**
+
+* Arithmetic operators in SASS
+* String and variable interpolation
+* Use cases in responsive design
+
+### Chapter 10: **Control Directives and Flow**
+
+* `@if`, `@else`, and `@else if`
+* `@for`, `@each`, `@while` loops
+* Looping through lists and maps
+
+### Chapter 11: **Maps and Lists**
+
+* Declaring and accessing lists
+* Declaring and using maps (key-value pairs)
+* Nested maps and advanced access patterns
+* Iterating through maps and lists
+
+### Chapter 12: **Built-in SASS Modules**
+
+* `sass:color`
+* `sass:math`
+* `sass:string`
+* `sass:list`, `sass:map`
+* How and when to use each module
+
+### Chapter 13: **Responsive Design with SASS**
+
+* Media query mixins
+* Breakpoints and fluid layouts
+* Container queries (if applicable)
+
+### Chapter 14: **Theming and Design Tokens**
+
+* Creating a design system with SASS
+* Managing light/dark themes
+* Using maps for color palettes and typography
+* Building scalable token systems
+
+### Chapter 15: **Error Handling and Debugging**
+
+* Using `@debug`, `@warn`, `@error`
+* Best practices for maintainable SASS
+* Common SASS pitfalls and how to avoid them
+
+### Chapter 16: **Performance and Optimization**
+
+* File structure and organization
+* Avoiding bloated output
+* Naming conventions and code standards (BEM + SASS)
+
+### Chapter 17: **SASS in Modern Tooling**
+
+* Using SASS with:
+
+  * Webpack
+  * Vite
+  * Gulp/Grunt
+  * Frameworks (React, Vue, Angular)
+* Source maps and debugging in browsers
+
+### Chapter 18: **Migrating to Dart Sass**
+
+* Differences from LibSass / Node-sass
+* Breaking changes and compatibility
+
+### Chapter 19: **Advanced Patterns and Architectures**
+
+* 7-1 Architecture pattern
+* ITCSS (Inverted Triangle CSS)
+* SMACSS with SASS
+* Utility-first SASS structure
+
+### Chapter 20: **Real Projects and Practice**
+
+* Building a SASS design system
+* Responsive landing page with themes
+* A UI component library using SASS
+* Portfolio site using advanced SASS concepts
+
+</md></sn><config style="display:none"><tags>#chapter list</tags><thumbnail></thumbnail><heading></heading><udate>Sat Jun 21 2025 21:46:01 GMT+0600 (Bangladesh Standard Time)</udate><id>article-5YVERhqBLj</id><duration></duration></config>
