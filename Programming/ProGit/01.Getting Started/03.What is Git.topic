@@ -1,12 +1,9 @@
 <sn><md>### What is Git?
----
 
 Understanding what **Git** is and how it works fundamentally will make it easier to use effectively. Although Git's user interface may resemble other version control systems (VCSs) like CVS, Subversion, or Perforce, **its internal structure and behavior are quite different**. Clearing your mind of how those other systems work will help reduce confusion as you learn Git.
 
----
 
 ### Snapshots, Not Differences
----
 
 ![diagram](https://i.imgur.com/mkFplSw.png)
 
@@ -21,10 +18,7 @@ Most VCSs track changes as a series of file-based differences (called **delta-ba
 
 This snapshot-based approach allows Git to behave more like a **mini-filesystem** with powerful tools built on top of it, rather than just a VCS.
 
----
-
 ### Nearly Every Operation is Local
----
 
 Unlike centralized VCSs, **most Git operations are local**:
 
@@ -39,10 +33,8 @@ For example:
 
 This flexibility contrasts with systems like Perforce or Subversion, which often require network access to do even basic operations.
 
----
 
 ### Git Has Integrity
----
 
 Everything in Git is **checksummed** before storage, ensuring data integrity.
 
@@ -55,10 +47,9 @@ This design ensures that:
 * Files cannot be altered undetected.
 * Corruption or data loss is easily caught.
 
----
 
 ### Git Generally Only Adds Data
----
+
 
 Git is designed to be **safe and resilient**:
 
@@ -68,10 +59,8 @@ Git is designed to be **safe and resilient**:
 
 This design encourages **experimentation** without fear of permanent damage.
 
----
 
 ### The Three States of Git
----
 
 Git files exist in **three key states**:
 
@@ -91,20 +80,17 @@ These states are tied to **three main sections** of a Git project:
 | **Staging Area**  | A temporary area to prepare commits (also known as the index).  |
 | **Git Directory** | The .git folder that stores the project's metadata and history. |
 
----
-
 ### Basic Git Workflow
----
+
 
 1. **Modify files** in the working tree.
 2. **Stage changes** selectively to prepare them for commit.
 3. **Commit** the staged changes, storing a snapshot in the Git directory.
 
  ### Summary of states:
----
 
  * If a version is in the Git directory: it’s **committed**.
  * If it's staged: it’s **ready to commit**.
  * If modified but not staged: it’s just **modified**.
 
-</md></sn><config style="display:none"><tags>#03.what is git</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jun 01 2025 19:54:20 GMT+0600 (Bangladesh Standard Time)</udate><id>article-EPp79zpzMW</id><duration></duration></config>
+</md></sn><config style="display:none"><tags>#03.what is git</tags><thumbnail></thumbnail><heading></heading><udate>Sat Jun 21 2025 21:19:35 GMT+0600 (Bangladesh Standard Time)</udate><id>article-EPp79zpzMW</id><duration></duration></config>
