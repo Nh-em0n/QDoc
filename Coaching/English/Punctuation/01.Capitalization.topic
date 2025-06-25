@@ -98,4 +98,53 @@
 * **How** I wonder what you are.
 * **Up** above the world so high.
 
-</md></sn><config style="display:none"><tags>#01.capitalization</tags><thumbnail></thumbnail><heading></heading><udate>Wed Jun 25 2025 08:35:02 GMT+0600 (Bangladesh Standard Time)</udate><id>article-aqd5nWBj7X</id><duration></duration></config>
+</md></sn><sn><md>Lets have a look
+
+
+##### 1. **Uppercase (সব বড় হাতের অক্ষর)**
+
+**ব্যাখ্যা:** সমস্ত অক্ষর Capital Letter এ থাকে।
+**উদাহরণ:** `HELLO WORLD`
+**বলা হয়:** **Uppercase** বা **All Caps**
+
+---
+
+##### 2. **Lowercase (সব ছোট হাতের অক্ষর)**
+
+**ব্যাখ্যা:** সমস্ত অক্ষর Small Letter এ থাকে।
+**উদাহরণ:** `hello world`
+**বলা হয়:** **Lowercase**
+
+---
+
+##### 3. **Capitalized / Title Case (প্রতিটি শব্দের প্রথম অক্ষর বড়)**
+
+**ব্যাখ্যা:** প্রতিটি শব্দের প্রথম অক্ষর বড় থাকে, বাকিগুলো ছোট।
+**উদাহরণ:** `Hello World`
+**বলা হয়:** **Title Case** বা **Capitalized Case**
+
+---
+
+##### 4. **Sentence Case (শুধু প্রথম শব্দের অক্ষর বড়)**
+
+**ব্যাখ্যা:** শুধু প্রথম শব্দের প্রথম অক্ষর বড় হয়, বাকিগুলো ছোট।
+**উদাহরণ:** `Hello world`
+**বলা হয়:** **Sentence Case**
+
+---
+
+##### 5. **CamelCase (প্রথম শব্দ ছোট, পরবর্তী শব্দগুলোর প্রথম অক্ষর বড়)**
+
+**ব্যাখ্যা:** প্রথম শব্দ ছোট থাকে, এরপর প্রতিটি শব্দের শুরু বড় হাতের অক্ষর।
+**উদাহরণ:** `helloWorld`
+**বলা হয়:** **CamelCase**
+
+---
+
+##### 6. **PascalCase (সব শব্দের প্রথম অক্ষর বড়)**
+
+**ব্যাখ্যা:** প্রতিটি শব্দের শুরু বড় হাতের অক্ষর (CamelCase-এর মতো, কিন্তু প্রথম শব্দও বড়)।
+**উদাহরণ:** `HelloWorld`
+**বলা হয়:** **PascalCase**
+
+</md></sn><config style="display:none"><tags>#01.capitalization</tags><thumbnail></thumbnail><heading></heading><udate>Wed Jun 25 2025 08:46:43 GMT+0600 (Bangladesh Standard Time)</udate><id>article-aqd5nWBj7X</id><duration></duration></config>
