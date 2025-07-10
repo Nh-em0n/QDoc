@@ -1,4 +1,4 @@
-<config style="display:none"><tags>#02.7.comitting changes</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 22:46:34 GMT+0600 (Bangladesh Standard Time)</udate><id>article-BdNTT6jJuU</id><duration></duration></config><sn class="bar bar-pink"><h2>Git Commit</h2><p>In Git, <code>git commit</code> is one of the most fundamental commands—it's the moment when your changes are <strong>recorded into version history</strong>. Every time you commit, you create a new snapshot of your project, along with a message explaining what was changed. Understanding how <code>git commit</code> works is essential to mastering version control.</p><im>https://miro.medium.com/v2/resize:fit:1200/1*eGdNATA_BGQcA1xUvc9Irg.png^^Commit in git workflow</im></sn><sn class="bar bar-orange"><h3>What Does <code>git commit</code> Do?</h3><p>The <code>git commit</code> command takes everything that’s currently staged (added using <code>git add</code>) and saves it in Git’s history as a new <strong>commit</strong>. This commit becomes a permanent part of your repository, complete with a unique ID and message.</p><h4>Basic Syntax:</h4><pre data-v="bash">git commit -m "Your commit message"
+<config style="display:none"><tags>#02.7.comitting changes</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 22:53:33 GMT+0600 (Bangladesh Standard Time)</udate><id>article-BdNTT6jJuU</id><duration></duration></config><sn class="bar bar-pink"><h2>Git Commit</h2><p>In Git, <code>git commit</code> is one of the most fundamental commands—it's the moment when your changes are <strong>recorded into version history</strong>. Every time you commit, you create a new snapshot of your project, along with a message explaining what was changed. Understanding how <code>git commit</code> works is essential to mastering version control.</p><im>https://miro.medium.com/v2/resize:fit:1200/1*eGdNATA_BGQcA1xUvc9Irg.png^^Commit in git workflow</im></sn><sn class="bar bar-orange"><h3>What Does <code>git commit</code> Do?</h3><p>The <code>git commit</code> command takes everything that’s currently staged (added using <code>git add</code>) and saves it in Git’s history as a new <strong>commit</strong>. This commit becomes a permanent part of your repository, complete with a unique ID and message.</p><h4>Basic Syntax:</h4><pre data-v="bash">git commit -m "Your commit message"
 </pre></sn><sn class="bar bar-teal"><h3>Workflow Context</h3><p>Typical Git workflow:</p><ol>
 <li><strong>Edit Files</strong> → Working Directory</li>
 <li><strong>Stage Changes</strong> → <code>git add &lt;file&gt;</code></li>
@@ -36,4 +36,21 @@ git commit -m "Add homepage layout"
 | Commit and stage tracked files | <code>git commit -a -m "message"</code> |
 | Amend last commit | <code>git commit --amend</code> |
 | View commit history | <code>git log</code> or <code>git log --oneline</code> |
-</pre></tb></sn>
+</pre></tb></sn><sn class="bar bar-blue"><h5>Our Portfolio example</h5><p>After added new index.html file to staging area lets commit the project -&nbsp;</p><pre data-v="bash">Emon@DESKTOP-S2A6KR1 MINGW64 /e/coding/Git/Git Practise/portfolio (master)
+$ git status -s
+A  index.html
+
+Emon@DESKTOP-S2A6KR1 MINGW64 /e/coding/Git/Git Practise/portfolio (master)
+$ git commit -m 'Add home page'
+[master (root-commit) 62fe180] Add home page
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+Emon@DESKTOP-S2A6KR1 MINGW64 /e/coding/Git/Git Practise/portfolio (master)
+$ git log
+commit 62fe18018d0e714085551dd0688c8ddb1b663300 (HEAD -&gt; master)
+Author: Nh-emon &lt;nhemon2043@gmail.com&gt;
+Date:   Thu Jul 10 22:49:38 2025 +0600
+
+    Add home page
+</pre></sn>
