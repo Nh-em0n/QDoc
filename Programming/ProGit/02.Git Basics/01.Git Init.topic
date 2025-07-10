@@ -1,0 +1,104 @@
+<config style="display:none"><tags>#01.getting a git repository</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 10:19:30 GMT+0600 (Bangladesh Standard Time)</udate><id>article-5k9z1aWDnR</id><duration></duration></config><sn class="bar bar-teal"><h2>Getting a Git Repository</h2><p>You typically obtain a Git repository in one of two ways:</p><ol>
+<li>You can take a local directory that is currently not under version control, and turn it into a Git repository, or</li>
+<li>You can clone an existing Git repository from elsewhere.</li>
+</ol><p>In either case, you end up with a Git repository on your local machine, ready for work.</p></sn><sn class="bar bar-blue"><h3>Initializing a Repository in an Existing Directory</h3><p>If you have a project directory that is currently not under version control and you want to start controlling it with Git, you first need to go to that project’s directory. If you’ve never done this, it looks a little different depending on which system you’re running:</p><ul>
+<li>
+<p>For Linux:</p>
+<pre data-v="bash">cd /home/user/my_project
+</pre>
+</li>
+<li>
+<p>For macOS:</p>
+<pre data-v="bash">cd /Users/user/my_project
+</pre>
+</li>
+<li>
+<p>For Windows:</p>
+<pre data-v="bash">cd C:/Users/user/my_project
+</pre>
+</li>
+</ul><p>Then initialize the repository:</p><pre data-v="bash">git init
+</pre><p>This creates a new subdirectory named 📁<code>.git</code> that contains all of your necessary repository files — a Git repository skeleton. At this point, nothing in your project is tracked yet. See <em>Git Internals</em> for more information about exactly what files are contained in the <code>.git</code> directory you just created.</p><p>If you want to start version-controlling existing files (as opposed to an empty directory), begin tracking those files and do an initial commit:</p></sn><sn class="bar bar-yellow"><h5><span style="font-weight: bolder; font-size: 19.2px;">Cloning an Existing Repository</span></h5><p>To get a copy of an existing Git repository — for example, a project you’d like to contribute to — use the <code>git clone</code> command. Unlike traditional VCSs that perform a checkout, Git retrieves the entire history of the repository.</p><p>For example:</p><pre data-v="bash">git clone https://github.com/libgit2/libgit2
+</pre><p>This command creates a directory named <code>libgit2</code>, initializes a <code>.git</code> directory inside it, pulls down all the data for that repository, and checks out a working copy of the latest version.</p><p>To clone the repository into a directory with a different name:</p><pre data-v="bash">git clone https://github.com/libgit2/libgit2 mylibgit
+</pre><p>Git supports various transfer protocols, including:</p><ul>
+<li><code>https://</code></li>
+<li><code>git://</code></li>
+<li><code>ssh://</code> (e.g. <code>user@server:path/to/repo.git</code>)</li>
+</ul><p>Refer to <em>Getting Git on a Server</em> for details about setting up and choosing between these protocols.</p></sn><sn class="bar bar-teal"><md>### Inside `📁.git`
+
+```
+.git/
+├── HEAD
+├── config
+├── description
+├── index
+├── COMMIT_EDITMSG
+├── ORIG_HEAD
+├── FETCH_HEAD
+├── MERGE_HEAD
+├── MERGE_MSG
+├── logs/
+│   ├── HEAD
+│   └── refs/
+│       ├── heads/
+│       │   └── main
+│       └── remotes/
+│           └── origin/
+│               └── main
+├── hooks/
+│   ├── applypatch-msg.sample
+│   ├── commit-msg.sample
+│   ├── fsmonitor-watchman.sample
+│   ├── post-update.sample
+│   ├── pre-applypatch.sample
+│   ├── pre-commit.sample
+│   ├── pre-merge-commit.sample
+│   ├── pre-push.sample
+│   ├── pre-rebase.sample
+│   ├── pre-receive.sample
+│   ├── prepare-commit-msg.sample
+│   └── update.sample
+├── info/
+│   └── exclude
+├── objects/
+│   ├── info/
+│   └── pack/
+│       ├── pack-xxxx.idx
+│       └── pack-xxxx.pack
+├── refs/
+│   ├── heads/
+│   │   └── main
+│   ├── remotes/
+│   │   └── origin/
+│   │       └── main
+│   └── tags/
+├── branches/
+├── packed-refs
+└── shallow
+```
+
+### Key Items Explained
+
+* **HEAD**: Points to the current branch reference.
+* **config**: Repository-specific Git config file (local config).
+* **index**: Staging area (index) used before committing.
+* **logs/**: History of references and branches.
+* **hooks/**: Client-side scripts triggered by Git commands.
+* **info/**: Contains local exclude patterns (like `.gitignore`).
+* **objects/**: Git database — stores all content (blobs, trees, commits).
+* **refs/**: Stores pointers to commits (branches, tags, remotes).
+* **packed-refs**: Optimized storage of refs when there are many.
+* **shallow**: Indicates shallow clone metadata, if present.
+</md></sn><sn class="bar bar-blue"><h2>Init git on porfolio project</h2><pre data-v="bash">Emon@DESKTOP-S2A6KR1 MINGW64 ~
+$ cd "E:\coding\Git\Git Practise\portfolio"
+
+Emon@DESKTOP-S2A6KR1 MINGW64 /e/coding/Git/Git Practise/portfolio
+$ ls
+
+Emon@DESKTOP-S2A6KR1 MINGW64 /e/coding/Git/Git Practise/portfolio
+$ git init
+
+Initialized empty Git repository in E:/coding/Git/Git Practise/portfolio/.git/
+
+Emon@DESKTOP-S2A6KR1 MINGW64 /e/coding/Git/Git Practise/portfolio (master)
+</pre><im>https://i.imgur.com/BXpbTzr.png^^New git repositories created on my portfolio folder</im></sn>
