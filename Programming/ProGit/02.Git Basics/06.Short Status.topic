@@ -1,57 +1,31 @@
-<sn><md>## Short Status
----
-
-### Using the Short Status Flag
-
-While the default `git status` output is detailed, it can be verbose. For a more compact summary, use the **short status** flag:
-
-```
-$ git status -s
-```
-
-or
-
-```
-$ git status --short
-```
-
-Example output:
-
-```
- M README  
-MM Rakefile  
-A  lib/git.rb  
-M  lib/simplegit.rb  
-?? LICENSE.txt
-```
-
-### Interpreting Short Status Output
-
-* `??` — New, **untracked** files (e.g., `LICENSE.txt`)
-* `A` — New file **added to the staging area** (e.g., `lib/git.rb`)
-* `M` — File **modified**
-
-There are two columns:
-
-* **Left column** = Status in the **staging area**
-* **Right column** = Status in the **working directory**
-
-#### Example Breakdown:
-
-* ` M README`
-  → Modified in the **working directory**, not staged
-
-* `MM Rakefile`
-  → Modified in both the **staging area** and the **working directory**
-
-* `A  lib/git.rb`
-  → Newly **added** and **staged**
-
-* `M  lib/simplegit.rb`
-  → Modified and **staged**
-
-* `?? LICENSE.txt`
-  → **Untracked** file
-
-This concise format is ideal for quickly checking your working state.
-</md></sn><config style="display:none"><tags>#02.4.short status</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jun 02 2025 08:09:49 GMT+0600 (Bangladesh Standard Time)</udate><id>article-vDFt5KE05A</id><duration></duration></config>
+<config style="display:none"><tags>#02.4.short status</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 21:47:15 GMT+0600 (Bangladesh Standard Time)</udate><id>article-vDFt5KE05A</id><duration></duration></config><sn class="bar bar-pink"><h3>Git Short Status</h3><p>As you grow more comfortable with Git, efficiency becomes important. One simple but powerful way to speed up your workflow is to use <strong><code>git status -s</code></strong>, also known as <strong>short status</strong>. This variant of the regular <code>git status</code> command provides a concise, symbolic summary of your changes—perfect for advanced users or even beginners seeking clarity without clutter.</p></sn><sn class="bar bar-teal"><h3>What Is <code>git status -s</code>?</h3><p>The command <code>git status -s</code> (or <code>git status --short</code>) gives a <strong>minimal and color-coded overview</strong> of the status of your working directory and staging area. Instead of verbose explanations, it shows changes using short symbols in two columns.</p><h4>Syntax:</h4><pre data-v="bash">git status -s
+</pre></sn><sn class="bar bar-yellow"><h3>Format of the Output</h3><p>The short status output shows two columns before each filename:</p><tb class="py-2"><pre>| Column | Meaning |
+| ---  | --- |
+| 1st | Staging area status |
+| 2nd | Working directory status |
+</pre></tb><p>Each column uses single-letter codes:</p><tb class="py-2"><pre>| Code | Meaning |
+| ---  | --- |
+| <code>M</code> | Modified |
+| <code>A</code> | Added to staging |
+| <code>D</code> | Deleted |
+| <code>R</code> | Renamed |
+| <code>C</code> | Copied |
+| <code>?</code> | Untracked file |
+| <code>!</code> | Ignored file |
+</pre></tb></sn><sn class="bar bar-blue"><h3>Example Output</h3><p>Suppose you've made several changes. After running:</p><pre data-v="bash">git status -s
+</pre><p>You might see:</p><pre data-v="plaintext"> M index.html
+A  app.js
+ D style.css
+?? new_file.py
+</pre><h4>Interpreting This:</h4><ul>
+<li><code> M index.html</code> → Modified but <strong>not staged</strong></li>
+<li><code>A  app.js</code> → Newly added and <strong>staged</strong></li>
+<li><code> D style.css</code> → Deleted in working directory and <strong>not staged</strong></li>
+<li><code>?? new_file.py</code> → Untracked file</li>
+</ul></sn><sn class="bar bar-red"><h3>Summary Table</h3><tb class="py-2"><pre>| Command | Purpose |
+| ---  | --- |
+| <code>git status</code> | Full status with detailed text |
+| <code>git status -s</code> | Short status view |
+| <code>git status -sb</code> | Short status + branch info |
+| <code>git status --short</code> | Same as <code>-s</code>, more verbose flag |
+</pre></tb></sn>
