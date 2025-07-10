@@ -1,22 +1,22 @@
-<config style="display:none"><tags>#02.recording changes to the repository</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 10:09:21 GMT+0600 (Bangladesh Standard Time)</udate><id>article-4EuNVZlCAI</id><duration></duration></config><sn class="bar"><md>### Git File Lifecycle Stages
+<config style="display:none"><tags>#02.recording changes to the repository</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 20:58:18 GMT+0600 (Bangladesh Standard Time)</udate><id>article-4EuNVZlCAI</id><duration></duration></config><sn class="bar"><md>### File State in Git
+---
 
-| **Stage**      | **Description**                                                | **Command to View** | **Command to Move to Next Stage**                     |
-| -------------- | -------------------------------------------------------------- | ------------------- | ----------------------------------------------------- |
-| **Untracked**  | File exists in the working directory but is not tracked by Git | `git status`        | `git add ` → moves to **Staged**                |
-| **Unmodified** | File is tracked and unchanged since the last commit            | `git status`        | Modify the file → moves to **Modified**               |
-| **Modified**   | File is tracked and has been changed since the last commit     | `git status`        | `git add ` → moves to **Staged**                |
-| **Staged**     | File changes are staged and ready to be committed              | `git status`        | `git commit` → moves to **Unmodified** (after commit) |
-
-
+| **Term**       | **Description**                                                                   |
+| -------------- | --------------------------------------------------------------------------------- |
+| **Tracked**    | A file that is being monitored by Git; it was part of the last commit.            |
+| **Untracked**  | A file that exists in the working directory but is not yet added to Git.          |
+| **Unmodified** | A tracked file that hasn’t been changed since the last commit.                    |
+| **Modified**   | A tracked file that has been changed but not yet staged.                          |
+| **Unstaged**   | A modified file that hasn’t been added to the staging area.                       |
+| **Staged**     | A file whose changes have been added to the staging area and are ready to commit. |
 </md></sn><sn class="bar bar-orange"><h2>Recording Changes to the Repository</h2><hr><p>At this point, you should have a bona fide Git repository on your local machine, and a checkout or working copy of all of its files in front of you. Typically, you’ll want to start making changes and committing snapshots of those changes into your repository each time the project reaches a state you want to record.</p><h3>Tracked vs. Untracked Files</h3><hr><ul class="fg-black">
 <li class="bg-teal-100">
 <p><strong>Tracked files</strong>
 Files that were in the last snapshot, as well as any newly staged files. They can be:</p>
 <ul>
-<li class="bg-gray">Unmodified</li>
-<li class="bg-y">Modified</li>
-<li class="bg-teal">Staged
-In short, tracked files are files that Git knows about.</li>
+<li class="bg-gray-100">Unmodified : A track file that has not been changed since the last commit.</li>
+<li class="bg-y1">Modified : A tracked file that has been changed but not yet staged.</li>
+<li class="bg-o1">Unstaged : A modified file that has not been added to the staging area</li><li class="bg-t3">Staged : A file whose changes have been added to the staging area and ready to commit</li>
 </ul>
 </li>
 <li class="bg-red-200">
