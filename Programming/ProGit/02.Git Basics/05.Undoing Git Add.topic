@@ -1,1 +1,27 @@
-<sn></sn><config style='display:none'><tags>#05.undoing git add</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 22:04:50 GMT+0600 (Bangladesh Standard Time)</udate><id>article-HQVl1iR0cQ</id><duration></duration></config>
+<config style="display:none"><tags>#05.undoing git add</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 22:09:24 GMT+0600 (Bangladesh Standard Time)</udate><id>article-HQVl1iR0cQ</id><duration></duration></config><sn class="bar bar-pink"><h2>Undoing <code>git add</code> in Git</h2><p>Have you accidentally staged the wrong file with <code>git add</code>? Don’t worry—<strong>Git makes it easy to undo</strong>. Since <code>git add</code> only stages changes (it doesn’t commit them), you can safely unstage files before you make a commit. This is useful for keeping your commit history clean and intentional.</p></sn><sn class="bar bar-teal"><h3>How to Undo <code>git add</code></h3><p>To undo <code>git add</code> (i.e., to remove a file from the <strong>staging area</strong>), you use:</p><pre data-v="bash">git restore --staged &lt;file&gt;
+</pre><p>Or, with older versions of Git:</p><pre data-v="bash">git reset &lt;file&gt;
+</pre></sn><sn class="bar bar-yellow"><h3>Example</h3><h4>1. You added a file:</h4><pre data-v="bash">git add main.py
+</pre><h4>2. Realize it shouldn’t be in the next commit:</h4><pre data-v="bash">git restore --staged main.py
+</pre><p>&gt; Now <code>main.py</code> is no longer staged, but your changes in the working directory remain intact.</p></sn><sn class="bar bar-orange"><h3>Commands Overview</h3><tb class="py-2"><pre>| Command | Purpose |
+| ---  | --- |
+| <code>git add &lt;file&gt;</code> | Stages the file |
+| <code>git restore --staged &lt;file&gt;</code> | <strong>Unstages</strong> the file (recommended in Git 2.23+) |
+| <code>git reset &lt;file&gt;</code> | Older alternative to unstage |
+| <code>git status</code> | Check current staging status |
+</pre></tb></sn><sn class="bar bar-red"><h3>Unstaging All Files</h3><pre data-v="bash">git restore --staged .
+</pre><p>This will unstage <strong>all staged files</strong>, keeping your changes intact.</p></sn><sn class="bar bar-blue"><h3>Important Notes</h3><ul>
+<li>
+<p><strong>Unstaging ≠ Undoing edits</strong>: <code>git restore --staged</code> only removes the file from the staging area. Your file changes are <strong>not lost</strong>.</p>
+</li>
+<li>
+<p>If you also want to discard the file changes, use:</p>
+<pre data-v="bash">git restore &lt;file&gt;
+</pre>
+</li>
+</ul></sn><sn class="bar bar-green"><h3>Summary</h3><tb class="py-2"><pre>| Action | Command |
+| ---  | --- |
+| Unstage a single file | <code>git restore --staged &lt;file&gt;</code> |
+| Unstage all files | <code>git restore --staged .</code> |
+| Alternative (older Git) | <code>git reset &lt;file&gt;</code> |
+| Discard file changes entirely | <code>git restore &lt;file&gt;</code> |
+</pre></tb></sn><sn class="bar bar-indigo"><h3>Conclusion</h3><p>Undoing <code>git add</code> is safe and easy. Whether you're correcting a staging mistake or refining your commit, <code>git restore --staged</code> keeps your version control clean without losing any work. Practice this often, and you'll gain better control over your Git workflow.</p></sn>
