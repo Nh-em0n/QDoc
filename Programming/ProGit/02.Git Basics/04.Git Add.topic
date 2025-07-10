@@ -1,28 +1,42 @@
-<sn><md>## Tracking New Files
----
-
-#### Adding New Files to Git
-
-To begin tracking a new file, use the `git add` command. For example, to start tracking a `README` file:
-
-```
-$ git add README
-```
-
-#### Checking Status After Adding
-
-After running the `git add` command, check the status:
-
-```
-$ git status
-On branch master  
-Your branch is up-to-date with 'origin/master'.  
-Changes to be committed:  
-  (use "git restore --staged <file>..." to unstage)  
-  new file: README
-```
-
-You’ll notice that the `README` file is now tracked and **staged** for the next commit. It^^undefined^^undefined</file></md></sn><config style="display:none"><tags>#02.2.tracking new files</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 10:33:00 GMT+0600 (Bangladesh Standard Time)</udate><id>article-iNXsP7SWZ2</id><duration></duration></config><sn><h2>Practise</h2><p>Our last checkpoint on porfolio project was that we created a new file(index.html) which is untracked by git,so now you have to added it into staging area where it become tracked by git and will captured for the next commit</p><pre data-v="bash">Emon@DESKTOP-S2A6KR1 MINGW64 /e/coding/Git/Git Practise/portfolio (master)
+<config style="display:none"><tags>#02.2.tracking new files</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 21:24:10 GMT+0600 (Bangladesh Standard Time)</udate><id>article-iNXsP7SWZ2</id><duration></duration></config><sn><h2 class="fg-blue text-end">git add</h2><p>In Git, managing your changes efficiently is crucial to maintaining a clean and traceable development workflow. One of the first commands a beginner learns—and must understand deeply—is <code>git add</code>. This command plays a central role in staging changes for a commit. But what exactly does it do, and why is it important? Let’s explore the <code>git add</code> command in detail.</p></sn><sn><h3>What Does <code>git add</code> Do?</h3><p>The <code>git add</code> command updates the <strong>staging area</strong> (also known as the index) with the contents of files in your working directory. It doesn’t actually change the repository or create a commit, but it tells Git, “These are the changes I want to include in the next commit.”</p><h4>Basic Syntax:</h4><pre data-v="bash">git add &lt;filename&gt;
+</pre><p>You can also add multiple files:</p><pre data-v="bash">git add file1.txt file2.txt
+</pre><p>Or all changes:</p><pre data-v="bash">git add .
+</pre></sn><sn><h3>How <code>git add</code> Fits into the Git Workflow</h3><p>Here’s how Git manages file changes:</p><ol>
+<li><strong>Working Directory</strong> – where you make edits to files.</li>
+<li><strong>Staging Area</strong> – a preparation zone where you select changes to commit.</li>
+<li><strong>Repository (Commit History)</strong> – the permanent record of your commits.</li>
+</ol><p><code>git add</code> moves changes from the working directory to the staging area. Then, <code>git commit</code> moves staged changes into the repository.</p></sn><sn><h3>Use Cases for <code>git add</code></h3><h4>1. <strong>Adding a New File</strong></h4><p>If you create a new file (<code>hello.py</code>), it will appear as untracked. To include it:</p><pre data-v="bash">git add hello.py
+</pre><h4>2. <strong>Staging Modified Files</strong></h4><p>After editing a tracked file:</p><pre data-v="bash">git add modified_file.txt
+</pre><h4>3. <strong>Staging All Changes</strong></h4><p>You can add everything (new, modified, deleted) with:</p><pre data-v="bash">git add .
+</pre><p>Or more selectively:</p><pre data-v="bash">git add *.html
+</pre><h4>4. <strong>Interactive Staging</strong></h4><p>For detailed control:</p><pre data-v="bash">git add -p
+</pre><p>This lets you choose <em>hunks</em> (sections) of changes to stage.</p></sn><sn><h3>What <code>git add</code> Doesn’t Do</h3><ul>
+<li>It doesn’t commit your changes.</li>
+<li>It doesn’t affect files that haven’t been changed.</li>
+<li>It doesn’t save history until <code>git commit</code> is used.</li>
+</ul></sn><sn><h3>Common Variants and Options</h3><tb class="py-2"><pre>| Command | Description |
+| ---  | --- |
+| <code>git add .</code> | Stages all changes in current directory. |
+| <code>git add -A</code> | Stages all tracked and untracked files, including deletions. |
+| <code>git add -p</code> | Interactive mode to stage parts of a file. |
+| <code>git add -u</code> | Stages changes to tracked files (no new files). |
+</pre></tb></sn><sn><h3>Visual Example</h3><p><strong>Before:</strong></p><ul>
+<li><code>file1.txt</code> is modified.</li>
+<li><code>file2.txt</code> is a new file.</li>
+</ul><pre data-v="bash">git status
+</pre><p>Output:</p><pre data-v="plaintext">modified: file1.txt
+Untracked files: file2.txt
+</pre><p><strong>After:</strong></p><pre data-v="bash">git add file1.txt file2.txt
+</pre><pre data-v="bash">git status
+</pre><p>Output:</p><pre data-v="plaintext">Changes to be committed:
+  new file:   file2.txt
+  modified:   file1.txt
+</pre></sn><sn><h3>Best Practices</h3><ul>
+<li>Use <code>git status</code> before and after <code>git add</code> to avoid mistakes.</li>
+<li>Avoid using <code>git add .</code> in large projects unless you’re sure of every change.</li>
+<li>Use <code>git add -p</code> to stage specific lines or chunks.</li>
+</ul></sn><sn><h3>Conclusion</h3><p>While simple in appearance, <code>git add</code> is a foundational command in Git that gives you fine-grained control over what you commit. It separates the decision to <strong>track</strong> changes from the decision to <strong>record</strong> them, allowing you to craft meaningful, intentional commits. Mastering <code>git add</code> means mastering the first step of clean version control.
+</p></sn><sn><h2>Practise</h2><p>Our last checkpoint on porfolio project was that we created a new file(index.html) which is untracked by git,so now you have to added it into staging area where it become tracked by git and will captured for the next commit</p><pre data-v="bash">Emon@DESKTOP-S2A6KR1 MINGW64 /e/coding/Git/Git Practise/portfolio (master)
 $ git add index.html
 
 Emon@DESKTOP-S2A6KR1 MINGW64 /e/coding/Git/Git Practise/portfolio (master)
