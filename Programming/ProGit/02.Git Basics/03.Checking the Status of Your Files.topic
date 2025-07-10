@@ -33,4 +33,19 @@ $ git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
 
- </md></sn><config style="display:none"><tags>#02.1.checking the status of your files</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 10:13:11 GMT+0600 (Bangladesh Standard Time)</udate><id>article-Y1hevVON2y</id><duration></duration></config><sn></sn>
+ </md></sn><config style="display:none"><tags>#02.1.checking the status of your files</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 10:27:24 GMT+0600 (Bangladesh Standard Time)</udate><id>article-Y1hevVON2y</id><duration></duration></config><sn><h2>Practise</h2><p>My last checkpoint in my portfolio folder was to init git on it.</p><p>Now I will create a new index.html file and lets see what happend.</p><im>https://i.imgur.com/O4vkvXf.png^^Creating new index.html file</im><h5>Git Bash</h5><pre data-v="bash">Emon@DESKTOP-S2A6KR1 MINGW64 /e/coding/Git/Git Practise/portfolio (master)
+$ ls
+index.html
+
+Emon@DESKTOP-S2A6KR1 MINGW64 /e/coding/Git/Git Practise/portfolio (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+</pre><p>When we create a new file , git set it as a untracked file</p></sn>
