@@ -35,36 +35,7 @@ You end up with a single improved commit.
 Say you've accidentally staged multiple files with `git add *` and want to unstage one:
 
 ```bash
-$ git reset HEAD <file class="undefined d-none">
-```
-
-**Example:**
-
-```bash
-$ git reset HEAD CONTRIBUTING.md
-```
-
-This unstages the file but keeps your working directory changes intact.
-
-&gt; **Note:** `git reset` can be dangerous with the `--hard` flag, but in this context, it's safe—your working file isn't touched.
-
----
-
-### Unmodifying a Modified File
-
-To discard changes and revert a file back to the last committed version:
-
-```bash
-$ git checkout -- <file class="undefined d-none">
-```
-
-**Example:**
-
-```bash
-$ git checkout -- CONTRIBUTING.md
-```
-
-&gt; **Caution:** This command **permanently deletes** your local changes. Use it only if you're sure.
+$ git reset HEAD undefinedundefined **Caution:** This command **permanently deletes** your local changes. Use it only if you're sure.
 
 If you'd like to keep your changes but put them aside, consider **stashing** or **branching** (covered in *Git Branching*).
 
@@ -83,7 +54,7 @@ Git 2.23.0 introduced `git restore` as an alternative to `git reset` and `git ch
 To unstage a file:
 
 ```bash
-$ git restore --staged <file class="undefined d-none">
+$ git restore --staged 
 ```
 
 **Example:**
@@ -101,7 +72,7 @@ This removes the file from the staging area while preserving your local modifica
 To discard local changes and restore the file to its last committed state:
 
 ```bash
-$ git restore <file class="undefined d-none">
+$ git restore 
 ```
 
 **Example:**
@@ -110,9 +81,60 @@ $ git restore <file class="undefined d-none">
 $ git restore CONTRIBUTING.md
 ```
 
-&gt; **Caution:** Like `checkout -- <file class="undefined d-none">`, this deletes your local changes permanently. Don’t use it unless you’re certain.
+&gt; **Caution:** Like `checkout -- `, this deletes your local changes permanently. Don’t use it unless you’re certain.
 
 ---
 
 By using these commands thoughtfully, you can safely undo actions in Git—just be mindful of which changes are recoverable and which are not.
-</file></file></file></file></file></md></sn><config style="display:none"><tags>#04.undoing things</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jun 02 2025 09:16:45 GMT+0600 (Bangladesh Standard Time)</udate><id>article-2EgUvhT4RI</id><duration></duration></config>
+' class="fa-solid fa-clone i-btn rounded-2 copy-btn"&gt; **Caution:** This command **permanently deletes** your local changes. Use it only if you're sure.
+
+If you'd like to keep your changes but put them aside, consider **stashing** or **branching** (covered in *Git Branching*).
+
+&gt; **Tip:** Anything committed in Git is almost always recoverable. Uncommitted work, however, is typically lost forever.
+
+---
+
+## Undoing Things with `git restore`
+
+Git 2.23.0 introduced `git restore` as an alternative to `git reset` and `git checkout` for undoing changes.
+
+---
+
+### Unstaging a Staged File with `git restore`
+
+To unstage a file:
+
+```bash
+$ git restore --staged 
+```
+
+**Example:**
+
+```bash
+$ git restore --staged CONTRIBUTING.md
+```
+
+This removes the file from the staging area while preserving your local modifications.
+
+---
+
+### Unmodifying a Modified File with `git restore`
+
+To discard local changes and restore the file to its last committed state:
+
+```bash
+$ git restore 
+```
+
+**Example:**
+
+```bash
+$ git restore CONTRIBUTING.md
+```
+
+&gt; **Caution:** Like `checkout -- `, this deletes your local changes permanently. Don’t use it unless you’re certain.
+
+---
+
+By using these commands thoughtfully, you can safely undo actions in Git—just be mindful of which changes are recoverable and which are not.
+' data-filename='undefined' class="fa-duotone fa-arrow-down i-btn rounded-circle link-download-btn"&gt;</md></sn><config style="display:none"><tags>#04.undoing things</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 10:37:19 GMT+0600 (Bangladesh Standard Time)</udate><id>article-2EgUvhT4RI</id><duration></duration></config>
