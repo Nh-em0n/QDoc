@@ -1,268 +1,43 @@
-<sn class="col-6 bg-blur"><md>## Viewing the Commit History
----
-
-![git images](https://www.svgrepo.com/show/303548/git-icon-logo.svg)
-
-After you have created several commits, or if you have cloned a repository with an existing commit history, you’ll probably want to look back to see what has happened. The most basic and powerful tool to do this is the `git log` command.
-
----
-
-### Cloning the Sample Project
-
-These examples use a very simple project called **simplegit**. To get the project, run:
-
-```bash
-$ git clone https://github.com/schacon/simplegit-progit
-```
-
-When you run `git log` in this project, you should get output similar to:
-
-```bash
-$ git log
-commit ca82a6dff817ec66f44342007202690a93763949
-Author: Scott Chacon <schacon@gee-mail.com>
-Date:   Mon Mar 17 21:52:11 2008 -0700
-
-    Change version number
-
-commit 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
-Author: Scott Chacon <schacon@gee-mail.com>
-Date:   Sat Mar 15 16:40:33 2008 -0700
-
-    Remove unnecessary test
-
-commit a11bef06a3f659402fe7563abf99ad00de2209e6
-Author: Scott Chacon <schacon@gee-mail.com>
-Date:   Sat Mar 15 10:31:28 2008 -0700
-
-    Initial commit
-```
-
-By default, `git log` lists commits in reverse chronological order, displaying:
-
-* SHA-1 checksum
-* Author name and email
-* Commit date
-* Commit message
-
----
-
-### Output Formatting Options
-
-Git offers many options for customizing `git log` output.
-
-#### Show Patch with Each Commit: `-p` or `--patch`
-
-```bash
-$ git log -p -2
-```
-
-This displays the diff for each of the last two commits:
-
-```diff
-diff --git a/Rakefile b/Rakefile
-index a874b73..8f94139 100644
---- a/Rakefile
-+++ b/Rakefile
-@@ -5,7 +5,7 @@ require 'rake/gempackagetask'
- spec = Gem::Specification.new do |s|
-   s.platform = Gem::Platform::RUBY
-   s.name = "simplegit"
--  s.version = "0.1.0"
-+  s.version = "0.1.1"
-   s.author = "Scott Chacon"
-   s.email = "schacon@gee-mail.com"
-   s.summary = "A simple gem for using Git in Ruby code."
-```
-
-Useful for code review or reviewing collaborator changes.
-
-#### Show Commit Summary Stats: `--stat`
-
-```bash
-$ git log --stat
-```
-
-Example:
-
-```text
-commit ca82a6d...
-Author: Scott Chacon ...
-Date:   ...
-
-    Change version number
-
- Rakefile | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-```
-
-Shows files changed, lines inserted/deleted.
-
-#### Abbreviated Output: `--pretty`
-
-```bash
-$ git log --pretty=oneline
-```
-
-Outputs each commit on a single line:
-
-```text
-ca82a6dff817ec66f44342007202690a93763949 Change version number
-085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7 Remove unnecessary test
-```
-
-Other options: `short`, `full`, `fuller`.
-
-#### Custom Format: `--pretty=format:`
-
-```bash
-$ git log --pretty=format:"%h - %an, %ar : %s"
-```
-
-```text
-ca82a6d - Scott Chacon, 6 years ago : Change version number
-085bb3b - Scott Chacon, 6 years ago : Remove unnecessary test
-```
-
-##### Table 1: Useful Specifiers for `--pretty=format`
-
-| Specifier | Description              |
-| --------- | ------------------------ |
-| `%H`      | Commit hash              |
-| `%h`      | Abbreviated commit hash  |
-| `%an`     | Author name              |
-| `%ae`     | Author email             |
-| `%ad`     | Author date              |
-| `%ar`     | Author date, relative    |
-| `%cn`     | Committer name           |
-| `%ce`     | Committer email          |
-| `%cd`     | Committer date           |
-| `%cr`     | Committer date, relative |
-| `%s`      | Commit message subject   |
-
-&gt; **Author vs Committer**
-&gt; The author wrote the code; the committer applied it. In team workflows, both can differ.
-
-#### Show ASCII Graph: `--graph`
-
-```bash
-$ git log --pretty=format:"%h %s" --graph
-```
-
-```text
-* 2d3acf9 Ignore errors from SIGCHLD on trap
-* 5e3ee11 Merge branch 'master'
-|\
-| * 420eac9 Add method for getting the current branch
-* | 30e367c Timeout code and tests
-```
-
-Helps visualize branch/merge history.
-
----
-
-### Table 2: Common `git log` Output Options
-
-| Option            | Description                                                  |
-| ----------------- | ------------------------------------------------------------ |
-| `-p`              | Show patch (diff) for each commit                            |
-| `--stat`          | Show file change statistics                                  |
-| `--shortstat`     | Only show insertions/deletions summary                       |
-| `--name-only`     | Show only file names changed                                 |
-| `--name-status`   | Show file names and status (added/modified/deleted)          |
-| `--abbrev-commit` | Abbreviate SHA-1                                             |
-| `--relative-date` | Show dates as "2 weeks ago", etc.                            |
-| `--graph`         | ASCII graph of branches and merges                           |
-| `--pretty`        | Customize format (`oneline`, `short`, `full`, `format`, etc) |
-| `--oneline`       | Equivalent to `--pretty=oneline --abbrev-commit`             |
-
----
-
-### Limiting Log Output
-
-#### Show Only Last N Commits
-
-```bash
-$ git log -2
-```
-
-#### Filter by Date
-
-```bash
-$ git log --since=2.weeks
-$ git log --since="2008-01-15" --until="2008-01-30"
-```
-
-#### Filter by Author or Committer
-
-```bash
-$ git log --author="John"
-$ git log --committer="Alice"
-```
-
-#### Search by Commit Message
-
-```bash
-$ git log --grep="bug fix"
-```
-
-You can combine multiple `--author` and `--grep` options. Use `--all-match` to match all criteria.
-
-#### Show Commits Changing a String: `-S`
-
-```bash
-$ git log -S function_name
-```
-
-Shows commits that add/remove `function_name`.
-
-#### Limit to Specific File or Directory
-
-```bash
-$ git log -- path/to/file
-```
-
----
-
-### Table 3: Options to Limit `git log` Output
-
-| Option                | Description                                     |
-| --------------------- | ----------------------------------------------- |
-| `-<n>`                | Show only last `n` commits                      |
-| `--since`, `--after`  | Only show commits after a specific date         |
-| `--until`, `--before` | Only show commits before a specific date        |
-| `--author`            | Filter by author name                           |
-| `--committer`         | Filter by committer name                        |
-| `--grep`              | Filter commits with matching message            |
-| `-S`                  | Filter commits changing occurrences of a string |
-
----
-
-### Advanced Example
-
-Show commits by Junio Hamano in October 2008 affecting test files, excluding merges:
-
-```bash
-$ git log --pretty="%h - %s" --author="Junio C Hamano" \
-  --since="2008-10-01" --before="2008-11-01" --no-merges -- t/
-```
-
-Example output:
-
-```text
-5610e3b - Fix testcase failure when extended attributes are in use  
-acd3b9e - Enhance hold_lock_file_for_{update,append}() API  
-f563754 - demonstrate breakage of detached checkout with symbolic link HEAD  
-...
-```
-
----
-
-### Exclude Merge Commits
-
-Merge commits can clutter logs. To exclude them:
-
-```bash
-$ git log --no-merges
-```
-</n></schacon@gee-mail.com></schacon@gee-mail.com></schacon@gee-mail.com></md></sn><config style="display:none"><tags>#03.viewing the commit history</tags><thumbnail>https://www.svgrepo.com/show/303548/git-icon-logo.svg</thumbnail><heading>Git Commit History</heading><udate>Fri Jun 20 2025 17:55:35 GMT+0600 (Bangladesh Standard Time)</udate><id>article-ziP8IP7UTA</id><duration>5</duration></config>
+<config style="display:none"><tags>#03.viewing the commit history</tags><thumbnail>https://www.svgrepo.com/show/303548/git-icon-logo.svg</thumbnail><heading>Git Commit History</heading><udate>Thu Jul 10 2025 23:13:34 GMT+0600 (Bangladesh Standard Time)</udate><id>article-ziP8IP7UTA</id><duration>5</duration></config><sn><h2>Understanding <code>git log</code> in Git</h2><h3>Introduction</h3><p>In Git, every time you make a commit, Git stores it in a history known as the <strong>commit log</strong>. The <code>git log</code> command is the primary tool used to <strong>view and explore this history</strong>. Whether you're reviewing past changes, tracing bugs, or understanding project evolution, <code>git log</code> is essential to navigating Git repositories effectively.</p><hr><h3>What Is <code>git log</code>?</h3><p>The <code>git log</code> command shows a list of <strong>commits made in the repository</strong>, starting from the most recent. Each entry provides detailed metadata such as the commit hash, author, date, and commit message.</p><h4>Basic Syntax:</h4><pre data-v="bash">git log
+</pre><hr><h3>Default Output</h3><p>Running <code>git log</code> displays each commit like this:</p><pre data-v="plaintext">commit 6c2a3a1d9fdbcc8a7c71b1f8d2ab8c421e163a98
+Author: Jane Doe &lt;jane@example.com&gt;
+Date:   Wed Jul 10 10:24:17 2025 +0600
+
+    Add responsive layout to homepage
+</pre><hr><h3>Common <code>git log</code> Options</h3><tb class="py-2"><pre>| Option | Description |
+| ---  | --- |
+| <code>--oneline</code> | Show each commit on a single line (short hash + msg) |
+| <code>--graph</code> | Draw a text-based commit tree |
+| <code>--decorate</code> | Show branch and tag names alongside commits |
+| <code>--stat</code> | Show what files changed and how many lines |
+| <code>-p</code> | Show the full diff introduced by each commit |
+| <code>--since="2 weeks ago"</code> | Filter commits by date |
+| <code>--author="John"</code> | Filter by author |
+| <code>-- &lt;file&gt;</code> | Show commits related to a specific file |
+</pre></tb><hr><h3>Useful Command Combinations</h3><h4>1. Short and Readable Log</h4><pre data-v="bash">git log --oneline
+</pre><h4>2. View Commit Tree</h4><pre data-v="bash">git log --oneline --graph --decorate --all
+</pre><h4>3. See What Changed (with Stats)</h4><pre data-v="bash">git log --stat
+</pre><h4>4. Show Full Changes (Diff)</h4><pre data-v="bash">git log -p
+</pre><h4>5. Filter by File</h4><pre data-v="bash">git log --oneline -- &lt;file_name&gt;
+</pre><hr><h3>Aliases for Git Log</h3><p>To simplify repetitive commands, create aliases:</p><pre data-v="bash">git config --global alias.lg "log --oneline --graph --decorate --all"
+</pre><p>Now, you can just run:</p><pre data-v="bash">git lg
+</pre><hr><h3>Example Output (Using <code>--oneline --graph --decorate</code>)</h3><pre data-v="plaintext">* 3f1c3d2 (HEAD -&gt; main) Fix form validation
+* 5a8e2f1 (origin/main) Update footer
+* 9d5a1b9 Add about page
+</pre><hr><h3>Summary Table</h3><tb class="py-2"><pre>| Task | Command |
+| ---  | --- |
+| Basic log | <code>git log</code> |
+| One-line summary | <code>git log --oneline</code> |
+| Visual tree view | <code>git log --oneline --graph --decorate --all</code> |
+| Show changes in each commit | <code>git log -p</code> |
+| Show commit file stats | <code>git log --stat</code> |
+| Filter by author | <code>git log --author="Alice"</code> |
+| Filter by date | <code>git log --since="1 month ago"</code> |
+| Show log for specific file | <code>git log -- &lt;file&gt;</code> |
+</pre></tb><hr><h3>Best Practices</h3><ul>
+<li>Use <code>--oneline</code> for a quick overview.</li>
+<li>Use <code>--graph</code> to understand branch history.</li>
+<li>Create aliases for frequent log formats.</li>
+<li>Combine filters to isolate meaningful history slices.</li>
+</ul><hr><h3>Conclusion</h3><p>The <code>git log</code> command is your window into the entire history of a Git project. From auditing changes to investigating bugs or reviewing contributions, it's a tool every developer must master. Start simple, then experiment with flags to unlock its full power.</p><p>Let me know if you’d like a printable Git log cheatsheet or visualization examples!
+&lt;/file_name&gt;<a href="mailto:/jane@example.com">/jane@example.com</a></p></sn>
