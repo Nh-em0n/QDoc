@@ -1,4 +1,4 @@
-<config style="display:none"><tags>#02.1.checking the status of your files</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 20:59:51 GMT+0600 (Bangladesh Standard Time)</udate><id>article-Y1hevVON2y</id><duration></duration></config><sn class="bar bar-indigo"><h2>Git Status</h2><p>Git is a powerful distributed version control system, and among its many essential commands, <code>git status</code> stands out as a beginner’s best friend. It provides an immediate snapshot of your working directory and staging area, helping you understand what Git is currently tracking and what it isn’t. Whether you're new to Git or looking to build a solid foundation, understanding <code>git status</code> is a vital step.</p></sn><sn class="bar bar-pink"><h4>What Is <code>git status</code>?</h4><p>The <code>git status</code> command is used to display the state of the working directory and the staging area. It shows which changes have been staged (i.e., prepared for the next commit), which changes haven't, and which files aren’t being tracked by Git.</p><h5>Syntax:</h5><pre data-v="bash">git status
+<config style="display:none"><tags>#02.1.checking the status of your files</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 21:08:44 GMT+0600 (Bangladesh Standard Time)</udate><id>article-Y1hevVON2y</id><duration></duration></config><sn class="bar bar-indigo"><h2>Git Status</h2><p>Git is a powerful distributed version control system, and among its many essential commands, <code>git status</code> stands out as a beginner’s best friend. It provides an immediate snapshot of your working directory and staging area, helping you understand what Git is currently tracking and what it isn’t. Whether you're new to Git or looking to build a solid foundation, understanding <code>git status</code> is a vital step.</p></sn><sn class="bar bar-pink"><h4>What Is <code>git status</code>?</h4><p>The <code>git status</code> command is used to display the state of the working directory and the staging area. It shows which changes have been staged (i.e., prepared for the next commit), which changes haven't, and which files aren’t being tracked by Git.</p><h5>Syntax:</h5><pre data-v="bash">git status
 </pre></sn><sn class="bar bar-both bar-red"><h4>What Does <code>git status</code> Show?</h4><p>Here’s what you typically see when you run the command:</p><ol>
 <li>
 <p><strong>Current branch name</strong>
@@ -20,7 +20,7 @@ Modified files not yet staged using <code>git add</code>.</p>
 <p><strong>Untracked files</strong>
 Files that are not being tracked by Git and have not been added.</p>
 </li>
-</ol></sn><sn class="bar bar-teal"><h4>Output Example</h4><p>Suppose you edited a file called <code>index.html</code> and created a new file <code>app.js</code>. After running <code>git status</code>, you might see:</p><pre data-v="bash">On branch main
+</ol><p>So consecutive files in status : Staged -&gt; Unstaged -&gt; Untracked</p></sn><sn class="bar bar-teal"><h4>Output Example</h4><p>Suppose you edited a file called <code>index.html</code> and created a new file <code>app.js</code>. After running <code>git status</code>, you might see:</p><pre data-v="bash">On branch main
 Your branch is up to date with 'origin/main'.
 
 Changes not staged for commit:
@@ -46,9 +46,9 @@ Untracked files:
 <li><strong>Use with other commands</strong>: Combine it with <code>git diff</code> and <code>git add</code> for smooth version control.</li>
 </ul></sn><sn class="bar bar-pink"><h4>Summary Table</h4><tb class="py-2"><pre>| Element | Description |
 | ---  | --- |
-| <code>Changes to be committed</code> | Files staged with <code>git add</code>, ready to be committed. |
-| <code>Changes not staged</code> | Files modified but not yet added. |
-| <code>Untracked files</code> | New files not tracked by Git. |
+| <font color="#fec78c" face="JetBrains Mono, JetBrains Mono, sans-serif"><b>Staged</b></font> | Files staged with <code>git add</code>, ready to be committed. |
+| <font color="#fec78c" face="JetBrains Mono, JetBrains Mono, sans-serif"><b>Unstaged</b></font> | Files modified but not yet added. |
+| <code>Untracked</code> | New files not tracked by Git. |
 | <code>git status</code> + <code>-s</code> | Short status view (e.g., <code>M file.txt</code> for modified). |
 | Run before... | <code>git add</code>, <code>git commit</code>, <code>git push</code> |
 </pre></tb><h4>Conclusion</h4><p>The <code>git status</code> command is your constant companion in Git. As a beginner, forming the habit of running it often will save you time, reduce confusion, and improve your understanding of Git's internal processes. Once mastered, it becomes second nature—a quick glance that tells you everything you need to know about the current state of your project.
