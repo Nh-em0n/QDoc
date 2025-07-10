@@ -1,90 +1,39 @@
-<sn><md>## Committing Your Changes
-
-### What Gets Committed?
-
-When you're ready to save a snapshot of your work, you use the `git commit` command. But remember:
-
-* **Only staged changes** (those added with `git add`) will be committed.
-* **Unstaged changes** will remain in your working directory.
-
-So always check your staging area with `git status` before committing.
-
----
-
-### Committing with an Editor
-
-The basic form of the commit command:
-
-```bash
-$ git commit
-```
-
-This opens your configured text editor (such as `vim`, `nano`, or `emacs`) to write a commit message.
-
-If you're using `vim`, you may see something like this:
-
-```
-# Please enter the commit message for your changes. Lines starting
-# with '#' will be ignored, and an empty message aborts the commit.
-# On branch master
-# Your branch is up-to-date with 'origin/master'.
-#
-# Changes to be committed:
-#   new file:   README
-#   modified:   CONTRIBUTING.md
-```
-
-* Lines starting with `#` are comments and will be ignored.
-* The commit message goes above or in place of the comment block.
-
-To configure your preferred editor:
-
-```bash
-$ git config --global core.editor nano  # or 'vim', 'code --wait', etc.
-```
-
----
-
-### Adding a Diff to the Commit Editor
-
-You can use the `-v` (verbose) option to include the diff in the commit editor window:
-
-```bash
-$ git commit -v
-```
-
-This lets you see the exact changes you’re committing while writing your message.
-
----
-
-### Inline Commit Message with `-m`
-
-To avoid opening an editor, use the `-m` flag followed by your message:
-
-```bash
-$ git commit -m "Story 182: fix benchmarks for speed"
-```
-
-Output example:
-
-```
-[master 463dc4f] Story 182: fix benchmarks for speed
- 2 files changed, 2 insertions(+)
- create mode 100644 README
-```
-
-* You see the branch (`master`)
-* The commit ID (`463dc4f`)
-* A summary of changes (files and lines modified)
-
----
-
-### Summary
-
-* `git commit` saves the **staged snapshot** to history.
-* Use `git add` to select changes for the next commit.
-* Use `git commit` or `git commit -m "message"` to record those changes.
-* Anything not staged will remain as modified and can be committed later.
-
-Every commit creates a point in history you can return to or compare against, making version tracking in Git both powerful and flexible.
-</md></sn><config style="display:none"><tags>#02.7.comitting changes</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jun 02 2025 08:13:04 GMT+0600 (Bangladesh Standard Time)</udate><id>article-BdNTT6jJuU</id><duration></duration></config>
+<config style="display:none"><tags>#02.7.comitting changes</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 22:46:34 GMT+0600 (Bangladesh Standard Time)</udate><id>article-BdNTT6jJuU</id><duration></duration></config><sn class="bar bar-pink"><h2>Git Commit</h2><p>In Git, <code>git commit</code> is one of the most fundamental commands—it's the moment when your changes are <strong>recorded into version history</strong>. Every time you commit, you create a new snapshot of your project, along with a message explaining what was changed. Understanding how <code>git commit</code> works is essential to mastering version control.</p><im>https://miro.medium.com/v2/resize:fit:1200/1*eGdNATA_BGQcA1xUvc9Irg.png^^Commit in git workflow</im></sn><sn class="bar bar-orange"><h3>What Does <code>git commit</code> Do?</h3><p>The <code>git commit</code> command takes everything that’s currently staged (added using <code>git add</code>) and saves it in Git’s history as a new <strong>commit</strong>. This commit becomes a permanent part of your repository, complete with a unique ID and message.</p><h4>Basic Syntax:</h4><pre data-v="bash">git commit -m "Your commit message"
+</pre></sn><sn class="bar bar-teal"><h3>Workflow Context</h3><p>Typical Git workflow:</p><ol>
+<li><strong>Edit Files</strong> → Working Directory</li>
+<li><strong>Stage Changes</strong> → <code>git add &lt;file&gt;</code></li>
+<li><strong>Create Commit</strong> → <code>git commit -m "message"</code></li>
+</ol><p>Each commit is like a snapshot of your files at a point in time.</p></sn><sn class="bar bar-blue"><h3>Anatomy of a Commit</h3><p>A Git commit contains:</p><ul>
+<li><strong>A unique SHA-1 hash ID</strong></li>
+<li><strong>Author information</strong></li>
+<li><strong>Timestamp</strong></li>
+<li><strong>Commit message</strong></li>
+<li><strong>Pointer to parent commit(s)</strong></li>
+<li><strong>Snapshot of staged changes</strong></li>
+</ul></sn><sn class="bar bar-blue"><h3>Common Variants of <code>git commit</code></h3><tb class="py-2"><pre>| Command | Description |
+| ---  | --- |
+| <code>git commit -m "message"</code> | Commits with a message from the command line |
+| <code>git commit</code> | Opens the default editor to write a multi-line commit message |
+| <code>git commit -a -m "message"</code> | Automatically stages tracked changes and commits in one step |
+| <code>git commit --amend</code> | Modifies the last commit (message or files) |
+| <code>git commit --allow-empty</code> | Creates a commit even if nothing changed (useful for marking events) |
+</pre></tb></sn><sn class="bar bar-red"><h3>Example Usage</h3><h4>1. Simple Commit</h4><pre data-v="bash">git add index.html
+git commit -m "Add homepage layout"
+</pre><h4>2. Commit All Tracked Changes Automatically</h4><pre data-v="bash">git commit -a -m "Update header and footer"
+</pre><p class="bar bar-red bg-light">Note: This only stages changes to <strong>already tracked</strong> files,<x class="fg-red">not new files</x></p></sn><sn class="bar bar-green"><h3>Amending a Commit</h3><p>If you forgot to include something or want to fix the message:</p><pre data-v="bash">git commit --amend
+</pre><p>You can:</p><ul>
+<li>Edit the commit message</li>
+<li>Add or remove files from the commit (after re-staging)</li>
+</ul><p>⚠️ <strong>Caution</strong>: Amending rewrites history; avoid this on commits you’ve already pushed to shared repositories.</p></sn><sn class="bar bar-purple"><h3>Best Practices for Commit Messages</h3><ul>
+<li>Start with a short summary (max 50 characters)</li>
+<li>Use present tense: “Add feature” not “Added”</li>
+<li>Follow with a longer description (if needed) after a blank line</li>
+<li>Be clear and concise</li>
+</ul><p><strong>Good example:</strong></p><pre data-v="plaintext">git commit -m "Fix login redirect after password reset"
+</pre></sn><sn class="bar bar-teal"><h3>Summary</h3><tb class="py-2"><pre>| Action | Command |
+| ---  | --- |
+| Commit staged changes | <code>git commit -m "message"</code> |
+| Commit and stage tracked files | <code>git commit -a -m "message"</code> |
+| Amend last commit | <code>git commit --amend</code> |
+| View commit history | <code>git log</code> or <code>git log --oneline</code> |
+</pre></tb></sn>
