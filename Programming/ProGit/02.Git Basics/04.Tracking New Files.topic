@@ -22,4 +22,16 @@ Changes to be committed:
   new file: README
 ```
 
-You’ll notice that the `README` file is now tracked and **staged** for the next commit. It^^undefined^^undefined</file></md></sn><config style="display:none"><tags>#02.2.tracking new files</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jun 02 2025 08:08:10 GMT+0600 (Bangladesh Standard Time)</udate><id>article-iNXsP7SWZ2</id><duration></duration></config>
+You’ll notice that the `README` file is now tracked and **staged** for the next commit. It^^undefined^^undefined</file></md></sn><config style="display:none"><tags>#02.2.tracking new files</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 10:33:00 GMT+0600 (Bangladesh Standard Time)</udate><id>article-iNXsP7SWZ2</id><duration></duration></config><sn><h2>Practise</h2><p>Our last checkpoint on porfolio project was that we created a new file(index.html) which is untracked by git,so now you have to added it into staging area where it become tracked by git and will captured for the next commit</p><pre data-v="bash">Emon@DESKTOP-S2A6KR1 MINGW64 /e/coding/Git/Git Practise/portfolio (master)
+$ git add index.html
+
+Emon@DESKTOP-S2A6KR1 MINGW64 /e/coding/Git/Git Practise/portfolio (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached &lt;file&gt;..." to unstage)
+        new file:   index.html
+</pre><p>Now no untracked files message is not shown in the message</p></sn>
