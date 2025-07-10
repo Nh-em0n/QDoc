@@ -1,11 +1,11 @@
-<config style="display:none"><tags>#06.first time git setup</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 08:40:11 GMT+0600 (Bangladesh Standard Time)</udate><id>article-J9WTvNuOam</id><duration></duration></config><sn><h2>First-Time Git Setup</h2><p>Now that you have Git on your system, you’ll want to do a few things to <strong>customize your Git environment</strong>.
+<config style="display:none"><tags>#06.first time git setup</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 08:55:29 GMT+0600 (Bangladesh Standard Time)</udate><id>article-J9WTvNuOam</id><duration></duration></config><sn><h2>First-Time Git Setup</h2><p>Now that you have Git on your system, you’ll want to do a few things to <strong>customize your Git environment</strong>.
 You should have to do these things only once on any given computer — they’ll stick around between upgrades.
 You can also change them at any time by running through the commands again.</p><p>Git comes with a tool called <code>git config</code> that lets you <strong>get and set configuration variables</strong> that control all aspects of how Git looks and operates.
-These variables can be stored in <strong>three different places</strong>:</p></sn><sn class="col-12 col-md-10 col-lg-10 col-xl-10 col-xxl-9 p-0 p-md-3 p-lg-5 ignore"><h3>Configuration Levels</h3><tb class="py-2"><pre>| <strong>Scope</strong> | <strong>Description</strong> | <strong>Example Path</strong> | <strong>Example from Your Data</strong> |
+These variables can be stored in <strong>three different places</strong>:</p></sn><sn class="col-12 col-md-10 col-lg-10 col-xl-10 col-xxl-9 p-0 p-md-3 p-lg-5 ignore"><h3>Configuration Levels</h3><tb class="py-2"><pre>| <strong>Scope</strong> | <strong>Description</strong> | <strong>Example Path</strong> | <strong>Example</strong> |
 | ---  | ---  | ---  | --- |
-| <strong>System</strong> | Applies to all users and all repositories on the system | <code>C:/Program Files/Git/etc/gitconfig</code> | <code>file:C:/Program Files/Git/etc/gitconfig</code> |
-| <strong>Global</strong> | Applies to a specific user across all repositories | <code>C:/Users/Emon/.gitconfig</code> | <code>file:C:/Users/Emon/.gitconfig</code> |
-| <strong>Repository</strong> | Applies to one specific repository only | <code>.git/config</code> in the root of a Git repo (e.g., <code>C:/Projects/MyRepo/.git/config</code>) | <em>Not shown in your data</em> |
+| <strong>System</strong> | Applies to all users and all repositories on the system | <code>C:/Program Files/Git/etc/gitconfig</code> | <im>https://i.imgur.com/7yCx0q2.png^^file:C:/Program Files/Git/etc/gitconfig</im> |
+| <strong>Global</strong> | Applies to a specific user across all repositories | <code>C:/Users/UserName/.gitconfig</code> | <im>https://i.imgur.com/5V0wVwE.png^^file:C:/Users/Emon/.gitconfig</im> |
+| <strong>Repository</strong> | Applies to one specific repository only | <code>.git/config</code> in the root of a Git repo | <im>https://i.imgur.com/4jMuu4O.png^^C:\Users\Emon\git_practise.git\config</im> |
 </pre></tb></sn><sn><h3>On Windows Systems</h3><ul>
 <li>
 <p>Git looks for the <code>.gitconfig</code> file in the <code>$HOME</code> directory (<code>C:\Users\$USER</code> for most users).</p>
