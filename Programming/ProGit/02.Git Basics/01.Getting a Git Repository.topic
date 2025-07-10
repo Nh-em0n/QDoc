@@ -1,4 +1,4 @@
-<config style="display:none"><tags>#01.getting a git repository</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 09:48:52 GMT+0600 (Bangladesh Standard Time)</udate><id>article-5k9z1aWDnR</id><duration></duration></config><sn class="bar bar-teal"><h2>Getting a Git Repository</h2><p>You typically obtain a Git repository in one of two ways:</p><ol>
+<config style="display:none"><tags>#01.getting a git repository</tags><thumbnail></thumbnail><heading></heading><udate>Thu Jul 10 2025 10:19:30 GMT+0600 (Bangladesh Standard Time)</udate><id>article-5k9z1aWDnR</id><duration></duration></config><sn class="bar bar-teal"><h2>Getting a Git Repository</h2><p>You typically obtain a Git repository in one of two ways:</p><ol>
 <li>You can take a local directory that is currently not under version control, and turn it into a Git repository, or</li>
 <li>You can clone an existing Git repository from elsewhere.</li>
 </ol><p>In either case, you end up with a Git repository on your local machine, ready for work.</p></sn><sn class="bar bar-blue"><h3>Initializing a Repository in an Existing Directory</h3><p>If you have a project directory that is currently not under version control and you want to start controlling it with Git, you first need to go to that project’s directory. If you’ve never done this, it looks a little different depending on which system you’re running:</p><ul>
@@ -89,4 +89,16 @@
 * **refs/**: Stores pointers to commits (branches, tags, remotes).
 * **packed-refs**: Optimized storage of refs when there are many.
 * **shallow**: Indicates shallow clone metadata, if present.
-</md></sn>
+</md></sn><sn class="bar bar-blue"><h2>Init git on porfolio project</h2><pre data-v="bash">Emon@DESKTOP-S2A6KR1 MINGW64 ~
+$ cd "E:\coding\Git\Git Practise\portfolio"
+
+Emon@DESKTOP-S2A6KR1 MINGW64 /e/coding/Git/Git Practise/portfolio
+$ ls
+
+Emon@DESKTOP-S2A6KR1 MINGW64 /e/coding/Git/Git Practise/portfolio
+$ git init
+
+Initialized empty Git repository in E:/coding/Git/Git Practise/portfolio/.git/
+
+Emon@DESKTOP-S2A6KR1 MINGW64 /e/coding/Git/Git Practise/portfolio (master)
+</pre><im>https://i.imgur.com/BXpbTzr.png^^New git repositories created on my portfolio folder</im></sn>
