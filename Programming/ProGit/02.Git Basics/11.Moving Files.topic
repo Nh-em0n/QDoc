@@ -1,76 +1,37 @@
-<sn><md>## Moving Files
-
-### Git Doesn't Track Renames Explicitly
-
-Unlike many version control systems, Git **does not explicitly track file renames**. When you rename or move a file, Git doesn’t record metadata about the rename. Instead, it **infers** renames by comparing the content of files across commits.
-
-Despite this, Git provides a `git mv` command for convenience.
-
----
-
-### Using `git mv`
-
-To rename or move a file:
-
-```bash
-$ git mv file_from file_to
-```
-
-Example:
-
-```bash
-$ git mv README.md README
-```
-
-Then check the status:
-
-```bash
-$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-	renamed:    README.md -&gt; README
-```
-
-Git recognizes this as a rename because the content remains similar.
-
----
-
-### Equivalent Manual Steps
-
-The following commands achieve the same effect:
-
-```bash
-$ mv README.md README
-$ git rm README.md
-$ git add README
-```
-
-So `git mv` is essentially a shortcut for:
-
-1. Moving the file with `mv`
-2. Removing the old path with `git rm`
-3. Adding the new path with `git add`
-
----
-
-### Key Notes
-
-* **`git mv` is a convenience**, not a requirement.
-* Git will detect renames **even if done manually**, as long as you add and commit the changes appropriately.
-* You can also use **other tools** or GUI apps to rename/move files — just remember to stage the changes before committing.
-
----
-
-### Summary
-
-| Task                    | Command                                                       |
-| ----------------------- | ------------------------------------------------------------- |
-| Rename/move with Git    | `git mv oldname newname`                                      |
-| Rename/move manually    | `mv oldname newname``git rm oldname``git add newname` |
-| Check status after move | `git status`                                                  |
-
-Use `git mv` for simplicity, or perform the steps manually — Git handles both equally well.
-^^undefined^^undefined</file></md></sn><config style="display:none"><tags>#02.9.moving files</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jun 02 2025 08:14:38 GMT+0600 (Bangladesh Standard Time)</udate><id>article-hRQt1d0eQG</id><duration></duration></config>
+<config style="display:none"><tags>#02.9.moving files</tags><thumbnail></thumbnail><heading></heading><udate>Fri Jul 11 2025 11:25:52 GMT+0600 (Bangladesh Standard Time)</udate><id>article-hRQt1d0eQG</id><duration></duration></config><sn class="bar bar-green"><h2>Git rm</h2><p>In Git, files aren't tracked by name or location alone—they're tracked by their <strong>content</strong>. This means that moving or deleting a file is handled in a way that preserves the history of that content, even across renames. While Git doesn't have a file move tracking system per se, it <strong>intelligently detects changes</strong> when files are renamed or relocated.</p><p>This article walks through how to move and delete files in Git the right way, including how to commit those changes and what happens behind the scenes.</p></sn><sn class="bar bar-yellow"><h3>1. Moving/Renaming Files in Git</h3><h4>A. Using Git Command</h4><p>The preferred way to move (or rename) a file in Git is:</p><pre data-v="bash">git mv old_filename new_filename
+</pre><h5>Example:</h5><pre data-v="bash">git mv src/config.js config/settings.js
+</pre><p>This command:</p><li>Moves (or renames) the file</li><li>Stages the change automatically for commit</li><h4>B. Equivalent Manual Method</h4><p>You can achieve the same result with standard shell commands and <code>git add</code>:</p><pre data-v="bash">mv old_filename new_filename
+git add new_filename
+git rm old_filename
+</pre><p>Although this requires multiple steps, Git will still detect the rename during commit comparison.</p><h4>C. Committing the Move</h4><pre data-v="bash">git commit -m "Renamed config.js to settings.js"
+</pre><p>Git stores this as a combination of deletion + addition but will recognize the file content as being the same (i.e., a rename).</p></sn><sn class="bar bar-pink"><h3>2. Deleting Files in Git</h3><h4>A. Using Git Command</h4><pre data-v="bash">git rm filename
+</pre><h5>Example:</h5><pre data-v="bash">git rm logs/debug.log
+</pre><p>This:</p><ul>
+<li>Deletes the file from your working directory</li>
+<li>Stages the deletion for commit</li>
+</ul><h4>B. Manual Deletion</h4><pre data-v="bash">rm filename
+git rm filename
+</pre><p>Even if you delete a file manually, you still need to use <code>git rm</code> or <code>git add -u</code> to stage the deletion.</p><h4>C. Committing the Deletion</h4><pre data-v="bash">git commit -m "Removed debug log file"
+</pre><p>This finalizes the deletion in the Git history.</p></sn><sn class="bar bar-purple"><h3>3. Moving or Deleting Directories</h3><p>Git does <strong>not</strong> track empty folders. When you move or delete directories:</p><ul>
+<li>Use <code>git mv</code> or <code>git rm -r</code></li>
+<li>Ensure you commit all relevant file moves or deletions inside the folder</li>
+</ul><h5>Example: Move a directory</h5><pre data-v="bash">git mv old_folder/ new_folder/
+git commit -m "Moved old_folder to new_folder"
+</pre><h5>Example: Delete a directory</h5><pre data-v="bash">git rm -r temp/
+git commit -m "Deleted temp directory"
+</pre></sn><sn class="bar bar-red"><h3>4. Checking What Changed</h3><p>After moving or deleting files, you can inspect the changes using:</p><pre data-v="bash">git status
+</pre><p>Or to see diffs:</p><pre data-v="bash">git diff --cached
+</pre><p>To confirm rename detection:</p><pre data-v="bash">git log --follow new_filename
+</pre></sn><sn class="bar bar-teal"><h3>5. Undoing Moves or Deletions Before Commit</h3><p>If you moved or deleted something and want to undo it before committing:</p><h4>Undo a move:</h4><pre data-v="bash">git restore --staged new_filename
+git restore new_filename
+</pre><h4>Undo a deletion:</h4><pre data-v="bash">git restore deleted_filename
+</pre></sn><sn class="bar bar-indigo"><h3>Summary Table</h3><tb class="py-2"><pre>| Task | Command | Notes |
+| ---  | ---  | --- |
+| Move a file | <code>git mv old new</code> | Automatically stages |
+| Rename a file | <code>git mv old new</code> | Git treats rename same as move |
+| Delete a file | <code>git rm file</code> | Removes and stages |
+| Delete a directory | <code>git rm -r folder/</code> | Removes entire folder |
+| Manual move | <code>mv old new; git add new; git rm old</code> | Same effect as <code>git mv</code> |
+| Commit change | <code>git commit -m "message"</code> | Finalizes the move/delete |
+| Undo before commit | <code>git restore</code> commands | Reverts uncommitted changes |
+</pre></tb></sn><sn class="bar bar-blue"><h3>Conclusion</h3><p>Moving and deleting files in Git is simple but powerful. Git keeps track of file content, not just file paths, which allows it to detect renames and maintain clean history. Use <code>git mv</code> and <code>git rm</code> when possible to simplify your workflow and avoid untracked changes.</p><p>By understanding how to move and delete files properly, you ensure your repository stays clean, understandable, and easy to maintain over time.</p></sn>
