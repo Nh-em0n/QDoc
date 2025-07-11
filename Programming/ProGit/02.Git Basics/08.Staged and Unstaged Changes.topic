@@ -1,146 +1,44 @@
-<sn><md>## Viewing Your Staged and Unstaged Changes
----
-
-
-#### When `git status` Isn’t Enough
-
-While `git status` shows **which** files have changed, it doesn’t show **how** they’ve changed. To view the specific line-by-line changes in your files, use the `git diff` command. This command helps answer:
-
-* What have you changed but **not yet staged**?
-* What have you staged that is ready to be **committed**?
-
-#### Unstaged Changes: `git diff`
-
-If you want to see what’s changed in your working directory that hasn’t been staged yet:
-
-```bash
-$ git diff
-```
-
-Example:
-
-```bash
-$ git diff
-diff --git a/CONTRIBUTING.md b/CONTRIBUTING.md
-index 8ebb991..643e24f 100644
---- a/CONTRIBUTING.md
-+++ b/CONTRIBUTING.md
-@@ -65,7 +65,8 @@
-Please include a nice description of your changes when you submit your PR;
-if we have to read the whole diff to figure out why you're contributing
-in the first place, you're less likely to get feedback and have your change
--merged in.
-+merged in. Also, split your changes into comprehensive chunks if your patch is
-+longer than a dozen lines.
-```
-
-This shows exactly what lines were added or removed compared to the last staged snapshot.
-
-#### Staged Changes: `git diff --staged` or `git diff --cached`
-
-To see what’s been staged (and will go into the next commit):
-
-```bash
-$ git diff --staged
-```
-
-or
-
-```bash
-$ git diff --cached
-```
-
-Example:
-
-```bash
-$ git diff --staged
-diff --git a/README b/README
-new file mode 100644
-index 0000000..03902a1
---- /dev/null
-+++ b/README
-@@ -0,0 +1 @@
-+My Project
-```
-
-&gt; If all changes are staged, running `git diff` will return no output, because there’s nothing left unstaged.
-
-### Seeing Both Staged and Unstaged Changes in the Same File
-
-Let’s say you stage a file, then edit it again:
-
-```bash
-$ git add CONTRIBUTING.md
-$ echo '# test line' &gt;&gt; CONTRIBUTING.md
-```
-
-Now run:
-
-```bash
-$ git status
-```
-
-```
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes to be committed:
-  modified: CONTRIBUTING.md
-Changes not staged for commit:
-  modified: CONTRIBUTING.md
-```
-
-Now view the unstaged change:
-
-```bash
-$ git diff
-diff --git a/CONTRIBUTING.md b/CONTRIBUTING.md
-index 643e24f..87f08c8 100644
---- a/CONTRIBUTING.md
-+++ b/CONTRIBUTING.md
-@@ -119,3 +119,4 @@
-## Starter Projects
-See our [projects list](https://github.com/libgit2/libgit2/blob/development/PROJECTS.md).
-+# test line
-```
-
-And view the staged change:
-
-```bash
-$ git diff --cached
-diff --git a/CONTRIBUTING.md b/CONTRIBUTING.md
-index 8ebb991..643e24f 100644
---- a/CONTRIBUTING.md
-+++ b/CONTRIBUTING.md
-@@ -65,7 +65,8 @@
-Please include a nice description of your changes when you submit your PR;
-if we have to read the whole diff to figure out why you're contributing
-in the first place, you're less likely to get feedback and have your change
--merged in.
-+merged in. Also, split your changes into comprehensive chunks if your patch is
-+longer than a dozen lines.
-```
-
-#### Viewing Diffs in an External Tool: `git difftool`
-
-You can use external tools for a graphical diff view:
-
-```bash
-$ git difftool
-```
-
-To see what tools are available:
-
-```bash
-$ git difftool --tool-help
-```
-
-Tools may include:
-
-* `vimdiff`
-* `meld`
-* `kdiff3`
-* `emerge`
-* Commercial apps
-
-These external tools provide more visual comparisons, which can be easier to work with than raw terminal diffs.
-</md></sn><config style="display:none"><tags>#02.6.stages and unstages changes</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jun 02 2025 08:11:49 GMT+0600 (Bangladesh Standard Time)</udate><id>article-6aCAcorCcf</id><duration></duration></config>
+<config style="display:none"><tags>#02.6.stages and unstages changes</tags><thumbnail></thumbnail><heading></heading><udate>Fri Jul 11 2025 11:08:19 GMT+0600 (Bangladesh Standard Time)</udate><id>article-6aCAcorCcf</id><duration></duration></config><sn class="bar bar-green"><h2>Git Diff</h2><p>In Git, the <code>git diff</code> command is a powerful tool used to compare changes in files between various points in the Git history. Whether you're checking what you've modified before committing, comparing branches, or reviewing changes between commits, <code>git diff</code> helps you see exactly what has changed—line by line.</p><p>This article provides a detailed guide to using <code>git diff</code> effectively, including real-world examples and common options.</p></sn><sn class="bar bar-teal"><h3>What Is <code>git diff</code>?</h3><p>The <code>git diff</code> command shows the <strong>differences between two data sources</strong> in a Git repository. These sources could be:</p><ul>
+<li>The working directory vs. the index (staged area)</li>
+<li>The index vs. the last commit</li>
+<li>One branch vs. another</li>
+<li>One commit vs. another commit</li>
+</ul><p>It is primarily a <strong>line-by-line comparison tool</strong>, highlighting additions, deletions, and changes in text files.</p></sn><sn class="bar bar-pink"><h3>Basic Usage</h3><h4>1. Compare Working Directory vs. Staging Area</h4><pre data-v="bash">git diff
+</pre><p>Shows unstaged changes (i.e., what has been modified but not yet staged with <code>git add</code>).</p><h4>2. Compare Staging Area vs. Last Commit</h4><pre data-v="bash">git diff --cached
+</pre><p>or</p><pre data-v="bash">git diff --staged
+</pre><p>Shows what has been staged (using <code>git add</code>) but not yet committed.</p><h4>3. Compare Working Directory vs. Last Commit</h4><pre data-v="bash">git diff HEAD
+</pre><p>Shows all changes (both staged and unstaged) compared to the last commit.</p></sn><sn class="bar bar-orange"><h3>Visual Breakdown of <code>git diff</code></h3><pre data-v="plaintext">- old line removed
++ new line added
+</pre><p>For example:</p><pre data-v="diff">- print("Hello")
++ print("Hello, world!")
+</pre><p>This indicates a line was modified from <code>"Hello"</code> to <code>"Hello, world!"</code>.</p></sn><sn class="bar bar-purple"><h3>Comparing Files, Branches, and Commits</h3><h4>4. Compare Two Branches</h4><pre data-v="bash">git diff main..feature-xyz
+</pre><p>Shows what changes are in <code>feature-xyz</code> that are not in <code>main</code>.</p><h4>5. Compare Two Commits</h4><pre data-v="bash">git diff commit1 commit2
+</pre><p>Example:</p><pre data-v="bash">git diff a1b2c3d4 e5f6g7h8
+</pre><p>Displays differences between two historical commits.</p><h4>6. Compare Specific Files</h4><pre data-v="bash">git diff HEAD~1 main.py
+</pre><p>Compares <code>main.py</code> in the last commit vs. current working version.</p></sn><sn class="bar bar-red"><h3>Useful Options</h3><tb class="py-2"><pre>| Option | Description |
+| ---  | --- |
+| <code>--name-only</code> | Show only filenames that changed |
+| <code>--name-status</code> | Show filenames with status (<code>A</code>, <code>M</code>, <code>D</code>) |
+| <code>--stat</code> | Show a summary of changes (lines added/removed) |
+| <code>--color</code> | Force colored output (for readability) |
+| <code>--word-diff</code> | Show word-level changes instead of line-level |
+| <code>--ignore-space-change</code> | Ignore whitespace changes |
+| <code>--binary</code> | Show binary file diffs |
+</pre></tb></sn><sn class="bar"><h4>Example:</h4><pre data-v="bash">git diff --stat HEAD~1
+</pre><p>Shows which files changed and how many lines were added/removed.</p></sn><sn class="bar bar-teal"><h3>GUI Alternatives</h3><p>If you're more visually oriented, you can use:</p><pre data-v="bash">git difftool
+</pre><li>Launches an external GUI diff viewer (requires setup).</li><p>Or use a Git GUI client like:</p><ul>
+<li>GitKraken</li>
+<li>SourceTree</li>
+<li>GitHub Desktop</li>
+</ul></sn><sn class="bar bar-yellow"><h3>Practical Scenarios</h3><h4>Before Committing:</h4><pre data-v="bash">git diff
+</pre><p>To see what you’ve changed and whether to stage it.</p><h4>Before Pushing:</h4><pre data-v="bash">git diff origin/main
+</pre><p>To review how your local changes differ from the remote.</p><h4>During Code Review:</h4><pre data-v="bash">git diff abc123 def456
+</pre><p>To review changes between two specific commits.</p></sn><sn class="bar bar-green"><h3>Summary</h3><tb class="py-2"><pre>| Task | Command Example |
+| ---  | --- |
+| Show unstaged changes | <code>git diff</code> |
+| Show staged changes | <code>git diff --cached</code> |
+| Show all changes since last commit | <code>git diff HEAD</code> |
+| Compare branches | <code>git diff main..dev</code> |
+| Compare commits | <code>git diff commit1 commit2</code> |
+| Show file summary only | <code>git diff --stat</code> |
+</pre></tb></sn><sn class="bar bar-blue"><h3>Conclusion</h3><p><code>git diff</code> is an essential Git command for inspecting changes and ensuring code quality. Whether you're a solo developer or working in a team, regularly using <code>git diff</code> helps you understand your project's evolution, catch mistakes early, and improve your Git workflow.</p><p>For best results, integrate <code>git diff</code> into your everyday development habits—before every commit, before every push, and during every code review.</p></sn>
