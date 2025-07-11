@@ -1,4 +1,4 @@
-<config style="display:none"><tags>#02.6.stages and unstages changes</tags><thumbnail></thumbnail><heading></heading><udate>Fri Jul 11 2025 11:08:19 GMT+0600 (Bangladesh Standard Time)</udate><id>article-6aCAcorCcf</id><duration></duration></config><sn class="bar bar-green"><h2>Git Diff</h2><p>In Git, the <code>git diff</code> command is a powerful tool used to compare changes in files between various points in the Git history. Whether you're checking what you've modified before committing, comparing branches, or reviewing changes between commits, <code>git diff</code> helps you see exactly what has changed—line by line.</p><p>This article provides a detailed guide to using <code>git diff</code> effectively, including real-world examples and common options.</p></sn><sn class="bar bar-teal"><h3>What Is <code>git diff</code>?</h3><p>The <code>git diff</code> command shows the <strong>differences between two data sources</strong> in a Git repository. These sources could be:</p><ul>
+<config style="display:none"><tags>#02.6.stages and unstages changes</tags><thumbnail></thumbnail><heading></heading><udate>Fri Jul 11 2025 11:17:25 GMT+0600 (Bangladesh Standard Time)</udate><id>article-6aCAcorCcf</id><duration></duration></config><sn class="bar bar-green"><h2>Git Diff</h2><p>In Git, the <code>git diff</code> command is a powerful tool used to compare changes in files between various points in the Git history. Whether you're checking what you've modified before committing, comparing branches, or reviewing changes between commits, <code>git diff</code> helps you see exactly what has changed—line by line.</p><p>This article provides a detailed guide to using <code>git diff</code> effectively, including real-world examples and common options.</p></sn><sn class="bar bar-teal"><h3>What Is <code>git diff</code>?</h3><p>The <code>git diff</code> command shows the <strong>differences between two data sources</strong> in a Git repository. These sources could be:</p><ul>
 <li>The working directory vs. the index (staged area)</li>
 <li>The index vs. the last commit</li>
 <li>One branch vs. another</li>
@@ -26,7 +26,7 @@
 | <code>--binary</code> | Show binary file diffs |
 </pre></tb></sn><sn class="bar"><h4>Example:</h4><pre data-v="bash">git diff --stat HEAD~1
 </pre><p>Shows which files changed and how many lines were added/removed.</p></sn><sn class="bar bar-teal"><h3>GUI Alternatives</h3><p>If you're more visually oriented, you can use:</p><pre data-v="bash">git difftool
-</pre><li>Launches an external GUI diff viewer (requires setup).</li><p>Or use a Git GUI client like:</p><ul>
+</pre><p>Launches an external GUI diff viewer (requires setup).</p><p>Or use a Git GUI client like:</p><ul>
 <li>GitKraken</li>
 <li>SourceTree</li>
 <li>GitHub Desktop</li>
