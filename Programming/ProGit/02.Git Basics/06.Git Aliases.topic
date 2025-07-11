@@ -1,0 +1,100 @@
+<sn><md>## Git Aliases
+
+Before moving on, it's helpful to introduce a Git feature that can make your experience simpler and more efficient: **aliases**. Although not used elsewhere in this content, aliases are useful for anyone using Git regularly.
+
+---
+
+### Why Use Aliases?
+
+Git does **not** automatically infer partially typed commands. If you prefer shorter, quicker commands, you can define custom aliases using `git config`.
+
+---
+
+### Creating Common Aliases
+
+```bash
+$ git config --global alias.co checkout
+$ git config --global alias.br branch
+$ git config --global alias.ci commit
+$ git config --global alias.st status
+```
+
+After defining these, you can use:
+
+* `git ci` instead of `git commit`
+* `git co` instead of `git checkout`
+* `git br` instead of `git branch`
+* `git st` instead of `git status`
+
+---
+
+### Creating Custom Behavior
+
+You can also create aliases for custom or missing commands.
+
+#### Example: `unstage`
+
+```bash
+$ git config --global alias.unstage 'reset HEAD --'
+```
+
+Usage:
+
+```bash
+$ git unstage fileA
+```
+
+Equivalent to:
+
+```bash
+$ git reset HEAD -- fileA
+```
+
+---
+
+### Example: `last`
+
+```bash
+$ git config --global alias.last 'log -1 HEAD'
+```
+
+Usage:
+
+```bash
+$ git last
+```
+
+Shows the last commit:
+
+```
+commit 66938dae3329c7aebe598c2246a8e6af90d04646
+Author: Josh Goebel <dreamer3@example.com>
+Date: Tue Aug 26 19:48:51 2008 +0800
+Test for current head
+Signed-off-by: Scott Chacon <schacon@example.com>
+```
+
+---
+
+### Running External Commands
+
+To run external (non-Git) commands as aliases, prefix the command with `!`.
+
+#### Example: Launch `gitk` via alias
+
+```bash
+$ git config --global alias.visual '!gitk'
+```
+
+Usage:
+
+```bash
+$ git visual
+```
+
+This runs the `gitk` GUI tool.
+
+---
+
+Git simply substitutes the alias with the defined command. Whether for simplifying frequent commands or creating new workflows, aliases are a powerful way to tailor Git to your needs.
+</schacon@example.com></dreamer3@example.com></md></sn><config style="display:none"><tags>#07.git aliases</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jun 02 2025 10:02:12 GMT+0600 (Bangladesh Standard Time)</udate><id>article-9Y3InnphTW</id><duration></duration></config>
