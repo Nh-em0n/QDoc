@@ -29,4 +29,44 @@
 ```
 কোষ → নিউক্লিয়াস → নিউক্লিওপ্লাজম → ক্রোমাটিন → ক্রোমোসোম → DNA → জিন
 ```
-</md></sn><config style="display:none"><tags>#temp concept</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jul 13 2025 12:29:33 GMT+0600 (Bangladesh Standard Time)</udate><id>article-dvPvK096KV</id><duration></duration></config>
+</md></sn><config style="display:none"><tags>#temp concept</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jul 13 2025 12:45:03 GMT+0600 (Bangladesh Standard Time)</udate><id>article-dvPvK096KV</id><duration></duration></config><sn><md>###  Chromatin বনাম Chromosome 
+---
+
+![image](https://www.pasteur.fr/sites/default/files/styles/media-wide/public/illustration-zimmer-chromatin-eng.jpg.jpg?itok=I2FBtvKt)
+
+
+* **Chromosome = ঘনীভূত (condensed) Chromatin**
+*  অর্থাৎ, **Chromatin → ঘনীভূত → Chromosome**
+* **Chromatin জন্ম দেয় Chromosome-কে, Chromosome কখনো Chromatin তৈরি করে না।**
+
+---
+
+### পার্থক্য (টেবিল আকারে)
+
+| বিষয়                           | **Chromatin (ক্রোমাটিন)**                       | **Chromosome (ক্রোমোসোম)**            |
+| ------------------------------ | ----------------------------------------------- | ------------------------------------- |
+| **মূল ধারণা**                  | ছড়ানো বা ঢিলা DNA ও প্রোটিনের জাল              | ঘনীভূত ও সংগঠিত DNA গঠন               |
+| **গঠন হয় কখন**                 | কোষের সাধারণ পর্যায়ে (Interphase)               | কোষ বিভাজনের সময় (Mitosis/Meiosis)    |
+| **কার্য**                      | জিন কার্যক্রম (gene expression), DNA রেপ্লিকেশন | জিনগত তথ্য ভাগ করা ও উত্তরাধিকার      |
+| **সৃষ্টি সম্পর্ক**             | এটি থেকেই Chromosome তৈরি হয়                    | এটি Chromatin থেকে তৈরি হয়            |
+| **সৃষ্টিকারী কে?**             | **Chromatin → Chromosome**                      | ❌ Chromosome → Chromatin নয়           |
+| **সেন্ট্রোমিয়ার/ক্রোমাটিড**   | থাকে না (অসংগঠিত অবস্থায়)                       | থাকে (সংগঠিত, বিভাজন উপযোগী)          |
+| **সংখ্যা গণনা সম্ভব?**         | না, ছড়ানো বলে সংখ্যা আলাদা করে বোঝা যায় না     | হ্যাঁ, নির্দিষ্ট সংখ্যা (মানুষে ৪৬টি) |
+| **দৃশ্যমানতা (মাইক্রোস্কোপে)** | অস্পষ্ট, ছড়ানো                                 | স্পষ্ট, গুচ্ছযুক্ত X আকৃতি            |
+| **উপমা**                       | খোলা সুতো                                       | গুটানো ও মোড়ানো সুতো/রোল             |
+
+---
+
+### সম্পর্ক চিত্র (Flow):
+
+```
+Chromatin → Condensation during cell division → Chromosome
+```
+
+---
+
+####  ভুল ধারণা সংশোধন:
+
+* ❌ **"Chromosome creates Chromatin"** – এটা ভুল
+* ✅ **"Chromatin condenses to form Chromosome"** – এটা সঠিক
+</md></sn>
