@@ -1,1 +1,124 @@
-<sn></sn><config style='display:none'><tags>#11.object</tags><thumbnail></thumbnail><heading></heading><udate>Sat Jul 19 2025 07:57:09 GMT+0600 (Bangladesh Standard Time)</udate><id>article-IvLM5pXnij</id><duration></duration></config>
+<sn><md>### **Object**
+
+An object is either a **noun** or a **pronoun**.
+
+#### **Types of Objects**
+- **Verb Object** (noun/pronoun immediately after the verb)
+- **Preposition Object** (noun/pronoun immediately after the preposition)
+
+Objects are always associated with either verbs or prepositions.
+
+#### **Preposition Object**
+A preposition object occurs when a **preposition** is followed by a noun or pronoun.  
+- **Preposition &lt;space&gt; Object = Preposition Object**
+
+Thus, any noun or pronoun that directly follows a preposition is the preposition's object.
+
+#### **Verb Object**
+A verb object occurs when a **verb** is directly linked to a noun or pronoun without any intervening preposition.  
+- **Verb + What/Whom = Verb Object**
+- `verb + article/adjective + noun/pronoun` = verb object
+- `verb` + preposition + `noun/pronoun` = preposition object
+- `verb` + no noun/preposition = not an object (an object must be noun/pronoun)
+
+👉 Important points:
+- If a noun/pronoun follows the verb (ignoring articles or adjectives) and no preposition is present, that noun/pronoun is the **verb object**.
+- If a preposition comes immediately after the verb, the object belongs to the **preposition**, not the verb.
+- To confirm, question the main verb by inserting **what** or **whom** immediately after the verb, ignoring all other words.
+
+##### **Example**
+- **The supporter ran away from the meeting.**
+  - Wrong way: "The supporter ran away from what?"
+  - Correct way: "The supporter ran what?"
+
+Since **ran** is not directly linked to a noun/pronoun without a preposition, there is **no verb object** here.
+
+#### **Note**
+- An object must be a **noun** or **pronoun**, never an adjective, adverb, preposition, or article.
+- An object is **one word** (e.g., *man*, *woman*, *he*), not a phrase (e.g., *a blind man*, *pink car*).&lt;/space&gt;</md></sn><config style="display:none"><tags>#11.object</tags><thumbnail></thumbnail><heading></heading><udate>Sat Jul 19 2025 08:16:16 GMT+0600 (Bangladesh Standard Time)</udate><id>article-IvLM5pXnij</id><duration></duration></config><sn><md>#### **Example: He kicked the ball.**
+
+- **He** is a pronoun.
+- **Kicked** is the verb in the *V2* form.
+- **The ball** is the object, which is a noun. Since **ball** comes immediately after the verb **kicked** without any intervening preposition, **ball** is the object of the verb **kicked**.
+
+👉 To confirm, we question the verb by **what** or **whom**:
+- He kicked **what**? (Answer: The ball)
+- He kicked **whom**? (Answer: The ball)
+
+Thus, **the ball**:
+- Is a **noun** (based on part of speech)
+- Functions as an **object**
+- Serves as the **verb object** for the verb **kicked**.</md></sn><sn><md>#### **Example Analysis**
+
+---
+
+##### **The baby was crying**
+- **Baby** is a noun, preceded by the article **the**.
+- **Was** is the helping verb; **crying** is the main verb.
+- No noun or pronoun follows the verb, so there is **no object** for the verb **crying**.
+
+---
+
+##### **She came on time**
+- **She** is a pronoun.
+- **Came** is the main verb in *V2* form.
+- **On** is a preposition.
+- **Time** is a noun acting as an object.
+  - Since **time** follows the preposition **on**, it is the **object of the preposition on**.
+
+---
+
+##### **I am going to London**
+- **I** is a pronoun.
+- **Am** is the helping verb; **going** is the main verb in *V4* (-ing) form.
+- **To** is a preposition.
+- **London** is a noun following the preposition **to**, making it the **object of the preposition to**.
+
+---
+
+##### **Rahul speaks loudly**
+- **Rahul** is a noun.
+- **Speaks** is the main verb in *V5* (-s/es) form.
+- **Loudly** is an adverb.
+  - Since adverbs are neither nouns nor pronouns, **loudly** is **not an object**.
+
+---
+
+##### **I saw a sick man** (👉 Important)
+- **I** is a pronoun functioning as the subject.
+- **Saw** is the main verb in *V2* form.
+- **A sick man**:
+  - **Man** is the noun, preceded by the adjective **sick** and the article **a**.
+  - Despite the article and adjective, **man** is directly linked to the verb **saw**, making it the **object of the verb saw**.
+
+👉 Further clarification:
+- I saw **what**? (Answer: Man)
+- I saw **whom**? (Answer: Man)
+
+Thus, **man** is the **verb object**.
+
+---
+
+##### **The supporters ran away from the meeting**
+- **Supporters** is a noun, preceded by the article **the**, acting as the subject.
+- **Ran** is the main verb in *V2* form.
+- **From** is a preposition.
+- **Meeting** is a noun, preceded by the article **the**.
+  - Since **meeting** follows the preposition **from**, it is the **object of the preposition from**.
+  - **Meeting** is **not** the object of the verb **ran**.
+
+---
+
+##### **The prices of car have fallen sharply**
+- **Prices** is a noun, preceded by the article **the**.
+- **Car** is a noun following the preposition **of**.
+- **Have** is a helping verb; **fallen** is the main verb in *V3* form.
+- **Sharply** is an adverb modifying the verb **fallen**.
+  - Since **sharply** is not a noun or pronoun, it is **not an object**.
+
+---
+
+#### **She killed him**
+- `She` is  pronoun
+- `killed` is the main verb in v2 form
+- `him` is a pronoun and it come right after the verb `killed` and there is no preposition between them so `him` is the object of verb `killed`</md></sn>
