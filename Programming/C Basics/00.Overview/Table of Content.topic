@@ -1,1 +1,110 @@
-<sn></sn><config style='display:none'><tags>#table of content</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jul 20 2025 18:50:53 GMT+0600 (Bangladesh Standard Time)</udate><id>article-wXS7SR13SA</id><duration></duration></config>
+<sn><md>## **Guideline For C Programming Basics**
+---
+
+
+### **/chapter-1: Getting Started with C**
+
+* What is C? History and Use Cases
+* Installing C Compiler (GCC/Clang)
+* Writing and Running Your First C Program
+* C Program Structure: `#include`, `main()`, `{}` braces
+* Compile &amp; Run Flow: `gcc file.c -o output &amp;&amp; ./output`
+
+---
+
+### **/chapter-2: Data Types and Variables**
+
+* Basic Data Types: `int`, `float`, `char`, `double`, `void`
+* Variable Declaration and Initialization
+* Constants (`const`, `#define`)
+* Type Modifiers: `short`, `long`, `signed`, `unsigned`
+
+---
+
+### **/chapter-3: Operators and Expressions**
+
+* Arithmetic Operators: `+`, `-`, `*`, `/`, `%`
+* Relational &amp; Logical Operators: `==`, `!=`, `&gt;`, `&lt;`, `&amp;&amp;`, `||`
+* Assignment &amp; Compound Operators: `=`, `+=`, `-=`
+* Increment/Decrement: `++`, `--`
+* Type Casting
+
+---
+
+### **/chapter-4: Control Flow**
+
+* Conditional Statements: `if`, `else`, `else if`, `switch`
+* Loops: `for`, `while`, `do...while`
+* `break`, `continue`, `goto`
+
+---
+
+### **/chapter-5: Functions**
+
+* Function Declaration and Definition
+* Return Types and Parameters
+* Calling Functions
+* Scope and Lifetime of Variables
+* Recursion
+
+---
+
+### **/chapter-6: Arrays and Strings**
+
+* One-dimensional and Multi-dimensional Arrays
+* Array Initialization and Access
+* Strings in C: `char[]` and `string.h` functions
+* String Input/Output and Manipulation
+
+---
+
+### **/chapter-7: Pointers**
+
+* Basics of Pointers and Memory Addresses
+* Pointer Arithmetic
+* Pointers with Arrays
+* Pointers and Functions
+* `NULL` and `void*` Pointers
+
+---
+
+### **/chapter-8: Structures and Unions**
+
+* Defining and Using `struct`
+* Nested Structures
+* `union` vs `struct`
+* Pointers to Structures
+* `typedef` and Code Simplification
+
+---
+
+### **/chapter-9: File Handling**
+
+* File Modes: `r`, `w`, `a`, `r+`, etc.
+* File Pointers and `FILE` object
+* `fopen`, `fclose`, `fread`, `fwrite`, `fprintf`, `fscanf`
+* Error Handling in File I/O
+
+---
+
+### **/chapter-10: Dynamic Memory and Advanced Topics**
+
+* `malloc`, `calloc`, `realloc`, `free`
+* Memory Leaks and `valgrind`
+* Command-line Arguments: `argc`, `argv`
+* Header Files and Modularity
+* Preprocessors: `#define`, `#ifdef`, `#ifndef`
+
+---
+
+## **Next Steps**
+
+After completing the basics:
+
+* Data Structures in C (linked lists, stacks, queues, trees)
+* Debugging in C
+* Working with Makefiles
+* C in System Programming
+* Writing C Libraries
+
+</md></sn><config style="display:none"><tags>#table of content</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jul 20 2025 18:52:05 GMT+0600 (Bangladesh Standard Time)</udate><id>article-wXS7SR13SA</id><duration></duration></config>
