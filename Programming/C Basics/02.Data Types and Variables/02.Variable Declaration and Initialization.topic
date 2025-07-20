@@ -1,10 +1,137 @@
 
-	<sn></sn>		
+	<sn><md>## **Variable Declaration and Initialization in C**
+
+In C programming, **variables** are named storage locations used to hold data. Before you use a variable, you must declare it with a specific **data type**. Optionally, you can also initialize it with a value at the time of declaration.
+
+This article covers the basics of declaring, initializing, and using variables in C.
+
+---
+
+### **1. What is a Variable?**
+
+A **variable** is a symbolic name for a memory location that stores a value that can change during program execution.
+
+---
+
+### **2. Variable Declaration**
+
+A variable must be declared before it is used. The syntax is:
+
+```c
+<data_type> <variable_name>;
+```
+
+#### **Examples:**
+
+```c
+int age;
+float height;
+char grade;
+```
+
+This tells the compiler to allocate memory space of the appropriate type and associate it with the given name.
+
+---
+
+### **3. Variable Initialization**
+
+You can assign a value to a variable when declaring it. This is called **initialization**.
+
+```c
+<data_type> <variable_name> = <value>;
+```
+
+#### **Examples:**
+
+```c
+int age = 20;
+float height = 5.9;
+char grade = 'A';
+```
+
+---
+
+### **4. Declaration and Initialization Separately**
+
+You can declare a variable first, and assign a value later:
+
+```c
+int marks;      // Declaration
+marks = 85;     // Initialization (assignment)
+```
+
+---
+
+### **5. Multiple Variable Declarations**
+
+You can declare and initialize multiple variables of the same type in one line:
+
+```c
+int x = 5, y = 10, z = 15;
+```
+
+Or declare them without initialization:
+
+```c
+float a, b, c;
+```
+
+---
+
+### **6. Rules for Naming Variables**
+
+* Must begin with a **letter (A–Z or a–z)** or an **underscore `_`**
+* Can contain **letters, digits (0–9), and underscores**
+* Cannot use C **keywords** (e.g., `int`, `return`, `if`)
+* Case-sensitive (`Marks` and `marks` are different)
+
+---
+
+### **7. Example Program**
+
+```c
+#include <stdio.h>
+
+int main() {
+    int age = 22;
+    float salary = 45678.50;
+    char grade = 'B';
+
+    printf("Age: %d\n", age);
+    printf("Salary: %.2f\n", salary);
+    printf("Grade: %c\n", grade);
+
+    return 0;
+}
+```
+
+---
+
+### **8. Default Values (Important!)**
+
+In C, **uninitialized variables do not have default values.**
+Using them without initialization results in **undefined behavior**.
+
+```c
+int x;
+printf("%d", x); // May print garbage value
+```
+
+**Always initialize variables** before use.
+
+---
+
+### **Conclusion**
+
+Variable declaration and initialization are fundamental in C. Choosing the right data type and initializing variables correctly helps you manage memory and avoid bugs. As you write more complex programs, understanding how variables behave at compile time and runtime becomes increasingly important.
+
+
+</stdio.h></value></variable_name></data_type></variable_name></data_type></md></sn>		
 	<config>
 		<tags>#02.variable declaration and initialization</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Jul 20 2025 20:58:04 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Jul 20 2025 22:38:42 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-zg7YUfxRzC</id>
 		<duration></duration>
 	</config>
