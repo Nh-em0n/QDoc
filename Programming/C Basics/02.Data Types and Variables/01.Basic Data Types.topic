@@ -127,7 +127,7 @@ Use `%s` to print strings.
 #### **Note:**
 
 * Strings in C must be **null-terminated** (`\0`)
-* To manipulate strings, include the `<string.h>` library
+* To manipulate strings, include the `` library
 
 ---
 
@@ -170,13 +170,12 @@ A `void*` can point to any data type but must be cast to the correct type before
 
 Mastering basic data types in C is essential for managing memory efficiently and performing operations correctly. Each data type serves a specific purpose, and understanding their size, format, and usage will help you write better C programs.
 
-Let me know if you'd like practice problems, visual memory layout diagrams, or a PDF cheat sheet for this topic.
-</string.h></md></sn>		
+</md></sn>		
 	<config>
 		<tags>#01.basic data types</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Jul 20 2025 20:31:44 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Jul 20 2025 20:54:34 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-598PbC0E9w</id>
 		<duration></duration>
 	</config>
