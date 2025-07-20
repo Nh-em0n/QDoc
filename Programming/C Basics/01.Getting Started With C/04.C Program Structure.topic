@@ -1,10 +1,176 @@
 
-	<sn></sn>		
+	<sn><md>## **C Program Structure: A Detailed Guide**
+
+
+Understanding the structure of a C program is essential for writing clean, efficient, and maintainable code. While C is relatively minimal compared to modern high-level languages, it requires a precise arrangement of its components. This article breaks down each part of a C program, helping you understand how a typical C program is built and executed.
+
+---
+
+### **1. Overview of a C Program Structure**
+
+A simple C program is generally composed of the following parts:
+
+1. Preprocessor Directives
+2. Global Declarations (optional)
+3. `main()` Function
+4. Function Definitions (optional)
+5. Comments (non-executable but important)
+
+Here’s a basic structure:
+
+```c
+#include       // 1. Preprocessor Directive
+
+// 2. Global Variable Declaration (Optional)
+
+int main()              // 3. Main Function
+{
+    // 4. Statements inside main
+    printf("Hello, World!\n");
+    return 0;
+}
+
+// 5. Function Definitions (Optional)
+```
+
+---
+
+### **2. Preprocessor Directives**
+
+Preprocessor directives begin with the `#` symbol. They are executed before the actual compilation process.
+
+```c
+#include 
+```
+
+* `#include` tells the compiler to include the contents of the standard input-output header file.
+* You can also define macros using `#define`, or conditionally compile code using `#ifdef`.
+
+These are not part of the C language proper but are handled by the C **preprocessor**.
+
+---
+
+### **3. Global Declarations (Optional)**
+
+Global variables or function declarations that are available throughout the file can be placed before `main()`.
+
+```c
+int counter = 0; // Global variable
+```
+
+Use global variables with caution, as they can lead to side effects and bugs in larger programs.
+
+---
+
+### **4. The `main()` Function**
+
+The `main()` function is the **entry point** of every C program. Execution always begins from here.
+
+```c
+int main()
+{
+    // Your code goes here
+    return 0;
+}
+```
+
+* **Return Type**: Usually `int`, which indicates the program ended successfully (`return 0`) or with an error.
+* **Arguments**: `main()` can also accept parameters (`int argc, char *argv[]`) for command-line inputs.
+
+---
+
+### **5. Statements and Expressions**
+
+Inside the `main()` function or other user-defined functions, you’ll write **statements** that control the logic of the program.
+
+Example:
+
+```c
+int x = 10;
+printf("Value: %d\n", x);
+```
+
+Each statement ends with a **semicolon `;`** in C.
+
+---
+
+### **6. Function Definitions**
+
+Apart from `main()`, you can define and call other functions to modularize code.
+
+```c
+int add(int a, int b)
+{
+    return a + b;
+}
+```
+
+Functions in C must be either **declared before use** or defined in the correct order, or you'll get a compile-time error.
+
+---
+
+### **7. Comments**
+
+Comments are used for documentation and clarification. They are ignored by the compiler.
+
+```c
+// Single-line comment
+
+/*
+   Multi-line comment
+*/
+```
+
+---
+
+### **8. Example: Full Simple C Program**
+
+```c
+#include   // Preprocessor Directive
+
+// Function Declaration
+void greet();
+
+int main()          // main Function
+{
+    greet();        // Function Call
+    return 0;
+}
+
+// Function Definition
+void greet()
+{
+    printf("Welcome to C Programming!\n");
+}
+```
+
+---
+
+### **9. Compilation and Execution Flow**
+
+1. Preprocessing: Handles directives like `#include`
+2. Compilation: Converts code to machine code
+3. Linking: Links standard libraries
+4. Execution: Starts from `main()`
+
+---
+
+### **10. Conclusion**
+
+A well-structured C program not only compiles successfully but is easier to debug, modify, and scale. Mastering the layout—especially how and where to use each component—forms the foundation for all advanced topics in C, such as file handling, pointers, and data structures.
+
+Understanding this structure will help you:
+
+* Write cleaner and maintainable code
+* Avoid syntax errors
+* Break down large problems into smaller, manageable functions
+
+</md></sn>		
 	<config>
 		<tags>#04.c program structure</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Jul 20 2025 19:49:52 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Jul 20 2025 19:52:24 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-oCuDraqt4q</id>
 		<duration></duration>
 	</config>
