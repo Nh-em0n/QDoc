@@ -8,7 +8,7 @@
 * Installing C Compiler (GCC/Clang)
 * Writing and Running Your First C Program
 * C Program Structure: `#include`, `main()`, `{}` braces
-* Compile &amp; Run Flow: `gcc file.c -o output &amp;&amp; ./output`
+* Compile &amp; Run Flow: `gcc file.c -o output and ./output`
 
 ---
 
@@ -107,4 +107,4 @@ After completing the basics:
 * C in System Programming
 * Writing C Libraries
 
-</md></sn><config style="display:none"><tags>#table of content</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jul 20 2025 18:52:05 GMT+0600 (Bangladesh Standard Time)</udate><id>article-wXS7SR13SA</id><duration></duration></config>
+</md></sn><config style="display:none"><tags>#table of content</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jul 20 2025 19:07:44 GMT+0600 (Bangladesh Standard Time)</udate><id>article-wXS7SR13SA</id><duration></duration></config>
