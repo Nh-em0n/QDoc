@@ -1,10 +1,182 @@
 
-	<sn></sn>		
+	<sn><md>## **Basic Data Types in C**
+
+C is a statically typed language, meaning every variable must be declared with a data type before use. Data types in C define the type of data a variable can hold. Understanding them is essential for memory-efficient and bug-free programming.
+
+This article explores the most common **basic data types** in C: `int`, `float`, `char`, `string`, `double`, and `void`.
+
+---
+
+### **1. int (Integer)**
+
+The `int` data type is used to store whole numbers (both positive and negative).
+
+```c
+int age = 25;
+```
+
+#### **Size and Range:**
+
+| Type  | Size (bytes) | Range (Approx)                  |
+| ----- | ------------ | ------------------------------- |
+| `int` | 4            | –2,147,483,648 to 2,147,483,647 |
+
+#### **Example:**
+
+```c
+int score = 95;
+printf("Score = %d\n", score);
+```
+
+`%d` is used in `printf` to format integers.
+
+---
+
+### **2. float (Floating Point)**
+
+The `float` data type is used to store decimal numbers with single precision.
+
+```c
+float temperature = 36.5;
+```
+
+#### **Size and Range:**
+
+| Type    | Size (bytes) | Precision    |
+| ------- | ------------ | ------------ |
+| `float` | 4            | \~6–7 digits |
+
+#### **Example:**
+
+```c
+float pi = 3.14;
+printf("PI = %f\n", pi);
+```
+
+`%f` is used for printing float values.
+
+---
+
+### **3. double (Double Precision Float)**
+
+`double` is similar to `float` but offers higher precision and range.
+
+```c
+double distance = 123456.789012;
+```
+
+#### **Size and Range:**
+
+| Type     | Size (bytes) | Precision      |
+| -------- | ------------ | -------------- |
+| `double` | 8            | \~15–16 digits |
+
+#### **Example:**
+
+```c
+double price = 9999.99;
+printf("Price = %lf\n", price);
+```
+
+Use `%lf` (long float) to print double values.
+
+---
+
+### **4. char (Character)**
+
+The `char` data type is used to store a **single character** (ASCII-based).
+
+```c
+char grade = 'A';
+```
+
+#### **Size and Range:**
+
+| Type   | Size (bytes) | Range               |
+| ------ | ------------ | ------------------- |
+| `char` | 1            | -128 to 127 (ASCII) |
+
+#### **Example:**
+
+```c
+char letter = 'C';
+printf("Letter = %c\n", letter);
+```
+
+Use `%c` to print characters.
+
+---
+
+### **5. string (Character Array)**
+
+C does not have a built-in `string` type. Instead, strings are represented as arrays of characters ending with a null character `'\0'`.
+
+```c
+char name[] = "Alice";
+```
+
+#### **Example:**
+
+```c
+char name[10] = "Bob";
+printf("Name = %s\n", name);
+```
+
+Use `%s` to print strings.
+
+#### **Note:**
+
+* Strings in C must be **null-terminated** (`\0`)
+* To manipulate strings, include the `<string.h>` library
+
+---
+
+### **6. void (No Value / Empty Type)**
+
+The `void` type represents **no value**. It is commonly used in two scenarios:
+
+#### **1. Void Function (returns nothing):**
+
+```c
+void greet() {
+    printf("Hello!\n");
+}
+```
+
+#### **2. Void Pointer (generic pointer):**
+
+```c
+void* ptr;
+```
+
+A `void*` can point to any data type but must be cast to the correct type before dereferencing.
+
+---
+
+### **Summary Table:**
+
+| Data Type | Size (Bytes) | Format Specifier | Purpose                    |
+| --------- | ------------ | ---------------- | -------------------------- |
+| `int`     | 4            | `%d`             | Whole numbers              |
+| `float`   | 4            | `%f`             | Decimal numbers (single)   |
+| `double`  | 8            | `%lf`            | Decimal numbers (double)   |
+| `char`    | 1            | `%c`             | Single character           |
+| `string`  | N (array)    | `%s`             | Sequence of characters     |
+| `void`    | 0            | N/A              | No value / generic pointer |
+
+---
+
+### **Conclusion**
+
+Mastering basic data types in C is essential for managing memory efficiently and performing operations correctly. Each data type serves a specific purpose, and understanding their size, format, and usage will help you write better C programs.
+
+Let me know if you'd like practice problems, visual memory layout diagrams, or a PDF cheat sheet for this topic.
+</string.h></md></sn>		
 	<config>
 		<tags>#01.basic data types</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Jul 20 2025 20:29:52 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Jul 20 2025 20:31:44 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-598PbC0E9w</id>
 		<duration></duration>
 	</config>
