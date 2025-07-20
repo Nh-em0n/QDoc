@@ -1,10 +1,130 @@
 
-	<sn></sn>		
+	<sn><md>## **Constants in C**
+
+In C programming, a **constant** is a value that cannot be changed during the execution of a program. Constants are used to make code more readable, maintainable, and safe from accidental modification.
+
+There are several ways to define constants in C, and this article covers all major methods with examples.
+
+---
+
+### **1. Why Use Constants?**
+
+* To give meaningful names to fixed values
+* To prevent accidental changes to important data
+* To improve code readability and maintainability
+
+---
+
+### **2. Types of Constants in C**
+
+#### **A. Literal Constants**
+
+Literal constants are actual fixed values written directly into the code.
+
+```c
+printf("%d", 100);     // 100 is an integer literal
+printf("%f", 3.14);    // 3.14 is a float literal
+printf("%c", 'A');     // 'A' is a character literal
+```
+
+---
+
+#### **B. `const` Keyword**
+
+The `const` keyword is used to declare **named constants** whose values cannot be changed after initialization.
+
+```c
+const int MAX_USERS = 100;
+```
+
+Trying to modify `MAX_USERS` will cause a compile-time error.
+
+```c
+MAX_USERS = 200;  // ❌ Error: assignment of read-only variable
+```
+
+You must initialize `const` variables at the time of declaration.
+
+---
+
+#### **C. `#define` Preprocessor Directive**
+
+`#define` creates **macro constants** during preprocessing.
+
+```c
+#define PI 3.14159
+#define MAX 100
+```
+
+These are **textual replacements** and not typed variables. They are replaced by the preprocessor before compilation.
+
+#### **Example:**
+
+```c
+#include <stdio.h>
+
+#define PI 3.14159
+
+int main() {
+    float area = PI * 2 * 2;
+    printf("Area = %.2f\n", area);
+    return 0;
+}
+```
+
+---
+
+### **3. Differences Between `const` and `#define`**
+
+| Feature       | `const`            | `#define`                 |
+| ------------- | ------------------ | ------------------------- |
+| Type checking | Yes                | No                        |
+| Scope         | Block/local/global | Global only               |
+| Debuggable    | Yes                | No                        |
+| Memory usage  | Allocates memory   | No memory (just replaces) |
+| Evaluated at  | Compile-time       | Preprocessing stage       |
+
+---
+
+### **4. Example Program Using Constants**
+
+```c
+#include <stdio.h>
+
+#define PI 3.14159
+
+int main() {
+    const int radius = 5;
+    float area = PI * radius * radius;
+
+    printf("Area of circle = %.2f\n", area);
+
+    return 0;
+}
+```
+
+---
+
+### **5. Constant Qualifier with Pointers (Advanced Use)**
+
+```c
+const int x = 10;    // x is constant, value cannot be changed
+int * const ptr = &amp;x; // ptr is constant, but value can be changed (if x weren't const)
+```
+
+---
+
+### **Conclusion**
+
+Constants play a vital role in writing secure and meaningful C code. Use `const` when you need type safety and scope control, and use `#define` for simple replacements or configuration constants.
+
+
+</stdio.h></stdio.h></md></sn>		
 	<config>
 		<tags>#03.constants</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Jul 20 2025 22:41:29 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Jul 20 2025 23:00:26 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-zFJQaJH0k3</id>
 		<duration></duration>
 	</config>
