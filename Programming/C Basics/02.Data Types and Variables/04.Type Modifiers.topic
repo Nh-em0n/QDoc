@@ -1,10 +1,168 @@
 
-	<sn></sn>		
+	<sn><md>## **Type Modifiers in C**
+
+C provides **type modifiers** to extend or reduce the range and precision of its basic data types. These modifiers help optimize memory usage and control over how data is stored and interpreted in memory.
+
+This article explains the purpose, types, usage, and examples of **type modifiers** in C.
+
+---
+
+### **1. What Are Type Modifiers?**
+
+Type modifiers are keywords that change the properties of a **basic data type** such as `int`, `char`, or `double`. They affect:
+
+* The **size** (in bytes)
+* The **range** (min and max values)
+* The **signedness** (positive, negative, or both)
+
+---
+
+### **2. List of Type Modifiers in C**
+
+C supports four type modifiers:
+
+| Modifier   | Purpose                                  |
+| ---------- | ---------------------------------------- |
+| `short`    | Reduces storage size of `int`            |
+| `long`     | Increases storage size of `int`/`double` |
+| `signed`   | Allows both positive and negative values |
+| `unsigned` | Allows only positive values              |
+
+These are used **in combination** with data types like `int`, `char`, and `double`.
+
+---
+
+### **3. Modified Data Types**
+
+| Modifier + Type          | Typical Size (Bytes) | Value Range (Approximate)        |
+| ------------------------ | -------------------- | -------------------------------- |
+| `short int`              | 2                    | –32,768 to 32,767                |
+| `unsigned short int`     | 2                    | 0 to 65,535                      |
+| `int` (default `signed`) | 4                    | –2,147,483,648 to 2,147,483,647  |
+| `unsigned int`           | 4                    | 0 to 4,294,967,295               |
+| `long int`               | 4 or 8               | Large range depending on system  |
+| `unsigned long int`      | 4 or 8               | 0 to very large value            |
+| `long long int`          | 8                    | –9 quintillion to +9 quintillion |
+| `unsigned long long int` | 8                    | 0 to \~18 quintillion            |
+| `signed char`            | 1                    | –128 to 127                      |
+| `unsigned char`          | 1                    | 0 to 255                         |
+
+&gt; 📝 **Note:** Sizes may vary depending on system architecture (e.g., 32-bit vs 64-bit systems).
+
+---
+
+### **4. Examples of Type Modifiers**
+
+#### **A. unsigned int**
+
+Used when you know the variable will never be negative.
+
+```c
+#include 
+
+int main() {
+    unsigned int age = 25;
+    printf("Age: %u\n", age);
+    return 0;
+}
+```
+
+---
+
+#### **B. long long int**
+
+Used for very large integers.
+
+```c
+#include 
+
+int main() {
+    long long int population = 8000000000;
+    printf("Population: %lld\n", population);
+    return 0;
+}
+```
+
+---
+
+#### **C. unsigned char**
+
+Used to store small positive integers or bytes.
+
+```c
+#include 
+
+int main() {
+    unsigned char level = 255;
+    printf("Level: %u\n", level);
+    return 0;
+}
+```
+
+---
+
+#### **D. short int**
+
+Used to save memory in large arrays when value range is small.
+
+```c
+short int temperature = -50;
+```
+
+---
+
+### **5. Signed vs Unsigned**
+
+By default:
+
+* `int`, `char`, `long` are **signed**.
+* If you want to restrict values to non-negative, use `unsigned`.
+
+**Signed Example:**
+
+```c
+int balance = -100;
+```
+
+**Unsigned Example:**
+
+```c
+unsigned int balance = 100;  // Cannot go below 0
+```
+
+---
+
+### **6. When to Use Type Modifiers**
+
+| Use Case                       | Recommended Modifier         |
+| ------------------------------ | ---------------------------- |
+| Limited memory, small integers | `short int`, `unsigned char` |
+| Need large integers            | `long`, `long long`          |
+| Values never go negative       | `unsigned`                   |
+| High-precision numbers (C99+)  | `long double`                |
+
+---
+
+### **7. Compiler-Specific Sizes**
+
+To check the exact size of types on your system, use `sizeof()`:
+
+```c
+printf("Size of long: %lu\n", sizeof(long));
+```
+
+---
+
+### **Conclusion**
+
+Type modifiers in C offer control over **memory** and **value ranges**, making your program more efficient and error-resistant. Choosing the right modifier depends on the **nature of the data** you expect to store.
+
+</md></sn>		
 	<config>
 		<tags>#04.type modifiers</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Jul 20 2025 23:01:08 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Jul 20 2025 23:14:56 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-zqp6BUiJ1D</id>
 		<duration></duration>
 	</config>
