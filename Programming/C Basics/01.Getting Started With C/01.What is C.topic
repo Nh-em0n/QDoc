@@ -1,1 +1,75 @@
-<sn></sn><config style='display:none'><tags>#01.what is c</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jul 20 2025 19:10:15 GMT+0600 (Bangladesh Standard Time)</udate><id>article-RcQle1mIB0</id><duration></duration></config>
+<sn><md>## **What is C, History, and Use Cases**
+
+![image](https://media.licdn.com/dms/image/v2/D4D12AQGvWHFDSOhMCg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1679804058550?e=2147483647&amp;v=beta&amp;t=tacQqfGAOEZUhq-duep5_i1sRR_wgmq3W-QEbkY2qDI)
+
+---
+
+#### **What is C Programming Language?**
+
+**C** is a general-purpose, procedural programming language developed in the early 1970s. It provides low-level memory access, structured programming features, and efficient performance. C is often called the “mother of all modern programming languages” because many languages (like C++, Java, PHP, JavaScript, and Python) are influenced by its syntax or concepts.
+
+C is:
+
+* **Compiled**: Runs faster than interpreted languages.
+* **Statically typed**: Type-checking is done at compile time.
+* **Portable**: C code can run on many platforms with minimal changes.
+* **Close to hardware**: Ideal for systems-level programming (like operating systems).
+
+---
+
+#### **History of C**
+
+| Year          | Milestone                                                                                                   |
+| ------------- | ----------------------------------------------------------------------------------------------------------- |
+| **1969-1970** | Ken Thompson created **B language** at Bell Labs for UNIX development.                                      |
+| **1972**      | **Dennis Ritchie** developed **C** at Bell Labs to improve B and implement UNIX.                            |
+| **1978**      | First formal C book published: *The C Programming Language* by Brian Kernighan and Dennis Ritchie (K\&amp;R C). |
+| **1989**      | ANSI standardized C (ANSI C or C89).                                                                        |
+| **1999**      | ISO released **C99** with new features like `inline`, `long long`, and new headers.                         |
+| **2011**      | **C11** introduced multi-threading support and improved type safety.                                        |
+| **2018**      | **C18** released with bug fixes and minor changes to C11.                                                   |
+
+---
+
+#### **Use Cases of C**
+
+C is widely used in situations where performance, control, and low-level access to memory are critical.
+
+##### **1. Operating Systems**
+
+* UNIX, Linux kernel, Windows kernel components are all written in C.
+
+##### **2. Embedded Systems**
+
+* Microcontrollers and firmware in IoT devices, robotics, automotive systems.
+
+##### **3. Compilers and Interpreters**
+
+* Many language compilers (e.g., for Python, Ruby, PHP) are written in C.
+
+##### **4. Game Development**
+
+* Core game engines and rendering libraries (OpenGL, SDL) use C.
+
+##### **5. System Tools and Utilities**
+
+* Text editors, file systems, shell utilities, etc.
+
+##### **6. Network Programming**
+
+* Socket programming, server/client applications.
+
+##### **7. Database Engines**
+
+* Core parts of MySQL, PostgreSQL are in C.
+
+---
+
+#### **Why Learn C in 2025?**
+
+* Foundation for learning **C++, Rust, Go, and low-level Python internals**.
+* Vital for **performance-critical applications**.
+* Useful for **technical interviews**, systems engineering, and **open-source contributions**.
+* Helps understand how memory, variables, and the stack work under the hood.
+
+</md></sn><config style="display:none"><tags>#01.what is c</tags><thumbnail></thumbnail><heading></heading><udate>Sun Jul 20 2025 19:14:22 GMT+0600 (Bangladesh Standard Time)</udate><id>article-RcQle1mIB0</id><duration></duration></config><sn><h5>Read more on wikipedia</h5><fr>https://en.wikipedia.org/wiki/C_(programming_language)</fr></sn>
