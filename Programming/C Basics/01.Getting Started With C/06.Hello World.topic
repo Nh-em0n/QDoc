@@ -1,10 +1,70 @@
 
-	<sn></sn>		
+	<sn><md>## **Writing "Hello, World!" in C**
+
+The "Hello, World!" program is the traditional first program used to demonstrate the basic syntax and structure of a programming language. In C, it's a simple program that outputs a message to the screen.
+
+---
+
+### **Step-by-Step Code**
+
+```c
+#include   // Preprocessor directive to include the Standard I/O library
+
+int main()          // Main function - entry point of the program
+{
+    printf("Hello, World!\n");  // Print text to the screen
+    return 0;                   // Exit status of the program
+}
+```
+
+---
+
+### **Explanation of Each Line**
+
+| Line                 | Description                                                          |
+| -------------------- | -------------------------------------------------------------------- |
+| `#include ` | Includes the **Standard Input Output library** needed for `printf()` |
+| `int main()`         | The **main function**, where the execution starts                    |
+| `{ ... }`            | Denotes the **body** of the `main()` function                        |
+| `printf(...)`        | A **library function** to output text to the console                 |
+| `\n`                 | A **newline character** to move the cursor to the next line          |
+| `return 0;`          | Tells the OS that the program ended **successfully**                 |
+
+---
+
+### **How to Compile and Run**
+
+#### **Using GCC on Linux/macOS:**
+
+```bash
+gcc hello.c -o hello
+./hello
+```
+
+#### **Using GCC on Windows (MinGW):**
+
+```bash
+gcc hello.c -o hello.exe
+hello.exe
+```
+
+---
+
+### **Expected Output**
+
+```
+Hello, World!
+```
+
+---
+
+This program forms the foundation of all future C programs by teaching you the key elements: headers, main function, standard output, and syntax. Let me know if you want a version that accepts user input or is written without `printf()`.
+</md></sn>		
 	<config>
 		<tags>#06.hello world</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Jul 20 2025 20:20:39 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Jul 20 2025 20:23:39 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-Bw5ztY8isJ</id>
 		<duration></duration>
 	</config>
