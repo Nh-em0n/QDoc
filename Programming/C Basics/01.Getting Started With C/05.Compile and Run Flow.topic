@@ -1,10 +1,118 @@
 
-	<sn></sn>		
+	<sn><md>## **Compile and Run Flow of a C Program**
+
+![image](https://www.tutorialspoint.com/cprogramming/images/compilation-process.jpg)
+
+To execute a C program, it must go through several stages: from writing the source code to compiling, linking, and finally running the executable. This process is usually handled by tools like **GCC (GNU Compiler Collection)**.
+
+Let’s break down each step clearly:
+
+---
+
+### **1. Write the Source Code**
+
+You begin by writing your C code in a text editor and saving it with a `.c` extension.
+
+**Example: `hello.c`**
+
+```c
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+```
+
+---
+
+### **2. Preprocessing (Handled by Preprocessor)**
+
+* Command: `gcc -E hello.c -o hello.i`
+* Task: Handles **preprocessor directives** like `#include`, `#define`, and `#ifdef`.
+* Output: A file (`hello.i`) with all headers expanded and macros replaced.
+
+---
+
+### **3. Compilation (Source to Assembly)**
+
+* Command: `gcc -S hello.i -o hello.s`
+* Task: Converts the preprocessed code into **assembly code**.
+* Output: Assembly file (`hello.s`) with platform-specific instructions.
+
+---
+
+### **4. Assembling (Assembly to Object Code)**
+
+* Command: `gcc -c hello.s -o hello.o`
+* Task: Converts the assembly code into **machine code** (binary form), but not yet executable.
+* Output: Object file (`hello.o`)
+
+---
+
+### **5. Linking (Object Code to Executable)**
+
+* Command: `gcc hello.o -o hello.exe` (Windows)
+  or
+  `gcc hello.o -o hello` (Linux/macOS)
+* Task: Links your object file with necessary **standard libraries** (like `stdio.h`) to make an executable.
+* Output: Executable file (`hello.exe` or `hello`)
+
+---
+
+### **6. Running the Executable**
+
+* Windows: `hello.exe`
+* Linux/macOS: `./hello`
+
+**Output:**
+
+```bash
+Hello, World!
+```
+
+---
+
+### **Complete One-Line Compile and Run (Most Common)**
+
+You can skip the intermediate steps and compile + link in one line:
+
+```bash
+gcc hello.c -o hello       # Compile
+./hello                    # Run
+```
+
+On Windows:
+
+```bash
+gcc hello.c -o hello.exe
+hello.exe
+```
+
+---
+
+### **Diagram: Flow Summary**
+
+```plaintext
+hello.c       → [Preprocessor] → hello.i
+hello.i       → [Compiler]     → hello.s
+hello.s       → [Assembler]    → hello.o
+hello.o       → [Linker]       → hello (executable)
+```
+
+---
+
+### **Key Notes**
+
+* `gcc` automates all stages unless you specify them individually.
+* Compilation errors (like syntax mistakes) stop the flow before linking.
+* Runtime errors (like division by zero) only occur when executing the program.
+</stdio.h></md></sn>		
 	<config>
 		<tags>#05.compile and run flow</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Jul 20 2025 20:09:13 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Jul 20 2025 20:13:54 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-lsoNpIoZW5</id>
 		<duration></duration>
 	</config>
