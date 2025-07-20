@@ -1,10 +1,30 @@
 
-	<sn></sn>		
+	<sn><md>### **Common C Header Files**
+
+| **Header File** | **Description**                                                                 |
+| --------------- | ------------------------------------------------------------------------------- |
+| `<stdio.h>`     | Standard Input/Output: functions like `printf()`, `scanf()`, `fopen()`, etc.    |
+| `<stdlib.h>`    | Standard Library: memory management (`malloc()`, `free()`), conversions, etc.   |
+| `<string.h>`    | String handling: `strlen()`, `strcpy()`, `strcmp()`, `strcat()`, etc.           |
+| `<math.h>`      | Math functions: `sqrt()`, `pow()`, `sin()`, `cos()`, etc.                       |
+| `<ctype.h>`     | Character handling: `isdigit()`, `isalpha()`, `toupper()`, `tolower()`          |
+| `<time.h>`      | Time/date functions: `time()`, `clock()`, `difftime()`, `struct tm`, etc.       |
+| `<stdbool.h>`   | Provides boolean type `bool` with `true` and `false` constants (C99 and later)  |
+| `<limits.h>`    | Defines size limits for data types like `INT_MAX`, `CHAR_MIN`, etc.             |
+| `<float.h>`     | Defines precision and limits for floating-point types like `FLT_MAX`, `DBL_MIN` |
+| `<assert.h>`    | Debugging support via `assert()` macro                                          |
+| `<stddef.h>`    | Defines common macros/types: `size_t`, `NULL`, `ptrdiff_t`, etc.                |
+| `<stdint.h>`    | Fixed-width integer types: `int8_t`, `uint32_t`, `INT64_MAX` (C99 and later)    |
+| `<errno.h>`     | Defines macros for reporting error conditions (`errno`, `perror()`)             |
+| `<signal.h>`    | Signal handling: `signal()`, `raise()`, and signal macros like `SIGINT`         |
+| `<setjmp.h>`    | Provides `setjmp()` and `longjmp()` for non-local jumps (error handling)        |
+
+</setjmp.h></signal.h></errno.h></stdint.h></stddef.h></assert.h></float.h></limits.h></stdbool.h></time.h></ctype.h></math.h></string.h></stdlib.h></stdio.h></md></sn>		
 	<config>
 		<tags>#07.common header files</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Jul 20 2025 23:20:29 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Jul 20 2025 23:21:58 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-HLV2Eyyv7N</id>
 		<duration></duration>
 	</config>
