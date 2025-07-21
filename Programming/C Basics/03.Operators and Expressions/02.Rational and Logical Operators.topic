@@ -1,1 +1,162 @@
-<sn></sn><config style='display:none'><tags>#02.rational and logical operators</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jul 21 2025 13:50:42 GMT+0600 (Bangladesh Standard Time)</udate><id>article-ift6JP5474</id><duration></duration></config>
+<sn><md>## Rational and Logical Operators in C
+
+Rational (relational) and logical operators are used in C programming to compare values and make decisions based on conditions. These operators are crucial for control flow structures such as `if`, `while`, `for`, and logical evaluations in expressions. Understanding them enables programmers to build decision-making and branching logic in programs.
+
+---
+
+### 1. Relational (Rational) Operators
+
+Relational operators are used to compare two values or expressions. They return a Boolean result: `1` (true) if the condition is met, otherwise `0` (false).
+
+#### List of Relational Operators
+
+| Operator              | Symbol | Meaning                              | Example (`a = 5`, `b = 10`) | Result |
+| --------------------- | ------ | ------------------------------------ | --------------------------- | ------ |
+| Equal to              | `==`   | Checks if two values are equal       | `a == b`                    | `0`    |
+| Not equal to          | `!=`   | Checks if two values are not equal   | `a != b`                    | `1`    |
+| Greater than          | `&gt;`    | Checks if left is greater than right | `a &gt; b`                     | `0`    |
+| Less than             | `&lt;`    | Checks if left is less than right    | `a &lt; b`                     | `1`    |
+| Greater than or equal | `&gt;=`   | Checks if left is greater or equal   | `a &gt;= b`                    | `0`    |
+| Less than or equal    | `&lt;=`   | Checks if left is less or equal      | `a &lt;= b`                    | `1`    |
+
+#### Example:
+
+```c
+#include 
+
+int main() {
+    int x = 5, y = 10;
+    if (x &lt; y) {
+        printf("x is less than y\n");
+    }
+    return 0;
+}
+```
+
+---
+
+### 2. Logical Operators
+
+Logical operators are used to combine or invert Boolean expressions. They evaluate to `1` (true) or `0` (false) and are commonly used in conditional statements.
+
+#### List of Logical Operators
+
+| Operator | Symbol | Meaning                        | Example              | Result                               |           |   |           |                         |
+| -------- | ------ | ------------------------------ | -------------------- | ------------------------------------ | --------- | - | --------- | ----------------------- |
+| AND      | `&amp;&amp;`   | True if both operands are true | `(a &gt; 0) &amp;&amp; (b &gt; 0)` | `1` (if both &gt; 0)                    |           |   |           |                         |
+| OR       | \`     |                                | \`                   | True if at least one operand is true | \`(a &gt; 0) |   | (b &lt; 0)\` | `1` (if either is true) |
+| NOT      | `!`    | Inverts the Boolean value      | `!(a == b)`          | `1` if `a != b`                      |           |   |           |                         |
+
+#### Example:
+
+```c
+#include 
+
+int main() {
+    int age = 20;
+    if (age &gt;= 18 &amp;&amp; age &lt;= 60) {
+        printf("Eligible for the program\n");
+    }
+    return 0;
+}
+```
+
+---
+
+### Combining Relational and Logical Operators
+
+Relational operators are often combined with logical operators in complex expressions.
+
+**Example:**
+
+```c
+int marks = 75;
+if (marks &gt;= 50 &amp;&amp; marks &lt;= 100) {
+    printf("Pass\n");
+} else {
+    printf("Fail\n");
+}
+```
+
+---
+
+### Operator Precedence and Associativity
+
+Understanding how C evaluates combined expressions is essential.
+
+**Operator Precedence (Higher to Lower):**
+
+1. `!` (logical NOT)
+2. `&gt;` `&lt;` `&gt;=` `&lt;=` `==` `!=` (relational)
+3. `&amp;&amp;` (logical AND)
+4. `||` (logical OR)
+
+**Example:**
+
+```c
+if (!(a &gt; b) || (c &lt; d &amp;&amp; e != f))
+```
+
+C evaluates `!`, then relational operators, then `&amp;&amp;`, and finally `||`.
+
+
+---
+
+### Common Mistakes to Avoid
+
+1. **Using `=` instead of `==`:**
+
+   ```c
+   if (a = b) // Wrong: this assigns b to a
+   if (a == b) // Correct
+   ```
+
+2. **Forgetting parentheses in complex expressions:**
+
+   ```c
+   if (a &gt; 5 &amp;&amp; b &lt; 10 || c == 0) // Can cause confusion
+   ```
+
+3. **Using `!` on non-Boolean types without clarity:**
+
+   ```c
+   if (!a) // Works if a is zero, but may reduce readability
+   ```
+
+---
+
+### Real-life Example
+
+**Program to Check Admission Eligibility:**
+
+```c
+#include 
+
+int main() {
+    int math = 70, physics = 65, chemistry = 60;
+    if ((math &gt;= 60 &amp;&amp; physics &gt;= 55 &amp;&amp; chemistry &gt;= 50) &amp;&amp; 
+        (math + physics + chemistry &gt;= 180)) {
+        printf("Eligible for admission\n");
+    } else {
+        printf("Not eligible\n");
+    }
+    return 0;
+}
+```
+
+---
+
+### Conclusion
+
+Relational and logical operators are the backbone of decision-making in C programming. They allow developers to build conditions and logic necessary for real-world problem solving. Mastering their usage, precedence, and behavior is critical for writing accurate and effective C programs.
+
+---
+
+**Recommended Reading:**
+
+* *C Programming Language* by Kernighan and Ritchie
+* *Let Us C* by Yashavant Kanetkar
+* *C Programming Absolute Beginner’s Guide* by Perry &amp; Miller
+
+Let me know if you'd like a quiz or practice set on these operators.
+</md></sn><config style="display:none"><tags>#02.rational and logical operators</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jul 21 2025 14:18:30 GMT+0600 (Bangladesh Standard Time)</udate><id>article-ift6JP5474</id><duration></duration></config>
