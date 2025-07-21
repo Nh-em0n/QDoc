@@ -1,1 +1,166 @@
-<sn></sn><config style='display:none'><tags>#04.increment and decrement</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jul 21 2025 13:51:18 GMT+0600 (Bangladesh Standard Time)</udate><id>article-zOhYY4MDDd</id><duration></duration></config>
+<sn><md>## Increment and Decrement Operators in C
+
+In C programming, **increment** and **decrement** operators are **unary operators** used to increase or decrease the value of a variable by one. These operators are frequently used in loops, counters, and iteration-based operations, offering a concise and readable way to modify variable values.
+
+---
+
+### 1. Increment Operator (`++`)
+
+The increment operator increases the value of a variable by 1.
+
+#### Syntax:
+
+```c
+++variable;  // Pre-increment
+variable++;  // Post-increment
+```
+
+#### Example:
+
+```c
+int a = 5;
+++a;   // a becomes 6
+```
+
+---
+
+### 2. Decrement Operator (`--`)
+
+The decrement operator decreases the value of a variable by 1.
+
+#### Syntax:
+
+```c
+--variable;  // Pre-decrement
+variable--;  // Post-decrement
+```
+
+#### Example:
+
+```c
+int b = 10;
+--b;   // b becomes 9
+```
+
+---
+
+### 3. Pre vs Post Increment/Decrement
+
+The **position** of the operator affects the **timing** of the increment or decrement in expressions.
+
+| Type           | Syntax | Effect                                |
+| -------------- | ------ | ------------------------------------- |
+| Pre-increment  | `++x`  | Increments first, then uses the value |
+| Post-increment | `x++`  | Uses the value first, then increments |
+| Pre-decrement  | `--x`  | Decrements first, then uses the value |
+| Post-decrement | `x--`  | Uses the value first, then decrements |
+
+---
+
+### 4. Example: Pre vs Post Increment
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 5, b;
+
+    b = ++a;  // Pre-increment: a becomes 6, b gets 6
+    printf("Pre-Increment: a = %d, b = %d\n", a, b);
+
+    a = 5;
+    b = a++;  // Post-increment: b gets 5, a becomes 6
+    printf("Post-Increment: a = %d, b = %d\n", a, b);
+
+    return 0;
+}
+```
+
+**Output:**
+
+```
+Pre-Increment: a = 6, b = 6  
+Post-Increment: a = 6, b = 5
+```
+
+---
+
+### 5. Use in Loops
+
+Increment and decrement operators are widely used in loops:
+
+#### For Loop Example:
+
+```c
+for (int i = 0; i &lt; 5; i++) {
+    printf("%d ", i);
+}
+```
+
+#### While Loop with Decrement:
+
+```c
+int count = 5;
+while (count--) {
+    printf("%d ", count);
+}
+```
+
+---
+
+### 6. Common Mistakes
+
+* **Using the wrong form (pre vs post) in expressions:**
+
+  ```c
+  int a = 5, b;
+  b = a++ + 10; // b = 15, a becomes 6
+  ```
+
+* **Using increment/decrement on constants or expressions:**
+
+  ```c
+  5++;     // Invalid: can't increment a constant
+  (a + b)++; // Invalid: must be a variable
+  ```
+
+* **Confusing `++a` and `a++` inside function calls:**
+
+  ```c
+  printf("%d", a++);  // Prints old value, then increments
+  printf("%d", ++a);  // Increments first, then prints
+  ```
+
+---
+
+### 7. Real-life Example: Countdown Timer
+
+```c
+#include <stdio.h>
+
+int main() {
+    int seconds = 10;
+    while (seconds &gt; 0) {
+        printf("Time left: %d\n", seconds--);
+    }
+    printf("Time's up!\n");
+    return 0;
+}
+```
+
+---
+
+### Conclusion
+
+Increment (`++`) and decrement (`--`) operators provide a quick and readable way to adjust variable values by 1. Understanding the **difference between pre and post forms** is essential for avoiding logical errors in expressions and loops.
+
+---
+
+**Recommended Reading:**
+
+* *The C Programming Language* by Kernighan &amp; Ritchie
+* *Programming in C* by Stephen G. Kochan
+* *Let Us C* by Yashavant Kanetkar
+
+Let me know if you want visual diagrams or exercises for practicing pre/post increment logic.
+</stdio.h></stdio.h></md></sn><config style="display:none"><tags>#04.increment and decrement</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jul 21 2025 14:53:54 GMT+0600 (Bangladesh Standard Time)</udate><id>article-zOhYY4MDDd</id><duration></duration></config>
