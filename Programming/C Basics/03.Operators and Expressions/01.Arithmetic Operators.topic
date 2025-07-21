@@ -1,1 +1,169 @@
-<sn></sn><config style='display:none'><tags>#01.arithmetic operators</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jul 21 2025 13:50:25 GMT+0600 (Bangladesh Standard Time)</udate><id>article-vGM6VUB2N8</id><duration></duration></config>
+<sn><md>## Arithmetic Operators in C
+
+Arithmetic operators are a fundamental part of the C programming language. They are used to perform mathematical operations on variables and constants. In C, arithmetic operators work primarily on numerical data types such as `int`, `float`, `double`, and `char`. Understanding these operators is essential for anyone learning C programming, as they are used in virtually every C program.
+
+---
+
+### Basic Arithmetic Operators
+
+C supports five primary arithmetic operators:
+
+| Operator       | Symbol | Operation                   | Example (`a = 10`, `b = 3`) | Result |
+| -------------- | ------ | --------------------------- | --------------------------- | ------ |
+| Addition       | `+`    | Adds two values             | `a + b`                     | `13`   |
+| Subtraction    | `-`    | Subtracts second from first | `a - b`                     | `7`    |
+| Multiplication | `*`    | Multiplies two values       | `a * b`                     | `30`   |
+| Division       | `/`    | Divides first by second     | `a / b` (integer division)  | `3`    |
+| Modulus        | `%`    | Remainder of division       | `a % b`                     | `1`    |
+
+&gt; **Note:** When both operands are integers, division results in an integer value (truncated).
+
+---
+
+### Working with Different Data Types
+
+Arithmetic operations can be performed between:
+
+* **Integers (`int`)**
+* **Floating-point numbers (`float`, `double`)**
+* **Characters (`char`)**, which are treated as small integers representing ASCII values
+
+**Example:**
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 5;
+    float y = 2.0;
+    float result = x / y;
+    printf("Result: %f\n", result);
+    return 0;
+}
+```
+
+**Output:**
+
+```
+Result: 2.500000
+```
+
+&gt; **Explanation:** Since `y` is a float, `x / y` results in a floating-point division.
+
+---
+
+### Type Promotion and Type Casting
+
+When different types are used in an arithmetic operation, **type promotion** occurs. For example, an `int` is promoted to a `float` if the other operand is a float.
+
+**Example:**
+
+```c
+int a = 5;
+float b = 2.0;
+float c = a / b; // a is promoted to float
+```
+
+If you want to ensure a specific type conversion, you can use **type casting**:
+
+```c
+int a = 5, b = 2;
+float result = (float)a / b;
+```
+
+---
+
+### Operator Precedence and Associativity
+
+Operator precedence determines which operation is performed first in an expression. Arithmetic operators have the following precedence (from highest to lowest):
+
+1. `*`, `/`, `%` (left to right)
+2. `+`, `-` (left to right)
+
+**Example:**
+
+```c
+int result = 10 + 5 * 2; // Multiplication happens first
+```
+
+**Output:**
+
+```
+result = 10 + (5 * 2) = 20
+```
+
+Use **parentheses** to change the evaluation order:
+
+```c
+int result = (10 + 5) * 2; // Now addition happens first
+```
+
+---
+
+### Unary Arithmetic Operators
+
+C also supports unary operators like:
+
+| Operator | Description | Example | Result          |
+| -------- | ----------- | ------- | --------------- |
+| `+`      | Unary plus  | `+a`    | `a`             |
+| `-`      | Unary minus | `-a`    | Negative of `a` |
+
+**Example:**
+
+```c
+int a = 5;
+int b = -a; // b becomes -5
+```
+
+---
+
+### Common Pitfalls
+
+1. **Integer Division:**
+
+   ```c
+   int a = 5, b = 2;
+   float result = a / b; // Output: 2.0 (not 2.5)
+   ```
+
+   Use casting: `float result = (float)a / b;`
+
+2. **Modulus with Float:**
+   The modulus operator `%` is **not defined for float or double types**.
+
+3. **Division by Zero:**
+   Always ensure the denominator is non-zero before dividing.
+
+---
+
+### Real-life Example
+
+**Program to Calculate Area and Perimeter of a Rectangle:**
+
+```c
+#include <stdio.h>
+
+int main() {
+    int length = 10, width = 5;
+    int area = length * width;
+    int perimeter = 2 * (length + width);
+    printf("Area: %d\n", area);
+    printf("Perimeter: %d\n", perimeter);
+    return 0;
+}
+```
+
+---
+
+### Conclusion
+
+Arithmetic operators are an essential tool for any C programmer. By mastering them, you can perform complex mathematical operations and develop logic-heavy applications. Always consider data types, operator precedence, and potential pitfalls when writing arithmetic expressions in C.
+
+For further reading, consider referring to:
+
+* *"The C Programming Language"* by Kernighan and Ritchie
+* *C Programming Absolute Beginner’s Guide* by Greg Perry and Dean Miller
+
+
+</stdio.h></stdio.h></md></sn><config style="display:none"><tags>#01.arithmetic operators</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jul 21 2025 13:53:18 GMT+0600 (Bangladesh Standard Time)</udate><id>article-vGM6VUB2N8</id><duration></duration></config>
