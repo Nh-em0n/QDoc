@@ -1,4 +1,4 @@
-<sn><md>## Rational and Logical Operators in C
+<sn><md>## Ralational and Logical Operators in C
 
 Rational (relational) and logical operators are used in C programming to compare values and make decisions based on conditions. These operators are crucial for control flow structures such as `if`, `while`, `for`, and logical evaluations in expressions. Understanding them enables programmers to build decision-making and branching logic in programs.
 
@@ -158,4 +158,4 @@ Relational and logical operators are the backbone of decision-making in C progra
 * *Let Us C* by Yashavant Kanetkar
 * *C Programming Absolute Beginner’s Guide* by Perry &amp; Miller
 
-</md></sn><config style="display:none"><tags>#02.rational and logical operators</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jul 21 2025 14:34:25 GMT+0600 (Bangladesh Standard Time)</udate><id>article-ift6JP5474</id><duration></duration></config>
+</md></sn><config style="display:none"><tags>#02.rational and logical operators</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jul 21 2025 14:35:13 GMT+0600 (Bangladesh Standard Time)</udate><id>article-ift6JP5474</id><duration></duration></config>
