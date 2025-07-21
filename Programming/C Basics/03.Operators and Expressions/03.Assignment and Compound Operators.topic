@@ -1,1 +1,163 @@
-<sn></sn><config style='display:none'><tags>#03.assignment and compound operators</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jul 21 2025 13:51:04 GMT+0600 (Bangladesh Standard Time)</udate><id>article-XdgiNe64VO</id><duration></duration></config>
+<sn><md>## Assignment and Compound Operators
+
+In the C programming language, **assignment** and **compound assignment operators** are essential for storing and modifying values in variables. These operators are used extensively in all types of C programs, from simple arithmetic calculations to complex algorithms.
+
+---
+
+### 1. Assignment Operator (`=`)
+
+The **assignment operator** is used to assign the value on the right-hand side (RHS) to the variable on the left-hand side (LHS).
+
+#### Syntax:
+
+```c
+variable = value;
+```
+
+#### Example:
+
+```c
+int a;
+a = 10;  // assigns value 10 to variable a
+```
+
+You can also assign the value of one variable to another:
+
+```c
+int a = 10;
+int b;
+b = a;  // b now has the value 10
+```
+
+&gt; **Note**: Assignment is **right-associative**, meaning `a = b = c = 5;` works from right to left.
+
+---
+
+### 2. Compound Assignment Operators
+
+Compound assignment operators combine an arithmetic or bitwise operator with the assignment operator. They perform an operation and assign the result in one step, improving both readability and efficiency.
+
+#### List of Compound Assignment Operators
+
+| Operator | Meaning                | Equivalent Expression      |     |              |      |
+| -------- | ---------------------- | -------------------------- | --- | ------------ | ---- |
+| `+=`     | Addition assignment    | `a += b;` → `a = a + b;`   |     |              |      |
+| `-=`     | Subtraction assignment | `a -= b;` → `a = a - b;`   |     |              |      |
+| `*=`     | Multiplication         | `a *= b;` → `a = a * b;`   |     |              |      |
+| `/=`     | Division               | `a /= b;` → `a = a / b;`   |     |              |      |
+| `%=`     | Modulus                | `a %= b;` → `a = a % b;`   |     |              |      |
+| `&amp;=`     | Bitwise AND assignment | `a &amp;= b;` → `a = a &amp; b;`   |     |              |      |
+| \`       | =\`                    | Bitwise OR assignment      | \`a | = b;`→`a = a | b;\` |
+| `^=`     | Bitwise XOR assignment | `a ^= b;` → `a = a ^ b;`   |     |              |      |
+| `&lt;&lt;=`    | Left shift assignment  | `a &lt;&lt;= b;` → `a = a &lt;&lt; b;` |     |              |      |
+| `&gt;&gt;=`    | Right shift assignment | `a &gt;&gt;= b;` → `a = a &gt;&gt; b;` |     |              |      |
+
+---
+
+### 3. Examples of Compound Assignment Operators
+
+#### Using `+=` and `-=`
+
+```c
+int a = 5;
+a += 3;   // a becomes 8
+a -= 2;   // a becomes 6
+```
+
+#### Using `*=`, `/=`, `%=`:
+
+```c
+int b = 10;
+b *= 2;   // b becomes 20
+b /= 4;   // b becomes 5
+b %= 3;   // b becomes 2
+```
+
+#### Using bitwise compound operators:
+
+```c
+int x = 6;      // Binary: 0110
+x &amp;= 3;         // x = x &amp; 3 → 0110 &amp; 0011 = 0010 → x = 2
+```
+
+---
+
+### 4. Benefits of Using Compound Operators
+
+* **Conciseness**: Reduces verbosity in code
+
+  ```c
+  a = a + 5;   // longer
+  a += 5;      // shorter
+  ```
+
+* **Performance**: In some cases, compilers optimize compound assignments better.
+
+* **Readability**: Makes the code cleaner and easier to understand, especially in loops or counters.
+
+---
+
+### 5. Real-life Example
+
+#### Program: Calculate total salary with increment
+
+```c
+#include 
+
+int main() {
+    float salary = 30000;
+    float bonus = 5000;
+
+    salary += bonus;  // Add bonus to salary
+    printf("Total Salary: %.2f\n", salary);
+
+    return 0;
+}
+```
+
+**Output:**
+
+```
+Total Salary: 35000.00
+```
+
+---
+
+### 6. Common Mistakes
+
+* **Confusing `=` with `==`**:
+
+  ```c
+  if (a = 10) // assigns 10 to a, always true
+  if (a == 10) // correct comparison
+  ```
+
+* **Using undefined variables**:
+
+  ```c
+  int a;
+  a += 5;  // Undefined behavior if a is not initialized
+  ```
+
+* **Wrong use of bitwise compound operators**:
+
+  ```c
+  x |= 1; // Sets the last bit ON, not the same as x = x + 1
+  ```
+
+---
+
+### Conclusion
+
+The assignment and compound assignment operators in C simplify variable handling and arithmetic operations. While the assignment operator is fundamental, compound operators offer a cleaner, more efficient way to update variable values. Mastery of these operators is essential for writing efficient and bug-free C programs.
+
+---
+
+**Further Reading:**
+
+* *The C Programming Language* by Kernighan and Ritchie
+* *Modern C* by Jens Gustedt
+* *Let Us C* by Yashavant Kanetkar
+
+
+</md></sn><config style="display:none"><tags>#03.assignment and compound operators</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jul 21 2025 14:36:44 GMT+0600 (Bangladesh Standard Time)</udate><id>article-XdgiNe64VO</id><duration></duration></config>
