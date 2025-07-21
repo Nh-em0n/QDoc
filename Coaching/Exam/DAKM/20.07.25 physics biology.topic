@@ -1,1 +1,6 @@
-<sn></sn><config style='display:none'><tags>#20.07.25 physics biology</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jul 21 2025 08:44:21 GMT+0600 (Bangladesh Standard Time)</udate><id>article-mEZ0xB5RvL</id><duration></duration></config>
+<sn><h2>Exam Data</h2><tb class="d-block scroll p-1 p-sm-2 mb-2 scroll-both scroll-min scroll-on-hover ignore">
+        <table class="table mx-auto table-bordered">
+                    
+        <thead class="table-border"><tr><th scope="col">Student</th><th scope="col">Physics</th><th scope="col">Biology</th></tr></thead><tbody><tr><th scope="row">Rahmatullah</th><td>4.5</td><td>4.5</td></tr><tr><th scope="row" class="fg-teal">*Tawfiq</th><td>06</td><td class="fg-teal">10.5</td></tr><tr><th scope="row">Sifat</th><td class="fg-red">0</td><td>08</td></tr><tr><th scope="row">Fahim</th><td>5.5</td><td>07</td></tr><tr><th scope="row">*Mumin</th><td class="fg-teal">07</td><td class="fg-red">0</td></tr><tr><th scope="row">Rayhan</th><td class="fg-red">0</td><td class="fg-red">0</td></tr></tbody>
+        </table>
+        </tb></sn><config style="display:none"><tags>#20.07.25 physics biology</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jul 21 2025 08:56:20 GMT+0600 (Bangladesh Standard Time)</udate><id>article-mEZ0xB5RvL</id><duration></duration></config>
