@@ -14,10 +14,10 @@ Relational operators are used to compare two values or expressions. They return 
 | --------------------- | ------ | ------------------------------------ | --------------------------- | ------ |
 | Equal to              | `==`   | Checks if two values are equal       | `a == b`                    | `0`    |
 | Not equal to          | `!=`   | Checks if two values are not equal   | `a != b`                    | `1`    |
-| Greater than          | `&gt;`    | Checks if left is greater than right | `a &gt; b`                     | `0`    |
-| Less than             | `&lt;`    | Checks if left is less than right    | `a &lt; b`                     | `1`    |
-| Greater than or equal | `&gt;=`   | Checks if left is greater or equal   | `a &gt;= b`                    | `0`    |
-| Less than or equal    | `&lt;=`   | Checks if left is less or equal      | `a &lt;= b`                    | `1`    |
+| Greater than          | &gt;    | Checks if left is greater than right | `a &gt; b`                     | `0`    |
+| Less than             | &lt;    | Checks if left is less than right    | `a &lt; b`                     | `1`    |
+| Greater than or equal | &gt;=   | Checks if left is greater or equal   | `a &gt;= b`                    | `0`    |
+| Less than or equal    | &lt;=   | Checks if left is less or equal      | `a &lt;= b`                    | `1`    |
 
 #### Example:
 
@@ -158,5 +158,4 @@ Relational and logical operators are the backbone of decision-making in C progra
 * *Let Us C* by Yashavant Kanetkar
 * *C Programming Absolute Beginner’s Guide* by Perry &amp; Miller
 
-Let me know if you'd like a quiz or practice set on these operators.
-</md></sn><config style="display:none"><tags>#02.rational and logical operators</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jul 21 2025 14:18:30 GMT+0600 (Bangladesh Standard Time)</udate><id>article-ift6JP5474</id><duration></duration></config>
+</md></sn><config style="display:none"><tags>#02.rational and logical operators</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jul 21 2025 14:34:25 GMT+0600 (Bangladesh Standard Time)</udate><id>article-ift6JP5474</id><duration></duration></config>
