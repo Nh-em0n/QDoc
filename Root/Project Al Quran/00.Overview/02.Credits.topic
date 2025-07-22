@@ -1,4 +1,4 @@
-<config style="display:none"><tags>#02.credits</tags><thumbnail></thumbnail><heading></heading><udate>Mon Jul 21 2025 22:42:38 GMT+0600 (Bangladesh Standard Time)</udate><id>article-pzj0GUTgiX</id><duration></duration></config><sn><h2>Chapter 1</h2><tb class="d-block scroll py-2 scroll-both scroll-min scroll-on-hover ignore"><table class="table mx-auto table-bordered">
+<config style="display:none"><tags>#02.credits</tags><thumbnail></thumbnail><heading></heading><udate>Tue Jul 22 2025 07:56:33 GMT+0600 (Bangladesh Standard Time)</udate><id>article-pzj0GUTgiX</id><duration></duration></config><sn><h2>Chapter 1</h2><tb class="d-block scroll py-2 scroll-both scroll-min scroll-on-hover ignore"><table class="table mx-auto table-bordered">
 <thead>
 <tr>
 <th><strong>Credit No.</strong></th>
@@ -6,7 +6,7 @@
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="fg-red">
 <td>1</td>
 <td>An-Nas: Verses 1–6</td>
 </tr>
@@ -103,7 +103,7 @@
 <td>Al-Alaq: Verses 16–19</td>
 </tr>
 </tbody>
-</table></tb></sn><sn><tb class="py-2"><pre>| <strong>Credit No.</strong> | <strong>Reference (Surah Name &amp; Verse Range)</strong> |
+</table></tb></sn><sn><h2>Chapter 2</h2><tb class="py-2"><pre>| <strong>Credit No.</strong> | <strong>Reference (Surah Name &amp; Verse Range)</strong> |
 | ---  | --- |
 | 1 | Al-Alaq: Verses 1–5 |
 | 2 | Al-Alaq: Verses 6–10 |
