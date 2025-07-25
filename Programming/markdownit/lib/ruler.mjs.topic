@@ -344,7 +344,7 @@ export default Ruler
 		<tags>#ruler</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Fri Jul 25 2025 20:30:27 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Jul 25 2025 20:35:47 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-SU90qbs6bv</id>
 		<duration></duration>
 	</config>
@@ -566,6 +566,41 @@ this.__find__('list')     // returns -1
 | Access  | Private – used internally in `Ruler` methods only  |
 
 </md></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"><md>### Method: `Ruler.prototype.__compile__`
+
+```js
+// Build rules lookup cache
+//
+Ruler.prototype.__compile__ = function () {
+  const self = this
+  const chains = ['']
+
+  // collect unique names
+  self.__rules__.forEach(function (rule) {
+    if (!rule.enabled) { return }
+
+    rule.alt.forEach(function (altName) {
+      if (chains.indexOf(altName) &lt; 0) {
+        chains.push(altName)
+      }
+    })
+  })
+
+  self.__cache__ = {}
+
+  chains.forEach(function (chain) {
+    self.__cache__[chain] = []
+    self.__rules__.forEach(function (rule) {
+      if (!rule.enabled) { return }
+
+      if (chain &amp;&amp; rule.alt.indexOf(chain) &lt; 0) { return }
+
+      self.__cache__[chain].push(rule.fn)
+    })
+  })
+}
+```
+
+
 
 #### Purpose:
 
