@@ -1,10 +1,125 @@
 
-	<sn></sn>		
+	<sn><md>### Project Tree
+
+```text
+📁 markdown-it/
+├── index.js
+├── lib/
+│   ├── index.js
+│   ├── token.js
+│   ├── renderer.js
+│   ├── parser_core.js
+│   ├── parser_block.js
+│   ├── parser_inline.js
+│   ├── common/
+│   │   ├── utils.js
+│   │   ├── html_blocks.js
+│   │   └── html_re.js
+│   ├── helpers/
+│   │   ├── parse_link_destination.js
+│   │   ├── parse_link_title.js
+│   │   └── parse_url.js
+│   ├── rules_block/
+│   │   ├── blockquote.js
+│   │   ├── code.js
+│   │   ├── fence.js
+│   │   ├── heading.js
+│   │   ├── hr.js
+│   │   ├── html_block.js
+│   │   ├── lheading.js
+│   │   ├── list.js
+│   │   ├── paragraph.js
+│   │   ├── reference.js
+│   │   └── table.js
+│   ├── rules_inline/
+│   │   ├── autolink.js
+│   │   ├── backticks.js
+│   │   ├── emphasis.js
+│   │   ├── escape.js
+│   │   ├── html_inline.js
+│   │   ├── image.js
+│   │   ├── link.js
+│   │   ├── strikethrough.js
+│   │   ├── text.js
+│   │   └── entity.js
+```
+
+
+### Overview of Main Folders and Files
+
+#### Root Directory
+
+| File/Folder | Purpose                                                               |
+| ----------- | --------------------------------------------------------------------- |
+| `index.js`  | Main entry point that initializes and exports the `MarkdownIt` class. |
+| `lib/`      | Core logic: rules, tokenizers, renderer, parser, helpers, etc.        |
+
+---
+
+####  `lib/` Folder (Core Parsing Logic)
+
+This is the heart of `markdown-it`. It’s modular and layered.
+
+#### High-Level Files
+
+| File               | Purpose                                                                          |
+| ------------------ | -------------------------------------------------------------------------------- |
+| `index.js`         | Assembles all modules: core, block, inline, renderer, rules. Initializes parser. |
+| `parser_core.js`   | Processes block-level rules (via `core.ruler`). Used before rendering.           |
+| `parser_block.js`  | Parses block-level syntax (e.g., headings, paragraphs, lists).                   |
+| `parser_inline.js` | Parses inline-level syntax (e.g., `*italic*`, `**bold**`, links).                |
+| `renderer.js`      | Converts tokens to HTML using registered render rules.                           |
+| `token.js`         | Token class. Each token is a Markdown element (open, text, close, etc.).         |
+
+---
+
+#### Rules Directories
+
+#####  `rules_block/`
+
+Contains functions for each block-level Markdown feature:
+
+| File            | Rule                                           |
+| --------------- | ---------------------------------------------- |
+| `blockquote.js` | `&gt; quote` blocks                               |
+| `code.js`       | Indented code blocks                           |
+| `fence.js`      | Fenced code blocks (` ``` `)                   |
+| `heading.js`    | ATX-style headings (`# Heading`)               |
+| `list.js`       | Ordered/unordered lists                        |
+| `paragraph.js`  | Paragraph splitting                            |
+| `table.js`      | GitHub-flavored Markdown tables                |
+| etc.            | Each file exports a rule for one block feature |
+
+#####  `rules_inline/`
+
+Handles inline-level parsing:
+
+| File          | Rule                            |
+| ------------- | ------------------------------- |
+| `emphasis.js` | `*italic*`, `**bold**`          |
+| `link.js`     | `[text](url)`                   |
+| `image.js`    | `![alt](url)`                   |
+| `text.js`     | Default fallback for plain text |
+| `code.js`     | Inline code using backticks     |
+
+---
+
+####  Utility Modules
+
+| File                                | Purpose                                             |
+| ----------------------------------- | --------------------------------------------------- |
+| `common/utils.js`                   | Utility functions (character checks, escapes, etc.) |
+| `common/html_blocks.js`             | Recognizes HTML block boundaries                    |
+| `common/html_re.js`                 | Regex patterns for detecting HTML tags              |
+| `helpers/parse_link_destination.js` | Extracts link target from Markdown                  |
+| `helpers/parse_link_title.js`       | Parses optional title from link syntax              |
+| `helpers/parse_url.js`              | Parses/normalizes URLs                              |
+</md></sn>		
 	<config>
 		<tags>#01.project structure</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Fri Jul 25 2025 19:16:33 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Jul 25 2025 19:19:36 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-38lWHtn3Rj</id>
 		<duration></duration>
 	</config>
