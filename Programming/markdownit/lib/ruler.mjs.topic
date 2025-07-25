@@ -344,7 +344,7 @@ export default Ruler
 		<tags>#ruler</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Fri Jul 25 2025 20:35:47 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Jul 25 2025 20:40:35 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-SU90qbs6bv</id>
 		<duration></duration>
 	</config>
@@ -725,4 +725,144 @@ The `chains` array becomes:
 
 This method avoids recomputing which rules to run each time by building a ready-to-use **rule chain** for each chain name. It’s essential for performance and modularity.
 
-</md></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn>
+</md></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"><md>## Understanding rule,rules,chain and cache again
+---
+
+
+### 1. **Rule**
+
+A **rule** is a single unit of logic (usually a function) that will be executed during parsing.
+
+### Structure of a rule:
+
+```js
+{
+  name: 'ruleName',     // Unique identifier
+  enabled: true,        // Determines if the rule should be active
+  fn: Function,         // Actual function to be run
+  alt: ['chain1', ...]  // Optional chain names this rule belongs to
+}
+```
+
+### Example:
+
+```js
+{
+  name: 'heading',
+  enabled: true,
+  fn: function (state) { /* logic here */ },
+  alt: ['block', 'custom']
+}
+```
+
+---
+
+## 2. **Rules**
+
+This is an array that stores **all registered rules** in order of addition.
+
+### Stored as:
+
+```js
+this.__rules__ = [ rule1, rule2, rule3, ... ]
+```
+
+### Example:
+
+```js
+this.__rules__ = [
+  { name: 'paragraph', enabled: true, fn: fn1, alt: [] },
+  { name: 'heading', enabled: true, fn: fn2, alt: ['block'] },
+  { name: 'customInline', enabled: false, fn: fn3, alt: ['inline'] }
+]
+```
+
+---
+
+## 3. **Chain**
+
+A **chain** is a named group of rules used to organize or selectively execute subsets of rules. A rule can belong to **multiple chains**, including the default chain (`''`).
+
+### How it's assigned:
+
+* Through the `alt` array in a rule.
+* The default chain `''` always includes all enabled rules.
+
+### Example:
+
+Given a rule:
+
+```js
+{ name: 'strong', enabled: true, fn: ..., alt: ['inline'] }
+```
+
+It belongs to:
+
+* `''` (default chain)
+* `'inline'` chain
+
+---
+
+## 4. **Cache**
+
+The **cache** is a lookup object that maps chain names to an array of active rule functions. It is built by the `__compile__()` method.
+
+### Structure:
+
+```js
+this.__cache__ = {
+  '':        [fn1, fn2, fn3],      // All enabled rule functions
+  'inline':  [fn1, fn4],
+  'block':   [fn2, fn5]
+}
+```
+
+* Each key is a chain name.
+* Each value is an array of `fn` (function references) of the **enabled rules** that belong to that chain.
+
+---
+
+## Visual Summary
+
+```text
+┌──────────────────────────┐
+│      this.__rules__      │
+├──────────────────────────┤
+│ [                        │
+│   {                      │
+│     name: 'a',           │
+│     enabled: true,       │
+│     fn: [Function],      │  ← Rule
+│     alt: ['inline']      │
+│   },                     │
+│   { name: 'b', ... },    │
+│   ...                    │
+│ ]                        │
+└──────────────────────────┘
+
+         │
+         ▼
+  ┌──────────────────────────────┐
+  │       this.__cache__         │  ← Built from enabled rules
+  ├──────────────────────────────┤
+  │ {                            │
+  │   '':       [fnA, fnB],      │
+  │   'inline': [fnA],           │
+  │   'block':  [fnC]            │
+  │ }                            │
+  └──────────────────────────────┘
+```
+
+---
+
+## Summary Table
+
+| Term  | Type   | Description                                                   |
+| ----- | ------ | ------------------------------------------------------------- |
+| Rule  | Object | A single named function with metadata                         |
+| Rules | Array  | All added rules (`this.__rules__`)                            |
+| Chain | String | A group name like `'inline'`, `'block'`                       |
+| Cache | Object | Maps chain name → list of active functions (`this.__cache__`) |
+
+
+</md></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn>
