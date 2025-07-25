@@ -1,10 +1,77 @@
 
-	<sn></sn>		
+			
 	<config>
-		<tags>#index.mjs</tags>
+		<tags>#01.project tree</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Fri Jul 25 2025 19:37:04 GMT+0600 (Bangladesh Standard Time)</udate>
-		<id>article-3joK5zi8v3</id>
+		<udate>Fri Jul 25 2025 19:39:14 GMT+0600 (Bangladesh Standard Time)</udate>
+		<id>article-umRU6IwIqI</id>
 		<duration></duration>
 	</config>
+<sn><md>### `index.mjs` :
+
+```js
+export { default } from './lib/index.mjs';
+```
+
+is an **ECMAScript Module (ESM)** entry point — it simply **re-exports the default export** from another module file (`./lib/index.mjs`).
+
+#### Purpose
+
+This file acts as a **"main" entry point** for ESM builds of the package. When someone does:
+
+```js
+import MarkdownIt from 'markdown-it';
+```
+
+and the package's `package.json` points to `index.mjs` (via the `exports` or `module` field), this file ensures that:
+
+* The actual logic from `./lib/index.mjs` is loaded.
+* The consumer gets the correct export (`MarkdownIt` class or default API object).
+
+
+#### What's in `./lib/index.mjs`?
+
+That file typically looks like:
+
+```js
+import MarkdownIt from './parser.mjs';  // or internal logic
+
+export default MarkdownIt;
+```
+
+So in essence:
+
+```js
+index.mjs
+ └── re-exports from → ./lib/index.mjs
+      └── exports MarkdownIt class/function
+```
+
+#### Why Not Put Everything in `index.mjs`?
+
+To keep things modular and maintainable:
+
+* `index.mjs` is kept minimal (like a root redirect).
+* All real code lives in `lib/`, so CommonJS (`lib/index.js`) and ESM (`lib/index.mjs`) can have mirrored logic.
+
+#### When You See This?
+
+You usually see this kind of structure in:
+
+* Dual-package modules (`.js` for CommonJS, `.mjs` for ESM).
+* Library distribution folders (`dist/` or `lib/`) that separate source and entry.
+
+
+#### Summary
+
+```js
+export { default } from './lib/index.mjs';
+```
+
+* Means: “Whatever is `export default` from `./lib/index.mjs`, export it here too.”
+* Purpose: Clean re-export entry point for ESM consumers.
+* Common in packages supporting both CommonJS (`require`) and ESM (`import`) systems.
+
+
+</md></sn>
