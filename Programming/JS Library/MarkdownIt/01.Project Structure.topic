@@ -19,6 +19,14 @@
 │   │   ├── parse_link_destination.js
 │   │   ├── parse_link_title.js
 │   │   └── parse_url.js
+│   ├── rules_core/
+│   │   ├── block.js
+│   │   ├── inline.js
+│   │   ├── linkify.js
+│   │   ├── normalize.js
+│   │   ├── references.js
+│   │   ├── replacements.js
+│   │   └── smartquotes.js
 │   ├── rules_block/
 │   │   ├── blockquote.js
 │   │   ├── code.js
@@ -119,7 +127,7 @@ Handles inline-level parsing:
 		<tags>#01.project structure</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Fri Jul 25 2025 19:19:36 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Jul 25 2025 19:23:32 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-38lWHtn3Rj</id>
 		<duration></duration>
 	</config>
