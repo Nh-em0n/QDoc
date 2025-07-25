@@ -344,7 +344,7 @@ export default Ruler
 		<tags>#ruler</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Fri Jul 25 2025 20:24:34 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Jul 25 2025 20:30:27 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-SU90qbs6bv</id>
 		<duration></duration>
 	</config>
@@ -565,4 +565,129 @@ this.__find__('list')     // returns -1
 | Output  | Index of rule in `__rules__`, or `-1` if not found |
 | Access  | Private – used internally in `Ruler` methods only  |
 
-</md></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn>
+</md></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"><md>### Method: `Ruler.prototype.__compile__`
+
+#### Purpose:
+
+To **generate a cache (`__cache__`)** that maps each chain name (like `'inline'`, `'block'`, etc.) to an array of **enabled rule functions (`fn`)** that belong to that chain.
+
+---
+
+## Full Breakdown
+
+```js
+Ruler.prototype.__compile__ = function () {
+  const self = this
+  const chains = ['']
+```
+
+* `self` is a reference to `this`, used inside nested functions.
+* `chains` starts with the default chain name: `''`.
+
+```js
+  // collect unique names
+  self.__rules__.forEach(function (rule) {
+    if (!rule.enabled) { return }
+
+    rule.alt.forEach(function (altName) {
+      if (chains.indexOf(altName) &lt; 0) {
+        chains.push(altName)
+      }
+    })
+  })
+```
+
+### Step 1: **Identify unique chain names**
+
+* Iterate through all **enabled** rules.
+* For each rule’s `alt` array (alternative chain names), add any new name to the `chains` array.
+
+So if a rule has:
+
+```js
+{ name: 'foo', enabled: true, alt: ['inline', 'custom'] }
+```
+
+The `chains` array becomes:
+
+```js
+['', 'inline', 'custom']
+```
+
+---
+
+```js
+  self.__cache__ = {}
+```
+
+* Reset the rule cache.
+
+---
+
+```js
+  chains.forEach(function (chain) {
+    self.__cache__[chain] = []
+
+    self.__rules__.forEach(function (rule) {
+      if (!rule.enabled) { return }
+
+      if (chain &amp;&amp; rule.alt.indexOf(chain) &lt; 0) { return }
+
+      self.__cache__[chain].push(rule.fn)
+    })
+  })
+```
+
+### Step 2: **Build cache for each chain**
+
+* For each chain name in `chains`:
+
+  * Create an array `self.__cache__[chain]` to store the rule functions.
+* Then iterate through all **enabled** rules:
+
+  * If we're not processing the default chain (`''`), check whether the rule belongs to this chain using `rule.alt.indexOf(chain)`.
+  * If it qualifies, push the rule's function (`fn`) into the cache.
+
+---
+
+## Example
+
+### Given `__rules__`:
+
+```js
+[
+  { name: 'a', enabled: true, fn: A, alt: ['inline'] },
+  { name: 'b', enabled: true, fn: B, alt: [] },
+  { name: 'c', enabled: false, fn: C, alt: ['inline'] },
+  { name: 'd', enabled: true, fn: D, alt: ['block'] }
+]
+```
+
+### After `__compile__`, `__cache__` will be:
+
+```js
+{
+  '':     [A, B, D],       // default chain (includes all enabled rules)
+  'inline': [A],           // only rules that are enabled and have 'inline' in alt
+  'block':  [D]
+}
+```
+
+---
+
+## Summary
+
+| Component   | Description                                                        |
+| ----------- | ------------------------------------------------------------------ |
+| `chains`    | Collects unique chain names (`''` is default)                      |
+| `alt` field | Declares rule’s membership in one or more named chains             |
+| `__cache__` | Maps chain name → array of `fn`s (rule functions) that are enabled |
+| Purpose     | Optimize rule execution by pre-selecting relevant, enabled rules   |
+
+---
+
+### Why it's important
+
+This method avoids recomputing which rules to run each time by building a ready-to-use **rule chain** for each chain name. It’s essential for performance and modularity.
+
+</md></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn><sn class="col-12 col-md-10 col-lg-9 ignore p-3 p-lg-5"></sn>
