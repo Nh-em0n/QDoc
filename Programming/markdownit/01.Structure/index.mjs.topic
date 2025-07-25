@@ -4,11 +4,11 @@
 		<tags>#01.project tree</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Fri Jul 25 2025 19:39:14 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Jul 25 2025 19:40:10 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-umRU6IwIqI</id>
 		<duration></duration>
 	</config>
-<sn><md>### `index.mjs` :
+<sn><md>### 📄 `index.mjs` :
 
 ```js
 export { default } from './lib/index.mjs';
