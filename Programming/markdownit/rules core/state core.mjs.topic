@@ -1,10 +1,151 @@
 
-	<sn></sn>		
+	<sn><md>### Purpose of This Code
+
+The file defines the **`StateCore` class**, which represents the **core parsing state** during the Markdown parsing process. It stores input text, metadata, output tokens, and a reference to the Markdown parser instance.
+
+---
+
+## 1. **Imports**
+
+```js
+import Token from '../token.mjs'
+```
+
+### Explanation:
+
+* Imports the `Token` class, which represents individual parsed elements (e.g., `<p>`, `<strong>`, text, etc.).
+* This will be attached to the state later so that core rules can create tokens.
+
+---
+
+## 2. **Constructor: `function StateCore(src, md, env)`**
+
+```js
+function StateCore (src, md, env) {
+  this.src = src
+  this.env = env
+  this.tokens = []
+  this.inlineMode = false
+  this.md = md
+}
+```
+
+### Explanation:
+
+Creates a new core state object with these properties:
+
+| Property     | Description                                             |
+| ------------ | ------------------------------------------------------- |
+| `src`        | The full input Markdown string                          |
+| `env`        | Arbitrary environment object for plugins / data passing |
+| `tokens`     | Output array to hold parsed tokens                      |
+| `inlineMode` | Whether to parse in inline-only mode (default: false)   |
+| `md`         | A reference to the main Markdown parser instance        |
+
+### Example:
+
+```js
+import StateCore from './rules_core/state_core.mjs'
+import MarkdownIt from 'markdown-it'
+
+const md = new MarkdownIt()
+const env = { filename: 'doc.md' }
+
+const state = new StateCore('**Hello** world!', md, env)
+
+console.log(state.src)        // '**Hello** world!'
+console.log(state.env)        // { filename: 'doc.md' }
+console.log(state.tokens)     // []
+console.log(state.inlineMode) // false
+console.log(state.md.render)  // function (the parser's render method)
+```
+
+This `state` object is passed into core rules and will be **mutated** as parsing progresses.
+
+---
+
+## 3. **Attach Token Class to Prototype**
+
+```js
+StateCore.prototype.Token = Token
+```
+
+### Explanation:
+
+Adds the `Token` class to the `StateCore` prototype, allowing rules to create tokens like:
+
+```js
+const token = new state.Token('paragraph_open', 'p', 1)
+```
+
+Instead of importing the `Token` class separately in each rule file, this approach provides a shared access point.
+
+### Example:
+
+```js
+const pOpen = new state.Token('paragraph_open', 'p', 1)
+pOpen.level = 0
+
+const text = new state.Token('text', '', 0)
+text.content = 'Hello world!'
+
+const pClose = new state.Token('paragraph_close', 'p', -1)
+pClose.level = 0
+
+state.tokens.push(pOpen, text, pClose)
+
+console.log(state.tokens)
+/*
+[
+  Token { type: 'paragraph_open', tag: 'p', nesting: 1, ... },
+  Token { type: 'text', tag: '', nesting: 0, content: 'Hello world!' },
+  Token { type: 'paragraph_close', tag: 'p', nesting: -1, ... }
+]
+*/
+```
+
+---
+
+## 4. **Export Default**
+
+```js
+export default StateCore
+```
+
+### Explanation:
+
+Exports the `StateCore` constructor so it can be used in the main parser and in core rule modules.
+
+### Example:
+
+Used in `core.mjs`:
+
+```js
+import StateCore from './rules_core/state_core.mjs'
+
+const state = new StateCore('Hello *world*!', md, {})
+```
+
+---
+
+## Final Summary
+
+| Part                      | Description                                |
+| ------------------------- | ------------------------------------------ |
+| `StateCore(src, md, env)` | Initializes a new core processing state    |
+| `.src`                    | Input Markdown string                      |
+| `.env`                    | Environment/context object                 |
+| `.tokens`                 | Output token list                          |
+| `.inlineMode`             | Whether inline-only mode is active         |
+| `.md`                     | Reference to `markdown-it` parser          |
+| `.Token`                  | Exposes the `Token` class for use in rules |
+
+</strong></p></md></sn>		
 	<config>
 		<tags>#state.mjs</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Jul 30 2025 19:51:12 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Jul 30 2025 20:06:57 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-a9DR4dgJwy</id>
 		<duration></duration>
 	</config>
