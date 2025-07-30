@@ -1,10 +1,634 @@
 
-	<sn></sn>		
+	<sn><md>### Token Full Code 
+
+
+```js
+
+
+// Token class
+
+/**
+ * class Token
+ **/
+
+/**
+ * new Token(type, tag, nesting)
+ *
+ * Create new token and fill passed properties.
+ **/
+function Token (type, tag, nesting) {
+  /**
+   * Token#type -&gt; String
+   *
+   * Type of the token (string, e.g. "paragraph_open")
+   **/
+  this.type     = type
+
+  /**
+   * Token#tag -&gt; String
+   *
+   * html tag name, e.g. "p"
+   **/
+  this.tag      = tag
+
+  /**
+   * Token#attrs -&gt; Array
+   *
+   * Html attributes. Format: `[ [ name1, value1 ], [ name2, value2 ] ]`
+   **/
+  this.attrs    = null
+
+  /**
+   * Token#map -&gt; Array
+   *
+   * Source map info. Format: `[ line_begin, line_end ]`
+   **/
+  this.map      = null
+
+  /**
+   * Token#nesting -&gt; Number
+   *
+   * Level change (number in {-1, 0, 1} set), where:
+   *
+   * -  `1` means the tag is opening
+   * -  `0` means the tag is self-closing
+   * - `-1` means the tag is closing
+   **/
+  this.nesting  = nesting
+
+  /**
+   * Token#level -&gt; Number
+   *
+   * nesting level, the same as `state.level`
+   **/
+  this.level    = 0
+
+  /**
+   * Token#children -&gt; Array
+   *
+   * An array of child nodes (inline and img tokens)
+   **/
+  this.children = null
+
+  /**
+   * Token#content -&gt; String
+   *
+   * In a case of self-closing tag (code, html, fence, etc.),
+   * it has contents of this tag.
+   **/
+  this.content  = ''
+
+  /**
+   * Token#markup -&gt; String
+   *
+   * '*' or '_' for emphasis, fence string for fence, etc.
+   **/
+  this.markup   = ''
+
+  /**
+   * Token#info -&gt; String
+   *
+   * Additional information:
+   *
+   * - Info string for "fence" tokens
+   * - The value "auto" for autolink "link_open" and "link_close" tokens
+   * - The string value of the item marker for ordered-list "list_item_open" tokens
+   **/
+  this.info     = ''
+
+  /**
+   * Token#meta -&gt; Object
+   *
+   * A place for plugins to store an arbitrary data
+   **/
+  this.meta     = null
+
+  /**
+   * Token#block -&gt; Boolean
+   *
+   * True for block-level tokens, false for inline tokens.
+   * Used in renderer to calculate line breaks
+   **/
+  this.block    = false
+
+  /**
+   * Token#hidden -&gt; Boolean
+   *
+   * If it's true, ignore this element when rendering. Used for tight lists
+   * to hide paragraphs.
+   **/
+  this.hidden   = false
+}
+
+/**
+ * Token.attrIndex(name) -&gt; Number
+ *
+ * Search attribute index by name.
+ **/
+Token.prototype.attrIndex = function attrIndex (name) {
+  if (!this.attrs) { return -1 }
+
+  const attrs = this.attrs
+
+  for (let i = 0, len = attrs.length; i &lt; len; i++) {
+    if (attrs[i][0] === name) { return i }
+  }
+  return -1
+}
+
+/**
+ * Token.attrPush(attrData)
+ *
+ * Add `[ name, value ]` attribute to list. Init attrs if necessary
+ **/
+Token.prototype.attrPush = function attrPush (attrData) {
+  if (this.attrs) {
+    this.attrs.push(attrData)
+  } else {
+    this.attrs = [attrData]
+  }
+}
+
+/**
+ * Token.attrSet(name, value)
+ *
+ * Set `name` attribute to `value`. Override old value if exists.
+ **/
+Token.prototype.attrSet = function attrSet (name, value) {
+  const idx = this.attrIndex(name)
+  const attrData = [name, value]
+
+  if (idx &lt; 0) {
+    this.attrPush(attrData)
+  } else {
+    this.attrs[idx] = attrData
+  }
+}
+
+/**
+ * Token.attrGet(name)
+ *
+ * Get the value of attribute `name`, or null if it does not exist.
+ **/
+Token.prototype.attrGet = function attrGet (name) {
+  const idx = this.attrIndex(name)
+  let value = null
+  if (idx &gt;= 0) {
+    value = this.attrs[idx][1]
+  }
+  return value
+}
+
+/**
+ * Token.attrJoin(name, value)
+ *
+ * Join value to existing attribute via space. Or create new attribute if not
+ * exists. Useful to operate with token classes.
+ **/
+Token.prototype.attrJoin = function attrJoin (name, value) {
+  const idx = this.attrIndex(name)
+
+  if (idx &lt; 0) {
+    this.attrPush([name, value])
+  } else {
+    this.attrs[idx][1] = this.attrs[idx][1] + ' ' + value
+  }
+}
+
+export default Token
+
+
+
+```</md></sn>		
 	<config>
 		<tags>#token.mjs</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Jul 30 2025 18:46:10 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Jul 30 2025 19:29:41 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-Wpk4HUiKdG</id>
 		<duration></duration>
 	</config>
+<sn><md>This JavaScript code defines a `Token` class, which is part of the `markdown-it` library. It's used to represent parsed pieces of Markdown content, such as tags, text, formatting, and other metadata. Let's walk through it step by step:
+
+---
+
+## 1. **Token Constructor**
+
+```js
+function Token (type, tag, nesting) {
+```
+
+This is the constructor function for creating a new `Token` instance. It takes three arguments:
+
+* `type`: Type of the token, e.g., `"paragraph_open"`, `"inline"`, `"heading_close"`
+* `tag`: HTML tag name, e.g., `"p"`, `"h1"`
+* `nesting`: Specifies the tag status:
+
+  * `1`: opening tag (e.g., `<p>`)
+  * `0`: self-closing tag (e.g., `</p><hr>`)
+  * `-1`: closing tag (e.g., `<p></p>`)
+
+### Constructor Properties
+
+```js
+this.type     = type
+this.tag      = tag
+this.attrs    = null
+this.map      = null
+this.nesting  = nesting
+this.level    = 0
+this.children = null
+this.content  = ''
+this.markup   = ''
+this.info     = ''
+this.meta     = null
+this.block    = false
+this.hidden   = false
+```
+
+Each token stores metadata used during parsing/rendering:
+
+| Property   | Description                                                                 |
+| ---------- | --------------------------------------------------------------------------- |
+| `type`     | Type of token (e.g. `paragraph_open`)                                       |
+| `tag`      | HTML tag (e.g. `p`, `h1`)                                                   |
+| `attrs`    | HTML attributes, in array form: `[[name, value], ...]`                      |
+| `map`      | Source map info: `[line_start, line_end]`                                   |
+| `nesting`  | Indicates tag opening (`1`), closing (`-1`), or self-closing (`0`)          |
+| `level`    | Nesting level (used internally)                                             |
+| `children` | Child tokens (used for inline tokens like emphasis inside a paragraph)      |
+| `content`  | Actual content for self-closing tokens (like code blocks)                   |
+| `markup`   | Raw markup used (like `*` or `_`)                                           |
+| `info`     | Extra info, e.g., language for fenced code blocks                           |
+| `meta`     | A place for plugins to store extra data                                     |
+| `block`    | `true` if it’s a block-level token                                          |
+| `hidden`   | If `true`, it will be ignored during rendering (e.g., used for tight lists) |
+
+---
+
+## 2. **attrIndex(name)**
+
+```js
+Token.prototype.attrIndex = function attrIndex (name) {
+  if (!this.attrs) { return -1 }
+
+  const attrs = this.attrs
+
+  for (let i = 0, len = attrs.length; i &lt; len; i++) {
+    if (attrs[i][0] === name) { return i }
+  }
+  return -1
+}
+```
+
+This method searches the `attrs` array for an attribute by `name` and returns its index. If it doesn't exist, returns `-1`.
+
+---
+
+## 3. **attrPush(attrData)**
+
+```js
+Token.prototype.attrPush = function attrPush (attrData) {
+  if (this.attrs) {
+    this.attrs.push(attrData)
+  } else {
+    this.attrs = [attrData]
+  }
+}
+```
+
+Adds a new attribute (as a `[name, value]` array) to the `attrs` list. Initializes `attrs` if it's `null`.
+
+---
+
+## 4. **attrSet(name, value)**
+
+```js
+Token.prototype.attrSet = function attrSet (name, value) {
+  const idx = this.attrIndex(name)
+  const attrData = [name, value]
+
+  if (idx &lt; 0) {
+    this.attrPush(attrData)
+  } else {
+    this.attrs[idx] = attrData
+  }
+}
+```
+
+Sets or updates an attribute by name:
+
+* If it exists, updates its value.
+* If not, adds it as a new attribute.
+
+---
+
+## 5. **attrGet(name)**
+
+```js
+Token.prototype.attrGet = function attrGet (name) {
+  const idx = this.attrIndex(name)
+  let value = null
+  if (idx &gt;= 0) {
+    value = this.attrs[idx][1]
+  }
+  return value
+}
+```
+
+Gets the value of an attribute by name. If it doesn't exist, returns `null`.
+
+---
+
+## 6. **attrJoin(name, value)**
+
+```js
+Token.prototype.attrJoin = function attrJoin (name, value) {
+  const idx = this.attrIndex(name)
+
+  if (idx &lt; 0) {
+    this.attrPush([name, value])
+  } else {
+    this.attrs[idx][1] = this.attrs[idx][1] + ' ' + value
+  }
+}
+```
+
+Adds a value to an existing attribute by concatenating it with a space. If the attribute doesn’t exist, creates it.
+
+**Common Use Case**: Adding a new class name to a `class` attribute:
+
+```js
+token.attrJoin('class', 'new-class')
+```
+
+---
+
+## 7. **Export**
+
+```js
+export default Token
+```
+
+This makes the `Token` class available for import in other modules.
+
+---
+
+## Summary
+
+The `Token` class:
+
+* Represents a parsed piece of Markdown.
+* Stores HTML-like metadata.
+* Provides helper methods for manipulating HTML attributes.
+
+It is central to how `markdown-it` tracks and manipulates Markdown content during parsing and rendering.
+</md></sn><sn><md>### 1. **Constructor: `Token(type, tag, nesting)`**
+
+**Purpose**: Creates a new token and initializes its basic properties.
+
+**Explanation**:
+
+* `type`: Describes the role of the token (e.g. `'paragraph_open'`, `'inline'`)
+* `tag`: The HTML tag name (`'p'`, `'h1'`, `'img'`)
+* `nesting`: Indicates tag nesting state:
+
+  * `1` = opening tag (``)
+  * `0` = self-closing tag (``)
+  * `-1` = closing tag (``)
+
+**Example**:
+
+```js
+const token = new Token('paragraph_open', 'p', 1)
+console.log(token.type)     // 'paragraph_open'
+console.log(token.tag)      // 'p'
+console.log(token.nesting)  // 1
+```
+
+---
+
+## 2. **`token.attrs` (Attributes)**
+
+**Purpose**: Holds HTML attributes like `href`, `class`, `src` in `[ [name, value], ... ]` format.
+
+**Example**:
+
+```js
+token.attrs = [['class', 'lead'], ['id', 'main-paragraph']]
+console.log(token.attrs)
+// [['class', 'lead'], ['id', 'main-paragraph']]
+```
+
+---
+
+## 3. **`token.map` (Source Map)**
+
+**Purpose**: Stores source line numbers: `[startLine, endLine]` (used in block-level parsing).
+
+**Example**:
+
+```js
+token.map = [5, 7]
+console.log(token.map)  // [5, 7]
+```
+
+---
+
+## 4. **`token.level` (Nesting Level)**
+
+**Purpose**: Indicates the nesting depth of the token inside the Markdown structure.
+
+**Example**:
+
+```js
+token.level = 2
+console.log(token.level)  // 2
+```
+
+---
+
+## 5. **`token.children` (Inline Children)**
+
+**Purpose**: Holds child tokens inside inline elements (e.g., text or emphasized text inside a paragraph).
+
+**Example**:
+
+```js
+const textToken = new Token('text', '', 0)
+textToken.content = 'Hello'
+
+token.children = [textToken]
+console.log(token.children[0].content)  // 'Hello'
+```
+
+---
+
+## 6. **`token.content`**
+
+**Purpose**: Holds actual content for self-closing tokens like `code`, `html_block`, etc.
+
+**Example**:
+
+```js
+const codeToken = new Token('code_inline', 'code', 0)
+codeToken.content = 'console.log("Hi")'
+console.log(codeToken.content)  // 'console.log("Hi")'
+```
+
+---
+
+## 7. **`token.markup`**
+
+**Purpose**: Stores the original markup (like `**`, `_`, or ` ``` `).
+
+**Example**:
+
+```js
+token.markup = '**'
+console.log(token.markup)  // '**'
+```
+
+---
+
+## 8. **`token.info`**
+
+**Purpose**: Stores additional info:
+
+* language of fenced code block
+* list marker in ordered lists
+* `auto` for autolinks
+
+**Example**:
+
+```js
+token.info = 'javascript'
+console.log(token.info)  // 'javascript'
+```
+
+---
+
+## 9. **`token.meta`**
+
+**Purpose**: Used by plugins to attach custom metadata.
+
+**Example**:
+
+```js
+token.meta = { customPlugin: true }
+console.log(token.meta.customPlugin)  // true
+```
+
+---
+
+## 10. **`token.block`**
+
+**Purpose**: `true` for block-level tokens (``, ``, ``), `false` for inline ones.
+
+**Example**:
+
+```js
+token.block = true
+console.log(token.block)  // true
+```
+
+---
+
+## 11. **`token.hidden`**
+
+**Purpose**: Marks token as hidden during rendering (e.g., paragraphs inside tight lists).
+
+**Example**:
+
+```js
+token.hidden = true
+console.log(token.hidden)  // true
+```
+
+---
+
+## 12. **`attrIndex(name)`**
+
+**Purpose**: Returns the index of an attribute by name, or `-1` if not found.
+
+**Example**:
+
+```js
+token.attrs = [['class', 'box'], ['id', 'section']]
+console.log(token.attrIndex('id'))    // 1
+console.log(token.attrIndex('style')) // -1
+```
+
+---
+
+## 13. **`attrPush([name, value])`**
+
+**Purpose**: Adds a new attribute to the token.
+
+**Example**:
+
+```js
+token.attrPush(['data-role', 'user'])
+console.log(token.attrs)
+// [['class', 'box'], ['id', 'section'], ['data-role', 'user']]
+```
+
+---
+
+## 14. **`attrSet(name, value)`**
+
+**Purpose**: Sets or updates an attribute.
+
+**Example**:
+
+```js
+token.attrSet('class', 'updated-box')
+console.log(token.attrs)
+// [['class', 'updated-box'], ['id', 'section'], ['data-role', 'user']]
+```
+
+---
+
+## 15. **`attrGet(name)`**
+
+**Purpose**: Retrieves the value of an attribute.
+
+**Example**:
+
+```js
+console.log(token.attrGet('class')) // 'updated-box'
+console.log(token.attrGet('style')) // null
+```
+
+---
+
+## 16. **`attrJoin(name, value)`**
+
+**Purpose**: Appends a space-separated value to an existing attribute, or creates it.
+
+**Example**:
+
+```js
+token.attrJoin('class', 'highlighted')
+console.log(token.attrGet('class')) // 'updated-box highlighted'
+```
+
+---
+
+## 17. **Export**
+
+```js
+export default Token
+```
+
+**Purpose**: Allows the `Token` class to be used in other modules.
+
+**Example** (in another file):
+
+```js
+import Token from './token.js'
+const tok = new Token('strong_open', 'strong', 1)
+console.log(tok.type) // 'strong_open'
+```
+
+</md></sn>
