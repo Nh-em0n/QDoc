@@ -1,10 +1,293 @@
 
-	<sn></sn>		
+	<sn><md>#### parser_core.mjs
+
+---
+
+
+
+```js
+
+
+/** internal
+ * class Core
+ *
+ * Top-level rules executor. Glues block/inline parsers and does intermediate
+ * transformations.
+ **/
+
+import Ruler from './ruler.mjs'
+import StateCore from './rules_core/state_core.mjs'
+
+import r_normalize from './rules_core/normalize.mjs'
+import r_block from './rules_core/block.mjs'
+import r_inline from './rules_core/inline.mjs'
+import r_linkify from './rules_core/linkify.mjs'
+import r_replacements from './rules_core/replacements.mjs'
+import r_smartquotes from './rules_core/smartquotes.mjs'
+import r_text_join from './rules_core/text_join.mjs'
+
+const _rules = [
+  ['normalize',      r_normalize],
+  ['block',          r_block],
+  ['inline',         r_inline],
+  ['linkify',        r_linkify],
+  ['replacements',   r_replacements],
+  ['smartquotes',    r_smartquotes],
+  // `text_join` finds `text_special` tokens (for escape sequences)
+  // and joins them with the rest of the text
+  ['text_join',      r_text_join]
+]
+
+/**
+ * new Core()
+ **/
+function Core () {
+  /**
+   * Core#ruler -&gt; Ruler
+   *
+   * [[Ruler]] instance. Keep configuration of core rules.
+   **/
+  this.ruler = new Ruler()
+
+  for (let i = 0; i &lt; _rules.length; i++) {
+    this.ruler.push(_rules[i][0], _rules[i][1])
+  }
+}
+
+/**
+ * Core.process(state)
+ *
+ * Executes core chain rules.
+ **/
+Core.prototype.process = function (state) {
+  const rules = this.ruler.getRules('')
+
+  for (let i = 0, l = rules.length; i &lt; l; i++) {
+    rules[i](state)
+  }
+}
+
+Core.prototype.State = StateCore
+
+export default Core
+
+
+
+```
+</md></sn>		
 	<config>
 		<tags>#parsercode.mjs</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Jul 30 2025 19:30:34 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Jul 30 2025 19:47:38 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-VDdXgD3BrO</id>
 		<duration></duration>
 	</config>
+<sn><md>Here's a **step-by-step explanation** of the `Core` class code with a **relevant example after each part**, to help you understand **both structure and functionality**. This code is part of the **`markdown-it`** parser's **core processor**, where it connects all transformation stages (normalize, block parse, inline parse, etc.).
+
+---
+
+## 1. **Imports**
+
+```js
+import Ruler from './ruler.mjs'
+import StateCore from './rules_core/state_core.mjs'
+
+import r_normalize from './rules_core/normalize.mjs'
+import r_block from './rules_core/block.mjs'
+import r_inline from './rules_core/inline.mjs'
+import r_linkify from './rules_core/linkify.mjs'
+import r_replacements from './rules_core/replacements.mjs'
+import r_smartquotes from './rules_core/smartquotes.mjs'
+import r_text_join from './rules_core/text_join.mjs'
+```
+
+### Explanation:
+
+* **`Ruler`**: A utility class that stores and manages a list of rules (functions).
+* **`StateCore`**: Holds state used during core processing.
+* Each `r_*` is a **core processing rule** that transforms the markdown input step-by-step.
+
+### Example:
+
+If you write Markdown like:
+
+```md
+**Hello**, "world"! Visit https://openai.com.
+```
+
+Each of these imported modules will run one after another and:
+
+* `normalize` → clean line endings
+* `block` → divide text into blocks (paragraphs, headers, etc.)
+* `inline` → tokenize inline formatting like `**bold**`
+* `linkify` → auto-convert URLs
+* `replacements` → smart replacements like `(c)` → ©
+* `smartquotes` → change `" "` into “ ”
+* `text_join` → combine fragmented text
+
+---
+
+## 2. **Rule List: `_rules`**
+
+```js
+const _rules = [
+  ['normalize',      r_normalize],
+  ['block',          r_block],
+  ['inline',         r_inline],
+  ['linkify',        r_linkify],
+  ['replacements',   r_replacements],
+  ['smartquotes',    r_smartquotes],
+  ['text_join',      r_text_join]
+]
+```
+
+### Explanation:
+
+Each rule is named and paired with its processing function. This array defines the **exact execution order** of core transformations.
+
+### Example:
+
+When Markdown is parsed, it goes through these rule names:
+
+```js
+[
+  'normalize',     // cleans line endings
+  'block',         // turns text into blocks
+  'inline',        // processes inline syntax like *em*
+  'linkify',       // turns bare URLs into <a>
+  'replacements',  // converts (tm), (c), etc.
+  'smartquotes',   // converts quotes to “ ” or ‘ ’
+  'text_join'      // joins text fragments
+]
+```
+
+---
+
+## 3. **Constructor: `function Core()`**
+
+```js
+function Core () {
+  this.ruler = new Ruler()
+
+  for (let i = 0; i &lt; _rules.length; i++) {
+    this.ruler.push(_rules[i][0], _rules[i][1])
+  }
+}
+```
+
+### Explanation:
+
+* Creates a new `Core` instance.
+* Initializes a `Ruler` object that will manage the processing rules.
+* Registers each rule (from `_rules`) into the ruler.
+
+### Example:
+
+```js
+const core = new Core()
+console.log(core.ruler.getRules('').length) // 7 rules registered
+```
+
+This is like registering plugins into a manager.
+
+---
+
+## 4. **Method: `process(state)`**
+
+```js
+Core.prototype.process = function (state) {
+  const rules = this.ruler.getRules('')
+
+  for (let i = 0, l = rules.length; i &lt; l; i++) {
+    rules[i](state)
+  }
+}
+```
+
+### Explanation:
+
+* Calls each rule function with the `state` object.
+* The state is mutated step by step by each rule.
+* This is the main driver of core processing.
+
+### Example:
+
+```js
+const core = new Core()
+const state = new core.State('**bold** and "quotes"', {}, {})
+core.process(state)
+```
+
+Each rule modifies `state.tokens`, so that by the end, the raw string has become a list of parsed tokens like:
+
+```js
+[
+  { type: 'paragraph_open', tag: 'p', ... },
+  { type: 'strong_open', tag: 'strong', ... },
+  { type: 'text', content: 'bold' },
+  { type: 'strong_close', tag: 'strong' },
+  { type: 'text', content: ' and “quotes”' },
+  { type: 'paragraph_close', tag: 'p', ... }
+]
+```
+
+---
+
+## 5. **`Core.prototype.State = StateCore`**
+
+```js
+Core.prototype.State = StateCore
+```
+
+### Explanation:
+
+* Exposes the `StateCore` class through the `Core` class.
+* Allows others to create a state using `new Core().State(...)`.
+
+### Example:
+
+```js
+const core = new Core()
+const state = new core.State('Some text', {}, {})
+```
+
+Now `state` holds:
+
+* The input string
+* The environment (`env`)
+* Parsed tokens as they're built
+
+---
+
+## 6. **Export**
+
+```js
+export default Core
+```
+
+### Explanation:
+
+Exports the `Core` class so it can be used in the main Markdown parser engine.
+
+### Example:
+
+```js
+import Core from './core.mjs'
+const core = new Core()
+```
+
+---
+
+## Final Summary
+
+| Part             | Role                                                                 |
+| ---------------- | -------------------------------------------------------------------- |
+| `Core`           | Manages execution of core rules                                      |
+| `ruler`          | Holds the list of processing rules                                   |
+| `_rules`         | Ordered rule functions: normalize → parse blocks → parse inline etc. |
+| `process(state)` | Runs all rules over the markdown content                             |
+| `StateCore`      | Holds parsing state and tokens                                       |
+| `export default` | Makes the class available to rest of the system                      |
+
+</a></md></sn>
