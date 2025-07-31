@@ -1,10 +1,224 @@
 
-	<sn></sn>		
+			
 	<config>
 		<tags>#render.mjs</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Jul 31 2025 11:38:39 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Jul 31 2025 13:28:29 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-40aR7v0c0z</id>
 		<duration></duration>
 	</config>
+<sn><md>## Overview
+
+The `Renderer` class is responsible for converting parsed **tokens** into **HTML strings**.
+
+* Input: Array of tokens (e.g., `[ { type: 'text', content: 'Hello' }, ... ]`)
+* Output: Rendered HTML (e.g., `"Hello"`)
+
+This separation of parsing (tokenization) and rendering allows `markdown-it` to be highly customizable.
+
+---
+
+## Imports
+
+```js
+import { assign, unescapeAll, escapeHtml } from './common/utils.mjs'
+```
+
+* `assign`: A utility like `Object.assign()`.
+* `unescapeAll`: Converts escaped HTML entities (`&lt;`, `&amp;`) back to characters.
+* `escapeHtml`: Escapes HTML-sensitive characters like `&lt;`, `&gt;`, and `&amp;`.
+
+---
+
+## Default Render Rules
+
+These are default functions used to render specific token types like `code_inline`, `fence`, `image`, etc.
+
+### Example: `code_inline`
+
+```js
+default_rules.code_inline = function (tokens, idx, options, env, slf) {
+  const token = tokens[idx];
+  return '<code' +="" slf.renderattrs(token)="" '="">' + escapeHtml(token.content) + '';
+}
+```
+
+#### Input:
+
+```js
+{
+  type: 'code_inline',
+  content: 'const a = 10;',
+  attrs: null
+}
+```
+
+#### Output:
+
+```html
+<code>const a = 10;</code>
+```
+
+---
+
+### Example: `fence`
+
+This renders fenced code blocks (like triple backticks):
+
+````js
+```js
+console.log("hi")
+````
+
+````
+
+Converts to:
+
+```html
+<pre><code class="language-js">console.log("hi")</code></pre>
+````
+
+With highlighting, `options.highlight()` is used.
+
+---
+
+### Example: `image`
+
+```js
+default_rules.image = function (tokens, idx, options, env, slf) {
+  const token = tokens[idx];
+  token.attrs[token.attrIndex('alt')][1] = slf.renderInlineAsText(token.children, options, env);
+  return slf.renderToken(tokens, idx, options);
+}
+```
+
+* Ensures `alt` is rendered as plain text (per CommonMark spec).
+
+---
+
+## Renderer Constructor
+
+```js
+function Renderer () {
+  this.rules = assign({}, default_rules);
+}
+```
+
+* Initializes the renderer with a clone of the default rendering rules.
+* You can override or extend these rules:
+
+  ```js
+  md.renderer.rules.strong_open = () =&gt; '<b>';
+  ```
+
+---
+
+## Method: `renderAttrs(token)`
+
+```js
+Renderer.prototype.renderAttrs = function (token) {
+  // Turns attributes into HTML string
+}
+```
+
+#### Input:
+
+```js
+token.attrs = [['src', 'image.png'], ['alt', 'Hello']]
+```
+
+#### Output:
+
+```html
+ src="image.png" alt="Hello"
+```
+
+---
+
+## Method: `renderToken(tokens, idx, options)`
+
+Renders a generic HTML tag (like `<p>`, `</p><li>`, etc.).
+
+### Example:
+
+Given:
+
+```js
+{
+  tag: 'p',
+  nesting: 1,
+  attrs: [],
+  block: true
+}
+```
+
+Produces:
+
+```html
+<p>
+```
+
+* Handles self-closing, inline, and block logic.
+
+---
+
+## Method: `renderInline(tokens, options, env)`
+
+Renders inline-level tokens (e.g., `text`, `em`, `code_inline`) to a string.
+
+* Uses rule if one exists for `tokens[i].type`
+* Falls back to `renderToken()` if no specific rule is defined.
+
+---
+
+## Method: `renderInlineAsText(tokens, options, env)`
+
+Used internally to generate **text-only output**, for example inside `alt` text for `<img>`.
+
+Skips formatting and outputs only raw readable text.
+
+---
+
+## Method: `render(tokens, options, env)`
+
+Top-level method that iterates over all tokens and renders them:
+
+* For block-level `inline` tokens → uses `renderInline()`
+* For known types → uses custom rules
+* Otherwise → uses `renderToken()`
+
+---
+
+## Example: Rendering a Markdown
+
+### Input Markdown:
+
+```md
+# Hello
+
+This is **bold** and `code`.
+
+![Alt text](img.jpg)
+```
+
+### Token Flow (simplified):
+
+```js
+[
+  { type: 'heading_open', tag: 'h1' },
+  { type: 'inline', children: [ { type: 'text', content: 'Hello' } ] },
+  { type: 'heading_close', tag: 'h1' },
+  ...
+]
+```
+
+### Final Output:
+
+```html
+</p><h1>Hello</h1>
+<p>This is <strong>bold</strong> and <code>code</code>.</p>
+<img src="img.jpg" alt="Alt text">
+```
+
+</li></b></code'></md></sn>
