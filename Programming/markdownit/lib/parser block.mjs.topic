@@ -1,10 +1,628 @@
 
-	<sn></sn>		
+	<sn><md>#### parser_block.mjs
+
+```js
+
+/** internal
+ * class ParserBlock
+ *
+ * Block-level tokenizer.
+ **/
+
+import Ruler from './ruler.mjs'
+import StateBlock from './rules_block/state_block.mjs'
+
+import r_table from './rules_block/table.mjs'
+import r_code from './rules_block/code.mjs'
+import r_fence from './rules_block/fence.mjs'
+import r_blockquote from './rules_block/blockquote.mjs'
+import r_hr from './rules_block/hr.mjs'
+import r_list from './rules_block/list.mjs'
+import r_reference from './rules_block/reference.mjs'
+import r_html_block from './rules_block/html_block.mjs'
+import r_heading from './rules_block/heading.mjs'
+import r_lheading from './rules_block/lheading.mjs'
+import r_paragraph from './rules_block/paragraph.mjs'
+
+const _rules = [
+  // First 2 params - rule name &amp; source. Secondary array - list of rules,
+  // which can be terminated by this one.
+  ['table',      r_table,      ['paragraph', 'reference']],
+  ['code',       r_code],
+  ['fence',      r_fence,      ['paragraph', 'reference', 'blockquote', 'list']],
+  ['blockquote', r_blockquote, ['paragraph', 'reference', 'blockquote', 'list']],
+  ['hr',         r_hr,         ['paragraph', 'reference', 'blockquote', 'list']],
+  ['list',       r_list,       ['paragraph', 'reference', 'blockquote']],
+  ['reference',  r_reference],
+  ['html_block', r_html_block, ['paragraph', 'reference', 'blockquote']],
+  ['heading',    r_heading,    ['paragraph', 'reference', 'blockquote']],
+  ['lheading',   r_lheading],
+  ['paragraph',  r_paragraph]
+]
+
+/**
+ * new ParserBlock()
+ **/
+function ParserBlock () {
+  /**
+   * ParserBlock#ruler -&gt; Ruler
+   *
+   * [[Ruler]] instance. Keep configuration of block rules.
+   **/
+  this.ruler = new Ruler()
+
+  for (let i = 0; i &lt; _rules.length; i++) {
+    this.ruler.push(_rules[i][0], _rules[i][1], { alt: (_rules[i][2] || []).slice() })
+  }
+}
+
+// Generate tokens for input range
+//
+ParserBlock.prototype.tokenize = function (state, startLine, endLine) {
+  const rules = this.ruler.getRules('')
+  const len = rules.length
+  const maxNesting = state.md.options.maxNesting
+  let line = startLine
+  let hasEmptyLines = false
+
+  while (line &lt; endLine) {
+    state.line = line = state.skipEmptyLines(line)
+    if (line &gt;= endLine) { break }
+
+    // Termination condition for nested calls.
+    // Nested calls currently used for blockquotes &amp; lists
+    if (state.sCount[line] &lt; state.blkIndent) { break }
+
+    // If nesting level exceeded - skip tail to the end. That's not ordinary
+    // situation and we should not care about content.
+    if (state.level &gt;= maxNesting) {
+      state.line = endLine
+      break
+    }
+
+    // Try all possible rules.
+    // On success, rule should:
+    //
+    // - update `state.line`
+    // - update `state.tokens`
+    // - return true
+    const prevLine = state.line
+    let ok = false
+
+    for (let i = 0; i &lt; len; i++) {
+      ok = rules[i](state, line, endLine, false)
+      if (ok) {
+        if (prevLine &gt;= state.line) {
+          throw new Error("block rule didn't increment state.line")
+        }
+        break
+      }
+    }
+
+    // this can only happen if user disables paragraph rule
+    if (!ok) throw new Error('none of the block rules matched')
+
+    // set state.tight if we had an empty line before current tag
+    // i.e. latest empty line should not count
+    state.tight = !hasEmptyLines
+
+    // paragraph might "eat" one newline after it in nested lists
+    if (state.isEmpty(state.line - 1)) {
+      hasEmptyLines = true
+    }
+
+    line = state.line
+
+    if (line &lt; endLine &amp;&amp; state.isEmpty(line)) {
+      hasEmptyLines = true
+      line++
+      state.line = line
+    }
+  }
+}
+
+/**
+ * ParserBlock.parse(str, md, env, outTokens)
+ *
+ * Process input string and push block tokens into `outTokens`
+ **/
+ParserBlock.prototype.parse = function (src, md, env, outTokens) {
+  if (!src) { return }
+
+  const state = new this.State(src, md, env, outTokens)
+
+  this.tokenize(state, state.line, state.lineMax)
+}
+
+ParserBlock.prototype.State = StateBlock
+
+export default ParserBlock
+
+
+```</md></sn><sn><md>### 1. **Purpose and Imports**
+
+```js
+/** internal
+ * class ParserBlock
+ *
+ * Block-level tokenizer.
+ **/
+```
+
+This class processes **block-level elements** in Markdown, like headings, blockquotes, lists, etc.
+
+```js
+import Ruler from './ruler.mjs'
+import StateBlock from './rules_block/state_block.mjs'
+```
+
+* `Ruler`: a rule manager that stores parsing rules.
+* `StateBlock`: maintains parsing state during block parsing.
+
+#### Imports for individual block parsing rules:
+
+```js
+import r_table from './rules_block/table.mjs'
+import r_code from './rules_block/code.mjs'
+...
+import r_paragraph from './rules_block/paragraph.mjs'
+```
+
+Each `r_*` is a function that parses a specific block type.
+
+---
+
+### 2. **Rule Definitions**
+
+```js
+const _rules = [
+  ['table',      r_table,      ['paragraph', 'reference']],
+  ['code',       r_code],
+  ...
+  ['paragraph',  r_paragraph]
+]
+```
+
+This array defines:
+
+* Rule name (e.g., `'table'`)
+* The actual rule function (`r_table`)
+* Optionally, what other rules this one can terminate (`['paragraph', 'reference']`)
+
+---
+
+### 3. **ParserBlock Constructor**
+
+```js
+function ParserBlock () {
+  this.ruler = new Ruler()
+
+  for (let i = 0; i &lt; _rules.length; i++) {
+    this.ruler.push(_rules[i][0], _rules[i][1], { alt: (_rules[i][2] || []).slice() })
+  }
+}
+```
+
+#### What it does:
+
+* Initializes a `Ruler` instance to store block rules.
+* Iterates through `_rules` and adds them to the ruler.
+
+**Example:**
+
+* `r_heading` is pushed under the name `'heading'`
+* `r_fence` is allowed to terminate `'paragraph'`, `'reference'`, etc.
+
+---
+
+### 4. **tokenize() Method**
+
+```js
+ParserBlock.prototype.tokenize = function (state, startLine, endLine) {
+```
+
+This is the **main tokenization function** for blocks.
+
+#### Key Variables:
+
+```js
+const rules = this.ruler.getRules('')
+const maxNesting = state.md.options.maxNesting
+let line = startLine
+let hasEmptyLines = false
+```
+
+* Gets the list of all registered rules.
+* Respects a max nesting limit to avoid infinite recursion (e.g. deeply nested lists).
+* Begins parsing from `startLine`.
+
+---
+
+#### Main Tokenization Loop:
+
+```js
+while (line &lt; endLine) {
+  state.line = line = state.skipEmptyLines(line)
+  ...
+  for (let i = 0; i &lt; len; i++) {
+    ok = rules[i](state, line, endLine, false)
+    if (ok) {
+      if (prevLine &gt;= state.line) {
+        throw new Error("block rule didn't increment state.line")
+      }
+      break
+    }
+  }
+  if (!ok) throw new Error('none of the block rules matched')
+```
+
+**Step-by-step actions:**
+
+1. **Skips empty lines.**
+2. **Checks block indentation and nesting level.**
+3. **Attempts to apply each rule.**
+
+   * On success: rule updates `state.line` and `state.tokens`.
+   * If no rule matches: throws error.
+   * Validates that the rule **must** consume lines.
+
+**Example:**
+If the current line is:
+
+```
+# Hello World
+```
+
+The `heading` rule will match it and create a heading token.
+
+---
+
+#### Empty Line Tracking
+
+```js
+state.tight = !hasEmptyLines
+```
+
+This affects things like whether list items are “tight” (no `<p>` around each item).
+
+```js
+if (state.isEmpty(line)) {
+  hasEmptyLines = true
+  line++
+  state.line = line
+}
+```
+
+Tracks whether the previous line was empty (used in tight/loose lists).
+
+---
+
+### 5. **parse() Method**
+
+```js
+ParserBlock.prototype.parse = function (src, md, env, outTokens) {
+  if (!src) { return }
+
+  const state = new this.State(src, md, env, outTokens)
+
+  this.tokenize(state, state.line, state.lineMax)
+}
+```
+
+* This is the public API that takes:
+
+  * `src`: raw Markdown string
+  * `md`: markdown-it instance
+  * `env`: custom environment (e.g., metadata)
+  * `outTokens`: array to push generated tokens
+* Creates a `StateBlock` and calls `tokenize`.
+
+**Example:**
+
+```js
+const parser = new ParserBlock()
+const tokens = []
+parser.parse('# Heading\n\nSome text', mdInstance, {}, tokens)
+```
+
+---
+
+### 6. **ParserBlock.prototype.State**
+
+```js
+ParserBlock.prototype.State = StateBlock
+```
+
+Attaches the `StateBlock` constructor to the `ParserBlock` class so it can instantiate a parsing state.
+
+---
+
+## Summary Table
+
+| Part         | Purpose                                           |
+| ------------ | ------------------------------------------------- |
+| `Ruler`      | Stores and manages block rules                    |
+| `_rules`     | List of built-in Markdown block parsers           |
+| `tokenize()` | Applies rules to the input, line-by-line          |
+| `parse()`    | Initializes parsing and delegates to `tokenize`   |
+| `StateBlock` | Tracks position, tokens, line info during parsing |
+
+---
+
+## Visual Example
+
+**Input Markdown:**
+
+```markdown
+# Heading
+
+- Item 1
+- Item 2
+
+&gt; Blockquote
+```
+
+**Tokenization Flow:**
+
+* `r_heading` detects `# Heading` → creates heading token.
+* Empty line skipped.
+* `r_list` sees `- Item 1` → creates list tokens.
+* `r_blockquote` processes `&gt; Blockquote` → creates blockquote token.
+
+</p></md></sn>		
 	<config>
 		<tags>#parser block.mjs</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Jul 30 2025 20:16:42 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Jul 31 2025 10:18:31 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-WmoPR7rRQk</id>
 		<duration></duration>
 	</config>
+<sn><md>###  Goal of `tokenize`
+
+This function:
+
+* Walks through lines of Markdown input.
+* Applies block rules (like for headings, lists, blockquotes).
+* Adds tokens (structured representations) to the output.
+
+---
+
+## Step-by-Step Explanation
+
+### 1. **Initialization**
+
+```js
+const rules = this.ruler.getRules('')
+const len = rules.length
+const maxNesting = state.md.options.maxNesting
+let line = startLine
+let hasEmptyLines = false
+```
+
+* `rules`: an array of block-level parsing functions (from `_rules`)
+* `len`: number of rules
+* `maxNesting`: used to prevent too-deep nesting (like infinite nested lists)
+* `line`: line number we're currently parsing
+* `hasEmptyLines`: tracks whether we've seen an empty line (used in list tightness)
+
+---
+
+### 2. **Main Loop Starts**
+
+```js
+while (line &lt; endLine) {
+```
+
+This loop runs **until all lines are processed**.
+
+---
+
+### 3. **Skip Empty Lines**
+
+```js
+state.line = line = state.skipEmptyLines(line)
+if (line &gt;= endLine) { break }
+```
+
+* Skips lines like `\n\n`
+* Updates `state.line`
+* Ends loop if we hit the end
+
+---
+
+### 4. **Indentation Check (for nesting)**
+
+```js
+if (state.sCount[line] &lt; state.blkIndent) { break }
+```
+
+This is **important for nested structures** like blockquotes/lists.
+
+* `sCount[line]`: actual space count at that line.
+* `blkIndent`: current required indent for this block level.
+* If actual indentation is **less than required**, parsing stops — it belongs to the parent.
+
+**Example:**
+
+For this input:
+
+```
+&gt; - item
+    - sub-item
+```
+
+* Inside the blockquote and list, `blkIndent` increases.
+* If indentation drops, we stop parsing deeper blocks.
+
+---
+
+### 5. **Too Much Nesting Check**
+
+```js
+if (state.level &gt;= maxNesting) {
+  state.line = endLine
+  break
+}
+```
+
+* Protects against infinite nesting.
+* If you have 100 nested blockquotes, it'll stop here.
+
+---
+
+### 6. **Try Each Rule**
+
+```js
+const prevLine = state.line
+let ok = false
+
+for (let i = 0; i &lt; len; i++) {
+  ok = rules[i](state, line, endLine, false)
+  if (ok) {
+    if (prevLine &gt;= state.line) {
+      throw new Error("block rule didn't increment state.line")
+    }
+    break
+  }
+}
+```
+
+#### What this does:
+
+* Loops through each block rule: `heading`, `paragraph`, `blockquote`, etc.
+* Tries to apply it to current `line`
+* A rule should:
+
+  * Recognize a block
+  * Add corresponding tokens
+  * Move `state.line` forward
+
+If:
+
+* A rule returns `true`, parsing for that block is done.
+* But if `state.line` **didn't advance**, it's a bug.
+
+#### Example:
+
+If the line is:
+
+```markdown
+# Heading
+```
+
+* `heading` rule matches it.
+* It creates a `heading_open` and `heading_close` token.
+* `state.line` increases by 1.
+
+If the line is:
+
+```markdown
+&gt; Blockquote
+```
+
+* `blockquote` rule runs, captures the line, and may call `tokenize()` recursively.
+
+---
+
+### 7. **Fallback Failure**
+
+```js
+if (!ok) throw new Error('none of the block rules matched')
+```
+
+* This should never happen under normal circumstances.
+* Only happens if **no rule** could match the input line (e.g., someone disabled `paragraph` parsing).
+
+---
+
+### 8. **Tight/Loose Check**
+
+```js
+state.tight = !hasEmptyLines
+```
+
+If there were no empty lines between blocks, this list is *tight* (e.g., rendered without `` around items).
+
+---
+
+### 9. **Handle Empty Line After Paragraphs**
+
+```js
+if (state.isEmpty(state.line - 1)) {
+  hasEmptyLines = true
+}
+```
+
+* If the **last parsed line was empty**, it contributes to "looseness"
+
+---
+
+### 10. **Advance to Next Line**
+
+```js
+line = state.line
+
+if (line &lt; endLine &amp;&amp; state.isEmpty(line)) {
+  hasEmptyLines = true
+  line++
+  state.line = line
+}
+```
+
+* If the current line is empty, skip it and mark that we've seen an empty line.
+
+---
+
+## Full Example
+
+Let’s walk through an example input:
+
+```markdown
+# Title
+
+- Item 1
+- Item 2
+```
+
+### Line-by-line:
+
+#### Line 0: `# Title`
+
+* `skipEmptyLines()` → no skip
+* `heading` rule matches → adds heading tokens
+* `state.line` becomes 1
+
+#### Line 1: `""` (empty)
+
+* `skipEmptyLines()` skips it
+* `line` becomes 2
+* `hasEmptyLines = true`
+
+#### Line 2: `- Item 1`
+
+* `list` rule matches → adds list item tokens
+* `state.line` becomes 3
+
+#### Line 3: `- Item 2`
+
+* Still part of list → continues tokenization
+* `state.line` becomes 4
+
+#### Line 4: end of input
+
+---
+
+## Summary of Logic
+
+| Step                  | Purpose                          |
+| --------------------- | -------------------------------- |
+| Skip empty lines      | Avoid unnecessary parsing        |
+| Check indentation     | Ensure nested blocks are correct |
+| Check nesting limit   | Prevent recursion overload       |
+| Apply rules           | Try each block parser in order   |
+| Validate progress     | Rule must consume lines          |
+| Track empty lines     | Used for list tightness          |
+| Advance to next block | Prepare for next iteration       |
+
+</md></sn>
