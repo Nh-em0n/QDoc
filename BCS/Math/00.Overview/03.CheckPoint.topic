@@ -1,48 +1,48 @@
 <sn><md>### Checkpoint
 
-| CheckPoint | Class |Chapte | Completed |
-| ---------- | ----- | ------------------------- | --------- |
-| 0          | 5-7     | Basic Math               | ❌         |
-| 1          | 8     | 1. Patterns               | ❌         |
-| 2          | 8     | 2. Profits        | ❌         |
-| 3          | 8     | 3. Measurement            | ❌         |
-| 4          | 8     | 4. Algebraic Formula and Applications  | ❌         |
-| 5          | 8     | 5. Algebric Fractions              | ❌         |
-| 6          | 8     | 6. Simple Simultaneous Equations               | ❌         |
-| 7          | 8     | 7. Set                 | ❌         |
-| 8          | 8     | 8. Quadrilaterals          | ❌         |
-| 9          | 8     | 9. Pythagoras Theorem            | ❌         |
-| 10         | 8     | 10. Circle                | ❌         |
-| 11         | 8     | 11. Information and Data                | ❌         |
-| 12         | 9/10     | 1.Real Numbers                | ❌         |
-| 14         | 9/10     | 2.Sets and Functions                | ❌         |
-| 15         | 9/10     | 3.Algebric Expressions                | ❌         |
-| 16         | 9/10     | 4.Exponents and Logarithms                | ❌         |
-| 17         | 9/10     | 5.Equations in One Variable                | ❌         |
-| 18         | 9/10     | 6.Lines , Angles and Triangles                | ❌         |
-| 19         | 9/10     | 7.Practical Geometry                | ❌         |
-| 20         | 9/10     | 8.Circle                | ❌         |
-| 21         | 9/10     | 9.Trigonometric Ratio                | ❌         |
-| 22         | 9/10     | 10.Distance and Elevation                | ❌         |
-| 23         | 9/10     | 11.Algebric Ratio and Proportion                | ❌         |
-| 24         | 9/10     | 12.Simple Simultaneous Equations in Two Variable                | ❌         |
-| 25         | 9/10     | 13.Finite Series                | ❌         |
-| 26         | 9/10     | 14.Ratio,Similarity ans Symmetry                | ❌         |
-| 27         | 9/10     | 15.Area related Theorems and Constructions                | ❌         |
-| 28         | 9/10     | 16.Mensuration                | ❌         |
-| 29         | 9/10     | 17.Statistics                | ❌         |
-| 30         | 9/10     | H.1.Set and Function                | ❌         |
-| 31         | 9/10     | H.2.Algebric Expression                | ❌         |
-| 32         | 9/10     | H.3.Geometry                | ❌         |
-| 33         | 9/10     | H.4.Geometric Constructions                | ❌         |
-| 34         | 9/10     | H.5.Equation                | ❌         |
-| 35         | 9/10     | H.6.Inequality                | ❌         |
-| 36         | 9/10     | H.7.Infinite Series                | ❌         |
-| 37         | 9/10     | H.8.Trigonometry                | ❌         |
-| 38         | 9/10     | H.9.Exponential and Logarithmic Function                | ❌         |
-| 39         | 9/10     | H.10.Binomial Expansion                | ❌         |
-| 40         | 9/10     | H.11.Coordinate Geometry                | ❌         |
-| 41         | 9/10     | H.12.Planar Vector                | ❌         |
-| 42         | 9/10     | H.13.Solid Geometry                | ❌         |
-| 43         | 9/10     | H.14.Probability                | ❌         |
-</md></sn><config style="display:none"><tags>#03.checkpoint</tags><thumbnail></thumbnail><heading></heading><udate>Sun Aug 03 2025 17:37:24 GMT+0600 (Bangladesh Standard Time)</udate><id>article-Z1lXvuWFXK</id><duration></duration></config>
+| CheckPoint | Class | Chapter                                           | Completed |
+| ---------- | ----- | ------------------------------------------------- | --------- |
+| 1          | 5-7   | Basic Math                                        | ❌         |
+| 2          | 8     | 1. Patterns                                       | ❌         |
+| 3          | 8     | 2. Profits                                        | ❌         |
+| 4          | 8     | 3. Measurement                                    | ❌         |
+| 5          | 8     | 4. Algebraic Formula and Applications             | ❌         |
+| 6          | 8     | 5. Algebric Fractions                             | ❌         |
+| 7          | 8     | 6. Simple Simultaneous Equations                  | ❌         |
+| 8          | 8     | 7. Set                                            | ❌         |
+| 9          | 8     | 8. Quadrilaterals                                 | ❌         |
+| 10         | 8     | 9. Pythagoras Theorem                             | ❌         |
+| 11         | 8     | 10. Circle                                        | ❌         |
+| 12         | 8     | 11. Information and Data                          | ❌         |
+| 13         | 9/10  | 1. Real Numbers                                   | ❌         |
+| 14         | 9/10  | 2. Sets and Functions                             | ❌         |
+| 15         | 9/10  | 3. Algebric Expressions                           | ❌         |
+| 16         | 9/10  | 4. Exponents and Logarithms                       | ❌         |
+| 17         | 9/10  | 5. Equations in One Variable                      | ❌         |
+| 18         | 9/10  | 6. Lines, Angles and Triangles                    | ❌         |
+| 19         | 9/10  | 7. Practical Geometry                             | ❌         |
+| 20         | 9/10  | 8. Circle                                         | ❌         |
+| 21         | 9/10  | 9. Trigonometric Ratio                            | ❌         |
+| 22         | 9/10  | 10. Distance and Elevation                        | ❌         |
+| 23         | 9/10  | 11. Algebric Ratio and Proportion                 | ❌         |
+| 24         | 9/10  | 12. Simple Simultaneous Equations in Two Variable | ❌         |
+| 25         | 9/10  | 13. Finite Series                                 | ❌         |
+| 26         | 9/10  | 14. Ratio, Similarity and Symmetry                | ❌         |
+| 27         | 9/10  | 15. Area related Theorems and Constructions       | ❌         |
+| 28         | 9/10  | 16. Mensuration                                   | ❌         |
+| 29         | 9/10  | 17. Statistics                                    | ❌         |
+| 30         | 9/10  | H.1. Set and Function                             | ❌         |
+| 31         | 9/10  | H.2. Algebric Expression                          | ❌         |
+| 32         | 9/10  | H.3. Geometry                                     | ❌         |
+| 33         | 9/10  | H.4. Geometric Constructions                      | ❌         |
+| 34         | 9/10  | H.5. Equation                                     | ❌         |
+| 35         | 9/10  | H.6. Inequality                                   | ❌         |
+| 36         | 9/10  | H.7. Infinite Series                              | ❌         |
+| 37         | 9/10  | H.8. Trigonometry                                 | ❌         |
+| 38         | 9/10  | H.9. Exponential and Logarithmic Function         | ❌         |
+| 39         | 9/10  | H.10. Binomial Expansion                          | ❌         |
+| 40         | 9/10  | H.11. Coordinate Geometry                         | ❌         |
+| 41         | 9/10  | H.12. Planar Vector                               | ❌         |
+| 42         | 9/10  | H.13. Solid Geometry                              | ❌         |
+| 43         | 9/10  | H.14. Probability                                 | ❌         |
+</md></sn><config style="display:none"><tags>#03.checkpoint</tags><thumbnail></thumbnail><heading></heading><udate>Sun Aug 03 2025 17:42:23 GMT+0600 (Bangladesh Standard Time)</udate><id>article-Z1lXvuWFXK</id><duration></duration></config>
