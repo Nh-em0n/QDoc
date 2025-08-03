@@ -56,7 +56,7 @@ Let’s take:
   (because `6 × 4 = 24` and `27 - 24 = 3`)
 
 +++
-</md></sn><config style="display:none"><tags>#01.factors</tags><thumbnail></thumbnail><heading></heading><udate>Sun Aug 03 2025 19:45:46 GMT+0600 (Bangladesh Standard Time)</udate><id>article-qaz6oRkCVX</id><duration></duration></config><sn><md>### Factor {.text-end .fg-purple}
+</md></sn><config style="display:none"><tags>#01.factors</tags><thumbnail></thumbnail><heading></heading><udate>Sun Aug 03 2025 20:25:51 GMT+0600 (Bangladesh Standard Time)</udate><id>article-qaz6oRkCVX</id><duration></duration></config><sn><md>### Factor {.text-end .fg-purple}
 
 A **factor** of a number is a whole number that divides the given number **exactly**, leaving **no remainder**. 
 
@@ -125,4 +125,41 @@ Example:
 * Factors of 12 = `1, 2, 3, 4, 6, 12`
 * Factors of 18 = `1, 2, 3, 6, 9, 18`
 * **Common factors** = `1, 2, 3, 6`
-</md></sn><sn></sn>
+</md></sn><sn><md>### How to Find Factors{.text-end .fg-green}
+
+- **Step 1:** Start dividing the number by `1` and go up to the number itself.
+- **Step 2:** If the division gives no remainder, the divisor is a factor.
+
+#### Factors of 16
+
+* 16 ÷ 1 = 16 ✔
+* 16 ÷ 2 = 8 ✔
+* 16 ÷ 3 = 5.33 ✖
+* 16 ÷ 4 = 4 ✔
+* 16 ÷ 8 = 2 ✔
+* 16 ÷ 16 = 1 ✔
+
+**Factors(16)**: `1, 2, 4, 8, 16`
+</md></sn><sn><md>### Convenient Way{.text-end .fg-o3}
+
+This method is convenient because it reduces the number of factors to calculate up to 24
+
+
+##### FactorsOf(24)
+
+
+| Multiplier | Co-factor | Status       |
+| ---------- | --------- | ------------ |
+| 1          | 24        | ✅ True       |
+| 2          | 12        | ✅ True       |
+| 3          | 8         | ✅ True       |
+| 4          | 6         | ✅ True (End Point) |
+| 5          | 4         | ❌ Not True   |
+
+After ==end Point== we have to go up.
+
+
+![image](https://i.imgur.com/qPI51Te.png)
+
+
+The numbers included in the `U`-shape are the factors of 24</md></sn>
