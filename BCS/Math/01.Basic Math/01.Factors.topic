@@ -1,1 +1,89 @@
-<sn></sn><config style='display:none'><tags>#01.factors</tags><thumbnail></thumbnail><heading></heading><udate>Sun Aug 03 2025 17:49:34 GMT+0600 (Bangladesh Standard Time)</udate><id>article-qaz6oRkCVX</id><duration></duration></config>
+<sn><md>### Basic Division Structure and Terminology{.text-end}
+
+---
+
+![division-term-chart](https://i.imgur.com/KGs1N7h.png)
+
+#### 1. **Dividend**
+
+The number **being divided**.
+Example: In `20 ÷ 4`, the number **20** is the dividend.
+
+#### 2. **Divisor**
+
+The number you **divide by**.
+Example: In `20 ÷ 4`, the number **4** is the divisor.
+
+#### 3. **Quotient**
+
+The **result** or answer of the division (without remainder).
+Example: In `20 ÷ 4 = 5`, the number **5** is the quotient.
+
+#### 4. **Remainder**
+
+The **amount left over** if the division does not result in a whole number.
+Example: `22 ÷ 4 = 5 remainder 2`
+Here:
+
+* Dividend = 22
+* Divisor = 4
+* Quotient = 5
+* Remainder = 2
+
+Note : Dividend = ( Divisor  x Quotient ) + Remainder {.note}
+
+22 = ( 4 x 5 ) + 2
+
+#### 5. **Divisible**
+
+A number is **divisible** by another if it divides **exactly** (with zero remainder).
+Example:
+
+* **20 is divisible by 4** (because remainder is 0).
+* **22 is not divisible by 4** (remainder is 2).
+
+---
+
+### Example Breakdown
+
+Let’s take:
+**27 ÷ 6**
+
+* **Dividend** = 27
+* **Divisor** = 6
+* **Quotient** = 4
+* **Remainder** = 3
+  (because `6 × 4 = 24` and `27 - 24 = 3`)
+
+
+</md></sn><config style="display:none"><tags>#01.factors</tags><thumbnail></thumbnail><heading></heading><udate>Sun Aug 03 2025 19:29:28 GMT+0600 (Bangladesh Standard Time)</udate><id>article-qaz6oRkCVX</id><duration></duration></config><sn><md>### Factor {.text-end .fg-purple}
+
+A **factor** of a number is a whole number that divides the given number **exactly**, leaving **no remainder**. 
+
+**In simple terms, if `a × b = c`**, 
+- then both `a` and `b` are factors of `c`.
+- both `c / a`  or  `c / b` is a whole number without remainder
+
+
+#### Example:
+
+* 6 is a factor of 18, because `6 × 3 = 18`.
+* 2 is a factor of 10, because `2 × 5 = 10`.
+
+---
+
+### Why is 4 a factor of 24?{.text-center .text-light}
+
+Because **24 ÷ 4 = 6** with **no remainder**.
+
+* That means 4 divides 24 **exactly**.
+* Also, `4 × 6 = 24`, which proves 4 is a factor.
+
+---
+
+### Why is 5 not a factor of 24?{.text-center .text-light}
+
+Because **24 ÷ 5 = 4.8** which is **not a whole number**.
+
+
+</md></sn><sn></sn>
