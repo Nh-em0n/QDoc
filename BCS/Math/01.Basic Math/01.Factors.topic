@@ -1,6 +1,6 @@
-<sn><md>### Basic Division Structure and Terminology{.text-end}
+<sn><md>### Basic Division Structure and Terminology{.text-end .fg-red}
 
----
++++ ...read
 
 ![division-term-chart](https://i.imgur.com/KGs1N7h.png)
 
@@ -55,8 +55,8 @@ Let’s take:
 * **Remainder** = 3
   (because `6 × 4 = 24` and `27 - 24 = 3`)
 
-
-</md></sn><config style="display:none"><tags>#01.factors</tags><thumbnail></thumbnail><heading></heading><udate>Sun Aug 03 2025 19:29:28 GMT+0600 (Bangladesh Standard Time)</udate><id>article-qaz6oRkCVX</id><duration></duration></config><sn><md>### Factor {.text-end .fg-purple}
++++
+</md></sn><config style="display:none"><tags>#01.factors</tags><thumbnail></thumbnail><heading></heading><udate>Sun Aug 03 2025 19:45:46 GMT+0600 (Bangladesh Standard Time)</udate><id>article-qaz6oRkCVX</id><duration></duration></config><sn><md>### Factor {.text-end .fg-purple}
 
 A **factor** of a number is a whole number that divides the given number **exactly**, leaving **no remainder**. 
 
@@ -86,4 +86,43 @@ Because **24 ÷ 4 = 6** with **no remainder**.
 Because **24 ÷ 5 = 4.8** which is **not a whole number**.
 
 
+</md></sn><sn><md>### Properties of Factors{.text-end .fg-teal}
+
+1. **Every number has at least two factors:**
+   `1` and the number itself.
+   Example: Factors of 7 are `1` and `7`.
+
+2. **Factors are always less than or equal to the number.**
+   A factor of 12 can be 1, 2, 3… but not 13 or more.
+
+3. **Factors come in pairs:**
+   If `a × b = n`, then both `a` and `b` are factors of `n`.
+   Example:
+   For 12:
+
+   * `1 × 12`
+   * `2 × 6`
+   * `3 × 4`
+     So, factors are `1, 2, 3, 4, 6, 12`.
+</md></sn><sn><md>### Types of Factors{.text-end .fg-o}
+
+
+#### 1. **Proper Factors**
+
+All factors of a number except the number itself.
+Example: Proper factors of 10 are `1, 2, 5`.
+
+#### 2. **Prime Factors**
+
+Factors that are **prime numbers**.
+Example: Prime factors of 18 are `2 and 3` (because `18 = 2 × 3 × 3`).
+
+#### 3. **Common Factors**
+
+Factors that are **shared** by two or more numbers.
+Example:
+
+* Factors of 12 = `1, 2, 3, 4, 6, 12`
+* Factors of 18 = `1, 2, 3, 6, 9, 18`
+* **Common factors** = `1, 2, 3, 6`
 </md></sn><sn></sn>
