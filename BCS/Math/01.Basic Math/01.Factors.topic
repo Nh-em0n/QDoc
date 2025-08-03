@@ -56,7 +56,16 @@ Let’s take:
   (because `6 × 4 = 24` and `27 - 24 = 3`)
 
 +++
-</md></sn><config style="display:none"><tags>#01.factors</tags><thumbnail></thumbnail><heading></heading><udate>Sun Aug 03 2025 20:25:51 GMT+0600 (Bangladesh Standard Time)</udate><id>article-qaz6oRkCVX</id><duration></duration></config><sn><md>### Factor {.text-end .fg-purple}
+
+[Factor](#factor){.fg-purple} | 
+[Properties](#properties){.fg-teal} | 
+[Types](#types){.fg-orange} |
+[Method1](#method1){.fg-green} | 
+[Method2](#method2){.fg-o3} |
+
+
+
+</md></sn><config style="display:none"><tags>#01.factors</tags><thumbnail></thumbnail><heading></heading><udate>Sun Aug 03 2025 20:35:07 GMT+0600 (Bangladesh Standard Time)</udate><id>article-qaz6oRkCVX</id><duration></duration></config><sn><md>### Factor {.text-end .fg-purple #factor}
 
 A **factor** of a number is a whole number that divides the given number **exactly**, leaving **no remainder**. 
 
@@ -86,7 +95,7 @@ Because **24 ÷ 4 = 6** with **no remainder**.
 Because **24 ÷ 5 = 4.8** which is **not a whole number**.
 
 
-</md></sn><sn><md>### Properties of Factors{.text-end .fg-teal}
+</md></sn><sn><md>### Properties of Factors{.text-end .fg-teal #properties}
 
 1. **Every number has at least two factors:**
    `1` and the number itself.
@@ -104,7 +113,7 @@ Because **24 ÷ 5 = 4.8** which is **not a whole number**.
    * `2 × 6`
    * `3 × 4`
      So, factors are `1, 2, 3, 4, 6, 12`.
-</md></sn><sn><md>### Types of Factors{.text-end .fg-o}
+</md></sn><sn><md>### Types of Factors{.text-end .fg-o #types}
 
 
 #### 1. **Proper Factors**
@@ -125,7 +134,7 @@ Example:
 * Factors of 12 = `1, 2, 3, 4, 6, 12`
 * Factors of 18 = `1, 2, 3, 6, 9, 18`
 * **Common factors** = `1, 2, 3, 6`
-</md></sn><sn><md>### How to Find Factors{.text-end .fg-green}
+</md></sn><sn><md>### How to Find Factors{.text-end .fg-green #method1} 
 
 - **Step 1:** Start dividing the number by `1` and go up to the number itself.
 - **Step 2:** If the division gives no remainder, the divisor is a factor.
@@ -140,7 +149,7 @@ Example:
 * 16 ÷ 16 = 1 ✔
 
 **Factors(16)**: `1, 2, 4, 8, 16`
-</md></sn><sn><md>### Convenient Way{.text-end .fg-o3}
+</md></sn><sn><md>### Convenient Way{.text-end .fg-o3 #method2}
 
 This method is convenient because it reduces the number of factors to calculate up to 24
 
