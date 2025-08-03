@@ -1,10 +1,89 @@
 
-	<sn></sn>		
+	<sn><md>### Multiples
+
+A **multiple** of a number is the result you get ==when you multiply that number by any whole number==.
+
+In simpler words, multiples are the products of repeated addition of the same number.
+
+If `n` is any number, then:
+Multiples of n =
+ 
+n × 1,
+ 
+n × 2,
+ 
+n × 3,
+ ...
+
+This sequence continues ==infinitely==.
+
+
+</md></sn>		
 	<config>
 		<tags>#02.multiple</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Mon Aug 04 2025 04:59:58 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Mon Aug 04 2025 05:26:55 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-5iLOXFP6Ml</id>
 		<duration></duration>
 	</config>
+<sn><md>#### Example
+
+Let’s take the number 7.
+The first few **multiples of 7** are:
+
+$$
+7 × 1 = 7,\quad 7 × 2 = 14,\quad 7 × 3 = 21,\quad 7 × 4 = 28,\quad 7 × 5 = 35,\quad ...
+$$
+
+So, the multiples of 7 are:
+**7, 14, 21, 28, 35, 42, 49, 56, 63, 70, ...** (and so on).</md></sn><sn><md>### Even and Odd Numbers from 2's Multiples
+
+The number **2** is the ==smallest even number==. Its multiples are:
+
+$$
+2, 4, 6, 8, 10, 12, 14, 16, 18, 20, ...
+$$
+
+ All the multiples of 2 are **even numbers**.{.bar}
+
+That’s because when you multiply 2 by any whole number, the result is always divisible by 2.
+There are **no odd numbers** in the list of 2's multiples.
+</md></sn><sn><md>### Factor and Multiple
+
+**Factor** and **multiple** are ==inverse concepts==:
+
+* A **factor** of a number is ==exact divisor== of that number.
+* A **multiple** of a number is a result of ==multiplying it by whole numbers==.
+
+
+factors highest value = multiple lowest value{.bar}
+
+**Example:**
+
+* Factors of 12 = 1, 2, 3, 4, 6, `12` → Total 6 factors
+* Multiples of 12 = `12`, 24, 36, 48, 60, ... → Goes on forever
+
+
+| Concept   | Count    | Description                                          |
+| --------- | -------- | ---------------------------------------------------- |
+| Factors   | Finite   | Every number has a limited number of exact divisors. |
+| Multiples | Infinite | A number has an infinite number of multiples.        |
+
+</md></sn><sn><md>### Any Number Is a Multiple of All Its Factors
+
+**Factors(12)** are = 1,2,3,4,6,12
+
+==3x4 = 12== (12 is the multiple of it Factors)
+
+==6x2 = 12== (again 12 is the multiple of it Factors)
+</md></sn><sn><md>*[exact divisor]: No remainder is left after division
+
+### Notes
+
+**Factor**: An ==exact divisor== of a number.{.bar}
+
+**Multiple**: A number that is the result of ==multiplying it by whole numbers==.{.bar}
+
+➤ Any number is always a **multiple** of all its **factors**.{.bar}
+</md></sn>
