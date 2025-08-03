@@ -3,8 +3,8 @@
 
 | **Number Set**        | **Includes**                                        | **Examples**                     | **Notes**                                      |
 | --------------------- | --------------------------------------------------- | -------------------------------- | ---------------------------------------------- |
-| **Natural Numbers**   | Counting numbers starting ==from 1==                    | 1, 2, 3, 4, 5, ...               | Does **not** include 0 or any negative numbers |
-| **Whole Numbers**     | Natural numbers **plus 0**                          | 0, 1, 2, 3, 4, 5, ...            | First non-negative number set                  |
+| **Natural Numbers**   | Counting numbers starting ==from +1==                    | 1, 2, 3, 4, 5, ...               | Does **not** include 0 or any negative numbers |
+| **Whole Numbers**     | **0**  + Natural numbers                         | 0, 1, 2, 3, 4, 5, ...            | First non-negative number set                  |
 | **Integers**          | All positive and negative whole numbers including 0 | ..., -3, -2, -1, 0, 1, 2, 3, ... | Includes both directions on the number line    |
 | **Positive Integers** | Natural numbers (same as Natural Numbers)           | 1, 2, 3, 4, 5, ...               | Also called **positive whole numbers**         |
 | **Negative Integers** | Opposite of positive integers                       | ..., -5, -4, -3, -2, -1          | Do **not** include 0 or any positive numbers   |
@@ -13,7 +13,7 @@
 		<tags>#03.integers number system</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Mon Aug 04 2025 05:40:32 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Mon Aug 04 2025 05:41:49 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-ugY0QdXF9a</id>
 		<duration></duration>
 	</config>
