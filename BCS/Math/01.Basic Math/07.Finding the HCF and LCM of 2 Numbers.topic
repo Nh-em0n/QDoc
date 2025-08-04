@@ -1,6 +1,8 @@
 
 	<sn><md>## Common Division{.text-center .fg-red}
 
+This method can only be used for 2 numbers
+
 * Write numbers with their common prime number p L n,m
 * Cycle the Dividing process Until **coprime appear** 
 * After reaching **coprime** ,analyze the structure 
@@ -41,7 +43,7 @@
 		<tags>#07.finding the hcf and lcm of 2 numbers</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Mon Aug 04 2025 12:44:14 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Mon Aug 04 2025 12:45:22 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-qPvsKZ36ZU</id>
 		<duration></duration>
 	</config>
