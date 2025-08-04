@@ -1,10 +1,62 @@
 
-	<sn></sn>		
+	<sn><md>*[HCF]: Highest Common Factor 
+*[GCD]: Geatest Common Divisor 
+
+## HCF or GCD{.text-end}
+
+How to find HCF/GCD of two numbers
+
+* Get **Factors**
+* Get **Common** Factors
+* Get **Highet** Common Factor
+
+
+#### GCD of (8,12)
+
+#### Getting the ==Factors== of 8 and 12{.text-center}
+
+
+Factors(8)
+* 1 x 8
+* 2 x 4 (end point)
+* 3 x 2 (invalid)
+
+so Factors(8) = 1,2,4,8
+
+Factors(12)
+* 1 x 12
+* 2 x 6 
+* 3 x 4 (end point)
+* 5 x 2 (invalid)
+
+so Factors(12) = 1,2,3,4,6,12
+
+---
+
+#### Getting ==Common== Factors{.text-center}
+
+| number | factors |
+|---|---|
+| 8 | `1`,`2`,`4`,8 |
+| 12 | `1`,`2`,3,`4`,6,12 |
+
+
+So from both side the common factors are = 1,2,4 
+
+---
+
+#### Getting ==Highest== Common Factor{.text-center}
+
+Now  `4` &gt; 2 &gt; 1
+
+So the HCF(Highest Common Factor) or GCD(Greatest Common Divisor) is `4`
+
+</md></sn>		
 	<config>
 		<tags>#05.highest common factor</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Mon Aug 04 2025 08:59:28 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Mon Aug 04 2025 09:35:22 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-l40kQUS4lb</id>
 		<duration></duration>
 	</config>
