@@ -1,10 +1,30 @@
 
-	<sn></sn>		
+	<sn><md>### Finding the LCM and HCF of 3 Numbers{.text-end}
+
+Express all numbers by their ==Power based Prime Factor==
+
+* **HCF** : ==Smallest powers== of *Shared* Factorss
+* **LCM** : Product  of ==Highest power== of *Each* Factor
+
+#### Example
+
+(18,20,30){.text-center}
+
+Expressing...
+
+| Number  | Power based Prime Factor Form           |
+|-----------|-----------------------|
+| 18    | `2` x 3 x 3  = $ 2 \times 3^2  \times 5^0 $ |
+| 20    | `2` x 2 x 5  = $ 2^2 \times 5^1 \times 3^0 $ |
+| 30    | `2` x 3 x 3  = $ 2^1 \times 3^1 \times 5^1 $ |
+
+* **HCF** : Shared factor is `2` and the lowest in them is `2`
+* **LCM** : Highest Power of Each factor is $ 2^2 , 3^2 , 5^1 $, so their product is  = $ 2^2 \times 3^2 \times 5^1 $ = `180`</md></sn>		
 	<config>
 		<tags>#08.finding the hcf and lcm of 3 numbers</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Mon Aug 04 2025 13:12:19 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Mon Aug 04 2025 13:27:53 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-vluSHaCQk4</id>
 		<duration></duration>
 	</config>
