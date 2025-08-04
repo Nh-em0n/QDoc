@@ -43,7 +43,39 @@ This method can only be used for 2 numbers
 		<tags>#07.finding the hcf and lcm of 2 numbers</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Mon Aug 04 2025 12:45:22 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Mon Aug 04 2025 12:54:36 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-qPvsKZ36ZU</id>
 		<duration></duration>
 	</config>
+<sn><md>### Case1 : Numbers has Multiple,Factor relation{.text-end}
+
+In such cases
+
+* **LCM :** Greater Number
+* **HCF :** Smaller Number
+
+
+
+#### Example
+
+(4,8){.text-center}
+
+Here ,
+* 8 is the ==multple== of 4 and 
+* 4 is the ==factor== of 8
+* ==8 &gt; 4==
+    * **LCM** : `8`
+    * **HCF** : `4`
+
+---
+
+(7,21){.text-center}
+
+Here ,
+* 21 is the ==multple== of 7 and 
+* 7 is the ==factor== of 21
+* ==21 &gt; 7==
+    * **LCM** : `21`
+    * **HCF** : `7`
+
+</md></sn>
