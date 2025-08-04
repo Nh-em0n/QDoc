@@ -9,7 +9,7 @@
 		<tags>#05.highest common factor</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Mon Aug 04 2025 10:03:42 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Mon Aug 04 2025 10:46:57 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-l40kQUS4lb</id>
 		<duration></duration>
 	</config>
@@ -119,5 +119,76 @@ HCF of (24,36) :
 
 
 So HCF or GCD of (24,36) is `12`
+
+</md></sn><sn><md>### Continuous Division Method
+
+The basic structure of a common division looks like this:
+
+```
+Divisor ) Dividend ( Quotient  
+         Divisor × Quotient  
+         ------------------  
+                  Remainder
+```
+
+---
+
+#### Step-by-Step Process:
+
+**First Step:**
+
+* **Divisor** : Smaller number
+* **Dividend** : Larger number
+
+**Second Step:**
+
+* **Divisor** : Remainder from the previous step
+* **Dividend** : Previous divisor
+
+**Third Step (Continuous):**
+
+* **Divisor** : New remainder $R_n$
+* **Dividend** : Previous remainder $R_{n-1}$
+
+Repeat this process until the **remainder becomes 0**.
+The last **divisor** used before reaching 0 is the **HCF** (Highest Common Factor).
+
+---
+
+#### HCF of (24, 36)
+
+| Divisor | Dividend | Quotient |
+| ------- | -------- | -------- |
+| **24**  | 36       | 1        |
+|         | 24       |          |
+|         | `12`     |          |
+| `12`    | **24**   | 2        |
+|         | 24       |          |
+|         | `0`      |          |
+
+Since the remainder is `0` when the divisor is `12`,
+the **HCF(24, 36) = 12**
+
+---
+
+#### HCF of (1044, 1512)
+
+| Divisor  | Dividend | Quotient |
+| -------- | -------- | -------- |
+| **1044** | 1512     | 1        |
+|          | 1044     |          |
+|          | `468`    |          |
+| `468`    | **1044** | 2        |
+|          | 936      |          |
+|          | `108`    |          |
+| `108`    | **468**  | 4        |
+|          | 432      |          |
+|          | `36`     |          |
+| `36`     | **108**  | 3        |
+|          | 108      |          |
+|          | `0`      |          |
+
+Since the remainder is `0` when the divisor is `36`,
+the **HCF(1044, 1512) = 36**
 
 </md></sn>
