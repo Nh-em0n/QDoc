@@ -70,7 +70,7 @@ So **LCM**(15,20) is `60`</md></sn>
 		<tags>#06.least common multiple</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Mon Aug 04 2025 11:44:35 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Mon Aug 04 2025 12:07:10 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-nXBQU7fa7Q</id>
 		<duration></duration>
 	</config>
@@ -118,4 +118,33 @@ Expressing a numbers by the ==product of its prime factor==
 ![L-factors-12](https://i.imgur.com/4L3vYnh.png)
 
 **Prime Factorisation**  12 = 2 x 2 x 3 (L shape) 
+</md></sn><sn><md>## Finding LCM by **Prime Factorisation**{.text-center}
+
+**Procedure** :
+
+* Express in ==Power Based Prime Factorisation==
+* Get the ==highest power== of each factor.
+* Multiply each highest  factors.
+
+
+**LCM**(20,30)
+
+
+#### Expressing in **Power Based Prime Factorisation**
+
+30 = 2 x 3 x 5 = $ 2^1 \times 3^1 \times 5^1 $
+
+20 = 2 x 2 x 5 = $ 2^2 \times 3^0 \times 5^1 $
+
+
+#### Getting Highest Power Factors
+
+
+These are = $ 2^2 , 3^1 , 5^1 $
+
+
+#### Multiplication of the selected factors
+
+LCM(20,30) = $ 2^2 \times 3^1 \times 5^1 $ = 60
+
 </md></sn>
