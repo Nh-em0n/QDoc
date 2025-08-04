@@ -1,10 +1,48 @@
 
-	<sn></sn>		
+	<sn><md>## Divisibility Rules{.text-end}
+
+If $A/B = 0$ then A is ==divisible by B==.
+
+It is really hard to guess if a large number like `10584` is divisible by `8` or not.If we do manually the process
+
+| 10584 | Quotient  |
+| ---- | --------- |
+| 10   | 1         |
+| 25   | 13        |
+| 24   | 13        |
+| 1    | 13        |
+| 18   | 132       |
+| 16   | 132       |
+| 2    | 132       |
+| 24   | 1323      |
+| 24   | 1323      |
+| 0    | Divisible |
+
+It takes lot of step to determine 10584 number is divisible by 8 or not.But with ==Divisibility rules== we can easily determine.
+
+</md></sn>		
 	<config>
 		<tags>#04.divisibility rules</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Mon Aug 04 2025 07:32:14 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Mon Aug 04 2025 07:54:26 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-zM1oxKhv7M</id>
 		<duration></duration>
 	</config>
+<sn><md>### Divisibility Rules of 0{.text-end}
+
+`0` is divisible by any number{.bar}
+
+
+$$ n \times 0 = 0 $$
+
+$$ \frac{0}{n} = 0 $$
+
+$$ \frac{0}{5} = 0 $$
+
+$$ \frac{0}{134} = 0 $$
+
+$$ \frac{0}{353464646} = 0 $$
+
+
+</md></sn>
