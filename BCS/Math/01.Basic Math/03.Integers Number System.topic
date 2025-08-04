@@ -8,12 +8,41 @@
 | **Integers**          | All positive and negative whole numbers including 0 | ..., -3, -2, -1, 0, 1, 2, 3, ... | Includes both directions on the number line    |
 | **Positive Integers** | Natural numbers (same as Natural Numbers)           | 1, 2, 3, 4, 5, ...               | Also called **positive whole numbers**         |
 | **Negative Integers** | Opposite of positive integers                       | ..., -5, -4, -3, -2, -1          | Do **not** include 0 or any positive numbers   |
+</md></sn><sn class="col-12 col-md-10 ignore p-3 p-md-5"><md>### Integer on a Number Line{.text-end .fg-o}
+
+#### A Basic Number Line &lt;---- - ---0--- + -----&gt;
+
+![image](https://www.geogebra.org/resource/dwqzhn4k/LglgRgyiXsqPvnuY/material-dwqzhn4k.png)
+
+The arrow refer ==infinite occurence== toward left and right.
+
+</md></sn><sn class="col-12 col-md-10 ignore p-3 p-md-5"><md>### Absolute Value or Modulas{.text-end .fg-r}
+
+![Absolute-Value-or-Modulus-diagram](https://sciencenotes.org/wp-content/uploads/2021/07/Absolute-Value-or-Modulus.png)
+
+The **Absolute Value** of a number tell us ==how far it is from the origin 0==
+
+- | number | is the **symbol**
+- Always whole number(0,positive)
+- Distance from 0
+- Non-negative
+- |-n,+n| = +n
+- |0| = 0
+
+
+| **Number** | **Absolute Value** | **Explanation**       |
+| ---------- | ------------------ | --------------------- |
+| +3         | 3                  | Distance from 0 is 3  |
+| -3         | 3                  | Distance from 0 is 3  |
+| +5         | 5                  | Distance from 0 is 5  |
+| 0          | 0                  | Distance from 0 is 0  |
+| -17        | 17                 | Distance from 0 is 17 |
 </md></sn>		
 	<config>
 		<tags>#03.integers number system</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Mon Aug 04 2025 05:42:48 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Mon Aug 04 2025 06:11:24 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-ugY0QdXF9a</id>
 		<duration></duration>
 	</config>
