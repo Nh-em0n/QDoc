@@ -4,14 +4,25 @@
 
 ## HCF or GCD{.text-end}
 
-How to find HCF/GCD of two numbers
+</md></sn>		
+	<config>
+		<tags>#05.highest common factor</tags>
+		<thumbnail></thumbnail>
+		<heading></heading>
+		<udate>Mon Aug 04 2025 10:03:42 GMT+0600 (Bangladesh Standard Time)</udate>
+		<id>article-l40kQUS4lb</id>
+		<duration></duration>
+	</config>
+<sn><md>## Basic Method{.text-end}
+
+
+Procedure - 
 
 * Get **Factors**
 * Get **Common** Factors
 * Get **Highet** Common Factor
 
-
-#### GCD of (8,12)
+GCD of (8,12)
 
 #### Getting the ==Factors== of 8 and 12{.text-center}
 
@@ -51,12 +62,62 @@ Now  `4` &gt; 2 &gt; 1
 
 So the HCF(Highest Common Factor) or GCD(Greatest Common Divisor) is `4`
 
-</md></sn>		
-	<config>
-		<tags>#05.highest common factor</tags>
-		<thumbnail></thumbnail>
-		<heading></heading>
-		<udate>Mon Aug 04 2025 09:35:22 GMT+0600 (Bangladesh Standard Time)</udate>
-		<id>article-l40kQUS4lb</id>
-		<duration></duration>
-	</config>
+
+</md></sn><sn><md>## Prime Factorisation Method{.text-end}
+
+Procedure -
+
+* Reach Prime
+* Get L shaped factors
+* Multiply factors which are common in both Numbers
+
+
+HCF of (24,36) :
+
+### Reaching Upto Prime{.text-center}
+
+| 2 | 24 |
+|---|---|
+| 2 | 12 |
+| 2 | 6 |
+|  | `3` (reach prime) |
+
+
+
+| 2 | 36 |
+|---|---|
+| 2 | 18 |
+| 3 | 9 |
+|  | `3` (reach prime) |
+
+---
+
+### Getting L shaped{.text-center} 
+
+![L-shaped-24](https://i.imgur.com/Gh6eF9C.png)
+
+
+24 = 2 x 2 x 2 x 3 
+
+
+![L-shaped-36](https://i.imgur.com/o9od6LL.png)
+
+
+36 = 2 x 2 x 3 x 3
+
+
+---
+
+
+### Multiply Common factor{.text-center}
+
+| 24 = `2` x `2` x 2 x `3`  |
+|-----|
+| 36 = `2` x `2` x `3` x 3  |
+| `2 x 2 x 3` (common)  |
+| `12` (multiply)  |
+
+
+So HCF or GCD of (24,36) is `12`
+
+</md></sn>
