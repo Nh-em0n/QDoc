@@ -1,10 +1,61 @@
 
-	<sn></sn>		
+	<sn><md>### Fractions{.text-center}
+
+A **fraction** is a numerical quantity that is not a whole number. It represents a ==part of a whole== and is written in the form:
+
+$$
+\frac{a}{b}
+$$
+
+Where:
+
+* **a** is called the **numerator** (it shows how many parts are taken),
+* **b** is called the **denominator** (it shows the total number of equal parts the whole is divided into),
+* **b ≠ 0** (because division by zero is undefined).
+
+#### Basic Structure of a Fraction
+
+| Term         | Position     | Meaning                        |
+| ------------ | ------------ | ------------------------------ |
+| Numerator    | Top part     | Number of parts taken          |
+| Denominator  | Bottom part  | Total equal parts in the whole |
+| Fraction Bar | Between them | Symbol indicating division     |
+
+Example:
+In the fraction $\frac{3}{4}$,
+
+* **3** is the numerator (3 parts taken),
+* **4** is the denominator (total 4 parts),
+* Parts are **evenly** distributed or divided.
+* The ==whole== is divided into 4 equal parts, and 3 are considered.
+
+
+![image](![diagram-of-fraction](https://komodomath.s3.eu-west-1.amazonaws.com/uploads/site/2019/3/4/fractions-blocks.png)
+)
+
+In this chapter we will refer Numerator as `N` and Denominator as `D`
+
+$$
+\frac{N}{D}
+$$
+</md></sn>		
 	<config>
 		<tags>#09.factors</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Mon Aug 04 2025 19:26:06 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Mon Aug 04 2025 20:06:50 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-tE7NITQdD8</id>
 		<duration></duration>
 	</config>
+<sn class="col-12 col-md-10 ignore p-3 p-lg-5"><md>## Types of Fractions{.text-end}
+
+| **Type of Fraction**      | **Definition**                                         | **Example**                             | **Relation (N &amp; D)** | **Result Meaning**     |
+|---------------------------|--------------------------------------------------------|------------------------------------------|-----------------------|-------------------------|
+| **Zero Fraction**         | Numerator is **0**, denominator is non-zero.           | $\frac{0}{5},\ \frac{0}{734}$            | $N = 0$               | Result = **0**          |
+| **Proper Fraction**       | Numerator is **less than** denominator.                | $\frac{3}{5},\ \frac{2}{7}$              | $N &lt; D$               | Result **&lt; 1**          |
+| **Improper Fraction**     | Numerator is **greater than or equal to** denominator. | $\frac{7}{4},\ \frac{8}{3}$              | $N &gt; D$ or $N = D$    | Result **≥ 1**          |
+| **Whole Number Fraction** | Fraction results in a **whole number**.                | $\frac{6}{6},\ \frac{8}{8}$              | $N = D$               | Result = **1**          |
+| **Like Fractions**        | Fractions with **same denominators**.                  | $\frac{2}{7},\ \frac{5}{7}$              | $D = D$               | Compare values          |
+| **Unlike Fractions**      | Fractions with **different denominators**.             | $\frac{2}{3},\ \frac{4}{5}$              | $D \ne D$             | Compare after LCM       |
+| **Invalid Fraction**      | Denominator is **0** — undefined in mathematics.        | $\frac{5}{0},\ \frac{0}{0}$              | $D = 0$               | Result = **Undefined**  |
+</md></sn>
