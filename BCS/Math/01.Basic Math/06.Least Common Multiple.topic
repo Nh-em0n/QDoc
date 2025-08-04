@@ -1,10 +1,76 @@
 
-	<sn></sn>		
+	<sn><md>### LCM{.text-center}
+
+
+**LCM** (Least Common Multiple) definition is the term itself
+
+**Multiple** of a number is the product of that number with a whole number 
+
+
+How to get **LCM** of Two numbers :
+
+* `Get Multiple` of Both Numbers
+* Filter `Common` Multiples
+* Filter the `Least`
+
+
+**LCM(15,20)** :
+
+### ==Getting Multiples== of 15 and 20
+
+| 15 × n | = Result | 20 × n | = Result |
+|--------|----------|--------|----------|
+| 15 × 1 | = 15     | 20 × 1 | = 20     |
+| 15 × 2 | = 30     | 20 × 2 | = 40     |
+| 15 × 3 | = 45     | 20 × 3 | = 60     |
+| 15 × 4 | = 60     | 20 × 4 | = 80     |
+| 15 × 5 | = 75     | 20 × 5 | = 100    |
+| 15 × 6 | = 90     | 20 × 6 | = 120    |
+| 15 × 7 | = 105    | 20 × 7 | = 140    |
+| 15 × 8 | = 120    | 20 × 8 | = 160    |
+| 15 × 9 | = 135    | 20 × 9 | = 180    |
+| 15 ×10 | = 150    | 20 ×10 | = 200    |
+
+
+
+### Filtering the ==Common==
+
+| 15 × n | = Result | 20 × n | = Result |
+|--------|----------|--------|----------|
+| 15 × 1 | = 15     | 20 × 1 | = 20     |
+| 15 × 2 | = 30     | 20 × 2 | = 40     |
+| 15 × 3 | = 45     | 20 × 3 | = `60`     |
+| 15 × 4 | = `60`     | 20 × 4 | = 80     |
+| 15 × 5 | = 75     | 20 × 5 | = 100    |
+| 15 × 6 | = 90     | 20 × 6 | = `120`    |
+| 15 × 7 | = 105    | 20 × 7 | = 140    |
+| 15 × 8 | = `120`    | 20 × 8 | = 160    |
+| 15 × 9 | = 135    | 20 × 9 | = 180    |
+| 15 ×10 | = 150    | 20 ×10 | = 200    |
+
+
+### Filtering the ==Least==
+
+| 15 × n | = Result | 20 × n | = Result |
+|--------|----------|--------|----------|
+| 15 × 1 | = 15     | 20 × 1 | = 20     |
+| 15 × 2 | = 30     | 20 × 2 | = 40     |
+| 15 × 3 | = 45     | 20 × 3 | = `60`     |
+| 15 × 4 | = `60`     | 20 × 4 | = 80     |
+| 15 × 5 | = 75     | 20 × 5 | = 100    |
+| 15 × 6 | = 90     | 20 × 6 | = 120    |
+| 15 × 7 | = 105    | 20 × 7 | = 140    |
+| 15 × 8 | = 120    | 20 × 8 | = 160    |
+| 15 × 9 | = 135    | 20 × 9 | = 180    |
+| 15 ×10 | = 150    | 20 ×10 | = 200    |
+
+
+So **LCM**(15,20) is `60`</md></sn>		
 	<config>
 		<tags>#06.least common multiple</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Mon Aug 04 2025 10:59:07 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Mon Aug 04 2025 11:13:14 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-nXBQU7fa7Q</id>
 		<duration></duration>
 	</config>
