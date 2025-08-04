@@ -1,10 +1,47 @@
 
-	<sn></sn>		
+	<sn><md>## Common Division{.text-center .fg-red}
+
+* Write numbers with their common prime number p L n,m
+* Cycle the Dividing process Until **coprime appear** 
+* After reaching **coprime** ,analyze the structure 
+    * **L** shape including numbers refer `LCM`
+    * **I** shape including numbers refer `HCF`
+
+
+
+#### Write numbers L n,m with common prime number
+
+| common prime  | numbers           |
+|-----------|-----------------------|
+| 2    | 16,20 |
+
+
+
+#### Continuing Quotients and undivided numbers underbeneath
+
+| 2  | 16,20           |
+|-----------|-----------------------|
+| 2    | 8,10 |
+|     | 4,5 ==comprime found== |
+
+
+**LCM**(16,20) :
+
+![L-shaped-data](https://i.imgur.com/nimLuRB.png)
+
+==L-shaped== including numbers are : 2,2,4,5 = $ 2^2 \times 4 \ times 5 $ = `80`
+
+
+**HCF**(16,20) :
+
+![I-shaped-data](https://i.imgur.com/Abhdkby.png)
+
+==I-shaped== including numbers are : 2,2 = $ 2^2 \times 2 $ = `4`</md></sn>		
 	<config>
 		<tags>#07.finding the hcf and lcm of 2 numbers</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Mon Aug 04 2025 12:15:12 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Mon Aug 04 2025 12:44:14 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-qPvsKZ36ZU</id>
 		<duration></duration>
 	</config>
