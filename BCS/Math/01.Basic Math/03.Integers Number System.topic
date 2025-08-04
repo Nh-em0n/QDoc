@@ -37,12 +37,64 @@ The **Absolute Value** of a number tell us ==how far it is from the origin 0== o
 | +5         | 5                  | Distance from 0 is 5  |
 | 0          | 0                  | Distance from 0 is 0  |
 | -17        | 17                 | Distance from 0 is 17 |
+</md></sn><sn class="col-12 col-md-10 ignore p-3 p-md-5"><md>### Practice
+
+
+![image](https://i.imgur.com/PwqaX5l.png)
+
+
+
+A person starts a journey from point **O**. He goes to point **A**, then receives a phone call asking him to attend a meeting at point **B**, so he travels from **A to B**. After the meeting, he heads toward his house, which is 600 miles away at a Restaurant point **C**. His final destination is now **C**.
+
+Given:
+
+OA = 400  OB = 1500  BC = 600 
+
+---
+
+### QN1. How far is he from his house?
+
+We are asked to find the displacement from **O to C**.
+
+$$
+\vec{OC} = \vec{OB} - \vec{BC}
+$$
+
+$$
+\vec{OC} = 1500 - 600 = 900
+$$
+
+Since the house is 600 miles *back* from point **B**, the displacement is:
+
+$$
+\vec{OC} = -900 \, \text{mi}
+$$
+
+**Answer:** He is **900 miles** away from his house in the ==opposite direction== (from point **O** toward **C**).
+
+Displacement can be negative refering the oppositve direction.
+
+---
+
+### QN2. What is his total distance travelled?
+
+Total distance is the **sum of all paths** covered (not displacement):
+
+$$
+\text{Total distance} = OA + AB + BC
+$$
+
+$$
+= 400 + 1100 + 600 = 2100 \, \text{mi}
+$$
+
+**Note:** We use ==absolute values== for each leg of the journey since distance is scalar.
 </md></sn>		
 	<config>
 		<tags>#03.integers number system</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Mon Aug 04 2025 06:12:28 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Mon Aug 04 2025 07:04:13 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-ugY0QdXF9a</id>
 		<duration></duration>
 	</config>
