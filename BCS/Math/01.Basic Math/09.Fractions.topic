@@ -29,9 +29,10 @@ In the fraction $\frac{3}{4}$,
 * Parts are **evenly** distributed or divided.
 * The ==whole== is divided into 4 equal parts, and 3 are considered.
 
-
-![image](![diagram-of-fraction](https://komodomath.s3.eu-west-1.amazonaws.com/uploads/site/2019/3/4/fractions-blocks.png)
-)
++++ see diagram
+![image](https://komodomath.s3.eu-west-1.amazonaws.com/uploads/site/2019/3/4/fractions-blocks.png)
+![image](https://i.imgur.com/8lGUomV.png)
++++
 
 In this chapter we will refer Numerator as `N` and Denominator as `D`
 
@@ -48,7 +49,7 @@ $$
 		<tags>#09.factors</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Mon Aug 04 2025 21:51:04 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Aug 05 2025 10:59:29 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-tE7NITQdD8</id>
 		<duration></duration>
 	</config>
@@ -119,6 +120,8 @@ So in like fraction larger the nemerator larger its relative fraction value
 
 ### Filter these fraction $ \frac{3}{5}, \frac{14}{5} , \frac{7}{5} $ from large to small
 
+Since they are **like fraction** so their relative value depends on numerator.
+
 $$ 14 &gt; 7 &gt; 3 $$
 $$ \frac{14}{5} &gt; \frac{7}{5} &gt; \frac{3}{5} $$
 $$  2.8 &gt; 1.4 &gt; 0.6 $$</md></sn><sn><md>### Simplest form of Fraction
@@ -165,4 +168,100 @@ $$
 
 
 
-</md></sn>
+</md></sn><sn><md>## Mixed Fraction{.text-end}
+
+### Structure
+
+$$
+A \frac{B}{C}
+$$
+
+
+here 
+
+* A is ==whole==
+* B/C is ==proper== fraction where  C &gt; B
+
+---
+
+### Understandnig Mixed Fraction Properly{.text-end}
+
+Let's consider $1 \frac{1}{4}$ is a mixed fraction. Now a **mixed fraction** has two part:
+
+* **Whole** which is `1` — if we extract it, we get $\frac{4}{4}$  
+* **Proper Fraction** which is $\frac{1}{4}$
+
++++ see diagram  
+![image](https://i.imgur.com/xmikvtk.png)  
++++
+
+So if you noticed the diagram, $1\frac{1}{4}$ means $\frac{5}{4}$.
+
+---
+
+Now suppose your mother gives you ==2 pizzas== and told you to eat as you wish and keep something for your brother.
+
+At first, you cut the pizzas into ==8 slices== evenly — ==one pizza into 4 slices==.
+
+Now you ==eat 4 pizza slices==, and your mother asks how many pizza slices are left.
+
+You count and say that there are ==still 5 pieces left==. So it is:
+
+If each slice is $\frac{1}{4}$, then 5 pieces mean:
+
+$$5\times \frac{1}{4} = \frac{5}{4}$$
+
+Instead of saying "5 pieces", you can convert this **improper fraction** into a **mixed fraction** and tell her more clearly:
+
+$$\frac{5}{4} = 1 \text{ } \frac{1}{4}$$
+
+Now you can tell her:  ==there is left `1` pizza and $\frac{1}{4}$ of another==.
+
+---
+
+To convert a proper fraction to determine how many complete things we have, we use **mixed fraction**.
+
+---
+
+Now why we use **mixed fraction**?
+
+Now $\frac{5}{4}$ does not give a clear meaning as it is an **improper fraction**.
+
+By converting it to **mixed fraction**, we can say that we have complete `1` whole and $\frac{1}{4}$.
+</md></sn><sn><md>## Mixed Fraction to Improper Fraction{.text-center}
+
+We know that a mixed fraction has two thing
+* Whole 
+* proper fraction
+
+==Addition of whole and proper fraction give us improper fraction or total peice==
+
+$$  \text{whole } + \text{proper fraction} = \text{improper fraction}  $$
+
+
+#### convet this $3 \text{  } \frac{2}{5}$ {.text-center} 
+
+here
+
+* whole is `3`
+* proper fraction is $\frac{2}{5}$
+
+$$  \text{whole } + \text{proper fraction} = \text{improper fraction}  $$
+
+$$ = 3 + \frac{2}{5}  $$
+
+$$ = \frac{15+2}{5}  $$
+
+$$ = \frac{17}{5}  $$
+ 
+
+notice :
+
+$$ = 3 \times \frac{5}{5} + \frac{2}{5}  $$
+
+So the ==whole== has `3` complete things which ==proper fraction== has
+
+
+
+
+</md></sn><sn></sn>
