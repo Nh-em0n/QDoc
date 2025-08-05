@@ -49,7 +49,7 @@ $$
 		<tags>#09.factors</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Aug 05 2025 11:54:58 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Aug 05 2025 12:28:13 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-tE7NITQdD8</id>
 		<duration></duration>
 	</config>
@@ -124,7 +124,73 @@ Since they are **like fraction** so their relative value depends on numerator.
 
 $$ 14 &gt; 7 &gt; 3 $$
 $$ \frac{14}{5} &gt; \frac{7}{5} &gt; \frac{3}{5} $$
-$$  2.8 &gt; 1.4 &gt; 0.6 $$</md></sn><sn><md>### Simplest form of Fraction
+$$  2.8 &gt; 1.4 &gt; 0.6 $$
+
+
+### Filtering Unlike Fractions{.text-end}
+
+
+Suppose we have to unlike fractions $\frac{N_1}{D_1}$ and $\frac{N_2}{D_2}$,where $D_1 \neq D_2$ ,so they are **Unlike Fraction**
+
+To Compare two unlike fraction the rule is :
+
+$$ \frac{N_1}{D_1} = \frac{n_1}{D_c} $$
+$$ \frac{N_2}{D_2} = \frac{n_2}{D_c} $$
+
+Where $D_c$ is
+
+$$ D_c = \text{LCM}(D_1,D_2) $$
+
+Comparing $n_1$ and $n_2$ will give us the result which fraction is bigger.
+
+
+This method work because the ratio of $\frac{N_1}{D_1}$ $\frac{n_1}{D_c}$ will be same
+
+
+#### Which Fraction is larger $\frac{2}{3}$ or $\frac{3}{4}$ {.text-center}
+
+
+As they are not **Unlike Fraction** ,
+
+$$ \frac{2}{3} = \frac{n_1}{D_c} $$
+$$ \frac{3}{4} = \frac{n_2}{D_c} $$
+
+
+Now,
+
+We know that if two number has no common factor then their LCM is their Product
+
+$$ D_c = \text{LCM}(3,4) $$
+$$ D_c = 12 $$
+
+
+$$ \frac{2}{3} = \frac{n_1}{12} $$
+$$ n_1 = 8 $$
+
+or we can compare as $\frac{12}{3} = 4$ so $n_1 = 2 \times 4 = 8$
+
+
+And,
+
+$$ \frac{3}{4} = \frac{n_2}{12} $$
+$$ n_2 = 9 $$
+
+
+So ,
+
+$$ n_2 &gt; n_1 $$
+
+$$ \frac{3}{4} &gt; \frac{2}{3} $$
+
+
+### Summary of Comparing Fraction {.text-end}
+
+* Check `0` and ==Undefined fraction==
+* Apply fraction comparison chart ==Zero &lt; Proper &lt; Whole &lt; Improper &lt; Undefined==
+* If **Liking Fraction** compare Numerator.
+* If **Unliding Fraction** , ==NOOOO== ,we have to evaluate $n_1$ and $n_2$
+
+</md></sn><sn><md>### Simplest form of Fraction
 
 
 $$
@@ -261,6 +327,9 @@ $$ = 3 \times \frac{5}{5} + \frac{2}{5}  $$
 
 So the ==whole== has `3` complete things which ==proper fraction== has
 
+$$  \text{Improper Fraction } = \text{Whole} \times \frac{\text{Denominator}}{\text{Denominator}} + \frac{\text{Nemurator}}{\text{Denominator}}  $$
+
+
 +++ see diagram
 ![image](https://i.imgur.com/cB2fWqR.png)
 +++
@@ -324,7 +393,11 @@ $$  \text{Mixed Fraction } = \text{Quotient} \frac{\text{Remainder}}{\text{Divis
 #### Mixed to Improper
 
 $$  \text{Improper Fraction } = \text{Quotient} + \frac{\text{Remainder}}{\text{Divisor}}  $$
+$$  \text{Improper Fraction } = \text{Quotient} \times \frac{\text{Divisor}}{\text{Divisor}} + \frac{\text{Remainder}}{\text{Divisor}}  $$
 $$  \text{Improper Fraction } = \text{Whole} + \text{Proper Fraction}  $$
+
+
+
 
 
 The ==Quotient is  whole==.</md></sn>
