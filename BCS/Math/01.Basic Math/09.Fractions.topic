@@ -49,7 +49,7 @@ $$
 		<tags>#09.factors</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Aug 05 2025 10:59:29 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Aug 05 2025 11:54:58 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-tE7NITQdD8</id>
 		<duration></duration>
 	</config>
@@ -228,7 +228,7 @@ Now why we use **mixed fraction**?
 Now $\frac{5}{4}$ does not give a clear meaning as it is an **improper fraction**.
 
 By converting it to **mixed fraction**, we can say that we have complete `1` whole and $\frac{1}{4}$.
-</md></sn><sn><md>## Mixed Fraction to Improper Fraction{.text-center}
+</md></sn><sn><md>## Mixed Fraction to Improper Fraction{.text-end}
 
 We know that a mixed fraction has two thing
 * Whole 
@@ -261,7 +261,70 @@ $$ = 3 \times \frac{5}{5} + \frac{2}{5}  $$
 
 So the ==whole== has `3` complete things which ==proper fraction== has
 
++++ see diagram
+![image](https://i.imgur.com/cB2fWqR.png)
++++
 
 
 
-</md></sn><sn></sn>
+
+</md></sn><sn><md>## Improper to Mixed Fraction{.text-end}
+
+
+It is very easy just divide the fraction
+
++++ see a division diagram
+![image](https://i.imgur.com/KGs1N7h.png)
++++
+
+
+#### Mixed fraction structure
+
+
+$$  \text{Quotient } \frac{\text{Remainder}}{\text{Divisor}}  $$
+
+
+convert $\frac{17}{5}$ into ==mixed fraction==
+
+
+| 5(Divisor) |   )    17   ( | 3  (Quotient)|
+|----------|----------|----------|
+|     | - 15   |    |
+|     | 2 (Remainder)  |    |
+
+
+
+so its Mixed fraction will be :
+
+$$  \text{Quotient } \frac{\text{Remainder}}{\text{Divisor}}  $$
+
+$$  3 \frac{2}{5}  $$
+
+
+
+
+
+
+
+
+</md></sn><sn><md>## Summary of Mixed Fractions {.text-end}
+
+* Improper Fraction - $\frac{A}{B}$ and A &gt; B and result &gt; 1 
+* To collect improper fraction as ==whole== and ==smaller parts== form we use **Mixed Fraction**
+* Mixed fraction has two thing the ==whole and proper fraction==
+
+
+#### Improper to Mixed
+
+After dividing the improper fraction like this  ==Denominator ) Numerator ( Quotinet==
+
+$$  \text{Mixed Fraction } = \text{Quotient} \frac{\text{Remainder}}{\text{Divisor}}  $$
+
+
+#### Mixed to Improper
+
+$$  \text{Improper Fraction } = \text{Quotient} + \frac{\text{Remainder}}{\text{Divisor}}  $$
+$$  \text{Improper Fraction } = \text{Whole} + \text{Proper Fraction}  $$
+
+
+The ==Quotient is  whole==.</md></sn>
