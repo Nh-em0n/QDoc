@@ -1,10 +1,126 @@
 
-	<sn></sn>		
+	<sn><md>## `<var>` {.text-center}
+
+The `<var>` (short for *variable*) element in HTML is used to represent a **variable** in a mathematical expression or programming context. It is a **semantic inline element** that tells both the browser and the reader that the content inside ==represents a variable==, such as an unknown value in a formula or a variable in a code example.
+
+---
+
+### Purpose
+
+The primary role of the `<var>` element is **semantic**. It doesn't change the behavior or structure of the page, but it provides **meaningful context** to search engines, screen readers, and developers. It typically appears in:
+
+* **Mathematical formulas** (e.g., `E = mc²`)
+* **Programming examples** (e.g., `let <var>x</var> = 10`)
+* **Algorithm descriptions**
+* **User-defined variable names in documentation**
+
+---
+
+### Syntax
+
+```html
+<var>variableName</var>
+```
+
+The `<var>` tag can be used inside paragraphs, code blocks, list items, or anywhere inline text is allowed.
+
+---
+
+### Browser Rendering
+
+By default, most browsers render the content of a `<var>` element in *italic* style, similar to `<em>` or `<i>`, but it carries different semantic meaning. You can style it with CSS as needed.
+
+---
+
+#### In Mathematical Expression
+
+```html
+<p>The formula for the area of a circle is A = <var>π</var><var>r</var><sup>2</sup>.</p>
+```
+
+**Output:**
+The formula for the area of a circle is A = *πr²*.
+
+---
+
+#### In Programming Variable
+
+```html
+<p>To declare a variable in JavaScript, write: <code>let <var>count</var> = 0;</code></p>
+```
+
+**Output:**
+To declare a variable in JavaScript, write: `let *count* = 0;`
+
+---
+
+### Accessibility
+
+The `<var>` element improves **accessibility** and **search engine understanding** by marking the enclosed content as a variable, which helps tools like screen readers read them with appropriate emphasis.
+
+---
+
+### Styling
+
+If you want to customize the appearance of variables, you can style the `<var>` tag:
+
+```css
+var {
+  font-style: normal;
+  font-weight: bold;
+  color: darkgreen;
+}
+```
+
+---
+
+### When *Not* to Use `<var>`
+
+* Don’t use `<var>` just to make text italic. Use `<em>` or CSS for that.
+* Don’t use it for constants, keywords, or functions unless you're specifically referring to a variable.
+
+---
+
+### Comparison with Similar Tags
+
+| Tag            | Purpose                                                |
+| -------------- | ------------------------------------------------------ |
+| `<var>`        | Represents a variable name                             |
+| `<code>`       | Represents a block or snippet of code                  |
+| `<kbd>`        | Represents user input (like keyboard entry)            |
+| `<samp>`       | Represents program output                              |
+| `<em>` / `<i>` | Emphasize or italicize text (without semantic meaning) |
+
+---
+
+### Summary
+
+* The `<var>` tag is used to **semantically mark up variables** in HTML.
+* It is most useful in **documentation**, **educational content**, and **technical writing**.
+* Enhances **readability**, **accessibility**, and **semantic clarity**.
+
+---
+
+### Example: All Together
+
+```html
+<p>Given the equation <var>y</var> = <var>mx</var> + <var>b</var>, where <var>m</var> is the slope and <var>b</var> is the y-intercept, you can calculate <var>y</var> for any value of <var>x</var>.</p>
+```
+
+**Output:**
+Given the equation *y = mx + b*, where *m* is the slope and *b* is the y-intercept, you can calculate *y* for any value of *x*.
+
+---
+
+### Final Thought
+
+Even though `<var>` may seem like a minor element in HTML, its proper use improves **technical clarity**, enhances **user experience**, and promotes **best practices** in semantic markup.
+</var></var></i></em></samp></kbd></code></var></em></var></var></var></var></i></em></var></var></var></var></var></md></sn>		
 	<config>
 		<tags>#var</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Aug 07 2025 12:51:19 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Aug 07 2025 12:56:23 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-Bn3kBnRam2</id>
 		<duration></duration>
 	</config>
