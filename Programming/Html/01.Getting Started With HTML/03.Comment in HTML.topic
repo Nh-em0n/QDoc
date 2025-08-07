@@ -1,10 +1,45 @@
 
-	<sn></sn>		
+	<sn><md>## Commnet{.fg-red .text-center}
+
+In HTML, a comment is written using the following syntax:
+
+```html
+<!-- This is a comment -->
+```
+
+### Explanation Table:
+
+| **Part**     | **Example**         | **Explanation**                      |
+| ------------ | ------------------- | ------------------------------------ |
+| Opening Tag  | `<!--`              | Begins the comment.                  |
+| Comment Text | `This is a comment` | This part is ignored by the browser. |
+| Closing Tag  | `-->`               | Ends the comment.                    |
+
+### Usage Example in HTML:
+
+```html
+
+  <!-- This is a basic Paragraph tag -->
+  <p>Hello, world!</p>
+
+```
+
+
+### Practise
++++ see
+@[html-comment](https://codepen.io/Nh-em0n/embed/preview/dPYRZaR?default-tab=html%2Cresult&amp;editable=true)
++++
+
+### Notes:
+
+* Comments do **not** appear in the rendered webpage.
+* Useful for documentation, debugging, or temporarily disabling code.
+</md></sn>		
 	<config>
 		<tags>#03.comment in html</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Aug 07 2025 10:18:31 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Aug 07 2025 10:26:48 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-1c1Qch8Edb</id>
 		<duration></duration>
 	</config>
