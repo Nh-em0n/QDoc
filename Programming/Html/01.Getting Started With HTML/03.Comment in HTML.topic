@@ -1,5 +1,5 @@
 
-	<sn><md>## Commnet{.fg-red .text-center}
+	<sn><md>## Comment{.fg-red .text-center}
 
 In HTML, a comment is written using the following syntax:
 
@@ -39,7 +39,7 @@ In HTML, a comment is written using the following syntax:
 		<tags>#03.comment in html</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Aug 07 2025 10:26:48 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Aug 07 2025 10:32:16 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-1c1Qch8Edb</id>
 		<duration></duration>
 	</config>
