@@ -1,10 +1,23 @@
 
-	<sn></sn>		
+	<sn><md>## Purpose{.text-center .fg-red}
+
+This Subject is created some important hidden **HTML**  details.
+
+As I have basics and intermediate knowledge in HTML ,but by this note I can gain some advanced concept,like meta tags,important attributes etc.
+
+All the example code will be embeded from Codepen. 
+
+
+Course Resources:
+
+* [MDN HTML DOC](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [HTML For Professional](https://goalkicker.com/HTML5Book/HTML5NotesForProfessionals.pdf)
+* other will be added later</md></sn>		
 	<config>
 		<tags>#why this subject you need</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Aug 07 2025 09:27:34 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Aug 07 2025 09:33:39 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-shgTMbQTdi</id>
 		<duration></duration>
 	</config>
