@@ -1,10 +1,151 @@
 
-	<sn></sn>		
+	<sn><md>## Video{.fg-red .text-center}
+
+
+[read-mdn-doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video)
+
+
+The `<video>` element in HTML5 is used to **embed video content** directly into web pages without the need for external plugins like Flash. It provides a standardized way to deliver video across modern browsers, supporting multiple formats and rich functionality through various attributes and JavaScript API.
+
+---
+
+### Purpose of the `<video>` Element
+
+The `<video>` element is a **media tag** that enables websites to:
+
+* Play embedded video files
+* Offer playback controls (play, pause, volume, fullscreen)
+* Support multiple formats for cross-browser compatibility
+* Integrate with JavaScript for custom control
+
+---
+
+### Basic Syntax
+
+```html
+<video src="movie.mp4" controls=""></video>
+```
+
+---
+
+### Full Structure Example
+
+```html
+<video width="640" height="360" controls="" autoplay="" muted="" loop="" poster="thumbnail.jpg">
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.webm" type="video/webm">
+  <source src="movie.ogv" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+```
+
+---
+
+### All Attributes of `<video>`
+
+| **Attribute**             | **Description**                                                                                     |
+| ------------------------- | --------------------------------------------------------------------------------------------------- |
+| `src`                     | Specifies the path to the video file (can be used directly on `<video>` or inside `<source>` tags). |
+| `controls`                | Displays built-in play, pause, volume, and seek controls.                                           |
+| `autoplay`                | Video starts playing automatically once ready (muted must be used to autoplay in modern browsers).  |
+| `muted`                   | Starts the video without sound. Often required for autoplay to work.                                |
+| `loop`                    | Repeats the video once it ends.                                                                     |
+| `poster`                  | URL of an image to show before the video starts or while it’s downloading.                          |
+| `preload`                 | Informs the browser how much data to preload: `auto`, `metadata`, or `none`.                        |
+| `width`                   | Sets the width of the video player in pixels.                                                       |
+| `height`                  | Sets the height of the video player in pixels.                                                      |
+| `playsinline`             | Enables inline playback on mobile devices instead of full-screen.                                   |
+| `crossorigin`             | Handles cross-origin requests for video files. Accepts `anonymous` or `use-credentials`.            |
+| `disablepictureinpicture` | Prevents the video from being played in Picture-in-Picture mode (browser-specific).                 |
+
+---
+
+### `<source>` Tag Inside `<video>`
+
+Using multiple `<source>` tags ensures browser compatibility:
+
+```html
+<video controls="">
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.webm" type="video/webm">
+  <source src="video.ogv" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+```
+
+* The browser picks the first format it supports.
+* Always include a fallback message for unsupported browsers.
+
+---
+
+### Video Formats and MIME Types
+
+| **Format** | **MIME Type** | **Browser Support**     |
+| ---------- | ------------- | ----------------------- |
+| `.mp4`     | `video/mp4`   | Universal (recommended) |
+| `.webm`    | `video/webm`  | Chrome, Firefox, Opera  |
+| `.ogv`     | `video/ogg`   | Firefox, Opera          |
+
+---
+
+### JavaScript API for `<video>`
+
+You can control `<video>` elements using JavaScript:
+
+```html
+<video id="myVideo" src="movie.mp4" controls=""></video>
+
+
+```
+
+---
+
+### Accessibility Considerations
+
+* Use `captions` or `<track>` for subtitles:
+
+```html
+<video controls="">
+  <source src="movie.mp4" type="video/mp4">
+  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+</video>
+```
+
+* Always provide a **text fallback** for unsupported browsers.
+
+---
+
+### Common Use Cases
+
+| **Use Case**         | **Example**                                       |
+| -------------------- | ------------------------------------------------- |
+| Background video     | `<video autoplay="" muted="" loop="" playsinline=""></video>` |
+| Learning platforms   | Use with `<track>` for subtitles and chapters     |
+| Custom video players | Control via JavaScript and CSS for UI             |
+
+---
+
+### Summary Table
+
+| **Tag**    | **Purpose**                         |
+| ---------- | ----------------------------------- |
+| `<video>`  | Embeds the video player             |
+| `<source>` | Specifies alternative video sources |
+| `<track>`  | Adds captions/subtitles/metadata    |
+
+---
+
+### Conclusion
+
+The `<video>` element in HTML5 offers a powerful, flexible way to integrate video content directly into webpages. By supporting multiple formats, playback attributes, and accessibility features, it ensures consistent and user-friendly media delivery across all modern browsers.
+
+</video></video></video></video></video></video></video></video></video></video></md></sn>		
 	<config>
 		<tags>#video</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Aug 07 2025 11:45:24 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Aug 07 2025 11:55:20 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-goDD2MGAoR</id>
 		<duration></duration>
 	</config>
+<sn></sn>
