@@ -1,10 +1,95 @@
 
-	<sn></sn>		
+	<sn><md>## HTML{.fg-red .text-center}
+
+
+### What is HTML?
+
+**HTML (HyperText Markup Language)** is the standard language used to create and structure content on the World Wide Web. It allows developers to define the layout and semantics of web content using *tags* (also called elements).
+
+---
+
+### Where is HTML Used?
+
+HTML is used to:
+
+* Structure content for websites and web applications
+* Embed media such as images, videos, audio, and documents
+* Define the document layout that browsers render
+* Build user interfaces (with CSS and JavaScript)
+
+---
+
+### Who Controls HTML?
+
+HTML is maintained by the ==World Wide Web Consortium (W3C)== and ** WHATWG (Web Hypertext Application Technology Working Group)**.
+
+* W3C focuses on long-term web standards.
+* WHATWG manages the *living standard* of HTML (currently the most active and modern).
+
+---
+
+### HTML Versions
+
+| Version   | Released        | Key Features                                           |
+| --------- | --------------- | ------------------------------------------------------ |
+| HTML 1.0  | 1993            | Basic tags like `<p>`, `<a>`, `<img>`                  |
+| HTML 2.0  | 1995            | Form elements, better structure                        |
+| HTML 3.2  | 1997            | Tables, scripting, applets                             |
+| HTML 4.01 | 1999            | Stylesheets support, better accessibility              |
+| **HTML5** | 2014+ (ongoing) | Audio/video, canvas, semantic tags, responsive support |
+
+HTML5 is a **living standard** now—it's being continuously updated by ==WHATWG==.
+
+---
+
+### What is a Markup Language?
+
+A **markup language** is a system of tags that annotate text to define structure and presentation. It doesn’t perform logic like a programming language, but it organizes content.
+
+For example:
+
+```html
+</a></p><p><a>This is a paragraph.</a></p><a>
+```
+
+Here, `<p>` is a markup tag that tells the browser to render this text as a paragraph.
+
+---
+
+### What are Markdown Languages?
+
+**Markdown** is a lightweight markup language used to format plain text. It’s simpler than HTML and often used in:
+
+* README files (GitHub)
+* Blogs or forums
+* Documentation
+
+Example Markdown:
+
+```markdown
+# Heading
+**Bold text**
+- List item
+```
+
+---
+
+### Why HTML Can't Be Replaced
+
+HTML is irreplaceable on the web because:
+
+* All **browsers are built to parse HTML**
+* It is the **foundation of the web**, universally supported
+* It integrates natively with **CSS (for styling)** and **JavaScript (for logic)**
+* It’s constantly evolving (HTML5) and suits all modern needs
+
+While other technologies like Markdown or templating engines (e.g., JSX, EJS) *build upon* or *compile into* HTML, they ultimately rely on HTML to render in browsers.
+</p></a></md></sn>		
 	<config>
 		<tags>#01.what is html</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Aug 07 2025 10:01:54 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Aug 07 2025 10:09:21 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-WRFqRFVVCg</id>
 		<duration></duration>
 	</config>
