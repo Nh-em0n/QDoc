@@ -144,8 +144,16 @@ The `<video>` element in HTML5 offers a powerful, flexible way to integrate vide
 		<tags>#video</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Aug 07 2025 11:55:20 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Aug 07 2025 12:28:39 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-goDD2MGAoR</id>
 		<duration></duration>
 	</config>
-<sn></sn>
+<sn><md>## Practise{.fg-red .text-center}
+
+@[codepen-html-video](https://codepen.io/Nh-em0n/embed/preview/jEbwZMm?default-tab=html%2Cresult&amp;editable=true)
+
+
+#### Custome Video Player
+
+@[code-html-custome-video-player](https://codepen.io/Nh-em0n/embed/preview/raOwJwK?default-tab=html%2Cresult&amp;editable=true)
+</md></sn>
