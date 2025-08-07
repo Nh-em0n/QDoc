@@ -1,0 +1,98 @@
+
+	<sn><md>## wbr Tag in HTML{.text-center .fg-red}
+
+[🔗 mdn-doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/wbr)
+
+The `<wbr>` (Word Break Opportunity) tag in HTML is a **useful inline element** that provides the browser with a **hint about where it can safely break a long word** or URL when wrapping text. This helps improve the readability and layout of content, especially on narrow screens or responsive designs.
+
+---
+
+### Purpose of `<wbr>`
+
+The `<wbr>` tag tells the browser:
+**“If you need to break the line, you may break it here.”**
+
+It does **not** create a visible effect until the word needs to wrap. It’s purely a *logical suggestion* for line-breaking.
+
+---
+
+### Syntax
+
+```html
+<wbr>
+```
+
+* It is an **empty tag**—it has no closing tag.
+* It is placed **within long words or strings** where breaking is acceptable.
+
+---
+
+### Example
+
+```html
+<p>Visit our site at: www.example<wbr>.com</p>
+```
+
+If the screen is too narrow to display the full URL, the browser can break it like:
+
+```
+www.example
+.com
+```
+
+Instead of forcing horizontal scrolling or shrinking the text.
+
+
+
+### Practise
+
+Try to break the ==red colored== word
+
++++ see example
+@[codepen-html-wbr](https://codepen.io/Nh-em0n/embed/preview/RNWgxQq?default-tab=html%2Cresult&amp;editable=true)
++++
+
+
+---
+
+### Use Cases
+
+| **Use Case**             | **Example**                                                       |
+| ------------------------ | ----------------------------------------------------------------- |
+| Long URLs                | `https://www.verylong<wbr>url.com`                                |
+| Long product names       | `SuperUltraMega<wbr>ProductModelNumber9999`                       |
+| Unbreakable text strings | `ABC1234567890<wbr>XYZ9876543210`                                 |
+| Prevent layout breaking  | In mobile/responsive views, especially in `<p>`, `<span>`, `` |
+
+---
+
+### Things to Remember
+
+* `<wbr>` does **not** insert a space or hyphen.
+* It only gives the browser **permission** to break the word at that point **if needed**.
+* It has **no visual effect** unless the line actually wraps.
+
+---
+
+### Related Tags
+
+| **Tag**  | **Purpose**                                   |
+| -------- | --------------------------------------------- |
+| `<br>`   | Inserts an actual line break, always visible  |
+| `<nobr>` | Prevents line breaking entirely               |
+| `<span>` | Used to apply styles, often alongside `<wbr>` |
+
+---
+
+### Conclusion
+
+The `<wbr>` tag is a ==simple but powerful tool== in responsive web design. It enhances **readability and layout stability** by preventing words or strings from overflowing their containers. While invisible to users in most cases, it plays a critical role behind the scenes in clean, adaptive designs.
+</span></nobr></span></p></md></sn>		
+	<config>
+		<tags>#a</tags>
+		<thumbnail></thumbnail>
+		<heading></heading>
+		<udate>Thu Aug 07 2025 11:23:38 GMT+0600 (Bangladesh Standard Time)</udate>
+		<id>article-cKtyomkgW3</id>
+		<duration></duration>
+	</config>
