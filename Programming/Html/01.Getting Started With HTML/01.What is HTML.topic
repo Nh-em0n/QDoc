@@ -21,7 +21,7 @@ HTML is used to:
 
 ### Who Controls HTML?
 
-HTML is maintained by the ==World Wide Web Consortium (W3C)== and ** WHATWG (Web Hypertext Application Technology Working Group)**.
+HTML is maintained by the ==World Wide Web Consortium (W3C)== and **WHATWG (Web Hypertext Application Technology Working Group)**.
 
 * W3C focuses on long-term web standards.
 * WHATWG manages the *living standard* of HTML (currently the most active and modern).
@@ -82,14 +82,12 @@ HTML is irreplaceable on the web because:
 * It is the **foundation of the web**, universally supported
 * It integrates natively with **CSS (for styling)** and **JavaScript (for logic)**
 * It’s constantly evolving (HTML5) and suits all modern needs
-
-While other technologies like Markdown or templating engines (e.g., JSX, EJS) *build upon* or *compile into* HTML, they ultimately rely on HTML to render in browsers.
 </p></a></md></sn>		
 	<config>
 		<tags>#01.what is html</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Aug 07 2025 10:09:21 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Aug 07 2025 10:11:34 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-WRFqRFVVCg</id>
 		<duration></duration>
 	</config>
