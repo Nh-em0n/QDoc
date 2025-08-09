@@ -65,9 +65,9 @@ Let’s take:
 
 
 
-</md></sn><config style="display:none"><tags>#01.factors</tags><thumbnail></thumbnail><heading></heading><udate>Tue Aug 05 2025 11:01:38 GMT+0600 (Bangladesh Standard Time)</udate><id>article-qaz6oRkCVX</id><duration></duration></config><sn class="position-relative"><md>### Factor {.text-end .fg-purple .position-sticky .top-0 #factor}
+</md></sn><config style="display:none"><tags>#01.factors</tags><thumbnail></thumbnail><heading></heading><udate>Sat Aug 09 2025 09:08:12 GMT+0600 (Bangladesh Standard Time)</udate><id>article-qaz6oRkCVX</id><duration></duration></config><sn class="position-relative"><md>### Factor {.text-end .fg-purple .position-sticky .top-0 #factor}
 
-A **factor** of a number is a whole number that divides the given number **exactly**, leaving **no remainder**. 
+A **factor** of a number is a `whole number` that divides the given number `exactly`, leaving **no remainder**. 
 
 **In simple terms, if `a × b = c`**, 
 - then both `a` and `b` are factors of `c`.
