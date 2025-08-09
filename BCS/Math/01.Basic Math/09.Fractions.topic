@@ -49,7 +49,7 @@ $$
 		<tags>#09.factors</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sat Aug 09 2025 10:40:15 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sat Aug 09 2025 10:44:29 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-tE7NITQdD8</id>
 		<duration></duration>
 	</config>
@@ -103,14 +103,14 @@ $ 0 &lt; 0.428 &lt; 1 &lt; 2.6 &lt; \infty  $
 Two or more fraction are like fraction if both of their denominator are same
 
 $$
-\frac{N_1}{D_1} , \frac{N_1}{D_1} , \frac{N_3}{D_3} , \frac{N_4}{D_4} , \frac{N_5}{D_5}
+\frac{N_1}{D_1} , \frac{N_2}{D_2} , \frac{N_3}{D_3} , \frac{N_4}{D_4} , \frac{N_5}{D_5}
 $$
 
 Where $D_1 = D_2 = D_3 = D_4 = D_5$
 
 so fraction value depends on Numerator N. Now if $N_2 &gt; N_1$ then,
 
-$$  \frac{N_1}{D_1}  &lt;  \frac{N_1}{D_1} $$
+$$  \frac{N_1}{D_1}  &lt;  \frac{N_2}{D_2} $$
 $$  N_1 \times \frac{1}{D_1}  &lt; N_2 \times \frac{N_2}{D_2} $$
 $$  N_1 \times \frac{1}{D_1}  &lt; N_2 \times \frac{N_2}{D_1} \text{as} D_1 = D_2 $$
 $$  N_1 &lt; N_2 $$
