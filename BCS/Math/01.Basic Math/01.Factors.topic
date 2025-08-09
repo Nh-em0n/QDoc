@@ -65,7 +65,7 @@ Let’s take:
 
 
 
-</md></sn><config style="display:none"><tags>#01.factors</tags><thumbnail></thumbnail><heading></heading><udate>Sat Aug 09 2025 09:15:33 GMT+0600 (Bangladesh Standard Time)</udate><id>article-qaz6oRkCVX</id><duration></duration></config><sn class="position-relative"><md>### Factor {.text-end .fg-purple .position-sticky .top-0 #factor}
+</md></sn><config style="display:none"><tags>#01.factors</tags><thumbnail></thumbnail><heading></heading><udate>Sat Aug 09 2025 09:29:35 GMT+0600 (Bangladesh Standard Time)</udate><id>article-qaz6oRkCVX</id><duration></duration></config><sn class="position-relative"><md>### Factor {.text-end .fg-purple .position-sticky .top-0 #factor}
 
 A **factor** of a number is a `whole number` that divides the given number `exactly`, leaving **no remainder**. 
 
@@ -101,7 +101,7 @@ Because **24 ÷ 5 = 4.8** which is **not a whole number**.
    `1` and the number itself.
    Example: Factors of 7 are `1` and `7`.
 
-2. **Factors are always less than or equal to the number.** And a factor cant be larger than the half of the number except the number itself.
+2. **Factors are always less than or equal to the number.** And a factor cant be larger than the half of the number except the number itself.So factors are mostly include in the first half.
  
    A factor of 12 can be 1, 2, 3… but not 7,8,13 or more.
 
@@ -177,5 +177,6 @@ After ==end Point== we have to go up.
 
 ![image](https://i.imgur.com/qPI51Te.png)
 
+Sorry,the last will be ==4x6== not `4x8`
 
 The numbers included in the `U`-shape are the factors of 24</md></sn>
