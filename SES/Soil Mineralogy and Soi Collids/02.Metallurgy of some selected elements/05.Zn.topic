@@ -1,0 +1,93 @@
+
+	<sn><md data-e="true">## Metallurgy of Zinc
+
+---
+1. **Crushing and Grinding:**
+   Zinc ore, primarily zinc blende (ZnS), is first crushed and ground into fine powder to increase the surface area for further processing.
+
+2. **Concentration of Ore:**
+   The powdered ore is subjected to `froth flotation`, where it is mixed with water and chemicals. Air is passed through the mixture, and zinc sulfide attaches to the bubbles and floats to the top, separating it from the gangue.
+
+3. **Conversion of Ore to Metal Oxide (Roasting):**
+   The concentrated zinc sulfide is then heated in the presence of excess air in a `furnace`. This converts the sulfide into **zinc oxide (ZnO)** and releases sulfur dioxide gas.
+   **Reaction:**
+
+   $$
+   2ZnS + 3O_2 → 2ZnO + 2SO_2↑
+   $$
+
+4. **Reduction of Metal Oxide to Zinc:**
+   The zinc oxide is mixed with **carbon (coke)** and `heated in a furnace`. Carbon acts as a `reducing agent`, converting ZnO into metallic zinc, which `vaporizes and is condensed`
+.
+   **Reaction:**
+
+   $$
+   ZnO + C → Zn + CO↑
+   $$
+
+5. **Refining of Zinc:**
+   The crude zinc obtained may contain impurities like lead, cadmium, and iron. It is purified using `fractional distillation` (since zinc has a `relatively low boiling point`) or `electrolytic refining`. In electrolysis, pure zinc is deposited at the cathode from a `zinc sulfate solution`.
+   **Cathode Reaction:**
+
+   $$
+   Zn^{2+} + 2e^- → Zn
+   $$
+
+</md></sn><sn><md data-e="true">## **Occurrence of Zinc**
+
+![image](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Zinc_%28Element_-_30%29.jpg/640px-Zinc_%28Element_-_30%29.jpg)
+
+Zinc is a **moderately abundant metal** in the Earth’s crust, making up about **0.0075% by weight**. It **does not occur in a free state** due to its reactivity, but is found in **combined forms**, primarily as **sulfide, carbonate, and oxide ores**.
+
+---
+
+### **1. Major Zinc Ores**
+
+| **Ore Name**                 | **Chemical Formula** | **Type**      |
+| ---------------------------- | -------------------- | ------------- |
+| **Zinc blende** (Sphalerite) | ZnS                  | Sulfide ore   |
+| **Calamine**                 | ZnCO₃                | Carbonate ore |
+| **Zincite**                  | ZnO                  | Oxide ore     |
+
+---
+
+### **2. Forms of Occurrence**
+
+* **Zinc Blende (ZnS)** is the **most important commercial ore**.
+* Zinc is often found along with **lead**, **copper**, and **silver** ores.
+* Occurs in **vein deposits**, **sedimentary rocks**, and **metamorphic formations**.
+
+---
+
+### **3. Major Producing Countries**
+
+| **Country**   | **Major Zinc Mining Areas**             |
+| ------------- | --------------------------------------- |
+| **China**     | Yunnan, Inner Mongolia                  |
+| **Australia** | Mount Isa, Broken Hill                  |
+| **Peru**      | Cerro de Pasco                          |
+| **India**     | Rajasthan (Zawar, Rampura Agucha mines) |
+| **USA**       | Alaska, Tennessee                       |
+| **Mexico**    | Chihuahua, Zacatecas                    |
+
+---
+
+### **4. Geological Occurrence**
+
+* Found in **sedimentary exhalative deposits (SEDEX)**, **volcanogenic massive sulfide (VMS)** deposits, and **Mississippi Valley-type (MVT)** deposits.
+* Often associated with **lead (Pb), copper (Cu), and iron (Fe)** ores.
+
+---
+
+### **Conclusion**
+
+Zinc primarily occurs as **zinc blende (ZnS)** in nature and is mined extensively around the world. Its geological distribution and economic extraction from sulfide ores make it a vital metal used in galvanization, alloys, batteries, and more.
+</md></sn>		
+	<config>
+		<tags>#05.zn</tags>
+		<thumbnail></thumbnail>
+		<heading></heading>
+		<udate>Tue Jul 29 2025 10:44:52 GMT+0600 (Bangladesh Standard Time)</udate>
+		<id>article-2sZxqfBy4y</id>
+		<duration></duration>
+	</config>
