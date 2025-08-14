@@ -1,0 +1,198 @@
+
+	<sn><md data-e="true">## Metallurgic Process of Iron
+
+The metallurgic process of iron involves extracting iron from its ores and refining it for use in construction, machinery, and various other applications. This process primarily involves **three main stages**: **concentration of ore**, **reduction of ore**, and **purification/refining of iron**.
+
+---
+
+### 1. **Raw Material: Iron Ores**
+
+Iron is mainly extracted from the following ores:
+
+* **Hematite (Fe₂O₃)**
+* **Magnetite (Fe₃O₄)**
+* **Limonite (Fe₂O₃·3H₂O)**
+* **Siderite (FeCO₃)**
+
+Among these, hematite is the most commonly used due to its high iron content and ease of reduction.
+
+---
+
+### 2. **Concentration or Dressing of Ore**
+
+The iron ore is first crushed and ground, then concentrated to remove impurities (gangue) like sand and clay. Common concentration methods include:
+
+* **Gravity separation**
+* **Magnetic separation**
+* **Froth flotation**
+
+---
+
+### 3. **Calcination or Roasting**
+
+Before reduction, the ore is heated in the presence of air to:
+
+* Remove moisture
+* Decompose carbonates (in siderite)
+* Oxidize sulphides and organic impurities
+
+**Hematite**, being already an oxide, does not need calcination.
+
+---
+
+### 4. **Reduction in Blast Furnace**
+
+This is the main step in the extraction process.
+
+#### **Inputs**:
+
+* **Iron ore (Fe₂O₃ or Fe₃O₄)**
+* **Coke (carbon)**
+* **Limestone (CaCO₃)**
+* **Hot air blast**
+
+#### **Structure of Blast Furnace**:
+
+* Tall vertical furnace (\~30 meters high)
+* Has different zones (top, middle, and bottom) for different reactions
+
+#### **Key Reactions**:
+
+1. **Combustion of coke**:
+
+   $$
+   C + O_2 \rightarrow CO_2 \quad (\text{exothermic})
+   $$
+
+2. **Formation of carbon monoxide (CO)**:
+
+   $$
+   CO_2 + C \rightarrow 2CO
+   $$
+
+3. **Reduction of iron ore**:
+
+   $$
+   Fe_2O_3 + 3CO \rightarrow 2Fe + 3CO_2
+   $$
+
+4. **Flux reaction (removal of impurities)**:
+
+   $$
+   CaCO_3 \rightarrow CaO + CO_2
+   $$
+
+   $$
+   CaO + SiO_2 \rightarrow CaSiO_3 \quad (\text{slag})
+   $$
+
+#### **Outputs**:
+
+* **Molten iron (pig iron)** — collected at the bottom
+* **Slag (CaSiO₃)** — floats over iron and is removed
+* **Gases** — CO₂, CO, N₂ are vented out
+
+---
+
+### 5. **Types of Iron Obtained**
+
+| Type of Iron     | Carbon %   | Properties                   | Use                      |
+| ---------------- | ---------- | ---------------------------- | ------------------------ |
+| **Pig Iron**     | \~3.5–4.5% | Hard, brittle, not malleable | Further refining         |
+| **Cast Iron**    | \~2–4%     | Hard, brittle                | Machinery, pipes         |
+| **Wrought Iron** | &lt; 0.1%     | Soft, malleable, ductile     | Decorative items, chains |
+| **Steel**        | \~0.1–1.5% | Strong, tough, malleable     | Construction, tools      |
+
+---
+
+### 6. **Refining of Iron**
+
+Pig iron is refined into steel or wrought iron using:
+
+* **Bessemer process**
+* **Open hearth process**
+* **Electric arc furnace**
+
+These processes remove excess carbon and other impurities like sulfur, phosphorus, etc.
+
+---
+
+### Summary Flowchart:
+
+```text
+Iron Ore (Fe₂O₃) 
+     ↓ Concentration
+     ↓ Calcination
+     ↓ Reduction in Blast Furnace
+     ↓
+Pig Iron → Steel (via Refining) or Wrought Iron
+```
+
+---
+
+### References:
+
+* "Metallurgy: Principles and Practice" by D.V. Raghavan
+* J.D. Gilchrist – *Extraction Metallurgy*
+* Class 10/12 NCERT Chemistry textbooks (India)
+
+Let me know if you want a diagram or a detailed breakdown of any specific furnace reaction or refining method.
+</md></sn><sn><md data-e="true">## **Occurrence of Iron (Fe)**
+
+Iron is the **second most abundant metal** in the Earth’s crust (after aluminium) and the **fourth most abundant element overall**, constituting about **5% by weight**. Due to its high reactivity, iron is **not found in the free state**; instead, it occurs in the form of various **oxides, carbonates, and sulfides**.
+
+---
+
+### **1. Common Ores of Iron**
+
+| **Ore Name**    | **Chemical Formula** | **Type**                                 |
+| --------------- | -------------------- | ---------------------------------------- |
+| **Hematite**    | Fe₂O₃                | Oxide                                    |
+| **Magnetite**   | Fe₃O₄                | Oxide                                    |
+| **Limonite**    | Fe₂O₃·xH₂O           | Hydrated oxide                           |
+| **Siderite**    | FeCO₃                | Carbonate                                |
+| **Iron Pyrite** | FeS₂                 | Sulfide *(not used for iron extraction)* |
+
+---
+
+### **2. Geological Occurrence**
+
+* Found mostly in `igneous and metamorphic rocks`.
+* Occurs in **veins**, **banded iron formations (BIFs)**, and `sedimentary deposits`.
+* Often associated with elements like manganese, titanium, and nickel.
+
+---
+
+### **3. Major Producing Countries**
+
+| **Country**   | **Major Mining Regions**                   |
+| ------------- | ------------------------------------------ |
+| **Australia** | Pilbara region                             |
+| **Brazil**    | Minas Gerais, Carajás                      |
+| **China**     | Hebei, Liaoning                            |
+| **India**     | Odisha, Chhattisgarh, Jharkhand, Karnataka |
+| **Russia**    | Kursk Magnetic Anomaly                     |
+| **USA**       | Michigan, Minnesota                        |
+
+---
+
+### **4. Forms of Occurrence**
+
+* **In oxide form:** Hematite and magnetite are the **main commercial ores** used in iron extraction.
+* **In hydrated form:** Limonite is found in bogs and marshy land.
+* **In carbonate form:** Siderite is less commonly used due to difficulty in reduction.
+
+---
+
+### **Conclusion**
+
+Iron is one of the most widely distributed and economically important metals in the Earth’s crust. It primarily occurs in the form of **oxides**, especially **hematite (Fe₂O₃)** and **magnetite (Fe₃O₄)**, which are the **main sources for iron extraction** in blast furnaces worldwide.
+</md></sn>		
+	<config>
+		<tags>#03.fe</tags>
+		<thumbnail></thumbnail>
+		<heading></heading>
+		<udate>Mon Jul 28 2025 22:14:08 GMT+0600 (Bangladesh Standard Time)</udate>
+		<id>article-A9iPelu0ka</id>
+		<duration></duration>
+	</config>
