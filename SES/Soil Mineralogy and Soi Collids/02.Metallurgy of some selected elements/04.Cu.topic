@@ -1,0 +1,99 @@
+
+	<sn><md data-e="true">## Metallurgy of Copper
+
+---
+
+1. **Crushing and Grinding:**
+   The copper ore (usually `chalcopyrite`, CuFeS₂) is crushed and ground into fine powder to prepare it for further processing.
+
+2. **Concentration of Ore:**
+   The powdered ore is concentrated by `froth flotation`, which separates copper-containing minerals from gangue (waste materials).
+
+3. **Conversion to Metal Oxide (Roasting):**
+
+ `Smelting` is a metallurgy technique to extract base metals from their ores with the help of heat and a chemical reducing agent. (Click here for extraction process). Copper Smelting means that the `concentrated ore is heated strongly with silicon dioxide (silica), calcium carbonate (CaCO3) and air in a furnace`. The major steps in the extraction of copper are
+The reaction of these processes can be written as:
+
+$$
+2CuFeS_2+2SiO_2+4O_2 → Cu_2S+2FeSiO_3+3SO_2
+$$
+
+4. **Reduction of Metal Oxide (Smelting &amp; Self-Reduction):**
+
+The copper extracted from this process is mixed with the slag and is called Matte Copper due to its texture and appearance. This mainly consists of $Cu_2S$ which is reduced to pure metal by blasting Matte Copper with air.
+
+   $$
+   Cu_2S+O_2 → 2Cu+SO_2
+   $$
+
+The sulphur dioxide escapes the copper and this causes bubbles to appear and burst as SO2 leaves. This causes the final product to have a very blistery appearance and hence it is called `Blister Copper`; 98 – 99.5 % pure.
+
+5. **Refining of Copper:**
+   Blister copper is refined by `electrolysis`. Pure copper is deposited at the **cathode**, while impurities fall off as **anode mud**.
+
+   $$
+   Cu^{2+} + 2e^- → Cu \quad (\text{at cathode})
+   $$
+
+Copper is an outstanding `conductor of electricity` and combined with its ductility, it is the perfect metal to make `electrical wiring`, both domestic and industrial. The electronic Age would have been just a dream without this metal.
+</md></sn><sn><md data-e="true">## **Occurrence of Copper**
+
+![image](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Copper_%28Element_-_29%29.jpg/640px-Copper_%28Element_-_29%29.jpg)
+
+Copper is a relatively abundant metal in the Earth’s crust (about **0.0068% by weight**) and occurs in both **native (free)** and **combined forms**. Due to its low reactivity, it is sometimes found in the **metallic state**, but more commonly in **combined ores**.
+
+---
+
+### **1. Forms of Occurrence**
+
+#### **a) Native Copper (Free State):**
+
+* Found in small quantities in **oxidized zones** of copper deposits.
+* Occurs in metallic form, especially in arid regions.
+* Example: Native copper (Cu)
+
+#### **b) Combined State (Ores):**
+
+| **Ore Name**      | **Chemical Formula** | **Ore Type** |
+| ----------------- | -------------------- | ------------ |
+| **Chalcopyrite**  | CuFeS₂               | Sulfide      |
+| **Copper Glance** | Cu₂S                 | Sulfide      |
+| **Cuprite**       | Cu₂O                 | Oxide        |
+| **Malachite**     | CuCO₃·Cu(OH)₂        | Carbonate    |
+| **Azurite**       | 2CuCO₃·Cu(OH)₂       | Carbonate    |
+
+---
+
+### **2. Geological Occurrence**
+
+* Copper ores are usually found in **igneous and sedimentary rocks**.
+* Often occurs in **vein deposits**, **porphyry copper deposits**, and **volcanogenic massive sulfide (VMS)** systems.
+* Commonly associated with **zinc, lead, gold, and silver**.
+
+---
+
+### **3. Major Producing Countries**
+
+| **Country**   | **Major Mining Regions**        |
+| ------------- | ------------------------------- |
+| **Chile**     | World’s largest copper producer |
+| **USA**       | Arizona, Utah                   |
+| **Peru**      | Andes Mountains                 |
+| **China**     | Jiangxi, Yunnan                 |
+| **Australia** | Mount Isa                       |
+| **India**     | Rajasthan (Khetri, Malanjkhand) |
+
+---
+
+### **Conclusion**
+
+Copper is found both in native form and more commonly in various chemical combinations. **Chalcopyrite (CuFeS₂)** is the **most important commercial ore**, and significant deposits are mined worldwide to meet the high industrial demand for this versatile metal.
+</md></sn>		
+	<config>
+		<tags>#04.cu</tags>
+		<thumbnail></thumbnail>
+		<heading></heading>
+		<udate>Tue Jul 29 2025 10:50:44 GMT+0600 (Bangladesh Standard Time)</udate>
+		<id>article-d3HRiucOK7</id>
+		<duration></duration>
+	</config>
