@@ -1,0 +1,178 @@
+
+			
+	<config>
+		<tags>#02.al</tags>
+		<thumbnail></thumbnail>
+		<heading></heading>
+		<udate>Mon Jul 28 2025 12:03:01 GMT+0600 (Bangladesh Standard Time)</udate>
+		<id>article-RZqRm88APq</id>
+		<duration></duration>
+	</config>
+<sn class="col-12 col-md-11 ignore p-3 p-lg-5"><h2>Metallurgy of Aluminum</h2><row class="row"><cl class="col-12 col-md-9"><p>Aluminium is the third most abundant element in the Earth's crust and the most abundant metal. Despite its abundance, it does not occur freely in nature due to its high reactivity. Instead, it is found in combined forms such as oxides or silicates. The most common ore of aluminium is <strong>bauxite</strong> (Al₂O₃·2H₂O), and its extraction involves a series of complex processes that require both chemical and electrochemical techniques. This article outlines the major steps involved in the extraction of aluminium from bauxite.</p><p>Bauxite : is the principal ore of aluminium and contains 30–60% aluminium oxide (Al₂O₃), along with impurities such as silica (SiO₂), iron oxides (Fe₂O₃), and titanium dioxide (TiO₂). The first step in aluminium extraction is the purification of bauxite.</p></cl><cl class="col-12 col-md-3"><p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Aluminium-4.jpg/640px-Aluminium-4.jpg" alt="image"></p></cl></row><p>We know there are 5 process involve in Metal Extraction</p><ul><li class="fg-pink">Crushing and Grinding</li><li class="fg-red">Concentration</li><li class="fg-teal">Ore to Metal Oxide</li><li class="fg-yellow">Reduction of Metal Oxide</li><li class="fg-purple">Refining</li></ul></sn><sn class="col-12 col-md-11 ignore p-3 p-lg-5"><h2>(1) Crushing</h2><p>Bauxite is crushed and ground into a fine powder</p></sn><sn class="col-12 col-md-11 ignore p-3 p-lg-5"><md data-e="true">## (02) Concentration: `Bayer’s Process`
+
+The Bayer Process is used to refine bauxite into pure aluminium oxide (alumina).
+
+#### **Steps:**
+
+- Chemcial Leaching or Solvent NaOH
+- Hydrolysis
+- Calcination (though in process 3 but includes in Bayers Process)
+
+---
+
+1. **Digestion with NaOH (Caustic Soda):**
+
+   * The powdered bauxite is heated under pressure with a concentrated solution of sodium hydroxide (NaOH) at around 140–240°C.
+   * **Chemical Reaction:**
+
+     $$
+     \text{Al}_2\text{O}_3·2\text{H}_2\text{O} + 2\text{NaOH} → 2\text{NaAlO}_2 + 3\text{H}_2\text{O}
+     $$
+   * The aluminium oxide dissolves, forming sodium aluminate, while the impurities remain undissolved.
+
+
+---
+
+  The undissolved impurities (called red mud) are removed by filtration.
+
+---
+
+2. **Hydrolysis/Precipitation:**
+
+   * The sodium aluminate solution is cooled and seeded with pure alumina crystals to precipitate aluminium hydroxide.
+
+     $$
+     \text{NaAlO}_2 + 2\text{H}_2\text{O} → \text{Al(OH)}_3 + \text{NaOH}
+     $$
+
+</md></sn><sn class="col-12 col-md-11 ignore p-3 p-lg-5"><md data-e="true">## (3) Ore to Metal Oxide
+---
+
+Either **Roasting** or **Calcination**
+
+Though it already contains Oxygen so the process is  **Calcination**
+
+
+#### Calcination
+
+ The aluminium hydroxide is heated strongly (above 1000°C) to obtain pure aluminium oxide
+
+$$
+   2\text{Al(OH)}_3 → \text{Al}_2\text{O}_3 + 3\text{H}_2\text{O}
+$$
+
+   </md></sn><sn class="col-12 col-md-11 ignore p-3 p-lg-5"><md data-e="true">##  (4) Reduction of Metal Oxide : `Hall–Héroult Process`
+---
+
+Pure aluminium oxide obtained from the Bayer process is reduced to aluminium metal by electrolysis in the Hall–Héroult process.
+
+As aluminum oxide is stable and higly reactive so the oxygen will not removed by reducing agent or heating.So involve in **Electrolytic** process to reduce oxygen and extract pure metal.
+
+#### **Electrolytic Cell:**
+
+![image](https://images.nagwa.com/figures/explainers/213180242428/1.svg)
+
+* **Electrolyte:** Molten aluminium oxide (Al₂O₃) dissolved in molten cryolite (Na₃AlF₆)
+* **Cathode:** Carbon lining of the electrolytic cell
+* **Anode:** Carbon rods
+
+ &gt; *Cryolite* acts as a flux and lowers the melting point of alumina from **2000°C to about 950°C**, saving energy.
+
+
+#### **Reactions:**
+
+* **At Cathode (Reduction):**
+
+  $$
+  \text{Al}^{3+} + 3e^- → \text{Al (l)}
+  $$
+
+* **At Anode (Oxidation):**
+
+  $$
+  2\text{O}^{2-} → \text{O}_2 + 4e^-
+  $$
+
+  The oxygen reacts with carbon anodes to produce CO and CO₂:
+
+  $$
+  \text{C} + \text{O}_2 → \text{CO}_2
+  $$
+
+#### **Products:**
+
+* **Aluminium metal** is collected at the bottom of the cell.
+* **Carbon dioxide** is released at the anode, which gradually burns away and must be replaced periodically.
+</md></sn><sn class="col-12 col-md-11 ignore p-3 p-lg-5"><md data-e="true">## (5) Refining Metal
+---
+
+1. The aluminium obtained from the Hall–Héroult process is around **99–99.5% pure** and contains impurities like Fe, Si, etc.
+2. To achieve higher purity (up to 99.99%), **Hoopes Electrolytic Refining Process** is used.
+3. The electrolytic cell consists of **three layers**:
+
+   * **Top layer (Anode):** Impure aluminium
+   * **Middle layer:** Electrolyte (a mixture of molten cryolite, BaF₂, and NaF)
+   * **Bottom layer (Cathode):** Molten pure aluminium
+4. When **current is passed**, aluminium ions from the anode dissolve into the electrolyte.
+5. These ions migrate to the cathode and get reduced to pure aluminium.
+6. Impurities like Fe and Si do not dissolve in the electrolyte and are left behind.
+7. **Reaction at Anode (Oxidation):**
+
+   $$
+   \text{Al (impure)} → \text{Al}^{3+} + 3e^-
+   $$
+8. **Reaction at Cathode (Reduction):**
+
+   $$
+   \text{Al}^{3+} + 3e^- → \text{Al (pure)}
+   $$
+9. The process continues until most of the impure aluminium is consumed.
+10. This method produces **ultra-pure aluminium (99.99%)** used in electrical conductors and special alloys.
+</md></sn><sn class="col-12 col-md-11 ignore p-3 p-lg-5"><md data-e="true">## **Occurrence of Aluminium**
+
+Aluminium is the **most abundant metal** and the **third most abundant element** (after oxygen and silicon) in the Earth's crust, constituting about **8.1% by weight**. However, due to its high reactivity, aluminium **never occurs in the free state** in nature. It is always found in **combined forms**, mainly as **oxides** and **silicates**.
+
+---
+
+### **1. Common Aluminium Minerals (Ores)**
+
+| Ore Name      | Chemical Formula | Type         |
+| ------------- | ---------------- | ------------ |
+| **Bauxite**   | Al₂O₃·2H₂O       | Oxide ore    |
+| **Cryolite**  | Na₃AlF₆          | Fluoride ore |
+| **Corundum**  | Al₂O₃            | Oxide ore    |
+| **Kaolinite** | Al₂Si₂O₅(OH)₄    | Silicate ore |
+
+---
+
+### **2. Major Occurrence Locations**
+
+| Country       | Major Deposits / Locations        |
+| ------------- | --------------------------------- |
+| **Australia** | World’s largest bauxite reserves  |
+| **Guinea**    | High-grade bauxite in West Africa |
+| **India**     | Odisha, Jharkhand, Maharashtra    |
+| **Brazil**    | Amazon Basin                      |
+| **China**     | Shanxi and Guizhou provinces      |
+| **Jamaica**   | Extensive bauxite belts           |
+
+---
+
+### **3. Forms of Occurrence**
+
+* **In Igneous Rocks:** As feldspar and mica (e.g., orthoclase, muscovite)
+* **In Sedimentary Rocks:** As bauxite, formed from weathering of aluminium-rich rocks
+* **In Soil:** As clay minerals (e.g., kaolinite)
+
+---
+
+### **4. Industrially Important Ore**
+
+* **Bauxite** is the **main commercial source** of aluminium. It is processed via the **Bayer process** to extract alumina (Al₂O₃), which is then reduced by **electrolysis** to obtain pure aluminium.
+
+---
+
+### **Conclusion**
+
+Aluminium is widely distributed in nature in the form of various ores, particularly bauxite. Although it is never found in free form due to its reactivity, the large availability of bauxite makes aluminium extraction economically feasible and industrially significant.
+</md></sn>
