@@ -1,0 +1,110 @@
+
+	<sn><md data-e="true">## Important Questions and Answers: *Metallurgy of Some Selected Elements*
+
+---
+
+**Topic: Occurrence and Extraction of Al, Fe, Cu, Zn**
+
+---
+
+### 1. Describe the extraction of aluminium from bauxite by the electrolytic method. *(4 Marks)*
+
+**Answer:**
+**Extraction Process:**
+Aluminium is extracted from **bauxite (Al₂O₃·2H₂O)** through the **electrolytic reduction** process known as the **Hall-Héroult process**.
+
+**Steps:**
+
+1. **Purification:**
+
+   * Bauxite is purified using the **Bayer process** to obtain pure alumina (Al₂O₃).
+
+2. **Electrolysis:**
+
+   * Electrolysis is carried out in a **steel tank lined with carbon**.
+   * **Molten cryolite (Na₃AlF₆)** is added to **lower the melting point** of alumina and increase conductivity.
+   * **Electrodes:** Carbon cathode (tank lining) and graphite anodes.
+
+   **Reactions:**
+
+   * At cathode:
+     $\text{Al}^{3+} + 3e^- \rightarrow \text{Al (l)}$
+   * At anode:
+     $\text{O}^{2-} \rightarrow \frac{1}{2}\text{O}_2 + 2e^-$
+     Oxygen reacts with carbon anode to form CO or CO₂.
+
+**Overall Reaction:**
+
+$$
+2\text{Al}_2\text{O}_3 \rightarrow 4\text{Al} + 3\text{O}_2
+$$
+
+---
+
+### 2. Write the principal ores of iron and explain the blast furnace process. *(3 Marks)*
+
+**Answer:**
+
+**Principal Ores of Iron:**
+
+* **Hematite (Fe₂O₃)**
+* **Magnetite (Fe₃O₄)**
+* **Limonite (Fe₂O₃·3H₂O)**
+* **Siderite (FeCO₃)**
+
+**Blast Furnace Process:**
+
+* **Raw Materials:** Hematite, coke, limestone
+* **Zones in Blast Furnace:**
+
+  1. **Combustion Zone (bottom):**
+     $\text{C} + \text{O}_2 \rightarrow \text{CO}_2$
+  2. **Reduction Zone (middle):**
+     $\text{Fe}_2\text{O}_3 + 3\text{CO} \rightarrow 2\text{Fe} + 3\text{CO}_2$
+  3. **Slag Formation (top):**
+     $\text{CaCO}_3 \rightarrow \text{CaO} + \text{CO}_2$
+     $\text{CaO} + \text{SiO}_2 \rightarrow \text{CaSiO}_3$ (slag)
+
+**Output:**
+Molten iron collects at the bottom and slag floats on top.
+
+---
+
+### 3. Discuss the extraction of copper from copper pyrites (CuFeS₂). *(3 Marks)*
+
+**Answer:**
+
+**Steps of Extraction:**
+
+1. **Concentration:**
+
+   * Copper pyrites are crushed and concentrated by **froth flotation**.
+
+2. **Roasting:**
+
+   * The concentrated ore is roasted in air:
+     $2CuFeS_2 + O_2 \rightarrow Cu_2S + 2FeS + SO_2$
+     $2FeS + 3O_2 \rightarrow 2FeO + 2SO_2$
+
+3. **Smelting:**
+
+   * The roasted product is heated with **silica** in a blast furnace:
+     $FeO + SiO_2 \rightarrow FeSiO_3$ (slag)
+     $Cu_2S remains in molten form$
+
+4. **Bessemerization (Self Reduction):**
+
+   * Air is blown into molten mixture:
+     $Cu_2S + 2Cu_2O \rightarrow 6Cu + SO_2$
+
+**Final Product:**
+Blister copper (about 98% pure) is refined electrolytically to obtain pure copper.
+</md></sn>		
+	<config>
+		<tags>#qna</tags>
+		<thumbnail></thumbnail>
+		<heading></heading>
+		<udate>Tue Jul 29 2025 16:47:28 GMT+0600 (Bangladesh Standard Time)</udate>
+		<id>article-26I8cZvr3j</id>
+		<duration></duration>
+	</config>
