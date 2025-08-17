@@ -1,10 +1,25 @@
 
-	<sn></sn>		
+	<sn><md>## Concept1{.fg-red .text-end}
+
+#### Rahul writes a letter {.text-center}
+
+* `writes` main verb
+* `Rahul` subject
+* `letter` object
+
+Subject and Object is not sentence properites,rather they are verb properties
+
+* Rahul is the ==Subject of the sentence==. (❌)
+* Rahul is the ==Subject of the verb==. (✔️)
+
+In a sentence, the `subject` and `object` are not independent elements; rather, they are connected to the verb{.bar}
+
+Though they are proposition object,but for now just understand subject and object is the properties of verb,who does that,what he does{.text-light}</md></sn>		
 	<config>
 		<tags>#00.verb</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Aug 12 2025 06:53:45 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Aug 17 2025 09:51:18 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-FV27vfNqbw</id>
 		<duration></duration>
 	</config>
