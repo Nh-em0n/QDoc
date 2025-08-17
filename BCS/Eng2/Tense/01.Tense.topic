@@ -1,10 +1,27 @@
 
-	<sn></sn>		
+	<sn><md>## Tense{.fg-red .text-center}
+
+A `set of verb form` describe the time of a action when it occur.
+
+#### An action can occur in
+* `Present` ( Emon ==plays== hockey )
+* `Past`    ( Emon ==played== hockey )
+* `Future`  ( Emon ==will play== hockey )
+
+</md></sn>		
 	<config>
 		<tags>#01.tense</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Aug 17 2025 11:05:19 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Aug 17 2025 11:16:17 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-TUSgN4aDb0</id>
 		<duration></duration>
 	</config>
+<sn class="col-12 ignore p-3 p-lg-5"><md>## Tense Categories(`12`) {.fg-red .text-center}
+
+
+| Tense Category | `Simple`                             | `Continuous` (Progressive)               | `Perfect`                                               | `Perfect Continuous`                                      |
+| -------------- | ---------------------------------- | -------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------- |
+| **Present**    | Used for habits, facts, routines   | Used for actions happening now         | Used for completed actions relevant to now            | Used for actions started in past, continuing now        |
+| **Past**       | Used for completed actions in past | Used for ongoing actions in the past   | Used for actions completed before another past action | Used for ongoing actions before another past action     |
+| **Future**     | Used for actions that will happen  | Used for ongoing actions in the future | Used for actions completed before a future time       | Used for actions continuing up to a point in the future |</md></sn>
