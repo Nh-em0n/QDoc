@@ -12,7 +12,7 @@
 		<tags>#02.simple present tense</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Aug 17 2025 11:44:25 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Aug 17 2025 12:19:53 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-7mqguddJDv</id>
 		<duration></duration>
 	</config>
@@ -39,4 +39,53 @@ Now
 * Pluaral Verb `v1` for Plural Noun
   * `They` ==eat== mango.
 
+</md></sn><sn><md>## I `Exception` {.text-center}
+
+Though `I` is a singluar noun so It should take singular verb but `I` has some exception
+
+* I `eats` mango. ( ❌ )
+* I `eat` mango. (✔️) 
+
+
+| Only take singluar verb | Else take all plural verb |
+|----------|----------|
+| am,was    | do,have,write,eat    |
+</md></sn><sn><md>## U1 : Habitual , Repeated Action {.fg-red .text-end}
+
+* My mother ==goes== to temple everyday.
+* I ==get== up early in the morning.
+* My father ==works== late at night.
+
+### Time expressions of Habitual actions
+
+| every + time | Column 2 |
+|----------|----------|
+| every day    | seldom,never,often,usually    |
+| every night    | Occasionally,frequently,usually,generally    |
+| every morning,evening   | Once/Twice a week     |
+| every week,month,year    | hardly,rearely,scarcel,    |
+|  daily  | *Always    |
+
+
+#### She is hardly talking to me.{.text-center}
+
+* The given sentence is in present continuos tense
+* Okay,but the word `hardly` represent that the action is `habitual`,the it must be in present simple form
+* The structure of present simple form is ==sub+ v1/v5 + obj== ,as `she` is singular so verb will be in `singular v5` form
+* Ans . **Sub + v5 + obj**
+* Ans . She hardly ==talks== to me
+
+#### She is seldom coming late.{.text-center}
+* The given sentence is in present continuos tense
+* Okay,but the word `seldom` represent that the action is `habitual`,the it must be in present simple form
+* The structure of present simple form is ==sub+ v1/v5 + obj== ,since `she` is singular so verb will be in `singular v5` form
+* Ans . **Sub + v5 + obj**
+* Ans . She seldom ==comes== late
+
+#### During holidays we are often working in my uncle school{.text-center}
+* The given sentence is in present continuos tense
+* Okay,but the word `often` represent that the action is `habitual`,the it must be in present simple form
+* The structure of present simple form is ==sub+ v1/v5 + obj== ,since `we` is plural so verb will be in `plural v1` form
+* Ans . **Sub + v1 + obj**
+* Ans . During holidays we often ==work== in my uncle school
 </md></sn>
