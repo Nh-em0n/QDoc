@@ -1,5 +1,5 @@
 
-	<sn><md>## Concept1{.fg-red .text-end}
+	<sn><md>## Concept{.fg-red .text-end}
 
 #### Rahul writes a letter {.text-center}
 
@@ -19,7 +19,62 @@ Though they are proposition object,but for now just understand subject and objec
 		<tags>#00.verb</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Aug 17 2025 09:51:18 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Aug 17 2025 10:47:46 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-FV27vfNqbw</id>
 		<duration></duration>
 	</config>
+<sn><md>## Verb Basic Categories{.fg-red .text-end}
+
+
+| **Category**     | **Subcategory** | **Examples**                                                                                            |
+| ---------------- | --------------- | ------------------------------------------------------------------------------------------------------- |
+| **Helping Verb** | **Primary**     | **Be** → am, is, are, was, were <br> **Have** → have, has, had <br> **Do** → do, does, did |
+|                  | **Modal**       | can, could, will, would, shall, should, may, might, must , need, dare, used to, ought to                 |
+| **Main Verb**    | –               | run, eat, play, write, sing, jump, read, think, etc.                                                    |
+
+::: .bar
+### In English
+* Primary Verb + Main Verb = Chapter ==Tense==
+* Modal        + Main Verb = Chapter ==Modal==
+:::</md></sn><sn><md>## Concept{.fg-red .text-center}
+
+* When a sentece has only `one verb` , the verb become ==main verb==.
+  * She `runs` fast.
+  * I `eat` banana.
+  * Sometimes the `helping verb` act as a ==main verb==
+    * I `am` Emon.
+    * She `has` an idea.
+* If a sentece has 2 verb the first one is ==helping verb== and second one is ==main verb==
+  * I *can* `eat` banana. 
+  * He *is* `writting` a letter.
+  * Helping Verb always occur before the main verb.{.bar}
+
+#### Primary Helping is formed based on `Time` and `Person` {.bar}
+
+| Basis   | Present Form      | Past Form |
+|---------|------------------|-----------|
+| Time    | have, has        | had       |
+| Person  | have (plural)    | has (singular) |
+
+
+::: .bar
+#### So primary helping verb denotes 
+* `Time` of the main verb and 
+* `Person` of the verb subject.
+:::
+
+
+
+</md></sn><sn><md>## Fact{.text-end .fg-red}
+
+We denote
+* `hv` : Helping Verb
+* `mv` : Main Verb
+
+
+| Description | Example |
+|----------|----------|
+| When a sentence does not use a hv, the **subject** is followed directly by the **mv**    | She ==runs== fast    |
+| When a hv is used, it comes **between the subject and the main verb**    | `She` ==is== `running` fast    |
+| Some helping verbs can also work as main verbs when they stand alone in a sentence    | I ==do== my homework    |
+</md></sn>
