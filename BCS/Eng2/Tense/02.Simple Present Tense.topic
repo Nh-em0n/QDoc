@@ -12,7 +12,7 @@
 		<tags>#02.simple present tense</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Aug 17 2025 13:09:34 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Aug 17 2025 13:26:36 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-7mqguddJDv</id>
 		<duration></duration>
 	</config>
@@ -160,4 +160,20 @@ A fixed action refer an action which has 99% chances of occuring.
 * Fixed future 99% ,used present simple tense,ok no error found
 #### I `buy` a flat soon.{.text-center}
 * Future flavour,not in fixed future but used in present simple tense,so it is error,it should be in future simple tense
-* Ans : I `will buy` a flat soon</md></sn>
+* Ans : I `will buy` a flat soon</md></sn><sn><md>## Affirmative Negative and Interrogative{.fg-red .text-center}
+---
+
+Simple Present Tense has no `hv` is its affirmative structure.We use `do/does` as a `hv` in its negative and interrogative form.Where `do` is for plural noun and `does` is for singular noun.
+
+::: .bar
+#### 📝Note{.fg-blue}
+* ==Do/Does/Did== is only used as `hv` for negative and interrogative form, ==not for simpler form==
+* The main verb in negative and interrogative is always `v1`,as ==hv represent the Person==
+:::
+
+| Affrimative | Interrogative | Negative |
+|----------|----------|----------|
+| sub + v1 / v5 + obj    | hv + sub + v1 + obj    | sub + hv + not + v1 + obj    |
+| She goes to school    | Does she `go` to scrool    | She does not `go` to school.    |
+| We need him   | Do we `need` him    | We do not `need` him    |
+</md></sn>
