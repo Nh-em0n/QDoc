@@ -19,7 +19,7 @@ Though they are proposition object,but for now just understand subject and objec
 		<tags>#00.verb</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Aug 17 2025 10:47:46 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Aug 17 2025 10:59:00 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-FV27vfNqbw</id>
 		<duration></duration>
 	</config>
@@ -77,4 +77,17 @@ We denote
 | When a sentence does not use a hv, the **subject** is followed directly by the **mv**    | She ==runs== fast    |
 | When a hv is used, it comes **between the subject and the main verb**    | `She` ==is== `running` fast    |
 | Some helping verbs can also work as main verbs when they stand alone in a sentence    | I ==do== my homework    |
+</md></sn><sn><md>## Verb form{.fg-red .text-center}
+
+Based on `Time and Person`
+
+| v1 | v2 | v3 | v4 (`+ing`) | v5 (`+s/es`) |
+|-------|-------|-------|-------|-------|
+| play | played | played | playing | plays |
+| do | did | done | doing | does |
+| have | had | had | having | has |
+
+#### Where both v1 and v5 represent the ==present form== but
+* `v1` is plural
+* `v5` is Singular
 </md></sn>
