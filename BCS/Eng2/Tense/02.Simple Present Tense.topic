@@ -1,10 +1,42 @@
 
-	<sn></sn>		
+	<sn><md>## Simple Present Tense{.fg-red .text-center}
+
+::: .bar
+### Used for
+==habit , fact , universal truth , fixed action in future==
+
+### Structure
+* Sub + `v1 / v5` + Obj
+:::</md></sn>		
 	<config>
 		<tags>#02.simple present tense</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Aug 17 2025 11:24:23 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Aug 17 2025 11:44:25 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-7mqguddJDv</id>
 		<duration></duration>
 	</config>
+<sn><md>## Concept{.fg-red .text-center}
+
+If you follow this note,then you already familiar with verb ==five form==,where both `v1` and `v5` used in present form.
+
+Now when to use `v1` and `v5` actually depend on ==Person== is Singular or Plural. 
+
+| Singular Noun | Pluarl Noun |
+|----------|----------|
+| Chair    | Chair`s`    |
+| Mango    | Mango`es`    |
+
+
+| Pluarl Verb ( **v1** ) | Singular Verb( **v5** ) |
+|----------|----------|
+| Eat    | `Eats`    |
+| Walk    | `Walks`    |
+
+Now
+* Singular Verb `v5` for Singular Noun
+  * `He` ==eats== mango.
+* Pluaral Verb `v1` for Plural Noun
+  * `They` ==eat== mango.
+
+</md></sn>
