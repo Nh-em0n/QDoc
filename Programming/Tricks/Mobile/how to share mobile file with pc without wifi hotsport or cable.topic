@@ -1,10 +1,57 @@
 
-	<sn></sn>		
+	<sn><md>## Sharing File
+
+After 5 years I found a simple solution to share my mobile file with my PC.
+It does not require any Wi-Fi connection, hotspot, cable, or external software.
+
+### Connect within 10 Seconds
+
+1. Download [FE File Explorer](https://www.gooog.com)
+
+2. Install it
+
+3. Open it
+
+4. Click on **`FTP Server`**
+
+   ![click-on-ftp-server](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/Tricks/Mobile/P1.png)
+
+5. You will see a prompt like this. Copy the **`IP`** and **`Port`**.
+
+   ![copy-ip-and-port](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/Tricks/Mobile/P2.png)
+
+6. Open Windows **File Explorer** → go to the **address bar** and paste like this:
+
+   ```bash
+   ftp://IP:Port
+   ```
+
+   Example (for me the FTP URL is):
+
+   ```bash
+   ftp://10.133.126.166:2121
+   ```
+
+   ![pasted-in-desktop](https://i.imgur.com/2fzYNMF.png)
+
+---
+
+### Result
+
+Now you can access your mobile storage on your desktop:
+
+![mobile-storage-in-desktop](https://i.imgur.com/3g8WqWn.png)
+
+---
+
+### Thank You{.fg-blue .text-center}
+
+</md></sn>		
 	<config>
 		<tags>#how to share mobile file with pc without wifi hotsport or cable</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Aug 26 2025 08:36:54 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Aug 26 2025 09:08:47 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-VGqn3d8J4X</id>
 		<duration></duration>
 	</config>
