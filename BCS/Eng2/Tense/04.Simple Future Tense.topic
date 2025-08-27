@@ -1,10 +1,57 @@
 
-	<sn></sn>		
+	<sn><md>## Future Simple{.fg-red .text-center}
+
+:::.bar
+#### $\text{sub + shall/will + v1}$
+Action that happen future
+:::
+
+| shall | will |
+|----------|----------|
+| I,we    | I,we,it,you,they   |
+</md></sn>		
 	<config>
 		<tags>#04.simple future tense</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Aug 27 2025 16:28:56 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Aug 27 2025 16:54:50 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-fB6i1TQLom</id>
 		<duration></duration>
 	</config>
+<sn><md>### U1 : Future Action {.fg-red .text-center}
+
+---
+
+* I `shall` go to Delhi tomorrow.
+* He `will` buy a car soon.</md></sn><sn><md>## U2 : Conditional Clause {.fg-red .text-center}
+
+:::.bar
+#### $\text{TC + (Present) , (Future)}$
+#### $\text{(Future) , TC + (Present)}$
+:::
+
+### Time and Condition denoting words{.text-end}
+
+| TC Word          | Meaning in Bengali   |
+| ------------- | -------------------- |
+| if            | যদি                  |
+| when          | যখন                  |
+| till          | পর্যন্ত              |
+| until         | পর্যন্ত              |
+| unless        | যদি না               |
+| as soon as    | যেভেত্ত্ত/যেনই দ্রুত |
+| as long as    | যতক্ষণ পর্যন্ত       |
+| in case       | যদি এমন হয় যে       |
+| provided that | শর্ত হলো যে          |
+| before        | আগে                  |
+| after         | পরে                  |
+
+| Incorrect                                                                                | Correct                                                                      |
+| --------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `Unless` ==you will== work hard,you will not succeed. {.text-center}                    | Unless you work hard (present form), you will not succeed                        |
+| I shall help him to get the job `provided that` ==he will== give me 50k. {.text-center} | I shall help him to get the job provided that he ==gives== (present) me 50k.     |
+| All the flowers in his garden will die `before` the ==rain will== fall. {.text-center}  | All the flowers in his garden will die before the rain ==falls== (present form). |
+
+
+As rain is ==incountable noun==.
+</md></sn>
