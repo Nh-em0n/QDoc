@@ -16,49 +16,173 @@ Action continue at the moment.
 		<tags>#05.present continuous tense</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Aug 27 2025 18:01:40 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Aug 27 2025 19:24:58 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-xNKPBCVswI</id>
 		<duration></duration>
 	</config>
-<sn><md>## Verb
+<sn><md>## State Verb Problem{.fg-red .text-center}
 
-We can not used continuous tense with state verb. {.bar}
+We cannot use continuous tense with **state verbs**. {.bar}
 
-| State | Action |
-| -------- | -------- |
-| mv gives information         |  mv does physical activities        |
-| simple tense used instead of continuous         |  continuos can be used |
-| She is liking chocolate(error) She ==likes== chocolate         | He `is writing` a letter.         |
-|  He is knowing me(error) He ==knows== me.        | They `are playing` hockey.         | 
+| State                                                     | Action                    |
+| --------------------------------------------------------- | ------------------------- |
+| Gives information                                         | Does physical activities  |
+| Simple tense used instead of continuous                   | Continuous can be used    |
+| She is liking chocolate (error) → She **likes** chocolate | He `is writing` a letter  |
+| He is knowing me (error) → He **knows** me                | They `are playing` hockey |
 
+### Common State Verbs
 
-### common state verb
-
-* love,hate,like,remember,forget,notice,recongnize,prefer,wish,want,desire,believe,belong,know,agree,own,contain,consits,
-* see,hear,taste,smell,appear,have
+* love, hate, like, remember, forget, notice, recognize, prefer, wish, want, desire, believe, belong, know, agree, own, contain, consist
+* see, hear, taste, smell, appear, have
 
 ---
-| Question | Answer |
-| -------- | -------- |
-| He is `believing` in God.         | He belives in God.         |
-| I am `understanding` you.         |  I `understand` you.        |
-| She suddenly felt foolish for believing David.         | here ==believing== is not continuous because there is `no be verb` also believing `act as noun`          |
-| Foreign visitors with little `understanding` of English.         | no mistake ,because though understand is state verb the ing is not for continuous tense it is act as noun,if it is continuos then there must be be verb ami/is/are with it        |
 
-### Exception{.text-center}
+| Question                                                 | Answer                                                                                |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| He is `believing` in God.                                | He **believes** in God                                                                |
+| I am `understanding` you.                                | I **understand** you                                                                  |
+| She suddenly felt foolish for believing David.           | Here **believing** is not continuous because there is no *be* verb; it acts as a noun |
+| Foreign visitors with little `understanding` of English. | No mistake, because **understanding** acts as a noun, not continuous tense            |
 
-State verb may used in continuos only if its meaning change in the sentence. {.bar}
+### Exception {.text-center}
 
+State verbs **may be used in continuous** only if their meaning changes in context.
+
++++ see exceptions
 
 :::.bar
-#### See - percieve with eyes
-* state verb so can not used in continuos tense
-* can used in continuos if it change its meaning
+#### See – perceive with eyes
+* Normally cannot be used in continuous tense
+* Can be used continuously if meaning changes
 :::
 
-| Incorrect | Correct |
-| -------- | -------- |
-| My father `is seeing` that you are not doing the work properly. | My father `sees` that ..... |
-| He `is seeing` me coming towards him    | He is `sees` me coming towards him. |
-| My mother `is seeing` the doctor again   | correct as see denote to meet.          |
+| Incorrect                                                       | Correct                          |
+| --------------------------------------------------------------- | -------------------------------- |
+| My father `is seeing` that you are not doing the work properly. | My father **sees** that ...      |
+| He `is seeing` me coming towards him                            | He **sees** me ...               |
+| My mother `is seeing` the doctor again                          | Correct, as *see* denotes *meet* |
+
+---
+
+:::.bar
+#### Hear – perceive with ears
+* Normally cannot be used in continuous tense
+* Can be used continuously if meaning changes
+:::
+
+| Incorrect                                           | Correct                                |
+| --------------------------------------------------- | -------------------------------------- |
+| She `is hearing` a noise                            | She **hears** a noise                  |
+| My father `is hearing` that you are going to London | My father **hears** that ...           |
+| The judge `is hearing` a case today                 | Correct, as *hear* denotes *listen to* |
+
+---
+
+:::.bar
+#### Taste – the flavour of something
+* Normally cannot be used in continuous tense
+* Can be used continuously if meaning changes
+:::
+
+| Incorrect                     | Correct                     |
+| ----------------------------- | --------------------------- |
+| Sugar `is tasting` sweet      | Sugar **tastes** sweet      |
+| My wife `is tasting` the soup | Represents action (tasting) |
+
+---
+
+:::.bar
+#### Smell
+* Normally cannot be used in continuous tense
+* Can be used continuously if meaning changes
+:::
+
+| Incorrect                     | Correct               |
+| ----------------------------- | --------------------- |
+| A rose `is smelling` sweet    | Rose **smells** sweet |
+| She `is smelling` the flowers | Action                |
+
+---
+
+:::.bar
+#### Appear – to seem
+* Normally cannot be used in continuous tense
+* Can be used continuously if meaning changes (to come out, to be published)
+:::
+
+| Incorrect                                     | Correct                              |
+| --------------------------------------------- | ------------------------------------ |
+| The exam `is appearing` to be difficult       | The exam **appears** to be difficult |
+| It `is appearing` to me that you will succeed | It **appears** to me that ...        |
+| My new book `is appearing` next month         | Correct, denotes *publish*           |
+| Now, the artist `is appearing` on the stage   | Correct, denotes *come out*          |
+
+---
+
+:::.bar
+#### Have – own/possess
+* Normally cannot be used in continuous tense
+* Can be used continuously if meaning changes (eat, drink, spend time)
+:::
+
+| Incorrect                           | Correct                        |
+| ----------------------------------- | ------------------------------ |
+| He `is having` a great family       | He **has** a great family      |
+| I `am having` three children        | I **have** three children      |
+| I `am having` lunch                 | Correct, denotes eating        |
+| He `is having` good time these days | Correct, denotes spending time |
+
++++
+</md></sn><sn><md>### Test Yourself {.text-center}
+
++++ see questions
+
+#### Are you hearing a noise?
+
+* `hear` is a state verb, so it cannot be used in continuous form; it should be in **present simple**.
+* **Are you hear a noise?** – Incorrect, because present simple does not use a helping verb like *are*.
+* Correct form: **Do you hear a noise?**
+
+---
+
+#### It is appearing to me that my friends are plotting against me.
+
+* `appear` is a state verb, so it cannot be used in continuous form; it should be in **present simple**.
+* Correct form: **It appears to me that my friends are plotting against me.**
+
+---
+
+#### You are a very lovable person, but I am not loving you.
+
+* `love` is a state verb, so it cannot be used in continuous form; it should be in **present simple**.
+* Correct form: **You are a very lovable person, but I do not love you.**
+
+---
+
+#### It is `smelling` so nice that I feel like eating it.
+
+* `smell` is a state verb, so it cannot be used in continuous form; it should be in **present simple**.
+* Correct form: **It smells so nice that I feel like eating it.**
+
+---
+
+Do not confuse state verbs + `-ing` forms when they are **not part of continuous tense**, as sometimes they appear as nouns. {.bar}
+
+---
+
+#### On hearing the siren, the thief ran away.
+
+* `hear` is a state verb and cannot be used in continuous tense.
+* However, here it is **not continuous** because there is no form of *be*.
+* Using `-ing` is correct in this context.
+* Sentence is correct.
+
+---
+
+#### Seeing the mistake, she corrected it immediately.
+
+* Correct.
+
++++
 </md></sn>
