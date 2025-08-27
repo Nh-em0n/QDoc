@@ -14,7 +14,7 @@ Actions ==finished or completed== in Past
 		<tags>#03.simple past tense</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Aug 27 2025 15:56:48 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Aug 27 2025 16:10:20 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-6OqlRFNZZA</id>
 		<duration></duration>
 	</config>
@@ -86,4 +86,17 @@ Actions ==finished or completed== in Past
 * *It is opportune time* the govt **took** action on smoking.
 
 
-</md></sn><sn></sn>
+</md></sn><sn><md>## Past Habit {.fg-red .text-center}
+
+| Habit of Past | Habit of Present |
+|----------|----------|
+| $\text{Sub + used to + v1}$    | $\text{sub + be + used to + v-ing}$ |
+| I used to gamble.    | I am used to gambling.   |
+| She used to smoke.    | She is used to smoking.   |
+</md></sn><sn><md>## Negative and Interrogative{.fg-red .text-center}
+
+| Affirmative | Interrogative |Negative |
+|----------|----------|----------|
+| $\text{sub + v2 + obj}$    | $\text{Did + sub + v1 ?}$   | $\text{sub + did + not + v1}$   |
+| She ate food.    | Did she eat food.   |She did not eat food. |
+</md></sn>
