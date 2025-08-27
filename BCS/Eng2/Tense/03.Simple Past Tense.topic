@@ -2,7 +2,7 @@
 	<sn><md>## Simple Past Tense{.fg-red .text-end}
 
 :::.bar
-### Sub + $v_2$ + Obj {.text-center}
+### $\text{ Sub + v2 + Obj}$ {.text-center}
 Actions ==finished or completed== in Past
 :::
 
@@ -14,7 +14,7 @@ Actions ==finished or completed== in Past
 		<tags>#03.simple past tense</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Aug 27 2025 16:10:20 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Aug 27 2025 16:28:16 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-6OqlRFNZZA</id>
 		<duration></duration>
 	</config>
@@ -58,7 +58,7 @@ Actions ==finished or completed== in Past
 | It is opportune time    |
 | Means : This is the right time   |
 
-### A + sub + $v_2$ {.text-center}
+### $\text{A + sub + v2}$ {.text-center}
 
 :::.bar
 #### Concept
@@ -99,4 +99,81 @@ Actions ==finished or completed== in Past
 |----------|----------|----------|
 | $\text{sub + v2 + obj}$    | $\text{Did + sub + v1 ?}$   | $\text{sub + did + not + v1}$   |
 | She ate food.    | Did she eat food.   |She did not eat food. |
-</md></sn>
+</md></sn><sn><md>## Practise {.text-center .fg-red}
+
+| #  | Question                                 |
+| -- | ---------------------------------------- |
+| 1  | She didn’t went to the party last night. |
+| 2  | Did he went to the library yesterday?    |
+| 3  | We was playing football yesterday.       |
+| 4  | They catched the train on time.          |
+| 5  | I eated breakfast early this morning.    |
+| 6  | He don’t saw the accident.               |
+| 7  | Did you went to the market?              |
+| 8  | She buyed a new dress last week.         |
+| 9  | They was not happy with the result.      |
+| 10 | He taked the wrong bus yesterday.        |
+| 11 | She go to market yesterday.              |
+| 12 | He didn’t went to school last week.      |
+| 13 | They eats dinner at 9 pm yesterday.      |
+| 14 | My father buyed a new car.               |
+| 15 | Did you saw the movie last night?        |
+| 16 | The teacher give us homework yesterday.  |
+| 17 | I was go to the park in the morning.     |
+| 18 | They doesn’t played football yesterday.  |
+| 19 | She take the bus to office yesterday.    |
+| 20 | We was happy to see them.                |
+
+---
+
++++ see answers
+| #  | Correct Answer                          |
+| -- | --------------------------------------- |
+| 1  | She didn’t go to the party last night.  |
+| 2  | Did he go to the library yesterday?     |
+| 3  | We played football yesterday.           |
+| 4  | They caught the train on time.          |
+| 5  | I ate breakfast early this morning.     |
+| 6  | He didn’t see the accident.             |
+| 7  | Did you go to the market?               |
+| 8  | She bought a new dress last week.       |
+| 9  | They were not happy with the result.    |
+| 10 | He took the wrong bus yesterday.        |
+| 11 | She went to market yesterday.           |
+| 12 | He didn’t go to school last week.       |
+| 13 | They ate dinner at 9 pm yesterday.      |
+| 14 | My father bought a new car.             |
+| 15 | Did you see the movie last night?       |
+| 16 | The teacher gave us homework yesterday. |
+| 17 | I went to the park in the morning.      |
+| 18 | They didn’t play football yesterday.    |
+| 19 | She took the bus to office yesterday.   |
+| 20 | We were happy to see them.              |
++++
+
+---
+
++++ see practises
+| #  | Question                                 | Your Answer                             | Right/Wrong | Corrected Sentence (if wrong)        |
+| -- | ---------------------------------------- | --------------------------------------- | ----------- | ------------------------------------ |
+| 1  | She didn’t went to the party last night. | She didn’t go to the party last night.  | ✅ Right     | —                                    |
+| 2  | Did he went to the library yesterday?    | Did he go to the library yesterday?     | ✅ Right     | —                                    |
+| 3  | We was playing football yesterday.       | We played football yesterday.           | ✅ Right     | —                                    |
+| 4  | They catched the train on time.          | They cought the train on time.          | ❌ Wrong     | They caught the train on time.       |
+| 5  | I eated breakfast early this morning.    | I ate breakfast early this morning.     | ✅ Right     | —                                    |
+| 6  | He don’t saw the accident.               | He didn’t see the accident.             | ✅ Right     | —                                    |
+| 7  | Did you went to the market?              | Did you go to the market?               | ✅ Right     | —                                    |
+| 8  | She buyed a new dress last week.         | She bought a new dress last week.       | ✅ Right     | —                                    |
+| 9  | They was not happy with the result.      | They did not happy with the result.     | ❌ Wrong     | They were not happy with the result. |
+| 10 | He taked the wrong bus yesterday.        | He took the wrong bus yesterday.        | ✅ Right     | —                                    |
+| 11 | She go to market yesterday.              | She went to market yesterday.           | ✅ Right     | —                                    |
+| 12 | He didn’t went to school last week.      | He didn’t go to school last week.       | ✅ Right     | —                                    |
+| 13 | They eats dinner at 9 pm yesterday.      | They ate dinner at 9 pm yesterday.      | ✅ Right     | —                                    |
+| 14 | My father buyed a new car.               | My father bought a new car.             | ✅ Right     | —                                    |
+| 15 | Did you saw the movie last night?        | Did you see the movie last night?       | ✅ Right     | —                                    |
+| 16 | The teacher give us homework yesterday.  | The teacher gave us homework yesterday. | ✅ Right     | —                                    |
+| 17 | I was go to the park in the morning.     | I went to the park in the morning.      | ✅ Right     | —                                    |
+| 18 | They doesn’t played football yesterday.  | They didn’t played football yesterday.  | ❌ Wrong     | They didn’t play football yesterday. |
+| 19 | She take the bus to office yesterday.    | She took the bus to office yesterday.   | ✅ Right     | —                                    |
+| 20 | We was happy to see them.                | We were happy to see them.              | ✅ Right     | —                                    |
++++</md></sn>
