@@ -1,10 +1,38 @@
 
-	<sn></sn>		
+	<sn><md>## Past Continuous Tense{.fg-red .text-center}
+
+:::.bar
+#### $\text{sub + was/were + v4}$
+
+**Uses** : Action `continue in past`
+:::
+
+### Example
+* I `was teaching`.
+* We `were playing`.
+* The boys `were playing` hockey.
+</md></sn>		
 	<config>
 		<tags>#06.past continuous tense</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Aug 27 2025 19:25:18 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Aug 27 2025 19:38:56 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-Zw4uK2YbtR</id>
 		<duration></duration>
 	</config>
+<sn><md>### Uses: Parallel Actions Continue in Past {.fg-red .text-end}
+
+The word **==while==** is a common indicator for this kind of tense.
+
+#### While I was doing my work, my wife had been cooking food (❌)
+
+* Both actions occur **parallelly** in the past and **while** is a common indicator, so both clauses should be in **past continuous** form.
+* Ans: While I was doing my work, my wife `was cooking` food (✅)
+
+---
+
+#### While she had been singing, I was singing (❌)
+
+* Both actions occur **parallelly** in the past and **while** is a common indicator, so both clauses should be in **past continuous** form.
+* Ans: While `she was singing`, I was singing (✅)
+</md></sn>
