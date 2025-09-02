@@ -8,7 +8,7 @@ After installing Git, it is important to `configure` it so that it works accordi
 		<tags>#03.configuring git</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Sep 02 2025 20:06:02 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Sep 02 2025 20:27:53 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-PCmHpipN6b</id>
 		<duration></duration>
 	</config>
@@ -85,4 +85,79 @@ For **Notepad (Windows)**:
 ```bash
 git config --global core.editor "notepad"
 ```
-</md></sn><sn></sn>
+</md></sn><sn><md>## Configuring Line Endings (CRLF vs LF)
+
+:::.row
+
+:::.col-12 .col-lg-7
+#### Different operating systems use different line endings:
+
+* **Windows:** Uses `CRLF` (`abc\r\n`)
+* **Linux/macOS:** Use `LF` (`abc\n`)
+:::
+
+:::.col-12 .col-lg-5
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/media/crlf-in-os-mosh-diagram.png)
+:::
+
+:::
+
+
+:::.row
+
+:::.col-12 .col-lg-7
+This can cause problems when working across different systems. Git provides settings to handle this automatically:
+
+* **On Windows (convert LF to CRLF when checking out, keep LF in repository):**
+
+  ```bash
+  git config --global core.autocrlf true
+  ```
+
+* **On Linux/macOS (leave LF unchanged):**
+
+  ```bash
+  git config --global core.autocrlf input
+  ```
+
+* **Disable conversion completely:**
+
+  ```bash
+  git config --global core.autocrlf false
+  ```
+:::
+
+:::.col-12 .col-lg-5
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/media/crlf-config-mosh-diagram.png)
+:::
+
+:::
+
+</md></sn><sn><md>### Verify Configuration
+
+To check your settings:
+
+```bash
+git config --list
+```
+
+Or check by level:
+
+```bash
+git config --system --list
+git config --global --list
+git config --local --list
+```
+</md></sn><sn><md>## Git Default Branch Name Configuration
+
+When you create a new Git repository, Git automatically creates a **default branch**. Traditionally, this branch was called **`master`**, but in modern versions of Git (since v2.28, July 2020), the default branch can be customized. Many projects and platforms (like GitHub) now use **`main`** as the default branch.
+
+---
+
+#### Setting the Default Branch Name
+
+You can configure Git to use your preferred default branch name for all **new repositories** with:
+
+```bash
+git config --global init.defaultBranch main
+```</md></sn>
