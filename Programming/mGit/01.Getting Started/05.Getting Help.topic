@@ -7,7 +7,7 @@ When learning Git or working on projects, you may not remember every command or 
 		<tags>#05.getting help</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Sep 02 2025 21:16:44 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Sep 02 2025 21:28:37 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-mdJD8SPmL5</id>
 		<duration></duration>
 	</config>
@@ -100,4 +100,50 @@ man git-commit
 ```
 
 This opens the manual page (man page) for the command, explaining usage, options, and examples.
-</md></sn>
+</md></sn><sn><md>### Short Usage Information
+
+If you just want a quick reference instead of a full manual, use:
+
+```bash
+git [command] -h
+```
+
+Example:
+
+```bash
+git log -h
+```
+
+This shows only the most common options.
+</md></sn><sn><md>### Using Online Documentation
+
+If you prefer a browser version, Git’s official documentation is available online:
+
+&gt; git doc : [https://git-scm.com/docs](https://git-scm.com/docs)
+
+@[git docs](https://git-scm.com/docs)
+
+From the command line, you can also open documentation in a browser with:
+
+```bash
+git help -w [command]
+```
+</md></sn><sn><md>### Common Help Examples
+
+* Check help for initializing a repository:
+
+  ```bash
+  git help init
+  ```
+
+* Quick options for checking logs:
+
+  ```bash
+  git log -h
+  ```
+
+* Open the official webpage for `clone`:
+
+  ```bash
+  git help -w clone
+  ```</md></sn>
