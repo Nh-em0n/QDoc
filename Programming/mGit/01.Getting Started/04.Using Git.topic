@@ -1,10 +1,103 @@
 
-	<sn></sn>		
+	<sn><md>## Using Git
+
+Git can be used in different ways depending on your workflow and preference. Here are the most common methods:
+</md></sn>		
 	<config>
 		<tags>#04.using git</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Sep 02 2025 13:55:53 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Sep 02 2025 20:56:49 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-Zqg1uuaoMu</id>
 		<duration></duration>
 	</config>
+<sn><md>### Using Git from the Command Line
+
+The command line (Terminal, Git Bash, or Command Prompt) is the most direct way to use Git.
+
+:::.row
+
+:::.col-12 .col-lg-7
+#### Advantages
+* Full control of all Git features.
+* Works on every system without extra tools.
+* Commands are consistent across environments.
+:::
+
+:::.col-12 .col-lg-5
+![image](https://jonsuh.com/assets/images/blog/git-command-line-shortcuts/git-log-graph.gif)
+:::
+
+:::
+</md></sn><sn><md>### Using Git in a Code Editor / IDE
+
+Most modern editors (like **Visual Studio Code**, IntelliJ, PyCharm, etc.) have built-in Git support.
+
+:::.row
+
+:::.col-12 .col-lg-7
+#### Advantages
+
+* You can stage, commit, and push changes directly from the editor.
+* Visual indicators show which lines or files were changed.
+* Easy for beginners.
+* Integrated with coding workflow.
+* Visual feedback for changes.
+:::
+
+:::.col-12 .col-lg-5
+![image](https://pslmodels.github.io/Git-Tutorial/_images/VScodeSourceControl.png)
+:::
+
+:::
+</md></sn><sn><md>### Using Git with GUI Tools
+
+Special Git GUI applications make Git easier with a point-and-click interface.
+
+:::.row
+
+:::.col-12 .col-lg-7
+* **GitKraken:** A cross-platform Git client with a clean UI, supports collaboration, branching, and history visualization.
+* **SourceTree:** Free Git client by Atlassian, provides powerful visualization and repository management features.
+
+#### Advantages
+* Simplifies branching and merging.
+* Helps visualize project history.
+* Useful for people uncomfortable with command line.
+:::
+
+:::.col-12 .col-lg-5
+![image-gitkraken](https://www.gitkraken.com/wp-content/uploads/2022/03/index-thumbnail.png)
+![image-sourcetree](https://atlassianblog.wpengine.com/wp-content/uploads/visualize-original-windows.jpg)
+:::
+
+:::
+</md></sn><sn><md>### Using GitHub (Web Interface)
+
+GitHub offers Git through its website interface.
+
+:::.row
+
+:::.col-12 .col-lg-7
+#### Advantages
+* You can upload files, create commits, and manage branches online.
+* Pull requests and collaboration features are handled directly in the browser.
+* Great for collaboration and open-source contributions.
+* No need to install anything.
+* Easy to review code and discuss changes.
+:::
+
+:::.col-12 .col-lg-5
+![github-screenshot](https://www.upbeatcode.com/static/def44645fce079b83d3f28a789de3d98/b316c/github-before.png)
+:::
+
+:::
+</md></sn><sn><md>### Why It’s Better to Practice Git on the Command Line
+
+* **Deeper Understanding:** The command line forces you to learn Git concepts rather than relying on buttons.
+* **Universal Skills:** Commands work the same across all environments, servers, and systems.
+* **Full Power:** Some advanced features are only available in the command line.
+* **Troubleshooting:** When problems occur, solutions are usually given in command line form.
+
+&gt; Practicing Git on the command line builds a strong foundation, making it easier to switch to GUI tools or IDE integrations later.
+</md></sn>
