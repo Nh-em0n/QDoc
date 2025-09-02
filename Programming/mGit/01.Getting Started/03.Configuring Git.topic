@@ -8,7 +8,7 @@ After installing Git, it is important to `configure` it so that it works accordi
 		<tags>#03.configuring git</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Sep 02 2025 20:27:53 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Sep 02 2025 20:33:09 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-PCmHpipN6b</id>
 		<duration></duration>
 	</config>
@@ -49,7 +49,9 @@ git config --<level> key value
 ```
 
 Where `<level>` can be `--system`, `--global`, or `--local`.
-</level></level></md></sn><sn><md>## Configuring User Information
+</level></level>
+
+&gt; press ==q==  key to exit.</md></sn><sn><md>## Configuring User Information
 
 Every commit in Git is recorded with a `name` and `email`. These should be configured before you start working:
 
