@@ -1,10 +1,88 @@
 
-	<sn></sn>		
+	<sn><md>## Configuring Git
+
+After installing Git, it is important to `configure` it so that it works according to your preferences. Git allows configuration at different levels and provides options for setting user details, default editors, and line-ending handling.
+
+</md></sn>		
 	<config>
 		<tags>#03.configuring git</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Sep 02 2025 13:54:58 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Sep 02 2025 20:06:02 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-PCmHpipN6b</id>
 		<duration></duration>
 	</config>
+<sn><md>### Git Configuration Levels
+
+:::.row
+
+:::.col-12 .col-lg-7
+Git has three levels of configuration. Settings are **inherited from system → global → local**, meaning local overrides global, and global overrides system.
+:::
+
+:::.col-12 .col-lg-5
+![diagram](https://mazer.dev/en/git/introduction/git-config-username-email/git-config-levels.jpg)
+:::
+
+:::
+
+
+| Level      | Scope                                 | Location                                 | Priority | Inheritance                                     |
+| ---------- | ------------------------------------- | ---------------------------------------- | -------- | ----------------------------------------------- |
+| `System` | Applies to every user on the computer | `/etc/gitconfig`                         | Lowest   | Inherited by Global and Local if not overridden |
+| `Global` | Applies to the current user           | `~/.gitconfig` or `~/.config/git/config` | Medium   | Overrides System settings                       |
+| `Local`  | Applies only to a single repository   | `.git/config` inside the repo            | Highest  | Overrides System and Global                     |
+
++++ see real example
+| Scope          | Example                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| **System**     | ![System Config](https://i.imgur.com/7yCx0q2.png) <br> *file\:C:/Program Files/Git/etc/gitconfig*   |
+| **Global**     | ![Global Config](https://i.imgur.com/5V0wVwE.png) <br> *file\:C:/Users/Emon/.gitconfig*             |
+| **Repository** | ![Repository Config](https://i.imgur.com/4jMuu4O.png) <br> *C:\Users\Emon\git\_practise.git\config* |
++++
+
+</md>
+</sn><sn><md>## syntax
+
+```bash
+git config --<level> key value
+```
+
+Where `<level>` can be `--system`, `--global`, or `--local`.
+</level></level></md></sn><sn><md>## Configuring User Information
+
+Every commit in Git is recorded with a `name` and `email`. These should be configured before you start working:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+```
+
+You can also set them at **local level** for a specific project:
+
+```bash
+git config --local user.name "Project Specific Name"
+git config --local user.email "project@email.com"
+```
+</md></sn><sn><md>## Configuring Default Editor
+
+Git often requires an editor (for commit messages, merges, etc.). You can set your preferred editor. Example with **Visual Studio Code**:
+
+```bash
+git config --global core.editor "code --wait"
+```
+
+The `--wait` option makes sure the terminal waits until you close the editor before continuing.
+
+For **Vim**:
+
+```bash
+git config --global core.editor "vim"
+```
+
+For **Notepad (Windows)**:
+
+```bash
+git config --global core.editor "notepad"
+```
+</md></sn><sn></sn>
