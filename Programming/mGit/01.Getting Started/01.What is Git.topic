@@ -1,10 +1,199 @@
 
-	<sn></sn>		
+	<sn><md>## Version Control{.text-center}
+
+Version control is a system that helps ++track changes in files++ and ++manage different versions++ of a project over time. It is especially useful for **software development**, but it can also be applied to any work that involves managing multiple revisions of files.
+
+---
+
+### Purpose of Version Control
+
+The main goal of version control is to ++keep a history of changes++ so that developers can:
+
+* Track and review modifications.
+* Restore previous versions if needed.
+* Work collaboratively without overwriting each other’s work.
+
++++ read wikipedia
+@[wikipedia-git-article](https://en.wikipedia.org/wiki/Version_control)
++++</md></sn>		
 	<config>
 		<tags>#01.introduction</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Sep 02 2025 13:54:25 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Sep 02 2025 18:06:35 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-gkRdBeSUfq</id>
 		<duration></duration>
 	</config>
+<sn><md>## A Developer’s Story: Without and With Version Control
+
+:::.row
+
+:::.col-12 .col-lg-6
+### Without Version Control{.fg-red .text-center}
+---
+
+Emon is a new developer who builds web applications. Since he does not know about version control, he saves every project update in a new folder. For example:
+
+* 📁 `MyProject-v1`
+* 📁 `MyProject-v2`
+* 📁 `MyProject-final`
+* 📁 `MyProject-final-new`
+* 📁 `MyProject-final-new-latest`
+
++++ see real world problem
+![diagram](https://i.imgur.com/NaibwOJ.png)
++++
+
+Over time, Emon faces several problems:
+
+1. **Confusion:**{.fg-red} He cannot remember which folder has the correct and latest version.
+2. **Wasted storage:**{.fg-red}  Each folder contains the entire project, taking up a lot of disk space.
+3. **Difficult collaboration:**{.fg-red}  If a teammate edits a different folder, Emon struggles to combine changes.
+4. **No clear history:**{.fg-red}  He cannot easily track what was changed or when.
+:::
+
+:::.col-12 .col-lg-6
+### With Version Control{.fg-teal .text-center}
+---
+
+Later, Emon learns Git, a version control system. Now he keeps only one project folder, and every change is saved as a *commit* in Git. This way:
+
+* He can **track history** of all changes with clear messages.
+* He saves **disk space**, since only differences are stored instead of full copies.
+* He can **collaborate easily** by using GitHub, where teammates contribute without overwriting each other’s work.
+* He can **revert to any version** if something goes wrong.
+:::
+
+:::
+
+---
+
+#### Lesson
+
+Without version control, Emon’s workflow was messy, confusing, and inefficient. With Git, he organizes his work, saves time, and collaborates smoothly.
+</md></sn><sn><md>## Types of Version Control Systems{.text-center}
+
+:::.row
+
+:::.col-12 .col-lg-7
+### Local Version Control (LVC)
+* Stores versions on a single computer.
+* Simple but limited, as it cannot support collaboration.
+:::
+
+:::.col-12 .col-lg-5
+![diagram](https://www.linode.com/docs/guides/introduction-to-version-control/1203-image_versioning_basics_1.jpg)
+:::
+
+:::
+
+---
+
+
+:::.row
+
+:::.col-12 .col-lg-7
+### Centralized Version Control (CVC)
+* Uses a central server to store project files.
+* Developers connect to the server to update or commit changes.
+* Examples: CVS, Subversion (SVN).
+:::
+
+:::.col-12 .col-lg-5
+![diagram](https://miro.medium.com/v2/resize:fit:1400/1*VLV5aPFMKkjPjrGUxfVuug.png)
+:::
+
+:::
+
+---
+
+:::.row
+
+:::.col-12 .col-lg-7
+### Distributed Version Control (DVC)
+* Every developer has a complete copy of the repository.
+* Enables offline work and more reliable collaboration.
+* Examples: [Git]{.badge .bg-orange}, Mercurial.
+:::
+
+:::.col-12 .col-lg-5
+![diagram](https://miro.medium.com/v2/resize:fit:1400/1*VLV5aPFMKkjPjrGUxfVuug.png)
+:::
+
+:::
+
+### CVS vs DVC
+
+![diagram](https://www.thatcompany.com/wp-content/uploads/2020/03/art3.jpg)
+
+</md></sn><sn><md>## What is Git {.fg-orange .text-center}
+
+:::.row
+
+:::.col-12 .col-lg-7
+Git is a **distributed version control system (DVCS)** that helps developers *manage and track changes* in their projects. It was created by **Linus Torvalds** in `2005` to support the development of the *Linux kernel*. Today, Git is the most widely used version control tool in software development.
+:::
+
+:::.col-12 .col-lg-5
+![linus-torvald](https://i.redd.it/wxvjd9bqzp491.jpg)
+:::
+
+:::
+
+---
+
+### Key Features of Git
+
+* **Distributed system:** Every developer has a *full copy* of the project, including its history.
+* **Version tracking:** Git records changes to files, allowing developers to revisit or restore previous versions.
+* **Branching and merging:** Developers can create separate branches for features or fixes and later merge them into the main project.
+* **Collaboration:** Git makes it easy for multiple people to work on the same project without overwriting each other’s changes.
+* **Efficiency:** Git stores changes efficiently by saving differences instead of full copies.
+
+---
+
++++ see wikipedia
+@[git-wikipedia-article](https://en.wikipedia.org/wiki/Git)
++++
+</md></sn><sn><md>## Terminology
+
+| Term                    | Simple Meaning                                                                         |
+| ----------------------- | -------------------------------------------------------------------------------------- |
+| **Baseline**            | An approved version you can build on.                                                  |
+| **Blame**               | Shows who last changed a specific line of code.                                        |
+| **Branch**              | A separate copy of the project to work on without affecting the main one.              |
+| **Change**              | A modification made to a file.                                                         |
+| **Change list**         | A group of changes saved together in one commit.                                       |
+| **Checkout**            | Downloading a project (or version) from the repository to work on.                     |
+| **Clone**               | Making a full copy of a repository.                                                    |
+| **Commit (noun)**       | A saved set of changes.                                                                |
+| **Commit (verb)**       | Saving your changes to the repository.                                                 |
+| **Commit message**      | A short description of what you changed and why.                                       |
+| **Conflict**            | When two people change the same part of a file and Git can’t decide which one to keep. |
+| **Delta compression**   | A way Git saves only the differences between file versions to save space.              |
+| **Dynamic stream**      | A branch that updates automatically from its parent branch.                            |
+| **Export**              | Getting project files without the Git history.                                         |
+| **Fetch**               | Downloading changes from another repository (but not applying them yet).               |
+| **Forward integration** | Bringing changes from the main branch into a feature branch.                           |
+| **Head**                | The latest saved version in a branch.                                                  |
+| **Import**              | Adding a local project into version control for the first time.                        |
+| **Initialize**          | Creating a new empty Git repository.                                                   |
+| **Interleaved deltas**  | Another way of storing file changes efficiently.                                       |
+| **Label/Tag**           | A name given to a specific version (like “v1.0”).                                      |
+| **Locking**             | Preventing others from editing a file until you’re done.                               |
+| **Mainline**            | The main project path (similar to trunk).                                              |
+| **Merge**               | Combining changes from different branches.                                             |
+| **Promote**             | Moving files from a less controlled area to the main repository.                       |
+| **Pull/Push**           | Pull = get changes from others, Push = send your changes to others.                    |
+| **Pull request**        | Asking project maintainers to review and add your changes.                             |
+| **Repository**          | The storage space where all versions of a project are kept.                            |
+| **Resolve**             | Fixing conflicts when Git can’t merge changes automatically.                           |
+| **Reverse integration** | Putting team branch changes back into the main project.                                |
+| **Revision/Version**    | A snapshot of the project at a specific time.                                          |
+| **Share**               | Making the same file available in multiple branches.                                   |
+| **Stream**              | A branch that has a relationship with another branch.                                  |
+| **Trunk**               | The main line of development (also called master or main).                             |
+| **Update**              | Getting the latest changes from the repository into your copy.                         |
+| **Unlocking**           | Letting others edit a file after you’ve finished.                                      |
+| **Working copy**        | Your personal copy of the project where you make changes.                              |
+</md></sn>
