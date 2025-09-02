@@ -1,10 +1,33 @@
 
-	<sn></sn>		
+	<sn><md>### Mosh Git CheatSheet
+
+@[doc](https://docs.google.com/gview?url=https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/media/Git%20Cheat%20Sheet~.pdf&amp;embedded=true)</md></sn>		
 	<config>
 		<tags>#06.cheat sheet</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Sep 02 2025 13:56:37 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Sep 02 2025 21:57:18 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-IsGSRoGiH9</id>
 		<duration></duration>
 	</config>
+<sn><md>### git-version
+
+```bash
+git --version
+```</md></sn><sn><md>### git-help
+
+| Purpose                             | Command                |
+| ----------------------------------- | ---------------------- |
+| Open main help                      | `git help`             |
+| Open full manual page for a command | `git help [command]`   |
+| Same as above                       | `git [command] --help` |
+| Show quick summary (short help)     | `git [command] -h`     |
+| Open Unix manual for a command      | `man git-[command]`    |
+| List all available Git commands     | `git help -a`          |
+| List all Git guides                 | `git help -g`          |
+| Beginner tutorial                   | `git help tutorial`    |
+| Common daily Git usage              | `git help everyday`    |
+| Revision syntax explanation         | `git help revisions`   |
+| Git terminology                     | `git help glossary`    |
+| Workflows in Git                    | `git help workflows`   |
+</md></sn>
