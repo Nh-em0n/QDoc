@@ -20,7 +20,7 @@ The main goal of version control is to ++keep a history of changes++ so that dev
 		<tags>#01.introduction</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Sep 02 2025 18:06:35 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Sep 02 2025 19:18:38 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-gkRdBeSUfq</id>
 		<duration></duration>
 	</config>
@@ -89,7 +89,6 @@ Without version control, Emon’s workflow was messy, confusing, and inefficient
 
 ---
 
-
 :::.row
 
 :::.col-12 .col-lg-7
@@ -113,11 +112,11 @@ Without version control, Emon’s workflow was messy, confusing, and inefficient
 ### Distributed Version Control (DVC)
 * Every developer has a complete copy of the repository.
 * Enables offline work and more reliable collaboration.
-* Examples: [Git]{.badge .bg-orange}, Mercurial.
+* Examples: `Git`, Mercurial.
 :::
 
 :::.col-12 .col-lg-5
-![diagram](https://miro.medium.com/v2/resize:fit:1400/1*VLV5aPFMKkjPjrGUxfVuug.png)
+![diagram](https://i0.wp.com/techjunction.co/wp-content/uploads/2023/03/Git-a-Distributed-Version-Control-System.png?fit=1698%2C1123&amp;ssl=1)
 :::
 
 :::
