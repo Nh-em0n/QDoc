@@ -1,10 +1,78 @@
 
-	<sn></sn>		
+	<sn><md>## Installing Git
+
+Git is a distributed version control system that helps developers track changes and collaborate on projects. To use Git, the first step is to install it on your computer. The installation process is simple and works on all major operating systems.
+
+---
+
+### Check if Git is Already Installed
+
+Before installing, check whether Git is already available on your system.Open a terminal or command prompt and type:
+
+  ```bash
+  git --version
+  ```
+
+If Git is installed, it will show the version number (for example: `git version 2.42.0`). If not, you will need to install it.
+
++++ see example
+![diagram](https://i.imgur.com/8UeH5Eb.png)
++++</md></sn>		
 	<config>
 		<tags>#02.installing git</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Sep 02 2025 13:54:36 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Sep 02 2025 19:34:21 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-SE6rrSVqlp</id>
 		<duration></duration>
 	</config>
+<sn><md>## On Windows
+
+1. Go to the official Git website: [https://git-scm.com/downloads](https://git-scm.com/downloads)
+2. Download the **Windows installer**.
+3. Run the installer and follow the setup wizard.
+
+   * Accept the license.
+   * Choose installation location.
+   * Select default options unless you need specific settings.
+4. Once completed, open **Command Prompt** and type `git --version` to confirm the installation.
+</md></sn><sn><md>## On macOS
+
+1. Open **Terminal**.
+2. Run:
+
+   ```bash
+   git --version
+   ```
+
+   * If Git is not installed, macOS will prompt you to install **Xcode Command Line Tools**.
+   * Follow the on-screen instructions.
+3. Alternatively, you can install Git using **Homebrew** (if installed):
+
+   ```bash
+   brew install git
+   ```
+</md></sn><sn><md>## On Linux (Debian/Ubuntu)
+
+Open the terminal and run:
+
+```bash
+sudo apt update
+sudo apt install git
+```
+
+For Fedora/CentOS:
+
+```bash
+sudo dnf install git
+```
+</md></sn><sn><md>## Verify Installation
+
+Type:
+
+```bash
+git --version
+```
+
+If you see the version number, Git has been successfully installed and is ready to use.
+</md></sn>
