@@ -1,10 +1,33 @@
 
-	<sn></sn>		
+	<sn><md>## Git
+
+:::.row
+
+:::.col-12 .col-lg-5
+![diagram](https://git-scm.com/images/logos/1color-darkbg@2x.png)
+:::
+
+:::.col-12 .col-lg-7
+&gt; I created this note to learn Git. I am following the course **“The Ultimate Git Course”** by `Mosh`. All my future Git concepts will be added to this book.
+:::
+
+### What I will learn from this course
+
+* Fundamental concepts
+* Creating snapshots
+* Browsing project history
+* Branching and merging
+* Collaborating using ++GitHub++
+* Rewriting history
+
+
+:::
+</md></sn>		
 	<config>
 		<tags>#01.introduction</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Aug 05 2025 15:27:12 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Sep 02 2025 13:53:35 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-HBO9ZFizVF</id>
 		<duration></duration>
 	</config>
