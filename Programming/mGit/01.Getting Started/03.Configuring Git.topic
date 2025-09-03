@@ -8,7 +8,7 @@ After installing Git, it is important to `configure` it so that it works accordi
 		<tags>#03.configuring git</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Sep 02 2025 20:33:09 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 03 2025 16:26:57 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-PCmHpipN6b</id>
 		<duration></duration>
 	</config>
@@ -162,4 +162,30 @@ You can configure Git to use your preferred default branch name for all **new re
 
 ```bash
 git config --global init.defaultBranch main
-```</md></sn>
+```</md></sn><sn><md>## Setup Sublime as Core Editor
+
+1. Go to your **system-level Git config path**:
+
+   ```
+   C:\Users\Emon
+   ```
+
+2. Locate the file **`.gitconfig`** and double-click to open it.
+   ![screenshot](https://i.imgur.com/xXwcGqH.png)
+
+3. It will open in VS Code or another text editor. Add the following code under the **\[core]** section:
+
+   ```bash
+   editor = "C:\\Program Files\\Sublime Text\\subl.exe" -w
+   ```
+
+4. Your `.gitconfig` should look like this:
+
+   ```bash
+   [core]
+       editor = "C:\\Program Files\\Sublime Text\\subl.exe" -w
+   [user]
+       email = Your@email.com
+       name = Your Name
+   ```
+</md></sn>
