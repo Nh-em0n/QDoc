@@ -32,7 +32,7 @@ This separation gives you flexibility — you can stage some changes while leavi
 		<tags>#04.staging files</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 03 2025 20:17:48 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 03 2025 20:26:18 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-cXukycGYBt</id>
 		<duration></duration>
 	</config>
@@ -98,6 +98,7 @@ Staging files in Git is a crucial step in the version control process. It provid
 
 </md></sn><sn><md>## Practise{.text-center}
 
++++ see
 In our previous topic, we created a repository named **note**. Now, let’s create two files in it.
 
 #### Creating Files
@@ -161,5 +162,64 @@ Changes to be committed:
         new file:   file1.txt                                                                                                                                        
         new file:   file2.txt 
 ```
+</file></file>
 
-</file></file></md></sn>
+#### Modifying staged file
+
+```bash
+mon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ echo "new info" &gt;&gt; file1.txt
+```
+
+---
+
+#### Checking status again
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git status                                                                                                                                                         
+On branch master                                                                                                                                                     
+                                                                                                                                                                     
+No commits yet                                                                                                                                                       
+                                                                                                                                                                     
+Changes to be committed:                                                                                                                                             
+  (use "git rm --cached <file>..." to unstage)                                                                                                                       
+        new file:   file1.txt                                                                                                                                        
+        new file:   file2.txt                                                                                                                                        
+                                                                                                                                                                     
+Changes not staged for commit:                                                                                                                                       
+  (use "git add <file>..." to update what will be committed)                                                                                                         
+  (use "git restore <file>..." to discard changes in working directory)                                                                                              
+        modified:   file1.txt    
+```
+
+---
+
+#### Adding modified again into staging area
+
+```bash
+$ git add file1.txt
+warning: in the working copy of 'file1.txt', LF will be replaced by CRLF the next time Git touches it 
+```
+
+---
+
+#### Checking the status again
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git status                                                                                                                                                         
+On branch master                                                                                                                                                     
+                                                                                                                                                                     
+No commits yet                                                                                                                                                       
+                                                                                                                                                                     
+Changes to be committed:                                                                                                                                             
+  (use "git rm --cached <file>..." to unstage)                                                                                                                       
+        new file:   file1.txt                                                                                                                                        
+        new file:   file2.txt 
+```
+
+
+</file></file></file></file>
+
++++</md></sn>
