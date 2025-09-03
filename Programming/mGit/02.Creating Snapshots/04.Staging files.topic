@@ -1,10 +1,165 @@
 
-	<sn></sn>		
+	<sn><md>## Staging Files in Git {.text-center}
+
+When working with Git, one of the most important steps in the workflow is **staging files**. The staging process allows developers to prepare specific changes before committing them to the repository. By staging files, you gain control over what goes into each commit, ensuring cleaner history and better collaboration.
+
+---
+
+### What is Staging in Git?
+
+:::.row
+:::.col-12 .col-md-6
+Staging is the process of adding changes from the **working directory** to the **staging area (also called the index)**. The staging area acts as a buffer between your working directory and the repository.
+
+This separation gives you flexibility — you can stage some changes while leaving others unstaged, allowing more meaningful commits.
+:::
+
+:::.col-12 .col-md-6
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/media/git-add-status-commit-diagram.svg)
+:::
+:::
+
+
+---
+
+### Why Use the Staging Area?
+
+1. **Selective commits** – You can commit only specific files or parts of files.
+2. **Organized history** – Group related changes into one commit instead of committing everything at once.
+3. **Error reduction** – Prevent accidental commits of incomplete or experimental changes.
+</md></sn>		
 	<config>
 		<tags>#04.staging files</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 03 2025 16:42:57 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 03 2025 20:17:48 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-cXukycGYBt</id>
 		<duration></duration>
 	</config>
+<sn><md>## Common Commands for Staging Files{.text-center}
+
+1. **Stage a Single File**
+
+   ```bash
+   git add filename
+   ```
+
+   Adds only the specified file to the staging area.
+
+2. **Stage Multiple Files**
+
+   ```bash
+   git add file1 file2 file3
+   ```
+
+3. **Stage All Files (Modified and New)**
+
+   ```bash
+   git add .
+   ```
+
+   or
+
+   ```bash
+   git add -A
+   ```
+
+4. **Stage Part of a File (Interactive Mode)**
+
+   ```bash
+   git add -p
+   ```
+
+   Allows you to review changes hunk by hunk and choose what to stage.
+</md></sn><sn><md>### Viewing the Staging Area{.text-center}
+
+Git status shows you the current state of your **working directory** and **staging area** so you can see what’s going on before you commit or push.
+
+* **Check current status**:
+
+  ```bash
+  git status
+  ```
+
+  * Red = changes in working directory (unstaged).
+  * Green = changes in staging area (ready to commit).
+</md></sn><sn><md>### Best Practices for Staging Files
+
+* Stage only what is complete and ready.
+* Use interactive staging (`git add -p`) for fine control.
+* Avoid staging unnecessary files (use `.gitignore`).
+* Stage and commit in small, logical chunks for readability.
+
+---
+
+### Conclusion
+
+Staging files in Git is a crucial step in the version control process. It provides a buffer between your working directory and the repository, allowing you to carefully select and prepare changes before committing. By staging effectively, you create a cleaner, more organized commit history that benefits both you and your team.
+
+</md></sn><sn><md>## Practise{.text-center}
+
+In our previous topic, we created a repository named **note**. Now, let’s create two files in it.
+
+#### Creating Files
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                          
+$ echo "This is first note" &gt; file1.txt                                                                                                                              
+                                                                                                                                                                     
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                          
+$ ls
+file1.txt                                                                                                                                                            
+                                                                                                                                                                     
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                          
+$ echo "This is second note" &gt; file2.txt                                                                                                                             
+                                                                                                                                                                     
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                          
+$ ls
+file1.txt  file2.txt  
+```
+
+---
+
+#### Checking Status After Creating Two New Files
+
+```bash
+$ git status
+On branch master                                                                                                                                                     
+                                                                                                                                                                     
+No commits yet                                                                                                                                                       
+                                                                                                                                                                     
+Untracked files:                                                                                                                                                     
+  (use "git add <file>..." to include in what will be committed)                                                                                                     
+        file1.txt                                                                                                                                                    
+        file2.txt                                                                                                                                                    
+                                                                                                                                                                     
+nothing added to commit but untracked files present (use "git add" to track)    
+```
+
+---
+
+#### Adding Untracked Files (Newly Created Files) to Staging Area
+
+```bash
+$ git add file1.txt file2.txt
+warning: in the working copy of 'file1.txt', LF will be replaced by CRLF the next time Git touches it                                                                
+warning: in the working copy of 'file2.txt', LF will be replaced by CRLF the next time Git touches it  
+```
+
+---
+
+#### Checking Status Again
+
+```bash
+$ git status
+On branch master                                                                                                                                                     
+                                                                                                                                                                     
+No commits yet                                                                                                                                                       
+                                                                                                                                                                     
+Changes to be committed:                                                                                                                                             
+  (use "git rm --cached <file>..." to unstage)                                                                                                                       
+        new file:   file1.txt                                                                                                                                        
+        new file:   file2.txt 
+```
+
+</file></file></md></sn>
