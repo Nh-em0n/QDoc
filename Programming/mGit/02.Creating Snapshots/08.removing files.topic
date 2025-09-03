@@ -1,10 +1,190 @@
 
-	<sn></sn>		
+	<sn><md>## Removing Files in Git{.text-center}
+
+When working with Git, sometimes you need to remove files from your repository. There are two common approaches: **manually deleting the file** (without `git rm`) and **using `git rm`**. Both ultimately achieve the same goal but work slightly differently.
+
+</md></sn>		
 	<config>
 		<tags>#08.removing files</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 03 2025 16:44:17 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 03 2025 22:12:22 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-bBlSkwfi8F</id>
 		<duration></duration>
 	</config>
+<sn><md>## Removing a File Manually
+
+You can simply delete the file using your operating system command (`rm` in Linux/macOS or `del` in Windows).
+
+### Example
+
+```bash
+$ rm unwanted.txt    # Linux / macOS
+# OR
+$ del unwanted.txt   # Windows
+```
+
+Now check the status:
+
+```bash
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+        deleted:    unwanted.txt
+```
+
+At this point, Git notices the file was deleted, but it is not yet staged.
+To stage the deletion:
+
+```bash
+$ git add unwanted.txt
+```
+
+Then commit:
+
+```bash
+$ git commit -m "Remove unwanted.txt"
+```
+</file></md></sn><sn><md>## Removing a File With `git rm`
+
+Instead of manually deleting and staging, you can use Git’s built-in command:
+
+```bash
+$ git rm unwanted.txt
+rm 'unwanted.txt'
+```
+
+This removes the file from both your working directory and stages it for deletion at the same time.
+
+Now commit:
+
+```bash
+$ git commit -m "Remove unwanted.txt"
+```</md></sn><sn><md>### Difference Between the Two Methods{.text-center}
+
+| Method           | Steps                                           | Effect                                               |
+| ---------------- | ----------------------------------------------- | ---------------------------------------------------- |
+| Without `git rm` | Delete file manually → `git add` → `git commit` | File is deleted manually, then staged and committed. |
+| With `git rm`    | `git rm <file>` → `git commit`                  | Deletes and stages in one command, more convenient.  |
+
+</file></md></sn><sn><md>### Special Case: Keep File Locally but Remove from Git{.text-center}
+
+If you want to **remove a file from Git’s tracking but keep it in your local working directory**, use:
+
+```bash
+$ git rm --cached unwanted.txt
+```
+
+This removes it from version control but leaves it on your computer.
+</md></sn><sn><md>## Practise {.text-center}
+
++++ see
+
+### Checking Status
+
+```bash
+$ git status
+On branch master                                                                                                                                                     
+nothing to commit, working tree clean    
+```
+
+### Removing *file2.txt* Manually
+
+**Step 1: Remove file2.txt manually**
+
+```bash
+$ rm file2.txt 
+```
+
+**Step 2: Check status after removing**
+
+```bash
+$ git status                                                                                                                                                         
+On branch master                                                                                                                                                     
+Changes not staged for commit:                                                                                                                                       
+  (use "git add/rm <file>..." to update what will be committed)                                                                                                      
+  (use "git restore <file>..." to discard changes in working directory)                                                                                              
+        deleted:    file2.txt                                                                                                                                        
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+**Step 3: Add deletion to staging area**
+
+```bash
+$ git add file2.txt
+```
+
+**Step 4: Check status again after staging**
+
+```bash
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    file2.txt
+```
+
+**Step 5: Commit removal of file2.txt**
+
+```bash
+$ git commit -m "remove file2"                                                                                                                                       
+[master 839814d] remove file2
+ 1 file changed, 2 deletions(-)
+ delete mode 100644 file2.txt
+```
+
+**Step 6: Check status after committing**
+
+```bash
+On branch master
+nothing to commit, working tree clean
+```
+
+**Step 7: Check current directory file list**
+
+```bash
+$ ls                                                                                                                                                                 
+file1.txt
+```
+
+---
+
+### Removing *file1.txt* with `git rm`
+
+**Step 1: Remove file1.txt using Git**
+
+```bash
+$ git rm file1.txt                                                                                                                                                   
+rm 'file1.txt'
+```
+
+(The command `rm 'file1.txt'` is run automatically after `git rm`.)
+
+**Step 2: Check status**
+
+```bash
+$ git status                                                                                                                                                         
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    file1.txt
+```
+
+**Step 3: Commit file1.txt removal**
+
+```bash
+$ git commit -m "remove file1"
+[master 23088c4] remove file1
+ 1 file changed, 2 deletions(-)
+ delete mode 100644 file1.txt
+```
+
+**Step 4: Check status**
+
+```bash
+On branch master
+nothing to commit, working tree clean
+```
++++</file></file></file></file></md></sn>
