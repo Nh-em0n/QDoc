@@ -31,7 +31,7 @@ These states are tied to **three main sections** of a Git project:
 		<tags>#03.git workflow</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 03 2025 18:31:07 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 03 2025 18:36:27 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-lD23MJgXGQ</id>
 		<duration></duration>
 	</config>
@@ -58,6 +58,8 @@ These states are tied to **three main sections** of a Git project:
 </md></sn><sn><md>## Git workflow
 
 A Git workflow is the structured way developers interact with Git repositories. It defines how changes move from the working directory to the staging area, into the repository history, and eventually to remote repositories.By following a workflow, teams can ensure consistency, avoid conflicts, and maintain a clean project history.
+
+![diagram](https://media.licdn.com/dms/image/v2/C5612AQG2LMX354ul0A/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1649851714747?e=2147483647&amp;v=beta&amp;t=Goc9ClRxRdfUta3d6H7csHRtgh4R_YnExZezge2-1gk)
 
 ![diagram](https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvpxeexqyfvf4hw3zxtbn.png)
 </md></sn>
