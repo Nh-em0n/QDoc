@@ -1,10 +1,133 @@
 
-	<sn></sn>		
+	<sn><md>## Committing Changes in Git {.text-center}
+
+Once you have staged changes in Git, the next step is to **commit** them. Committing is the process of recording changes in the Git repository. Each commit acts like a snapshot of your project at a given time, including the files staged, the author, timestamp, and a commit message.
+
+---
+
+### What is a Commit?
+
+:::.row
+:::.col-12 .col-md-6
+A commit is a permanent record of changes saved to the repository’s history. Unlike saving a file in your editor, commits allow you to:
+
+* Track what was changed and why.
+* Revert to previous states if necessary.
+* Collaborate with others by sharing meaningful history.
+:::
+
+:::.col-12 .col-md-6
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/media/git-add-status-commit-diagram.svg)
+:::
+:::
+</md></sn>		
 	<config>
 		<tags>#05.committing changes</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 03 2025 16:43:13 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 03 2025 20:51:42 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-S839Yo8x6q</id>
 		<duration></duration>
 	</config>
+<sn><md>## Ways to Commit Changes{.text-center}
+
+#### 1. Commit with Inline Message
+
+You can commit staged changes with a message directly from the command line:
+
+```bash
+git commit -m "Initial commit with project setup"
+```
+
+* `-m` stands for "message".
+* The text inside quotes should describe the purpose of the changes.
+
+#### 2. Commit Using Default Editor
+
+If you don’t include the `-m` option, Git will open your default editor (e.g., Vim, Nano, Sublime, VS Code):
+
+```bash
+git commit
+```
+
+Inside the editor, type your commit message, save, and close the editor to finalize the commit.
+
+This method is useful when writing longer, more detailed commit messages.
+</md></sn><sn><md>### Clean Environment After Committing{.text-center}
+
+After a commit, the **working directory**, **staging area**, and **repository** are in sync.
+
+* **Working Directory** = No uncommitted changes.
+* **Staging Area** = Empty, since staged files have been committed.
+* **Repository (Last Commit)** = Matches your working directory and staging area.
+
+You can verify this clean state with:
+
+```bash
+git status
+```
+
+Output example:
+
+```
+On branch main
+nothing to commit, working tree clean
+```
+
+This means your project is fully committed, and there are no pending changes.
+</md></sn><sn><md>## Practice {.text-center}
+
++++ see
+
+In our previous example we:
+
+* Created two files
+* Added both of them to the staging area
+* Modified **file1.txt**
+* Added it again into the staging area
+
+Now let’s check our status. If everything looks good, we can perform our first commit.
+
+---
+
+### Checking Status Before Committing
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git status                                                                                                                                                         
+On branch master                                                                                                                                                     
+
+No commits yet                                                                                                                                                       
+
+Changes to be committed:                                                                                                                                             
+  (use "git rm --cached <file>..." to unstage)                                                                                                                       
+        new file:   file1.txt                                                                                                                                        
+        new file:   file2.txt
+```
+
+All is ok — now we can proceed.
+
+---
+
+### First Commit
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git commit -m "Initial Commit"
+[master (root-commit) 1656114] Initial Commit                                                                                                                        
+ 2 files changed, 3 insertions(+)                                                                                                                                    
+ create mode 100644 file1.txt                                                                                                                                        
+ create mode 100644 file2.txt
+```
+
+---
+
+### Checking Status After Committing
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git status
+On branch master                                                                                                                                                     
+nothing to commit, working tree clean
+```
++++</file></md></sn>
