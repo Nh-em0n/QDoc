@@ -1,10 +1,88 @@
 
-	<sn></sn>		
+	<sn><md>## Best Practices for Committing in Git
+
+Committing in Git is more than just saving changes — it is a way to **document the evolution of a project**. Following best practices ensures a clean, understandable, and manageable history, making collaboration easier and debugging simpler.
+
+</md></sn>		
 	<config>
 		<tags>#06.committing best practices</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 03 2025 16:43:50 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 03 2025 21:02:27 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-pBJEDs4Iug</id>
 		<duration></duration>
 	</config>
+<sn><md>### When to Commit{.text-center}
+
+1. **Commit Often, but Meaningfully**
+
+   * Make commits for **logical units of work** rather than lumping unrelated changes together.
+   * Example: Fixing a bug should be a separate commit from adding a new feature.
+
+2. **Commit Completed Work**
+
+   * Only commit changes that are **ready and tested**. Avoid committing half-done or broken code unless it’s intentionally a checkpoint in your workflow.
+
+3. **Commit Small, Focused Changes**
+
+   * Smaller commits are easier to review, revert, and understand.
+   * Example: Update a single function or fix a single typo per commit.
+
+4. **Commit Frequently During Development**
+
+   * Frequent commits reduce the risk of losing work and make it easier to resolve conflicts when collaborating.
+
+</md></sn><sn><md>### Using Present Tense in Commit Messages{.text-center}
+
+Commit messages should **describe what the commit does**, not what it did. Use **imperative, present tense** — this style is consistent with Git’s internal messaging and makes history easier to read.
+
+* **Correct:**
+
+  * `Add user login feature`
+  * `Fix bug in payment calculation`
+  * `Update README with installation instructions`
+
+* **Incorrect:**
+
+  * `Added user login feature`
+  * `Fixed bug in payment calculation`
+  * `Updated README with installation instructions`
+
+&gt; **Tip:** Think of the message as **“This commit will…”** — for example, “This commit adds the login feature.”
+</md></sn><sn><md>### Structuring Commit Messages{.text-center}
+
+A good commit message often has two parts:
+
+1. **Header (short summary)** – 50 characters or less, imperative, present tense.
+2. **Body (optional)** – More details about why and how the change was made. Use this if the commit is complex.
+
+Example:
+
+```
+Refactor authentication logic
+
+Separate login and registration functions for clarity.
+Add unit tests for each function to ensure correctness.
+```</md></sn><sn><md>### Additional Commit Best Practices{.text-center}
+
+* **Check Status Before Committing**
+
+  ```bash
+  git status
+  ```
+
+  Ensures you know what changes are staged and what will be committed.
+
+* **Stage Only What Needs Committing**
+  Use `git add <file>` or `git add -p` to selectively stage changes.
+
+* **Avoid Committing Large Binary Files**
+  Binary files (images, compiled files) are hard to diff and can bloat the repository.
+
+* **Use `.gitignore`**
+  Prevent unnecessary files (logs, temp files, IDE settings) from being committed.
+
+* **Review Before Commit**
+  Use `git diff --cached` to see exactly what will go into the commit.
+
+</file></md></sn>
