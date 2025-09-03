@@ -1,10 +1,38 @@
 
-	<sn><md>### key binding
+	<sn><md>## Setup Sublime as Core Editor
+
+1. Go to your **system-level Git config path**:
+
+   ```
+   C:\Users\Emon
+   ```
+
+2. Locate the file **`.gitconfig`** and double-click to open it.
+   ![screenshot](https://i.imgur.com/xXwcGqH.png)
+
+3. It will open in VS Code or another text editor. Add the following code under the **\[core]** section:
+
+   ```bash
+   editor = "C:\\Program Files\\Sublime Text\\subl.exe" -w
+   ```
+
+4. Your `.gitconfig` should look like this:
+
+   ```bash
+   [core]
+       editor = "C:\\Program Files\\Sublime Text\\subl.exe" -w
+   [user]
+       email = Your@email.com
+       name = Your Name
+   ```
+</md></sn><sn><md>### key binding
+
+* At first install `terminus` in sublime.
+* Then go to ++Preferences / Key Binding++ 
+
+
 
 ```json
-///////////////////////////////////////////////////////////
-//           Jam-Es.com
-//////////////////////////////////////////////////////////
 
 [
 
@@ -81,11 +109,8 @@
   "args": {
     "save_first": true
   },
-
-
   
 }
-
 
 ]
 ```</md></sn>		
@@ -93,7 +118,7 @@
 		<tags>#set up sublime for git</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 03 2025 17:33:54 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 03 2025 17:36:58 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-Tqhvik3Nqr</id>
 		<duration></duration>
 	</config>
