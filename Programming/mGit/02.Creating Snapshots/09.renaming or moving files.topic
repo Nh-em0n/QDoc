@@ -1,10 +1,150 @@
 
-	<sn></sn>		
+	<sn><md>## Renaming or Moving Files in Git{.text-center}
+
+In Git, you can rename or move files in two ways:
+
+1. **Manually (using shell commands + git add)**
+2. **Using Git’s built-in `git mv` command**
+
+Both methods achieve the same result. The difference lies in convenience.
+
+---
+
+#### How Renaming or Moving Works
+
+1. A new file is created with the new filename (or moved to the new location) while preserving the content from the source file.
+
+2. The source file is then removed from its original location.
+ 
+&gt; A new file `created` and an old file `removed` in this process.</md></sn>		
 	<config>
 		<tags>#09.renaming or moving files</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 03 2025 16:44:33 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 03 2025 23:18:06 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-DaZru2zyst</id>
 		<duration></duration>
 	</config>
+<sn><md>### Renaming or Moving Files Manually{.text-center}
+
+Git doesn’t track file names explicitly; it tracks content. So, you can simply use shell commands to move/rename files and then stage the changes yourself.
+
+
+#### Example: Renaming a file
+
+```bash
+$ mv old.txt new.txt
+$ git add old.txt new.txt
+$ git commit -m "Renamed old.txt to new.txt"
+```
+
+#### Explanation
+
+* `mv` (shell command) moves or renames the file.
+* `git add` stages the deletion of the old file and addition of the new file.
+* After committing, Git will recognize it as a rename/move if the content is largely unchanged.
+</md></sn><sn><md>### Renaming or Moving Files with `git mv` {.text-center}
+
+Git provides a shortcut that combines the above steps into one.
+
+#### Example: Renaming a file
+
+```bash
+$ git mv old.txt new.txt
+$ git commit -m "Renamed old.txt to new.txt"
+```
+
+#### What `git mv` does internally
+
+`git mv old.txt new.txt` is the same as running:
+
+```bash
+mv old.txt new.txt
+git add old.txt new.txt
+```
+
+&gt; In both cases, `git rm` and `git mv` simplify the process of adding changes to the staging area.
+</md></sn><sn><md>### Practice {.text-center}
+
++++ see
+
+In our previous session, we removed both **file1** and **file2**.
+So, to test renaming or moving, we first need to create two files again.
+
+---
+
+#### Checking status and file list
+
+```bash
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
+
+```bash
+$ ls
+```
+
+*No file found*
+
+---
+
+#### Creating 2 files and committing them
+
+```bash
+$ echo "this is first note" &gt; file1.txt
+$ echo "this is second note" &gt; file2.md
+
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.txt
+        file2.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+```bash
+$ git add file1.txt file2.md
+warning: in the working copy of 'file1.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'file2.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m "Add two note file again"
+[master 7b2e050] Add two note file again
+ 2 files changed, 2 insertions(+)
+ create mode 100644 file1.txt
+ create mode 100644 file2.md
+```
+
+---
+
+#### Checking file list
+
+```bash
+$ ls
+file1.txt  file2.md
+```
+
+---
+
+#### Renaming `file1.txt` to `file1.md`
+
+```bash
+$ git mv file1.txt file1.md
+
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    file1.txt -&gt; file1.md
+```
+
+```bash
+$ git commit -m "change file1 extension to md"
+[master 86a240e] change file1 extension to md
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename file1.txt =&gt; file1.md (100%)
+```
+
++++</file></file></md></sn>
