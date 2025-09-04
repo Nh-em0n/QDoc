@@ -9,7 +9,7 @@ Git provides powerful commands to explore the history of your repository. Unders
 		<tags>#14.viewing history</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Fri Sep 05 2025 01:14:40 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Sep 05 2025 01:16:15 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-B1340C4m7m</id>
 		<duration></duration>
 	</config>
@@ -39,4 +39,75 @@ Date:   Wed Sep 4 12:34:56 2025 +0600
 
     Added new feature X
 ```</md></sn>
-<sn></sn>
+<sn><md>### Current HEAD{.text-center}
+
+**HEAD** refers to the latest commit in the currently checked-out branch. To see it:
+
+```bash
+$ git log -1
+```
+
+Or, you can use:
+
+```bash
+$ git show HEAD
+```
+
+This shows details of the current commit at HEAD.
+</md></sn>
+<sn><md>### One-Time Viewing of Log{.text-center}
+
+Git allows you to view a log **once** without scrolling indefinitely using `--oneline`. This is useful for a compact summary:
+
+```bash
+$ git log --oneline
+```
+
+**Example Output:**
+
+```
+3f6e2d3 Added new feature X
+2d4f1a1 Fixed bug Y
+1a2b3c4 Initial commit
+```
+
+* Each commit is shown in **short hash + message** format.
+* Ideal for quickly scanning commits.
+</md></sn>
+<sn><md>### Reverse Order Log{.text-center}
+
+By default, `git log` shows the most recent commit first. You can reverse the order using `--reverse`:
+
+```bash
+$ git log --reverse
+```
+
+This will display commits from **oldest to newest**, helpful when you want to see the project history from the beginning.
+</md></sn>
+<sn><md>### Combining Options{.text-center}
+
+You can combine options like `--oneline` and `--reverse`:
+
+```bash
+$ git log --oneline --reverse
+```
+
+This gives a **compact, oldest-to-newest commit view**:
+
+```
+1a2b3c4 Initial commit
+2d4f1a1 Fixed bug Y
+3f6e2d3 Added new feature X
+```
+</md></sn>
+<sn><md>### Summary Table {.text-center}
+
+| Command                       | Purpose                               |
+| ----------------------------- | ------------------------------------- |
+| `git log`                     | View full commit history              |
+| `git show HEAD`               | Show details of current HEAD commit   |
+| `git log -1`                  | View only the latest commit           |
+| `git log --oneline`           | Compact, single-line commit history   |
+| `git log --reverse`           | Show commits from oldest to newest    |
+| `git log --oneline --reverse` | Compact history from oldest to newest |
+</md></sn>
