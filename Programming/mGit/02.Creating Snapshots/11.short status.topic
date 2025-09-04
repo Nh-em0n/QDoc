@@ -1,10 +1,174 @@
 
-	<sn></sn>		
+	<sn><md>## Short Status{.text-center}
+
+When working with Git, the `git status` command is one of the most frequently used tools to check the current state of your working directory and staging area. However, its default output can sometimes be too detailed, especially if you’re looking for a quick overview. That’s where the **short status** option (`-s` or `--short`) becomes handy.
+
+</md></sn>		
 	<config>
 		<tags>#11.short status</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 03 2025 16:45:06 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 04 2025 20:30:32 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-ydVYySeKWN</id>
 		<duration></duration>
 	</config>
+<sn><md>### What is Git Short Status?{.text-center}
+
+`git status -s` provides a concise and easy-to-read summary of your file states. Instead of long descriptive messages, it uses two-letter codes to indicate the status of files in your project.
+
+This makes it quicker for developers to identify changes at a glance, especially in large repositories.
+
+### Syntax
+
+```bash
+git status -s
+```
+
+or
+
+```bash
+git status --short
+```
+</md></sn><sn><md>### Short Status Output Explanation {.text-center}
+
+The short status output uses **two columns** to represent the state of files:
+
+1. **Left column** → Staging area status
+2. **Right column** → Working directory status
+
+Here are the most common symbols you’ll encounter:
+
+| Code | Meaning                                  |
+| ---- | ---------------------------------------- |
+| `??` | Untracked file (not staged or committed) |
+| `A`  | File added to staging area               |
+| `M`  | File modified                            |
+| `D`  | File deleted                             |
+| `R`  | File renamed                             |
+| `C`  | File copied                              |
+| `U`  | File updated but has conflicts           |
+
+### Examples{.text-center}
+
+Below we denote space by _ (hyphen) for better clarification 
+
+| Output        | Meaning                                                 |
+| ------------- | ------------------------------------------------------- |
+| `_M file.txt`  | Modified in the working directory but not staged        |
+| `M_ file.txt`  | Modified in working directory and staged        |
+| `MM file.txt` | Modified in both the staging area(modified again after staging) and working directory |
+| `A file.txt`  | Newly added to staging area                             |
+| `?? new.txt`  | New untracked file                                      |
+</md></sn><sn><md>### Example Usage
+
+```bash
+$ git status -s
+M  app.js
+ M index.html
+A  style.css
+?? notes.txt
+```
+
+**Explanation:**
+* `M   app.js`  →  Modified and staged
+* `  M index.html` → Modified but not staged.
+* `A style.css` → Newly added and staged.
+* `?? notes.txt` → Untracked file.
+</md></sn><sn><md>### Why Use Short Status?
+
+* **Compact output** → Easier to scan quickly.
+* **Better for scripting** → Machine-friendly format for automated checks.
+* **Faster workflow** → Reduces clutter compared to the default verbose `git status`.
+
+### Pro Tip
+
+You can combine short status with other useful Git commands. For instance:
+
+```bash
+git status -sb
+```
+
+This adds the **branch information** to the short status, showing which branch you are on and how it compares to its remote.
+</md></sn><sn><md>## Practice {.text-end}
+
+
++++ see
+
+### Checking status and file list
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ ls
+file1.md  file2.md  temp/                                                                                                                                            
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git status
+On branch master                                                                                                                                                     
+nothing to commit, working tree clean
+```
+
+So we have two files (also a `.gitignore` file) and a folder `temp` which is ignored by `.gitignore`.
+
+### Modifying file1.md
+
+```bash
+$ echo "new data" &gt;&gt; file1.md    
+```
+
+### Checking in default long status
+
+```bash
+$ git status                                                                                                                                                         
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+### Checking with git short status
+
+```bash
+$ git status -s                                                                                                                                                      
+  M file1.md
+```
+
+So `file1.md` is modified in working directory and not staged.
+
+### Staging file1.md
+
+```bash
+$ git add file1.md
+warning: in the working copy of 'file1.md', LF will be replaced by CRLF the next time Git touches it
+```
+
+### Checking status again
+
+```bash
+$ git status -s
+M  file1.md
+```
+
+Now it is **modified and staged**.
+
+### Modifying the staged file1.md
+
+```bash
+$ echo "cat,dog and cow" &gt;&gt; file1.md
+```
+
+#### Checking status again
+
+```bash
+MM file1.md
+```
+
+Here `MM` appears:
+
+* First `M` → file modified and staged.
+* Second `M` → file modified again in the working directory after staging.
+
+
++++</file></file></md></sn>
