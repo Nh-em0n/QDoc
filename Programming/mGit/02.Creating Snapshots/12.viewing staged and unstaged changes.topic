@@ -1,10 +1,205 @@
 
-	<sn></sn>		
+	<sn><md>## Comparing Changes in Git{.text-center}
+
+When working with Git, you often need to compare file changes at different stages of development. The `git diff` command is the primary tool for this purpose. It allows you to inspect changes in your working directory, staging area, and even against previous commits.
+
+This article covers how to use `git diff` to:
+
+1. View changes between the **working directory and the staging area**.
+2. View changes between the **staging area and the last commit**.
+</md></sn>		
 	<config>
 		<tags>#12.viewing staged and unstaged changes</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 03 2025 16:45:41 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 04 2025 21:39:33 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-wYQDWgScmg</id>
 		<duration></duration>
 	</config>
+<sn><md>### Viewing Working Directory vs Staging Area Changes{.text-center}
+
+By default, `git diff` shows the difference between the **working directory** (your unsaved file changes) and the **staging area**.
+
+#### Syntax
+
+```bash
+git diff
+```
+
+#### Example
+
+```bash
+$ echo "new line" &gt;&gt; file1.md
+$ git diff
+diff --git a/file1.md b/file1.md
+index e69de29..5f1d7d2 100644
+--- a/file1.md
++++ b/file1.md
+@@
++new line
+```
+
+Here:
+
+* `+new line` indicates that a line has been added.
+* &gt; Since the file is not staged yet, this diff ++shows only unstaged changes++.
+</md></sn><sn><md>### Viewing Staging Area vs Last Commit Changes
+
+If you want to see what has been staged (via `git add`) but not yet committed, you can use:
+
+#### Syntax
+
+```bash
+git diff --cached
+```
+
+or
+
+```bash
+git diff --staged
+```
+
+#### Example
+
+```bash
+$ git add file1.md
+$ git diff --cached
+diff --git a/file1.md b/file1.md
+index e69de29..5f1d7d2 100644
+--- a/file1.md
++++ b/file1.md
+@@
++new line
+```
+
+Here:
+
+* The changes shown are the ones already **staged**.
+* These will be included in the **next commit**.
+</md></sn><sn><md>### Comparing Working Directory + Staging Area Together
+
+To see **all changes since the last commit** (both staged and unstaged):
+
+```bash
+git diff HEAD
+```
+
+This compares the entire project (working directory + staging area) against the last commit.
+</md></sn><sn><md>### Summary of Key Commands
+
+| Command             | Compares                                            |
+| ------------------- | --------------------------------------------------- |
+| `git diff`          | Working directory ↔ Staging area (unstaged changes) |
+| `git diff --cached` | Staging area ↔ Last commit (staged changes)         |
+| `git diff HEAD`     | Working directory + Staging area ↔ Last commit      |
+</md></sn><sn><md>## Practice {.text-center}
+
++++ see
+
+#### Checking status
+
+```bash
+$ git commit
+On branch master                                                                                                                                                     
+nothing to commit, working tree clean  
+```
+
+#### Modifying file2
+
+```bash
+$ echo "my name is Emon" &gt;&gt; file2.md
+```
+
+#### Checking status
+
+```bash
+$ git status -s
+ M file2.md   
+```
+
+#### Checking difference between working directory and staging area
+
+```bash
+$ git diff
+warning: in the working copy of 'file2.md', LF will be replaced by CRLF the next time Git touches it                                                                 
+diff --git a/file2.md b/file2.md                                                                                                                                     
+index af0af1d..d4b48b4 100644                                                                                                                                        
+--- a/file2.md                                                                                                                                                       
++++ b/file2.md                                                                                                                                                       
+@@ -1 +1,2 @@                                                                                                                                                        
+ this is second note                                                                                                                                                 
++my name is Emon   
+```
+
+#### Modifying file1.md also
+
+```bash
+$ echo "My friend name is Siam" &gt;&gt; file1.md     
+```
+
+#### Checking status again
+
+```bash
+$ git status -s
+ M file1.md
+ M file2.md   
+```
+
+#### Checking difference again
+
+```bash
+$ git diff
+warning: in the working copy of 'file1.md', LF will be replaced by CRLF the next time Git touches it                                                                 
+warning: in the working copy of 'file2.md', LF will be replaced by CRLF the next time Git touches it                                                                 
+diff --git a/file1.md b/file1.md                                                                                                                                     
+index 7c9fa05..dce304a 100644                                                                                                                                        
+--- a/file1.md                                                                                                                                                       
++++ b/file1.md                                                                                                                                                       
+@@ -1,3 +1,4 @@                                                                                                                                                      
+ this is first note                                                                                                                                                  
+ new data                                                                                                                                                            
+ cat,dog and cow                                                                                                                                                     
++My friend name is Siam                                                                                                                                              
+diff --git a/file2.md b/file2.md                                                                                                                                     
+index af0af1d..d4b48b4 100644                                                                                                                                        
+--- a/file2.md                                                                                                                                                       
++++ b/file2.md                                                                                                                                                       
+@@ -1 +1,2 @@                                                                                                                                                        
+ this is second note                                                                                                                                                 
++my name is Emon     
+```
+
+#### Staging files
+
+```bash
+$ git add -u
+warning: in the working copy of 'file1.md', LF will be replaced by CRLF the next time Git touches it                                                                 
+warning: in the working copy of 'file2.md', LF will be replaced by CRLF the next time Git touches it                                                                 
+
+$ git status -s
+M  file1.md                                                                                                                                                          
+M  file2.md                                                                                                                                                          
+```
+
+#### Checking difference between staging area vs last commit
+
+```bash
+$ git diff --staged
+diff --git a/file1.md b/file1.md                                                                                                                                     
+index 7c9fa05..dce304a 100644                                                                                                                                        
+--- a/file1.md                                                                                                                                                       
++++ b/file1.md                                                                                                                                                       
+@@ -1,3 +1,4 @@                                                                                                                                                      
+ this is first note
+ new data
+ cat,dog and cow
++My friend name is Siam                                                                                                                                              
+diff --git a/file2.md b/file2.md                                                                                                                                     
+index af0af1d..d4b48b4 100644                                                                                                                                        
+--- a/file2.md                                                                                                                                                       
++++ b/file2.md                                                                                                                                                       
+@@ -1 +1,2 @@                                                                                                                                                        
+ this is second note
++my name is Emon                                                                                                                                                     
+```
++++</md></sn>
