@@ -9,7 +9,34 @@ Git provides powerful commands to explore the history of your repository. Unders
 		<tags>#14.viewing history</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Fri Sep 05 2025 01:14:05 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Sep 05 2025 01:14:40 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-B1340C4m7m</id>
 		<duration></duration>
 	</config>
+<sn><md>### Git Log{.text-center}
+
+`git log` is the primary command to view the commit history of your repository. By default, it shows commits in reverse chronological order (most recent first).
+
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/media/git-commit-diagram.svg)
+
+```bash
+$ git log
+```
+
+This displays:
+
+* Commit hash
+* Author
+* Date
+* Commit message
+
+**Example Output:**
+
+```
+commit 3f6e2d3
+Author: John Doe john@example.com
+Date:   Wed Sep 4 12:34:56 2025 +0600
+
+    Added new feature X
+```</md></sn>
+<sn></sn>
