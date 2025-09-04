@@ -1,10 +1,15 @@
 
-	<sn></sn>		
+	<sn><md>## Viewing the history{.fg-red .text-center}
+
+Git provides powerful commands to explore the history of your repository. Understanding `git log`, how to view the **current HEAD**, and options like **one-time** and **reverse** helps in managing and navigating commits effectively.
+
+</md></sn>
+		
 	<config>
 		<tags>#14.viewing history</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Fri Sep 05 2025 01:13:46 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Sep 05 2025 01:14:05 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-B1340C4m7m</id>
 		<duration></duration>
 	</config>
