@@ -1,10 +1,128 @@
 
-	<sn></sn>		
+	<sn><md>## Viewing Commits and Objects with Git Show{.text-center}
+
+Git provides powerful ways to inspect the content of your repository history. One of the most useful commands is **`git show`**, which lets you view details about different Git objects such as **commits, trees, blobs, and tags**.
+
+</md></sn>		
 	<config>
 		<tags>#15.viewing a commit</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 03 2025 16:46:48 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Sep 05 2025 01:36:53 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-qBDBqfLk7l</id>
 		<duration></duration>
 	</config>
+<sn><md>### Git Objects in Brief{.text-center}
+
+In Git, everything is stored as an **object**. The four main types are:
+
+* **Commit** → Stores metadata about a commit (author, date, parent commits) and a reference to a tree.
+* **Tree** → Represents a directory structure (maps filenames to other trees or blobs).
+* **Blob** → Represents the content of a file.
+* **Tag** → A named reference pointing to a specific commit (or object).
+</md></sn><sn><md>### Using `git show` on Commits{.text-center}
+
+The simplest form of `git show` displays the **commit message, metadata, and diff**:
+
+```bash
+$ git show [commit-hash]
+```
+
+Example:
+
+```bash
+$ git show a1b2c3d
+```
+
+This shows details of the commit with hash `a1b2c3d`.
+</md></sn><sn><md>### Viewing the Current HEAD{.text-center}
+
+`HEAD` always points to the current commit you are on.
+
+```bash
+$ git show HEAD
+```
+
+Shows details of the **latest commit** on the current branch.
+</md></sn><sn><md>### Viewing Previous Commits{.text-center}
+
+You can use **`~` (tilde)** to go back through the commit history:
+
+* `HEAD~1` → One commit before the current `HEAD`
+* `HEAD~2` → Two commits before `HEAD`
+* `HEAD~n` → N commits before `HEAD`
+
+Example:
+
+```bash
+$ git show HEAD~1
+```
+
+Shows the commit just before the latest one.
+</md></sn><sn><md>### Viewing Specific File Changes in a Commit{.text-center}
+
+You can use `file` to see changes for a specific file inside a commit:
+
+```bash
+$ git show HEAD~1 -- file1.txt
+```
+
+This shows how `file1.txt` was modified in the previous commit.</md></sn><sn><md>### Viewing Trees (Directories){.text-center}
+
+To view the directory structure (tree object) of a commit:
+
+```bash
+$ git show [commit-hash]^{tree}
+```
+
+Example:
+
+```bash
+$ git show HEAD^{tree}
+```
+
+This shows the tree object for the current commit.</md></sn><sn><md>### Viewing Blobs (Files){.text-center}
+
+To directly display the content of a file (blob object) from a commit:
+
+```bash
+$ git show [commit-hash]:[file-path]
+```
+
+Example:
+
+```bash
+$ git show HEAD:file1.txt
+```
+
+This prints the content of `file1.txt` as it exists in the current commit.
+</md></sn><sn><md>### Viewing Tags{.text-center}
+
+If you have a tag, you can view it with:
+
+```bash
+$ git show <tag-name>
+```
+
+Example:
+
+```bash
+$ git show v1.0
+```
+
+If the tag points to a commit, it will show that commit’s details.
+</tag-name></md></sn><sn><md>### Summary Table{.text-center}
+
+| Command                    | Description                                    |
+| -------------------------- | ---------------------------------------------- |
+| `git show [commit-hash]`   | Show details of a specific commit              |
+| `git show HEAD`            | Show the latest commit                         |
+| `git show HEAD~1`          | Show the commit before the latest one          |
+| `git show HEAD~2`          | Show two commits before HEAD                   |
+| `git show HEAD:file.txt`   | Show content of a file from the current commit |
+| `git show [commit]:[file]` | Show content of a file at a specific commit    |
+| `git show [commit]^{tree}` | Show the directory structure (tree object)     |
+| `git show [tag]`           | Show details of a tag                          |
+
+This makes `git show` a versatile tool for **exploring commits, files, directories, and tags** inside your Git repository.
+</md></sn>
