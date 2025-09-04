@@ -9,7 +9,7 @@ Git provides powerful commands to explore the history of your repository. Unders
 		<tags>#14.viewing history</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Fri Sep 05 2025 01:16:15 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Sep 05 2025 01:19:00 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-B1340C4m7m</id>
 		<duration></duration>
 	</config>
@@ -110,4 +110,79 @@ This gives a **compact, oldest-to-newest commit view**:
 | `git log --oneline`           | Compact, single-line commit history   |
 | `git log --reverse`           | Show commits from oldest to newest    |
 | `git log --oneline --reverse` | Compact history from oldest to newest |
-</md></sn>
+</md></sn><sn><md>## Practices {.text-center}
+
++++ see
+
+#### Checking Status
+
+```bash
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
+
+#### Checking Commit History
+
+```bash
+$ git log
+commit 604cfb0df6481eafa4dea8ccbc60b43cfc7435cb (HEAD -&gt; master)
+Author: Nh-em0n nhemon2043@gmail.com
+Date:   Fri Sep 5 00:50:02 2025 +0600
+
+    update file2
+
+commit 613e2b919ac0fa1042cb87bb64c68f50aac5e5bf
+Author: Nh-em0n nhemon2043@gmail.com
+Date:   Thu Sep 4 21:39:15 2025 +0600
+
+    update note content
+
+commit 1c07c60fcccdc4c245c7650cca3ef289a739c1a1
+Author: Nh-em0n nhemon2043@gmail.com
+Date:   Thu Sep 4 21:12:42 2025 +0600
+
+    Update file1
+
+    I just add some new content to the note
+```
+
+Press <kbd>Space</kbd> to view more...
+
+
+#### Getting Commit List in Short Form
+
+```bash
+$ git log --oneline
+604cfb0 (HEAD -&gt; master) update file2
+613e2b9 update note content
+1c07c60 Update file1
+c2e0a9b remove a.temp
+69f3b68 add .gitignore
+6dcc1e7 create a temp file in temp folder
+86a240e change file1 extension to md
+7b2e050 Add two note file again
+23088c4 remove file1
+839814d remove file2
+5ebf799 update note2
+1656114 Initial Commit
+```
+
+#### Getting Commit List in Chronological Order
+
+```bash
+$ git log --oneline --reverse
+1656114 Initial Commit
+5ebf799 update note2
+839814d remove file2
+23088c4 remove file1
+7b2e050 Add two note file again
+86a240e change file1 extension to md
+6dcc1e7 create a temp file in temp folder
+69f3b68 add .gitignore
+c2e0a9b remove a.temp
+1c07c60 Update file1
+613e2b9 update note content
+604cfb0 (HEAD -&gt; master) update file2
+```
++++</md></sn>
