@@ -1,10 +1,113 @@
 
-	<sn></sn>		
+	<sn><md>## Popular Diff Tools for Git {.text-center}
+
+While the command-line `git diff` is powerful, many developers prefer using graphical diff and merge tools to visualize changes. Git supports integration with several external tools.
+
+:::.row
+
+:::.col-12 .col-md-6
+### 1. **VS Code (Visual Studio Code)**
+* A popular text editor with a built-in diff viewer.
+* Shows side-by-side comparison of changes.
+* Integrated Git support makes it easy to manage staging and commits.
+:::
+
+:::.col-12 .col-md-6
+### 2. **KDiff3**
+* Open-source diff and merge tool.
+* Supports 2-way and 3-way file comparison.
+* Displays changes in a clear split view.
+:::
+
+:::.col-12 .col-md-6
+### 3. **WinMerge**
+* A Windows-based diff/merge tool.
+* Highlights added, removed, and changed lines.
+* Useful for comparing entire directories as well as files.
+:::
+
+:::.col-12 .col-md-6
+### 4. **Meld** (Linux/Windows/Mac)
+* Visual diff and merge tool.
+* Supports side-by-side viewing.
+* Great for resolving merge conflicts interactively.
+:::
+
+:::
+
+</md></sn>		
 	<config>
 		<tags>#13.visual diff tools</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 03 2025 16:45:56 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Sep 05 2025 00:07:58 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-tEwmzWdBCs</id>
 		<duration></duration>
 	</config>
+<sn><md>## Configuring Git to Use a Diff Tool{.text-center}
+
+You can configure Git to use one of these tools as the default diff/merge viewer. For example:
+
+```bash
+# For VS Code
+git config --global diff.tool vscode
+git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
+
+# For KDiff3
+git config --global diff.tool kdiff3
+git config --global difftool.kdiff3.cmd "kdiff3 $LOCAL $REMOTE"
+
+# For WinMerge
+git config --global diff.tool winmerge
+git config --global difftool.winmerge.cmd "winmergeu $LOCAL $REMOTE"
+```
+
+Once configured, you can use:
+
+```bash
+git difftool
+```
+
+This will launch your chosen tool to show differences instead of the terminal.
+</md></sn><sn><md>## Viewing Diff in VS Code{.text-center}
+
+If you already use VS Code, you can easily view differences without extra setup:
+
+1. Open your project folder in VS Code.
+2. Modify a file and save changes.
+3. Go to **Source Control (Ctrl+Shift+G)** panel.
+4. Click on the modified file.
+
+   * The editor will show a **side-by-side diff view** (original on the left, modified on the right).
+
+Alternatively, you can run:
+
+```bash
+git difftool -t vscode
+```
+
+This opens the modified file in VS Code’s diff viewer.
+</md></sn><sn><md>## Sublime Merge
+
+* Install it
+* open git config file by
+```bash
+git config --global -e
+```
+* paste this settings
+```json
+[diff]
+    tool = sublime
+[difftool "sublime"]
+    cmd = \"C:\\Program Files\\Sublime Merge\\sublime_merge.exe\" \"$LOCAL\" \"$REMOTE\"
+```
+* exit tab
+* now to the bash command and type
+```bash
+git difftool
+```
+
+It will open difftool sublime merge
+
+
+</md></sn>
