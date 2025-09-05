@@ -8,7 +8,7 @@ The `.gitignore` file is an essential part of Git projects. It tells Git which f
 		<tags>#10.ignoring files</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 03 2025 23:57:23 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Sep 05 2025 15:16:03 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-LThmH4INEX</id>
 		<duration></duration>
 	</config>
@@ -214,4 +214,55 @@ nothing to commit, working tree clean
 
 ✅ Now Git ignores `a.temp` properly because it’s listed in `.gitignore` and no longer tracked.
 
-+++</file></file></file></file></file></file></file></md></sn>
++++</file></file></file></file></file></file></file></md></sn><sn><md>## Ignore a folder that is already tracked{.text-center}
+
+
+#### Step 1: Add the Folder to `.gitignore`
+
+Open or create a `.gitignore` file in your project root and add the folder path:
+
+```
+folder_name/
+```
+
+#### Step 2: Remove the Folder from Git Tracking (But Keep It Locally)
+
+Run the following command:
+
+```bash
+$ git rm -r --cached folder_name/
+```
+
+* `--cached` tells Git to stop tracking the folder.
+* The folder and its files will remain **locally** on your disk, but Git will no longer include them in commits.
+
+
+#### Step 3: Commit the Change
+
+Commit the update so the ignore rule takes effect in the repository:
+
+```bash
+$ git commit -m "Stop tracking folder_name and add to .gitignore"
+$ git push origin main
+```
+
+
+#### Step 4: Verify
+
+Check the status:
+
+```bash
+$ git status
+```
+
+The folder should no longer appear as a tracked file or in future changes.
+
+**Summary**
+
+* `.gitignore` only prevents *new* files from being tracked.
+* To ignore an *already tracked* folder, you must untrack it with:
+
+  ```bash
+  git rm -r --cached folder_name/
+  ```
+</md></sn>
