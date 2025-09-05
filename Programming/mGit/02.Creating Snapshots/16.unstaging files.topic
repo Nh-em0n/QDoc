@@ -1,10 +1,155 @@
 
-	<sn></sn>		
+	<sn><md>## Unstaging Files in Git{.text-center}
+
+:::.row
+:::.col-12 .col-md-7
+When working with Git, it’s common to add files to the staging area before committing them. Sometimes, however, you may stage files by mistake or realize that they don’t belong in the next commit. In such cases, Git allows you to **unstage** files, effectively moving them out of the staging area without discarding the actual changes in your working directory.
+
+#### Understanding the Staging Area
+Unstaging affects only the **staging area**, not your working directory. Your file changes remain intact on disk.
+:::
+
+:::.col-12 .col-md-5
+![git-unstaging-diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/media/git-unstaging-diagram.svg)
+:::
+:::
+</md></sn>		
 	<config>
 		<tags>#16.unstaging files</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 03 2025 16:47:02 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Sep 05 2025 11:33:04 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-8jC4eV9Cgd</id>
 		<duration></duration>
 	</config>
+<sn><md>### Unstage a Specific File{.text-center}
+
+```bash
+$ git reset HEAD [file]
+```
+
+Example:
+
+```bash
+$ git reset HEAD file1.txt
+```
+
+This command removes `file1.txt` from the staging area but keeps the modifications in the working directory.
+
+#### Unstage All Files
+
+```bash
+$ git reset HEAD
+```
+
+This unstages every file that was previously added with `git add`.
+</md></sn><sn><md>### Using Git Restore (Newer Approach) {.text-center}
+
+In newer versions of Git (≥ 2.23), you can use:
+
+```bash
+$ git restore --staged [file]
+```
+
+Example:
+
+```bash
+$ git restore --staged file1.txt
+```
+
+This does the same job as `git reset HEAD [file]` but with a clearer syntax.
+
+#### To unstage all files:
+
+```bash
+$ git restore --staged .
+```</md></sn><sn><md>### Checking the Status Before and After{.text-center}
+
+Before unstaging:
+
+```bash
+$ git status
+Changes to be committed:
+  modified:   file1.txt
+```
+
+After unstaging:
+
+```bash
+$ git status
+Changes not staged for commit:
+  modified:   file1.txt
+```
+
+The file is no longer in the staging area, but the ++modification remains++.
+</md></sn><sn><md>### When to Use Unstaging{.text-center}
+
+* You added the wrong file accidentally.
+* You want to commit changes separately for better commit history.
+* You staged sensitive or temporary files that should not be committed.
+
+---
+
+### Summary
+
+* `git reset HEAD [file]` → traditional way to unstage.
+* `git restore --staged [file]` → newer, more descriptive way.
+* Both commands preserve your working directory changes.
+
+Unstaging is a safe operation—it simply reverts files back to the "modified but not staged" state.</md></sn><sn><md>## Practice {.text-center}
+
++++ see
+
+#### checking status
+
+```bash
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ ls
+file1.md  file2.md  temp/
+```
+
+#### updating file2.md
+
+```bash
+$ echo "* My department is SES" &gt;&gt; file2.md                                                                                                                          
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git status -s
+ M file2.md
+```
+
+#### staging file2.md
+
+```bash
+$ git add file2.md
+warning: in the working copy of 'file2.md', LF will be replaced by CRLF the next time Git touches it
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git status -s
+M  file2.md
+```
+
+#### unstaging file2.md
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git restore --staged file2.md    
+```
+
+#### checking status
+
+```bash
+$ git status                                                                                                                                                         
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file2.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
++++</file></file></md></sn>
