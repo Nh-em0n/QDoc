@@ -1,10 +1,225 @@
 
-	<sn></sn>		
+	<sn><md>## Discarding Local Changes{.text-center}
+
+When working with Git, it’s common to experiment, edit files, or make temporary changes. Sometimes, you may want to throw away those modifications and return your files to a clean state. Git provides several ways to **discard local changes**, depending on whether the changes are ++unstaged, staged, or tracked++.
+
+</md></sn>		
 	<config>
 		<tags>#17.discarding local changes</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 03 2025 16:47:18 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Sep 05 2025 13:32:07 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-lZPpkgTpy9</id>
 		<duration></duration>
 	</config>
+<sn><md>### Discarding Changes in the Working Directory{.text-center}
+
+If you have modified a file but haven’t staged it yet:
+
+```bash
+$ git restore file
+```
+
+Example:
+
+```bash
+$ git restore file1.txt
+```
+
+This will reset `file1.txt` to its last committed state. The changes are permanently lost.
+
+#### To discard all unstaged changes in the working directory:
+
+```bash
+$ git restore .
+```</md></sn><sn><md>### Discarding Changes in the Staging Area{.text-center}
+
+If you already staged a file using `git add` but want to remove it from the staging area while also discarding changes:
+
+```bash
+$ git restore --staged file
+$ git restore file
+```
+
+The first command unstages the file, and the second restores it to the last committed version.
+
+For all staged files:
+
+```bash
+$ git restore --staged .
+$ git restore .
+```
+</md></sn><sn><md>### Discarding Newly Created (Untracked) Files{.text-center}
+
+Git does not track newly created files until they are staged. To remove untracked files:
+
+```bash
+$ git clean -f
+```
+
+To also remove untracked directories:
+
+```bash
+$ git clean -fd
+```
+
+Check what will be removed before actually deleting with:
+
+```bash
+$ git clean -n
+```
+</md></sn><sn><md>### Resetting Everything (Hard Reset){.text-center}
+
+If you want to completely reset your working directory and staging area to the last commit:
+
+```bash
+$ git reset --hard
+```
+
+This discards all staged and unstaged changes permanently. Use this carefully, as you cannot recover the discarded work unless it was committed or stashed.
+
+#### Alternative: Using Git Checkout (Legacy)
+
+Before Git 2.23, the common way was:
+
+```bash
+$ git checkout -- <file>
+```
+
+Now replaced by `git restore`, but still works for backward compatibility.
+</file></md></sn><sn><md>## Practise {.text-center}
+
++++ see
+
+#### checking status
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git status -s
+ M file2.md                                                                                                                                                          
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ ls
+file1.md  file2.md  temp/
+```
+
+So in our last exercise we modified `file2.md` but not staged yet.
+
+---
+
+#### checking file2.md current content
+
+```bash
+$ cat file2.md
+this is second note
+my name is Emon
+* my hoby is **programming**
+* My department is SES
+```
+
+---
+
+#### see what has been changed
+
+```bash
+$ git diff
+warning: in the working copy of 'file2.md', LF will be replaced by CRLF the next time Git touches it
+diff --git a/file2.md b/file2.md
+index c560b9a..49559cd 100644
+--- a/file2.md
++++ b/file2.md
+@@ -1,3 +1,4 @@
+ this is second note
+ my name is Emon
+ * my hoby is **programming**
++* My department is SES
+```
+
+So we added a new line in `file2.md` which is `* My department is SES`. Let’s discard this change and revert to its last commit. As it is not staged, we don’t have to restore from staging.
+
+---
+
+#### restoring file2.md
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git restore file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ cat file2.md
+this is second note
+my name is Emon
+* my hoby is **programming**
+```
+
+---
+
+#### now let’s modify both file1.md and file2.md
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ echo "new data" &gt;&gt; file1.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ echo "new data" &gt;&gt; file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git status -s
+ M file1.md
+ M file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git clean
+fatal: clean.requireForce defaults to true and neither -i, -n, nor -f given; refusing to clean
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git status -s
+ M file1.md
+ M file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git restore .
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git status -s
+```
+
+---
+
+#### newly created file
+
+* create
+* stage
+* unstage
+* restore via clean
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ echo "this is my note3" &gt;&gt; file3.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git add file3.md
+warning: in the working copy of 'file3.md', LF will be replaced by CRLF the next time Git touches it
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git restore --staged file3.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git status -s
+?? file3.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git clean -f
+Removing file3.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                                                         
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
++++</md></sn>
