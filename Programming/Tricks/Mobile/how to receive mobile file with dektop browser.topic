@@ -1,10 +1,55 @@
 
-	<sn></sn>		
+	<sn><md>### Share Files Through Browser {.text-center}
+
+![app-image-from-github](https://github.com/matan-h/Transfer/raw/main/fastlane/metadata/android/en-US/images/phoneScreenshots/02.png)
+
+
+[browse this repositoy](https://github.com/matan-h/Transfer)
+
+---
+
+#### Step 1: Download the APK
+
+* Go to the [APK Release Page](https://github.com/matan-h/Transfer/releases).
+  ![screenshot-of-apk-file](https://i.imgur.com/2OjxZ6V.png)
+
+---
+
+#### Step 2: Install and Open the App
+
+* Download, install it, and then open it.
+  ![app-open-screenshot](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/Tricks/media/Transfer-Apk.png)
+
+---
+
+#### Step 3: Select Folder or Upload Files
+
+* On first launch, the app will ask you to select a folder—choose one.
+* On later launches, you’ll see an **Upload button** at the bottom. Tap it and select your desired files.
+  ![bottom-uplad-button](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/Tricks/media/Transfer-Apk-Inside.png)
+
+---
+
+#### Step 4: Copy the IP Address
+
+* At the top of the app, you’ll see an input box containing the **IP address**.
+* Copy this address and paste it into your desktop browser.
+  ![desktop-page](https://i.imgur.com/Ggl9W6N.png)
+
+---
+
+#### Step 5: Download Files
+
+* From the browser page, you can:
+
+  * Download individual files
+  * Or download all files together in a **Zip archive**
+</md></sn>		
 	<config>
 		<tags>#how to receive mobile file with dektop browser</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Fri Sep 05 2025 09:26:15 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Sep 05 2025 10:00:05 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-V0v3NJXgka</id>
 		<duration></duration>
 	</config>
