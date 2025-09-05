@@ -8,7 +8,7 @@ Git provides powerful ways to inspect the content of your repository history. On
 		<tags>#15.viewing a commit</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Fri Sep 05 2025 01:36:53 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Sep 05 2025 10:49:13 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-qBDBqfLk7l</id>
 		<duration></duration>
 	</config>
@@ -125,4 +125,192 @@ If the tag points to a commit, it will show that commit’s details.
 | `git show [tag]`           | Show details of a tag                          |
 
 This makes `git show` a versatile tool for **exploring commits, files, directories, and tags** inside your Git repository.
-</md></sn>
+</md></sn><sn><md>## Practice{.text-center}
+
++++ see
+
+### Checking Commits
+
+```bash
+$ git log --oneline
+604cfb0 (HEAD -&gt; master) update file2
+613e2b9 update note content
+1c07c60 Update file1
+c2e0a9b remove a.temp
+69f3b68 add .gitignore
+6dcc1e7 create a temp file in temp folder
+86a240e change file1 extension to md
+7b2e050 Add two note file again
+23088c4 remove file1
+839814d remove file2
+5ebf799 update note2
+1656114 Initial Commit
+```
+
+### Checking the First Last Commit with Hash ID (`604cfb0`)
+
+```bash
+$ git show 604cfb0
+commit 604cfb0df6481eafa4dea8ccbc60b43cfc7435cb (HEAD -&gt; master)
+Author: Nh-em0n [nhemon2043@gmail.com]
+Date:   Fri Sep 5 00:50:02 2025 +0600
+
+    update file2
+
+diff --git a/file2.md b/file2.md
+index d4b48b4..c560b9a 100644
+--- a/file2.md
++++ b/file2.md
+@@ -1,2 +1,3 @@
+ this is second note
+ my name is Emon
++* my hoby is **programming**
+```
+
+### Checking the Second Last Commit with Hash ID (`613e2b9`)
+
+```bash
+$ git show 613e2b9
+commit 613e2b919ac0fa1042cb87bb64c68f50aac5e5bf
+Author: Nh-em0n [nhemon2043@gmail.com]
+Date:   Thu Sep 4 21:39:15 2025 +0600
+
+    update note content
+
+diff --git a/file1.md b/file1.md
+index 7c9fa05..dce304a 100644
+--- a/file1.md
++++ b/file1.md
+@@ -1,3 +1,4 @@
+ this is first note
+ new data
+ cat,dog and cow
++My friend name is Siam
+diff --git a/file2.md b/file2.md
+index af0af1d..d4b48b4 100644
+--- a/file2.md
++++ b/file2.md
+@@ -1 +1,2 @@
+ this is second note
++my name is Emon
+```
+
+### Checking Last Commit by Indicating HEAD
+
+```bash
+$ git show HEAD
+commit 604cfb0df6481eafa4dea8ccbc60b43cfc7435cb (HEAD -&gt; master)
+Author: Nh-em0n [nhemon2043@gmail.com]
+Date:   Fri Sep 5 00:50:02 2025 +0600
+
+    update file2
+
+diff --git a/file2.md b/file2.md
+index d4b48b4..c560b9a 100644
+--- a/file2.md
++++ b/file2.md
+@@ -1,2 +1,3 @@
+ this is second note
+ my name is Emon
++* my hoby is **programming**
+```
+
+#### Checking the Second Last Commit by Indicating HEAD
+
+```bash
+$ git show HEAD~1
+commit 613e2b919ac0fa1042cb87bb64c68f50aac5e5bf
+Author: Nh-em0n [nhemon2043@gmail.com]
+Date:   Thu Sep 4 21:39:15 2025 +0600
+
+    update note content
+
+diff --git a/file1.md b/file1.md
+index 7c9fa05..dce304a 100644
+--- a/file1.md
++++ b/file1.md
+@@ -1,3 +1,4 @@
+ this is first note
+ new data
+ cat,dog and cow
++My friend name is Siam
+diff --git a/file2.md b/file2.md
+index af0af1d..d4b48b4 100644
+--- a/file2.md
++++ b/file2.md
+@@ -1 +1,2 @@
+ this is second note
++my name is Emon
+```
+
+### Checking the Last 5th Commit Indicating HEAD
+
+```bash
+$ git show HEAD~5
+commit 6dcc1e70f91dd763d47bcd83fa3b8a2026e74c6b
+Author: Nh-em0n [nhemon2043@gmail.com]
+Date:   Wed Sep 3 23:39:49 2025 +0600
+
+    create a temp file in temp folder
+
+diff --git a/temp/a.temp b/temp/a.temp
+new file mode 100644
+index 0000000..0c88022
+--- /dev/null
++++ b/temp/a.temp
+@@ -0,0 +1 @@
++this is a temp file
+```
+
+### Checking Second Last Commit on `.gitignore`
+
+```bash
+$ git show HEAD~1 -- .gitignore
+```
+
+`empty` → no changes made on `.gitignore`.
+
+### Checking Directory Tree when Creating `.gitignore` File
+
+```bash
+$ git log --oneline
+604cfb0 (HEAD -&gt; master) update file2
+613e2b9 update note content
+1c07c60 Update file1
+c2e0a9b remove a.temp
+69f3b68 add .gitignore
+6dcc1e7 create a temp file in temp folder
+86a240e change file1 extension to md
+7b2e050 Add two note file again
+23088c4 remove file1
+839814d remove file2
+5ebf799 update note2
+1656114 Initial Commit
+```
+
+Now the target commit is `69f3b68 add .gitignore`.
+
+#### Checking File Tree at that Moment
+
+```bash
+$ git show 69f3b68^{tree}
+tree 69f3b68^{tree}
+
+.gitignore
+file1.md
+file2.md
+temp/
+```
+
+### Checking `file2.md` Content on Last 5th Commit
+
+```bash
+$ git show HEAD~5:file2.md
+this is second note
+```
+
+```bash
+$ git show 6dcc1e7:file2.md
+this is second note
+```
++++</md></sn>
