@@ -15,7 +15,7 @@ This separation gives you flexibility — you can stage some changes while leavi
 :::
 
 :::.col-12 .col-md-6
-![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/media/git-add-status-commit-diagram.svg)
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/media/git%20staging%20diagram.svg)
 :::
 :::
 
@@ -32,7 +32,7 @@ This separation gives you flexibility — you can stage some changes while leavi
 		<tags>#04.staging files</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 03 2025 20:26:18 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Sep 05 2025 11:14:07 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-cXukycGYBt</id>
 		<duration></duration>
 	</config>
