@@ -1,10 +1,202 @@
 
-	<sn></sn>		
+	<sn><md>## Restoring a File from a Specific Commit {.text-center}
+
+When working with Git, sometimes you may need to bring back an older version of a file from a specific commit. This is useful if a file was accidentally modified or deleted, and you want to restore only that file without rolling back the entire project.
+
+:::.row
+:::.col-12 .col-md-6
+#### Understanding the Concept{.text-center}
+
+Git keeps track of every change in commits. Each commit has a unique **hash ID**. By referencing this hash, you can check out the exact state of a file at that point in history. Unlike resetting or reverting, restoring a file does not affect the commit history—it just brings back the file into your working directory.
+:::
+
+:::.col-12 .col-md-6
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/media/git-restoring-file-from-commit-diagram-trs.svg)
+:::
+:::
+</md></sn>		
 	<config>
 		<tags>#18.restoring a file to an earlier version</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 03 2025 16:47:45 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Sep 05 2025 14:36:36 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-cJ967XvqOi</id>
 		<duration></duration>
 	</config>
+<sn><md>### Checking Commit History{.text-center}
+
+First, view your commit history to identify the commit hash where the file was in the desired state:
+
+```bash
+$ git log --oneline
+604cfb0 update file2
+613e2b9 update note content
+1c07c60 Update file1
+c2e0a9b remove a.temp
+69f3b68 add .gitignore
+6dcc1e7 create a temp file in temp folder
+```
+
+Here, each line shows the commit hash (shortened) and its message.
+</md></sn><sn><md>### Restoring a File Using Commit Hash{.text-center}
+
+To restore a file from a specific commit, use:
+
+```bash
+$ git checkout <commit-hash> -- <file-path>
+```
+
+For example, to restore `file2.md` from commit `613e2b9`:
+
+```bash
+$ git checkout 613e2b9 -- file2.md
+```
+
+This brings back the version of `file2.md` that existed in commit `613e2b9`. The file will appear in your working directory, staged for commit.
+
+</file-path></commit-hash></md></sn><sn><md>### Restoring with `git restore` (Newer Alternative) {.text-center}
+
+Modern Git versions provide the `git restore` command, which is more intuitive:
+
+```bash
+$ git restore --source=<commit-hash> -- <file-path>
+```
+
+Example:
+
+```bash
+$ git restore --source=613e2b9 -- file2.md
+```
+
+This restores the file but does not commit the change—you can review it first.
+</file-path></commit-hash></md></sn><sn><md>### Important Notes
+
+* **History remains intact**: Restoring a file doesn’t delete or alter commits.
+* **Selective recovery**: You can restore just one file without affecting the rest of the project.
+* **Staging required**: After restoring, the file is staged or in your working directory; you must commit it if you want it to be permanent.
+
+### Conclusion
+
+Restoring a file from a specific commit in Git is a safe and powerful way to recover changes without altering project history. Using either `git checkout` or the modern `git restore`, you can easily bring back any file to its previous state.
+</md></sn><sn><md>## Practice {.text-center}
+
++++ see
+
+### Checking Status and Files
+
+```bash
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ ls
+file1.md  file2.md  temp/
+```
+
+### Checking Commits
+
+```bash
+$ git log --oneline
+604cfb0 (HEAD -&gt; master) update file2
+613e2b9 update note content
+1c07c60 Update file1
+c2e0a9b remove a.temp
+69f3b68 add .gitignore
+6dcc1e7 create a temp file in temp folder
+86a240e change file1 extension to md
+7b2e050 Add two note file again
+23088c4 remove file1
+839814d remove file2
+5ebf799 update note2
+1656114 Initial Commit
+```
+
+### Removing `file2.md`
+
+```bash
+$ git rm file2.md
+rm 'file2.md'
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git status -s
+D  file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git commit -m "remove fil2.md"
+[master 83e5f5c] remove fil2.md
+ 1 file changed, 3 deletions(-)
+ delete mode 100644 file2.md
+
+$ ls
+file1.md  temp/
+```
+
+### Checking Commits After Removal
+
+```bash
+$ git log --oneline
+83e5f5c (HEAD -&gt; master) remove fil2.md
+604cfb0 update file2
+613e2b9 update note content
+1c07c60 Update file1
+c2e0a9b remove a.temp
+69f3b68 add .gitignore
+6dcc1e7 create a temp file in temp folder
+86a240e change file1 extension to md
+7b2e050 Add two note file again
+23088c4 remove file1
+839814d remove file2
+5ebf799 update note2
+1656114 Initial Commit
+```
+
+### Bringing Back `file2.md` from a Previous Commit
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git log --oneline
+83e5f5c (HEAD -&gt; master) remove fil2.md
+604cfb0 update file2
+613e2b9 update note content
+1c07c60 Update file1
+c2e0a9b remove a.temp
+69f3b68 add .gitignore
+6dcc1e7 create a temp file in temp folder
+86a240e change file1 extension to md
+7b2e050 Add two note file again
+23088c4 remove file1
+839814d remove file2
+5ebf799 update note2
+1656114 Initial Commit
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git restore --source=HEAD~2 file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file2.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git add file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git status -s
+A  file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git commit -m "bring fil2.md"
+[master f18edaf] bring fil2.md
+ 1 file changed, 2 insertions(+)
+ create mode 100644 file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ ls
+file1.md  file2.md  temp/
+```
++++</file></md></sn>
