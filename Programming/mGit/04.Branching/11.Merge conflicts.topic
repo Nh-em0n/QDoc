@@ -21,7 +21,7 @@ Git stops the merge to let you manually resolve the conflict.</md></sn>
 		<tags>#11.merge conflicts</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 23:42:36 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Sep 12 2025 00:03:40 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-lpizTHKatu</id>
 		<duration></duration>
 	</config>
@@ -130,4 +130,196 @@ $ git log --oneline --graph --all
 You will now see that the merge is complete and both changes are incorporated.
 
 This workflow demonstrates **why conflicts occur**, how to **create a conflict environment**, and the step-by-step process to **resolve and commit** changes after a conflict.
-</md></sn>
+</md></sn><sn><md>## Practise {.text-center}
+
+
++++ see
+
+### Check Status
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                          
+$ git status                                                          
+On branch master                                                      
+nothing to commit, working tree clean
+```
+
+### app.js in Master
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                          
+$ echo "let x = 5" &gt;&gt; app.js                                          
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                          
+$ git add app.js                                                      
+warning: in the working copy of 'app.js', LF will be replaced by CRLF the next time Git touches it                                 
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                          
+$ git status -s                                                       
+A  app.js                                                             
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                          
+$ git commit -m "add script file"                                     
+[master 4a65548] add script file                                       
+ 1 file changed, 1 insertion(+)                                       
+ create mode 100644 app.js   
+```
+
+### app.js in Feature
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                          
+$ git switch -C feature                                               
+Switched to a new branch 'feature'                                    
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (feature)                         
+$ echo "//declare variable" &gt; app.js                                  
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (feature)                         
+$ git add app.js                                                      
+warning: in the working copy of 'app.js', LF will be replaced by CRLF the next time Git touches it
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (feature)                         
+$ git status -s                                                       
+M  app.js                                                             
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (feature)                         
+$ git commit -m "add script file"                                     
+[feature 541f5eb] add script file                                      
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+```
+
+### Switch to Master and Update app.js
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (feature)                         
+$ git switch master                                                   
+Switched to branch 'master'                                           
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                          
+$ echo "console.log(x)" &gt; app.js                                      
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                          
+$ git add app.js                                                      
+warning: in the working copy of 'app.js', LF will be replaced by CRLF the next time Git touches it                                 
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                          
+$ git status -s                                                       
+M  app.js                                                             
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                          
+$ git commit -m "update app.js"                                       
+[master f163dbc] update app.js                                        
+ 1 file changed, 1 insertion(+), 1 deletion(-)               
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                          
+$ git log --oneline --all --graph                             
+* f163dbc (HEAD -&gt; master) update app.js                     
+| * 541f5eb (feature) add script file                        
+|/                                                           
+* 4a65548 add script file                                    
+*   2710f6b Merge branch 'api-config'                        
+|\                                                           
+| * 57ab174 Add api_list.md                                  
+* | 94821b8 point new bug - resources                        
+|/                                                           
+*   bd42278 fix all prev bug                                 
+|\                                                           
+| * 7cdcd2d Add dynamic feature                              
+| * ccb8dca Create bug list(bug.md)                          
+|/                                                           
+* 5ce7d11 add doc file                                       
+* 26f1bd2 Add feature.txt                                    
+* 5e1e550 update note1                                       
+* 1212f2d update note1
+```
+
+### Merging
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                          
+$ git merge feature
+Auto-merging app.js                                          
+CONFLICT (content): Merge conflict in app.js                 
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+### Resolving Conflict
+
+`app.js` after conflict:
+
+```js
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+console.log(x)
+=======
+//declare variable
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature
+```
+
+**Resolved to:**
+
+```js
+//declare variable
+console.log(x)
+```
+
+### Proceeding to Commit
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                          
+$ git status
+On branch master                                             
+You have unmerged paths.                                     
+  (fix conflicts and run "git commit")                       
+  (use "git merge --abort" to abort the merge)               
+
+Unmerged paths:                                              
+  (use "git add <file>..." to mark resolution)               
+        both modified:   app.js                              
+
+no changes added to commit (use "git add" and/or "git commit -a")                                                         
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master|MERGING)         
+$ git add app.js
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master|MERGING)         
+$ git status -s
+M  app.js                                                    
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master|MERGING)         
+$ git commit
+[master 9bc8e37] Merge branch 'feature'
+```
+
+After this step, the default code editor opens with the message `Merge branch 'feature'`.
+Close the editor, and the merge is completed.
+
+### Checking Log
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                          
+$ git log --oneline --all --graph                            
+*   9bc8e37 (HEAD -&gt; master) Merge branch 'feature'          
+|\                                                           
+| * 541f5eb (feature) add script file                        
+* | f163dbc update app.js                                    
+|/                                                           
+* 4a65548 add script file                                    
+*   2710f6b Merge branch 'api-config'                        
+|\                                                           
+| * 57ab174 Add api_list.md                                  
+* | 94821b8 point new bug - resources                        
+|/                                                           
+*   bd42278 fix all prev bug                                 
+|\                                                           
+| * 7cdcd2d Add dynamic feature
+| * ccb8dca Create bug list(bug.md)
+|/                                                           
+* 5ce7d11 add doc file                                       
+* 26f1bd2 Add feature.txt                                    
+* 5e1e550 update note1                                       
+* 1212f2d update note1                                       
+* f18edaf bring fil2.md
+```
+
++++</file></md></sn>
