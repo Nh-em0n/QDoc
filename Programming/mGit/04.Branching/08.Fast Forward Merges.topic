@@ -16,7 +16,7 @@ A **fast-forward merge** in Git is a type of merge that occurs when the **branch
 		<tags>#08.fast forward merges</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 20:28:47 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 11 2025 21:14:06 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-rqGHb12GjU</id>
 		<duration></duration>
 	</config>
@@ -131,11 +131,13 @@ This ensures that Git always creates a merge commit, even if a fast-forward merg
 :::.col-12 .col-lg-6
 #### FF-Merge{.text-center}
 ![fast-forward-mege-screenshot](https://i.imgur.com/mAcU45b.png) 
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/media/ff-vs-noff-merge-commit-diagram.svg)
 :::
 
 :::.col-12 .col-lg-6
 #### No-FF Merge{.text-center}
 ![no-ff-mege-scr](https://i.imgur.com/qxLv6C9.png)
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/media/ff-vs-noff-merge-diagram.svg)
 :::
 :::
 
@@ -152,8 +154,6 @@ This ensures that Git always creates a merge commit, even if a fast-forward merg
 | **Cons**                    | Hard to identify which commits belonged to the feature branch later.                                                     | History can get cluttered with many merge commits.                                               |
 | **Best Use Case**           | Small changes, quick fixes, or when branch history isn’t important.                                                      | Long-running features, team projects where preserving branch context is valuable.                |
 | **Command Example**         | `git merge feature`                                                                                                      | `git merge --no-ff feature`                                                                      |
-
-
 </md></sn><sn><md>## Practise {.text-center}
 
 +++ see
