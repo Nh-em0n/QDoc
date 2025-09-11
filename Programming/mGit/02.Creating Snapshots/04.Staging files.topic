@@ -32,45 +32,61 @@ This separation gives you flexibility — you can stage some changes while leavi
 		<tags>#04.staging files</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Fri Sep 05 2025 11:14:07 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 11 2025 08:08:22 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-cXukycGYBt</id>
 		<duration></duration>
 	</config>
 <sn><md>## Common Commands for Staging Files{.text-center}
 
-1. **Stage a Single File**
+:::.row
 
-   ```bash
-   git add filename
-   ```
+:::.col-12 .col-lg-6
+#### Stage a Single File{.text-center}
+```bash
+git add filename
+```
+Adds only the specified file to the staging area.
+:::
 
-   Adds only the specified file to the staging area.
+:::.col-12 .col-lg-6
+#### Stage Multiple Files{.text-center}
+```bash
+git add file1 file2 file3
+```
+:::
 
-2. **Stage Multiple Files**
+:::.col-12 .col-lg-6
+#### Stage All Files {.text-center}
+```bash
+git add .
+```
 
-   ```bash
-   git add file1 file2 file3
-   ```
+or
 
-3. **Stage All Files (Modified and New)**
+```bash
+git add -A
+```
+Stages ++Modified + New + Deletions++
+:::
 
-   ```bash
-   git add .
-   ```
+:::.col-12 .col-lg-6
+#### Stages modified files {.text-center}
+```bash
+git add -u
+```
+Stages ++Modified + Deletions++ ,does not stage untracked files(newly created)
 
-   or
+:::
 
-   ```bash
-   git add -A
-   ```
+:::.col-12 .col-lg-6
+#### Stage Part of a File{.text-center}
+```bash
+git add -p
+```
+Allows you to review changes hunk by hunk and choose what to stage.
+:::
 
-4. **Stage Part of a File (Interactive Mode)**
-
-   ```bash
-   git add -p
-   ```
-
-   Allows you to review changes hunk by hunk and choose what to stage.
+:::
 </md></sn><sn><md>### Viewing the Staging Area{.text-center}
 
 Git status shows you the current state of your **working directory** and **staging area** so you can see what’s going on before you commit or push.
