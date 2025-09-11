@@ -1,10 +1,123 @@
 
-	<sn></sn>		
+	<sn><md>## Git Fast-Forward Merge{.text-center}
+
+:::.row
+:::.col-12 .col-lg-6
+A **fast-forward merge** in Git is a type of merge that occurs when the **branch being merged has not diverged from the target branch**. In this case, Git can simply **move the pointer of the target branch forward**, creating a `linear history`. This article explains fast-forward merges with step-by-step examples, including code snippets, options, and configuration.
+:::
+
+:::.col-12 .col-lg-6
+![diagram](https://d8it4huxumps7.cloudfront.net/uploads/images/653a479ad35e0_merge_in_git_01.jpg?d=2000x2000)
+:::
+:::
+
+</md></sn>		
 	<config>
 		<tags>#08.fast forward merges</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 08:54:55 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 11 2025 18:39:08 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-rqGHb12GjU</id>
 		<duration></duration>
 	</config>
+<sn><md>### Create a Branch{.text-center}
+
+To demonstrate fast-forward merges, first create a new branch from the main branch (usually `master` or `main`).
+
+```bash
+# Create a new branch named 'feature' then switch to it
+git switch -C branch feature
+```
+</md></sn><sn><md>### Do Some Commits on the Branch{.text-center}
+
+Make changes and commit them to the `feature` branch.
+
+```bash
+# Create a new file and add content
+echo "Feature work" &gt; feature.txt
+
+# Stage the file
+git add feature.txt
+
+# Commit the changes
+git commit -m "Add feature.txt with initial content"
+
+# Make another change
+echo "More feature work" &gt;&gt; feature.txt
+git add feature.txt
+git commit -m "Update feature.txt with more content"
+```</md></sn><sn><md>### Check All Log with Graph{.text-center}
+
+You can visualize the commit history using a graph.
+
+```bash
+git log --oneline --graph --all
+```
+
+Example output (simplified):
+
+```
+* abc123 (HEAD -&gt; feature) Update feature.txt with more content
+* def456 Add feature.txt with initial content
+* 789xyz (master) Initial commit
+```
+
+The graph shows that the `feature` branch extends from `master` without divergence.</md></sn><sn><md>### Switch to Master and Merge Fast-Forward{.text-center}
+
+Since no new commits exist on `master`, a fast-forward merge is possible.
+
+```bash
+# Switch back to master
+git switch master
+
+# Merge the feature branch
+git merge feature
+```
+
+After this, the `master` branch pointer moves forward to include all `feature` branch commits. The history remains linear.</md></sn><sn><md>### Example of No Fast-Forward {.text-center}
+
+Even if a fast-forward merge is possible, you can force Git to create a merge commit using `--no-ff`.
+
+```bash
+# Switch to master
+git switch master
+
+# Merge feature branch with no fast-forward
+git merge --no-ff feature -m "Merge feature branch with a merge commit"
+```
+
+This creates a merge commit, ++preserving the record that a feature branch existed++.
+</md></sn><sn><md>### [Pros]{.fg-teal} and [Cons]{.fg-red} {.text-center}
+
+:::.row
+
+:::.col-12 .col-lg-6 .fg-teal
+**Pros:**
+
+* Maintains a simple, linear history.
+* Avoids unnecessary merge commits, keeping the log cleaner.
+:::
+
+:::.col-12 .col-lg-6 .fg-red
+**Cons:**
+
+* Loses explicit history of the feature branch; harder to track when a branch was merged.
+* Can be confusing in larger projects where tracking feature development is important.
+:::
+
+:::
+</md></sn><sn><md>### Config Setting of `--no-ff` {.text-center}
+
+You can configure Git to avoid fast-forward merges by default.
+
+```bash
+# Set globally to always create merge commits
+git config --global merge.ff false
+
+# Set for the current repository only
+git config merge.ff false
+```
+
+This ensures that Git always creates a merge commit, even if a fast-forward merge is possible, preserving branch history.
+
+</md></sn>
