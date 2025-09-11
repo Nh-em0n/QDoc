@@ -1,10 +1,94 @@
 
-	<sn></sn>		
+	<sn><md>## Git Merge {.text-center}
+
+:::.row
+
+:::.col-12 .col-lg-6
+Git is a distributed version control system that allows multiple developers to work on the same project simultaneously. One of the essential operations in Git is **merging**, which is the process of integrating changes from one branch into another. Understanding how Git handles merges is crucial to maintaining a clean and coherent project history. This article explores the concepts of diverging branches, fast-forward merges, and three-way merges.
+:::
+
+:::.col-12 .col-lg-6
+![diagram](https://blog.mergify.com/content/images/2022/11/3-way-merge-scheme.png)
+:::
+
+:::</md></sn>		
 	<config>
 		<tags>#07.merging</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 08:54:26 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 11 2025 17:30:07 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-IBtG1bxYMc</id>
 		<duration></duration>
 	</config>
+<sn><md>### When Branches Diverge{.text-center}
+
+:::.row
+
+:::.col-12 .col-lg-6
+Branches in Git represent independent lines of development. A **branch divergence** occurs when two branches evolve separately from a common ancestor commit. This means that each branch has commits that the other branch does not contain.
+
+&gt; When the ++branch is being marged has new commit++ that not exist in following branch then the branches diverged.
+
+Branch divergence can happen in scenarios such as:
+
+* Two developers working on different features at the same time.
+* A developer creating a new branch to experiment while the main branch continues to progress.
+
+When branches diverge, Git must reconcile the differences to combine them. This is where merging strategies come into play.
+:::
+
+:::.col-12 .col-lg-6
+![non-diverged-branches-diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/media/non-diverged-diagram.svg)
+![non-diverged-branches-diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/media/diverged-branches-diagram.svg)
+:::
+
+:::</md></sn><sn><md>### Fast-Forward Merge Concept{.text-center}
+
+:::.row
+
+:::.col-12 .col-lg-6
+A **fast-forward merge** occurs when the **branch being merged** has not diverged from the target branch. In other words, the target branch has not made any new commits since the source branch was created.
+
+In a fast-forward merge:
+
+* Git simply moves the `pointer` of the target branch forward to point to the latest commit of the source branch.
+* No new merge commit is created.
+* The history remains linear and simple.
+
+This type of merge is *straightforward* and does not involve conflict resolution since the target branch has no additional changes.
+:::
+
+:::.col-12 .col-lg-6
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/media/fast-forward-mege-diagram.svg)
+:::
+
+:::
+</md></sn><sn><md>### Three-Way Merge Concept{.text-center}
+
+:::.row
+:::.col-12 .col-lg-6
+A **three-way merge** is used when branches have diverged and both have unique commits. In this case, Git needs to integrate changes from both branches.
+
+The three-way merge involves:
+
+1. **Common ancestor commit** – the last shared commit between the two branches.
+2. **Source branch tip** – the latest commit on the branch being merged.
+3. **Target branch tip** – the latest commit on the branch receiving the changes.
+:::
+
+:::.col-12 .col-lg-6
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/media/3-way-merge-diagram.svg)
+:::
+:::
+
+Git analyzes these three points to determine which changes are new and need to be combined. If both branches modify the same part of a file, a `merge conflict` occurs, and manual resolution is required. After resolving conflicts, a new `merge commit` is created, preserving the history of both branches.
+</md></sn><sn><md>### Summary
+
+Merging in Git is an essential technique to integrate work from different branches.
+
+* Branch divergence triggers the need for merging strategies.
+* **Fast-forward merges** provide a simple way to incorporate changes when no divergence exists.
+* **Three-way merges** handle divergent histories by creating a new merge commit and resolving conflicts if necessary.
+
+Understanding these concepts ensures a smoother workflow in collaborative development and helps maintain a clean project history.
+</md></sn>
