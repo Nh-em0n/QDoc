@@ -15,7 +15,7 @@ A **branch** in Git is a lightweight reference pointing to a commit. Branching a
 		<tags>#03.working with branches</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 11:47:00 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 11 2025 12:15:29 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-WFfCdbMlPC</id>
 		<duration></duration>
 	</config>
@@ -176,4 +176,155 @@ Force delete a branch (even if unmerged):
 * A branch is a pointer to a commit, enabling isolated development.
 * You can create, switch, rename, and delete branches easily.
 * Commits in one branch do not affect another until merged.
-* `git log` lets you view commit history for one branch or across all branches.</md></sn>
+* `git log` lets you view commit history for one branch or across all branches.</md></sn><sn><md>### Practise {.text-center}
+
++++ see
+
+#### Checking Status
+
+```bash
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
+
+So a fresh environment.
+
+---
+
+#### Creating New Branch
+
+```bash
+$ git branch testA
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
+
+&gt; **Note:** We created a branch named `testA` but we are still in the master branch. Moreover, `testA` branched from master.
+
+---
+
+#### Getting All Branches
+
+```bash
+$ git branch
+* master
+  testA
+```
+
+&gt; **Note:** Here `*` indicates that our current branch is **master**.
+
+---
+
+#### Switching Branch
+
+```bash
+$ git switch testA
+Switched to branch 'testA'
+```
+
+---
+
+#### Checking Status
+
+```bash
+$ git status
+On branch testA
+nothing to commit, working tree clean
+```
+
+---
+
+#### Renaming Branch
+
+```bash
+$ git branch -m test
+
+$ git branch
+  master
+* test
+```
+
+---
+
+#### Making Changes in Branch and Checking in Master
+
+```bash
+$ git status
+On branch test
+nothing to commit, working tree clean
+
+$ echo "this is my third note" &gt; file3.md
+
+$ git add file3.md
+warning: in the working copy of 'file3.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git status -s
+A  file3.md
+
+$ git commit -m "add new note"
+[test be77ba2] add new note
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file3.md
+
+$ git log --oneline
+be77ba2 (HEAD -&gt; test) add new note
+f18edaf (master) bring fil2.md
+83e5f5c remove fil2.md
+604cfb0 update file2
+613e2b9 update note content
+1c07c60 Update file1
+c2e0a9b remove a.temp
+69f3b68 add .gitignore
+6dcc1e7 create a temp file in temp folder
+86a240e change file1 extension to md
+7b2e050 Add two note file again
+23088c4 remove file1
+839814d remove file2
+5ebf799 update note2
+1656114 Initial Commit
+
+$ git switch master
+Switched to branch 'master'
+
+$ ls
+file1.md  file2.md  temp/
+
+$ git log --oneline
+f18edaf (HEAD -&gt; master) bring fil2.md
+83e5f5c remove fil2.md
+604cfb0 update file2
+613e2b9 update note content
+1c07c60 Update file1
+c2e0a9b remove a.temp
+69f3b68 add .gitignore
+6dcc1e7 create a temp file in temp folder
+86a240e change file1 extension to md
+7b2e050 Add two note file again
+23088c4 remove file1
+839814d remove file2
+5ebf799 update note2
+1656114 Initial Commit
+```
+
+* No new file in master.
+* No extra commit in master, though branch `test` can access all commits from which it was created but cannot access new commits in master.
+
+---
+
+#### Deleting Branch
+
+```bash
+$ git branch -d test
+error: The branch 'test' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D test'.
+
+$ git branch -D test
+Deleted branch test (was be77ba2).
+
+$ git branch
+* master
+```
++++</md></sn>
