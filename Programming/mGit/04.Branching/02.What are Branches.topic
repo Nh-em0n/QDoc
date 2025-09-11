@@ -1,10 +1,97 @@
 
-	<sn></sn>		
+	<sn><md>## Git Branch{.text-center}
+
+:::.row
+:::.col-12 .col-lg-5
+In Git, a **branch** is not a physical copy of your project files but rather a lightweight movable pointer to a specific commit. It acts as a reference that tells Git which line of development you are currently on. The default branch created in a repository is usually called **main** or **master**.
+:::
+
+:::.col-12 .col-lg-7
+![git-branch-diagram](https://d8it4huxumps7.cloudfront.net/uploads/images/6536475adca0a_git_create_branch_01.jpg?d=2000x2000)
+:::
+:::</md></sn>		
 	<config>
 		<tags>#02.what are branches</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 08:52:18 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 11 2025 11:02:06 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-lGSqeTdVJT</id>
 		<duration></duration>
 	</config>
+<sn><md>### How Git Branch Works{.text-center}
+
+Unlike older version control systems (such as **Subversion**), Git does not copy the entire project for every branch. Instead, Git uses references and pointers, which makes branching and switching extremely fast and efficient.
+
+:::.row
+:::.col-12 .col-lg-7
+#### HEAD Pointer
+Git keeps track of the branch you are currently working on through a special pointer called **HEAD**. HEAD usually points to the latest commit on the branch you have checked out.
+* If HEAD points directly to a branch, you are “on” that branch.
+* If HEAD points directly to a commit instead of a branch, you are in a “detached HEAD” state.
+:::
+
+:::.col-12 .col-lg-5
+![diagram](https://comprendre-git.com/assets/images/articles/git-reset-head.png)
+:::
+:::
+
+#### Branch as a Label
+A branch is essentially just a label pointing to a commit. When new commits are added, the branch pointer automatically moves forward to the new commit.
+
+#### Lightweight Nature
+Because branches are only pointers (about 40 bytes in size), creating and switching branches is almost instantaneous in Git. This is fundamentally different from systems like Subversion, where creating a branch required duplicating the entire project tree, consuming more time and storage.
+</md></sn><sn><md>## Git vs. Subversion Branching
+
+:::.row
+:::.col-12 .col-lg-6
+### Subversion{.text-center}
+* Branches are implemented as directories.
+* Creating a branch means copying the entire project into another directory.
+* Switching between branches can be slow and storage-heavy.
+:::
+
+:::.col-12 .col-lg-6
+### Git{.text-center}
+* Branches are just pointers to commits.
+* Creating, deleting, or switching branches is extremely fast.
+* Storage overhead is negligible.
+:::
+:::
+</md></sn><sn><md>## Other Important Facts About Git Branching
+
+1. **Isolation of Work**: Branching allows developers to experiment with features or fixes without affecting the main line of development.
+2. **Merging**: When development is finished, branches can be merged back into the main branch. Git supports both fast-forward merges (moving the pointer forward) and three-way merges (creating a new merge commit).
+3. **Parallel Development**: Multiple developers can work on different branches simultaneously without conflicts in their local repositories.
+4. **Cheap and Disposable**: Since branches are so lightweight, developers can create temporary branches for testing and delete them afterward without cost.
+5. **HEAD Switching**: Changing HEAD to another branch or commit allows you to “time travel” across different stages of your project’s history instantly.
+</md></sn><sn><md>## Concept{.text-center}
+
+1. You start with commits: `C1 → C2 → C3`.
+
+   * `main` branch points to `C3`.
+
+2. You create a new branch `feature` from `C3`. Both `main` and `feature` point to `C3`.
+
+3. You add commits on `feature`: `C4 → C5`.
+
+   * Now `feature` points to `C5`.
+   * If you walk backwards: `C5 → C4 → C3 → C2 → C1`, that’s the commit history of `feature`.
+
+4. Meanwhile, `main` still points to `C3`, and its history is `C3 → C2 → C1`.
+
+---
+
+### Correct Way to Think
+
+* A **commit** = a snapshot of changes with links to its parent(s).
+* A **branch** = a moving pointer to the latest commit in a sequence.
+* A branch **represents a chain of commits** but is not itself a container.
+
+---
+
+👉 So the short answer:
+A **branch is not literally a collection of commits**, but since it points to the latest commit in a chain, it *represents* a commit group (all commits reachable from that pointer).
+</md></sn><sn><md>### Summary
+
+A Git branch is essentially a **movable pointer** to a commit, with **HEAD** marking your current position. Unlike Subversion, which duplicates the entire project for each branch, Git keeps branching operations lightweight, fast, and efficient. This design makes branching central to Git’s power, enabling flexible workflows, parallel development, and effortless experimentation.
+</md></sn>
