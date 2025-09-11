@@ -1,10 +1,449 @@
 
-	<sn></sn>		
+	<sn><md>## Git Stashing{.text-center}
+
+:::.row
+:::.col-12 .col-lg-5
+When working with Git, you may often find yourself in situations where you have uncommitted changes but need to switch to another branch. Git stashing provides a way to temporarily save your changes without committing them, allowing you to return to a clean working directory.
+:::
+
+:::.col-12 .col-lg-7
+![diagram](https://media.licdn.com/dms/image/v2/D4D12AQF1hzj-biUYcg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1737459054342?e=2147483647&amp;v=beta&amp;t=VDzhSVwFgEDg2pbaHgEq0WIBFdFAn4cNwaOu4MAk-EY)
+:::
+:::
+</md></sn>		
 	<config>
 		<tags>#06.stashing</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 08:54:16 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 11 2025 14:46:30 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-k4RBUUxFDQ</id>
 		<duration></duration>
 	</config>
+<sn><md>### Problem: Switching Branch with Uncommitted Changes
+
+If you are on the `master` branch and you have modified files but want to switch to another branch, Git will prevent you. For example:
+
+```bash
+Emon@DESKTOP MINGW64 ~/note (master)
+$ git checkout feature-branch
+error: Your local changes to the following files would be overwritten by checkout:
+        file1.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+```
+
+This happens because Git does not want you to lose your uncommitted changes.
+</md></sn><sn><md>### Using Stash to Save Changes{.text-center}
+
+If you are not yet ready to commit, you can stash your changes.
+
+#### Creating a Stash
+
+```bash
+git stash
+```
+
+```bash
+git stash push -m "message"
+```
+
+This command saves your modified tracked files and reverts the working directory to a clean state.
+</md></sn><sn><md>## New Files Are Not Included in Stash{.text-center}
+
+By default, `git stash` only saves **tracked** files. Newly created files remain untouched.
+
+#### Stash Including New Files
+
+To also stash **untracked (new) files**, use:
+
+```bash
+git stash push -a -m "message"
+```
+
+```bash
+git stash push -am "message"
+```
+
+```bash
+git stash -u
+```
+
+or
+
+```bash
+git stash --include-untracked
+```
+
+These commands include both tracked and untracked files in the stash, ensuring nothing is left behind.
+</md></sn><sn><md>## Checking Stash List{.text-center}
+
+```bash
+git stash list
+```
+
+This shows all stashes with their IDs and commit references.
+
+Example:
+
+```
+stash@{0}: WIP on master: a1b2c3d Updated file1.txt
+stash@{1}: WIP on master: d4e5f6g Added changes in file2.txt
+```</md></sn><sn><md>## Switching to Another Branch{.text-center}
+
+Now you can switch branches safely because your changes are stashed.
+
+
+```bash
+git checkout feature-branch
+```</md></sn><sn><md>## Returning to Master Branch{.text-center}
+
+You can move back to `master` anytime without losing your saved changes.
+
+```bash
+git checkout master
+```
+</md></sn><sn><md>## Showing Stash Content{.text-center}
+
+```bash
+git stash show
+```
+
+```bash
+git stash show id
+```
+
+For detailed changes:
+
+```bash
+git stash show -p
+```
+
+These commands let you see what changes were saved in a stash.
+</md></sn><sn><md>## Applying a Stash{.text-center}
+
+```bash
+git stash apply stash@{0}
+```
+
+```bash
+git stash apply 0
+```
+</md></sn><sn><md>## Removing a Stash{.text-center}
+
+After applying, you can delete a specific stash to keep things clean.
+
+
+```bash
+git stash drop stash@{0}
+```
+
+```bash
+git stash drop 0
+```
+</md></sn><sn><md>## Checking Stash List Again{.text-center}
+
+```bash
+git stash list
+```
+
+The stash you dropped will no longer appear in the list.
+</md></sn><sn><md>## Removing All Stashes at Once{.text-center}
+
+```bash
+git stash clear
+```
+
+This removes all stashes in one go, useful for cleanup when you no longer need them.
+</md></sn><sn><md>## Summary{.text-center}
+
+Stashing is a safe way to temporarily store changes so you can switch branches without losing progress.
+
+* Git prevents branch switching with uncommitted changes.
+* Stash allows saving changes without committing.
+* Use `git stash -u` to include new files.
+* Manage stashes with `list`, `show`, `apply`, `drop`, and `clear`.
+</md></sn><sn><md>### Practise
+
++++ see
+## Git Stash Workflow Example
+
+### Checking Status
+
+```bash
+$ git status
+On branch master
+nothing to commit, working tree clean    
+
+$ git branch
+* master
+  test
+```
+
+### Modifying File in Master
+
+```bash
+$ echo "* ITCZ : Intertropical Convergence Zone" &gt; file1.md
+
+$ git status -s
+ M file1.md
+```
+
+### Switching to Test Branch (Error)
+
+```bash
+error: Your local changes to the following files would be overwritten by checkout:
+        file1.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+```
+
+### Stash Current Working Directory
+
+```bash
+$ git stash push -m "on itcz note"
+warning: in the working copy of 'file1.md', LF will be replaced by CRLF the next time Git touches it
+Saved working directory and index state On master: on itcz note
+```
+
+### Checking Status Again
+
+```bash
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
+
+### Switching Between Branches
+
+```bash
+$ git switch test
+Switched to branch 'test'
+
+$ git switch master
+Switched to branch 'master'
+```
+
+### Checking Stash List
+
+```bash
+$ git stash list
+stash@{0}: On master: on itcz note
+stash@{1}: WIP on test: fb30288 update note1
+```
+
+### Apply Stash
+
+```bash
+$ git stash apply stash0
+error: stash0 is not a valid reference
+
+$ git stash apply 0
+On branch master
+Changes not staged for commit:
+        modified:   file1.md
+```
+
+### Commit Changes in Master and Switch to Test
+
+```bash
+$ git add -u
+$ git commit -m "update note1"
+[master 1212f2d] update note1
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+$ git switch test
+Switched to branch 'test'
+```
+
+### Drop Stash 0
+
+```bash
+$ git stash list
+stash@{0}: On master: on itcz note
+stash@{1}: WIP on test: fb30288 update note1
+
+$ git stash drop 0
+Dropped refs/stash@{0}
+
+$ git stash list
+stash@{0}: WIP on test: fb30288 update note1
+```
+
+### Editing File in Test Branch
+
+```text
+### Fact
+* There are 7 global pressure belt
+* Global air circulation can be described with **hadley**,**ferrel** and **polar cell**
+```
+
+```bash
+$ git status -s
+ M file1.md
+```
+
+### Switching to Master (Error)
+
+```bash
+$ git switch master
+error: Your local changes to the following files would be overwritten by checkout:
+        file1.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+```
+
+### Stash Again
+
+```bash
+$ git stash
+Saved working directory and index state WIP on test: fb30288 update note1
+
+$ git status
+On branch test
+nothing to commit, working tree clean
+```
+
+### Switching to Master
+
+```bash
+$ git switch master
+Switched to branch 'master'
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
+
+### Modifying File in Master
+
+```text
+### Global Pressure Belt
+
+* **ITCZ** : Intertropical Convergence Zone
+```
+
+```bash
+$ git status
+On branch master
+Changes not staged for commit:
+        modified:   file1.md
+```
+
+### Switching to Test Branch (Error)
+
+```bash
+$ git switch test
+error: Your local changes to the following files would be overwritten by checkout:
+        file1.md
+Aborting
+```
+
+### Stash and Switch
+
+```bash
+$ git stash push -m "master:global-pressure-belt working-directory"
+Saved working directory and index state On master: master:global-pressure-belt working-directory
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+$ git stash list
+stash@{0}: On master: master:global-pressure-belt working-directory
+stash@{1}: WIP on test: fb30288 update note1
+stash@{2}: WIP on test: fb30288 update note1
+
+$ git switch test
+Switched to branch 'test'
+```
+
+### Applying Stash of Test and Committing
+
+```bash
+$ git stash list
+stash@{0}: On master: master:global-pressure-belt working-directory
+stash@{1}: WIP on test: fb30288 update note1
+stash@{2}: WIP on test: fb30288 update note1
+
+$ git stash apply 2
+Changes not staged for commit:
+        modified:   file1.md
+
+$ cat file1.md
+* There are 3 type planetery wind
+
+$ git stash show 1
+ file1.md | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+$ git stash show 2
+ file1.md | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+$ git stash show -p 2
+diff --git a/file1.md b/file1.md
+@@ -1,5 +1 @@
+-this is first note
+-new data
+-cat,dog and cow
+-My friend name is Siam
+-* There are 7 global pressure belt
++* There are 3 type planetery wind
+
+$ git stash show -p 1
+diff --git a/file1.md b/file1.md
+@@ -1,5 +1,3 @@
+-this is first note
+-new data
+-cat,dog and cow
+-My friend name is Siam
++### Fact
+ * There are 7 global pressure belt
++* Global air circulation can be described with **hadley**,**ferrel** and **polar cell**
+
+$ git stash apply 1
+error: Your local changes to the following files would be overwritten by merge:
+        file1.md
+Aborting
+
+$ git reset --hard
+HEAD is now at fb30288 update note1
+
+$ git stash apply 1
+Changes not staged for commit:
+        modified:   file1.md
+
+$ git status -s
+ M file1.md
+
+$ git add -u
+$ git commit -m "start new Fact based note (note1)"
+[test 912c196] start new Fact based note (note1)
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+```
+
+### Switch to Master and Apply Its Stash
+
+```bash
+$ git switch master
+Switched to branch 'master'
+
+$ git stash list
+stash@{0}: On master: master:global-pressure-belt working-directory
+stash@{1}: WIP on test: fb30288 update note1
+stash@{2}: WIP on test: fb30288 update note1
+
+$ git stash apply 0
+Changes not staged for commit:
+        modified:   file1.md
+
+$ git add -u
+$ git commit -m "update note1"
+[master 5e1e550] update note1
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+$ git stash clear
+$ git stash list
+```
+
++++</md></sn>
