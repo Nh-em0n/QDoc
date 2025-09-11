@@ -16,7 +16,7 @@ A **fast-forward merge** in Git is a type of merge that occurs when the **branch
 		<tags>#08.fast forward merges</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 20:03:37 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 11 2025 20:28:47 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-rqGHb12GjU</id>
 		<duration></duration>
 	</config>
@@ -122,6 +122,25 @@ This ensures that Git always creates a merge commit, even if a fast-forward merg
 
 </md></sn><sn><md>## Difference {.text-center}
 
++++ see screenshot
+![screenshot](https://i.imgur.com/LJQoRhw.png)
++++
+
+
+:::.row
+:::.col-12 .col-lg-6
+#### FF-Merge{.text-center}
+![fast-forward-mege-screenshot](https://i.imgur.com/mAcU45b.png) 
+:::
+
+:::.col-12 .col-lg-6
+#### No-FF Merge{.text-center}
+![no-ff-mege-scr](https://i.imgur.com/qxLv6C9.png)
+:::
+:::
+
+
+
 | Feature                     | Fast-Forward Merge                                                                                                       | `--no-ff` Merge                                                                                  |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
 | **Definition**              | Moves the branch pointer forward to the target branch commit since there’s no divergent history.                         | Creates a new merge commit even if a fast-forward is possible.                                   |
@@ -133,6 +152,8 @@ This ensures that Git always creates a merge commit, even if a fast-forward merg
 | **Cons**                    | Hard to identify which commits belonged to the feature branch later.                                                     | History can get cluttered with many merge commits.                                               |
 | **Best Use Case**           | Small changes, quick fixes, or when branch history isn’t important.                                                      | Long-running features, team projects where preserving branch context is valuable.                |
 | **Command Example**         | `git merge feature`                                                                                                      | `git merge --no-ff feature`                                                                      |
+
+
 </md></sn><sn><md>## Practise {.text-center}
 
 +++ see
@@ -403,4 +424,8 @@ $ git log --oneline --all --graph
 |/
 * 5ce7d11 (feature) add doc file
 ```
-+++</file></md></sn>
++++
+
+
+
+</file></md></sn>
