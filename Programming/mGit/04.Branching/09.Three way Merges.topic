@@ -28,7 +28,7 @@ Git compares these three commits to figure out what changed in each branch since
 		<tags>#09.three way merges</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 21:47:25 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 11 2025 22:31:08 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-F6SMtTm1Wd</id>
 		<duration></duration>
 	</config>
@@ -90,4 +90,144 @@ If changes affect the **same lines**, Git creates a **merge conflict**.
 * A **three-way merge** happens when branches diverge.
 * Git compares the **merge base** with both branch tips to combine changes.
 * May result in **merge conflicts** that need manual resolution.
+</md></sn><sn><md>## Practise{.text-center}
+
++++ see
+
+### Status
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git status
+On branch master                     
+nothing to commit, working tree clean
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git branch
+  bugfix                                                                           
+  feature                                                                          
+* master                                                                           
+  test 
+```
+
+---
+
+### Creating new branch and Commit on it
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git switch -c api-config                                                         
+Switched to a new branch 'api-config'
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (api-config)
+$ echo "### Api list \n *api.github.com..." &gt; api_list.md                          
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (api-config)
+$ git add .                                                                        
+warning: in the working copy of 'api_list.md', LF will be replaced by CRLF the next time Git touches it                                                               
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (api-config)
+$ git status -s                                 
+A  api_list.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (api-config)
+$ git commit -m "Add api_list.md"                                                  
+[api-config 57ab174] Add api_list.md
+ 1 file changed, 1 insertion(+)     
+ create mode 100644 api_list.md  
+```
+
+---
+
+### Switch to master and commit on it also
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (api-config)                                   
+$ git switch master                                                                
+Switched to branch 'master'                                                        
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                       
+$ echo "\n * Resoruces not found" &gt;&gt; bug.md                                        
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                       
+$ git add .                                                                        
+warning: in the working copy of 'bug.md', LF will be replaced by CRLF the next time Git touches it                                                          
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                          
+$ git status -s                                                                       
+M  bug.md                                                                             
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                          
+$ git commit -m "point new bug - resources"                                           
+[master 94821b8] point new bug - resources                                            
+ 1 file changed, 1 insertion(+)   
+```
+
+Now both branches diverged from their ancestor.
+When we merge them, the process will be **three-way merging**.
+
+---
+
+### Merging
+
+```bash
+$ git branch                                                                                                                
+  api-config                                                                                                                
+  bugfix                                                                                                                    
+  feature                                                                                                                   
+* master                                                                                                                    
+  test                                                                                                                      
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                
+$ git merge api-config                                                                                                      
+Merge made by the 'ort' strategy.                                                                                           
+ api_list.md | 1 +                                                                                                          
+ 1 file changed, 1 insertion(+)                                                                                             
+ create mode 100644 api_list.md    
+```
+
+---
+
+### Checking log
+
+```bash
+$ git log --oneline --all --graph                                                                                           
+*   2710f6b (HEAD -&gt; master) Merge branch 'api-config'                                                                      
+|\                                                                                                                          
+| * 57ab174 (api-config) Add api_list.md                                                                                    
+* | 94821b8 point new bug - resources                                                                                       
+|/                                                                                                                          
+*   bd42278 fix all prev bug                                                                                                
+|\                                                                                                                          
+| * 7cdcd2d (bugfix) Add dynamic feature                                                                                    
+| * ccb8dca Create bug list(bug.md)                                                                                         
+|/                                                                                                                          
+* 5ce7d11 (feature) add doc file                                                                        
+* 26f1bd2 Add feature.txt                                                                               
+* 5e1e550 update note1                                                                                 
+* 1212f2d update note1                                                                                 
+| * 912c196 (test) start new Fact based note (note1)                                                   
+| * fb30288 update note1                                                                               
+| * edc70c8 add new note                                                                               
+|/                                                                                                     
+* f18edaf bring fil2.md                                                                                
+* 83e5f5c remove fil2.md
+* 604cfb0 update file2        
+```
+
+---
+
+## Structure Summary
+
+1. **master**: Contains merges from `bugfix` and `api-config`.
+2. **bugfix**: Two commits merged into master.
+3. **api-config**: One commit merged into master.
+4. **feature**: Still separate with two commits, not merged.
+5. **test**: Still separate with three commits, not merged.
+6. **Base history**: File updates (`update file2`, `remove fil2.md`, `bring fil2.md`).
+
++++
+
+
+![scr-commit-explain](https://i.imgur.com/wId0yqn.png)
 </md></sn>
