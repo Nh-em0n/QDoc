@@ -16,7 +16,7 @@ A **fast-forward merge** in Git is a type of merge that occurs when the **branch
 		<tags>#08.fast forward merges</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 18:39:08 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 11 2025 20:03:37 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-rqGHb12GjU</id>
 		<duration></duration>
 	</config>
@@ -120,4 +120,287 @@ git config merge.ff false
 
 This ensures that Git always creates a merge commit, even if a fast-forward merge is possible, preserving branch history.
 
-</md></sn>
+</md></sn><sn><md>## Difference {.text-center}
+
+| Feature                     | Fast-Forward Merge                                                                                                       | `--no-ff` Merge                                                                                  |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| **Definition**              | Moves the branch pointer forward to the target branch commit since there’s no divergent history.                         | Creates a new merge commit even if a fast-forward is possible.                                   |
+| **Commit History**          | Linear history (looks like a straight line, no extra commit).                                                            | Non-linear history (explicit merge commit is added).                                             |
+| **When Possible**           | Only when the target branch has no new commits after branching.                                                          | Always possible; Git forces a merge commit.                                                      |
+| **Visibility of Branching** | Original feature branch history is not clearly visible. It looks like the commits were made directly on the main branch. | Clearly shows that a separate branch was created and merged.                                     |
+| **Merge Commit**            | No new merge commit is created.                                                                                          | Always creates a merge commit (`Merge branch 'feature'`).                                        |
+| **Pros**                    | Clean and simple history. Easier to read for small or quick fixes.                                                       | Maintains context of feature branches. Useful for tracking which commits came from which branch. |
+| **Cons**                    | Hard to identify which commits belonged to the feature branch later.                                                     | History can get cluttered with many merge commits.                                               |
+| **Best Use Case**           | Small changes, quick fixes, or when branch history isn’t important.                                                      | Long-running features, team projects where preserving branch context is valuable.                |
+| **Command Example**         | `git merge feature`                                                                                                      | `git merge --no-ff feature`                                                                      |
+</md></sn><sn><md>## Practise {.text-center}
+
++++ see
+
+### Checking Status
+
+```bash
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+$ git branch
+* master
+  test
+```
+
+### Creating New Branch `feature`
+
+```bash
+$ git switch -C feature
+Switched to a new branch 'feature'
+
+$ git status
+On branch feature
+nothing to commit, working tree clean
+```
+
+### Committing on `feature`
+
+```bash
+$ echo "### Feature List" &gt; feature.txt
+$ git status -s
+?? feature.txt
+
+$ git add -u
+$ git commit -m "add feature.txt"
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        feature.txt
+nothing added to commit but untracked files present (use "git add" to track)
+
+$ git add .
+warning: in the working copy of 'feature.txt', LF will be replaced by CRLF the next time Git touches it
+
+$ git status -s
+A  feature.txt
+
+$ git commit -m "Add feature.txt"
+[feature 26f1bd2] Add feature.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+
+$ echo "QDoc file content" &gt; doc.topic
+$ git add doc.topic
+warning: in the working copy of 'doc.topic', LF will be replaced by CRLF the next time Git touches it
+
+$ git status -s
+A  doc.topic
+
+$ git commit -m "add doc file"
+[feature 5ce7d11] add doc file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 doc.topic
+
+5ce7d11 (HEAD -&gt; feature) add doc file
+26f1bd2 Add feature.txt
+5e1e550 (master) update note1
+1212f2d update note1
+....
+```
+
+### Switching to Master and Merge
+
+```bash
+$ git switch master
+Switched to branch 'master'
+
+$ git log --oneline --all --graph
+* 5ce7d11 (feature) add doc file
+* 26f1bd2 Add feature.txt
+* 5e1e550 (HEAD -&gt; master) update note1
+* 1212f2d update note1
+| * 912c196 (test) start new Fact based note (note1)
+| * fb30288 update note1
+| * edc70c8 add new note
+|/
+* f18edaf bring fil2.md
+* 83e5f5c remove fil2.md
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
+
+### Merging
+
+```bash
+$ git merge feature
+Updating 5e1e550..5ce7d11
+Fast-forward
+ doc.topic   | 1 +
+ feature.txt | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 doc.topic
+ create mode 100644 feature.txt
+```
+
+### Checking Log
+
+```bash
+$ git log --oneline --all --graph
+* 5ce7d11 (HEAD -&gt; master, feature) add doc file
+* 26f1bd2 Add feature.txt
+* 5e1e550 update note1
+* 1212f2d update note1
+| * 912c196 (test) start new Fact based note (note1)
+| * fb30288 update note1
+| * edc70c8 add new note
+|/
+* f18edaf bring fil2.md
+* 83e5f5c remove fil2.md
+* 604cfb0 update file2
+* 613e2b9 update note content
+...
+```
+
+### Creating Another Branch `bugfix`
+
+```bash
+$ git switch -C bugfix
+Switched to a new branch 'bugfix'
+
+$ echo "### Buglist" &gt; bug.md
+$ git add .
+warning: in the working copy of 'bug.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git status -s
+A  bug.md
+
+$ git commit -m "Create bug list(bug.md)"
+[bugfix ccb8dca] Create bug list(bug.md)
+ 1 file changed, 1 insertion(+)
+ create mode 100644 bug.md
+
+$ echo "* Dynamic prompt \n * Dynamic Input feature" &gt;&gt; feature.txt
+$ git add -u
+warning: in the working copy of 'feature.txt', LF will be replaced by CRLF the next time Git touches it
+
+$ git status -s
+M  feature.txt
+
+$ git commit -m "Add dynamic feature"
+[bugfix 7cdcd2d] Add dynamic feature
+ 1 file changed, 1 insertion(+)
+
+$ git log --oneline
+7cdcd2d (HEAD -&gt; bugfix) Add dynamic feature
+ccb8dca Create bug list(bug.md)
+5ce7d11 (master, feature) add doc file
+26f1bd2 Add feature.txt
+```
+
+### Switching to Master Then No-FF Merge
+
+```bash
+$ git log --oneline --graph --all
+* 7cdcd2d (bugfix) Add dynamic feature
+* ccb8dca Create bug list(bug.md)
+* 5ce7d11 (HEAD -&gt; master, feature) add doc file
+* 26f1bd2 Add feature.txt
+* 5e1e550 update note1
+* 1212f2d update note1
+| * 912c196 (test) start new Fact based note (note1)
+| * fb30288 update note1
+| * edc70c8 add new note
+|/
+* f18edaf bring fil2.md
+...
+```
+
+```bash
+$ git branch
+  bugfix
+  feature
+* master
+  test
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+$ git merge --no-ff bugfix -m "fix all prev bug"
+Merge made by the 'ort' strategy.
+ bug.md      | 1 +
+ feature.txt | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 bug.md
+```
+
+```bash
+$ git log --oneline --all --graph
+*   bd42278 (HEAD -&gt; master) fix all prev bug
+|\
+| * 7cdcd2d (bugfix) Add dynamic feature
+| * ccb8dca Create bug list(bug.md)
+|/
+* 5ce7d11 (feature) add doc file
+* 26f1bd2 Add feature.txt
+* 5e1e550 update note1
+* 1212f2d update note1
+| * 912c196 (test) start new Fact based note (note1)
+| * fb30288 update note1
+| * edc70c8 add new note
+|/
+* f18edaf bring fil2.md
+* 83e5f5c remove fil2.md
+...
+```
+
+### Notice on Commit List
+
+```bash
+*   bd42278 (HEAD -&gt; master) fix all prev bug
+|\
+| * 7cdcd2d (bugfix) Add dynamic feature
+| * ccb8dca Create bug list(bug.md)
+|/
+* 5ce7d11 (feature) add doc file
+* 26f1bd2 Add feature.txt
+* 5e1e550 update note1
+* 1212f2d update note1
+| * 912c196 (test) start new Fact based note (note1)
+| * fb30288 update note1
+| * edc70c8 add new note
+|/
+* f18edaf bring fil2.md
+* 83e5f5c remove fil2.md
+* 604cfb0 update file2
+* 613e2b9 update note content
+```
+
+### Test Branch Not Merged
+
+```bash
+| * 912c196 (test) start new Fact based note (note1)
+| * fb30288 update note1
+| * edc70c8 add new note
+|/
+```
+
+### Feature Branch Merged by Fast-Forward Method
+
+```bash
+* 5ce7d11 (feature) add doc file
+* 26f1bd2 Add feature.txt
+* 5e1e550 update note1
+* 1212f2d update note1
+```
+
+### Bugfix Branch Created and Then Merged with Master Branch Without Fast-Forward
+
+```bash
+*   bd42278 (HEAD -&gt; master) fix all prev bug
+|\
+| * 7cdcd2d (bugfix) Add dynamic feature
+| * ccb8dca Create bug list(bug.md)
+|/
+* 5ce7d11 (feature) add doc file
+```
++++</file></md></sn>
