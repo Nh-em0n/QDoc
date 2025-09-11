@@ -1,10 +1,92 @@
 
-	<sn></sn>		
+	<sn><md>## Merged and Non-Merged Branches{.text-center}
+
+In Git, it’s often important to know which branches have already been merged into a main branch (like `master` or `main`) and which branches still contain unmerged changes. This helps in branch cleanup, release management, and tracking development progress.
+</md></sn>		
 	<config>
 		<tags>#10.viewing merged and unmerged branches</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 08:55:53 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 11 2025 22:44:27 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-3fKOjlugoP</id>
 		<duration></duration>
 	</config>
+<sn><md>### Checking Merged Branches{.text-center}
+
+Git provides a simple command to list all branches that have been merged into your current branch.
+
+```bash
+# Switch to the branch you want to check merges into (usually master)
+$ git checkout master
+
+# List all branches merged into master
+$ git branch --merged
+```
+
+**Explanation:**
+
+* `git branch --merged` lists all branches whose changes have already been incorporated into the current branch.
+* The output typically includes:
+
+  * `* master` (the current branch)
+  * Other merged feature or bugfix branches
+
+&gt; These branches are safe to delete if they are no longer needed.
+</md></sn><sn><md>### Checking Non-Merged Branches{.text-center}
+
+To see branches that **have not yet been merged** into your current branch, use:
+
+```bash
+$ git branch --no-merged
+```
+
+**Explanation:**
+
+* `git branch --no-merged` lists branches that contain commits not yet merged into the current branch.
+* This is useful to identify work that is still in progress or pending review.
+
+These branches still have changes that need to be merged into `master` or another mainline branch.
+</md></sn><sn><md>### Viewing Merged Branches Remotely{.text-center}
+
+Sometimes you want to check merged or non-merged branches on the remote repository:
+
+```bash
+# Fetch latest updates from remote
+$ git fetch origin
+
+# Check merged branches on remote master
+$ git branch -r --merged origin/master
+
+# Check non-merged branches on remote master
+$ git branch -r --no-merged origin/master
+```
+
+**Note:**
+
+* `-r` shows remote branches.
+* `origin/master` is the reference branch on the remote.
+</md></sn><sn><md>### Cleaning Up Merged Branches{.text-center}
+
+Once you’ve identified merged branches, you can safely delete them:
+
+```bash
+# Delete a local branch that has been merged
+$ git branch -d feature/header
+
+# Delete a remote branch that has been merged
+$ git push origin --delete feature/header
+```
+</md></sn><sn><md>### Summary
+
+| Command                                   | Purpose                                       |
+| ----------------------------------------- | --------------------------------------------- |
+| `git branch --merged`                     | List branches merged into current branch      |
+| `git branch --no-merged`                  | List branches not merged into current branch  |
+| `git branch -r --merged origin/master`    | List remote branches merged into `master`     |
+| `git branch -r --no-merged origin/master` | List remote branches not merged into `master` |
+| `git log master..branch`                  | View commits in a branch not in `master`      |
+| `git branch -d branch`                    | Delete merged local branch                    |
+| `git push origin --delete branch`         | Delete merged remote branch                   |
+
+This workflow helps in maintaining a clean Git repository and tracking which work has been incorporated into your main branch.
+</md></sn>
