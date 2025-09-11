@@ -1,10 +1,179 @@
 
-	<sn></sn>		
+	<sn><md>## Git Branch{.text-center .fg-orange}
+
+:::.row
+:::.col-12 .col-lg-5
+A **branch** in Git is a lightweight reference pointing to a commit. Branching allows developers to isolate work, experiment freely, and later merge changes without disturbing the main line of development. Below is a breakdown of important operations related to branches.
+:::
+
+:::.col-12 .col-lg-7
+![diagram](https://gitbookdown.dallasdatascience.com/img/git_branch_merge.png)
+:::
+:::
+</md></sn>		
 	<config>
 		<tags>#03.working with branches</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 08:52:49 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 11 2025 11:47:00 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-WFfCdbMlPC</id>
 		<duration></duration>
 	</config>
+<sn><md>## Creating a New Branch{.text-center}
+
+To create a branch, you give it a name and Git creates a pointer to the current commit.
+
+```bash
+git branch branch_name
+```
+
+This does **not** switch you to the new branch; it only creates it.You are still in the `master` branch (if you created branch from master branch)</md></sn><sn><md>## Getting All Branches{.text-center}
+
+:::.row
+:::.col-12 .col-lg-6
+To list all local branches in your repository:
+
+```bash
+git branch
+```
+:::
+
+:::.col-12 .col-lg-6 .px-2
+To see both local and remote branches:
+
+```bash
+git branch -a
+```
+:::
+:::
+</md></sn><sn><md>## Getting the Current Branch{.text-center}
+
+:::.row
+:::.col-12 .col-lg-6
+The current branch will be highlighted with an asterisk `*` when you run:
+```bash
+git branch
+```
+:::
+
+:::.col-12 .col-lg-6
+Alternatively:
+
+```bash
+git rev-parse --abbrev-ref HEAD
+```
+:::
+:::
+
+&gt; **Note :** `git status` also inform your current branch
+</md></sn><sn><md>## Switching Branches{.text-center}
+
+To switch to another branch and update the working directory:
+
+:::.row
+:::.col-12 .col-lg-6
+### modern command{.text-center}
+
+```bash
+git switch branch_name
+```
+:::
+
+:::.col-12 .col-lg-6
+### Or{.text-center}
+
+```bash
+git checkout branch_name
+```
+:::
+:::
+</md></sn><sn><md>## Renaming a Branch{.text-center}
+
+:::.row
+:::.col-12 .col-lg-6
+#### To rename the current branch:{.text-center}
+
+```bash
+git branch -m new_name
+```
+:::
+
+:::.col-12 .col-lg-6
+#### To rename a different branch:{.text-center}
+
+```bash
+git branch -m old_name new_name
+```
+:::
+:::</md></sn><sn><md>## Making Changes in a Branch and Checking Master
+
+1. Switch to a feature branch:
+
+   ```bash
+   git checkout feature
+   ```
+2. Edit files, then commit:
+
+   ```bash
+   git add .
+   git commit -m "Changes in feature branch"
+   ```
+3. Switch back to master (main):
+
+   ```bash
+   git checkout master
+   ```
+4. Check files in `master`. The changes committed on `feature` will **not** appear in `master` until explicitly merged. This demonstrates branch isolation.
+</md></sn><sn><md>## Viewing Commits{.text-center}
+
+:::.row
+
+:::.col-12 .col-lg-6
+Show commits of the current branch:{.text-center}
+
+  ```bash
+  git log
+  ```
+:::
+
+:::.col-12 .col-lg-6
+Show commits across all branches:{.text-center}
+
+  ```bash
+  git log --all
+  ```
+:::
+
+:::.col-12 .col-lg-6
+Graph view for better visualization:{.text-center}
+
+  ```bash
+  git log --oneline --graph --all
+  ```
+:::
+:::
+
+</md></sn><sn><md>## Deleting a Branch{.text-center}
+
+:::.row
+:::.col-12 .col-lg-6
+Delete a branch that has already been merged into another branch:
+
+  ```bash
+  git branch -d branch_name
+  ```
+:::
+
+:::.col-12 .col-lg-6
+Force delete a branch (even if unmerged):
+
+  ```bash
+  git branch -D branch_name
+  ```
+:::
+:::</md></sn><sn><md>## Summary
+
+* A branch is a pointer to a commit, enabling isolated development.
+* You can create, switch, rename, and delete branches easily.
+* Commits in one branch do not affect another until merged.
+* `git log` lets you view commit history for one branch or across all branches.</md></sn>
