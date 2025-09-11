@@ -7,7 +7,7 @@ In Git, it’s often important to know which branches have already been merged i
 		<tags>#10.viewing merged and unmerged branches</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 22:44:27 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 11 2025 23:09:16 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-3fKOjlugoP</id>
 		<duration></duration>
 	</config>
@@ -89,4 +89,86 @@ $ git push origin --delete feature/header
 | `git push origin --delete branch`         | Delete merged remote branch                   |
 
 This workflow helps in maintaining a clean Git repository and tracking which work has been incorporated into your main branch.
-</md></sn>
+</md></sn><sn><md>## Practises
+
++++ see
+
+## Practises
+
+### Checking Status
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
+
+### Branch List
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git branch
+  api-config
+  bugfix
+  feature
+* master
+  test
+```
+
+### Merged Branches on Master
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git branch --merged
+  api-config
+  bugfix
+  feature
+* master
+```
+
+### Unmerged Branches on Master
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git branch --no-merged
+  test
+```
+
+### Removing Branches
+
+```bash
+$ git branch
+  api-config
+  bugfix
+  feature
+* master
+  test
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git branch -d api-config
+Deleted branch api-config (was 57ab174).
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git branch -d bugfix
+Deleted branch bugfix (was 7cdcd2d).
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git branch -d feature
+Deleted branch feature (was 5ce7d11).
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git branch -d test
+error: The branch 'test' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D test'.
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git branch -D test
+Deleted branch test (was 912c196).
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git branch
+* master
+```
+
++++</md></sn>
