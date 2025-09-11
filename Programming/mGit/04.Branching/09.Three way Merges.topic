@@ -1,10 +1,93 @@
 
-	<sn></sn>		
+	<sn><md>## three-way Merge
+
++++ see process
+@[yt-Ray-Chavez](https://youtube.com/embed/Y1oFXujkZJI?)
++++
+
+:::.row
+
+:::.col-12 .col-lg-6
+A **three-way merge** in Git is a method Git uses to combine changes when two branches have diverged (i.e., both have commits that the other branch doesn’t). It is called “three-way” because Git looks at **three commits** to perform the merge:
+
+1. **The common ancestor (merge base)** → the last commit both branches share.
+2. **The tip of the current branch** (the branch you’re on when running `git merge`).
+3. **The tip of the branch being merged in**.
+
+Git compares these three commits to figure out what changed in each branch since the common ancestor and then tries to combine those changes.
+
+:::
+
+:::.col-12 .col-lg-6
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/media/3-way-merge-diagram.svg)
+:::
+
+:::
+</md></sn>		
 	<config>
 		<tags>#09.three way merges</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 08:55:20 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 11 2025 21:47:25 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-F6SMtTm1Wd</id>
 		<duration></duration>
 	</config>
+<sn><md>### Start on `master`{.text-center}
+
+```bash
+$ git init merge-demo
+$ cd merge-demo
+$ echo "line 1" &gt; file.txt
+$ git add file.txt
+$ git commit -m "Initial commit"
+```</md></sn><sn><md>### Create a new branch and add a commit{.text-center}
+
+```bash
+$ git switch -c feature
+$ echo "line 2 from feature" &gt;&gt; file.txt
+$ git add file.txt
+$ git commit -m "Add line 2 in feature branch"
+```
+</md></sn><sn><md>### Switch back to `master` and diverge{.text-center}
+
+```bash
+$ git switch master
+$ echo "line 2 from master" &gt;&gt; file.txt
+$ git add file.txt
+$ git commit -m "Add line 2 in master branch"
+```
+
+Now both **`master`** and **`feature`** have different commits after the common ancestor → they have diverged.
+</md></sn><sn><md>### Merge branches (three-way merge){.text-center}
+
+```bash
+$ git merge feature
+```
+
+* Git finds the **common ancestor** (Initial commit).
+* Compares it with the **tip of master** and the **tip of feature**.
+* Combines both sets of changes.
+
+If changes are in **different places**, Git merges automatically.
+If changes affect the **same lines**, Git creates a **merge conflict**.
+</md></sn><sn><md>## Visual Representation{.text-center}
+
+```
+      A---B  (master)
+     /
+    A
+     \
+      C---D  (feature)
+```
+
+* `A` = common ancestor (merge base).
+* `B` = new commit on master.
+* `D` = new commit on feature.
+* Git uses **A, B, and D** to perform the three-way merge.
+</md></sn><sn><md>## Summary
+
+* A **fast-forward merge** happens when branches have not diverged → no three-way merge needed.
+* A **three-way merge** happens when branches diverge.
+* Git compares the **merge base** with both branch tips to combine changes.
+* May result in **merge conflicts** that need manual resolution.
+</md></sn>
