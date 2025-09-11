@@ -1,10 +1,303 @@
 
-	<sn></sn>		
+	<sn><md>## Comparing Branches{.text-center}
+
+In Git, branches represent separate lines of development. At times, you may need to compare branches to check for differences, review code changes, or identify files that will be affected before merging. Git provides several commands to make these comparisons.</md></sn>		
 	<config>
 		<tags>#04.comparing branches</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 08:53:15 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 11 2025 12:59:39 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-w25MliTee1</id>
 		<duration></duration>
 	</config>
+<sn><md>### diff{.text-center}
+
+The `git diff` command shows the line-by-line differences between two branches.
+
+```bash
+git diff branch1 branch2
+```
+
+This highlights the exact code changes that exist in `branch2` compared to `branch1`. Developers often use this to review modifications before merging branches.
+</md></sn><sn><md>### Viewing Commits Present in One Branch but Not Another{.text-center}
+
+Sometimes you only need to check **which commits** are different between two branches, rather than the exact code changes. Git provides two useful approaches:
+
+:::.row
+:::.col-12 .col-lg-6
+#### diff B {.text-center}
+
+```bash
+git diff branch2
+```
+
+This compares the current branch (HEAD) against `branch2`. It shows what changes exist in the working branch compared to another.
+:::
+
+:::.col-12 .col-lg-6
+#### A..B {.text-center}
+
+```bash
+git log branch1..branch2
+```
+This lists all commits that are in `branch2` but not in `branch1`. It’s a quick way to see what new commits you would gain if you merged `branch2` into `branch1`.
+
+:::
+:::
+</md></sn><sn><md>## Viewing Affected Files{.text-center}
+
+If you want to know which files have been modified, added, or deleted in a branch without seeing the detailed code changes, you can use:
+
+```bash
+git diff --name-status branchname
+```
+:::.row
+:::.col-12 .col-lg-6
+This provides a summary:
+
+* **M** – Modified
+* **A** – Added
+* **D** – Deleted
+:::
+
+:::.col-12 .col-lg-6
+For example:
+
+```
+M  app.js
+A  newfile.txt
+D  oldscript.py
+```
+:::
+:::
+
+This is particularly useful when you want an overview of affected files before merging or reviewing.
+</md></sn><sn><md>## Summary{.text-center}
+
+* **`git diff branch1 branch2`** → Shows detailed code differences between two branches.
+* **`git diff branch2`** → Compares your current branch with another branch.
+* **`git log branch1..branch2`** → Lists commits present in `branch2` but missing in `branch1`.
+* **`git diff --name-status branchname`** → Displays which files are modified, added, or deleted.
+
+By combining these commands, you can efficiently compare branches, review changes, and make informed decisions before merging.
+</md></sn><sn><md>### Practise {.text-center}
+
+
++++ see
+
+
+### Checking Status
+
+```bash
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+$ git branch
+* master
+```
+
+As our environment is clean and we have no extra branch, let’s create one.
+
+---
+
+### Creating Branch and Commit on It
+
+```bash
+$ git branch test
+$ git switch test
+Switched to branch 'test'
+
+$ git status
+On branch test
+nothing to commit, working tree clean
+
+$ git branch
+  master
+* test
+
+$ ls
+file1.md  file2.md  temp/
+
+$ echo "this is my third note" &gt; file2.md
+
+$ git status -s
+ M file2.md
+
+$ git reset --hard
+HEAD is now at f18edaf bring fil2.md
+
+$ git status
+On branch test
+nothing to commit, working tree clean
+
+$ echo "this is my third note" &gt; file3.md
+
+$ git status -s
+?? file3.md
+
+$ git add file3.md
+warning: in the working copy of 'file3.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git status -s
+A  file3.md
+
+$ git commit -m "add new note"
+[test edc70c8] add new note
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file3.md
+
+$ git switch master
+Switched to branch 'master'
+
+$ ls
+file1.md  file2.md  temp/
+```
+
+---
+
+### Comparing `master` and `test` Branch with Diff
+
+```bash
+$ git diff master test
+diff --git a/file3.md b/file3.md
+new file mode 100644
+index 0000000..8efdd71
+--- /dev/null
++++ b/file3.md
+@@ -0,0 +1 @@
++this is my third note
+```
+
+---
+
+### Changing `file1.md` from Test Branch
+
+```bash
+$ git switch test
+Switched to branch 'test'
+
+$ echo "* There are 7 pressure belt" &gt;&gt; fil1.md
+$ git rm fil1.md
+fatal: pathspec 'fil1.md' did not match any files
+
+$ ls
+fil1.md  file1.md  file2.md  file3.md  temp/
+
+$ rm fil1.md
+
+$ git status
+On branch test
+nothing to commit, working tree clean
+
+$ echo "* There are 7 global pressure belt" &gt;&gt; file1.md
+
+$ git status -s
+ M file1.md
+
+$ git add file1.md
+warning: in the working copy of 'file1.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git status -s
+M  file1.md
+
+$ git commit -m "update note1"
+[test fb30288] update note1
+ 1 file changed, 1 insertion(+)
+
+$ git switch master
+Switched to branch 'master'
+```
+
+---
+
+### Comparing `master` and `test` Branch
+
+```bash
+$ git diff master test
+diff --git a/file1.md b/file1.md
+index dce304a..5496974 100644
+--- a/file1.md
++++ b/file1.md
+@@ -2,3 +2,4 @@ this is first note
+ new data
+ cat,dog and cow
+ My friend name is Siam
++* There are 7 global pressure belt
+
+diff --git a/file3.md b/file3.md
+new file mode 100644
+index 0000000..8efdd71
+--- /dev/null
++++ b/file3.md
+@@ -0,0 +1 @@
++this is my third note
+```
+
+---
+
+### Diff B (Reverse Comparison)
+
+```bash
+$ git diff test
+diff --git a/file1.md b/file1.md
+index 5496974..dce304a 100644
+--- a/file1.md
++++ b/file1.md
+@@ -2,4 +2,3 @@ this is first note
+ new data
+ cat,dog and cow
+ My friend name is Siam
+-* There are 7 global pressure belt
+
+diff --git a/file3.md b/file3.md
+deleted file mode 100644
+index 8efdd71..0000000
+--- a/file3.md
++++ /dev/null
+@@ -1 +0,0 @@
+-this is my third note
+```
+
+---
+
+### Log A..B
+
+```bash
+$ git log master..test
+commit fb30288052f385efc5b9059a83c911feffd07960 (test)
+Author: Nh-em0n <nhemon2043@gmail.com>
+Date:   Thu Sep 11 12:47:05 2025 +0600
+
+    update note1
+
+commit edc70c819fa9914a8431b209ae84d05b7752ac06
+Author: Nh-em0n <nhemon2043@gmail.com>
+Date:   Thu Sep 11 12:38:09 2025 +0600
+
+    add new note
+```
+
+---
+
+### Viewing Affected Files (Master POV)
+
+```bash
+$ git diff --name-status test
+M       file1.md
+D       file3.md
+```
+
+---
+
+### Viewing Affected Files (Test POV)
+
+```bash
+$ git switch test
+Switched to branch 'test'
+
+$ git diff --name-status master
+M       file1.md
+A       file3.md
+```
++++</nhemon2043@gmail.com></nhemon2043@gmail.com></md></sn><sn></sn>
