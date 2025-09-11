@@ -1,10 +1,133 @@
 
-	<sn></sn>		
+	<sn><md>## Git Merge Conflict{.text-center}
+
+:::.row
+:::.col-12 .col-lg-6
+A **merge conflict** happens when Git cannot automatically reconcile differences between two branches. This typically occurs when:
+:::
+
+:::.col-12 .col-lg-6
+![diagram](https://miro.medium.com/v2/resize:fit:1000/0*yItQ1DiR5PLcd94T.jpg)
+:::
+:::
+
+### Why Merge Conflicts Occur
+* Two branches have changes in the **same line of a file**.
+* Changes happen in **overlapping sections** of the same file.
+* One branch **deletes a file** that the other branch modifies.
+
+Git stops the merge to let you manually resolve the conflict.</md></sn>		
 	<config>
 		<tags>#11.merge conflicts</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 08:56:13 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 11 2025 23:42:36 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-lpizTHKatu</id>
 		<duration></duration>
 	</config>
+<sn><md>### Setting Up a Conflict Environment{.text-center}
+
+1. **Start on the master branch:**
+
+```bash
+$ git checkout master
+```
+
+2. **Create a sample file and commit:**
+
+```bash
+$ echo "Hello World" &gt; example.txt
+$ git add example.txt
+$ git commit -m "Add example.txt with initial content"
+```
+
+3. **Create a new branch `feature` and modify the file:**
+
+```bash
+$ git checkout -b feature
+$ echo "This is feature branch" &gt;&gt; example.txt
+$ git add example.txt
+$ git commit -m "Update example.txt in feature branch"
+```
+
+4. **Switch back to master and modify the same line to cause conflict:**
+
+```bash
+$ git checkout master
+$ echo "This is master branch" &gt;&gt; example.txt
+$ git add example.txt
+$ git commit -m "Update example.txt in master branch"
+```
+
+Now, both branches modified the same file differently, which will cause a **merge conflict**.
+</md></sn><sn><md>### Merge and Resolve Conflict{.text-center}
+
+1. **Attempt to merge `feature` into `master`:**
+
+```bash
+$ git merge feature
+```
+
+Output:
+
+```
+Auto-merging example.txt
+CONFLICT (content): Merge conflict in example.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+::: .note
+Git may almost merge most of the code ,the conflict is the middle of the merging state,after resolve you won't have to merge again,instead you have to 
+   1. add to staging area
+   2. commit changes
+
+Merging done,check log   
+:::
+2. **Check the conflict in the file:**
+
+`example.txt` will now look like this:
+
+```
+Hello World
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+This is master branch
+=======
+This is feature branch
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature
+```
+
+* `&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD` → changes in the current branch (`master`)
+* `=======` → separator
+* `&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature` → changes from the branch being merged (`feature`)
+
+3. **Resolve the conflict manually** by editing the file:
+
+```text
+Hello World
+This is master branch
+This is feature branch
+```
+</md></sn><sn><md>### Stage and Commit Resolved Changes{.text-center}
+
+1. **Add the resolved file to the staging area:**
+
+```bash
+$ git add example.txt
+```
+
+2. **Commit the merge:**
+
+```bash
+$ git commit -m "Resolve merge conflict between master and feature"
+```
+
+3. **Check the log:**
+
+```bash
+$ git log --oneline --graph --all
+```
+
+You will now see that the merge is complete and both changes are incorporated.
+
+This workflow demonstrates **why conflicts occur**, how to **create a conflict environment**, and the step-by-step process to **resolve and commit** changes after a conflict.
+</md></sn>
