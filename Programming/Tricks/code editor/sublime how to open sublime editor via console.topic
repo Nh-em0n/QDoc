@@ -1,10 +1,43 @@
 
-	<sn></sn>		
+	<sn><md>## Open Sublime via Console
+
+* Go to `C:\Program Files\Sublime Text`
+  ![scr-sublime-folder](https://i.imgur.com/RsZk4eY.png)
+
+* Press `Win + R` and type `sysdm.cpl`
+  ![scrn-command](https://i.imgur.com/DPr8dAi.png)
+
+* Go to **Advanced** → **Environment Variables**
+  ![scr](https://i.imgur.com/iqQge6u.png)
+
+* Under **System variables** → select **Path** → **Edit**
+  ![scr](https://i.imgur.com/jMi7A5T.png)
+
+* Click on **New** → paste the copied path → **OK**
+  ![scr](https://i.imgur.com/HJBUzQN.png)
+
+* Open any terminal (CMD, Bash, PowerShell) and type:
+
+  ```bash
+  subl .
+  ```
+
+  or
+
+  ```bash
+  subl file
+  ```
+
+  ![scr](https://i.imgur.com/8v2PFi7.png)
+
+* It will automatically open the **Sublime Text Editor**
+  ![scr](https://i.imgur.com/CLhuOev.png)
+</md></sn>		
 	<config>
 		<tags>#sublime how to open sublime editor via console</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Fri Sep 12 2025 15:02:35 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Sep 12 2025 15:17:58 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-2rCxjR0QUi</id>
 		<duration></duration>
 	</config>
