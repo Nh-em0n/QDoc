@@ -1,10 +1,47 @@
 
-	<sn></sn>		
+	<sn><md>## World Map{.text-center}
+
+@[world-map-full](https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d32515587.21283051!2d64.00680398662834!3d17.73853581026755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDMzJzIyLjYiTiA5MMKwMjAnMTkuMiJF!5e0!3m2!1sen!2sbd!4v1757784238246!5m2!1sen!2sbd)
+
+</md></sn>		
 	<config>
 		<tags>#01.world map</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sat Sep 13 2025 22:44:07 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sat Sep 13 2025 23:48:22 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-beqlgNsroU</id>
 		<duration></duration>
 	</config>
+<sn><md>### Map with Direction
+
+![world-map-direction](https://thumbs.dreamstime.com/b/world-map-vector-illustration-children-continents-oceans-cardinal-directions-world-map-vector-illustration-160649967.jpg?w=992)
+</md></sn><sn><md>:::.row
+
+:::.col-12 .col-lg-6
+### Major Continents{.text-center}
+![earth-all-continent](https://cdn.britannica.com/59/89959-004-06D7A3E5.jpg)
+| **Continent**       | **% of Earth’s Land Area** |
+| ------------------- | -------------------------- |
+| Asia                | \~30%                      |
+| Africa              | \~20%                      |
+| North America       | \~16.5%                    |
+| South America       | \~12%                      |
+| Antarctica          | \~9.2%                     |
+| Europe              | \~6.8%                     |
+| Australia (Oceania) | \~5.9%                     |
+:::
+
+:::.col-12 .col-lg-6
+### Major Oceans{.text-center}
+![diagram](https://rwu.pressbooks.pub/app/uploads/sites/7/2019/05/World_map_ocean_locator-en.svg_.png)
+| **Ocean**      | **% of Earth’s Surface** |
+| -------------- | ------------------------ |
+| Pacific Ocean  | \~46%                    |
+| Atlantic Ocean | \~23%                    |
+| Indian Ocean   | \~20%                    |
+| Southern Ocean | \~6%                     |
+| Arctic Ocean   | \~4%                     |
+:::
+
+:::
+</md></sn>
