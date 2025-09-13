@@ -1,10 +1,47 @@
 
-	<sn></sn>		
+	<sn><md>## South America Map {.text-center}
+
+@[sa-gmap](https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31782287.92338511!2d-57.1607710509604!3d-14.421527269058975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9409341c355d34b5%3A0x69d40ccfc9c6e32b!2sSouth%20America!5e0!3m2!1sen!2sbd!4v1757785951216!5m2!1sen!2sbd)</md></sn>		
 	<config>
 		<tags>#01.south america introduction</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sat Sep 13 2025 23:51:04 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Sep 14 2025 00:34:59 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-JQACELi1bD</id>
 		<duration></duration>
 	</config>
+<sn><md>## Fact
+
+* **Size and Rank**: South America is the `fourth` largest continent, covering about **17.84 million km²** (\~`12%` of Earth’s land area).
+*  **Population**: Home to around `440 million people`, making it the **fifth most populous continent**.
+*  **Location**: South America is **situated between the Atlantic Ocean (east) and the Pacific Ocean (west)**, connected to North America by the Isthmus of Panama.
+*  **Longest Mountain Range**: The **Andes Mountains** (about 7,000 km) is the **longest continental mountain range in the world**.
+*  **Largest River by Volume**: The **Amazon River** is the **largest in the world by water discharge** and the **second longest after the Nile**.
+*  **Amazon Rainforest**: The Amazon Basin contains the **largest tropical rainforest on Earth**, often called the "lungs of the planet".
+*  **Highest Waterfall**: **Angel Falls** in Venezuela is the **tallest waterfall in the world** at 979 m (3,212 ft).
+*  **Unique Wildlife**: Home to **jaguars, llamas, alpacas, anacondas, and capybaras (the world’s largest rodent)**.
+*  **Climate Diversity**: Features nearly every climate type — **tropical in the Amazon, arid in the Atacama Desert, Mediterranean in Chile, and polar in Patagonia**.
+*  **Atacama Desert**: Located in Chile, it is the **driest desert in the world**.
+*  **Tallest Peak**: **Aconcagua** in Argentina (6,960 m / 22,837 ft) is the **highest mountain outside Asia**.
+*  **Lake Titicaca**: On the border of Peru and Bolivia, it is the **highest navigable lake in the world** (3,812 m).
+*  **Islands**: Includes world-famous islands like the **Galápagos (Ecuador)** and the **Falklands (disputed territory)**.
+*  **Languages**: **Spanish** is most spoken; **Portuguese** dominates Brazil (the only Portuguese-speaking country in South America).
+*  **Natural Resources**: Rich in **oil, copper, gold, silver, and lithium**, vital for global trade.
+</md></sn><sn><md>## SA Countries
+
+| Country / Territory                 | Capital                                             |
+| ----------------------------------- | --------------------------------------------------- |
+| French Guiana (territory of France) | Cayenne                                             |
+| Suriname                            | Paramaribo                                          |
+| Guyana                              | Georgetown                                          |
+| Venezuela                           | Caracas                                             |
+| Colombia                            | Bogotá                                              |
+| Ecuador                             | Quito                                               |
+| Peru                                | Lima                                                |
+| Bolivia                             | Sucre (constitutional), La Paz (seat of government) |
+| Chile                               | Santiago                                            |
+| Argentina                           | Buenos Aires                                        |
+| Paraguay                            | Asunción                                            |
+| Uruguay                             | Montevideo                                          |
+| Brazil                              | Brasília                                            |
+</md></sn><sn></sn>
