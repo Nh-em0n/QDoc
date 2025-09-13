@@ -6,7 +6,7 @@
 		<tags>#01.south america introduction</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Sep 14 2025 00:34:59 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Sep 14 2025 01:08:56 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-JQACELi1bD</id>
 		<duration></duration>
 	</config>
@@ -29,19 +29,32 @@
 *  **Natural Resources**: Rich in **oil, copper, gold, silver, and lithium**, vital for global trade.
 </md></sn><sn><md>## SA Countries
 
-| Country / Territory                 | Capital                                             |
-| ----------------------------------- | --------------------------------------------------- |
-| French Guiana (territory of France) | Cayenne                                             |
-| Suriname                            | Paramaribo                                          |
-| Guyana                              | Georgetown                                          |
-| Venezuela                           | Caracas                                             |
-| Colombia                            | Bogotá                                              |
-| Ecuador                             | Quito                                               |
-| Peru                                | Lima                                                |
-| Bolivia                             | Sucre (constitutional), La Paz (seat of government) |
-| Chile                               | Santiago                                            |
-| Argentina                           | Buenos Aires                                        |
-| Paraguay                            | Asunción                                            |
-| Uruguay                             | Montevideo                                          |
-| Brazil                              | Brasília                                            |
-</md></sn><sn></sn>
+| Country / Territory                 | Capital                                             | Emoji |
+| ----------------------------------- | --------------------------------------------------- | ----- |
+| French Guiana (territory of France) | Cayenne                                             | 🇬🇫  |
+| Suriname                            | Paramaribo                                          | 🇸🇷  |
+| Guyana                              | Georgetown                                          | 🇬🇾  |
+| Venezuela                           | Caracas                                             | 🇻🇪  |
+| Colombia                            | Bogotá                                              | 🇨🇴  |
+| Ecuador                             | Quito                                               | 🇪🇨  |
+| Peru                                | Lima                                                | 🇵🇪  |
+| Bolivia                             | Sucre (constitutional), La Paz (seat of government) | 🇧🇴  |
+| Chile                               | Santiago                                            | 🇨🇱  |
+| Argentina                           | Buenos Aires                                        | 🇦🇷  |
+| Paraguay                            | Asunción                                            | 🇵🇾  |
+| Uruguay                             | Montevideo                                          | 🇺🇾  |
+| Brazil                              | Brasília                                            | 🇧🇷  |
+</md></sn><sn><md>## Group
+
+I want to divide SA into 5 group : 
+
+![screenshot](https://i.imgur.com/AXo1yQc.png)
+
+| Group | Country |
+| --------- | ---- |
+| 1  | French Guiana,Suriname,Guyana   |
+| 2  | Venezuela,Colombia,Ecuador |
+| 3  | Peru,Bolivia,Chile |
+| 4  | Argentian,Paraguay,Uruguay |
+| 5  | Brazil |
+</md></sn>
