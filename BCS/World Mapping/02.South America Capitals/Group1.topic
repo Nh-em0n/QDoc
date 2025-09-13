@@ -1,10 +1,43 @@
 
-	<sn></sn>		
+	<sn><md>## Group1{.text-center}
+
+Included countries are **French Guiana , Suriname , Guyana**
++++ see diagram
+![diagram](https://cdn.britannica.com/76/244576-050-E14FCFCE/Locator-map-The-Guianas.jpg)
++++
+
+@[group1-gmap](https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4074889.606621596!2d-58.75527051799036!3d4.160333284444412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d12155785f7d753%3A0xde27f7e90f0af446!2sFrench%20Guiana!5e0!3m2!1sen!2sbd!4v1757791056100!5m2!1sen!2sbd)</md></sn>		
 	<config>
 		<tags>#group1</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Sep 14 2025 01:16:16 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Sep 14 2025 01:45:33 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-B12ErDVgS4</id>
 		<duration></duration>
 	</config>
+<sn><md>## French Guiana{.text-center}
+
+:::.row
+
+:::.col-12 .col-lg-6
+1. **Location**: French Guiana is located on the northeastern coast of South America, bordering Brazil to the south and east, and Suriname to the west.
+
+2. **Territorial Status**: It is an overseas department and region of `France`, making it ++part of the European Union++.
+
+3. **Capital**: The capital city is `Cayenne`, situated on the Atlantic coast.
+
+6. **Climate**: The region has a **tropical rainforest climate**, with high humidity, heavy rainfall, and consistently warm temperatures throughout the year.
+
+7. **Rivers**: Major rivers include the **Maroni River**, which forms the border with Suriname, and the **Oyapock River**, which borders Brazil.
+
+&gt; **Spaceport**: The ++Guiana Space Centre++ near ==Kourou== is one of the world’s major spaceports, taking advantage of its proximity to the `equator for satellite launches`.
+
+:::
+
+:::.col-12 .col-lg-6
+![french-guiana-location](https://cdn.britannica.com/76/244576-050-E14FCFCE/Locator-map-The-Guianas.jpg)
+![kourou-space-center](https://z-p3-scontent.fdac12-1.fna.fbcdn.net/v/t39.30808-6/488530131_706482751702778_2406453718853942192_n.jpg?stp=dst-jpg_s640x640_tt6&amp;_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=127cfc&amp;_nc_eui2=AeEmpchHIdchpqbhjYFCM_BCvusvQb3e2Dm-6y9Bvd7YOdKK3LipT_Oo4nsVjAVvb0w-9LgxW4KlLL_VidihsJ4T&amp;_nc_ohc=y88rR1FCdlwQ7kNvwFG16iz&amp;_nc_oc=AdkoHuCdbXJr7iYOOol31jhA97Ip9lzmg2Cz_Fc45avwZZCTO1-cxk7CdvjuhvxKVQU&amp;_nc_zt=23&amp;_nc_ht=z-p3-scontent.fdac12-1.fna&amp;_nc_gid=c-qSrTEwCF7p-v-OrpyTFA&amp;oh=00_AfbEqLKlUm6XVLBy1ZVKptpCN_QfNs619kgTiHpV1CeUJQ&amp;oe=68CB9323)
+:::
+
+:::
+</md></sn>
