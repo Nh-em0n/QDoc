@@ -12,7 +12,7 @@ In simple terms:
 		<tags>#17.cherry picking</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Sep 16 2025 23:45:03 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Sep 16 2025 23:59:34 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-owKx7AluLu</id>
 		<duration></duration>
 	</config>
@@ -76,4 +76,100 @@ Here, commit `d2c4afa` from the `feature` branch is applied to the `master` bran
 </md></sn><sn><md>### Summary{.text-center}
 
 Cherry picking in Git is a powerful tool that lets you apply **individual commits** from one branch to another. Unlike merging or rebasing, it does not bring the whole history—only the selected changes. While extremely useful for bug fixes and urgent patches, it must be used with care to avoid **duplicate commits** and unnecessary complexity in history.
-</md></sn>
+</md></sn><sn><md>## Practise {.text-center}
+
++++ see
+
+#### Checking master status
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git commit
+On branch master
+nothing to commit, working tree clean
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git branch
+  Ui
+  feature
+* master
+  sq
+```
+
+#### Checking log and copying the last commit hash
+
+```bash
+$ git log --oneline --all -n 5
+167ca43 (HEAD -&gt; master) update note2
+b057c67 (sq) update3 note2
+d2c4afa update2 note2
+9f9ae7a update1 note2
+5a1fe0d add department info in note2
+```
+
+#### Switching to Ui branch and checking log
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git switch Ui
+Switched to branch 'Ui'
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (Ui)
+$ git log --oneline -n 5
+e275eda (HEAD -&gt; Ui) add style.css in header
+bd5f937 Create header.php file in layout folder
+9bc8e37 Merge branch 'feature'
+f163dbc update app.js
+541f5eb add script file
+```
+
+#### Cherry picking (picking the last commit from master)
+
+```bash
+$ git cherry-pick 167ca43
+Auto-merging file2.md
+CONFLICT (content): Merge conflict in file2.md
+error: could not apply 167ca43... update note2
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (Ui|CHERRY-PICKING)
+$ git status -s
+UU file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (Ui|CHERRY-PICKING)
+$ git add file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (Ui|CHERRY-PICKING)
+$ git status -s
+M  file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (Ui|CHERRY-PICKING)
+$ git commmit -m "Cherry pick from master"
+git: 'commmit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (Ui|CHERRY-PICKING)
+$ git commit -m "Cherry pick from master"
+[Ui def9b76] Cherry pick from master
+ Date: Tue Sep 16 23:47:32 2025 +0600
+ 1 file changed, 4 insertions(+)
+```
+
+#### Checking log
+
+```bash
+$ git log --oneline -n 5
+def9b76 (HEAD -&gt; Ui) Cherry pick from master
+e275eda add style.css in header
+bd5f937 Create header.php file in layout folder
+9bc8e37 Merge branch 'feature'
+f163dbc update app.js
+```
++++</pathspec></md></sn>
