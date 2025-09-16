@@ -16,7 +16,7 @@ This article explains **what aborting a merge means**, and then demonstrates it 
 		<tags>#13.aborting a merge</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Sep 16 2025 19:05:30 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Sep 16 2025 19:24:12 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-xe4Xf1W7A1</id>
 		<duration></duration>
 	</config>
@@ -120,4 +120,105 @@ The file `file.txt` remains as it was in the `main` branch, and the attempted me
 :::
 
 :::
-</md></sn>
+</md></sn><sn><md>### Conclusion
+
+Aborting a merge in Git is useful when conflicts are too complex to resolve immediately, or if the merge was started by mistake. Using `git merge --abort`, you can safely return to the pre-merge state without losing your committed work. This ensures you can reattempt the merge later with better preparation.
+</md></sn><sn><md>## Practise {.text-center}
+
++++ see
+
+### Checking Status
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git status
+On branch master                                                                                                               
+nothing to commit, working tree clean                                                                                          
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git branch
+  Ui                                                                                                                           
+  feature                                                                                                                      
+* master
+```
+
+### Changing `file1.md` and Adding New Commit
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ echo "* There are 3 type of planetery wind" &gt;&gt; file1.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ subl file1.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git commit -am "update note1"
+warning: in the working copy of 'file1.md', LF will be replaced by CRLF the next time Git touches it                           
+[master ac26922] update note1                                                                                                  
+ 1 file changed, 1 insertion(+)
+```
+
+### Switching into Feature Branch
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git branch                                                                                                                   
+  Ui                                                                                                                           
+  feature                                                                                                                      
+* master                                                                                                                       
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git switch feature                                                                                                           
+Switched to branch 'feature'
+```
+
+### Updating `file1.md` on the Same File
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (feature)                                                                                  
+$ echo "* There are 7 global pressure belt" &gt;&gt; file1.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (feature)                                                                                  
+$ git commit -am "update note1"                                                                                                
+warning: in the working copy of 'file1.md', LF will be replaced by CRLF the next time Git touches it
+[feature 443fdce] update note1
+ 1 file changed, 1 insertion(+)
+```
+
+### Switching to Master and Trying to Merge
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (feature)                                                                                  
+$ git switch master
+Switched to branch 'master'
+
+$ git merge feature                                                                                                            
+Auto-merging file1.md
+CONFLICT (content): Merge conflict in file1.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   file1.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+### Aborting Merge
+
+```bash
+$ git merge --abort
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
+
++++</file></md></sn>
