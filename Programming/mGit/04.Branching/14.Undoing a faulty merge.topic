@@ -14,7 +14,7 @@ Each method works differently, and choosing the right one depends on the situati
 		<tags>#14.undoing a faulty merge</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Sep 16 2025 19:51:16 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Sep 16 2025 20:40:41 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-ghdzz5VsQm</id>
 		<duration></duration>
 	</config>
@@ -51,6 +51,13 @@ git reset --hard HEAD~1
 ```bash
 git revert -m 1 <merge_commit_hash>
 ```
+
+:::.note
+The -m (or --mainline) option tells Git which parent of the merge you want to keep. In a merge commit, there are at least two parents:
+
+* `-m 1` → keeps the branch you were on when you ran git merge (usually master or main).
+* `-m 2` → keeps the branch you merged in (the feature branch).
+:::
 
 :::.row
 :::.col-12 .col-lg-6
@@ -89,4 +96,252 @@ git revert -m 1 <merge_commit_hash>
   ```
 </md></sn><sn><md>### Conclusion
 
-Undoing a faulty merge in Git can be done either by **resetting** (to completely erase the merge) or by **reverting** (to undo changes while preserving history). The correct approach depends on whether the merge has been shared with others. By using these tools carefully, you can maintain a clean and reliable Git history.</md></sn>
+Undoing a faulty merge in Git can be done either by **resetting** (to completely erase the merge) or by **reverting** (to undo changes while preserving history). The correct approach depends on whether the merge has been shared with others. By using these tools carefully, you can maintain a clean and reliable Git history.</md></sn><sn><md>## Practise {.text-center}
+
++++ see
+
+### Checking Status
+
+```bash
+$ git status 
+On branch master                                                                                                               
+nothing to commit, working tree clean                                                                                          
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git branch
+  Ui                                                                                                                           
+  feature                                                                                                                      
+* master
+```
+
+---
+
+### Updating `file1.md` and Committing It
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ echo "* The **ITCZ** is not fixed" &gt;&gt; file1.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git commit -am "update note1"
+warning: in the working copy of 'file1.md', LF will be replaced by CRLF the next time Git touches it                           
+[master dfbb22b] update note1                                                                                                  
+ 1 file changed, 1 insertion(+)
+```
+
+---
+
+### Switching Feature Branch and Updating `file1.md`
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git switch feature                                                                                                           
+Switched to branch 'feature'                                                                                                   
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (feature)                                                                                  
+$ cat file1.md
+### Global Pressure Belt                                                                                                       
+
+* **ITCZ** : Intertropical Convergence Zone                                                                                    
+* There are 7 global pressure belt                                                                                             
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (feature)                                                                                  
+$ echo "* The ITCZ is one of the cause of moonsoon." &gt;&gt; file1.md                                                               
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (feature)                                                                                  
+$ git commit -am "update note1"
+warning: in the working copy of 'file1.md', LF will be replaced by CRLF the next time Git touches it
+[feature da1e74a] update note1
+ 1 file changed, 1 insertion(+)
+```
+
+---
+
+### Switching to Master and Merging
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (feature)                                                                                  
+$ git switch master
+Switched to branch 'master'                                                                                                    
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git merge feature
+Auto-merging file1.md                                                                                                          
+CONFLICT (content): Merge conflict in file1.md                                                                                 
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+---
+
+### Conflict Is
+
+```bash
+### Global Pressure Belt
+
+* **ITCZ** : Intertropical Convergence Zone
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+* There are 3 type of planetery wind
+* The **ITCZ** is not fixed
+=======
+* There are 7 global pressure belt
+* The ITCZ is one of the cause of moonsoon.
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature
+```
+
+---
+
+### Resolving Conflict To
+
+```bash
+### Global Pressure Belt
+
+* **ITCZ** : Intertropical Convergence Zone
+* The ITCZ is one of the cause of moonsoon.
+* The **ITCZ** is not fixed
+* There are 3 type of planetery wind
+* There are 7 global pressure belt
+```
+
+---
+
+### Status, Adding, Committing, Checking Log
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master|MERGING)                                                                           
+$ git status
+On branch master                                                                                                               
+You have unmerged paths.                                                                                                       
+  (fix conflicts and run "git commit")                                                                                         
+  (use "git merge --abort" to abort the merge)                                                                                 
+
+Unmerged paths:                                                                                                                
+  (use "git add <file>..." to mark resolution)                                                                                 
+        both modified:   file1.md                                                                                              
+
+no changes added to commit (use "git add" and/or "git commit -a")                                                              
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master|MERGING)                                                                           
+$ git add file1.md                                                                                                             
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master|MERGING)                                                                           
+$ git status -s                                                                                                                
+M  file1.md                                                                                                                    
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master|MERGING)                                                                           
+$ git commit -m "Merge with feature"
+[master 55c34c8] Merge with feature
+```
+
+---
+
+### Checking Log
+
+```bash
+$ git log --oneline --graph
+*   55c34c8 (HEAD -&gt; master) Merge with feature
+|\                                                                                                                             
+| * da1e74a (feature) update note1                                                                                             
+| * 443fdce update note1                                                                                                       
+* | dfbb22b update note1                                                                                                       
+* | ac26922 update note1
+...
+```
+
+---
+
+### Undoing with Reset
+
+```bash
+git log --oneline --graph
+* dfbb22b (HEAD -&gt; master) update note1
+* ac26922 update note1
+...
+```
+
+---
+
+### Now Undoing with Revert
+
+* Updating `file1.md` in master and committing
+* Updating `file1.md` in feature and committing
+* Switching back to master and merging them
+* Trying to undo by reverting
+
+---
+
+### Complete Process
+
+```bash
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+$ echo "* There are two type of **Jet Stream**" &gt;&gt; file1.md
+$ git commit -am "update note1"
+[master 7671ae3] update note1
+ 1 file changed, 1 insertion(+)
+
+$ git switch feature
+Switched to branch 'feature'
+
+$ echo "* Moonsoon is the seasonal wind" &gt;&gt; file1.md
+$ git commit -am "update note1"
+[feature 100d61d] update note1
+ 1 file changed, 1 insertion(+)
+
+$ git switch master
+Switched to branch 'master'
+
+$ git merge feature
+Auto-merging file1.md
+CONFLICT (content): Merge conflict in file1.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+$ git add file1.md
+$ git commit -m "Merge with feature"
+[master 26205a5] Merge with feature
+
+$ git log --oneline
+26205a5 (HEAD -&gt; master) Merge with feature
+100d61d (feature) update note1
+7671ae3 update note1
+...
+```
+
+---
+
+### Undoing by Revert
+
+```bash
+$ git log -n 5 --oneline
+26205a5 (HEAD -&gt; master) Merge with feature
+100d61d (feature) update note1
+7671ae3 update note1
+da1e74a update note1
+dfbb22b update note1
+
+$ git revert -m 1 26205a5
+[master 89b5779] Revert "Merge with feature"
+ 1 file changed, 3 deletions(-)
+
+$ git log -n 5 --oneline
+89b5779 (HEAD -&gt; master) Revert "Merge with feature"
+26205a5 Merge with feature
+100d61d (feature) update note1
+7671ae3 update note1
+da1e74a update note1
+```
+
+A new commit is created.
+
+```bash
+$ cat file1.md
+### Global Pressure Belt
+
+* **ITCZ** : Intertropical Convergence Zone
+* There are 3 type of planetery wind
+* The **ITCZ** is not fixed
+* There are two type of **Jet Stream**
+```
+
++++</file></md></sn>
