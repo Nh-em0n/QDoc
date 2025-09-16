@@ -1,10 +1,152 @@
 
-	<sn></sn>		
+	<sn><md>## Picking Files from Another Branch in Git
+
+Sometimes, instead of merging or cherry-picking whole commits, you may want to bring **only specific files** (or changes in files) from another branch into your current branch. Git allows you to do this using commands like `git checkout`, `git restore`, or `git show`.
+
+This technique is useful when:
+
+* You don’t need the entire commit history.
+* You only need one file or a set of files from another branch.
+* You want fine-grained control over what gets applied.
+</md></sn>		
 	<config>
 		<tags>#18.picking a file from another branch</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 08:58:02 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 17 2025 00:12:36 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-TytLNjpulj</id>
 		<duration></duration>
 	</config>
+<sn><md>### Diagram Representation
+
+```bash
+# master branch
+A --- B --- C --- D (HEAD -&gt; master)
+
+# feature branch
+      \
+       E --- F --- G (feature)
+
+Goal: Bring only "file2.md" from feature branch into master, 
+without merging commits E, F, G.
+```
+</md></sn><sn><md>### Example{.text-center}
+
+step 1: Switch to the target branch
+
+```bash
+$ git switch master
+Switched to branch 'master'
+```
+
+Step 2: Pick a file from another branch (`feature`)
+
+```bash
+# Old style (before Git 2.23):
+$ git checkout feature -- file2.md
+
+# New style (recommended):
+$ git restore --source=feature -- file2.md
+```
+
+This copies `file2.md` from the `feature` branch into the current working directory of `master`.
+
+Step 3: Commit the file
+
+```bash
+$ git add file2.md
+$ git commit -m "Pick file2.md from feature branch"
+```
+
+Now only `file2.md` is brought into `master`, without merging the whole `feature` branch.
+</md></sn><sn><md>### Alternative: Using `git show` {.text-center}
+
+If you want just the content of a file from another branch/commit, you can also do:
+
+```bash
+$ git show feature:file2.md &gt; file2.md
+$ git add file2.md
+$ git commit -m "Manually picked file2.md from feature"
+```
+</md></sn><sn><md>### Facts About Picking Files from Another Branch{.text-center}
+
+* It **does not merge commits**, only takes the file snapshot.
+* Useful for **quick fixes** or copying config files.
+* If the file has conflicts with your branch, you must **resolve manually**.
+* Works with **single files** or **multiple files**. Example:
+
+  ```bash
+  git restore --source=feature -- file1.md file2.md
+  ```
+</md></sn><sn><md>### When to Use
+
+* When you need **only one file** from a branch, not the whole commit history.
+* When copying configuration, documentation, or a specific script.
+* When avoiding unnecessary merges or cherry-picks.
+* When you want **clean commit history** by avoiding unrelated changes.
+
+---
+
+### Summary
+
+Picking files from another branch in Git is a lightweight alternative to merging or cherry-picking. Using commands like `git checkout`, `git restore`, or `git show`, you can copy specific files into your current branch without bringing the entire commit history. This approach is best for **isolated changes** where only certain files are needed.
+
+</md></sn><sn><md>### Practises{.text-center}
+
++++ see
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (Ui)
+$ git status
+On branch Ui
+nothing to commit, working tree clean
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (Ui)
+$ cat file2.md
+this is second note
+my name is Emon
+My department is SES
+My department is CSE
+My chairman is Jamal Uddin
+My CGPA is very low
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (Ui)
+$ echo "new data" &gt;&gt; file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (Ui)
+$ git commit -am "set new data in note2"
+warning: in the working copy of 'file2.md', LF will be replaced by CRLF the next time Git touches it
+[Ui a4b4199] set new data in note2
+ 1 file changed, 1 insertion(+)
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (Ui)
+$ git switch master
+Switched to branch 'master'
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ cat file2.md
+this is second note
+my name is Emon
+My department is SES
+My department is CSE
+My chairman is Jamal Uddin
+My CGPA is very low
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git restore --source=Ui -- file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ cat file2.md
+this is second note
+my name is Emon
+My department is SES
+My department is CSE
+My chairman is Jamal Uddin
+My CGPA is very low
+new data
+```
+Now you can add the changes to the stagin area
+
++++
+
+</md></sn>
