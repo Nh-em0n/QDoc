@@ -1,10 +1,99 @@
 
-	<sn></sn>		
+	<sn><md>## Squash Merge in Git{.text-center}
+
+
+A **squash merge** in Git is a technique used to merge changes from one branch into another while **squashing (combining) all the commits** from the source branch into a **single commit**. This method is useful when you want to keep the main branch history clean and linear, without all the intermediate commits from the feature branch.
+
+</md></sn>		
 	<config>
 		<tags>#15.squash merging</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 08:57:22 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Sep 16 2025 23:14:30 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-eORcvHyo5r</id>
 		<duration></duration>
 	</config>
+<sn><md>### Basic Concept{.text-center}
+
+Normally, when you merge a branch using `git merge`, all commits from that branch are preserved. But with **squash merging**, Git takes the cumulative changes and places them into a new commit on the target branch, discarding the branch’s original commit structure.
+
+---
+
+#### Diagram of Squash Merge
+
+```text
+Before squash merge:
+
+ master:    A --- B --- C
+                     \
+ feature:              D --- E --- F
+
+After squash merge:
+
+ master:    A --- B --- C --- G
+                          (squashed commit of D,E,F)
+```
+
+Here:
+
+* `D, E, F` are commits on the `feature` branch.
+* After squash merge, they become a single commit `G` on `master`.</md></sn><sn><md>### Example of Squash Merge{.text-center}
+
+```bash
+# Step 1: Switch to the branch where you want to merge
+git checkout master
+
+# Step 2: Perform squash merge
+git merge --squash feature
+
+# Step 3: Commit the squashed changes
+git commit -m "Feature implementation squashed into one commit"
+```
+
+At this point, the history of the `feature` branch is **not preserved as separate commits**. Instead, all its changes appear as a single commit in `master`.
+</md></sn><sn><md>Behavior of Branch After Squash Merge
+
+### The branch does not listed {.fg-orange}
+
+After squash merging, the feature branch will **not** appear in the list of merged branches:
+
+```bash
+git branch --merged
+```
+
+This happens because Git does not recognize the feature branch commits as merged—they were **squashed** into a new commit, not merged directly.
+
+
+### The branch cannot be removed directly {.fg-red}
+
+If you try to delete the branch with `-d`:
+
+```bash
+git branch -d feature
+```
+
+Git will **refuse to delete** it, saying:
+
+```text
+error: The branch 'feature' is not fully merged.
+```
+
+This is because Git sees that the `feature` branch commits (`D, E, F`) are not part of `master` (they were squashed into `G`).
+
+To force delete, you must use:
+
+```bash
+git branch -D feature
+```
+</md></sn><sn><md>### When to Use Squash Merge{.text-center}
+
+* To maintain a **clean and linear commit history**.
+* When a feature branch contains **many small, experimental, or WIP commits** that are not useful to keep.
+* In collaborative projects where the main branch should only reflect **finalized features**, not development noise.
+</md></sn><sn><md>### Key Points to Remember{.text-center}
+
+1. **Squash merge** combines all commits into one.
+2. Original branch commits are not preserved in the main branch.
+3. Branch does not show up in `git branch --merged`.
+4. Cannot delete with `git branch -d`; must use `git branch -D`.
+5. Use when you want a tidy history.</md></sn>
