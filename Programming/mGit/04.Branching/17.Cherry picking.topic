@@ -1,10 +1,79 @@
 
-	<sn></sn>		
+	<sn><md>## Cherry Picking in Git{.text-center}
+
+Cherry picking in Git is the process of applying a **specific commit** from one branch onto another, without merging the entire branch. It allows you to pick only the changes you need, instead of bringing all the commits from the source branch.
+
+In simple terms:
+
+* **Merge** = bring everything.
+* **Cherry pick** = bring only the commit(s) you want.
+</md></sn>		
 	<config>
 		<tags>#17.cherry picking</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 08:57:40 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Sep 16 2025 23:45:03 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-owKx7AluLu</id>
 		<duration></duration>
 	</config>
+<sn><md>### Diagram Representation{.text-center}
+
+```bash
+# Before cherry-pick
+
+master:    A --- B --- C --- D
+                     \
+feature:               E --- F --- G
+
+# Cherry-pick commit "F" from feature into master
+
+master:    A --- B --- C --- D --- F'
+                     \
+feature:               E --- F --- G
+
+# Note: F' is a new commit with the same changes as F but a new hash
+```
+</md></sn><sn><md>### Example of Cherry Picking{.text-center}
+
+```bash
+# Step 1: Switch to the branch where you want to apply the commit
+$ git switch master
+
+# Step 2: Copy a specific commit from another branch
+$ git cherry-pick <commit-hash>
+
+# Example:
+$ git cherry-pick d2c4afa
+[master 8b5c2f3] update2 note2
+ Date: Tue Sep 16 22:55:00 2025 +0600
+ 1 file changed, 1 insertion(+)
+```
+
+Here, commit `d2c4afa` from the `feature` branch is applied to the `master` branch without merging the whole branch.
+</commit-hash></md></sn><sn><md>### Facts about Cherry Picking{.text-center}
+
+* It **creates a new commit hash**, even though the content is the same.
+* It’s useful for **backporting fixes** or applying urgent changes to production branches.
+* It can cause **duplicate commits** if later a merge is done (you may see the same change twice).
+* You can cherry pick multiple commits:
+
+  ```bash
+  git cherry-pick <hash1> <hash2> <hash3>
+  ```
+* You can also cherry pick a **range of commits**:
+
+  ```bash
+  git cherry-pick A^..C
+  ```
+
+  (This picks commits A, B, and C).
+</hash3></hash2></hash1></md></sn><sn><md>### When to Use Cherry Picking{.text-center}
+
+* When you need a **bug fix** from a feature branch but don’t want the entire branch.
+* When you need to **backport** a commit from the `main` branch to an older version branch.
+* When you want to apply **selected commits** without merging unrelated work.
+* In hotfix workflows where **time-sensitive patches** must be applied to production.
+</md></sn><sn><md>### Summary{.text-center}
+
+Cherry picking in Git is a powerful tool that lets you apply **individual commits** from one branch to another. Unlike merging or rebasing, it does not bring the whole history—only the selected changes. While extremely useful for bug fixes and urgent patches, it must be used with care to avoid **duplicate commits** and unnecessary complexity in history.
+</md></sn>
