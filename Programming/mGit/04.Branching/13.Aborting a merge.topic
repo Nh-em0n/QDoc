@@ -1,10 +1,123 @@
 
-	<sn></sn>		
+	<sn><md>## Aborting Merging in Git{.text-center}
+
+:::.row
+:::.col-12 .col-lg-6
+Merging in Git is the process of combining changes from one branch into another. Sometimes, while merging, you may encounter unexpected conflicts or realize that the merge was started by mistake. In such situations, Git allows you to **abort the merge** and return your repository to the state it was in before the merge began.
+:::
+:::.col-12 .col-lg-6
+![diagram](https://www.scaler.com/topics/images/git-abort-merge-2.webp)
+:::
+:::
+
+This article explains **what aborting a merge means**, and then demonstrates it step by step with a practical example.
+</md></sn>		
 	<config>
 		<tags>#13.aborting a merge</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 08:56:52 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Sep 16 2025 19:05:30 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-xe4Xf1W7A1</id>
 		<duration></duration>
 	</config>
+<sn><md>### What Does Aborting a Merge Mean?{.text-center .fg-red}
+
+When you start a merge, Git begins integrating commits from one branch into the current branch. If [conflicts occur]{.fg-red} or you decide not to continue, you can abort the merge. Aborting a merge:
+
+* Cancels the merge process.
+* Restores the branch to its pre-merge state.
+* Discards any conflict markers and staged changes related to the merge.
+
+The command for this is:
+
+```bash
+git merge --abort
+```
+</md></sn><sn><md>### Practical Example: Aborting a Merge{.text-center}
+
+:::.row
+
+:::.col-12 .col-lg-6
+#### Step 1: Initialize a New Repository{.text-center}
+
+```bash
+git init abort-merge-demo
+cd abort-merge-demo
+```
+:::
+
+:::.col-12 .col-lg-6
+#### Step 2: Create an Initial Commit on `main`{.text-center}
+```bash
+echo "Hello from main branch" &gt; file.txt
+git add file.txt
+git commit -m "Initial commit on main"
+```
+:::
+
+:::.col-12 .col-lg-6
+#### Step 3: Create a New Branch and Make Changes{.text-center}
+```bash
+git checkout -b feature-branch
+echo "Hello from feature branch" &gt; file.txt
+git commit -am "Update file.txt in feature branch"
+```
+
+Now, the `feature-branch` has a different version of `file.txt` than `main`.
+:::
+
+:::.col-12 .col-lg-6
+#### Step 4: Switch Back to `main` and Make Another Change{.text-center}
+
+```bash
+git checkout main
+echo "Hello again from main branch" &gt; file.txt
+git commit -am "Update file.txt in main branch"
+```
+
+At this point, both `main` and `feature-branch` have conflicting changes in `file.txt`.
+:::
+
+:::.col-12 .col-lg-6
+#### Step 5: Try to Merge `feature-branch` into `main`{.text-center}
+
+```bash
+git merge feature-branch
+```
+
+Git will stop and report a **merge conflict** in `file.txt`:
+
+```
+CONFLICT (content): Merge conflict in file.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+:::
+
+:::.col-12 .col-lg-6
+#### Step 6: Abort the Merge{.text-center}
+
+Instead of resolving the conflict, you decide to cancel the merge:
+
+```bash
+git merge --abort
+```
+
+Now Git restores the repository to the exact state it was in before the merge attempt.
+:::
+
+:::.col-12 .col-lg-6
+#### Verifying the Abort{.text-center}
+
+Run:
+
+```bash
+git status
+```
+
+You will see that no merge is in progress, and the branch is clean again.
+
+The file `file.txt` remains as it was in the `main` branch, and the attempted merge has been discarded.
+:::
+
+:::
+</md></sn>
