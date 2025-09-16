@@ -9,7 +9,7 @@ A **squash merge** in Git is a technique used to merge changes from one branch i
 		<tags>#15.squash merging</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Tue Sep 16 2025 23:14:30 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Tue Sep 16 2025 23:35:21 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-eORcvHyo5r</id>
 		<duration></duration>
 	</config>
@@ -96,4 +96,151 @@ git branch -D feature
 2. Original branch commits are not preserved in the main branch.
 3. Branch does not show up in `git branch --merged`.
 4. Cannot delete with `git branch -d`; must use `git branch -D`.
-5. Use when you want a tidy history.</md></sn>
+5. Use when you want a tidy history.</md></sn><sn><md>### Practise {.text-center}
+
++++ see
+
+#### Checking status
+
+```bash
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git branch
+  Ui
+  feature
+* master
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git log --oneline -n 10 --graph
+* 89b5779 (HEAD -&gt; master) Revert "Merge with feature"
+*   26205a5 Merge with feature
+|\
+| * 100d61d (feature) update note1
+| * da1e74a update note1
+| * 443fdce update note1
+* | 7671ae3 update note1
+* | dfbb22b update note1
+* | ac26922 update note1
+* |   775a587 Set absolute cdn link in layout/hedader
+|\ \
+| * | e275eda (Ui) add style.css in header
+```
+
+#### Updating file2.md and committing
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ cat file2.md
+this is second note
+my name is Emon
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ echo "My department is SES" &gt;&gt; file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git commit -am "add department info in note2"
+warning: in the working copy of 'file2.md', LF will be replaced by CRLF the next time Git touches it
+[master 5a1fe0d] add department info in note2
+ 1 file changed, 1 insertion(+)
+```
+
+#### Creating new branch `sq` and committing 3 times on it
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git switch -C sq
+Switched to a new branch 'sq'
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (sq)
+$ echo "My department is CSE" &gt;&gt; file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (sq)
+$ git commit -am "update1 note2"
+[sq 9f9ae7a] update1 note2
+ 1 file changed, 1 insertion(+)
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (sq)
+$ echo "My chairman is Jamal Uddin" &gt;&gt; file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (sq)
+$ git commit -am "update2 note2"
+[sq d2c4afa] update2 note2
+ 1 file changed, 1 insertion(+)
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (sq)
+$ echo "My CGPA is very low" &gt;&gt; file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (sq)
+$ git commit -am "update3 note2"
+[sq b057c67] update3 note2
+ 1 file changed, 1 insertion(+)
+```
+
+#### Switching to master
+
+```bash
+$ git switch master
+Switched to branch 'master'
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git log --oneline --all -graph -n 10
+fatal: unrecognized argument: -graph
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git log --oneline --all --graph -n 10
+* b057c67 (sq) update3 note2
+* d2c4afa update2 note2
+* 9f9ae7a update1 note2
+* 5a1fe0d (HEAD -&gt; master) add department info in note2
+* 89b5779 Revert "Merge with feature"
+*   26205a5 Merge with feature
+|\
+| * 100d61d (feature) update note1
+| * da1e74a update note1
+| * 443fdce update note1
+* | 7671ae3 update note1
+```
+
+#### Squash Merging
+
+```bash
+$ git merge --squash sq
+Updating 5a1fe0d..b057c67
+Fast-forward
+Squash commit -- not updating HEAD
+ file2.md | 3 +++
+ 1 file changed, 3 insertions(+)
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git log --oneline --graph --all -n 5
+* b057c67 (sq) update3 note2
+* d2c4afa update2 note2
+* 9f9ae7a update1 note2
+* 5a1fe0d (HEAD -&gt; master) add department info in note2
+* 89b5779 Revert "Merge with feature"
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git log -n 3
+commit 5a1fe0dc2fd03f1bcc8a76ea499328d398feeaaf (HEAD -&gt; master)
+Author: Nh-em0n <nhemon2043@gmail.com>
+Date:   Tue Sep 16 23:22:52 2025 +0600
+
+    add department info in note2
+
+commit 89b577940a5e682f3f83f6bcd9f36ed14f694793
+Author: Nh-em0n <nhemon2043@gmail.com>
+Date:   Tue Sep 16 20:33:39 2025 +0600
+
+    Revert "Merge with feature"
+
+commit 26205a54bbe3c69559215dc1a183d798c5a3b481
+Merge: 7671ae3 100d61d
+Author: Nh-em0n <nhemon2043@gmail.com>
+Date:   Tue Sep 16 20:20:54 2025 +0600
+
+    Merge with feature
+```
++++</nhemon2043@gmail.com></nhemon2043@gmail.com></nhemon2043@gmail.com></md></sn>
