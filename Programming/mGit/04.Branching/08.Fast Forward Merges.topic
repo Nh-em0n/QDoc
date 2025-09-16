@@ -16,7 +16,7 @@ A **fast-forward merge** in Git is a type of merge that occurs when the **branch
 		<tags>#08.fast forward merges</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 11 2025 21:14:06 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 17 2025 00:15:05 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-rqGHb12GjU</id>
 		<duration></duration>
 	</config>
@@ -428,4 +428,29 @@ $ git log --oneline --all --graph
 
 
 
-</file></md></sn>
+</file></md></sn><sn><md>### Diagram{.text-center}
+
+```bash
+# Before merge
+#
+# master branch is behind feature.
+# HEAD is pointing to master.
+
+master:    A --- B --- C  (HEAD -&gt; master)
+                   \
+feature:             D --- E (feature)
+
+# Fast-forward merge
+# master is moved forward to point where feature is.
+# No new commit is created.
+
+master:    A --- B --- C --- D --- E (HEAD -&gt; master, feature)
+```
+
+#### Explanation
+
+* A **fast-forward merge** happens when the current branch (e.g., `master`) has no new commits since it diverged from the branch being merged (e.g., `feature`).
+* Git simply **moves the pointer** of `master` forward to the tip of `feature`.
+* No merge commit is created.
+
+</md></sn>
