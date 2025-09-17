@@ -14,7 +14,7 @@ Understanding the history of a project is one of the most important aspects of v
 		<tags>#03.viewing the history</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 17:45:49 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 17 2025 19:02:29 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-36acVXycLf</id>
 		<duration></duration>
 	</config>
@@ -35,7 +35,9 @@ Date:   Mon Sep 16 12:45:32 2025 +0600
 * **Commit hash**: A unique SHA-1 identifier (e.g., `7c9e42c5...`) for the commit.
 * **Author**: The person who made the changes.
 * **Date**: When the commit was created.
-* **Commit message**: A description of the changes introduced in this commit.</md></sn><sn><md>#### --oneline{.text-center}
+* **Commit message**: A description of the changes introduced in this commit.
+
+&gt; Pressed     <kbd>Q</kbd>    to quit</md></sn><sn><md>#### --oneline{.text-center}
 
 Shows each commit as a single line. This is useful for a quick overview of the history.
 
@@ -45,6 +47,15 @@ $ git log --oneline
 9ad13f7 Fixed typo in README
 a32d4f1 Initial commit
 ```
+</md></sn><sn><md>### Limit{.text-center}
+
+You can limit the commit result
+```bash
+git log -n 3 
+# or
+git log -3
+```
+In both cases this will output the latest 3 commit in chronological order
 </md></sn><sn><md>### --state{.text-center}
 
 Displays the files changed, along with the number of insertions and deletions in each commit.
@@ -81,11 +92,206 @@ index e69de29..4b825dc 100644
 +Another line added
 ```
 
-This option is particularly helpful for reviewing exact changes.</md></sn><sn><md>### Conclusion
+This option is particularly helpful for reviewing exact changes.
+
+### Understanding hunk code{.text-center}
+
+
++++ see 
+
+While using diff or patch you may see something like this @@some code@@,this represent some chunk of your code
+
+A **hunk** is just one block of changes in a diff.
+
+* The **header** (`@@ ... @@`) tells where in the file the change happened and how many lines were changed.
+* The **body** shows which lines were added, removed, or left unchanged.
+
+In Git, the part that starts with `@@ -1,3 +1,6 @@` is called a **hunk header**. A **hunk** is a section of a file that shows the difference (diff) between two versions.
+
+Let’s break down your example:
+
+```
+@@ -1,3 +1,6 @@
+ this is second note
+ my name is Emon
+ My department is SES
++My department is CSE
++My chairman is Jamal Uddin
++My CGPA is very low
+```
+
+### Explanation of `@@ -1,3 +1,6 @@`
+
+* **`-1,3`** → Refers to the **old file** (before the change).
+
+  * `1` = starting line number in the old file.
+  * `3` = number of lines in this hunk from the old file.
+
+* **`+1,6`** → Refers to the **new file** (after the change).
+
+  * `1` = starting line number in the new file.
+  * `6` = number of lines in this hunk from the new file.
+
+So, before the change, the file had **3 lines starting at line 1**.
+After the change, the file has **6 lines starting at line 1**.
+
+---
+
+### Inside the hunk
+
+* Lines **without any prefix** (like `this is second note`) → unchanged lines (context).
+* Lines with **`-`** → removed lines (appear only in the old version).
+* Lines with **`+`** → added lines (appear only in the new version).
+
+In your case:
+
+* No lines were removed (no `-` prefix).
+* 3 new lines were added (with `+`):
+
+  ```
+  +My department is CSE
+  +My chairman is Jamal Uddin
+  +My CGPA is very low
+  ```
+
++++
+
+</md></sn><sn><md>### Conclusion
 
 * Git history can be viewed using `git log`, which lists commits in **reverse chronological order**.
 * Each commit includes a unique hash, author, date, and message.
 * Options like `--oneline`, `--stat`, and `--patch` allow developers to customize the level of detail they want to see.
 
 This makes `git log` a versatile tool for both quick overviews and deep inspections of project history.
-</md></sn>
+</md></sn><sn><md>### Practise{.text-center}
+
++++ see
+
+#### Basic log
+
+```bash
+$ git log
+commit 167ca43976c8ed9f78c923bc71b15e3883806efb (HEAD -&gt; master)  
+Author: Nh-em0n (nhemon2043@gmail.com)  
+Date:   Tue Sep 16 23:47:32 2025 +0600  
+
+    update note2  
+
+commit 5a1fe0dc2fd03f1bcc8a76ea499328d398feeaaf  
+Author: Nh-em0n (nhemon2043@gmail.com)  
+Date:   Tue Sep 16 23:22:52 2025 +0600  
+
+    add department info in note2  
+
+commit 89b577940a5e682f3f83f6bcd9f36ed14f694793  
+Author: Nh-em0n (nhemon2043@gmail.com)  
+Date:   Tue Sep 16 20:33:39 2025 +0600  
+
+    Revert "Merge with feature"  
+
+commit 26205a54bbe3c69559215dc1a183d798c5a3b481  
+Merge: 7671ae3 100d61d  
+Author: Nh-em0n (nhemon2043@gmail.com)  
+Date:   Tue Sep 16 20:20:54 2025 +0600  
+
+    Merge with feature  
+
+commit 100d61de65b9e9d78a5f237beea358b520d65415 (feature)  
+Author: Nh-em0n (nhemon2043@gmail.com)  
+Date:   Tue Sep 16 20:16:38 2025 +0600  
+
+    update note1
+```
+
+#### Oneline
+
+```bash
+$ git log --oneline
+167ca43 (HEAD -&gt; master) update note2
+5a1fe0d add department info in note2
+89b5779 Revert "Merge with feature"
+26205a5 Merge with feature
+100d61d (feature) update note1
+7671ae3 update note1
+...
+```
+
+#### Limit
+
+```bash
+$ git log --oneline -n 5
+167ca43 (HEAD -&gt; master) update note2
+5a1fe0d add department info in note2
+89b5779 Revert "Merge with feature"
+26205a5 Merge with feature
+100d61d (feature) update note1
+
+$ git log --oneline -5
+167ca43 (HEAD -&gt; master) update note2
+5a1fe0d add department info in note2
+89b5779 Revert "Merge with feature"
+26205a5 Merge with feature
+100d61d (feature) update note1
+```
+
+#### Stat
+
+```bash
+$ git log --oneline -3 --stat
+167ca43 (HEAD -&gt; master) update note2
+ file2.md | 3 +++
+ 1 file changed, 3 insertions(+)
+
+5a1fe0d add department info in note2
+ file2.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+89b5779 Revert "Merge with feature"
+ file1.md | 3 ---
+ 1 file changed, 3 deletions(-)
+```
+
+#### Patch
+
+```bash
+$ git log --oneline -3 --patch
+167ca43 (HEAD -&gt; master) update note2
+diff --git a/file2.md b/file2.md
+@@ -1,3 +1,6 @@
+ this is second note
+ my name is Emon
+ My department is SES
++My department is CSE
++My chairman is Jamal Uddin
++My CGPA is very low
+
+5a1fe0d add department info in note2
+diff --git a/file2.md b/file2.md
+@@ -1,2 +1,3 @@
+ this is second note
+ my name is Emon
++My department is SES
+
+89b5779 Revert "Merge with feature"
+diff --git a/file1.md b/file1.md
+@@ -3,7 +3,4 @@
+ * **ITCZ** : Intertropical Convergence Zone
+ * There are 3 type of planetery wind
+ * The **ITCZ** is not fixed
+-* The ITCZ is one of the cause of moonsoon.
+ * There are two type of **Jet Stream**
+-* There are 7 global pressure belt
+```
+
+#### Explanation of `@@ -3,7 +3,4 @@`
+
+* `-3,7` → In the old file, from line 3, **7 lines** existed.
+* `+3,4` → In the new file, from line 3, only **4 lines** remain.
+* Meaning: **3 lines were removed or changed**.
+
+**Removed lines:**
+
+* `* The ITCZ is one of the cause of moonsoon.`
+* `* There are 7 global pressure belt`
+
++++</md></sn>
