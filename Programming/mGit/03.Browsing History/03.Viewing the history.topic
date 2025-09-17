@@ -14,7 +14,7 @@ Understanding the history of a project is one of the most important aspects of v
 		<tags>#03.viewing the history</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 17:34:44 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 17 2025 17:36:53 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-36acVXycLf</id>
 		<duration></duration>
 	</config>
@@ -24,7 +24,7 @@ When you run `git log` without any options, you will see details of each commit 
 
 ```bash
 commit 7c9e42c5d9f1d28d1aef88d7bc0f99e6c45a2f63
-Author: John Doe <john@example.com>
+Author: John Doe john@example.com
 Date:   Mon Sep 16 12:45:32 2025 +0600
 
     Added new feature to handle user input
@@ -35,5 +35,4 @@ Date:   Mon Sep 16 12:45:32 2025 +0600
 * **Commit hash**: A unique SHA-1 identifier (e.g., `7c9e42c5...`) for the commit.
 * **Author**: The person who made the changes.
 * **Date**: When the commit was created.
-* **Commit message**: A description of the changes introduced in this commit.
-</john@example.com></md></sn>
+* **Commit message**: A description of the changes introduced in this commit.</md></sn>
