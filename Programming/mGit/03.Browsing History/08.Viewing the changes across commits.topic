@@ -1,10 +1,180 @@
 
-	<sn></sn>		
+	<sn><md>## Viewing Changes Across Commits{.text-center}
+
+When working with Git, it’s often necessary to compare two different commits to understand what has changed in the codebase. Git provides powerful options with the `git diff` command to view these changes in detail.
+
+### Comparing Two Commits
+
+The general syntax is:
+
+```bash
+git diff commit1 commit2
+```
+
+This shows the line-by-line differences between two commits.
+</md></sn>		
 	<config>
 		<tags>#08.viewing the changes across commits</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 17:16:29 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 17 2025 23:10:01 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-S06l8sIJml</id>
 		<duration></duration>
 	</config>
+<sn><md>### Specifying Commits{.text-center}
+
+:::.row
+
+:::.col-12 .col-lg-6
+#### Absolute Hash{.fg-teal .text-center}
+
+You can use the full or partial commit hash to compare two commits:
+
+```bash
+git diff 4f8a3c1 7b9d2e5
+```
+
+Here, `4f8a3c1` and `7b9d2e5` are the unique commit hashes.
+:::
+
+:::.col-12 .col-lg-6
+#### Relative to HEAD{.fg-orange .text-center}
+
+You can also reference commits relative to the `HEAD`:
+
+```bash
+git diff HEAD~3 HEAD~1
+```
+
+This compares the state of the repository three commits before `HEAD` with the state one commit before `HEAD`.
+:::
+
+:::
+</md></sn><sn><md>### Comparing Specific Files{.text-center}
+
+If you want to view changes only for a specific file between two commits:
+
+```bash
+git diff commit1 commit2 filename
+```
+
+Example:
+
+```bash
+git diff HEAD~2 HEAD~1 app.js
+```
+
+This shows only the changes in `app.js`.</md></sn><sn><md>### Viewing Changed File Names Only{.text-center}
+
+If you’re interested in just the list of changed files between two commits:
+
+```bash
+git diff commit1 commit2 --name-only
+```
+
+Example:
+
+```bash
+git diff 4f8a3c1 7b9d2e5 --name-only
+```
+
+This outputs only the filenames that were modified.
+</md></sn><sn><md>### Viewing File Names with Change Status{.text-center}
+
+To see not just the filenames but also the type of changes (`A` for added, `M` for modified, `D` for deleted):
+
+```bash
+git diff commit1 commit2 --name-status
+```
+
+Example:
+
+```bash
+git diff HEAD~3 HEAD~1 --name-status
+```
+
+Sample output:
+
+```
+M   index.html
+A   styles.css
+D   old_script.js
+```</md></sn><sn><md>### Summary{.text-center}
+
+* Use **absolute hashes** or **relative references** (`HEAD~n`) to specify commits.
+* Use `git diff commit1 commit2 filename` to see changes in a specific file.
+* Use `--name-only` to list changed files.
+* Use `--name-status` to list changed files along with their status (added/modified/deleted).
+
+This makes `git diff` a versatile tool for reviewing the history and changes in a project.
+</md></sn><sn><md>## Practise{.text-center}
+
++++ see
+
+#### Checking log
+
+```bash
+167ca43 (HEAD -&gt; master) update note2                                                                                          
+5a1fe0d add department info in note2                                                                                           
+89b5779 Revert "Merge with feature"                                                                                            
+26205a5 Merge with feature                                                                                                     
+100d61d (feature) update note1
+```
+
+#### Diff between last and before it
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git diff HEAD HEAD~1
+diff --git a/file2.md b/file2.md                                                                                               
+index 3890cba..34c1ec4 100644                                                                                                  
+--- a/file2.md                                                                                                                 
++++ b/file2.md                                                                                                                 
+@@ -1,6 +1,3 @@                                                                                                                
+ this is second note                                                                                                           
+ my name is Emon                                                                                                               
+ My department is SES                                                                                                          
+-My department is CSE                                                                                                          
+-My chairman is Jamal Uddin                                                                                                    
+-My CGPA is very low
+```
+
+#### With commit hash
+
+```bash
+$ git diff 167ca43 5a1fe0d                                                                                                     
+diff --git a/file2.md b/file2.md                                                                                               
+index 3890cba..34c1ec4 100644                                                                                                  
+--- a/file2.md                                                                                                                 
++++ b/file2.md                                                                                                                 
+@@ -1,6 +1,3 @@                                                                                                                
+ this is second note                                                                                                           
+ my name is Emon
+ My department is SES
+-My department is CSE                                                                                                          
+-My chairman is Jamal Uddin                                                                                                    
+-My CGPA is very low
+```
+
+#### Comparing file1.md
+
+```bash
+$ git diff HEAD HEAD~1 --name-only
+file2.md                                                                                                                       
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git diff HEAD HEAD~1 file2.md
+diff --git a/file2.md b/file2.md                                                                                               
+index 3890cba..34c1ec4 100644                                                                                                  
+--- a/file2.md                                                                                                                 
++++ b/file2.md                                                                                                                 
+@@ -1,6 +1,3 @@                                                                                                                
+ this is second note                                                                                                           
+ my name is Emon                                                                                                               
+ My department is SES                                                                                                          
+-My department is CSE                                                                                                          
+-My chairman is Jamal Uddin                                                                                                    
+-My CGPA is very low
+```
++++
+</md></sn>
