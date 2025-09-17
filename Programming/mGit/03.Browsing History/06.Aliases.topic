@@ -16,7 +16,7 @@ Git aliases can be created either globally (for all repositories) or locally (fo
 		<tags>#06.aliases</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 21:20:29 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 17 2025 21:36:09 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-M2lqph32a2</id>
 		<duration></duration>
 	</config>
@@ -150,4 +150,92 @@ If the alias no longer appears, it has been successfully removed.
 4. **Leverage shell commands** for advanced workflows (`!` syntax).
 
 Git aliases are a simple yet powerful way to speed up your workflow and reduce repetitive typing. With a few carefully chosen shortcuts, you can navigate, commit, and manage branches faster and more efficiently.
-</md></sn>
+</md></sn><sn><md>## Practise{.text-center}
+
++++ see
+
+#### Setting Branch Alias
+
+```bash
+$ git config --global alias.br branch
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git br
+  Ui
+  feature
+* master
+  sq
+```
+
+#### Opening Global Config in Editor and Check
+
+```bash
+...
+[alias]
+    br = branch
+```
+
+#### Setting a Larger Alias
+
+```bash
+$ git config --global alias.home "switch master"
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git branch
+  Ui
+  feature
+* master
+  sq
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git switch sq
+Switched to branch 'sq'
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (sq)
+$ git home
+Switched to branch 'master'
+```
+
+### Local Config
+
+```bash
+$ git config alias.cm commit
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git config alias.lg "log --oneline -7"
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git lg
+167ca43 (HEAD -&gt; master) update note2
+5a1fe0d add department info in note2
+89b5779 Revert "Merge with feature"
+26205a5 Merge with feature
+100d61d (feature) update note1
+7671ae3 update note1
+da1e74a update note1
+```
+
+#### All Aliases
+
+```bash
+$ git config --get-regexp alias
+alias.br branch
+alias.home switch master
+alias.cm commit
+alias.lg log --oneline -7
+```
+
+#### Unsetting Alias `cm`
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git config --unset alias.cm
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+$ git config --get-regexp alias
+alias.br branch
+alias.home switch master
+alias.lg log --oneline -7
+```
+
++++</md></sn>
