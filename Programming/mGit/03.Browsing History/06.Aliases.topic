@@ -1,10 +1,153 @@
 
-	<sn></sn>		
+	<sn><md>## Git Aliases{.text-center}
+
+Git aliases are shortcuts or custom commands that help streamline repetitive Git operations. They reduce typing, simplify complex commands, and improve workflow efficiency. Instead of typing long Git commands every time, you can define short, memorable aliases.
+
+### Why Use Git Aliases
+
+* **Speed**: Execute long or frequently used commands with a short keyword.
+* **Consistency**: Maintain the same command style across projects.
+* **Customization**: Adapt Git to your workflow and preferences.
+* **Readability**: Avoid long command chains that are error-prone.
+
+Git aliases can be created either globally (for all repositories) or locally (for a single repository).
+</md></sn>		
 	<config>
 		<tags>#06.aliases</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 17:15:53 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 17 2025 21:20:29 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-M2lqph32a2</id>
 		<duration></duration>
 	</config>
+<sn><md>### Global Alias{.text-center}
+
+Global aliases are stored in your Git configuration file and apply to all repositories.
+
+```bash
+git config --global alias.st status
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.cm commit
+git config --global alias.last "log -1 HEAD"
+```
+
+#### check
+```bash
+ git config --global -e
+```
+This will open global config in your default editor
+
+* `st` → `git status`
+* `co` → `git checkout`
+* `br` → `git branch`
+* `cm` → `git commit`
+* `last` → `git log -1 HEAD`
+</md></sn><sn><md>### Local Alias{.text-center}
+
+Local aliases are stored only in the current repository:
+
+```bash
+git config alias.hist "log --oneline --graph --all"
+git config alias.unstage "reset HEAD --"
+```
+
+* `hist` → Displays a visual log of all commits.
+* `unstage` → Unstages a file from the staging area.</md></sn><sn><md>### Using Git Aliases{.text-center}
+
+Once an alias is defined, you can use it as a regular Git command:
+
+```bash
+git st
+git co main
+git br -a
+git cm -m "Update README"
+git last
+git hist
+git unstage file.txt
+```
+</md></sn><sn><md>### Multiple{.text-center}
+
+Aliases can also include options and multiple commands using `!`:
+
+```bash
+git config --global alias.cleanup "!git branch --merged | grep -v '\\*\\|main\\|master' | xargs git branch -d"
+```
+
+* `cleanup` → Deletes all merged branches except `main` or `master`.
+</md></sn><sn><md>### Viewing All Git Aliases{.text-center}
+
+To see a list of all configured aliases:
+
+```bash
+git config --get-regexp alias
+```
+
+Output example:
+
+```text
+alias.st status
+alias.co checkout
+alias.br branch
+alias.cm commit
+alias.last log -1 HEAD
+alias.hist log --oneline --graph --all
+```
+</md></sn><sn><md>## Unset Alias{.text-center}
+
+Removing a Git alias is straightforward. You can delete it either **globally** or **locally** depending on where it was defined.
+
+### Remove a Global Alias
+
+Global aliases are stored in your global Git configuration (`~/.gitconfig`). To remove one:
+
+```bash
+git config --global --unset alias.<alias_name>
+```
+
+**Example:**
+
+```bash
+git config --global --unset alias.st
+```
+
+This removes the `st` alias (`git status`) from all repositories.
+
+---
+
+### Remove a Local Alias
+
+Local aliases are stored in the repository’s Git configuration (`.git/config`). To remove one:
+
+```bash
+git config --unset alias.<alias_name>
+```
+
+**Example:**
+
+```bash
+git config --unset alias.co
+```
+
+This removes the `co` alias (`git checkout`) only for the current repository.
+
+---
+
+### Check That It’s Removed
+
+To verify the alias has been removed:
+
+```bash
+git config --get-regexp alias
+```
+
+If the alias no longer appears, it has been successfully removed.
+</alias_name></alias_name></md></sn><sn><md>### Tips for Effective Aliases
+
+1. **Keep them short**: One to three letters work best.
+2. **Be consistent**: Use similar naming conventions across projects.
+3. **Use descriptive names** for complex commands.
+4. **Leverage shell commands** for advanced workflows (`!` syntax).
+
+Git aliases are a simple yet powerful way to speed up your workflow and reduce repetitive typing. With a few carefully chosen shortcuts, you can navigate, commit, and manage branches faster and more efficiently.
+</md></sn>
