@@ -1,10 +1,215 @@
 
-	<sn></sn>		
+	<sn><md>## Filtering the History{.text-center}
+
+When a project grows, its commit history can become long and detailed. Git provides powerful ways to **filter commit history** so you can find what you need quickly. Below are the most common filtering methods.
+</md></sn>		
 	<config>
 		<tags>#04.filtering the history</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 17:15:22 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 17 2025 19:37:18 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-BjCaTyuQK3</id>
 		<duration></duration>
 	</config>
+<sn><md>### Filter by Limiting Commits (`-n`) {.text-center}
+
+You can limit the number of commits shown.
+
+```bash
+git log -n 5
+```
+
+or
+
+```bash
+git log -5
+```
+
+Both commands show only the latest **5 commits** in chronological order.
+</md></sn><sn><md>### Filter by Author{.text-center}
+
+If multiple people contribute, you can focus on commits made by a specific author.
+
+```bash
+git log --author="Emon"
+```
+
+This will show only commits where the author’s name or email matches `"Emon"`.
+</md></sn><sn><md>### Filter by Date{.text-center}
+
+Git can filter commits by exact dates or relative keywords.
+
+#### Using absolute dates:
+
+```bash
+git log --after="2025-09-01" --before="2025-09-15"
+```
+
+This shows commits made between **Sept 1, 2025** and **Sept 15, 2025**.
+
+#### Using relative dates:
+
+```bash
+git log --since="2 weeks ago"
+git log --since="2 months ago"
+git log --until="yesterday"
+```
+
+* `--since` or `--after` → show commits **after** a date.
+* `--until` or `--before` → show commits **before** a date.
+</md></sn><sn><md>### Filter by Commit Range{.text-center}
+
+You can display commits between two commit hashes.
+
+```bash
+git log hash1..hash2
+```
+
+* Excludes `hash1` but includes everything up to `hash2`.
+* Useful for checking commits made between two points in history.
+
+For example:
+
+```bash
+git log a1b2c3..d4e5f6
+```
+</md></sn><sn><md>### Filter by Filename{.text-center}
+
+You can see which commits affected a specific file.
+
+```bash
+git log -- file1.md
+```
+
+Or multiple files:
+
+```bash
+git log -- file1.md file2.md
+```
+
+This shows only commits that modified those files.
+</md></sn><sn><md>## Summary Table
+
+| Filter Type          | Example Command                                      | Purpose                     |
+| -------------------- | ---------------------------------------------------- | --------------------------- |
+| Limit commits        | `git log -n 3`                                       | Show latest 3 commits       |
+| Author               | `git log --author="Emon"`                            | Show commits by Emon        |
+| Date (absolute)      | `git log --after="2025-09-01" --before="2025-09-15"` | Commits within date range   |
+| Date (relative)      | `git log --since="2 weeks ago"`                      | Commits from last 2 weeks   |
+| Range between hashes | `git log hash1..hash2`                               | Commits between two commits |
+| By filename          | `git log -- file1.md`                                | Commits that touched a file |
+</md></sn><sn><md>### Practise{.text-center}
+
++++ see
+
+#### Filter by limiting commit
+
+```bash
+git log --oneline -4
+167ca43 (HEAD -&gt; master) update note2
+5a1fe0d add department info in note2
+89b5779 Revert "Merge with feature"
+26205a5 Merge with feature
+```
+
+#### Filter by author
+
+```bash
+167ca43 (HEAD -&gt; master) update note2
+5a1fe0d add department info in note2
+89b5779 Revert "Merge with feature"
+26205a5 Merge with feature
+100d61d (feature) update note1
+7671ae3 update note1
+da1e74a update note1
+dfbb22b update note1
+443fdce update note1
+ac26922 update note1
+775a587 Set absolute cdn link in layout/hedader
+....
+```
+
+#### Filter by date
+
+```bash
+git log --before='2025-09-10'
+
+commit f18edaf6c051718f8eb8d710d3b13bb8d50c5ffb
+Author: Nh-em0n <nhemon2043@gmail.com>
+Date:   Fri Sep 5 14:31:51 2025 +0600
+
+    bring fil2.md
+
+commit 83e5f5c8490db872cd47718653279a6f4131ef4c
+Author: Nh-em0n <nhemon2043@gmail.com>
+Date:   Fri Sep 5 14:27:37 2025 +0600
+
+    remove fil2.md
+
+commit 604cfb0df6481eafa4dea8ccbc60b43cfc7435cb
+Author: Nh-em0n <nhemon2043@gmail.com>
+Date:   Fri Sep 5 00:50:02 2025 +0600
+
+    update file2
+
+commit 613e2b919ac0fa1042cb87bb64c68f50aac5e5bf
+Author: Nh-em0n <nhemon2043@gmail.com>
+Date:   Thu Sep 4 21:39:15 2025 +0600
+
+    update note content
+
+commit 1c07c60fcccdc4c245c7650cca3ef289a739c1a1
+Author: Nh-em0n <nhemon2043@gmail.com>
+Date:   Thu Sep 4 21:12:42 2025 +0600
+
+    Update file1
+
+    I just add some new content to the note
+```
+
+#### Filter by relative date
+
+```bash
+git log --oneline --after='2025-09-05' --before='2025-09-15'
+
+775a587 Set absolute cdn link in layout/hedader
+e275eda add style.css in header
+1b45fc9 change absolute path in cdn link
+bd5f937 Create header.php file in layout folder
+9bc8e37 Merge branch 'feature'
+f163dbc update app.js
+541f5eb add script file
+4a65548 add script file
+2710f6b Merge branch 'api-config'
+94821b8 point new bug - resources
+57ab174 Add api_list.md
+bd42278 fix all prev bug
+7cdcd2d Add dynamic feature
+ccb8dca Create bug list(bug.md)
+5ce7d11 add doc file
+26f1bd2 Add feature.txt
+5e1e550 update note1
+1212f2d update note1
+```
+
+#### Filter by commit range
+
+```bash
+git log ac26922..100d61d --oneline
+
+100d61d (feature) update note1
+da1e74a update note1
+443fdce update note1
+```
+
+*(require recheck)*
+
+#### Filter by filename
+
+```bash
+git log --oneline -- bug.md
+
+94821b8 point new bug - resources
+ccb8dca Create bug list(bug.md)
+```
++++</nhemon2043@gmail.com></nhemon2043@gmail.com></nhemon2043@gmail.com></nhemon2043@gmail.com></nhemon2043@gmail.com></md></sn>
