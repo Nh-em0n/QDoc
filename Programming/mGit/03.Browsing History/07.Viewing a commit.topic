@@ -1,10 +1,127 @@
 
-	<sn></sn>		
+	<sn><md>## Viewing a Commit{.text-center}
+
+When working with Git, understanding the changes made in a specific commit is essential for tracking history, debugging, or reviewing code. Git provides several ways to view commits, both **absolute** (by hash) and **relative** (from `HEAD`), as well as ways to inspect **files changed** in a commit.</md></sn>		
 	<config>
 		<tags>#07.viewing a commit</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 17:16:09 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 17 2025 22:20:45 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-bduq0EQIOu</id>
 		<duration></duration>
 	</config>
+<sn><md>### Viewing a Commit by Absolute Hash{.text-center}
+
+Every commit in Git has a unique **SHA-1 hash**. You can view the details of a specific commit using its hash:
+
+```bash
+git show <commit-hash>
+```
+
+**Example:**
+
+```bash
+git show 5a1fe0d
+```
+
+This will display:
+
+* Commit metadata (author, date, commit message)
+* Full diff of the changes made in that commit
+
+Absolute hashes are useful when you know the exact commit you want to inspect.</commit-hash></md></sn><sn><md>### Viewing a Commit by Relative Reference{.text-center}
+
+To see the last commit use `HEAD`
+
+```bash
+git show HEAD
+```
+
+Git allows you to reference commits **relative to `HEAD`** using `HEAD~n`, where `n` is the number of commits before `HEAD`.
+
+```bash
+git show HEAD~2
+```
+
+This shows the commit **two steps back** from the current `HEAD`.
+You can combine this with `git log` to navigate history quickly:
+
+```bash
+git log --oneline
+```
+</md></sn><sn><md>### Viewing Changes for a Specific File{.text-center}
+
+To view a commit’s changes for a **specific file**, append the file path at the end of the `git show` command:
+
+```bash
+git show <commit-hash> -- file-path
+#or
+git show HEAD~n -- file-path
+#or
+git show HEAD~n:file-path
+
+```
+
+**Example:**
+
+```bash
+git show 5a1fe0d -- README.md
+```
+
+This will display only the changes made to `README.md` in that commit.</commit-hash></md></sn><sn><md>### Listing Files Changed {.text-center}
+
+If you only want to **see which files were changed** in a commit without the diff details:
+
+```bash
+git show --name-only commit-hash
+```
+
+**Example:**
+
+```bash
+git show --name-only 5a1fe0d
+```
+
+Output:
+
+```
+README.md
+src/app.js
+```</md></sn><sn><md>### Listing Files with Status {.text-center}
+
+The `--name-status` option shows files along with their **change type**:
+
+* `A` = Added
+* `M` = Modified
+* `D` = Deleted
+
+```bash
+git show --name-status <commit-hash>
+```
+
+**Example:**
+
+```bash
+git show --name-status 5a1fe0d
+```
+
+Output:
+
+```
+M   README.md
+A   src/new_feature.js
+D   src/old_file.js
+```
+
+This gives a quick overview of what was added, modified, or removed in a commit.
+</commit-hash></md></sn><sn><md>### Summary
+
+| Method                 | Command                         | Purpose                             |
+| ---------------------- | ------------------------------- | ----------------------------------- |
+| Absolute hash          | `git show commit_hash`               | View a specific commit by SHA       |
+| Relative               | `git show HEAD~n`               | View commits relative to HEAD       |
+| Specific file          | `git show commit_hash -- <file>` <br> `git show HEAD~n:file`     | See changes for a particular file   |
+| List changed files     | `git show --name-only commit_hash` <br> `git show --name-only HEAD~n`  | See only which files changed        |
+| List files with status | `git show --name-status commit_hash` | See files changed with A/M/D status |
+
+These commands provide a flexible way to inspect the history and changes in your repository at different levels of detail.</file></md></sn>
