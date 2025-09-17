@@ -1,10 +1,96 @@
 
-	<sn></sn>		
+	<sn><md>## Formatting Git Log Output{.text-center}
+
+Git provides powerful ways to **customize the output of `git log`**. Using the `--pretty=format:` option, you can control exactly how each commit is displayed, including placeholders for commit data, colors, and custom text. This article covers formatting with examples.
+</md></sn>		
 	<config>
 		<tags>#05.formatting the log output</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 17:15:37 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 17 2025 19:53:58 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-2OJOLyPCk3</id>
 		<duration></duration>
 	</config>
+<sn><md>### Using `--pretty=format:` for custom text{.text-center}
+
+The `--pretty=format:` option allows you to define a **custom template** for each commit. For example:
+
+### static text
+
+```bash
+git log --pretty=format:"hello world"
+```
+
+### With placeholder
+
+```bash
+git log --pretty=format:"Commit hash: %H - Author: %an - Message: %s"
+```
+
+**Explanation:**
+
+* `%H` → Full commit hash
+* `%an` → Author name
+* `%s` → Commit message
+
+You can also add **random text** or static strings:
+
+```bash
+git log --pretty=format:"[MY COMMIT] %h -&gt; %s"
+```
+
+Here, `[MY COMMIT]` is static text added to each log entry, and `%h` shows the short commit hash.
+</md></sn><sn><md>### Full table of placeholders{.text-center}
++++ see
+| Placeholder | Meaning                    |
+| ----------- | -------------------------- |
+| `%H`        | Full commit hash           |
+| `%h`        | Short commit hash          |
+| `%T`        | Full tree hash             |
+| `%t`        | Short tree hash            |
+| `%P`        | Parent hashes              |
+| `%p`        | Short parent hashes        |
+| `%an`       | Author name                |
+| `%ae`       | Author email               |
+| `%ad`       | Author date                |
+| `%ar`       | Relative author date       |
+| `%cn`       | Committer name             |
+| `%ce`       | Committer email            |
+| `%cd`       | Committer date             |
+| `%cr`       | Relative committer date    |
+| `%s`        | Commit message             |
+| `%b`        | Body (full commit message) |
+| `%N`        | Commit notes               |
++++
+This table covers almost all placeholders you can use for advanced formatting.</md></sn><sn><md>### Coloring the output{.text-center}
+
+Git also supports **color codes** for output formatting using `%C(color)`:
+
+* `%C(auto)` → Git decides color automatically
+* `%C(red)` → Red text
+* `%C(green)` → Green text
+* `%C(yellow)` → Yellow text
+* `%C(blue)` → Blue text
+* `%C(magenta)` → Magenta text
+* `%C(cyan)` → Cyan text
+* `%C(reset)` → Reset to default color
+
+**Example with color:**
+
+```bash
+git log --pretty=format:"%C(green)%h%C(reset) - %C(yellow)%an%C(reset) - %C(cyan)%s%C(reset)"
+```
+
+This produces:
+
+* Short hash in green
+* Author name in yellow
+* Commit message in cyan
+
+**Tips:**
+
+* Always reset color with `%C(reset)` to avoid coloring the terminal after logs.
+* You can mix colors and placeholders freely for custom log displays.
+
+This setup allows developers to **highlight important commit information** and make `git log` outputs easier to read, especially in large projects.
+</md></sn>
