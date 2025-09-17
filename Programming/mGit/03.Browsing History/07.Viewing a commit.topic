@@ -6,7 +6,7 @@ When working with Git, understanding the changes made in a specific commit is es
 		<tags>#07.viewing a commit</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 22:20:45 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 17 2025 22:35:43 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-bduq0EQIOu</id>
 		<duration></duration>
 	</config>
@@ -124,4 +124,82 @@ This gives a quick overview of what was added, modified, or removed in a commit.
 | List changed files     | `git show --name-only commit_hash` <br> `git show --name-only HEAD~n`  | See only which files changed        |
 | List files with status | `git show --name-status commit_hash` | See files changed with A/M/D status |
 
-These commands provide a flexible way to inspect the history and changes in your repository at different levels of detail.</file></md></sn>
+These commands provide a flexible way to inspect the history and changes in your repository at different levels of detail.</file></md></sn><sn><md>## Practise{.text-center}
+
++++ see
+
+### Viewing Commit by Absolute Hash
+
+```bash
+$ git show 100d61d
+commit 100d61de65b9e9d78a5f237beea358b520d65415 (feature)
+Author: Nh-em0n <nhemon2043@gmail.com>
+Date:   Tue Sep 16 20:16:38 2025 +0600
+
+    update note1
+
+diff --git a/file1.md b/file1.md
+index e93fe0b..68934e1 100644
+--- a/file1.md
++++ b/file1.md
+@@ -3,3 +3,4 @@
+ * **ITCZ** : Intertropical Convergence Zone
+ * There are 7 global pressure belt
+ * The ITCZ is one of the cause of moonsoon.
++* Moonsoon is the seasonal wind
+```
+
+---
+
+### Viewing 4th Commit by HEAD
+
+```bash
+$ git show HEAD~4
+commit 7671ae307d8303e6f6ccce578a6684438f531a8b
+Author: Nh-em0n <nhemon2043@gmail.com>
+Date:   Tue Sep 16 20:11:54 2025 +0600
+
+    update note1
+
+diff --git a/file1.md b/file1.md
+index a7b0b9a..9cbe53e 100644
+--- a/file1.md
++++ b/file1.md
+@@ -3,3 +3,4 @@
+ * **ITCZ** : Intertropical Convergence Zone
+ * There are 3 type of planetery wind
+ * The **ITCZ** is not fixed
++* There are two type of **Jet Stream**
+```
+
+---
+
+### Changed Files
+
+```bash
+$ git show --name-only HEAD~4
+commit 7671ae307d8303e6f6ccce578a6684438f531a8b
+Author: Nh-em0n <nhemon2043@gmail.com>
+Date:   Tue Sep 16 20:11:54 2025 +0600
+
+    update note1
+
+file1.md
+```
+
+---
+
+### Changed Files Status
+
+```bash
+$ git show --name-status HEAD~4
+commit 7671ae307d8303e6f6ccce578a6684438f531a8b
+Author: Nh-em0n <nhemon2043@gmail.com>
+Date:   Tue Sep 16 20:11:54 2025 +0600
+
+    update note1
+
+M       file1.md
+```
+
++++</nhemon2043@gmail.com></nhemon2043@gmail.com></nhemon2043@gmail.com></nhemon2043@gmail.com></md></sn>
