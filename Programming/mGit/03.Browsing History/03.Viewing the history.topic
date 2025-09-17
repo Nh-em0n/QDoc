@@ -14,7 +14,7 @@ Understanding the history of a project is one of the most important aspects of v
 		<tags>#03.viewing the history</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 17:36:53 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 17 2025 17:45:49 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-36acVXycLf</id>
 		<duration></duration>
 	</config>
@@ -35,4 +35,57 @@ Date:   Mon Sep 16 12:45:32 2025 +0600
 * **Commit hash**: A unique SHA-1 identifier (e.g., `7c9e42c5...`) for the commit.
 * **Author**: The person who made the changes.
 * **Date**: When the commit was created.
-* **Commit message**: A description of the changes introduced in this commit.</md></sn>
+* **Commit message**: A description of the changes introduced in this commit.</md></sn><sn><md>#### --oneline{.text-center}
+
+Shows each commit as a single line. This is useful for a quick overview of the history.
+
+```bash
+$ git log --oneline
+7c9e42c Added new feature to handle user input
+9ad13f7 Fixed typo in README
+a32d4f1 Initial commit
+```
+</md></sn><sn><md>### --state{.text-center}
+
+Displays the files changed, along with the number of insertions and deletions in each commit.
+
+```bash
+$ git log --stat
+commit 7c9e42c5d9f1d28d1aef88d7bc0f99e6c45a2f63
+Author: John Doe john@example.com
+Date:   Mon Sep 16 12:45:32 2025 +0600
+
+    Added new feature to handle user input
+
+ file1.txt | 3 ++-
+ file2.md  | 5 ++++-
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+```</md></sn><sn><md>### patch{.text-center}
+
+Shows the actual changes (diffs) introduced in each commit.
+
+```bash
+$ git log --patch
+commit 7c9e42c5d9f1d28d1aef88d7bc0f99e6c45a2f63
+Author: John Doe (john@example.com)
+Date:   Mon Sep 16 12:45:32 2025 +0600
+
+    Added new feature to handle user input
+
+diff --git a/file1.txt b/file1.txt
+index e69de29..4b825dc 100644
+--- a/file1.txt
++++ b/file1.txt
+@@ -0,0 +1,2 @@
++New line added
++Another line added
+```
+
+This option is particularly helpful for reviewing exact changes.</md></sn><sn><md>### Conclusion
+
+* Git history can be viewed using `git log`, which lists commits in **reverse chronological order**.
+* Each commit includes a unique hash, author, date, and message.
+* Options like `--oneline`, `--stat`, and `--patch` allow developers to customize the level of detail they want to see.
+
+This makes `git log` a versatile tool for both quick overviews and deep inspections of project history.
+</md></sn>
