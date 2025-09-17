@@ -1,10 +1,64 @@
 
-	<sn></sn>		
+	<sn><md>## Checking Out a Commit{.text-center}
+
+In Git, every commit represents a snapshot of your project at a certain point in time. Sometimes you may want to **view the state of your repository at a specific commit**, either to inspect files, debug an issue, or understand past changes. For this purpose, Git provides the command:
+
+```bash
+git checkout commit_hash
+```
+
+When you use this, Git will update the working directory and the HEAD pointer to reflect that commit’s state. However, it is important to understand the consequences before using it.</md></sn>		
 	<config>
 		<tags>#09.checking out a commit</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 17:16:48 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 17 2025 23:24:02 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-bzKB22IqwY</id>
 		<duration></duration>
 	</config>
+<sn><md>### Caution: Detached HEAD State{.text-center .fg-red}
+
+When you checkout a commit directly using its hash, Git puts you into a **detached HEAD state**.
+
+* **What it means**:
+  Normally, `HEAD` points to the latest commit in a branch (like `master` or `main`). In detached mode, `HEAD` points directly to a commit, not to any branch.
+
+* **Consequences if you commit here**:
+
+  * Any new commits you make will not belong to a branch.
+  * If you later switch back to a branch, those commits may become unreachable (lost) unless you explicitly create a new branch from that point.
+  * This can cause confusion or even accidental data loss if you are not careful.
+
+⚠️ **Rule of Thumb**: Use `git checkout commit_hash` mainly for viewing, not for committing. If you want to continue working from that commit, create a new branch first:
+
+```bash
+git checkout -b new-branch commit_hash
+```
+</md></sn><sn><md>### How to Checkout a Commit{.text-center}
+
+Example workflow:
+
+* Checkout a commit by its hash:
+
+  ```bash
+  git checkout 5a1fe0d
+  ```
+
+* Now your working directory shows the exact state of the project at that commit. You can open files, run tests, or read code as it was at that moment in history.
+
+* If you try to commit now, you are in detached HEAD. Git will warn you about it.</md></sn><sn><md>### Returning Back to Master{.fg-teal .text-center}
+
+Once you are done exploring a commit, you should return to your branch (for example, `master`) to continue working:
+
+```bash
+git checkout master
+```
+
+This will bring you back to the tip of the branch, where you can resume normal development.
+
+### Alias for checkout to master
+```bash
+ git config --global alias.back "checkout master"
+ git back
+ # Now HEAD point to master
+```</md></sn>
