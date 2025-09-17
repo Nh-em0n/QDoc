@@ -7,7 +7,7 @@ Git provides powerful ways to **customize the output of `git log`**. Using the `
 		<tags>#05.formatting the log output</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 19:53:58 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 17 2025 21:01:15 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-2OJOLyPCk3</id>
 		<duration></duration>
 	</config>
@@ -93,4 +93,247 @@ This produces:
 * You can mix colors and placeholders freely for custom log displays.
 
 This setup allows developers to **highlight important commit information** and make `git log` outputs easier to read, especially in large projects.
-</md></sn>
+</md></sn><sn><md>### Practise{.text-center}
+
++++ see
+
+#### basic log
+
+```bash
+$ git log -3
+commit 167ca43976c8ed9f78c923bc71b15e3883806efb (HEAD -&gt; master)
+Author: Nh-em0n nhemon2043@gmail.com
+Date:   Tue Sep 16 23:47:32 2025 +0600
+
+    update note2
+
+commit 5a1fe0dc2fd03f1bcc8a76ea499328d398feeaaf
+Author: Nh-em0n nhemon2043@gmail.com
+Date:   Tue Sep 16 23:22:52 2025 +0600
+
+    add department info in note2
+
+commit 89b577940a5e682f3f83f6bcd9f36ed14f694793
+Author: Nh-em0n nhemon2043@gmail.com
+Date:   Tue Sep 16 20:33:39 2025 +0600
+
+    Revert "Merge with feature"
+
+    This reverts commit 26205a54bbe3c69559215dc1a183d798c5a3b481, reversing
+    changes made to 7671ae307d8303e6f6ccce578a6684438f531a8b.
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)
+```
+
+#### static text
+
+```bash
+$ git log --pretty=format:"hello world" -5
+hello world
+hello world
+hello world
+hello world
+hello world
+```
+
+#### with placeholder
+
+```bash
+167ca43 -&gt; update note2
+5a1fe0d -&gt; add department info in note2
+89b5779 -&gt; Revert "Merge with feature"
+26205a5 -&gt; Merge with feature
+100d61d -&gt; update note1
+```
+
+#### %H (full commit hash)
+
+```bash
+$ git log --pretty=format:"%H" -5
+167ca43976c8ed9f78c923bc71b15e3883806efb
+5a1fe0dc2fd03f1bcc8a76ea499328d398feeaaf
+89b577940a5e682f3f83f6bcd9f36ed14f694793
+26205a54bbe3c69559215dc1a183d798c5a3b481
+100d61de65b9e9d78a5f237beea358b520d65415
+```
+
+#### %h (short commit hash)
+
+```bash
+$ git log --pretty=format:"%h" -5
+167ca43
+5a1fe0d
+89b5779
+26205a5
+100d61d
+```
+
+#### %T (full tree hash)
+
+```bash
+$ git log --pretty=format:"%T" -5
+6ccdb78ecfe952851d31a638875e26a51bbaa74b
+bb725805c1c0def2b35e31d5215e1ac7882cee1c
+d0c329553ec8d3024f249f73efc0bd7853255b56
+c4a27c2316b1729faf2c57a0800586c235b7396d
+feb42270ca3335400c2ab06b93362f813ba8d3b7
+```
+
+#### %t (short tree hash)
+
+```bash
+$ git log --pretty=format:"%t" -5
+6ccdb78
+bb72580
+d0c3295
+c4a27c2
+feb4227
+```
+
+#### %P (parent hashes)
+
+```bash
+5a1fe0dc2fd03f1bcc8a76ea499328d398feeaaf
+89b577940a5e682f3f83f6bcd9f36ed14f694793
+26205a54bbe3c69559215dc1a183d798c5a3b481
+7671ae307d8303e6f6ccce578a6684438f531a8b 100d61de65b9e9d78a5f237beea358b520d65415
+da1e74a842da7850acfbcea23c317c32e6c385e1
+```
+
+#### %p (short parent hashes)
+
+```bash
+$ git log --pretty=format:"%p" -5
+5a1fe0d
+89b5779
+26205a5
+7671ae3 100d61d
+da1e74a
+```
+
+#### %an (author name)
+
+```bash
+$ git log --pretty=format:"%an" -5
+Nh-em0n
+Nh-em0n
+Nh-em0n
+Nh-em0n
+Nh-em0n
+```
+
+#### %ae (author email)
+
+```bash
+nhemon2043@gmail.com
+nhemon2043@gmail.com
+nhemon2043@gmail.com
+nhemon2043@gmail.com
+nhemon2043@gmail.com
+```
+
+#### %ad (author date)
+
+```bash
+$ git log --pretty=format:"%ad" -5
+Tue Sep 16 23:47:32 2025 +0600
+Tue Sep 16 23:22:52 2025 +0600
+Tue Sep 16 20:33:39 2025 +0600
+Tue Sep 16 20:20:54 2025 +0600
+Tue Sep 16 20:16:38 2025 +0600
+```
+
+#### %ar (relative author date)
+
+```bash
+$ git log --pretty=format:"%ar" -5
+20 hours ago
+21 hours ago
+24 hours ago
+24 hours ago
+24 hours ago
+```
+
+#### %cn (committer name)
+
+```bash
+$ git log --pretty=format:"%cn" -5
+Nh-em0n
+Nh-em0n
+Nh-em0n
+Nh-em0n
+Nh-em0n
+```
+
+#### %ce (committer email)
+
+```bash
+nhemon2043@gmail.com
+nhemon2043@gmail.com
+nhemon2043@gmail.com
+nhemon2043@gmail.com
+nhemon2043@gmail.com
+```
+
+#### %cd (committer date)
+
+```bash
+$ git log --pretty=format:"%cd" -5
+Tue Sep 16 23:47:32 2025 +0600
+Tue Sep 16 23:22:52 2025 +0600
+Tue Sep 16 20:33:39 2025 +0600
+Tue Sep 16 20:20:54 2025 +0600
+Tue Sep 16 20:16:38 2025 +0600
+```
+
+#### %cr (committer relative date)
+
+```bash
+$ git log --pretty=format:"%cr" -5
+20 hours ago
+21 hours ago
+24 hours ago
+24 hours ago
+24 hours ago
+```
+
+#### %s (commit message)
+
+```bash
+update note2
+add department info in note2
+Revert "Merge with feature"
+Merge with feature
+update note1
+```
+
+#### %b (body full message)
+
+```bash
+This reverts commit 26205a54bbe3c69559215dc1a183d798c5a3b481, reversing
+changes made to 7671ae307d8303e6f6ccce578a6684438f531a8b.
+```
+
+#### %N (commit notes)
+
+```bash
+```
+
+#### Colors
+
+```bash
+$ git log --pretty=format:"%C(blue)blue%C(reset) %C(red)red%C(reset) %C(auto)auto%C(reset) %C(green)green%C(reset) %C(yellow)yellow%C(reset)%C(magenta)magenta%C(reset)%C(cyan)cyan%C(reset)" -1
+blue red auto green yellowmagentacyan
+```
+
+#### Final
+
+```bash
+$ git log --pretty=format:"%C(magenta)%h%C(reset) : %s (%C(cyan)%cr%C(reset))" -5
+167ca43 : update note2 (21 hours ago)
+5a1fe0d : add department info in note2 (22 hours ago)
+89b5779 : Revert "Merge with feature" (24 hours ago)
+26205a5 : Merge with feature (25 hours ago)
+100d61d : update note1 (25 hours ago)
+```
++++</md></sn>
