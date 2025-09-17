@@ -16,7 +16,7 @@ Git aliases can be created either globally (for all repositories) or locally (fo
 		<tags>#06.aliases</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 21:36:09 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 17 2025 21:56:16 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-M2lqph32a2</id>
 		<duration></duration>
 	</config>
@@ -238,4 +238,20 @@ alias.home switch master
 alias.lg log --oneline -7
 ```
 
-+++</md></sn>
++++</md></sn><sn><md>### Some Alias{.text-center}
+
+#### switching to master branch
+```bash
+ git config --global alias.home "switch master"
+```
+#### Branch alias
+```bash
+ git config --global alias.br branch
+```
+#### past
+```bash
+git config --global alias.past "log --pretty=format:\"%C(magenta)%h%C(reset): %s - %C(blue)%cr%C(reset)\" -10"
+```
+
+
+</md></sn>
