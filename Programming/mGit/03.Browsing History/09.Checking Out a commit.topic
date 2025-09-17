@@ -12,7 +12,7 @@ When you use this, Git will update the working directory and the HEAD pointer to
 		<tags>#09.checking out a commit</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 23:24:02 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Wed Sep 17 2025 23:46:17 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-bzKB22IqwY</id>
 		<duration></duration>
 	</config>
@@ -61,4 +61,68 @@ This will bring you back to the tip of the branch, where you can resume normal d
  git config --global alias.back "checkout master"
  git back
  # Now HEAD point to master
-```</md></sn>
+```</md></sn><sn><md>## Practise{.text-center}
+
++++ see
+
+#### checking current file list
+
+```bash
+$ ls
+api_list.md  app.js  bug.md  doc.topic  feature.txt  file1.md  file2.md  layout/  temp
+```
+
+#### checking reverse commits
+
+```bash
+1656114 Initial Commit                                                                                                         
+5ebf799 update note2                                                                                                           
+839814d remove file2                                                                                                           
+23088c4 remove file1                                                                                                           
+7b2e050 Add two note file again                                                                                                
+86a240e change file1 extension to md
+...
+```
+
+### checking out to 5ebf799
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git checkout 5ebf799                                                                                                         
+Note: switching to '5ebf799'.                                                                                                  
+
+You are in 'detached HEAD' state. You can look around, make experimental                                                       
+changes and commit them, and you can discard any commits you make in this                                                      
+state without impacting any branches by switching back to a branch.                                                            
+
+If you want to create a new branch to retain commits you create, you may                                                       
+do so (now or later) by using -c with the switch command. Example:                                                             
+
+  git switch -c <new-branch-name>                                                                                              
+
+Or undo this operation with:                                                                                                   
+
+  git switch -                                                                                                                 
+
+Turn off this advice by setting config variable advice.detachedHead to false                                                   
+
+HEAD is now at 5ebf799 update note2                                                                                            
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note ((5ebf799...))                                                                             
+$ ls                                                                                                                           
+file1.txt  file2.txt  temp/
+```
+
+### switching back to master
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note ((5ebf799...))                                                                             
+$ git checkout master
+Previous HEAD position was 5ebf799 update note2                                                                                
+Switched to branch 'master'                                                                                                    
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ ls
+api_list.md  app.js  bug.md  doc.topic  feature.txt  file1.md  file2.md  layout/  temp/
+```
++++</new-branch-name></md></sn>
