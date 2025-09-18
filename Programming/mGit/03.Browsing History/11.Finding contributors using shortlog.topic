@@ -6,7 +6,7 @@ In Git, when working on collaborative projects, it is often necessary to summari
 		<tags>#11.finding contributors using shortlog</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 18 2025 15:02:17 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 18 2025 15:10:28 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-VtIMLynKDQ</id>
 		<duration></duration>
 	</config>
@@ -117,4 +117,60 @@ git shortlog -sne --no-merges v1.0..v2.0
 * `--no-merges` → exclude merge commits</md></sn><sn><md>### Conclusion
 
 `git shortlog` is an efficient way to analyze and summarize contributions in a project. It helps teams acknowledge contributors, track productivity, and prepare structured release notes. By mastering its options, you can quickly generate customized contributor reports for any range of commits.
-</md></sn>
+</md></sn><sn><md>### Practise{.text-center}
+
++++ see
+
+As I don’t learn collaboration yet, after finishing the collaboration chapter I will update this practise section.
+
+---
+
+#### Basic shortlog
+
+```bash
+ Nh-em0n (42):                                                                                                                 
+      Initial Commit                                                                                                           
+      update note2                                                                                                             
+      remove file2                                                                                                             
+      remove file1                                                                                                             
+      Add two note file again                                                                                                  
+      change file1 extension to md                                                                                             
+      create a temp file in temp folder                                                                                        
+      add .gitignore                                                                                                           
+      remove a.temp                                                                                                            
+      Update file1                                                                                                             
+      update note content                                                                                                      
+      update file2                                                                                                             
+      remove fil2.md                                                                                                           
+      bring fil2.md   
+      ...
+```
+
+---
+
+#### Contributor Count
+
+```bash
+ $ git shortlog -s
+    42  Nh-em0n
+```
+
+---
+
+#### With Email
+
+```bash
+ $ git shortlog -s -e
+    42  Nh-em0n nhemon2043@gmail.com
+```
+
+---
+
+#### Sorting Contributor
+
+```bash
+ $ git shortlog -s -n
+    42  Nh-em0n
+```
+
++++</md></sn>
