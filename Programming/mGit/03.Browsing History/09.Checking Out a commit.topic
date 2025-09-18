@@ -12,7 +12,7 @@ When you use this, Git will update the working directory and the HEAD pointer to
 		<tags>#09.checking out a commit</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 23:46:17 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 18 2025 14:43:02 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-bzKB22IqwY</id>
 		<duration></duration>
 	</config>
@@ -26,7 +26,7 @@ When you checkout a commit directly using its hash, Git puts you into a **detach
 * **Consequences if you commit here**:
 
   * Any new commits you make will not belong to a branch.
-  * If you later switch back to a branch, those commits may become unreachable (lost) unless you explicitly create a new branch from that point.
+  * If you later switch back to a branch, those commits may become unreachable (lost) unless you explicitly ++create a new branch from that point++.
   * This can cause confusion or even accidental data loss if you are not careful.
 
 ⚠️ **Rule of Thumb**: Use `git checkout commit_hash` mainly for viewing, not for committing. If you want to continue working from that commit, create a new branch first:
