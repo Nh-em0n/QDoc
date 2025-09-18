@@ -1,10 +1,120 @@
 
-	<sn></sn>		
+	<sn><md>## Finding Contributor Shortlog{.text-center}
+
+In Git, when working on collaborative projects, it is often necessary to summarize contributions made by different authors. Instead of manually going through the commit history, Git provides a powerful tool: **git shortlog**. This command generates a grouped list of commits by author, making it easy to see who contributed and how many commits they made. It is commonly used to prepare changelogs, release notes, or contributor statistics.</md></sn>		
 	<config>
 		<tags>#11.finding contributors using shortlog</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 17:17:37 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 18 2025 15:02:17 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-VtIMLynKDQ</id>
 		<duration></duration>
 	</config>
+<sn><md>### Shortlog
+
+* **Purpose**: Summarizes commit history by grouping commits under each contributor’s name.
+* **Source**: It extracts information from `git log`.
+* **Output**: Each contributor’s name followed by the number of commits, and optionally, commit subjects.
+* **Use Cases**:
+
+  * Viewing contributor statistics
+  * Preparing release notes
+  * Creating changelogs for projects
+</md></sn><sn><md>### Basic Usage{.text-center}
+
+Run the following inside a Git repository:
+
+```bash
+git shortlog
+```
+
+This will display output grouped by author with commit titles, for example:
+
+```
+Alice Johnson (3):
+      Fix login issue
+      Update README
+      Add user profile page
+
+Bob Smith (2):
+      Improve performance in API
+      Refactor database schema
+```</md></sn><sn><md>### Contributor Count{.text-center}
+
+If you only want to see the number of commits per contributor without listing each commit message:
+
+```bash
+git shortlog -s
+```
+
+Example output:
+
+```
+  3  Alice Johnson
+  2  Bob Smith
+```</md></sn><sn><md>### Adding Email {.text-center}
+
+To also display the email addresses of contributors:
+
+```bash
+git shortlog -s -e
+```
+
+Example:
+
+```
+  3  Alice Johnson alice@example.com
+  2  Bob Smith bob@example.com
+```
+</md></sn><sn><md>### Sorting Contributors{.text-center}
+
+You can sort contributors by number of commits instead of alphabetical order with:
+
+```bash
+git shortlog -s -n
+```
+
+Example:
+
+```
+  5  Charlie Davis
+  3  Alice Johnson
+  2  Bob Smith
+```
+</md></sn><sn><md>### Using Ranges and Branches{.text-center}
+
+By default, `git shortlog` shows the entire commit history. You can limit it to specific ranges:
+
+* From one tag to another:
+
+  ```bash
+  git shortlog v1.0..v2.0
+  ```
+* From a specific branch:
+
+  ```bash
+  git shortlog main
+  ```</md></sn><sn><md>### Release Notes{.text-center}
+
+To generate concise release notes for a new version:
+
+```bash
+git shortlog v1.0..HEAD
+```
+
+This outputs all commits since version 1.0, grouped by contributor—perfect for release documentation.
+</md></sn><sn><md>### Combining Options{.text-center}
+
+You can combine flags to generate customized reports. For example:
+
+```bash
+git shortlog -sne --no-merges v1.0..v2.0
+```
+
+* `-s` → show only summary
+* `-n` → sort by number of commits
+* `-e` → include email
+* `--no-merges` → exclude merge commits</md></sn><sn><md>### Conclusion
+
+`git shortlog` is an efficient way to analyze and summarize contributions in a project. It helps teams acknowledge contributors, track productivity, and prepare structured release notes. By mastering its options, you can quickly generate customized contributor reports for any range of commits.
+</md></sn>
