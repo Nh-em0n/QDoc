@@ -1,10 +1,258 @@
 
-	<sn></sn>		
+	<sn><md>## Git Tagging and Versioning{.text-center}
+
+In Git, **tags** are used to mark specific points in history as important. Typically, tags are used to label release versions (e.g., `v1.0`, `v2.0`). Unlike branches, tags don’t move—they permanently point to a specific commit.
+
+---
+
+### What is a Tag in Git?
+
+A tag is like a **bookmark** in your project history. It allows you to reference a specific commit with a meaningful name. Developers often use tags to:
+
+* Mark stable releases (`v1.0`, `v2.1.5`)
+* Identify milestones in a project’s lifecycle
+* Create snapshots of the repository at a certain state
+
+There are two main types of tags:
+
+* **Lightweight tag** → just a name pointing to a commit.
+* **Annotated tag** → includes extra information like tagger name, email, date, and a message.</md></sn>		
 	<config>
 		<tags>#15.tagging</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 17:21:35 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 18 2025 17:05:17 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-yZ3bShsSUb</id>
 		<duration></duration>
 	</config>
+<sn><md>### How to Create a Tag
+
+:::.row
+
+:::.col-12 .col-lg-6 .p-2 .bg-pink
+#### Lightweight tag{.text-center}
+
+```bash
+git tag v1.0
+```
+This simply creates a pointer to the latest commit.
+:::
+
+:::.col-12 .col-lg-6 .p-2 .bg-blue
+#### Annotated tag{.text-center}
+
+```bash
+git tag -a v1.0 -m "First stable release"
+```
+
+This stores additional metadata (author, date, message).
+:::
+
+:::</md></sn><sn><md>### Creating Annotated Tags with a Message{.text-center}
+
+```bash
+git tag -a v2.0 -m "Major update with new features"
+```
+
+This creates a named snapshot with a descriptive message.
+</md></sn><sn><md>## Listing Tag{.text-center}
+
+:::.row
+
+:::.col-12 .col-lg-6 .p-2 .bg-teal
+### Without Messages{.text-center}
+
+```bash
+git tag
+```
+This shows all available tags in the repository.
+:::
+
+:::.col-12 .col-lg-6 .p-2 .bg-blue
+### With Messages{.text-center}
+```bash
+git tag -n
+```
+This shows tags along with their annotation messages.
+
+Example:
+
+```bash
+v1.0   First stable release  
+v2.0   Major update with new features  
+```
+:::
+:::</md></sn><sn><md>### How to Checkout a Tag{.text-center}
+
+To view the state of the repository at a specific tag:
+
+```bash
+git checkout v1.0
+```
+
+This will put you in a **detached HEAD** state, meaning you are no longer on a branch but on a specific snapshot.
+
+If you want to continue work from that tag, create a branch:
+
+```bash
+git checkout -b new-branch v1.0
+```
+</md></sn><sn><md>### Removing a Tag{.text-center}
+
+:::.row
+:::.col-12 .col-lg-6 .bg-red .p-2
+#### Delete locally{.text-center}
+
+```bash
+git tag -d v1.0
+```
+:::
+
+:::.col-12 .col-lg-6 .bg-yellow .p-2
+#### Delete on remote{.text-center}
+```bash
+git push --delete origin v1.0
+```
+:::
+:::</md></sn><sn><md>### Summary
+
+* **`git tag tag_name`** → create lightweight tag.
+* **`git tag -a tag_name -m "message"`** → create annotated tag with metadata.
+* **`git tag`** → list all tags.
+* **`git tag -n`** → list tags with messages.
+* **`git checkout tag_name`** → switch to a tag (detached state).
+* **`git tag -d tag_name`** / **`git push --delete origin <tag>`** → remove tags locally or remotely.
+
+Tags in Git are a powerful way to **mark versions, track milestones, and organize project history**.</tag></md></sn><sn><md>## Practise{.text-center}
+
++++ see
+
+#### Checking Status and Log
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   bug.md
+
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git log --oneline -3
+2e2e644 (HEAD -&gt; master) remove bug.md
+167ca43 update note2
+5a1fe0d add department info in note2
+```
+
+#### Creating Lightweight Tag
+
+```bash
+$ git tag v0.0.0
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git log --oneline -3
+2e2e644 (HEAD -&gt; master, tag: v0.0.0) remove bug.md
+167ca43 update note2
+5a1fe0d add department info in note2
+```
+
+#### Go to Previous Commit and Creating Tag with Information
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git checkout HEAD~3
+Note: switching to 'HEAD~3'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 89b5779 Revert "Merge with feature"
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note ((89b5779...))                                                                             
+$ git tag -a v0.0.1 -m "Intial version release"
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note ((v0.0.1))                                                                                 
+$ git log --oneline -5
+89b5779 (HEAD, tag: v0.0.1) Revert "Merge with feature"
+26205a5 Merge with feature
+100d61d (feature) update note1
+7671ae3 update note1
+da1e74a update note1
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note ((v0.0.1))                                                                                 
+$ git checkout master
+Previous HEAD position was 89b5779 Revert "Merge with feature"
+Switched to branch 'master'
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git log --oneline -5
+2e2e644 (HEAD -&gt; master, tag: v0.0.0) remove bug.md
+167ca43 update note2
+5a1fe0d add department info in note2
+89b5779 (tag: v0.0.1) Revert "Merge with feature"
+26205a5 Merge with feature
+```
+
+### Checking Tag List
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git tag
+v0.0.0
+v0.0.1
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git tag -n
+v0.0.0          remove bug.md
+v0.0.1          Intial version release
+```
+
+#### Checking Out Tag v0.0.1
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git checkout v0.0.1
+Note: switching to 'v0.0.1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 89b5779 Revert "Merge with feature"
+```
+
+### Removing Tag v0.0.0
+
+```bash
+$ git tag -d v0.0.0
+Deleted tag 'v0.0.0' (was 2e2e644)
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git tag
+v0.0.1
+```
++++</new-branch-name></new-branch-name></file></md></sn>
