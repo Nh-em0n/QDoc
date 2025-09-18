@@ -17,7 +17,7 @@ This shows the line-by-line differences between two commits.
 		<tags>#08.viewing the changes across commits</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 23:10:01 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 18 2025 14:36:26 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-S06l8sIJml</id>
 		<duration></duration>
 	</config>
@@ -177,4 +177,22 @@ index 3890cba..34c1ec4 100644
 -My CGPA is very low
 ```
 +++
-</md></sn>
+</md></sn><sn><md>### show vs diff
+
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git show HEAD~1 --name-only                                                                                                  
+commit 5a1fe0dc2fd03f1bcc8a76ea499328d398feeaaf
+Author: Nh-em0n nhemon2043@gmail.com
+Date:   Tue Sep 16 23:22:52 2025 +0600
+
+    add department info in note2
+
+file2.md
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git diff HEAD~1 --name-only                                                                                                  
+file2.md 
+```
+
+require more article{.fg-red}</md></sn>
