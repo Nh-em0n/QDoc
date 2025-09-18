@@ -12,7 +12,7 @@ When you delete a file in your working directory, Git marks it as removed but do
 		<tags>#13.restoring a deleting file</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 18 2025 15:52:36 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 18 2025 16:02:47 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-aHYpYvNqvm</id>
 		<duration></duration>
 	</config>
@@ -87,4 +87,29 @@ This will restore the entire working directory to the latest committed state.
 * **After commit deletion** → Find the commit and use `git checkout commit_hash -- filename`
 * **Multiple file recovery** → Use `git restore .` or `git checkout HEAD -- .`
 
-This flexibility ensures that accidental file deletions in Git are rarely permanent, giving you confidence to experiment and work without fear of losing important files.</md></sn>
+This flexibility ensures that accidental file deletions in Git are rarely permanent, giving you confidence to experiment and work without fear of losing important files.</md></sn><sn><md>## Practise{.text-center}
+
++++ see
+
+#### restore file1.md and check status again
+```bash
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ ls                                                                                                                           
+api_list.md  app.js  doc.topic  feature.txt  file1.md  file2.md  layout/  temp/                                                
+                                                                                                                               
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git checkout HEAD~1 -- bug.md                                                                                                
+                                                                                                                               
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ git status                                                                                                                   
+On branch master                                                                                                               
+Changes to be committed:                                                                                                       
+  (use "git restore --staged <file>..." to unstage)                                                                            
+        new file:   bug.md                                                                                                     
+                                                                                                                               
+                                                                                                                               
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ ls
+api_list.md  app.js  bug.md  doc.topic  feature.txt  file1.md  file2.md  layout/  temp/     
+```
++++</file></md></sn>
