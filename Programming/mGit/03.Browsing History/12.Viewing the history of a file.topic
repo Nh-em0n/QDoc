@@ -1,10 +1,299 @@
 
-	<sn></sn>		
+	<sn><md>## Viewing History of a File in Git{.text-center}
+
+When working with Git, you may want to view the change history of a specific file rather than the entire project. Git provides several ways to inspect the commit history of a single file, ranging from a simple list of commits to detailed patch views showing exactly what changed.</md></sn>		
 	<config>
 		<tags>#12.viewing the history of a file</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 17:18:01 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 18 2025 15:34:22 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-3vFm4Leulj</id>
 		<duration></duration>
 	</config>
+<sn><md>### Viewing Commit History of a File{.text-center}
+
+The most basic command to view all commits related to a particular file is:
+
+```bash
+git log filename
+```
+
+This displays the commit history of the file, including commit hash, author, date, and commit message.
+
+**Example:**
+
+```bash
+git log file1.md
+```
+
+Output:
+
+```
+commit 3a2f1c4d7f1b82ef9c…
+Author: Nh-em0n nhemon2043@gmail.com
+Date:   Tue Sep 16 20:10:38 2025 +0600
+
+    Update file1
+
+commit 100d61de65b9e9d78a…
+Author: Nh-em0n nhemon2043@gmail.com
+Date:   Mon Sep 15 18:42:11 2025 +0600
+
+    Initial Commit
+```</md></sn><sn><md>### Compact View{.text-center}
+
+If you want a concise summary of the file’s commit history, use:
+
+```bash
+git log --oneline filename
+```
+
+**Example:**
+
+```bash
+git log --oneline file1.md
+```
+
+Output:
+
+```
+3a2f1c4 Update file1
+100d61d Initial Commit
+```
+
+This view is useful for quickly scanning through commits.</md></sn><sn><md>### View Stats of Changes{.text-center}
+
+To see how many lines were added or removed in each commit for a file, use the `--stat` option:
+
+```bash
+git log --stat filename
+```
+
+**Example:**
+
+```bash
+git log --stat file1.md
+```
+
+Output:
+
+```
+commit 3a2f1c4d7f1b82ef9c…
+Author: Nh-em0n nhemon2043@gmail.com
+Date:   Tue Sep 16 20:10:38 2025 +0600
+
+    Update file1
+
+ file1.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 100d61de65b9e9d78a…
+Author: Nh-em0n nhemon2043@gmail.com
+Date:   Mon Sep 15 18:42:11 2025 +0600
+
+    Initial Commit
+```
+
+This option provides statistics about modifications per commit.
+</md></sn><sn><md>### Viewing Patch{.text-center}
+
+To see the exact line-by-line modifications made to a file across commits, use the `--patch` (or `-p`) option:
+
+```bash
+git log --patch filename
+```
+
+**Example:**
+
+```bash
+git log --patch file1.md
+```
+
+Output:
+
+```
+commit 3a2f1c4d7f1b82ef9c…
+Author: Nh-em0n nhemon2043@gmail.com
+Date:   Tue Sep 16 20:10:38 2025 +0600
+
+    Update file1
+
+diff --git a/file1.md b/file1.md
+index 91b2a11..bc421c3 100644
+--- a/file1.md
++++ b/file1.md
+@@ -1,3 +1,4 @@
+ Hello World
++New line added
+```
+
+This shows the full patch, highlighting insertions and deletions.</md></sn><sn><md>## Conclusion
+
+* `git log filename` → Full commit history for a file.
+* `git log --oneline filename` → Compact summary view.
+* `git log --stat filename` → Commit history with change statistics.
+* `git log --patch filename` → Detailed changes with diffs.
+
+These commands allow you to trace the evolution of a file, identify when specific changes occurred, and understand the contributions made by different developers.</md></sn><sn><md>## Practise{.text-center}
+
++++ see
+
+
+#### Checking Status and File List
+
+```bash
+ $ git status 
+On branch master                                                                                                               
+nothing to commit, working tree clean                                                                                          
+
+Emon@DESKTOP-S2A6KR1 MINGW64 ~/note (master)                                                                                   
+$ ls
+api_list.md  app.js  bug.md  doc.topic  feature.txt  file1.md  file2.md  layout/  temp/         
+```
+
+---
+
+#### Log All Commits Related to file1.md
+
+```bash
+ $ git log file1.md                                                                                                             
+commit 89b577940a5e682f3f83f6bcd9f36ed14f694793                                                                                
+Author: Nh-em0n nhemon2043@gmail.com                                                                                          
+Date:   Tue Sep 16 20:33:39 2025 +0600                                                                                         
+
+    Revert "Merge with feature"                                                                                                
+
+    This reverts commit 26205a54bbe3c69559215dc1a183d798c5a3b481, reversing                                                    
+    changes made to 7671ae307d8303e6f6ccce578a6684438f531a8b.                                                                  
+
+commit 26205a54bbe3c69559215dc1a183d798c5a3b481                                                                                
+Merge: 7671ae3 100d61d                                                                                                         
+Author: Nh-em0n nhemon2043@gmail.com                                                                                          
+Date:   Tue Sep 16 20:20:54 2025 +0600                                                                                         
+
+    Merge with feature                                                                                                         
+
+commit 100d61de65b9e9d78a5f237beea358b520d65415 (feature)                                                                      
+Author: Nh-em0n nhemon2043@gmail.com                                                                                          
+Date:   Tue Sep 16 20:16:38 2025 +0600                                                                                         
+
+    update note1                                                                                                               
+
+commit 7671ae307d8303e6f6ccce578a6684438f531a8b                                                                                
+Author: Nh-em0n nhemon2043@gmail.com
+Date:   Tue Sep 16 20:11:54 2025 +0600
+
+    update note1
+
+commit da1e74a842da7850acfbcea23c317c32e6c385e1                                                                                
+Author: Nh-em0n nhemon2043@gmail.com
+Date:   Tue Sep 16 19:57:34 2025 +0600
+
+    update note1
+....
+```
+
+---
+
+#### Compact View
+
+```bash
+ $ git log --oneline file1.md                                                                                                   
+89b5779 Revert "Merge with feature"
+26205a5 Merge with feature                                                                                                     
+100d61d (feature) update note1                                                                                                 
+7671ae3 update note1                                                                                                           
+da1e74a update note1                                                                                                           
+dfbb22b update note1                                                                                                           
+443fdce update note1                                                                                                           
+ac26922 update note1                                                                                                           
+5e1e550 update note1                                                                                                           
+1212f2d update note1                                                                                                           
+613e2b9 update note content                                                                                                    
+1c07c60 Update file1                                                                                                           
+86a240e change file1 extension to md  
+```
+
+---
+
+#### Statistics
+
+```bash
+ $ git log --oneline --stat file1.md                                                                                            
+89b5779 Revert "Merge with feature"
+ file1.md | 3 ---                                                                                                              
+ 1 file changed, 3 deletions(-)
+26205a5 Merge with feature                                                                                                     
+100d61d (feature) update note1                                                                                                 
+ file1.md | 1 +                                                                                                                
+ 1 file changed, 1 insertion(+)
+7671ae3 update note1                                                                                                           
+ file1.md | 1 +                                                                                                                
+ 1 file changed, 1 insertion(+)
+da1e74a update note1                                                                                                           
+ file1.md | 1 +                                                                                                                
+ 1 file changed, 1 insertion(+)
+dfbb22b update note1                                                                                                           
+ file1.md | 1 +
+ 1 file changed, 1 insertion(+)
+443fdce update note1                                                                                                           
+ file1.md | 1 +                                                                                                                
+ 1 file changed, 1 insertion(+)
+ac26922 update note1                                                                                                           
+ file1.md | 1 +                                                                                                                
+ 1 file changed, 1 insertion(+)
+5e1e550 update note1                                                                                                           
+ file1.md | 4 +++-                                                                                                             
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+1212f2d update note1                                                                                                           
+ file1.md | 5 +----                                                                                                            
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+613e2b9 update note content                                                                                                    
+ file1.md | 1 +                                                                                                                
+ 1 file changed, 1 insertion(+)
+1c07c60 Update file1                                                                                                           
+ file1.md | 2 ++    
+```
+
+---
+
+#### Patch
+
+```bash
+  git log --oneline --patch file1.md                                                                                           
+89b5779 Revert "Merge with feature"
+diff --git a/file1.md b/file1.md                                                                                               
+index 90ffb7c..9cbe53e 100644                                                                                                  
+--- a/file1.md                                                                                                                 
++++ b/file1.md                                                                                                                 
+@@ -3,7 +3,4 @@                                                                                                                
+ * **ITCZ** : Intertropical Convergence Zone
+ * There are 3 type of planetery wind
+ * The **ITCZ** is not fixed
+-* The ITCZ is one of the cause of moonsoon.                                                                                   
+ * There are two type of **Jet Stream**
+-* There are 7 global pressure belt                                                                                            
+-* Moonsoon is the seasonal wind                                                                                               
+26205a5 Merge with feature                                                                                                     
+100d61d (feature) update note1
+diff --git a/file1.md b/file1.md                                                                                               
+index e93fe0b..68934e1 100644
+--- a/file1.md                                                                                                                 
++++ b/file1.md                                                                                                                 
+@@ -3,3 +3,4 @@                                                                                                                
+ * **ITCZ** : Intertropical Convergence Zone
+ * There are 7 global pressure belt
+ * The ITCZ is one of the cause of moonsoon.
++* Moonsoon is the seasonal wind                                                                                               
+7671ae3 update note1                                                                                                           
+diff --git a/file1.md b/file1.md                                                                                               
+index a7b0b9a..9cbe53e 100644                                                                                                  
+--- a/file1.md                                                                                                                 
++++ b/file1.md                                                                                                                 
+@@ -3,3 +3,4 @@                                                                                                                
+ * **ITCZ** : Intertropical Convergence Zone
+ * There are 3 type of planetery wind
+ * The **ITCZ** is not fixed
+ ...
+```
++++</md></sn>
