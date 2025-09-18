@@ -16,7 +16,7 @@ Git aliases can be created either globally (for all repositories) or locally (fo
 		<tags>#06.aliases</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 18 2025 14:18:48 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 18 2025 14:19:32 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-M2lqph32a2</id>
 		<duration></duration>
 	</config>
@@ -254,7 +254,7 @@ git config --global alias.back "checkout master"
 ```
 #### past
 ```bash
-git config --global alias.past "log --pretty=format:\"%C(magenta)%h%C(reset): %s - %C(blue)%cr%C(reset)\" "
+git config --global alias.past "log --pretty=format:\"%C(magenta)%h%C(reset): %s - %C(blue)%cr%C(reset)\""
 ```
 
 </md></sn>
