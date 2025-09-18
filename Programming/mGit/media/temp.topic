@@ -1,10 +1,19 @@
 
-	<sn></sn>		
+	<sn class="col-md-9 col-xxl-7"><md>## Code Demo
+
+Below provide a code demo for javascript
+
+```javascript
+function returnRandomStoryString() {
+  const randomCharacter = randomValueFromArray(characters);
+  const randomPlace = randomValueFromArray(places);
+  const randomEvent = randomValueFromArray(events);
+```</md></sn>		
 	<config>
 		<tags>#temp</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 18 2025 22:20:08 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 18 2025 22:29:58 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-xCmk2m5VIo</id>
 		<duration></duration>
 	</config>
