@@ -1,10 +1,90 @@
 
-	<sn></sn>		
+	<sn><md>## Restoring a Deleted File in Git{.text-center}
+
+Working with Git often involves creating, modifying, and sometimes deleting files. Occasionally, you may delete a file by mistake. Thankfully, Git provides multiple ways to restore a deleted file, as long as it was tracked in the repository.
+
+#### Understanding File Deletion in Git
+
+When you delete a file in your working directory, Git marks it as removed but does not immediately erase it from history. The file remains in the repository until a commit finalizes the deletion. This means you can restore it before or even after committing the removal.
+
+</md></sn>		
 	<config>
 		<tags>#13.restoring a deleting file</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Wed Sep 17 2025 17:21:04 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Sep 18 2025 15:52:36 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-aHYpYvNqvm</id>
 		<duration></duration>
 	</config>
+<sn><md>### Restoring a Deleted File Before Commit{.text-center}
+
+If you deleted a file but haven’t committed the changes yet, you can restore it easily from the index (staging area).
+
+```bash
+# restore a specific deleted file
+git restore <filename>
+```
+
+Example:
+
+```bash
+git restore file1.txt
+```
+
+This will bring back the deleted file to your working directory from the last committed state.
+</filename></md></sn><sn><md>### Restoring a Deleted File After Commit{.text-center}
+
+If you’ve already committed the deletion, the file can still be recovered from the previous commit history.
+
+#### Identify the commit where the file still existed
+
+```bash
+git log -- filename
+```
+
+This shows the commit history for that particular file.
+
+#### Restore the file from the specific commit
+
+```bash
+git checkout commit_hash -- filename
+```
+
+Example:
+
+```bash
+git checkout 5a1fe0d -- file1.txt
+```
+
+This pulls the file as it was in that commit and places it into your working directory.
+
+Then check status 
+```bash
+git status
+```
+</md></sn><sn><md>### Restoring Multiple Files{.text-center}
+
+If multiple files were deleted and you want to restore all of them at once:
+
+```bash
+git restore .
+```
+
+or
+
+```bash
+git checkout HEAD -- .
+```
+
+This will restore the entire working directory to the latest committed state.
+</md></sn><sn><md>### Caution When Restoring Files{.text-center}
+
+* Restoring does not create a new commit automatically; you must commit the changes again if you want the restored file to persist.
+* If you restore from an older commit, double-check the file version before committing—it might not match the latest state you intended.
+* Always confirm with `git status` after restoring to see which files are staged or modified.</md></sn><sn><md>### Summary{.text-center}
+
+* **Before commit deletion** → Use `git restore filename`
+* **After commit deletion** → Find the commit and use `git checkout commit_hash -- filename`
+* **Multiple file recovery** → Use `git restore .` or `git checkout HEAD -- .`
+
+This flexibility ensures that accidental file deletions in Git are rarely permanent, giving you confidence to experiment and work without fear of losing important files.</md></sn>
