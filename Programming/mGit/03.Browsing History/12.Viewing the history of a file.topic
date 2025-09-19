@@ -1,16 +1,16 @@
 
-	<sn><md>## Viewing History of a File in Git{.text-center}
+	<sn class="col-md-7"><md>## Viewing History of a File in Git{.text-center}
 
 When working with Git, you may want to view the change history of a specific file rather than the entire project. Git provides several ways to inspect the commit history of a single file, ranging from a simple list of commits to detailed patch views showing exactly what changed.</md></sn>		
 	<config>
 		<tags>#12.viewing the history of a file</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Thu Sep 18 2025 15:34:22 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Fri Sep 19 2025 21:22:33 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-3vFm4Leulj</id>
 		<duration></duration>
 	</config>
-<sn><md>### Viewing Commit History of a File{.text-center}
+<sn class="col-md-7"><md>### Viewing Commit History of a File{.text-center}
 
 The most basic command to view all commits related to a particular file is:
 
@@ -40,7 +40,7 @@ Author: Nh-em0n nhemon2043@gmail.com
 Date:   Mon Sep 15 18:42:11 2025 +0600
 
     Initial Commit
-```</md></sn><sn><md>### Compact View{.text-center}
+```</md></sn><sn class="col-md-7"><md>### Compact View{.text-center}
 
 If you want a concise summary of the file’s commit history, use:
 
@@ -61,7 +61,7 @@ Output:
 100d61d Initial Commit
 ```
 
-This view is useful for quickly scanning through commits.</md></sn><sn><md>### View Stats of Changes{.text-center}
+This view is useful for quickly scanning through commits.</md></sn><sn class="col-md-7"><md>### View Stats of Changes{.text-center}
 
 To see how many lines were added or removed in each commit for a file, use the `--stat` option:
 
@@ -94,8 +94,8 @@ Date:   Mon Sep 15 18:42:11 2025 +0600
     Initial Commit
 ```
 
-This option provides statistics about modifications per commit.
-</md></sn><sn><md>### Viewing Patch{.text-center}
+This option provides statistics about modifications per **commit**.
+</md></sn><sn class="col-md-7"><md>### Viewing Patch{.text-center}
 
 To see the exact line-by-line modifications made to a file across commits, use the `--patch` (or `-p`) option:
 
