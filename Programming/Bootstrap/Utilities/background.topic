@@ -87,7 +87,7 @@
     <tags>#background</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Sep 21 2025 22:12:58 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Sep 21 2025 22:20:00 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-PA5zLcOhGn</id>
     <duration></duration>
   </config>
@@ -245,4 +245,50 @@ Use as `.bg-any.bg-gradient`
 
 ```
 
-+++</md></sn>
++++</md></sn><sn><md>## Background Others
+
+| Background Class       | Description / When to Use                                           |
+| ---------------------- | ------------------------------------------------------------------- |
+| `.bg-primary`          | Main accent color, for emphasis or primary actions.                 |
+| `.bg-primary-subtle`   | Lighter shade of primary, good for highlights and soft backgrounds. |
+| `.bg-secondary`        | Secondary accent, for less prominent elements than primary.         |
+| `.bg-secondary-subtle` | Lighter version of secondary, useful for muted sections.            |
+| `.bg-success`          | Indicates successful actions, status, or confirmations (green).     |
+| `.bg-success-subtle`   | Softer success shade, good for alerts or info cards.                |
+| `.bg-danger`           | Used for errors, destructive actions, or alerts (red).              |
+| `.bg-danger-subtle`    | Lighter warning/error indicator, less aggressive tone.              |
+| `.bg-warning`          | Highlights caution or potential issues (yellow/orange).             |
+| `.bg-warning-subtle`   | Softer caution indicator, suitable for notifications.               |
+| `.bg-info`             | Used for informational content or neutral messages (blue).          |
+| `.bg-info-subtle`      | Lighter information tone, suitable for tooltips or panels.          |
+| `.bg-black`            | Strong black background, for contrast or dark themes.               |
+| `.bg-white`            | White background, neutral reset for sections.                       |
+| `.bg-transparent`      | Transparent background, blends with parent element.                 |
+
+---
+
+## Background Related
+
+| Background Class     | Description / When to Use                                |
+| -------------------- | -------------------------------------------------------- |
+| `.bg-light`          | Light background, useful for content separation.         |
+| `.bg-light-subtle`   | Softer light background, great for cards or sections.    |
+| `.bg-dark`           | Dark background, strong emphasis or inverted text areas. |
+| `.bg-dark-subtle`    | Lighter dark shade, softer than full dark.               |
+| `.bg-body`           | Default body background, consistent with theme.          |
+| `.bg-body-secondary` | Secondary body tone, for layered UI sections.            |
+| `.bg-body-tertiary`  | Tertiary body shade, often used for nested containers.   |
+
+---
+
+## Background Gradient &amp; Opacity
+
+| Background Utility | Description / When to Use                                        |
+| ------------------ | ---------------------------------------------------------------- |
+| `.bg-gradient`     | Adds a gradient overlay to any background color.                 |
+| `.bg-opacity-75`   | Background at 75% opacity, semi-strong tone.                     |
+| `.bg-opacity-50`   | Background at 50% opacity, balanced transparency.                |
+| `.bg-opacity-25`   | Background at 25% opacity, subtle transparent overlay.           |
+| `.bg-opacity-10`   | Background at 10% opacity, very faint overlay, almost invisible. |
+
+</md></sn>
