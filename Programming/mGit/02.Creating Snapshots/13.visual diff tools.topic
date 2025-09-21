@@ -6,28 +6,28 @@ While the command-line `git diff` is powerful, many developers prefer using grap
 :::.row
 
 :::.col-12 .col-md-6
-### 1. **VS Code (Visual Studio Code)**
+#### VS Code (Visual Studio Code)
 * A popular text editor with a built-in diff viewer.
 * Shows side-by-side comparison of changes.
 * Integrated Git support makes it easy to manage staging and commits.
 :::
 
 :::.col-12 .col-md-6
-### 2. **KDiff3**
+#### KDiff3
 * Open-source diff and merge tool.
 * Supports 2-way and 3-way file comparison.
 * Displays changes in a clear split view.
 :::
 
 :::.col-12 .col-md-6
-### 3. **WinMerge**
+#### WinMerge
 * A Windows-based diff/merge tool.
 * Highlights added, removed, and changed lines.
 * Useful for comparing entire directories as well as files.
 :::
 
 :::.col-12 .col-md-6
-### 4. **Meld** (Linux/Windows/Mac)
+#### Meld (Linux/Windows/Mac)
 * Visual diff and merge tool.
 * Supports side-by-side viewing.
 * Great for resolving merge conflicts interactively.
@@ -40,7 +40,7 @@ While the command-line `git diff` is powerful, many developers prefer using grap
 		<tags>#13.visual diff tools</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Fri Sep 05 2025 00:10:06 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Sep 21 2025 10:08:42 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-tEwmzWdBCs</id>
 		<duration></duration>
 	</config>
