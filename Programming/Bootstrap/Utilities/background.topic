@@ -1,10 +1,248 @@
 
-  <sn></sn>
+  <sn><md>## Bg-Others{.text-center}
+
+### variable
+
+```css
+  --bs-primary-rgb: 13, 110, 253;
+  --bs-secondary-rgb: 108, 117, 125;
+  --bs-success-rgb: 25, 135, 84;
+  --bs-info-rgb: 13, 202, 240;
+  --bs-warning-rgb: 255, 193, 7;
+  --bs-danger-rgb: 220, 53, 69;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black-rgb: 0, 0, 0;  
+```
+
+```css
+  --bs-primary-bg-subtle: #cfe2ff;
+  --bs-secondary-bg-subtle: #e2e3e5;
+  --bs-success-bg-subtle: #d1e7dd;
+  --bs-info-bg-subtle: #cff4fc;
+  --bs-warning-bg-subtle: #fff3cd;
+  --bs-danger-bg-subtle: #f8d7da;
+```
+
+```css
+.bg-primary {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+}
+.bg-primary-subtle {
+  background-color: var(--bs-primary-bg-subtle) !important;
+}
+
+.bg-secondary {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+}
+.bg-secondary-subtle {
+  background-color: var(--bs-secondary-bg-subtle) !important;
+}
+
+.bg-success {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+}
+.bg-success-subtle {
+  background-color: var(--bs-success-bg-subtle) !important;
+}
+
+.bg-info {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity)) !important;
+}
+.bg-info-subtle {
+  background-color: var(--bs-info-bg-subtle) !important;
+}
+
+.bg-warning {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-warning-rgb), var(--bs-bg-opacity)) !important;
+}
+.bg-warning-subtle {
+  background-color: var(--bs-warning-bg-subtle) !important;
+}
+
+.bg-danger {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+}
+.bg-danger-subtle {
+  background-color: var(--bs-danger-bg-subtle) !important;
+}
+
+.bg-black {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-white {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+} 
+```
+</md></sn>
   <config>
     <tags>#background</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Sep 21 2025 20:53:35 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Sep 21 2025 22:12:58 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-PA5zLcOhGn</id>
     <duration></duration>
   </config>
+<sn><md>## Bg Related{.text-center}
+
+### variable
+```css
+  --bs-light-rgb: 248, 249, 250;
+  --bs-light-bg-subtle: #343a40;  
+  --bs-dark-rgb: 33, 37, 41; 
+  --bs-dark-bg-subtle: #1a1d20;    
+  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-secondary-bg-rgb: 233, 236, 239;
+  --bs-tertiary-bg-rgb: 248, 249, 250;
+```
+
+```css
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+}
+.bg-light-subtle {
+  background-color: var(--bs-light-bg-subtle) !important;
+}
+
+.bg-dark {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+}
+.bg-dark-subtle {
+  background-color: var(--bs-dark-bg-subtle) !important;
+}
+
+.bg-body {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-body-bg-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-body-secondary {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-secondary-bg-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-body-tertiary {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+} 
+
+.bg-transparent {
+  --bs-bg-opacity: 1;
+  background-color: transparent !important;
+}
+
+```
+</md></sn><sn><md>### Bg-gradient
+
+Use as `.bg-any.bg-gradient`
+
+```css
+--bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+.bg-gradient {
+  background-image: var(--bs-gradient) !important;
+}  
+```
+</md></sn><sn><md>### Bg-opacity
+
+```css
+.bg-opacity-10 {
+  --bs-bg-opacity: 0.1;
+}
+
+.bg-opacity-25 {
+  --bs-bg-opacity: 0.25;
+}
+
+.bg-opacity-50 {
+  --bs-bg-opacity: 0.5;
+}
+
+.bg-opacity-75 {
+  --bs-bg-opacity: 0.75;
+}
+
+.bg-opacity-100 {
+  --bs-bg-opacity: 1;
+}
+ 
+```
+</md></sn><sn><md>### Example
+
++++ see
+
+```html
+
+<h3 class="my-4">Background Others</h3>
+<div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+<div class="p-3 mb-2 bg-primary-subtle text-primary-emphasis">.bg-primary-subtle</div>
+<div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+<div class="p-3 mb-2 bg-secondary-subtle text-secondary-emphasis">.bg-secondary-subtle</div>
+<div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+<div class="p-3 mb-2 bg-success-subtle text-success-emphasis">.bg-success-subtle</div>
+<div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+<div class="p-3 mb-2 bg-danger-subtle text-danger-emphasis">.bg-danger-subtle</div>
+<div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+<div class="p-3 mb-2 bg-warning-subtle text-warning-emphasis">.bg-warning-subtle</div>
+<div class="p-3 mb-2 bg-info text-dark">.bg-info</div>
+<div class="p-3 mb-2 bg-info-subtle text-info-emphasis">.bg-info-subtle</div>
+<div class="p-3 mb-2 bg-black text-white">.bg-black</div>
+<div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
+<div class="p-3 mb-2 bg-transparent text-body">.bg-transparent</div>
+<hr>
+<h3>Background Related</h3>
+<div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+<div class="p-3 mb-2 bg-light-subtle text-light-emphasis">.bg-light-subtle</div>
+<div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+<div class="p-3 mb-2 bg-dark-subtle text-dark-emphasis">.bg-dark-subtle</div>
+<div class="p-3 mb-2 bg-body-secondary">.bg-body-secondary</div>
+<div class="p-3 mb-2 bg-body-tertiary">.bg-body-tertiary</div>
+<div class="p-3 mb-2 bg-body text-body">.bg-body</div>
+
+
+<h2 class="my-4">Gradient</h2>
+<h3>Background Others</h3>
+<div class="p-3 mb-2 bg-gradient bg-primary text-white">.bg-primary</div>
+<div class="p-3 mb-2 bg-gradient bg-primary-subtle text-primary-emphasis">.bg-primary-subtle</div>
+<div class="p-3 mb-2 bg-gradient bg-secondary text-white">.bg-secondary</div>
+<div class="p-3 mb-2 bg-gradient bg-secondary-subtle text-secondary-emphasis">.bg-secondary-subtle</div>
+<div class="p-3 mb-2 bg-gradient bg-success text-white">.bg-success</div>
+<div class="p-3 mb-2 bg-gradient bg-success-subtle text-success-emphasis">.bg-success-subtle</div>
+<div class="p-3 mb-2 bg-gradient bg-danger text-white">.bg-danger</div>
+<div class="p-3 mb-2 bg-gradient bg-danger-subtle text-danger-emphasis">.bg-danger-subtle</div>
+<div class="p-3 mb-2 bg-gradient bg-warning text-dark">.bg-warning</div>
+<div class="p-3 mb-2 bg-gradient bg-warning-subtle text-warning-emphasis">.bg-warning-subtle</div>
+<div class="p-3 mb-2 bg-gradient bg-info text-dark">.bg-info</div>
+<div class="p-3 mb-2 bg-gradient bg-info-subtle text-info-emphasis">.bg-info-subtle</div>
+<div class="p-3 mb-2 bg-gradient bg-black text-white">.bg-black</div>
+<div class="p-3 mb-2 bg-gradient bg-white text-dark">.bg-white</div>
+<div class="p-3 mb-2 bg-gradient bg-transparent text-body">.bg-transparent</div>
+<hr>
+<h3>Background Related</h3>
+<div class="p-3 mb-2 bg-gradient bg-light text-dark">.bg-light</div>
+<div class="p-3 mb-2 bg-gradient bg-light-subtle text-light-emphasis">.bg-light-subtle</div>
+<div class="p-3 mb-2 bg-gradient bg-dark text-white">.bg-dark</div>
+<div class="p-3 mb-2 bg-gradient bg-dark-subtle text-dark-emphasis">.bg-dark-subtle</div>
+<div class="p-3 mb-2 bg-gradient bg-body-secondary">.bg-body-secondary</div>
+<div class="p-3 mb-2 bg-gradient bg-body-tertiary">.bg-body-tertiary</div>
+<div class="p-3 mb-2 bg-gradient bg-body text-body">.bg-body</div>
+
+<h2 class="my-4">BG with Opacity</h2>
+<div class="bg-success p-2 text-white">This is default success background</div>
+<div class="bg-success p-2 text-white bg-opacity-75">This is 75% opacity success background</div>
+<div class="bg-success p-2 text-dark bg-opacity-50">This is 50% opacity success background</div>
+<div class="bg-success p-2 text-dark bg-opacity-25">This is 25% opacity success background</div>
+<div class="bg-success p-2 text-dark bg-opacity-10">This is 10% opacity success background</div>
+
+```
+
++++</md></sn>
