@@ -107,7 +107,81 @@
     <tags>#alert</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 23 2025 18:36:38 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 23 2025 18:41:44 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-YeZhyWMqX4</id>
     <duration></duration>
   </config>
+<sn><md>### `setAlert()`
+
+
+```html
+<div class="col-8 mb-2 mx-auto border rounded-3 p-4">
+   <h3><code>setAlert()</code></h3>
+   <div id="alert-container" class="my-3"></div>
+   <button class="btn btn-primary px-3 btn-sm" id="setAlertBtn">set</button>
+</div>
+```
+
+```js
+  const container = $('#alert-container')
+  setAlert(container,{
+    type:'info',
+    message:`Checkout the new release`,
+    auto_close:false,
+    icon:true,
+  })
+```
+
+```js
+function setAlert(
+  container,
+  { 
+    type = 'primary',
+    _class = '',
+    message = 'Empty message',
+    clear = true,
+    dismiss = false,
+    auto_close = !dismiss,
+    timer = 5000,
+    icon = false,
+  } = {}
+) {
+  container = typeof container === 'string' ? $(container) : container;
+  if (!container) return;
+
+  if (clear) container.html('');
+
+  if (icon) {
+    const icon_class = {
+      primary: 'envelope',
+      secondary: 'circle',
+      success: 'circle-check',
+      danger: 'circle-xmark',
+      warning: 'triangle-exclamation',
+      info: 'circle-info'
+    }[type] || 'circle-info'; // fallback
+
+    message = `<i class="fa-light fa-${icon_class} fs-5 pe-2"></i>` + message;
+  }
+
+  if (dismiss) {
+    message += `<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`;
+  }
+
+  const alert = container.create('div', {
+    class: `alert alert-${type} ${_class ? _class : ''} ${icon ? 'd-flex align-items-center' : ''} ${dismiss ? 'alert-dismissible fade show' : ''}`,
+
+    attr: 'role=alert',
+    html: message
+  });
+
+  if (auto_close) setTimeout(() =&gt; alert.remove(), timer);
+
+  return alert;
+}
+```
+
+##### require
+* easyDom func
+* font-awesome icon
+</md></sn>
