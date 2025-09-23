@@ -1,10 +1,74 @@
 
-  <sn></sn>
+  <sn><md>### float
+
+```css
+/*
+to = start/end/none
+breakpoint = sm/md/lg/xl/xxl/
+
+float-to
+float-breakpoint-to
+*/
+```
+
+```css
+.float-start {
+  float: left !important;
+}
+
+.float-end {
+  float: right !important;
+}
+
+.float-none {
+  float: none !important;
+}
+```
+
+see breakpoint in media-query section</md></sn>
   <config>
     <tags>#float</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 23 2025 12:47:27 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 23 2025 12:50:51 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ZUSJq9gNCs</id>
     <duration></duration>
   </config>
+<sn><md>### See Example
+
++++ see
+```html
+<div>
+		
+<div class="float-start bg-primary">Float start on all viewport sizes</div><br>
+<div class="float-end bg-danger">Float end on all viewport sizes</div><br>
+<div class="float-none bg-warning">Don’t float on all viewport sizes</div>
+
+<hr>	
+
+<div class="float-sm-end">Float end on viewports sized SM (small) or wider</div><br>
+<div class="float-md-end">Float end on viewports sized MD (medium) or wider</div><br>
+<div class="float-lg-end">Float end on viewports sized LG (large) or wider</div><br>
+<div class="float-xl-end">Float end on viewports sized XL (extra large) or wider</div><br>
+<div class="float-xxl-end">Float end on viewports sized XXL (extra extra large) or wider</div><br>
+
+<hr>	
+
+<div clas="p-4 border rounded-3">
+  <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg" class="float-start rounded-circle me-3 mb-3" alt="sample image" style="height:200px;width:200px">
+  <p>
+    This is an example paragraph demonstrating Bootstrap float utility. 
+    The image is floated to the left, and text flows around it. 
+    You can also use <code>float-end</code> to move the image to the right.
+    </p><hr>	
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit ducimus temporibus quod suscipit quos perspiciatis. Tenetur ipsam libero totam quasi laboriosam autem deleniti quia ullam minus neque inventore, ea omnis harum ab perferendis est expedita ex, quibusdam. Magnam at perspiciatis labore itaque fugiat, soluta, beatae neque ratione porro voluptates repellat.	
+    Lorem ipsum dolor sit amet consectetur adipisicing, elit. Nobis dolorum magnam, maiores nemo nesciunt ut quam eaque reprehenderit libero ex soluta eum ad, expedita iste, dolore iusto. Tempore quia, aut.	
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet inventore quae expedita facilis similique suscipit corporis cupiditate eveniet reiciendis laborum, error, veniam ipsa sequi molestiae quo laudantium, aspernatur odit neque!	
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt neque fugit non cum tenetur repellat illo doloremque officiis perferendis minima!	
+  <p></p>
+</div>
+
+
+</div>
+```
++++</md></sn>
