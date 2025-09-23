@@ -1,10 +1,48 @@
 
-  <sn></sn>
+  <sn><md>## Shadow
+
+#### variable
+```css
+  --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+```
+
+#### code 
+```css
+.shadow {
+  box-shadow: var(--bs-box-shadow) !important;
+}
+
+.shadow-sm {
+  box-shadow: var(--bs-box-shadow-sm) !important;
+}
+
+.shadow-lg {
+  box-shadow: var(--bs-box-shadow-lg) !important;
+}
+
+.shadow-none {
+  box-shadow: none !important;
+}
+```
+</md></sn>
   <config>
     <tags>#shadow</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 23 2025 14:34:00 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 23 2025 14:35:58 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ubFloGrH4d</id>
     <duration></duration>
   </config>
+<sn><md>### Example
++++ see
+```html
+<div> 
+<div class="shadow-none p-3 mb-5 bg-body-tertiary rounded">No shadow</div>
+<div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">Small shadow</div>
+<div class="shadow p-3 mb-5 bg-body-tertiary rounded">Regular shadow</div>
+<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">Larger shadow</div>
+</div>
+```
++++</md></sn>
