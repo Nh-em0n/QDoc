@@ -1,10 +1,45 @@
 
-  <sn></sn>
+  <sn><md>### Opacity
+
+```css
+.opacity-0 {
+  opacity: 0 !important;
+}
+
+.opacity-25 {
+  opacity: 0.25 !important;
+}
+
+.opacity-50 {
+  opacity: 0.5 !important;
+}
+
+.opacity-75 {
+  opacity: 0.75 !important;
+}
+
+.opacity-100 {
+  opacity: 1 !important;
+}
+```
+</md></sn>
   <config>
     <tags>#opacity</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 23 2025 13:30:10 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 23 2025 13:30:55 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-0PiqnuIhSR</id>
     <duration></duration>
   </config>
+<sn><md>### Example
++++ see
+```html
+<div>
+<div class="p-4 border rounded-2 opacity-100">.opacity-100 Lorem ipsum dolor sit amet consectetur adipisicing, elit. Error repellat voluptatibus, deserunt libero obcaecati. </div>
+<div class="p-4 border rounded-2 opacity-75">.opacity-75 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae qui atque minus, molestias fugiat. .</div>
+<div class="p-4 border rounded-2 opacity-50">.opacity-50 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam id, aspernatur ad recusandae exercitationem! .</div>
+<div class="p-4 border rounded-2 opacity-25">.opacity-25 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus repellat nam recusandae fuga, nostrum. .</div>
+<div class="p-4 border rounded-2 opacity-0">.opacity-0 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo corrupti quae aliquid nam, culpa? </div>
+</div>
+```
++++</md></sn>
