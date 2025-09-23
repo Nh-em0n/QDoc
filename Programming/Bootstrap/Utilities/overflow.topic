@@ -1,10 +1,151 @@
 
-  <sn></sn>
+  <sn><md>### Overflow
+
+```css
+.overflow-auto {
+  overflow: auto !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+.overflow-scroll {
+  overflow: scroll !important;
+}
+
+.overflow-x-auto {
+  overflow-x: auto !important;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+
+.overflow-x-visible {
+  overflow-x: visible !important;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll !important;
+}
+
+.overflow-y-auto {
+  overflow-y: auto !important;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden !important;
+}
+
+.overflow-y-visible {
+  overflow-y: visible !important;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll !important;
+}
+```</md></sn>
   <config>
     <tags>#overflow</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 23 2025 13:48:08 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 23 2025 14:11:03 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-iE9jLph3BP</id>
     <duration></duration>
   </config>
+<sn><md>### Example
+
++++ see
+
+```html
+<div>
+  
+<div class="col-8 mx-auto p-3 mb-5 border rounded-4" style="height:25vh;resize:both;">
+<h3>Normal</h3> 
+Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Natus, vero officia est quidem minus facilis velit iusto quia tenetur! Quia ducimus sit doloribus, perferendis aperiam accusamus repellat officia, repudiandae nesciunt. Nostrum, nulla corporis doloremque cum ullam magni sapiente optio ad repellendus officiis quod, delectus quasi exercitationem modi sunt, nemo praesentium.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatum, qui quas molestias repellendus cupiditate error, repellat veritatis. Nesciunt, perferendis.
+</div>
+
+
+<div class="col-8 mx-auto p-3 mb-3 border rounded-4 overflow-auto" style="height:25vh;resize:both;">
+<h3>.overflow-auto</h3> 
+Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Natus, vero officia est quidem minus facilis velit iusto quia tenetur! Quia ducimus sit doloribus, perferendis aperiam accusamus repellat officia, repudiandae nesciunt. Nostrum, nulla corporis doloremque cum ullam magni sapiente optio ad repellendus officiis quod, delectus quasi exercitationem modi sunt, nemo praesentium.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatum, qui quas molestias repellendus cupiditate error, repellat veritatis. Nesciunt, perferendis.
+</div>
+
+<div class="col-8 mx-auto p-3 mb-3 border rounded-4 overflow-hidden" style="height:25vh;resize:both;">
+<h3>.overflow-hidden</h3> 
+Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Natus, vero officia est quidem minus facilis velit iusto quia tenetur! Quia ducimus sit doloribus, perferendis aperiam accusamus repellat officia, repudiandae nesciunt. Nostrum, nulla corporis doloremque cum ullam magni sapiente optio ad repellendus officiis quod, delectus quasi exercitationem modi sunt, nemo praesentium.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatum, qui quas molestias repellendus cupiditate error, repellat veritatis. Nesciunt, perferendis.
+</div>
+
+<div class="col-8 mx-auto p-3 mb-5 border rounded-4 overflow-visible" style="height:25vh;resize:both;">
+<h3>.overflow-visible</h3>  
+Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Natus, vero officia est quidem minus facilis velit iusto quia tenetur! Quia ducimus sit doloribus, perferendis aperiam accusamus repellat officia, repudiandae nesciunt. Nostrum, nulla corporis doloremque cum ullam magni sapiente optio ad repellendus officiis quod, delectus quasi exercitationem modi sunt, nemo praesentium.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatum, qui quas molestias repellendus cupiditate error, repellat veritatis. Nesciunt, perferendis.
+</div>
+
+<div class="col-8 mx-auto p-3 mb-3 border rounded-4 overflow-scroll" style="height:25vh;resize:both;">
+<h3>.overflow-scroll</h3> 
+Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Natus, vero officia est quidem minus facilis velit iusto quia tenetur! Quia ducimus sit doloribus, perferendis aperiam accusamus repellat officia, repudiandae nesciunt. Nostrum, nulla corporis doloremque cum ullam magni sapiente optio ad repellendus officiis quod, delectus quasi exercitationem modi sunt, nemo praesentium.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatum, qui quas molestias repellendus cupiditate error, repellat veritatis. Nesciunt, perferendis.
+</div>
+
+
+<ul class="col-8 mx-auto">
+  <h3>Fact</h3>
+  <li><code>overflow-auto</code>: scrollbar appear on overflow</li>
+  <li><code>overflow-scroll</code>: scrollbar appear by default</li>  
+</ul>
+
+<hr>
+
+
+<h5>overflow-x-auto</h5>
+<div class="overflow-x-auto border p-2 mb-3" style="width:200px; white-space:nowrap;">
+  This is some long horizontal content that will require scrolling to be fully visible.
+</div>
+
+<h5>overflow-x-hidden</h5>
+<div class="overflow-x-hidden border p-2 mb-3" style="width:200px; white-space:nowrap;">
+  This is some long horizontal content that will be cut off because overflow is hidden.
+</div>
+
+<h5>overflow-x-visible</h5>
+<div class="overflow-x-visible border p-2 mb-3" style="width:200px; white-space:nowrap;">
+  This is some long horizontal content that will visibly overflow the box.
+</div>
+
+<h5>overflow-x-scroll</h5>
+<div class="overflow-x-scroll border p-2 mb-3" style="width:200px; white-space:nowrap;">
+  This is some long horizontal content that will always have a scrollbar.
+</div>
+
+<h5>overflow-y-auto</h5>
+<div class="overflow-y-auto border p-2 mb-3" style="height:60px;">
+  Line 1<br>Line 2<br>Line 3<br>Line 4<br>Line 5<br>Line 6<br>Line 7
+</div>
+
+<h5>overflow-y-hidden</h5>
+<div class="overflow-y-hidden border p-2 mb-3" style="height:60px;">
+  Line 1<br>Line 2<br>Line 3<br>Line 4<br>Line 5<br>Line 6<br>Line 7
+</div>
+
+<h5>overflow-y-visible</h5>
+<div class="overflow-y-visible border p-2 mb-3" style="height:60px;">
+  Line 1<br>Line 2<br>Line 3<br>Line 4<br>Line 5<br>Line 6<br>Line 7
+</div>
+
+<h5>overflow-y-scroll</h5>
+<div class="overflow-y-scroll border p-2 mb-3" style="height:60px;">
+  Line 1<br>Line 2<br>Line 3<br>Line 4<br>Line 5<br>Line 6<br>Line 7
+</div>
+
+</div>
+
++++</md></sn>
