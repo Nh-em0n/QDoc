@@ -1,10 +1,53 @@
 
-  <sn></sn>
+  <sn><md>### Interaction
+
+```css
+.user-select-all {
+  -webkit-user-select: all !important;
+  -moz-user-select: all !important;
+  user-select: all !important;
+}
+.user-select-auto {
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
+  user-select: auto !important;
+}
+.user-select-none {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  user-select: none !important;
+}
+
+
+
+.pe-none {
+  pointer-events: none !important;
+}
+
+.pe-auto {
+  pointer-events: auto !important;
+}
+```</md></sn>
   <config>
     <tags>#interactions</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 23 2025 12:57:48 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 23 2025 12:59:19 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-YTPLzBLsOY</id>
     <duration></duration>
   </config>
+<sn><md>### Example
+
++++ see
+```html
+<div>
+<p class="user-select-all">Copy-Me : This paragraph will be entirely selected when clicked by the user.</p>
+<p class="user-select-auto">Whatever : This paragraph has default select behavior.</p>
+<p class="user-select-none text-danger">Challenge : This paragraph will not be selectable when clicked by the user.</p>
+<hr>  
+<p><a href="#" class="pe-none" tabindex="-1" aria-disabled="true">This link</a> can not be clicked.</p>
+<p><a href="#" class="pe-auto">This link</a> can be clicked (this is default behavior).</p>
+<p class="pe-none"><a href="#" tabindex="-1" aria-disabled="true">This link</a> can not be clicked because the <code>pointer-events</code> property is inherited from its parent. However, <a href="#" class="pe-auto">this link</a> has a <code>pe-auto</code> class and can be clicked.</p>
+</div>
+```
++++</md></sn>
