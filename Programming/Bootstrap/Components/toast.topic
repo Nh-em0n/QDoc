@@ -1,10 +1,177 @@
 
-  <sn></sn>
+  <sn><md>### Toast
+
+```css
+ .toast {
+  --bs-toast-zindex: 1090;
+  --bs-toast-padding-x: 0.75rem;
+  --bs-toast-padding-y: 0.5rem;
+  --bs-toast-spacing: 1.5rem;
+  --bs-toast-max-width: 350px;
+  --bs-toast-font-size: 0.875rem;
+  --bs-toast-color: ;
+  --bs-toast-bg: rgba(var(--bs-body-bg-rgb), 0.85);
+  --bs-toast-border-width: var(--bs-border-width);
+  --bs-toast-border-color: var(--bs-border-color-translucent);
+  --bs-toast-border-radius: var(--bs-border-radius);
+  --bs-toast-box-shadow: var(--bs-box-shadow);
+  --bs-toast-header-color: var(--bs-secondary-color);
+  --bs-toast-header-bg: rgba(var(--bs-body-bg-rgb), 0.85);
+  --bs-toast-header-border-color: var(--bs-border-color-translucent);
+  width: var(--bs-toast-max-width);
+  max-width: 100%;
+  font-size: var(--bs-toast-font-size);
+  color: var(--bs-toast-color);
+  pointer-events: auto;
+  background-color: var(--bs-toast-bg);
+  background-clip: padding-box;
+  border: var(--bs-toast-border-width) solid var(--bs-toast-border-color);
+  box-shadow: var(--bs-toast-box-shadow);
+  border-radius: var(--bs-toast-border-radius);
+}
+.toast.showing {
+  opacity: 0;
+}
+.toast:not(.show) {
+  display: none;
+}
+
+.toast-container {
+  --bs-toast-zindex: 1090;
+  position: absolute;
+  z-index: var(--bs-toast-zindex);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100%;
+  pointer-events: none;
+}
+.toast-container &gt; :not(:last-child) {
+  margin-bottom: var(--bs-toast-spacing);
+}
+
+.toast-header {
+  display: flex;
+  align-items: center;
+  padding: var(--bs-toast-padding-y) var(--bs-toast-padding-x);
+  color: var(--bs-toast-header-color);
+  background-color: var(--bs-toast-header-bg);
+  background-clip: padding-box;
+  border-bottom: var(--bs-toast-border-width) solid var(--bs-toast-header-border-color);
+  border-top-left-radius: calc(var(--bs-toast-border-radius) - var(--bs-toast-border-width));
+  border-top-right-radius: calc(var(--bs-toast-border-radius) - var(--bs-toast-border-width));
+}
+.toast-header .btn-close {
+  margin-right: calc(-0.5 * var(--bs-toast-padding-x));
+  margin-left: var(--bs-toast-padding-x);
+}
+
+.toast-body {
+  padding: var(--bs-toast-padding-x);
+  word-wrap: break-word;
+}
+```</md></sn>
   <config>
     <tags>#toast</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Sep 24 2025 22:00:47 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Sep 24 2025 22:05:15 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-64kSeR5k8a</id>
     <duration></duration>
   </config>
+<sn><md>### Example
+
+```html
+<div class="col-8 mx-auto p-3 border rounded-3 mb-2">
+	<h3>Basic Toast</h3>
+
+	<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+	  <div class="toast-header">
+	    <img src="..." class="rounded me-2" alt="...">
+	    <strong class="me-auto">Bootstrap</strong>
+	    <small>11 mins ago</small>
+	    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	  </div>
+	  <div class="toast-body">
+	    Hello, world! This is a toast message.
+	  </div>
+	</div>	
+
+<button class="btn btn-primary mt-3" id="toastTriggerBtn">show toast</button>
+
+</div>
+
+```</md></sn><sn><md>### `ShowToast ()`
+
+```js
+function showToast(
+  msg,
+  { 
+    header = false,
+    icon = 'envelope',
+    title = 'Notification',
+    header_center = false,
+    badge = '',    
+    badge_type='',
+    placement = 2,
+    autohide = true,
+    delay = 5000,
+    clear = false,
+    show_close_btn=true,
+    onShown = null,
+    onHidden = null    
+  } = {}
+) {
+
+  let container;
+  if(!$('.toast-container')){
+    container = document.body.create('div',{class:'toast-container'})
+  }else{
+  	container = $('.toast-container')
+  }
+
+  let placement_class = {
+     1:'top-0 start-0',
+     2:'top-0 start-50 translate-middle-x',
+     3:'top-0 end-0',
+     4:'top-50 start-0 translate-middle-y',
+     5:'top-50 start-50 translate-middle',
+     6:'top-50 end-0 translate-middle-y',
+     7:'bottom-0 start-0',
+     8:'bottom-0 start-50 translate-middle-x',
+     9:'bottom-0 end-0'
+  }[placement]
+  container.update({rclass:'',class:'toast-container '+placement_class})
+  if(clear) container.html('')
+
+  let toast_content = ''
+  if(header){
+  	toast_content = `<div class="toast-header ${header_center ? 'justify-content-center' : ''}">
+  	  <i class="fa-solid fa-${icon} fs-6 text-secondary pe-2"></i>
+      <strong class="${header_center ? '' : 'me-auto'} text-secondary">${title}</strong>
+      <span class="badge bg-${badge_type}">${badge}</span>
+  	  ${show_close_btn ? '<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>' : ''}
+    </div>`
+  }
+  if(msg){
+	  toast_content += `<div class="toast-body">${msg}</div>`  	
+  }
+  const toastEl = container.create('div',{
+  	class:`toast border-secondary`,
+  	attr:'role=alert aria-live=assertive aria-atomic=true',
+  	html:toast_content
+  })
+  const bsToast = bootstrap.Toast.getOrCreateInstance(toastEl,{autohide,delay})
+
+  bsToast.show()
+
+  toastEl.on('shown.bs.toast',()=&gt;{
+  	if(typeof onShown === 'function') onShown(toastEl)
+  }) 
+  toastEl.on('hidden.bs.toast',()=&gt;{
+  	if(typeof onHidden === 'function') onHidden(toastEl)
+  })
+  return toastEl
+
+}
+```</md></sn>
