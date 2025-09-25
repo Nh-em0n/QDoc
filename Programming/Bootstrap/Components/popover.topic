@@ -1,10 +1,238 @@
 
-  <sn></sn>
+  <sn><md>### Popover
+
+```css
+.popover {
+  --bs-popover-zindex: 1070;
+  --bs-popover-max-width: 276px;
+  --bs-popover-font-size: 0.875rem;
+  --bs-popover-bg: var(--bs-body-bg);
+  --bs-popover-border-width: var(--bs-border-width);
+  --bs-popover-border-color: var(--bs-border-color-translucent);
+  --bs-popover-border-radius: var(--bs-border-radius-lg);
+  --bs-popover-inner-border-radius: calc(var(--bs-border-radius-lg) - var(--bs-border-width));
+  --bs-popover-box-shadow: var(--bs-box-shadow);
+  --bs-popover-header-padding-x: 1rem;
+  --bs-popover-header-padding-y: 0.5rem;
+  --bs-popover-header-font-size: 1rem;
+  --bs-popover-header-color: inherit;
+  --bs-popover-header-bg: var(--bs-secondary-bg);
+  --bs-popover-body-padding-x: 1rem;
+  --bs-popover-body-padding-y: 1rem;
+  --bs-popover-body-color: var(--bs-body-color);
+  --bs-popover-arrow-width: 1rem;
+  --bs-popover-arrow-height: 0.5rem;
+  --bs-popover-arrow-border: var(--bs-popover-border-color);
+  z-index: var(--bs-popover-zindex);
+  display: block;
+  max-width: var(--bs-popover-max-width);
+  font-family: var(--bs-font-sans-serif);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  white-space: normal;
+  word-spacing: normal;
+  line-break: auto;
+  font-size: var(--bs-popover-font-size);
+  word-wrap: break-word;
+  background-color: var(--bs-popover-bg);
+  background-clip: padding-box;
+  border: var(--bs-popover-border-width) solid var(--bs-popover-border-color);
+  border-radius: var(--bs-popover-border-radius);
+}
+```
+
+```css
+.popover .popover-arrow {
+  display: block;
+  width: var(--bs-popover-arrow-width);
+  height: var(--bs-popover-arrow-height);
+}
+.popover .popover-arrow::before, .popover .popover-arrow::after {
+  position: absolute;
+  display: block;
+  content: "";
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0;
+}
+
+.bs-popover-top &gt; .popover-arrow, .bs-popover-auto[data-popper-placement^=top] &gt; .popover-arrow {
+  bottom: calc(-1 * (var(--bs-popover-arrow-height)) - var(--bs-popover-border-width));
+}
+.bs-popover-top &gt; .popover-arrow::before, .bs-popover-auto[data-popper-placement^=top] &gt; .popover-arrow::before, .bs-popover-top &gt; .popover-arrow::after, .bs-popover-auto[data-popper-placement^=top] &gt; .popover-arrow::after {
+  border-width: var(--bs-popover-arrow-height) calc(var(--bs-popover-arrow-width) * 0.5) 0;
+}
+.bs-popover-top &gt; .popover-arrow::before, .bs-popover-auto[data-popper-placement^=top] &gt; .popover-arrow::before {
+  bottom: 0;
+  border-top-color: var(--bs-popover-arrow-border);
+}
+.bs-popover-top &gt; .popover-arrow::after, .bs-popover-auto[data-popper-placement^=top] &gt; .popover-arrow::after {
+  bottom: var(--bs-popover-border-width);
+  border-top-color: var(--bs-popover-bg);
+}
+
+/* rtl:begin:ignore */
+.bs-popover-end &gt; .popover-arrow, .bs-popover-auto[data-popper-placement^=right] &gt; .popover-arrow {
+  left: calc(-1 * (var(--bs-popover-arrow-height)) - var(--bs-popover-border-width));
+  width: var(--bs-popover-arrow-height);
+  height: var(--bs-popover-arrow-width);
+}
+.bs-popover-end &gt; .popover-arrow::before, .bs-popover-auto[data-popper-placement^=right] &gt; .popover-arrow::before, .bs-popover-end &gt; .popover-arrow::after, .bs-popover-auto[data-popper-placement^=right] &gt; .popover-arrow::after {
+  border-width: calc(var(--bs-popover-arrow-width) * 0.5) var(--bs-popover-arrow-height) calc(var(--bs-popover-arrow-width) * 0.5) 0;
+}
+.bs-popover-end &gt; .popover-arrow::before, .bs-popover-auto[data-popper-placement^=right] &gt; .popover-arrow::before {
+  left: 0;
+  border-right-color: var(--bs-popover-arrow-border);
+}
+.bs-popover-end &gt; .popover-arrow::after, .bs-popover-auto[data-popper-placement^=right] &gt; .popover-arrow::after {
+  left: var(--bs-popover-border-width);
+  border-right-color: var(--bs-popover-bg);
+}
+
+/* rtl:end:ignore */
+.bs-popover-bottom &gt; .popover-arrow, .bs-popover-auto[data-popper-placement^=bottom] &gt; .popover-arrow {
+  top: calc(-1 * (var(--bs-popover-arrow-height)) - var(--bs-popover-border-width));
+}
+.bs-popover-bottom &gt; .popover-arrow::before, .bs-popover-auto[data-popper-placement^=bottom] &gt; .popover-arrow::before, .bs-popover-bottom &gt; .popover-arrow::after, .bs-popover-auto[data-popper-placement^=bottom] &gt; .popover-arrow::after {
+  border-width: 0 calc(var(--bs-popover-arrow-width) * 0.5) var(--bs-popover-arrow-height);
+}
+.bs-popover-bottom &gt; .popover-arrow::before, .bs-popover-auto[data-popper-placement^=bottom] &gt; .popover-arrow::before {
+  top: 0;
+  border-bottom-color: var(--bs-popover-arrow-border);
+}
+.bs-popover-bottom &gt; .popover-arrow::after, .bs-popover-auto[data-popper-placement^=bottom] &gt; .popover-arrow::after {
+  top: var(--bs-popover-border-width);
+  border-bottom-color: var(--bs-popover-bg);
+}
+.bs-popover-bottom .popover-header::before, .bs-popover-auto[data-popper-placement^=bottom] .popover-header::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: var(--bs-popover-arrow-width);
+  margin-left: calc(-0.5 * var(--bs-popover-arrow-width));
+  content: "";
+  border-bottom: var(--bs-popover-border-width) solid var(--bs-popover-header-bg);
+}
+
+/* rtl:begin:ignore */
+.bs-popover-start &gt; .popover-arrow, .bs-popover-auto[data-popper-placement^=left] &gt; .popover-arrow {
+  right: calc(-1 * (var(--bs-popover-arrow-height)) - var(--bs-popover-border-width));
+  width: var(--bs-popover-arrow-height);
+  height: var(--bs-popover-arrow-width);
+}
+.bs-popover-start &gt; .popover-arrow::before, .bs-popover-auto[data-popper-placement^=left] &gt; .popover-arrow::before, .bs-popover-start &gt; .popover-arrow::after, .bs-popover-auto[data-popper-placement^=left] &gt; .popover-arrow::after {
+  border-width: calc(var(--bs-popover-arrow-width) * 0.5) 0 calc(var(--bs-popover-arrow-width) * 0.5) var(--bs-popover-arrow-height);
+}
+.bs-popover-start &gt; .popover-arrow::before, .bs-popover-auto[data-popper-placement^=left] &gt; .popover-arrow::before {
+  right: 0;
+  border-left-color: var(--bs-popover-arrow-border);
+}
+.bs-popover-start &gt; .popover-arrow::after, .bs-popover-auto[data-popper-placement^=left] &gt; .popover-arrow::after {
+  right: var(--bs-popover-border-width);
+  border-left-color: var(--bs-popover-bg);
+}
+```
+
+```css
+/* rtl:end:ignore */
+.popover-header {
+  padding: var(--bs-popover-header-padding-y) var(--bs-popover-header-padding-x);
+  margin-bottom: 0;
+  font-size: var(--bs-popover-header-font-size);
+  color: var(--bs-popover-header-color);
+  background-color: var(--bs-popover-header-bg);
+  border-bottom: var(--bs-popover-border-width) solid var(--bs-popover-border-color);
+  border-top-left-radius: var(--bs-popover-inner-border-radius);
+  border-top-right-radius: var(--bs-popover-inner-border-radius);
+}
+.popover-header:empty {
+  display: none;
+}
+
+.popover-body {
+  padding: var(--bs-popover-body-padding-y) var(--bs-popover-body-padding-x);
+  color: var(--bs-popover-body-color);
+}
+```
+</md></sn>
   <config>
     <tags>#popover</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 25 2025 11:40:58 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 25 2025 11:42:51 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-UJHJEhXSkQ</id>
     <duration></duration>
   </config>
+<sn><md>## Enable
+
+```js
+export function enablePopovers(container=document){
+	container = typeof container === 'string' ? $(container) : container
+	const popoverTriggerList = container.$x('[data-bs-toggle="popover"]')
+	const popoverList = [...popoverTriggerList].map(popoverTriggerEl =&gt; new bootstrap.Popover(popoverTriggerEl))
+}
+```</md></sn><sn><md>### Example
+
++++ see
+
+```html
+<div>
+
+  <!-- script:tooltip.js -->
+<button class="btn btn-primary mb-3" id="popoverEnabler">Enable all Popover</button>
+
+
+<div class="col-8 mx-auto p-3 border border-bottom-0 rounded-top-2">
+  <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here’s some amazing content. It’s very engaging. Right?">
+      Click to toggle popover
+  </button> 
+</div>
+
+
+
+<div class="col-8 mx-auto p-3 border border-bottom-0">
+  <h3>Direction</h3>
+  <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+    Popover on top
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+    Popover on right
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+    Popover on bottom
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
+    Popover on left
+  </button> 
+</div>
+
+
+<div class="col-8 mx-auto p-3 border border-bottom-0">
+  <h3>Dismiss on Next Click</h3>
+  <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Dismissible popover" data-bs-content="And here’s some amazing content. It’s very engaging. Right?">
+     Dismissible popover
+    </a>  
+</div>
+
+
+
+
+<div class="col-8 mx-auto p-3 border rounded-bottom-2">
+  <h3>Disable</h3>
+  <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+    <button class="btn btn-primary" type="button" disabled="">Disabled button</button>
+   </span>  
+</div>
+
+</div>  
+```
++++</md></sn>
