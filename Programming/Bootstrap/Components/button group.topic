@@ -1,10 +1,231 @@
 
-  <sn></sn>
+  <sn><md>### Button Group
+
+```css
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+.btn-group &gt; .btn,
+.btn-group-vertical &gt; .btn {
+  position: relative;
+  flex: 1 1 auto;
+}
+.btn-group &gt; .btn-check:checked + .btn,
+.btn-group &gt; .btn-check:focus + .btn,
+.btn-group &gt; .btn:hover,
+.btn-group &gt; .btn:focus,
+.btn-group &gt; .btn:active,
+.btn-group &gt; .btn.active,
+.btn-group-vertical &gt; .btn-check:checked + .btn,
+.btn-group-vertical &gt; .btn-check:focus + .btn,
+.btn-group-vertical &gt; .btn:hover,
+.btn-group-vertical &gt; .btn:focus,
+.btn-group-vertical &gt; .btn:active,
+.btn-group-vertical &gt; .btn.active {
+  z-index: 1;
+}
+
+.btn-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.btn-toolbar .input-group {
+  width: auto;
+}
+
+.btn-group {
+  border-radius: var(--bs-border-radius);
+}
+.btn-group &gt; :not(.btn-check:first-child) + .btn,
+.btn-group &gt; .btn-group:not(:first-child) {
+  margin-left: calc(var(--bs-border-width) * -1);
+}
+.btn-group &gt; .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group &gt; .btn.dropdown-toggle-split:first-child,
+.btn-group &gt; .btn-group:not(:last-child) &gt; .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group &gt; .btn:nth-child(n+3),
+.btn-group &gt; :not(.btn-check) + .btn,
+.btn-group &gt; .btn-group:not(:first-child) &gt; .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.dropdown-toggle-split {
+  padding-right: 0.5625rem;
+  padding-left: 0.5625rem;
+}
+.dropdown-toggle-split::after, .dropup .dropdown-toggle-split::after, .dropend .dropdown-toggle-split::after {
+  margin-left: 0;
+}
+.dropstart .dropdown-toggle-split::before {
+  margin-right: 0;
+}
+
+.btn-sm + .dropdown-toggle-split, .btn-group-sm &gt; .btn + .dropdown-toggle-split {
+  padding-right: 0.375rem;
+  padding-left: 0.375rem;
+}
+
+.btn-lg + .dropdown-toggle-split, .btn-group-lg &gt; .btn + .dropdown-toggle-split {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.btn-group-vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.btn-group-vertical &gt; .btn,
+.btn-group-vertical &gt; .btn-group {
+  width: 100%;
+}
+.btn-group-vertical &gt; .btn:not(:first-child),
+.btn-group-vertical &gt; .btn-group:not(:first-child) {
+  margin-top: calc(var(--bs-border-width) * -1);
+}
+.btn-group-vertical &gt; .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical &gt; .btn-group:not(:last-child) &gt; .btn {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.btn-group-vertical &gt; .btn ~ .btn,
+.btn-group-vertical &gt; .btn-group:not(:first-child) &gt; .btn {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+```</md></sn>
   <config>
     <tags>#button group</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 25 2025 16:46:03 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 25 2025 16:50:04 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-z1TbvOFJ0z</id>
     <duration></duration>
   </config>
+<sn><md>### Example
+
++++ see
+
+```html
+<div>
+    
+<div class="col-8 mx-auto p-3 border border-bottom-0 rounded-top-2">
+
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-primary">Left</button>
+    <button type="button" class="btn btn-primary">Middle</button>
+    <button type="button" class="btn btn-primary">Right</button>
+  </div>
+
+</div>
+
+
+<div class="col-8 mx-auto p-3 border border-bottom-0">
+  <div class="btn-group">
+    <a href="#" class="btn btn-primary active" aria-current="page">Active link</a>
+    <a href="#" class="btn btn-primary">Link</a>
+    <a href="#" class="btn btn-primary">Link</a>
+  </div>
+</div>
+
+
+<div class="col-8 mx-auto p-3 border border-bottom-0">
+  <div class="btn-group" role="group" aria-label="Basic outlined example">
+    <button type="button" class="btn btn-outline-primary">Left</button>
+    <button type="button" class="btn btn-outline-primary">Middle</button>
+    <button type="button" class="btn btn-outline-primary">Right</button>
+  </div>
+</div>
+
+
+<div class="col-8 mx-auto p-3 border border-bottom-0">
+  <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+
+    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+
+    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+  </div>
+</div>
+
+
+
+<div class="col-8 mx-auto p-3 border border-bottom-0">
+  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked="">
+    <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
+
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
+
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+  </div>  
+</div>
+
+
+<div class="col-8 mx-auto p-3 border border-bottom-0">
+
+  <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+    <button type="button" class="btn btn-outline-primary">Left</button>
+    <button type="button" class="btn btn-outline-primary">Middle</button>
+    <button type="button" class="btn btn-outline-primary">Right</button>
+  </div>
+  <br>
+  <div class="btn-group" role="group" aria-label="Default button group">
+    <button type="button" class="btn btn-outline-primary">Left</button>
+    <button type="button" class="btn btn-outline-primary">Middle</button>
+    <button type="button" class="btn btn-outline-primary">Right</button>
+  </div>
+  <br>
+  <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+    <button type="button" class="btn btn-outline-primary">Left</button>
+    <button type="button" class="btn btn-outline-primary">Middle</button>
+    <button type="button" class="btn btn-outline-primary">Right</button>
+  </div>  
+
+</div>
+
+
+
+
+<div class="col-8 mx-auto p-3 border border-bottom-0">
+
+<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+  <button type="button" class="btn btn-primary">Button</button>
+  <button type="button" class="btn btn-primary">Button</button>
+  <button type="button" class="btn btn-primary">Button</button>
+  <button type="button" class="btn btn-primary">Button</button>
+</div>
+
+</div>
+
+
+<div class="col-8 mx-auto p-3 border rounded-bottom-2">
+  <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked="">
+    <label class="btn btn-outline-danger" for="vbtn-radio1">Radio 1</label>
+    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+    <label class="btn btn-outline-danger" for="vbtn-radio2">Radio 2</label>
+    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+    <label class="btn btn-outline-danger" for="vbtn-radio3">Radio 3</label>
+  </div>  
+</div>
+
+
+</div>
+```
+
++++
+</md></sn>
