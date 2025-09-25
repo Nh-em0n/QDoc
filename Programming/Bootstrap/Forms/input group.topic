@@ -1,10 +1,103 @@
 
-  <sn></sn>
+  <sn><md>### Input Group
+
+```css
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+.input-group &gt; .form-control,
+.input-group &gt; .form-select,
+.input-group &gt; .form-floating {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+}
+.input-group &gt; .form-control:focus,
+.input-group &gt; .form-select:focus,
+.input-group &gt; .form-floating:focus-within {
+  z-index: 5;
+}
+.input-group .btn {
+  position: relative;
+  z-index: 2;
+}
+.input-group .btn:focus {
+  z-index: 5;
+}
+
+.input-group-text {
+  display: flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  text-align: center;
+  white-space: nowrap;
+  background-color: var(--bs-tertiary-bg);
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+}
+
+.input-group-lg &gt; .form-control,
+.input-group-lg &gt; .form-select,
+.input-group-lg &gt; .input-group-text,
+.input-group-lg &gt; .btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: var(--bs-border-radius-lg);
+}
+
+.input-group-sm &gt; .form-control,
+.input-group-sm &gt; .form-select,
+.input-group-sm &gt; .input-group-text,
+.input-group-sm &gt; .btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: var(--bs-border-radius-sm);
+}
+
+.input-group-lg &gt; .form-select,
+.input-group-sm &gt; .form-select {
+  padding-right: 3rem;
+}
+
+.input-group:not(.has-validation) &gt; :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
+.input-group:not(.has-validation) &gt; .dropdown-toggle:nth-last-child(n+3),
+.input-group:not(.has-validation) &gt; .form-floating:not(:last-child) &gt; .form-control,
+.input-group:not(.has-validation) &gt; .form-floating:not(:last-child) &gt; .form-select {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group.has-validation &gt; :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
+.input-group.has-validation &gt; .dropdown-toggle:nth-last-child(n+4),
+.input-group.has-validation &gt; .form-floating:nth-last-child(n+3) &gt; .form-control,
+.input-group.has-validation &gt; .form-floating:nth-last-child(n+3) &gt; .form-select {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group &gt; :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  margin-left: calc(var(--bs-border-width) * -1);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group &gt; .form-floating:not(:first-child) &gt; .form-control,
+.input-group &gt; .form-floating:not(:first-child) &gt; .form-select {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+```</md></sn>
   <config>
     <tags>#input group</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 25 2025 20:08:58 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 25 2025 20:09:11 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-KfH9S3BI96</id>
     <duration></duration>
   </config>
