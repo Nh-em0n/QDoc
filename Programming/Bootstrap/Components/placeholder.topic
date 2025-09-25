@@ -1,10 +1,143 @@
 
-  <sn></sn>
+  <sn><md>### placeholder
+
+```css
+.placeholder {
+  display: inline-block;
+  min-height: 1em;
+  vertical-align: middle;
+  cursor: wait;
+  background-color: currentcolor;
+  opacity: 0.5;
+}
+.placeholder.btn::before {
+  display: inline-block;
+  content: "";
+}
+
+.placeholder-xs {
+  min-height: 0.6em;
+}
+
+.placeholder-sm {
+  min-height: 0.8em;
+}
+
+.placeholder-lg {
+  min-height: 1.2em;
+}
+```
+
+```css
+.placeholder-glow .placeholder {
+  animation: placeholder-glow 2s ease-in-out infinite;
+}
+
+@keyframes placeholder-glow {
+  50% {
+    opacity: 0.2;
+  }
+}
+.placeholder-wave {
+  -webkit-mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
+  mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
+  -webkit-mask-size: 200% 100%;
+  mask-size: 200% 100%;
+  animation: placeholder-wave 2s linear infinite;
+}
+
+@keyframes placeholder-wave {
+  100% {
+    -webkit-mask-position: -200% 0%;
+    mask-position: -200% 0%;
+  }
+}
+```</md></sn>
   <config>
     <tags>#placeholder</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 25 2025 12:02:41 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 25 2025 12:05:15 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-npO1qbLSkH</id>
     <duration></duration>
   </config>
+<sn><md>### Example
+
++++ see
+
+```html
+
+<div>
+    
+<div class="col-8 mx-auto p-3 border border-bottom-0 rounded-top-2">
+
+<div class="card" aria-hidden="true">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title placeholder-glow">
+      <span class="placeholder col-6"></span>
+    </h5>
+    <p class="card-text placeholder-glow">
+      <span class="placeholder col-7"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-6"></span>
+      <span class="placeholder col-8"></span>
+    </p>
+    <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+  </div>
+</div>
+
+</div>
+
+
+
+<div class="col-8 mx-auto p-3 border border-bottom-0">
+
+<h3>Width</h3>  
+<span class="placeholder col-6"></span>
+<span class="placeholder w-75"></span>
+<span class="placeholder" style="width: 25%;"></span>
+
+</div>
+
+
+<div class="col-8 mx-auto p-3 border border-bottom-0">
+  <h3>Color</h3>
+  <span class="placeholder col-12"></span>
+  <span class="placeholder col-12 bg-primary"></span>
+  <span class="placeholder col-12 bg-secondary"></span>
+  <span class="placeholder col-12 bg-success"></span>
+  <span class="placeholder col-12 bg-danger"></span>
+  <span class="placeholder col-12 bg-warning"></span>
+  <span class="placeholder col-12 bg-info"></span>
+  <span class="placeholder col-12 bg-light"></span>
+  <span class="placeholder col-12 bg-dark"></span>  
+</div>
+
+
+<div class="col-8 mx-auto p-3 border border-bottom-0">
+<h3>Sizing</h3> 
+  <span class="placeholder col-12 placeholder-lg"></span>
+  <span class="placeholder col-12"></span>
+  <span class="placeholder col-12 placeholder-sm"></span>
+  <span class="placeholder col-12 placeholder-xs"></span>
+</div>
+
+
+<div class="col-8 mx-auto p-3 border rounded-bottom-2">
+  <h3>Animation</h3>
+  <p class="placeholder-glow">
+    <span class="placeholder col-12"></span>
+  </p>
+
+  <p class="placeholder-wave">
+    <span class="placeholder col-12"></span>
+  </p>    
+</div>
+
+
+</div>
+```
+
++++</md></sn>
