@@ -1,10 +1,26 @@
 
-  <sn></sn>
+  <sn><md>### Figure
+
+```css
+.figure {
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.figure-caption {
+  font-size: 0.875em;
+  color: var(--bs-secondary-color);
+}
+```</md></sn>
   <config>
     <tags>#figure</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Sep 26 2025 18:01:26 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Sep 26 2025 18:01:54 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-COIqdmlnSr</id>
     <duration></duration>
   </config>
