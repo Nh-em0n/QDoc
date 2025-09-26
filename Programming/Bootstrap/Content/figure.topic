@@ -20,7 +20,16 @@
     <tags>#figure</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Sep 26 2025 18:01:54 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Sep 26 2025 18:03:35 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-COIqdmlnSr</id>
     <duration></duration>
   </config>
+<sn><md>### Example
+
+```html
+<figure class="figure">
+  <img src="https://images.pexels.com/photos/3693732/pexels-photo-3693732.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=627&amp;w=1200" class="figure-img img-fluid rounded" alt="...">
+ <figcaption class="figure-caption">A caption for the above image.</figcaption>
+</figure>
+
+```</md></sn>
