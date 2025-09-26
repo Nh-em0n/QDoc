@@ -1,10 +1,50 @@
 
-  <sn></sn>
+  <sn><md>### Image
+
+
+```css
+img,
+svg {
+  vertical-align: middle;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-thumbnail {
+  padding: 0.25rem;
+  background-color: var(--bs-body-bg);
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  max-width: 100%;
+  height: auto;
+}
+```
+
+#### Example
+
+```html
+<div>
+    
+<div class="col-8 mx-auto p-3 border border-bottom-0 rounded-top-2">
+  <h3>Responsive Image</h3>
+  <img src="https://images.pexels.com/photos/3693732/pexels-photo-3693732.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=627&amp;w=1200" class="img-fluid" alt="...">
+</div>
+
+
+<div class="col-8 mx-auto p-3 border rounded-bottom-2">
+  <h3>Thumbnail</h3>
+    <img src="https://images.pexels.com/photos/7801146/pexels-photo-7801146.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=627&amp;w=1200" class="img-thumbnail" alt="...">  
+</div>
+
+</div>
+```</md></sn>
   <config>
     <tags>#image</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Sep 26 2025 18:25:35 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Sep 26 2025 18:26:22 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-hzRO6Jjqic</id>
     <duration></duration>
   </config>
