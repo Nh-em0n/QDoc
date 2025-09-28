@@ -17,14 +17,12 @@
 | `<stdint.h>`    | Fixed-width integer types: `int8_t`, `uint32_t`, `INT64_MAX` (C99 and later)    |
 | `<errno.h>`     | Defines macros for reporting error conditions (`errno`, `perror()`)             |
 | `<signal.h>`    | Signal handling: `signal()`, `raise()`, and signal macros like `SIGINT`         |
-| `<setjmp.h>`    | Provides `setjmp()` and `longjmp()` for non-local jumps (error handling)        |
-
-</setjmp.h></signal.h></errno.h></stdint.h></stddef.h></assert.h></float.h></limits.h></stdbool.h></time.h></ctype.h></math.h></string.h></stdlib.h></stdio.h></md></sn>		
+| `<setjmp.h>`    | Provides `setjmp()` and `longjmp()` for non-local jumps (error handling)        |</setjmp.h></signal.h></errno.h></stdint.h></stddef.h></assert.h></float.h></limits.h></stdbool.h></time.h></ctype.h></math.h></string.h></stdlib.h></stdio.h></md></sn>		
 	<config>
 		<tags>#07.common header files</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Sun Jul 20 2025 23:24:50 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Sun Sep 28 2025 11:26:37 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-HLV2Eyyv7N</id>
 		<duration></duration>
 	</config>
