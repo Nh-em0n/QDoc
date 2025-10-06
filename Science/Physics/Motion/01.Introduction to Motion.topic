@@ -1,10 +1,69 @@
 
-  <sn></sn>
+  <sn class="col-12 col-md-11 ignore p-3 p-md-4 p-lg-5"><md>### Rest and Motion
+
+:::.row
+:::.col-12 .col-lg-6
+* when an object does not change its position with respect to time, then it is at `rest`.
+* When an object changes it position with time, then it is in `motion`.
+* We have to know both `direction and distance` to know the position of any object.
+* The point from which a position of an object is determined is called `reference point` or origin.
+* Every motion is relative.
+* We can consider any point as the origin, which seems stationary to us.
+:::
+
+:::.col-12 .col-lg-6
+![motion](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Cossus_cossus_larva_movement.gif/640px-Cossus_cossus_larva_movement.gif)
+![direction and distance](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Finland_road_sign_H2.2-2-A.svg/640px-Finland_road_sign_H2.2-2-A.svg.png)
+:::
+:::
+
+
++++ read...
+If we want to search out an absolute rest reference point, we will be in trouble. If we consider anything on the surface of the earth as origin, one can object, as earth is not stationary rather it is rotating about its own axis, so everything on its surface is also rotating. 
+
+Alternatively we can say, the center of the earth is the origin. Then someone else can come up with the objection that the centre of the earth is not stationary, it revolves round the sun.
+
+Then we can say more intelligently, the centre of the sun must be the origin! Then another person can confidently say that the sun is also not stationary it is also revolving around the centre of our galaxy. Surely you are feeling that no one can dare to say, the centre of our galaxy is the origin! Who can say that the galaxy and the universe are stationary? Not only this, if the centre of the galaxy is considered as the origin to describe any position on the surface, do you realize the extent of complexities that may arise?
++++
+</md></sn><sn class="col-12 col-md-11 ignore p-3 p-md-4 p-lg-5"><md>### Linear Motion
+
+* If anything moves along a straight line then its motion is a called linear motion.
+* If a ball is allowed to fall from a height, it will fall straight downwards, so it is a linear motion.</md></sn><sn class="col-12 col-md-11 ignore p-3 p-md-4 p-lg-5"><md>### Circular Motion
+
+:::.row
+
+:::.col-12 .col-lg-6
+* When a body rotates about a particular point or a line, keeping the distance of the particles of the body unchanged, it is called `circular motion`.
+* The motion of electric fans, the hands of clocks et are examples of circular motion.
+* A wonderful example of circular motion is the moon in the sky. The moon is not tied by to the earth although it is revolving around the earth, neither is it falling on to the earth's surface.
+:::
+
+:::.col-12 .col-lg-6
+![img](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Uniform-cirular-translation.gif/640px-Uniform-cirular-translation.gif)
+:::
+:::
+
++++ see moon revolve
+![img](https://media.tenor.com/BYl4gCzKWj4AAAAM/earth-revolve.gif)
++++</md></sn>
   <config>
     <tags>#01.introduction to motion</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Oct 06 2025 12:13:04 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Oct 06 2025 13:34:17 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-dwopSXRZvl</id>
     <duration></duration>
   </config>
+<sn class="col-12 col-md-11 ignore p-3 p-md-4 p-lg-5"><md>### Translational Motion
+
+:::.row
+:::.col-12 .col-lg-6
+* If an object moves in such a way that all the particles of the object travel the same **distance**, at the same **time**, in the same **direction** then its motion is called translational motion.
+* If we do not consider the circular motion of the wheel of a car then straight advancement of the car is an example of translational motion. At this time every point of the car will travel the same distance, in equal time, in the same direction.
+* There is no obligation that the translation motion will be straight.
+:::
+
+:::.col-12 .col-lg-6
+![img](https://i.ytimg.com/vi/MXa4iDJHwa0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&amp;rs=AOn4CLAGca4ysBCdFUPyde2r4pDDSlwuiQ)
+:::
+:::</md></sn>
