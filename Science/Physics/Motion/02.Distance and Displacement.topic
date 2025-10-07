@@ -10,11 +10,15 @@
     <tags>#02.distance and displacement</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 07 2025 12:47:09 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 07 2025 12:55:21 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-kkn77P2Czu</id>
     <duration></duration>
   </config>
-<sn><md>## Distance vs Displacement
+<sn class="col-12 col-md-10 ignore p-3 p-md-4 p-lg-5"><md>## Distance vs Displacement{.text-center}
+
+:::.col-12 col-md-7 mx-auto
+![diagram](https://i.imgur.com/5r07HDN.png) 
+:::
 
 | **Feature**          | **Distance**                                                      | **Displacement**                                                                        |
 | -------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
@@ -24,5 +28,4 @@
 | **Value**            | Always positive.                                                  | Can be positive, negative, or zero depending on direction.                              |
 | **Symbol**           | Usually denoted by *s* or *d*.                                    | Usually denoted by **→s** or **→d**.                                                    |
 | **Example**          | A cyclist travels 4 km along a curved path.                       | The straight-line distance between start and end points is 3 km in a certain direction. |
-| **Relation**         | Distance ≥ Displacement.                                          | Displacement ≤ Distance.                                                                |
-</md></sn>
+| **Relation**         | Distance ≥ Displacement.                                          | Displacement ≤ Distance.                                                                |</md></sn>
