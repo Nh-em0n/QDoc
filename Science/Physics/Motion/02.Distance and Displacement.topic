@@ -10,7 +10,19 @@
     <tags>#02.distance and displacement</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 07 2025 12:17:28 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 07 2025 12:47:09 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-kkn77P2Czu</id>
     <duration></duration>
   </config>
+<sn><md>## Distance vs Displacement
+
+| **Feature**          | **Distance**                                                      | **Displacement**                                                                        |
+| -------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| **Definition**       | The total length of the actual path travelled between two points. | The shortest straight-line distance between the initial and final positions.            |
+| **Type of Quantity** | Scalar (has only magnitude).                                      | Vector (has both magnitude and direction).                                              |
+| **Path Dependence**  | Depends on the path taken.                                        | Independent of the path; depends only on start and end points.                          |
+| **Value**            | Always positive.                                                  | Can be positive, negative, or zero depending on direction.                              |
+| **Symbol**           | Usually denoted by *s* or *d*.                                    | Usually denoted by **→s** or **→d**.                                                    |
+| **Example**          | A cyclist travels 4 km along a curved path.                       | The straight-line distance between start and end points is 3 km in a certain direction. |
+| **Relation**         | Distance ≥ Displacement.                                          | Displacement ≤ Distance.                                                                |
+</md></sn>
