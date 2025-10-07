@@ -27,8 +27,19 @@ Then we can say more intelligently, the centre of the sun must be the origin! Th
 +++
 </md></sn><sn class="col-12 col-md-11 ignore p-3 p-md-4 p-lg-5"><md>### Linear Motion
 
-* If anything moves along a straight line then its motion is a called linear motion.
-* If a ball is allowed to fall from a height, it will fall straight downwards, so it is a linear motion.</md></sn><sn class="col-12 col-md-11 ignore p-3 p-md-4 p-lg-5"><md>### Circular Motion
+:::.row
+
+:::.col-12 .col-lg-8
+* If anything moves along a ++straight line++ then its motion is a called linear motion.
+* If a ball is allowed to fall from a height, it will fall straight downwards, so it is a linear motion.
+:::
+
+:::.col-12 .col-lg-4
+![img](https://i.imgur.com/CjmFua1.png)
+:::
+
+:::
+</md></sn><sn class="col-12 col-md-11 ignore p-3 p-md-4 p-lg-5"><md>### Circular Motion
 
 :::.row
 
@@ -50,7 +61,7 @@ Then we can say more intelligently, the centre of the sun must be the origin! Th
     <tags>#01.introduction to motion</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Oct 06 2025 13:34:17 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 07 2025 11:49:18 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-dwopSXRZvl</id>
     <duration></duration>
   </config>
@@ -66,4 +77,42 @@ Then we can say more intelligently, the centre of the sun must be the origin! Th
 :::.col-12 .col-lg-6
 ![img](https://i.ytimg.com/vi/MXa4iDJHwa0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&amp;rs=AOn4CLAGca4ysBCdFUPyde2r4pDDSlwuiQ)
 :::
-:::</md></sn>
+:::</md></sn><sn class="col-12 col-md-11 ignore p-3 p-md-4 p-lg-5"><md>### Periodic Motion{.text-center}
+
+:::.row
+
+:::.col-12 .col-lg-8
+* If the motion of a moving object passes repeatedly through a ++definite point++ in the same `direction` in the same `manner` in a ++definite interval of time++, then this motion is called a **periodic motion**.
+* The time interval over which this repetition occurs is called the period of the motion.
+* In a periodic motion, a moving particle traverses each point in its path with the same speed after each period. 
+* The vibrational motion of our heart is periodic, since it vibrates in the same direction in the same manner after a definite interval of time. 
+* The periodic motion may be circular (motion of the blades of a fan), hyperbolic ( orbit of Haley's Comet around the sun) or linear ( oscillatory motion of an object hanging from a spring).
+:::
+
+:::.col-12 .col-lg-4
+![heart-pump-gif](https://i.pinimg.com/originals/c1/13/27/c1132786380aa926155a80b54912352f.jpg)
+![fan-moving-gif](https://usagif.com/wp-content/uploads/2022/fzk5d/fan-gif-59-silver-moving-fan.gif)
+:::
+
+:::
+</md></sn><sn class="col-12 col-md-11 ignore p-3 p-md-4 p-lg-5"><md>### Simple Harmonic Motion {.text-center}
+
+:::.row
+
+:::.col-12 .col-lg-8
+* Simple harmonic motion is a special type of **periodic motion**.
+* In case of oscillatory motion the object oscillates on both sides of a definite point.This specific point is called the equilibrium point.
+* At the extreme ends of its path, the particle's velocity is zero. As the particle moves from one end toward the equi- librium point, its velocity gradually increases, reaching a maximum at the equi-librium point.
+* As it continues toward the opposite end, its velocity decreases gradually until it again becomes zero. The particle then reverses direction, moving back in the same manner until it reaches the original end and briefly stops. This entire process takes one period. This pattern of the motion gets repeated.
+* There are so many examples of oscillatory motion around us.The motion of an object hanging from a spring is an example of oscillatory motion. The oscillatory baby on a swing (Figure 2.02) or the pendulum of a clock are the examples of oscillatory motion.When we speak, the air molecules carry the sound forward by this type of motion.
+:::
+
+:::.col-12 .col-lg-4
+![gif](http://www.netanimations.net/Moving-animated-clip-art-picture-of-pendulum-x-bpm-1.gif)
+![diagram](https://i.imgur.com/1jE52Gr.png)
+:::
+
+:::
+
+
+So far we have discussed some special types of motion but the causes of these motions have not been mentioned anywhere..The major success of physics is that not only can it find the causes of the different types of motion of objects but it can also explain the motion very clearly.</md></sn>
