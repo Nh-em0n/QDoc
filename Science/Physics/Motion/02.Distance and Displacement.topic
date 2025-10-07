@@ -1,10 +1,16 @@
 
-  <sn></sn>
+  <sn><md>### Scalar and Vector
+
+* Anything that can be measured is called a **quantity**. Feelings like joy and sorrow are not quantities because they cannot be measured, but **temperature** is, as it can be given a numerical value (e.g., 37°C).
+* Quantities that can be expressed by a single number are called **scalar quantities**, such as **time, length, mass, and temperature**.
+* Some quantities need both **magnitude** and **direction** to be completely described; these are called **vector quantities**. Examples include **position, velocity, and force**.
+* Vectors are often written in **bold letters** (e.g., **A, B**) or with an **arrow** above them (→A) when written by hand.
+</md></sn>
   <config>
     <tags>#02.distance and displacement</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 07 2025 12:09:30 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 07 2025 12:17:28 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-kkn77P2Czu</id>
     <duration></duration>
   </config>
