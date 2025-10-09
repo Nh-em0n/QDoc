@@ -1,10 +1,44 @@
 
-  <sn></sn>
+  <sn><md>## TabIndex{.text-center}
+
+| **Value** | **Meaning**                                                                                                                                                                         |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Negative  | Element will be focusable, but it should not be reachable via sequential keyboard navigation.                                                                                       |
+| 0         | Element will be focusable and reachable through keyboard sequential navigation, but its relative order is defined by the platform convention.                                       |
+| Positive  | Element must be focusable and accessible via sequential keyboard navigation; its relative order will be defined by the attribute value, following increasing numbers of `tabindex`. |
+</md></sn>
   <config>
     <tags>#tabindex</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 11:45:55 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 11:54:19 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-pg5EkyxWJH</id>
     <duration></duration>
   </config>
+<sn><md>### Add an Element to the Tabbing Order
+
+```html
+<div tabindex="0">Some button</div>
+```
+
+**Note:** Try to use a native HTML `button` or `a` tag where appropriate.
+
+### Remove an Element from the Tabbing Order
+
+```html
+<button tabindex="-1">This button will not be reachable by tab</button>
+```
+
+The element will be removed from the tabbing order but will still be focusable.
+
+### Define a Custom Tabbing Order (Not Recommended)
+
+```html
+<div tabindex="2">Second</div>
+<div tabindex="1">First</div>
+```
+
+* Positive `tabindex` values will insert the element at the tabbing order position of its respective value.
+* Elements without preference (i.e., `tabindex="0"` or native elements such as `button` and `a`) will be appended after those with preference.
+* **Warning:** Positive values are not recommended as they disrupt the expected behavior of tabbing and might confuse users who rely on screen readers. Try to create a natural order by rearranging your DOM structure.
+</md></sn>
