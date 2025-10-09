@@ -8,7 +8,344 @@
     <tags>#00.introduction</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 08:39:58 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 09:19:24 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-d6tJQQSHZX</id>
     <duration></duration>
   </config>
+<sn><md>### HTML `<link>` Tag Attributes: Detailed Explanation with Examples
+
+Below is a detailed discussion of each `<link>` tag attribute, including examples of how they are used **with** and **without** the attribute.</md></sn><sn><md>### `charset`
+
+Specifies the character encoding of the linked document. It’s rarely used with `<link>` and more common with `</md></sn><sn><md>### `crossorigin`
+
+Defines how the browser handles cross-origin requests for linked resources such as fonts or external stylesheets.
+Values:
+
+* `anonymous` → No credentials (cookies, authentication headers) sent.
+* `use-credentials` → Credentials sent with the request.
+
+**Example (with `crossorigin`):**
+
+```html
+<link rel="stylesheet" href="https://cdn.example.com/theme.css" crossorigin="anonymous">
+```
+
+**Example (without `crossorigin`):**
+
+```html
+<link rel="stylesheet" href="https://cdn.example.com/theme.css">
+```
+
+If the resource is hosted on the same origin, `crossorigin` is not required.
+
++++ read more...
+
+### What “Cross-Origin” Means
+
+In the web world, an **origin** is defined by three things together:
+
+```
+scheme (protocol) + domain (hostname) + port
+```
+
+Example origins:
+
+* `https://example.com:443`
+* `http://example.com:80`
+* `https://sub.example.com`
+
+Two URLs are considered **same-origin** if all three parts match exactly.
+If any one differs — for example, the domain or protocol — it’s **cross-origin**.
+
+---
+
+### Why Browsers Care About This (Same-Origin Policy)
+
+Browsers implement something called the **Same-Origin Policy (SOP)**.
+This security rule prevents a website (say, `example.com`) from reading data from another domain (like `othersite.com`) **unless that other site allows it**.
+
+Without SOP, a malicious site could secretly read your personal data from another open tab (e.g., your email inbox, banking info).
+
+---
+
+### What Causes “Cross-Origin Errors”
+
+You usually see **cross-origin errors** when a webpage tries to:
+
+1. **Fetch data** (using `fetch()` or `XMLHttpRequest`) from another domain,
+2. **Embed content** like an `<iframe>` or `<script>` from another domain,
+3. **Use resources** (like fonts, stylesheets, or images) hosted elsewhere,
+   and the target server **does not allow cross-origin access**.
+
+### Common Error Messages
+
+In the browser console, you might see errors like:
+
+```
+Access to fetch at 'https://api.othersite.com/data' 
+from origin 'https://example.com' has been blocked by CORS policy:
+No 'Access-Control-Allow-Origin' header is present on the requested resource.
+```
+
+This means your site tried to get data from another domain,
+but the server didn’t give permission via the required headers.
+
+---
+
+### How Servers Allow Cross-Origin Access (CORS)
+
+To safely control which external sites can access their resources, servers use **CORS (Cross-Origin Resource Sharing)**.
+
+When a browser makes a cross-origin request, it first checks the **response headers** for something like:
+
+```
+Access-Control-Allow-Origin: https://example.com
+```
+
+or
+
+```
+Access-Control-Allow-Origin: *
+```
+
+If this header is present, the browser allows the resource to load.
+If not, the request is blocked and you get a **CORS error**.
+
+---
+
+### Common Scenarios
+
+#### 1. Loading External Fonts or Styles
+
+If you load a font from another domain, the font server must allow it.
+
+```html
+<link rel="stylesheet" href="https://cdn.example.com/theme.css" crossorigin="anonymous">
+```
+
+The server must respond with:
+
+```
+Access-Control-Allow-Origin: *
+```
+
+If not, the font may fail to load due to CORS restrictions.
+
+---
+
+#### 2. Fetching Data via JavaScript
+
+```javascript
+fetch('https://api.othersite.com/data')
+  .then(r => r.json())
+  .then(console.log)
+```
+
+If `https://api.othersite.com` doesn’t allow CORS,
+you’ll see a **CORS policy** error in the console.
+
+To fix this, the API server needs to include:
+
+```
+Access-Control-Allow-Origin: https://yourdomain.com
+```
+
+---
+
+#### 3. Embedding an Iframe
+
+```html
+<iframe src="https://othersite.com"></iframe>
+```
+
+You might still see restrictions if the embedded site sends headers like:
+
+```
+X-Frame-Options: SAMEORIGIN
+```
+
+or
+
+```
+Content-Security-Policy: frame-ancestors 'none';
+```
+
+That means the site has **explicitly forbidden being embedded** on other domains.
+
+---
+
+### The `crossorigin` Attribute in `<link>`, `</md></sn><sn><md>### `href`
+
+Specifies the URL or path of the resource to be linked. This is a **required** attribute for `<link>`.
+
+**Example (with `href`):**
+
+```html
+<link rel="stylesheet" href="theme.css">
+```
+
+**Example (without `href`):**
+
+```html
+<link rel="stylesheet">
+```
+
+Without `href`, the `<link>` does nothing because no resource is provided.
+</md></sn><sn><md>### `hreflang`
+
+Indicates the language of the linked resource. It’s mostly useful for alternate pages in different languages.
+
+**Example (with `hreflang`):**
+
+```html
+<link rel="alternate" href="about-fr.html" hreflang="fr">
+```
+
+**Example (without `hreflang`):**
+
+```html
+<link rel="alternate" href="about-fr.html">
+```
+
+The link still works, but search engines can’t identify the language easily.
+</md></sn><sn><md>### `media`
+
+Specifies the media type or condition that determines when the linked document is applied. Commonly used for responsive designs or print styles.
+
+**Example (with `media`):**
+
+```html
+<link rel="stylesheet" href="dark-theme.css" media="(prefers-color-scheme: dark)">
+```
+
+**Example (without `media`):**
+
+```html
+<link rel="stylesheet" href="dark-theme.css">
+```
+
+Without `media`, the stylesheet applies to all devices.
+</md></sn><sn><md>### `rel`
+
+Defines the relationship between the current document and the linked resource.
+It’s a **required** attribute in the `<link>` tag.
+
+**Example (with `rel`):**
+
+```html
+<link rel="stylesheet" href="theme.css">
+```
+
+**Example (without `rel`):**
+
+```html
+<link href="theme.css">
+```
+
+Without `rel`, the browser doesn’t know the purpose of the linked file, so it’s ignored.
+</md></sn><sn><md>### `rev`
+
+Defines the reverse relationship from the linked resource back to the current page.
+This attribute is obsolete in modern HTML.
+
+**Example (with `rev`):**
+
+```html
+<link rev="stylesheet" href="style.css">
+```
+
+**Example (without `rev`):**
+
+```html
+<link rel="stylesheet" href="style.css">
+```
+
+Modern browsers ignore `rev`, so it’s best to avoid using it.
+</md></sn><sn><md>### `sizes`
+
+Defines the size of an icon file when used with `rel="icon"`.
+Helps browsers choose the best size for various screens.
+
+**Example (with `sizes`):**
+
+```html
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+```
+
+**Example (without `sizes`):**
+
+```html
+<link rel="icon" href="favicon.ico">
+```
+
+Without `sizes`, browsers assume it’s a default icon.
+</md></sn><sn><md>### `target`
+
+Specifies where the linked document should open.
+Mostly used with `<a>` elements, not `<link>`.
+
+**Example (with `target`):**
+
+```html
+<link rel="help" href="help.html" target="_blank">
+```
+
+**Example (without `target`):**
+
+```html
+<link rel="help" href="help.html">
+```
+
+Browsers usually ignore `target` for `<link>` elements.
+</a></md></sn><sn><md>### `type`
+
+Defines the MIME type of the linked document.
+For CSS files, it’s typically `text/css`.
+
+**Example (with `type`):**
+
+```html
+<link rel="stylesheet" href="theme.css" type="text/css">
+```
+
+**Example (without `type`):**
+
+```html
+<link rel="stylesheet" href="theme.css">
+```
+
+Modern browsers automatically detect the MIME type, so it’s optional.
+</md></sn><sn><md>### `integrity`
+
+Allows browsers to verify the linked file’s integrity using a cryptographic hash.
+Prevents tampering or unauthorized modifications to external files.
+
+**Example (with `integrity` and `crossorigin`):**
+
+```html
+<link rel="stylesheet" href="https://cdn.example.com/theme.css" integrity="sha384-abc123..." crossorigin="anonymous">
+```
+
+**Example (without `integrity`):**
+
+```html
+<link rel="stylesheet" href="https://cdn.example.com/theme.css">
+```
+
+Without `integrity`, there’s no security check — the browser assumes the resource is safe.
+</md></sn><sn><md>### Summary Table
+
+| **Attribute** | **Used For**            | **Common Use Case**        | **Optional/Required** |
+| ------------- | ----------------------- | -------------------------- | --------------------- |
+| `charset`     | Character encoding      | Rarely used                | Optional              |
+| `crossorigin` | Cross-origin handling   | External fonts/CSS         | Optional              |
+| `href`        | Resource location       | Linking stylesheet or icon | **Required**          |
+| `hreflang`    | Language of linked file | Alternate pages            | Optional              |
+| `media`       | Device/media query      | Responsive design          | Optional              |
+| `rel`         | Relationship type       | Stylesheet, icon, preload  | **Required**          |
+| `rev`         | Reverse relation        | Obsolete                   | Deprecated            |
+| `sizes`       | Icon size               | Favicon or app icon        | Optional              |
+| `target`      | Load location           | Rare in `<link>`           | Optional              |
+| `type`        | MIME type               | CSS stylesheets            | Optional              |
+| `integrity`   | Security verification   | CDN resources              | Optional              |
+</md></sn>
