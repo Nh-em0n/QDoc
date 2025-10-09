@@ -1,10 +1,36 @@
 
-  <sn></sn>
+  <sn><md>### Character Entities in HTML
+
+Many symbols and special characters are required while developing a web page in HTML. However, sometimes using these characters directly may interfere with the actual HTML code, as certain characters are **reserved**, and others may not be **available on the keyboard**.
+
+To avoid these conflicts while still being able to use different symbols, **W3C provides “Character Entities.”**
+
+Character Entities are predefined in two forms:
+
+* **Entity Name:** `&amp;entity_name;`
+* **Entity Number:** `&amp;entity_number;`
+
+You can use either of these formats to render the required symbol on a webpage.
+
+A list of available Character Entities can be found here:
+👉 [https://dev.w3.org/html5/html-author/charref](https://dev.w3.org/html5/html-author/charref)
+
+### Example
+
+Using a character entity for a **magnifying glass** icon:
+
+```html
+<input type="text" placeholder="🔍 Search">
+```
+
+**Rendered Output:**
+🔍 Search
+</md></sn>
   <config>
     <tags>#01.character entities in html</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 18:35:00 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 18:41:54 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-05XLAKWDzG</id>
     <duration></duration>
   </config>
