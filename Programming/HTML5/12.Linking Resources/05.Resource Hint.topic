@@ -1,10 +1,73 @@
 
-  <sn></sn>
+  <sn><md>## Resource Hint{.text-center}
+
+* Preconnect
+* dns-prefetch
+* prefetch
+* prerender</md></sn>
   <config>
     <tags>#05.resource hint</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 09:50:17 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 09:58:17 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-45kqSP8jTp</id>
     <duration></duration>
   </config>
+<sn><md>### Preconnect
+
+The preconnect relationship is similar to dns-prefetch in that it will resolve the DNS. However, it will also make the TCP handshake, and optional TLS negotiation. This is an experimental feature.
+
+```html
+<link rel="preconnect" href="URL">
+```
+</md></sn><sn><md>### DNS-Prefetch
+
+Informs browsers to resolve the DNS for a URL, so that all assets from that URL load faster.
+
+```html
+<link rel="dns-prefetch" href="URL">
+```</md></sn><sn><md>### Prefetch
+
+Informs the browsers that a given resource should be prefetched so it can be loaded more quickly.
+
+```html
+<link rel="prefetch" href="URL">
+```
+
+DNS-Prefetch resolves only the domain name whereas prefetch downloads/stores the specified resources.
+</md></sn><sn><md>### Prerender
+
+Informs browsers to fetch and render the URL in the background, so that they can be delivered to the user instantaneously as the user navigates to that URL. This is an experimental feature.
+
+```html
+<link rel="prerender" href="URL">
+```</md></sn><sn><md>If you plan to **fetch data from an API later**, you should **not** use any of these `<link>` resource hints like `prefetch`, `preconnect`, or `prerender` for that purpose directly — because they are meant for **page and asset loading optimizations**, not for **API data requests**.
+
+However, here’s how they differ and which can help **indirectly**:
+
+| **Hint**           | **What it does**                                               | **When to use for API**                                                                                                                                     |
+| ------------------ | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`dns-prefetch`** | Only resolves the domain name early.                           | If the API domain is different from your site and you know you’ll call it later, this saves DNS lookup time.                                                |
+| **`preconnect`**   | Resolves DNS + opens TCP + optional TLS connection.            | **Best choice** if you know you’ll send an API request soon (e.g., within a few seconds). It prepares the connection, so your actual `fetch()` runs faster. |
+| **`prefetch`**     | Downloads a resource (like a JS, CSS, or image) ahead of time. | Not suitable for API data because it fetches files, not dynamic JSON.                                                                                       |
+| **`prerender`**    | Loads and renders an entire page in the background.            | Not used for APIs at all. Only for full page preloading.                                                                                                    |
+
+---
+
+### Best practice for APIs:
+
+If you know your page will soon need to call an external API, you can use **`preconnect`** in your HTML like this:
+
+```html
+<link rel="preconnect" href="https://api.example.com">
+```
+
+Then later in JavaScript:
+
+```js
+fetch("https://api.example.com/data")
+  .then(res =&gt; res.json())
+  .then(console.log);
+```
+
+This ensures the DNS, TCP, and TLS handshake are already done before `fetch()` starts — reducing latency slightly (especially for third-party APIs).</md></sn>
