@@ -1,10 +1,31 @@
 
-  <sn></sn>
+  <sn><md>### HTML Form Events
+
+Events triggered by actions inside an HTML form (these apply to almost all HTML elements but are most commonly used in form elements):
+
+```html
+<form onevent="doSomething()"></form>
+```
+
+
+| Attribute         | Description                                                                           |
+| ----------------- | ------------------------------------------------------------------------------------- |
+| **onblur**        | Fires the moment that the element loses focus.                                        |
+| **onchange**      | Fires the moment when the value of the element is changed.                            |
+| **oncontextmenu** | Script to be run when a context menu is triggered.                                    |
+| **onfocus**       | Fires the moment when the element gets focus.                                         |
+| **oninput**       | Script to be run when an element gets user input.                                     |
+| **oninvalid**     | Script to be run when an element is invalid.                                          |
+| **onreset**       | Fires when the Reset button in a form is clicked.                                     |
+| **onsearch**      | Fires when the user writes something in a search field (for `<input type="search">`). |
+| **onselect**      | Fires after some text has been selected in an element.                                |
+| **onsubmit**      | Fires when a form is submitted.                                                       |
+</md></sn>
   <config>
     <tags>#01.html form event attribute</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 18:26:57 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 18:32:19 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-WJVFUMfU3i</id>
     <duration></duration>
   </config>
