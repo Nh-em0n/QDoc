@@ -1,10 +1,52 @@
 
-  <sn></sn>
+  <sn><md>## Linking JavaScript{.text-center}
+
+### Synchronous Script
+
+```html
+
+```
+
+**Description:**
+The standard practice is to place JavaScript `
+```
+
+**Description:**
+The `async` attribute is used when the JavaScript code is **not required for page initialization**.
+The browser loads the script **in parallel** with the HTML and executes it as soon as it finishes downloading.
+However, this can interrupt HTML parsing temporarily to run the script, so order of execution is not guaranteed.
+
+---
+
+### Deferred Script
+
+```html
+
+```
+
+**Description:**
+Deferred scripts are similar to `async` scripts, but the key difference is timing:
+The script is **executed only after** the HTML document has been completely parsed.
+Deferred scripts maintain the **execution order** of their declaration, just like normal synchronous scripts.
+
+---
+
+### `<noscript>` Element
+
+```html
+<noscript>JavaScript disabled</noscript>
+```
+
+**Description:**
+The `<noscript>` element defines content that appears if the user has JavaScript disabled
+or if the browser does not support scripting.
+It can be placed inside either the `<head>` or the `<body>` of an HTML document.
+</noscript></md></sn>
   <config>
     <tags>#01.linking javascript</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 09:27:04 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 09:31:02 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ESVga019jA</id>
     <duration></duration>
   </config>
