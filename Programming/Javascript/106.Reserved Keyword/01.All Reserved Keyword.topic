@@ -1,10 +1,134 @@
 
-  <sn></sn>
+  <sn><md>### Keyword vs Identifier
+
+| **Aspect**        | **Keyword**                        | **Identifier**                         |
+| ----------------- | ---------------------------------- | -------------------------------------- |
+| Meaning           | Reserved word with special purpose | Programmer-defined name                |
+| Usage             | Part of JavaScript syntax          | Naming variables, functions, etc.      |
+| Can it be reused? | No                                 | Yes, as long as it’s not a keyword     |
+| Examples          | `if`, `for`, `return`, `class`     | `myVar`, `totalAmount`, `calculateSum` |
+
+</md></sn>
   <config>
     <tags>#01.all reserved keyword</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 20:26:55 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 20:46:19 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-YIf8RAHlog</id>
     <duration></duration>
   </config>
+<sn><md>### JavaScript Reserved Keywords
+
+These words **cannot be used as identifiers** (like variable names, function names, class names, etc.) because they have special meaning in JavaScript.
+
++++ see list..
+
+| **Keyword**  | **Description / Use**                                      |
+| ------------ | ---------------------------------------------------------- |
+| `break`      | Terminates a loop or switch statement.                     |
+| `case`       | Defines a case in a switch statement.                      |
+| `catch`      | Handles exceptions in a try...catch block.                 |
+| `class`      | Declares a class (ES6).                                    |
+| `const`      | Declares a block-scoped constant (ES6).                    |
+| `continue`   | Skips to the next iteration of a loop.                     |
+| `debugger`   | Invokes debugging functionality.                           |
+| `default`    | Specifies the default case in a switch, or default export. |
+| `delete`     | Deletes a property from an object.                         |
+| `do`         | Used with `while` to create a do...while loop.             |
+| `else`       | Executes code if the `if` condition is false.              |
+| `enum`       | Reserved for future use in ECMAScript.                     |
+| `export`     | Exports a module or value (ES6).                           |
+| `extends`    | Inherits another class (ES6).                              |
+| `false`      | Boolean literal for “false”.                               |
+| `finally`    | Executes code after try...catch, regardless of the result. |
+| `for`        | Creates a loop that iterates over sequences.               |
+| `function`   | Declares a function.                                       |
+| `if`         | Executes code if a condition is true.                      |
+| `import`     | Imports modules (ES6).                                     |
+| `in`         | Checks if a property exists in an object.                  |
+| `instanceof` | Tests if an object is an instance of a class.              |
+| `new`        | Creates an instance of an object or class.                 |
+| `null`       | Represents the null value.                                 |
+| `return`     | Returns a value from a function.                           |
+| `super`      | Refers to the parent class (ES6).                          |
+| `switch`     | Executes one of many code blocks.                          |
+| `this`       | Refers to the current object context.                      |
+| `throw`      | Throws an exception.                                       |
+| `true`       | Boolean literal for “true”.                                |
+| `try`        | Defines a block to test for errors.                        |
+| `typeof`     | Returns the data type of a variable.                       |
+| `var`        | Declares a variable (function-scoped).                     |
+| `void`       | Evaluates an expression without returning a value.         |
+| `while`      | Creates a loop that executes while a condition is true.    |
+| `with`       | Extends scope chain (deprecated).                          |
+| `yield`      | Pauses/resumes generator functions (ES6).                  |
+
++++
+
+---
+
+#### Future Reserved Words
+
+These are **reserved for future JavaScript versions** — you should **not use them** as identifiers.
+
++++ see
+| **Keyword**  | **Notes**                                             |
+| ------------ | ----------------------------------------------------- |
+| `enum`       | Planned for enumeration features.                     |
+| `implements` | Reserved for potential interface usage.               |
+| `interface`  | Reserved for interface declarations.                  |
+| `let`        | Already in use for block-scoped variables (ES6).      |
+| `package`    | Reserved for modular systems.                         |
+| `private`    | Reserved for private members (used in some contexts). |
+| `protected`  | Reserved for access modifiers.                        |
+| `public`     | Reserved for access modifiers.                        |
+| `static`     | Used for static members of classes.                   |
+| `await`      | Used in async functions (ES8).                        |
++++
+
+---
+
+#### Literals (cannot be used as identifiers)
+
+| **Literal** | **Meaning**   |
+| ----------- | ------------- |
+| `null`      | Null value    |
+| `true`      | Boolean true  |
+| `false`     | Boolean false |
+
+---
+
+#### Contextual Keywords (valid only in specific contexts)
+
+These words are **not strictly reserved**, but have special meanings in certain contexts.
+
++++ see
+| **Keyword** | **Context / Description**                  |
+| ----------- | ------------------------------------------ |
+| `as`        | Used in import/export statements.          |
+| `async`     | Declares asynchronous functions.           |
+| `from`      | Used in import/export statements.          |
+| `get`       | Defines getter methods in objects/classes. |
+| `of`        | Used in `for...of` loops.                  |
+| `set`       | Defines setter methods in objects/classes. |
+| `target`    | Used with decorators (proposed feature).   |
++++
+---
+
+#### Strict Mode Additional Reserved Words
+
+In **strict mode**, the following are also reserved and cannot be used:
+
++++ see
+| **Keyword**  |
+| ------------ |
+| `implements` |
+| `interface`  |
+| `let`        |
+| `package`    |
+| `private`    |
+| `protected`  |
+| `public`     |
+| `static`     |
+| `yield`      |
++++</md></sn>
