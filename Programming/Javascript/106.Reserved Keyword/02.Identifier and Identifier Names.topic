@@ -1,10 +1,102 @@
 
-  <sn></sn>
+  <sn><md>#### Identifiers vs Identifier Names
+
+With regards to reserved words, there is a small distinction between:
+
+* **Identifiers**: Used for variable or function names.
+* **Identifier Names**: Allowed as property names of composite data types.
+
+**Example (illegal as an identifier):**
+
+```javascript
+var break = true; 
+// Uncaught SyntaxError: Unexpected token break
+```
+
+**Example (legal as an object property):**
+
+```javascript
+var obj = { break: true };
+console.log(obj.break); // true
+```
+
+---
+
+#### Specification Reference
+
+From the **ECMAScript® 5.1 Language Specification, Section 7.6**:
+
+&gt; Identifier Names are tokens interpreted according to the grammar in the “Identifiers” section of chapter 5 of the Unicode standard, with some small modifications.
+&gt; An **Identifier** is an **IdentifierName** that is **not a ReservedWord** (see Section 7.6.1).
+
+**Syntax:**
+
+```
+Identifier :: IdentifierName but not ReservedWord
+```
+
+---
+
+#### Reserved Words
+
+By specification (**Section 7.6.1**):
+
+&gt; A **ReservedWord** is an **IdentifierName** that **cannot be used as an Identifier**.
+
+**ReservedWord** consists of:
+
+* Keyword
+* FutureReservedWord
+* NullLiteral
+* BooleanLiteral
+
+This includes keywords, future keywords, `null`, and boolean literals.
+(The full list of keywords is in Section 7.6.1, and literals in Section 7.8.)
+
+---
+
+#### IdentifierNames as ReservedWords
+
+* **IdentifierNames can be ReservedWords**.
+* In object initializers, the specification allows ReservedWords as property names:
+
+**Section 11.1.5 Syntax (ObjectLiteral):**
+
+```
+ObjectLiteral : { } 
+              | { PropertyNameAndValueList } 
+              | { PropertyNameAndValueList , }
+
+PropertyName : IdentifierName | StringLiteral | NumericLiteral
+```
+
+* This means a **PropertyName** may be an **IdentifierName**, **allowing ReservedWords** to be used as property names unquoted, just like string or numeric literals.
+
+**Example:**
+
+```javascript
+var obj = {
+    class: 'Math',
+    var: 10
+};
+console.log(obj.class); // "Math"
+console.log(obj.var);   // 10
+```
+
+&gt; Note: Syntax highlighters may flag this as a reserved word, but the code is valid JavaScript. Some compilers, transpilers, linters, or minifiers may warn otherwise.
+
+---
+
+#### References
+
+* [ECMAScript® 5.1 Specification - Section 7.6](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)
+* [GoalKicker.com – JavaScript® Notes for Professionals](https://books.goalkicker.com/JavaScriptBook/)
+</md></sn>
   <config>
     <tags>#02.identifier and identifier names</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 20:51:37 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 21:08:41 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Y6hmaTbaj5</id>
     <duration></duration>
   </config>
