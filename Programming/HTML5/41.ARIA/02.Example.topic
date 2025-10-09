@@ -1,10 +1,172 @@
 
-  <sn></sn>
+  <sn><md>### `role="presentation"`
+
+An element whose implicit native role semantics will not be mapped to the accessibility API.
+
+```html
+<div style="float:left;">Some content on the left.</div>  
+<div style="float:right;">Some content on the right</div>  
+<div role="presentation" style="clear:both;"></div>  
+<!-- Only used to clear floats -->
+```
+
+---
+
+### `role="alert"`
+
+A message with important, and usually time-sensitive, information.
+
+```html
+<div role="alert" aria-live="assertive">Your session will expire in 60 seconds.</div>
+```
+
+Note: Both `role="alert"` and `aria-live="assertive"` are used simultaneously. These attributes are synonymous, but since some screen readers support only one or the other, using both maximizes compatibility and ensures the live region functions as expected.
+
+**Source:** Heydon Pickering — *Some Practical ARIA Examples*
+
+---
+
+### `role="alertdialog"`
+
+A type of dialog that contains an alert message, where initial focus goes to an element within the dialog.
+
+```html
+<div role="alertdialog">  
+  <h1>Warning</h1>  
+  <div role="alert">Your session will expire in 60 seconds.</div>  
+</div>
+```
+
+---
+
+### `role="application"`
+
+A region declared as a web application, as opposed to a web document. In this example, the application is a simple calculator that adds two numbers.
+
+```html
+<div role="application">  
+  <h1>Calculator</h1>  
+  <input id="num1" type="text"> + <input id="num2" type="text"> = <span id="result"></span>  
+</div>
+```
+
+---
+
+### `role="article"`
+
+A section of a page that consists of a composition forming an independent part of a document, page, or site.
+
+&gt; Setting an ARIA role or `aria-*` attribute that matches the default implicit ARIA semantics is unnecessary and not recommended, as these properties are already provided by the browser.
+
+**Example using semantic HTML:**
+
+```html
+<article>  
+  <h1>My first article</h1>  
+  <p>Lorem ipsum...</p>  
+</article>
+```
+
+**Example using non-semantic HTML (not recommended):**
+
+```html
+<div role="article">  
+  <h1>My first article</h1>  
+  <p>Lorem ipsum...</p>  
+</div>
+```
+
+**W3C Entry:** [role=article](https://www.w3.org/TR/wai-aria/#article)
+
+**Source:** *GoalKicker.com – HTML5 Notes for Professionals*
+
+---
+
+### `role="banner"`
+
+A region that contains mostly site-oriented content, rather than page-specific content.
+
+```html
+<div role="banner">  
+  <h1>My Site</h1>  
+  <ul>  
+    <li><a href="/">Home</a></li>  
+    <li><a href="/about">About</a></li>  
+    <li><a href="/contact">Contact</a></li>  
+  </ul>  
+</div>
+```
+
+---
+
+### `role="button"`
+
+An input that allows for user-triggered actions when clicked or pressed.
+
+```html
+<button role="button">Add</button>
+```
+
+---
+
+### `role="cell"`
+
+A cell in a tabular container.
+
+```html
+<table>  
+  <thead>  
+    <!-- etc -->  
+  </thead>  
+  <tbody>  
+    <tr><td role="cell">95</td>  
+    <td role="cell">14</td>  
+    <td role="cell">25</td>  
+  </tr></tbody>  
+</table>
+```
+
+---
+
+### `role="checkbox"`
+
+A checkable input that has three possible values: true, false, or mixed.
+
+```html
+<p>  
+  <input type="checkbox" role="checkbox" aria-checked="false">  
+  I agree to the terms  
+</p>
+```
+
+**Source:** *GoalKicker.com – HTML5 Notes for Professionals*
+
+---
+
+### `role="columnheader"`
+
+A cell containing header information for a column.
+
+```html
+<table role="grid">  
+  <thead>  
+    <tr>  
+      <th role="columnheader">Day 1</th>  
+      <th role="columnheader">Day 2</th>  
+      <th role="columnheader">Day 3</th>  
+    </tr>  
+  </thead>  
+  <tbody>  
+    <!-- etc -->  
+  </tbody>  
+</table>
+```
+</md></sn>
   <config>
     <tags>#02.example</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 19:09:38 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 19:16:48 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-cplSbE7E76</id>
     <duration></duration>
   </config>
