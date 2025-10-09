@@ -1,10 +1,47 @@
 
-  <sn></sn>
+  <sn><md>### Common Special Characters
+
+Some characters are **reserved in HTML** and cannot be used directly, as they may interfere with the actual HTML code.
+For example, trying to display **angle brackets (`&lt;` and `&gt;`)** in source code may cause unexpected results, and **white spaces** written in the source may not display as intended in the browser.
+Additionally, certain symbols like **☎** are **not part of the ASCII character set**.
+
+To handle such cases, **character entities** are used.
+They can be written as either:
+
+* `&amp;entity_name;`
+* `&amp;entity_number;`
+
+### Common HTML Character Entities
+
+| Character | Description          | Entity Name | Entity Number |
+| --------- | -------------------- | ----------- | ------------- |
+| ` `       | Non-breaking space   | `&nbsp;`    |               |
+| `&lt;`       | Less than            | `&lt;`      |               |
+| `&gt;`       | Greater than         | `&gt;`      |               |
+| `&amp;`       | Ampersand            | `&amp;`     |               |
+| `—`       | Em dash              | `—`   |               |
+| `–`       | En dash              | `–`   |               |
+| `©`       | Copyright            | `©`    |               |
+| `®`       | Registered trademark | `®`     |               |
+| `™`       | Trademark            | `™`   |               |
+| `☎`       | Phone                | `☎`   |               |
+
+### Example
+
+To display the text **© 2016 Stack Exchange Inc.**, use the following HTML code:
+
+```html
+<b>© 2016 Stack Exchange Inc.</b>
+```
+
+**Rendered Output:**
+**© 2016 Stack Exchange Inc.**
+</md></sn>
   <config>
     <tags>#02.common html entities</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 18:49:35 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 18:50:42 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-XNa4HFWQDw</id>
     <duration></duration>
   </config>
