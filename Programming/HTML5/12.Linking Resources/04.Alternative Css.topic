@@ -1,10 +1,23 @@
 
-  <sn></sn>
+  <sn><md>## Alternative CSS{.text-center}
+
+```html
+<link rel="alternate stylesheet" href="path/to/style.css" title="yourTitle">
+```
+
+Some browsers allow alternate style sheets to apply if they are offered. By default they will not be applied, but usually they can be changed through the browser settings:
+
+Firefox lets the user select the stylesheet using the **View &gt; Page Style** submenu, Internet Explorer also supports this feature (beginning with IE 8), also accessed from **View &gt; Page Style** (at least as of IE 11), but Chrome requires an extension to use the feature (as of version 48).
+
+The web page can also provide its own user interface to let the user switch styles.
+
+*(Source: the MDN Docs)*
+</md></sn>
   <config>
     <tags>#04.alternative css</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 09:47:39 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 09:49:05 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-td9VVFV8PP</id>
     <duration></duration>
   </config>
