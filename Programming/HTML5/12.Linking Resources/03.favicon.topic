@@ -1,10 +1,41 @@
 
-  <sn></sn>
+  <sn><md>## Favicon{.text-center}
+
+### Standard Favicon Links
+
+```html
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+```
+
+**Description:**
+Favicons are small icons that appear in the browser tab, bookmarks, and address bar.
+You can link them manually using the `<link>` tag.
+
+* Use the MIME type `image/png` for **PNG** files.
+* Use the MIME type `image/x-icon` for **ICO** files.
+
+These types help browsers correctly identify and render the favicon format.
+</md></sn>
   <config>
     <tags>#03.favicon</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 09:41:14 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 09:45:09 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-0HRiucbInm</id>
     <duration></duration>
   </config>
+<sn><md>### Automatic Favicon Detection
+
+If you have a file named `favicon.ico` in the **root directory** of your website (e.g., `https://example.com/favicon.ico`),
+most browsers will automatically detect and apply it even without a `<link>` tag.
+
+**Example (automatic load):**
+
+```
+/favicon.ico
+```
+
+However, note that browsers can be **slow to update** cached favicons.
+If you change the favicon, you might need to clear your browser cache or rename the file (e.g., `favicon-v2.ico`) to ensure the new icon appears.
+</md></sn>
