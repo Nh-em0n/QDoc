@@ -1,10 +1,58 @@
 
-  <sn></sn>
+  <sn><md>### Standard External CSS Link
+
+```html
+<link rel="stylesheet" href="path/to.css" type="text/css">
+```
+
+**Description:**
+The standard practice is to place CSS `<link>` tags **inside the head** section of your HTML document.
+This ensures that the CSS is loaded **before** the page content is displayed, preventing a flash of unstyled content (FOUC).
+
+In HTML5, the `type` attribute is **optional**, since browsers automatically recognize the stylesheet as CSS.
+
+**Example (HTML5 standard):**
+
+```html
+<link rel="stylesheet" href="path/to.css">
+```
+
+and
+
+```html
+<link rel="stylesheet" href="path/to.css" type="text/css">
+```
+
+Both have the same effect in HTML5.
+</md></sn>
   <config>
     <tags>#02.external css stylesheet</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 09:35:42 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 09:40:11 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-vIQyispXEC</id>
     <duration></duration>
   </config>
+<sn><md>### Using `@import` Inside a `<style>` Tag
+
+Another (less common) way to include an external stylesheet is with the `@import` rule inside a `<style>` element.
+
+**Example (with type attribute):**
+
+```html
+<style type="text/css">
+  @import("path/to.css");
+</style>
+```
+
+**Example (HTML5 version):**
+
+```html
+<style>
+  @import("path/to.css");
+</style>
+```
+
+**Note:**
+Using `@import` is generally discouraged because it loads CSS **after** the main stylesheet, which can slow down page rendering compared to using `<link>`.
+</md></sn>
