@@ -1,10 +1,124 @@
 
-  <sn></sn>
+  <sn><md>### Global Attribute
+
+| Attribute       | Description                                                                                          |
+| --------------- | ---------------------------------------------------------------------------------------------------- |
+| class           | Defines one or more class names for an element. See Classes and IDs.                                 |
+| contenteditable | Sets whether the content of an element can be edited.                                                |
+| contextmenu     | Defines a context menu shown when a user right-clicks an element.                                    |
+| dir             | Sets the text direction for text within an element.                                                  |
+| draggable       | Sets whether an element can be dragged.                                                              |
+| hidden          | Hides an element not currently in use on the page.                                                   |
+| id              | Defines a unique identifier for an element. See Classes and IDs.                                     |
+| lang            | Defines the language of an element's content and its text attribute values. See Content Languages.   |
+| spellcheck      | Sets whether to spell/grammar check the content of an element.                                       |
+| style           | Defines a set of inline CSS styles for an element.                                                   |
+| tabindex        | Sets the order in which elements on a page are navigated by the tab keyboard shortcut.               |
+| title           | Defines additional information about an element, generally in the form of tooltip text on mouseover. |
+| translate       | Defines whether to translate the content of an element.                                              |
+</md></sn>
   <config>
     <tags>#global attribute</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 12:32:42 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 12:36:04 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-sGqLoq7W6D</id>
     <duration></duration>
   </config>
+<sn><md>### Example
+
+**class**
+
+```html
+<!-- Assigns one or more class names to an element for styling or scripting -->
+<div class="container main">Content</div>
+```
+
+**contenteditable**
+
+```html
+<!-- Makes the content of an element editable by the user -->
+<p contenteditable="true">Edit me</p>
+```
+
+**contextmenu**
+
+```html
+<!-- Specifies a custom context menu when the user right-clicks the element -->
+<div contextmenu="menuID">Right-click me</div>
+<menu type="context" id="menuID">
+  <menuitem label="Option 1"></menuitem>
+  <menuitem label="Option 2"></menuitem>
+</menu>
+```
+
+**dir**
+
+```html
+<!-- Sets text direction: ltr (left-to-right) or rtl (right-to-left) -->
+<p dir="rtl">مرحبا</p>
+```
+
+**draggable**
+
+```html
+<!-- Determines whether an element can be dragged -->
+<img src="pic.jpg" draggable="true">
+```
+
+**hidden**
+
+```html
+<!-- Hides the element from view while keeping it in the DOM -->
+<div hidden="">Hidden content</div>
+```
+
+**id**
+
+```html
+<!-- Gives a unique identifier to an element, often used with CSS or JS -->
+<section id="header">Header</section>
+```
+
+**lang**
+
+```html
+<!-- Declares the language of an element’s content -->
+<p lang="fr">Bonjour</p>
+```
+
+**spellcheck**
+
+```html
+<!-- Enables or disables spell/grammar checking -->
+<textarea spellcheck="false"></textarea>
+```
+
+**style**
+
+```html
+<!-- Adds inline CSS styles to an element -->
+<p style="color:red; font-size:16px;">Red Text</p>
+```
+
+**tabindex**
+
+```html
+<!-- Controls the element’s focus order when using the Tab key -->
+<input tabindex="2">
+```
+
+**title**
+
+```html
+<!-- Provides extra info, shown as a tooltip on hover -->
+<button title="Click to submit">Submit</button>
+```
+
+**translate**
+
+```html
+<!-- Indicates whether the content should be translated -->
+<p translate="no">Brand Name</p>
+```
+</md></sn>
