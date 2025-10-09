@@ -1,10 +1,14 @@
 
-  <sn></sn>
+  <sn><md>### Parameters
+
+| **Attribute** | **Details**                                                                                                                       |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `charset`     | Specifies the character encoding of the linked document. *(Note: Not commonly used with `<link>`; more often with `</md></sn>
   <config>
     <tags>#00.introduction</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 08:11:50 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 08:39:58 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-d6tJQQSHZX</id>
     <duration></duration>
   </config>
