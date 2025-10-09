@@ -1,10 +1,130 @@
 
-  <sn></sn>
+  <sn><md>### `aria-role` Attribute?
+
+The `aria-role` attribute is part of the **Accessible Rich Internet Applications (ARIA)** specification developed by the **World Wide Web Consortium (W3C)**. It helps make web content more accessible, especially for users who rely on assistive technologies such as **screen readers**, **voice input software**, or **braille displays**.
+
+In simple terms, the `role` attribute tells assistive technologies **what a specific HTML element is supposed to do**. It defines the *purpose* of an element, ensuring that users with disabilities can understand and interact with the page just as effectively as sighted users.
+
+For example:
+
+```html
+<div role="button">Submit</div>
+```
+
+Here, although the element is a `<div>`, the `role="button"` informs assistive technology that it should be treated as a **button**.
+</div></md></sn>
   <config>
     <tags>#01.what is aria</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 19:00:50 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 19:09:17 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-oai5pFCaUR</id>
     <duration></duration>
   </config>
+<sn><md>### Why is the `aria-role` Attribute Important?
+
+While modern HTML provides many semantic elements (`<button>`, `<nav>`, `<header>`, etc.), developers often use non-semantic elements (`<div>`, `<span>`) for flexibility in design. Without ARIA roles, these elements lack meaning to assistive tools. The `role` attribute bridges this gap.
+
+It ensures that:
+
+* Users relying on assistive technologies can navigate and understand the page structure.
+* Custom widgets or interactive elements behave consistently across all user experiences.
+</span></div></header></nav></button></md></sn><sn><md>### Best Practices for Using ARIA Roles
+
+1. **Prefer native HTML elements first.**
+   Use ARIA roles only when native semantic elements are unavailable. For example, prefer `<button>` over `<div role="button">`.
+
+2. **Don’t duplicate semantics.**
+   Avoid assigning roles that are already implied by the element. For instance, `</div></button><button role="button">` is redundant.
+
+3. **Combine with other ARIA attributes.**
+   Use attributes like `aria-label`, `aria-checked`, `aria-expanded`, etc., to provide additional context.
+
+4. **Test with assistive technologies.**
+   Always verify your ARIA implementation using screen readers like NVDA, JAWS, or VoiceOver.
+</button></md></sn><sn><md>### Example: Custom Toggle Button Using ARIA Roles
+
+```html
+<div role="button" aria-pressed="false" tabindex="0" onclick="toggleButton(this)">
+  Toggle Dark Mode
+</div>
+
+
+```
+
+This example shows how a `<div>` element can act as a toggle button using ARIA roles and properties.
+</div></md></sn><sn><md>### List
+
++++ see...
+
+| **ARIA Role**        | **Description**                                                                 |
+| -------------------- | ------------------------------------------------------------------------------- |
+| **alert**            | A message with important, usually time-sensitive information.                   |
+| **alertdialog**      | A type of dialog that contains an alert message requiring acknowledgment.       |
+| **application**      | A region declared as a web application, not a typical document.                 |
+| **article**          | A self-contained composition intended to be independently distributable.        |
+| **banner**           | A region containing site-oriented content at the top of a page (like a header). |
+| **button**           | A clickable element that performs an action when pressed.                       |
+| **cell**             | A cell in a tabular container that is not a header.                             |
+| **checkbox**         | A checkable input that has three possible values: true, false, or mixed.        |
+| **columnheader**     | A header cell for a column of data.                                             |
+| **combobox**         | A widget that allows text input combined with a list of predefined options.     |
+| **complementary**    | A region that complements the main content but remains meaningful on its own.   |
+| **contentinfo**      | A region that contains information about the parent document (like a footer).   |
+| **definition**       | A definition of a term or concept.                                              |
+| **dialog**           | A window or popup that separates content from the rest of the application.      |
+| **directory**        | A list of references to members of a group (like a table of contents).          |
+| **document**         | A region that contains content meant to be read, not interacted with.           |
+| **feed**             | A dynamic list of changing content items (like a news feed).                    |
+| **figure**           | A graphical document or image with a caption.                                   |
+| **form**             | A region containing form elements for user input.                               |
+| **grid**             | A container for a collection of cells arranged in rows and columns.             |
+| **gridcell**         | A cell within a grid that can be focused or selected.                           |
+| **group**            | A set of related user interface elements.                                       |
+| **heading**          | A heading for a section of content.                                             |
+| **img**              | A container for a graphical image.                                              |
+| **link**             | A clickable element that navigates to another resource or location.             |
+| **list**             | A container for list items.                                                     |
+| **listbox**          | A widget that allows the user to select one or more items from a list.          |
+| **listitem**         | An item within a list.                                                          |
+| **log**              | A type of live region where new information is added in meaningful order.       |
+| **main**             | The main content area of a document.                                            |
+| **marquee**          | A type of live region where non-essential information changes frequently.       |
+| **math**             | A container for mathematical expressions.                                       |
+| **menu**             | A list of choices or commands for the user.                                     |
+| **menubar**          | A presentation of menu items as a horizontal bar of commands.                   |
+| **menuitem**         | A command within a menu.                                                        |
+| **menuitemcheckbox** | A menu item that behaves like a checkbox.                                       |
+| **menuitemradio**    | A menu item that behaves like a radio button.                                   |
+| **navigation**       | A region intended for navigation links.                                         |
+| **none**             | A role used to remove the semantics of an element.                              |
+| **note**             | A region containing advisory or explanatory content.                            |
+| **option**           | An element within a listbox or combobox that can be selected.                   |
+| **presentation**     | Indicates the element is for layout only and conveys no semantic meaning.       |
+| **progressbar**      | Displays the progress status of a task.                                         |
+| **radio**            | A selectable input that is part of a group of radio buttons.                    |
+| **radiogroup**       | A group of related radio buttons.                                               |
+| **region**           | A perceivable section of the page with meaningful content.                      |
+| **row**              | A single row of cells within a grid, table, or treegrid.                        |
+| **rowgroup**         | A group of rows within a grid or table.                                         |
+| **rowheader**        | A header cell for a row of data.                                                |
+| **scrollbar**        | A control that allows scrolling of content.                                     |
+| **search**           | A landmark region for search functionality.                                     |
+| **searchbox**        | A text input for search terms.                                                  |
+| **separator**        | A divider that separates content or groups of menu items.                       |
+| **slider**           | A control for selecting a value from a range.                                   |
+| **spinbutton**       | A control for incrementing or decrementing a value.                             |
+| **status**           | A region that displays advisory information about an application’s status.      |
+| **switch**           | A control that toggles between on and off states.                               |
+| **tab**              | A selectable item in a tablist that displays a panel when active.               |
+| **table**            | A container for tabular data.                                                   |
+| **tablist**          | A container for a set of tab elements.                                          |
+| **tabpanel**         | A container for the content associated with a tab.                              |
+| **textbox**          | A control that allows free-form text input.                                     |
+| **timer**            | A live region that displays remaining time or elapsed time.                     |
+| **toolbar**          | A container for grouping controls like buttons or inputs.                       |
+| **tooltip**          | A popup with advisory information about an element.                             |
+| **tree**             | A hierarchical list of items that can be expanded or collapsed.                 |
+| **treeitem**         | An item in a tree that may be expanded or collapsed.                            |
+
++++</md></sn>
