@@ -1,10 +1,99 @@
 
-  <sn></sn>
+  <sn><md>## Cache in Web
+
+In web development, **cache** refers to the temporary storage of web resources—such as HTML pages, CSS files, JavaScript, images, and other assets—on a client’s browser or a server. Caching is used to speed up the loading of websites, reduce server load, and improve the overall user experience. By storing frequently accessed data locally, a browser can quickly retrieve content without repeatedly fetching it from the server.
+
+### How Web Cache Works
+
+When a user visits a website, the browser downloads the required resources from the server. With caching enabled, the browser saves these resources locally. On subsequent visits:
+
+1. The browser checks if the cached version is still valid.
+2. If valid, it loads the content from the cache instead of requesting it from the server.
+3. If not valid or expired, the browser fetches the latest version from the server.
+
+This process reduces latency and network traffic, improving website performance.
+
+### Types of Web Cache
+
+1. **Browser Cache**
+   Stored on the user’s device, browser cache keeps local copies of web pages and assets. Browsers use headers like `Cache-Control` and `Expires` to manage how long resources should be stored.
+
+2. **Server Cache**
+   Web servers can store responses to serve repeated requests faster. This is common in content management systems or dynamic websites.
+
+3. **Proxy Cache**
+   Intermediary servers between the client and server can cache resources to optimize network traffic for multiple users.
+
+4. **Application Cache (HTML5 Cache)**
+   HTML5 introduced the concept of a cache manifest file, allowing web applications to function offline by specifying which resources should be cached on the client-side.
+
+### Benefits of Caching
+
+* **Faster Loading Times:** Users can access cached resources quickly without waiting for server responses.
+* **Reduced Bandwidth Usage:** Repeated requests to the server are minimized, saving data usage.
+* **Offline Access:** Cached web applications can continue functioning without an active internet connection.
+* **Lower Server Load:** Fewer requests to the server reduce traffic and server processing.
+
+### Conclusion
+
+Web caching is a fundamental technique in modern web development. By storing frequently used resources locally or on intermediary servers, caching enhances performance, reliability, and user experience. Effective caching strategies are essential for building fast, efficient, and scalable web applications.
+</md></sn>
   <config>
     <tags>#html cache</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 12:49:25 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 13:22:21 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-dtHIEExPRr</id>
     <duration></duration>
   </config>
+<sn><md>## HTML5 Cache
+
+**HTML5 Cache** (also called **Application Cache**) is a feature introduced in HTML5 that allows web applications to store files locally on the client’s browser so that the application can work offline. This is particularly useful for websites or web apps that need to function without a network connection.
+
+### How HTML5 Cache Works
+
+HTML5 Cache uses a **cache manifest file**, which is a simple text file listing all the resources the browser should store locally. When a user accesses the web page:
+
+1. The browser reads the manifest file specified in the HTML `` tag using the `manifest` attribute.
+2. It downloads and stores all the listed resources in the local cache.
+3. On subsequent visits, the browser can load the cached files, even if the user is offline.
+
+### Basic Structure
+
+1. **HTML File (`index.html`)**
+   The HTML file references the manifest file using the `manifest` attribute:
+
+   ![code-img](https://i.imgur.com/PVlBe5c.png)
+
+2. **Cache Manifest File (`index.appcache`)**
+   This file lists the resources to be cached:
+
+   ```
+   CACHE MANIFEST
+   index.html
+   ```
+
+   The first line `CACHE MANIFEST` is mandatory. Below it, you list all files you want the browser to cache.
+
+### How to Test HTML5 Cache
+
+1. Place both `index.html` and `index.appcache` in the same folder.
+2. Open `index.html` in a web browser.
+3. The browser will cache the files listed in `index.appcache`.
+4. Switch to offline mode or disconnect from the internet.
+5. Reload the page; the content will still load from the cache.
+
+### Important Notes
+
+* Both the HTML file and the cache manifest must be in the same directory unless a full path is provided.
+* Changes to the cache manifest file force the browser to update the cached files.
+* HTML5 Cache is mostly deprecated in favor of **Service Workers**, which provide more powerful and flexible offline caching options.
+
+### Benefits of HTML5 Cache
+
+* Enables offline access to web applications.
+* Reduces server load and network requests.
+* Improves page load speed by using locally stored resources.
+
+HTML5 Cache provides a simple way to make web pages available offline, but modern web development typically uses **Service Workers** for more robust and secure caching strategies.
+</md></sn><sn></sn>
