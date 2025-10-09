@@ -1,10 +1,88 @@
 
-  <sn></sn>
+  <sn><md>## Project Tree Example
+
+```plaintext
+my-app/
+│
+├── index.html
+├── index.appcache
+├── css/
+│   ├── style.css
+│   └── theme.css
+├── js/
+│   ├── main.js
+│   └── helper.js
+├── images/
+│   ├── logo.png
+│   └── banner.jpg
+└── fonts/
+    ├── roboto.woff2
+    └── open-sans.woff2
+```
+
+---
+
+## Adding Files to the Manifest
+
+The `index.appcache` file should include all the files you want to cache. It can look like this:
+
+```plaintext
+CACHE MANIFEST
+# Version 1.0
+
+# HTML files
+index.html
+
+# CSS files
+css/style.css
+css/theme.css
+
+# JavaScript files
+js/main.js
+js/helper.js
+
+# Images
+images/logo.png
+images/banner.jpg
+
+# Fonts
+fonts/roboto.woff2
+fonts/open-sans.woff2
+
+# Network (files not cached, always fetched)
+NETWORK:
+*
+```
+
+---
+
+* **CACHE:** Lists all files to cache offline.
+* **NETWORK:** Lists resources that should always be fetched from the server.
+* **FALLBACK:** Can define fallback pages if resources are unavailable (optional).
+
+
+
+In an **HTML5 AppCache manifest**, the `NETWORK` section specifies resources that **should never be cached** and must always be fetched from the server. This is useful for dynamic content like APIs or pages that must stay up-to-date.
+
+### Example:
+
+```plaintext
+NETWORK:
+*
+api/data.json
+```
+
+**Explanation:**
+
+* `*` → All resources not listed in `CACHE` should be fetched from the network.
+* `api/data.json` → This specific file will always be requested from the server even if offline.
+
+You can also list individual files or patterns instead of using `*`.</md></sn>
   <config>
     <tags>#adding files to manifest</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 13:22:41 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 13:23:39 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-CgqRW0i2Os</id>
     <duration></duration>
   </config>
