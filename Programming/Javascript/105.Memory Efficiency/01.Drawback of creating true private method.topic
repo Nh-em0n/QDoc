@@ -1,10 +1,46 @@
 
-  <sn></sn>
+  <sn><md>### Drawback of Creating True Private Methods
+
+One drawback of creating private methods in JavaScript is that they are **memory-inefficient**. A **copy of the private method** is created **every time a new instance** of the object is created.
+
+#### Example:
+
+```javascript
+function Contact(first, last) {
+    this.firstName = first;
+    this.lastName = last;
+    this.mobile;
+
+    // Private method
+    var formatPhoneNumber = function(number) {
+        // format phone number based on input
+    };
+
+    // Public method
+    this.setMobileNumber = function(number) {
+        this.mobile = formatPhoneNumber(number);
+    };
+}
+
+// Creating instances
+var rob = new Contact('Rob', 'Sanderson');
+var don = new Contact('Donald', 'Trump');
+var andy = new Contact('Andy', 'Whitehall');
+```
+
+#### Explanation:
+
+* Each instance (`rob`, `don`, `andy`) has **its own copy** of the `formatPhoneNumber` function.
+* This can lead to **higher memory usage**, especially when creating many instances.
+
+**Conclusion:**
+It is advisable to **avoid using private methods** unless absolutely necessary. Consider using **shared methods on the prototype** to save memory.
+</md></sn>
   <config>
     <tags>#01.drawback of creating true private method</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 21:11:09 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 21:16:59 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-1CIamH1NZU</id>
     <duration></duration>
   </config>
