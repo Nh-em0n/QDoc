@@ -11,7 +11,7 @@
     <tags>#tabindex</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 11:54:19 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 12:25:42 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-pg5EkyxWJH</id>
     <duration></duration>
   </config>
@@ -40,5 +40,11 @@ The element will be removed from the tabbing order but will still be focusable.
 
 * Positive `tabindex` values will insert the element at the tabbing order position of its respective value.
 * Elements without preference (i.e., `tabindex="0"` or native elements such as `button` and `a`) will be appended after those with preference.
-* **Warning:** Positive values are not recommended as they disrupt the expected behavior of tabbing and might confuse users who rely on screen readers. Try to create a natural order by rearranging your DOM structure.
-</md></sn>
+&gt; **Warning:** Positive values are not recommended as they disrupt the expected behavior of tabbing and might confuse users who rely on screen readers. Try to create a natural order by rearranging your DOM structure. {.fg-orange}
+</md></sn><sn><md>### Try
+
++++ see
+
+@[codepen-example](https://codepen.io/Nh-em0n/embed/preview/ZYQKROg?default-tab=html%2Cresult&amp;editable=true)
+
++++</md></sn>
