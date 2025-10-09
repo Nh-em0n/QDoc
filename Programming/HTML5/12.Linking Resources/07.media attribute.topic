@@ -1,10 +1,21 @@
 
-  <sn></sn>
+  <sn><md>## Link `media` Attribute
+
+```html
+<link rel="stylesheet" href="test.css" media="print">
+```
+
+**Description:**
+The `media` attribute specifies **which style sheet should be used for what type of media**.
+
+* Using the `print` value will apply that style sheet **only for printed pages**.
+* The value of this attribute can be any valid **media type** (similar to a CSS media query).
+</md></sn>
   <config>
     <tags>#07.media attribute</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 09 2025 10:47:45 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 09 2025 10:49:59 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-xAqcIrBAT4</id>
     <duration></duration>
   </config>
