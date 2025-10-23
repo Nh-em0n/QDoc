@@ -1,10 +1,36 @@
 
-  <sn></sn>
+  <sn><md>### Bash `cat` Command Cheat Sheet
+
+| Command                               | Description                                    | Example                                             | Output / Notes                          |                       |
+| ------------------------------------- | ---------------------------------------------- | --------------------------------------------------- | --------------------------------------- | --------------------- |
+| `cat file.txt`                        | Display contents of a file                     | `cat hello.txt`                                     | Prints file content                     |                       |
+| `cat file1.txt file2.txt`             | Display multiple files together                | `cat intro.txt body.txt`                            | Shows both files sequentially           |                       |
+| `cat &gt; file.txt`                      | Create or overwrite a file from terminal input | `cat &gt; notes.txt` then type text, press **Ctrl+D**  | Saves typed text to file                |                       |
+| `cat &gt;&gt; file.txt`                     | Append text to an existing file                | `cat &gt;&gt; notes.txt` then type text, press **Ctrl+D** | Adds text at file end                   |                       |
+| `cat &lt; file.txt`                      | Read file from standard input                  | `cat &lt; message.txt`                                 | Same output as `cat file.txt`           |                       |
+| `cat -n file.txt`                     | Show line numbers                              | `cat -n script.sh`                                  | Numbers each line                       |                       |
+| `cat -b file.txt`                     | Number only non-blank lines                    | `cat -b poem.txt`                                   | Skips numbering empty lines             |                       |
+| `cat -s file.txt`                     | Remove repeated blank lines                    | `cat -s report.txt`                                 | Collapses multiple blank lines          |                       |
+| `cat -E file.txt`                     | Show `$` at end of each line                   | `cat -E config.txt`                                 | Useful to detect trailing spaces        |                       |
+| `cat -T file.txt`                     | Display TABs as `^I`                           | `cat -T data.txt`                                   | Makes tab characters visible            |                       |
+| `cat -v file.txt`                     | Show non-printable characters                  | `cat -v code.txt`                                   | Detects invisible symbols               |                       |
+| `cat -vE file.txt`                    | Show non-printables + end of lines             | `cat -vE text.txt`                                  | Detects trailing spaces &amp; hidden chars  |                       |
+| `cat -A file.txt`                     | Show all special chars (`-vET`)                | `cat -A notes.txt`                                  | Displays tabs, EOL, and non-ASCII chars |                       |
+| `cat file1 file2                      | gzip &gt; combined.gz`                            | Concatenate and compress files                      | —                                       | Creates `combined.gz` |
+| `cat file1.gz file2.gz &gt; combined.gz` | Join gzipped files                             | —                                                   | Merges compressed files                 |                       |
+| `printf "line1\nline2" \| cat -n`     | Combine stdin with `cat`                       | —                                                   | Numbers piped lines                     |                       |
+| `tac file.txt`                        | Reverse the file (cat backward)                | `tac list.txt`                                      | Prints lines in reverse order           |                       |
+
+---
+
+✅ **Tip:**
+`cat` stands for **concatenate**, meaning “join together.” It’s not only for viewing files — it can also **create**, **merge**, **inspect**, and **format** text data efficiently.
+</md></sn>
   <config>
     <tags>#cheatsheet</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 15:44:52 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 15:45:03 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-GyuKxrGkqs</id>
     <duration></duration>
   </config>
