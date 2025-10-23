@@ -1,10 +1,56 @@
 
-  <sn></sn>
+  <sn><md>### Prompting the User for Input
+
+1. **Create a script** to ask the user for their name:
+
+```bash
+#!/usr/bin/env bash
+echo "Who are you?"
+read name
+echo "Hello, $name."
+```
+
+* The `read` command reads one line of input from the user and stores it in the variable `name`.
+* `$name` is then used with `echo` to print the greeting.
+
+**Example Output:**
+
+```bash
+$ ./hello_world.sh
+Who are you?
+Matt
+Hello, Matt.
+```
+</md></sn>
   <config>
     <tags>#03.hello world with user input</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 10:33:54 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 10:39:17 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ucETeB2Xeb</id>
     <duration></duration>
   </config>
+<sn><md>### Appending Text to User Input
+
+1. **Create a script** to append text to the user input:
+
+```bash
+#!/usr/bin/env bash
+echo "What are you doing?"
+read action
+echo "You are ${action}ing."
+```
+
+* Curly braces `{}` are used around the variable to safely append text while printing.
+
+**Example Output:**
+
+```bash
+$ ./hello_world.sh
+What are you doing?
+Sleep
+You are Sleeping.
+```
+
+&gt; In this example, the user entered `"Sleep"`, and `"ing"` was appended to form `"Sleeping"` when printing.
+</md></sn>
