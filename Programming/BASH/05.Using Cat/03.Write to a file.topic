@@ -15,7 +15,7 @@ cat &gt; file
     <tags>#03.write to a file</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 14:22:42 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 14:56:30 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-zME6QYxWrj</id>
     <duration></duration>
   </config>
@@ -108,4 +108,106 @@ Here, `$name` and `` `date` `` are printed **literally**, not expanded.
 | Variables (`$var`) expand   | ✅ Yes          | ❌ No           |
 | Commands (`` `cmd` ``) run  | ✅ Yes          | ❌ No           |
 | Use quotes around delimiter | ❌ No           | ✅ Yes          |
-| Example delimiter           | `&lt;</md></sn>
+| Example delimiter           | `&lt;</md></sn><sn><md>### Using `echo` to Write to a File
+
+The `echo` command in Bash prints text to the terminal by default, but you can **redirect** its output to a file.
+
+---
+
+#### 1. **Create or overwrite a file**
+
+Use the `&gt;` operator to **write (or overwrite)** a file:
+
+```bash
+echo "Hello, world!" &gt; message.txt
+```
+
+**Explanation:**
+
+* Creates `message.txt` if it doesn’t exist.
+* If it exists, its contents are **replaced** with `"Hello, world!"`.
+
+**Check the file:**
+
+```bash
+cat message.txt
+```
+
+**Output:**
+
+```
+Hello, world!
+```
+
+---
+
+#### 2. **Append to a file**
+
+Use the `&gt;&gt;` operator to **add** text to the end of an existing file instead of overwriting it:
+
+```bash
+echo "This is another line." &gt;&gt; message.txt
+```
+
+**Check the file again:**
+
+```bash
+cat message.txt
+```
+
+**Output:**
+
+```
+Hello, world!
+This is another line.
+```
+
+---
+
+#### 3. **Write multiple lines**
+
+Combine `echo` commands or use `\n` for newlines (with `-e` to interpret them):
+
+```bash
+echo -e "Line 1\nLine 2\nLine 3" &gt; lines.txt
+cat lines.txt
+```
+
+**Output:**
+
+```
+Line 1
+Line 2
+Line 3
+```
+
+---
+
+#### 4. **Example: Add system info to a log file**
+
+```bash
+echo "System Info on $(date)" &gt; system.log
+echo "User: $USER" &gt;&gt; system.log
+echo "Current Directory: $(pwd)" &gt;&gt; system.log
+cat system.log
+```
+
+**Output:**
+
+```
+System Info on Thu Oct 23 14:00:00 +0600 2025
+User: nazmul
+Current Directory: /home/nazmul
+```
+
+---
+
+✅ **Summary:**
+
+| Command                    | Description            |                                      |
+| -------------------------- | ---------------------- | ------------------------------------ |
+| `echo "text" &gt; file`       | Write (overwrite) file |                                      |
+| `echo "text" &gt;&gt; file`      | Append to file         |                                      |
+| `echo -e "a\nb\nc" &gt; file` | Write multiple lines   |                                      |
+| `echo "data"               | cat &gt; file`            | Another way to write input to a file |
+</md></sn>
