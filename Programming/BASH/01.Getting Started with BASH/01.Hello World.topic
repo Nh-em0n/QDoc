@@ -1,10 +1,26 @@
 
-  <sn></sn>
+  <sn><md>## Interactive Shell
+
+The Bash shell is commonly used interactively: It lets you enter and edit commands, then executes them when you press the Return key. Many Unix-based and Unix-like operating systems use Bash as their default shell (notably Linux and macOS). The terminal automatically enters an interactive Bash shell process on startup.
+
+#### Output Hello World by typing the following:
+
+```bash
+echo "Hello World"
+#&gt; Hello World # Output Example
+```
+
+:::.p-3 .note
+#### Notes
+
+* You can change the shell by just typing the name of the shell in terminal. For example: sh, bash, etc.
+* echo is a Bash builtin command that writes the arguments it receives to the standard output. It appends a newline (`\n`) to the output, by default.
+:::</md></sn>
   <config>
     <tags>#01.hello world</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 09:18:41 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 09:25:17 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-vFt4JIvDCv</id>
     <duration></duration>
   </config>
