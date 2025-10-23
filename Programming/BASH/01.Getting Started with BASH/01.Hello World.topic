@@ -20,7 +20,100 @@ echo "Hello World"
     <tags>#01.hello world</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 09:27:54 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 10:14:50 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-vFt4JIvDCv</id>
     <duration></duration>
   </config>
+<sn><md>## Non-Interactive Shell
+
+The Bash shell can also be run **non-interactively** from a script, which means it requires no human interaction.
+
+Interactive behavior and scripted behavior are designed to be **identical**—a core design principle of Unix V7, the Bourne shell, and Bash. Therefore, anything that can be done at the command line can be put into a script for reuse.
+
+### Steps to Create a Hello World Script
+
+1. **Create a new file** called `hello-world.sh`
+
+```bash
+touch hello-world.sh
+```
+
+2. **Make the script executable**
+
+```bash
+chmod +x hello-world.sh
+```
+
+3. **Add the following code** to the file:
+
+```bash
+#!/bin/bash
+echo "Hello World"
+```
+
+* **Line 1:** Starts with `#!` (shebang), which instructs the operating system to run `/bin/bash` and pass the script's path as an argument.
+  Example:
+
+  ```bash
+  /bin/bash hello-world.sh
+  ```
+* **Line 2:** Uses the `echo` command to write `Hello World` to standard output.
+
+4. **Execute the script** from the command line using one of the following methods:
+
+```bash
+./hello-world.sh          # Recommended and most commonly used
+/bin/bash hello-world.sh
+bash hello-world.sh       # Assuming /bin is in your $PATH
+sh hello-world.sh
+```
+
+&gt; **Tip for production:**
+&gt;
+&gt; * You can omit the `.sh` extension (since this is a Bash script, not a sh script).
+&gt; * Move the file to a directory in your `$PATH` so it behaves like a system command (e.g., `cat` or `ls`).
+</md></sn><sn><md>## Common Mistakes in Bash Scripts{.fg-red .text-center}
+
+1. **Forgetting to make the script executable**
+
+   * Not running `chmod +x hello-world.sh` results in:
+
+     ```bash
+     ./hello-world.sh: Permission denied
+     ```
+
+2. **Editing the script on Windows**
+
+   * Produces incorrect line endings that Bash cannot handle.
+   * Common symptom:
+
+     ```
+     : command not found
+     ```
+
+     caused by a carriage return (`\r`) overwriting text before the colon in the error message.
+   * **Fix:** Use `dos2unix` to convert the file:
+
+     ```bash
+     dos2unix hello-world.sh
+     ```
+
+     `dos2unix` edits the file inline.
+
+3. **Confusing `sh` and `bash`**
+
+   * Running `sh ./hello-world.sh` may fail if the script uses Bash-specific features.
+   * Bash is backwards-compatible with sh, so using Bash for a sh script is usually harmless.
+   * **Best practice:** Rely on the script's **shebang line** rather than explicitly writing `bash`, `sh`, `python`, `perl`, etc., before the script.
+
+4. **Making scripts portable**
+
+   * Use a portable shebang line:
+
+     ```bash
+     #!/usr/bin/env bash
+     ```
+   * This ensures that Bash is located via your `PATH`, rather than hardcoding a specific path like `/bin/bash` or `/usr/local/bin/bash`, which may not exist on all systems.
+
+&gt; **Note:** The shebang (`#!`) is also called **sha-bang, hashbang, pound-bang, or hash-pling**.
+</md></sn>
