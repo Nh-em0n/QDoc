@@ -1,10 +1,70 @@
 
-  <sn></sn>
+  <sn><md>### Show Non-Printable Characters
+
+This option is useful to detect **non-printable** or **non-ASCII** characters in a file — such as special quotes or invisible spaces that may appear after copying text from the web.
+
+---
+
+#### Basic Usage
+
+```bash
+cat -v file.txt
+```
+
+Displays non-printable characters in a visible form.
+
+---
+
+#### Detect Trailing Spaces
+
+```bash
+cat -vE file.txt
+```
+
+* `-v` shows non-printable characters.
+* `-E` marks the **end of each line** with a `$`, helping to spot trailing spaces.
+
+---
+
+#### Example
+
+```bash
+echo '” ' | cat -vE
+```
+
+**Output:**
+
+```
+M-bM-^@M-^] $
+```
+
+This output shows that the special (non-ASCII) quote `”` is being represented by visible escape sequences.
+
+---
+
+#### Show All Special Characters
+
+You can use `-A` to display **all** non-printable characters, including tabs and line endings:
+
+```bash
+echo '” `' | cat -A
+```
+
+**Output:**
+
+```
+M-bM-^@M-^]^I`$
+```
+
+* `^I` indicates a **TAB** character.
+* `$` marks the **end of line**.
+* The other symbols represent non-ASCII or special characters.
+</md></sn>
   <config>
     <tags>#04.show non printable character</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 14:59:29 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 14:59:40 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-drCAY3wo9R</id>
     <duration></duration>
   </config>
