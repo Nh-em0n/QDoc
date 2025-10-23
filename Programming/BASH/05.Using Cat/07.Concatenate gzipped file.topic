@@ -1,10 +1,51 @@
 
-  <sn></sn>
+  <sn><md>### Concatenate gzipped files
+
+Files compressed by **gzip** can be directly concatenated into larger gzipped files.
+
+```bash
+cat file1.gz file2.gz file3.gz &gt; combined.gz
+```
+
+This method works but is **less efficient** than concatenating the input files first and then gzipping the result:
+
+```bash
+cat file1 file2 file3 | gzip &gt; combined.gz
+```
+
+#### Example Demonstration
+
+```bash
+echo 'Hello world!' &gt; hello.txt
+echo 'Howdy world!' &gt; howdy.txt
+gzip hello.txt
+gzip howdy.txt
+cat hello.txt.gz howdy.txt.gz &gt; greetings.txt.gz
+gunzip greetings.txt.gz
+cat greetings.txt
+```
+
+**Output:**
+
+```
+Hello world!
+Howdy world!
+```
+
+#### Note
+
+* `greetings.txt.gz` becomes a single compressed file that decompresses into a single file `greetings.txt`.
+* In contrast, the command below keeps files **separate** inside a **tarball**:
+
+```bash
+tar -czf greetings.tar.gz hello.txt howdy.txt
+```
+</md></sn>
   <config>
     <tags>#07.concatenate gzipped file</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 14:30:26 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 14:33:50 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-o5g4YJUcZ3</id>
     <duration></duration>
   </config>
