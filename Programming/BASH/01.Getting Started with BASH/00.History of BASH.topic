@@ -1,10 +1,20 @@
 
-  <sn></sn>
+  <sn><md>## $Bash
+
+Bash (short for "Bourne Again SHell") is an interactive command interpreter and programming language developed for Unix-like operating systems.
+
+It is designed as a 100% free software `alternative for the Bourne shell`, `sh`, and other proprietary Unix shells. Bash has gained widespread adoption and is commonly used as the default login shell for numerous Linux distributions.
+
+Created in `1989` by **Brian Fox** for the GNU Project, it is supported by the Free Software Foundation.
+
+It also supports the **execution of commands from files**, known as `shell scripts`, facilitating automation.
+
+The Bash command syntax is a `superset of the Bourne shell's syntax`, from which all basic features of the Bash syntax were copied. As a result, Bash can execute the vast majority of Bourne shell scripts without modification. Some other ideas were borrowed from the `C shell`, its successor tcsh, and the `Korn Shell`. It is available on nearly all modern operating systems, making it a versatile tool in various computing environments.</md></sn>
   <config>
     <tags>#00.history of bash</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 22 2025 21:34:15 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 08:25:50 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-oSoMSFcQb0</id>
     <duration></duration>
   </config>
