@@ -1,10 +1,65 @@
 
-  <sn></sn>
+  <sn><md>### Read from Standard Input
+
+Normally, the `cat` command reads files directly when you type:
+
+```bash
+cat file.txt
+```
+
+However, you can also make `cat` read from **standard input (stdin)** using the `&lt;` operator:
+
+```bash
+cat &lt; file.txt
+```
+
+The **output is the same** — it still displays the contents of `file.txt` — but the mechanism differs:
+
+* `cat file.txt` — `cat` directly opens and reads the file.
+* `cat &lt; file.txt` — the **shell** opens the file and feeds its content to `cat` through **standard input**.
+
+#### Reading from stdin using `&lt;`
+
+```bash
+echo "Hello Linux!" &gt; message.txt
+cat &lt; message.txt
+```
+
+**Output:**
+
+```
+Hello Linux!
+```
+
+Even though it looks identical to `cat message.txt`, here `cat` doesn’t open the file itself — the shell does.</md></sn>
   <config>
     <tags>#05.read from standard input</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 14:45:08 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 14:50:35 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-BRf5MPdLgx</id>
     <duration></duration>
   </config>
+<sn><md>#### Using a pipe (`|`) to send input
+
+You can also send output from one command to `cat` using a **pipe**:
+
+```bash
+printf "first line\nSecond line\n" | cat -n
+```
+
+**Explanation:**
+
+* `printf` prints two lines of text.
+* The pipe `|` sends this text to `cat`.
+* The option `-n` makes `cat` number each line.
+
+**Output:**
+
+```
+     1  first line
+     2  Second line
+```
+
+Here, `cat` is not reading from a file — it’s reading from the **standard input** stream provided by `printf`.
+</md></sn>
