@@ -1,10 +1,68 @@
 
-  <sn></sn>
+  <sn><md>## What is a Shebang ?
+
+A **shebang** is the first line in a script that tells the operating system **which interpreter** to use to execute the file. It starts with `#!` followed by the **absolute path** of the interpreter.
+
+### Syntax
+
+```bash
+#!/path/to/interpreter
+```
+
+### Examples
+
+* Using Bash:
+
+```bash
+#!/bin/bash
+```
+
+* Using env to locate Bash in the PATH:
+
+```bash
+#!/usr/bin/env bash
+```
+
+### How It Works
+
+* When you run a script directly (e.g., `./script.sh`), the OS reads the shebang to determine which program should execute the script.
+* If you explicitly call an interpreter (e.g., `bash script.sh`), the shebang is **ignored**.
+
+### Why It's Useful
+
+* Makes scripts **portable** across systems where the interpreter might be in different locations.
+* Ensures the script runs with the **intended shell or language**.
+
+In short, the shebang is like telling your OS:
+
+&gt; “Hey, run this script using this specific interpreter!”
+</md></sn><sn><md>## Env Shebang
+
+To execute a script using the `bash` executable found in the **PATH** environment variable via `env`, the first line of the script must indicate the absolute path to `env` with `bash` as its argument:
+
+```bash
+#!/usr/bin/env bash
+```
+
+* The `env` path in the shebang is **used only** when the script is launched directly:
+
+```bash
+./script.sh
+```
+
+* The script must have **execution permission** (`chmod +x script.sh`).
+
+* If you explicitly invoke the Bash interpreter, the shebang is **ignored**:
+
+```bash
+bash script.sh
+```
+</md></sn>
   <config>
     <tags>#01.env shebang</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 11:02:16 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 11:07:37 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-RvaBKWOwae</id>
     <duration></duration>
   </config>
