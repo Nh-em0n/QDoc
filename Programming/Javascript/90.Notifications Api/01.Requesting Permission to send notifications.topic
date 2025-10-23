@@ -1,10 +1,59 @@
 
-  <sn></sn>
+  <sn><md>### Notification Api
+
+The `Notification.requestPermission()` method is used to ask the user whether they want to receive **browser notifications** from a website.
+
+---
+
+#### Callback-Based Syntax (Older Method)
+
+```javascript
+Notification.requestPermission(function() {
+  if (Notification.permission === 'granted') {
+    // User approved.
+    // Now you can use new Notification("Title", { body: "Message" });
+  } else if (Notification.permission === 'denied') {
+    // User denied permission.
+  } else {
+    // Notification.permission === 'default'
+    // User didn’t make a decision.
+    // You can’t send notifications until they grant permission.
+  }
+});
+```
+</md></sn>
   <config>
     <tags>#01.requesting permission to send notifications</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 16:29:48 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 16:50:36 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-gi5XJEXp2c</id>
     <duration></duration>
   </config>
+<sn><md>### Promise-Based Syntax (Modern Method)
+
+Since **Firefox 47** and in most modern browsers,
+`.requestPermission()` returns a **Promise** that resolves with the user's decision.
+
+```javascript
+Notification.requestPermission().then(function(permission) {
+  if (!('permission' in Notification)) {
+    Notification.permission = permission;
+  }
+
+  if (permission === 'granted') {
+    // Permission granted — send a notification
+    new Notification("Hello!", { body: "You have enabled notifications." });
+  } else if (permission === 'denied') {
+    // Permission denied
+    console.log("Notifications are blocked.");
+  } else {
+    // Default (no action taken)
+    console.log("User did not make a choice.");
+  }
+}, function(rejection) {
+  // Handle rejection (if any)
+  console.error("Permission request was rejected:", rejection);
+});
+```
+</md></sn>
