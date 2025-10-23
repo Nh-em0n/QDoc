@@ -1,10 +1,51 @@
 
-  <sn></sn>
+  <sn><md>## Importance of Quoting in Strings
+
+Quoting in Bash controls how strings are **parsed and expanded**. There are two types of quoting:
+
+* **Weak Quoting:** Double quotes `"` allow variable expansion.
+* **Strong Quoting:** Single quotes `'` prevent variable expansion.
+
+---
+
+### Weak Quoting (Variable Expansion Allowed)
+
+```bash
+#!/usr/bin/env bash
+world="World"
+echo "Hello $world"
+#&gt; Hello World
+```
+
+---
+
+### Strong Quoting (Variable Expansion Prevented)
+
+```bash
+#!/usr/bin/env bash
+world="World"
+echo 'Hello $world'
+#&gt; Hello $world
+```
+
+---
+
+### Using Escape to Prevent Expansion
+
+```bash
+#!/usr/bin/env bash
+world="World"
+echo "Hello \$world"
+#&gt; Hello $world
+```
+
+&gt; Quoting correctly is essential to control how Bash interprets your strings. For more advanced details beyond beginner concepts, further reading is recommended.
+</md></sn>
   <config>
     <tags>#04.importance quoting in string</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 10:42:28 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 10:46:53 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-iqJHaeIIbZ</id>
     <duration></duration>
   </config>
