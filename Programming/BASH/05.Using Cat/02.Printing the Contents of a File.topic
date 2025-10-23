@@ -1,10 +1,86 @@
 
-  <sn></sn>
+  <sn><md>## Printing the Contents of a File
+
+### 1. Basic File Printing
+
+Use `cat` to print the contents of a file:
+
+```bash
+cat file.txt
+```
+
+---
+
+### 2. Display Non-ASCII Characters Symbolically
+
+Use `-v` to make control and non-ASCII characters visible:
+
+```bash
+cat -v unicode.txt
+```
+
+---
+
+### 3. Interactive Paging
+
+For large files, using a pager is recommended:
+
+```bash
+less file.txt
+```
+
+* `less` is more powerful than `more` and generally preferred.
+
+---
+
+### 4. Passing File Contents as Input to a Command
+
+Instead of using UUOC (`cat file.txt | command`), use input redirection:
+
+```bash
+tr A-Z a-z &lt; file.txt
+```
+
+* Converts all uppercase letters in `file.txt` to lowercase.
+
+---
+
+### 5. Print File Backwards
+
+Use `tac` to display the file from end to start:
+
+```bash
+tac file.txt
+```
+
+---
+
+### 6. Print File with Line Numbers
+
+Use `-n` with `cat` to number each line:
+
+```bash
+cat -n file.txt
+```
+
+---
+
+### 7. Display File in Hexadecimal (Byte-by-Byte)
+
+For unambiguous byte-by-byte representation, use `xxd` or `hexdump`:
+
+```bash
+$ printf 'Hëllö wörld' | xxd
+0000000: 48c3 ab6c 6cc3 b620 77c3 b672 6c64 H..ll.. w..rld
+```
+
+* Useful for analyzing unknown encodings or non-printable characters.
+</md></sn>
   <config>
     <tags>#02.printing the contents of a file</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 13:20:40 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 13:28:22 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-W8nk0nFq5u</id>
     <duration></duration>
   </config>
