@@ -14,7 +14,111 @@ The Bash command syntax is a `superset of the Bourne shell's syntax`, from which
     <tags>#00.history of bash</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 08:25:50 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 09:07:07 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-oSoMSFcQb0</id>
     <duration></duration>
   </config>
+<sn><md>### Definition
+
+Any series of characters is called a `string` or sometimes a "string literal." In Unix-like operating systems, all characters, printable and non-printing, except for a few such as the null character and forward slash /, can be used in filenames. In addition, all strings are `case-sensitive`.Bash, like many other programming languages, uses `zero-based numbering`.</md></sn><sn><md>### Keybinding{.text-center}
+
++++ see
+
+| **Key / Combination** | **Function / Description**                                   |
+| --------------------- | ------------------------------------------------------------ |
+| **Tab ↹**             | Activate auto completion                                      |
+| **↑ (Up Arrow)**      | Scroll up (backward) in the command history                  |
+| **↓ (Down Arrow)**    | Scroll down (forward) in the command history                 |
+| **Ctrl + r**          | Search the command history                                   |
+| **Ctrl + f**          | Move the cursor one character to the right                   |
+| **Ctrl + b**          | Move the cursor one character to the left                    |
+| **Alt + f**           | Move the cursor one word to the right                        |
+| **Alt + b**           | Move the cursor one word to the left                         |
+| **Ctrl + a**          | Move the cursor to the beginning of the current command line |
+| **Ctrl + c**          | Cancel the current command and present a new prompt          |
+| **Ctrl + d**          | Close the current Bash instance (may close terminal)         |
+| **Ctrl + e**          | Move the cursor to the end of the current command line       |
+| **Ctrl + q**          | Wake the terminal; buffered keypresses are processed         |
+| **Ctrl + s**          | Put the terminal to sleep                                    |
+| **Ctrl + w**          | Remove one word to the left of the cursor                    |
+| **Ctrl + z**          | Stop a foregrounded process                                  |
+| **set -o vi**         | Enable Vi-style keybindings in Bash                          |
+
++++</md></sn><sn><md>## Syntax
+
+
+| **Concept**        | **Description**                                                                                    | **Example**                                                                                    |            |              |   |
+| ------------------ | -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------- | ------------ | - |
+| **Tokens**         | Smallest units in a Bash command line, separated by metacharacters.                                | `echo $HOME &gt; output.txt` → Tokens: `echo`, `$HOME`, `&gt;`, `output.txt`                         |            |              |   |
+| **Metacharacters** | Characters that separate tokens. In Bash 5.3, these are: **space**, **tab**, **newline**, **       | **, **&amp;**, **;**, **(**, **)**, **&lt;**, **&gt;**                                                   | `&gt;`, `     | `, `;`, etc. |   |
+| **Blanks**         | Unquoted **space** or **tab** used to separate tokens.                                             | The spaces in `echo hello world` are blanks.                                                   |            |              |   |
+| **Operators**      | Contain at least one unquoted metacharacter.                                                       | `&gt;`, `&lt;`, `                                                                                    | `, `&amp;&amp;`, ` |              | ` |
+| **Words**          | Tokens without unquoted metacharacters — command names, arguments, variables.                      | `echo`, `hello`, `$HOME`, `output.txt`                                                         |            |              |   |
+| **Process**        | Bash splits commands into tokens using metacharacters, then classifies them as words or operators. | In `echo $HOME &gt; output.txt`: <br>• Words → `echo`, `$HOME`, `output.txt` <br>• Operator → `&gt;` |            |              |   |
+
+</md></sn><sn><md>## Word
+
+A word is a `sequence of (non-meta-) characters` treated as a **single unit** by the shell
+
+
+:::.row
+:::.col-12 .col-md-6
+### Reserved 
+
+* A reserved word is a kind of a word that has a `special meaning to the shell`.
+* Sixteen of the twenty-two "reserved words," which may be characters or words are as follows:
+
+```bash
+‘!’ ‘[[’ ‘{’ ‘]]’ ‘}’ case in esac for do done if then elif else fi ...
+```
+:::
+
+:::.col-12 .col-md-6
+### Name
+
+* A name is a kind of a word separate from reserved words. 
+* Names consist solely of letters, underscores and numbers; which begins with either a letter or an underscore; which, however, may not begin with a number. 
+* Names also called `identifiers`, may be used for naming variables and functions
+* Names may only contain the characters `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_`
+:::
+:::
+
+
+### Example
+
+
+| Type                  | Example                                                                           | Explanation                                                                                                                   |
+| --------------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| **Word**              | `hello`, `123`, `abc`, `ls`, `/home/user`                                         | Any sequence of non-meta characters treated as one unit by the shell.                                                         |
+| **Reserved Word**     | `if`, `then`, `else`, `for`, `do`, `done`, `case`, `esac`, `while`, `until`, `fi` | Special words recognized by the shell with predefined meanings or syntax roles.                                               |
+| **Identifier (Name)** | `x`, `bar_1`, `_result`, `count2`                                                 | Used to name variables or functions; must start with a letter or underscore and can contain letters, digits, and underscores. |
+
+**Example in code:**
+
+```bash
+if count=5; then echo hello; fi
+```
+
+Breakdown:
+
+* `if`, `then`, `fi` → **reserved words**
+* `count` → **identifier (variable name)**
+* `5`, `hello` → **words**
+* `=` → assignment operator
+
+</md></sn><sn><md>### Subshells
+
+* A **subshell** is a new instance of the shell created by the **current (parent) shell**.
+* It is a **child process** that inherits a **copy of the parent’s environment**.
+* Changes made inside a subshell **do not affect** the parent shell’s environment.
+* In Bash, you can create a subshell by enclosing a command in **parentheses `( )`**.
+
+**Example:**
+
+```bash
+echo foo      # runs in the parent shell
+( echo foo )  # runs in a subshell
+```
+
+Both print `foo`, but the second one executes in a separate subshell process.Some commands and syntaxes automatically start subshells, which can cause subtle side effects.
+</md></sn>
