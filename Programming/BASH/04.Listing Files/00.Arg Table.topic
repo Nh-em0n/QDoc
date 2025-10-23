@@ -1,10 +1,30 @@
 
-  <sn></sn>
+  <sn><md>### Ls options
+
+| Option               | Description                                           |
+| -------------------- | ----------------------------------------------------- |
+| -a, --all            | List all entries including ones that start with a dot |
+| -A, --almost-all     | List all entries excluding `.` and `..`               |
+| -c                   | Sort files by change time                             |
+| -d, --directory      | List directory entries                                |
+| -h, --human-readable | Show sizes in human readable format (i.e. K, M)       |
+| -H                   | Same as above but with powers of 1000 instead of 1024 |
+| -l                   | Show contents in long-listing format                  |
+| -o                   | Long-listing format without group info                |
+| -r, --reverse        | Show contents in reverse order                        |
+| -s, --size           | Print size of each file in blocks                     |
+| -S                   | Sort by file size                                     |
+| --sort=WORD          | Sort contents by a word (i.e., size, version, status) |
+| -t                   | Sort by modification time                             |
+| -u                   | Sort by last access time                              |
+| -v                   | Sort by version                                       |
+| -1                   | List one file per line                                |
+</md></sn>
   <config>
     <tags>#00.arg table</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 12:02:13 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 12:05:43 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TG9XpZFJeI</id>
     <duration></duration>
   </config>
