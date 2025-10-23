@@ -1,10 +1,44 @@
 
-  <sn></sn>
+  <sn><md>## Absolute vs Relative Directories
+
+### Absolute Directory
+
+* To change to an **absolute directory**, use the full path starting with a slash `/`:
+
+```bash
+cd /home/username/project/abc
+```
+
+### Relative Directory
+
+* To change to a directory **relative to your current location**, specify its path without the leading slash.
+* Example: If you are in `/home/username/project`, you can enter the subdirectory `abc` like this:
+
+```bash
+cd abc
+```
+
+### Going Up a Directory
+
+* To move to the **parent directory** (one level up), use `..`:
+
+```bash
+cd ..
+```
+
+* Example: If you are in `/home/username/project/abc` and want to go to `/home/username/project`, run:
+
+```bash
+cd ..
+```
+
+* This is often referred to as going "up" a directory.
+</md></sn>
   <config>
     <tags>#01.absolute vs relative directories</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 11:21:38 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 11:24:33 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-6lYaUXc0HE</id>
     <duration></duration>
   </config>
