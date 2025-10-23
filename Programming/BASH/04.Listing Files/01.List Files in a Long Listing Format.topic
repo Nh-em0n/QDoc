@@ -1,10 +1,66 @@
 
-  <sn></sn>
+  <sn><md>## List Files in a Long Listing Format
+
+The `ls -l` command prints a specified directory's contents in a **long listing format**.
+If no directory is specified, the contents of the **current directory** are listed by default.
+
+```bash
+ls -l /etc
+```
+
+**Example Output:**
+
+```
+total 1204
+drwxr-xr-x 3 root root 4096 Apr 21 03:44 acpi
+-rw-r--r-- 1 root root 3028 Apr 21 03:38 adduser.conf
+drwxr-xr-x 2 root root 4096 Jun 11 20:42 alternatives
+...
+```
+
+The output first displays `total`, which indicates the total size in **blocks** of all files in the listed directory.
+It then displays **eight columns** of information for each file.
+
+---
+
+### Column Details
+
+| Column No. | Example      | Description                     |
+| ---------- | ------------ | ------------------------------- |
+| 1.1        | d            | File type (see File Type table) |
+| 1.2        | rwxr-xr-x    | Permission string               |
+| 2          | 3            | Number of hard links            |
+| 3          | root         | Owner name                      |
+| 4          | root         | Owner group                     |
+| 5          | 4096         | File size in bytes              |
+| 6          | Apr 21 03:44 | Modification time               |
+| 7          | acpi         | File name                       |
+
+---
+
+### File Type
+
+| Character | File Type                                 |
+| --------- | ----------------------------------------- |
+| -         | Regular file                              |
+| b         | Block special file                        |
+| c         | Character special file                    |
+| C         | High performance ("contiguous data") file |
+| d         | Directory                                 |
+| D         | Door (special IPC file in Solaris 2.5+)   |
+| l         | Symbolic link                             |
+| M         | Off-line ("migrated") file (Cray DMF)     |
+| n         | Network special file (HP-UX)              |
+| p         | FIFO (named pipe)                         |
+| P         | Port (special system file in Solaris 10+) |
+| s         | Socket                                    |
+| ?         | Some other file type                      |
+</md></sn>
   <config>
     <tags>#01.list files in a long listing format</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 12:06:17 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 12:13:49 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-44z1f4Xbhf</id>
     <duration></duration>
   </config>
