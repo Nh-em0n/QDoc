@@ -1,10 +1,23 @@
 
-  <sn></sn>
+  <sn><md>## List Files
+
+The `ls` command lists the contents of a specified directory, **excluding dotfiles**.
+
+* If no directory is specified, it lists the contents of the **current directory** by default.
+* By default, files are **sorted alphabetically** and aligned in columns if they don’t fit on one line.
+
+**Example:**
+
+```bash
+$ ls
+apt  bin  configs  Desktop  Documents  eclipse  Fonts  git  Music  Pictures  Programming  Public  Templates  Videos  workspace
+```
+</md></sn>
   <config>
     <tags>#05.list files</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 12:39:54 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 12:41:25 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-zkV7jd7qiA</id>
     <duration></duration>
   </config>
