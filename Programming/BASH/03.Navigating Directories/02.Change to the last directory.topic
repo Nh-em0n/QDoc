@@ -1,10 +1,18 @@
 
-  <sn></sn>
+  <sn><md>### Change to the last directory
+
+For the current shell, this takes you to the previous directory that you were in, no matter where it was.
+
+```bash
+cd -
+```
+
+Doing it multiple times effectively "toggles" you being in the current directory or the previous one.</md></sn>
   <config>
     <tags>#02.change to the last directory</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 11:25:09 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 11:26:56 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-vNlYR350FE</id>
     <duration></duration>
   </config>
