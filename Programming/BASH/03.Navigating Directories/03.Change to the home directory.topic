@@ -1,10 +1,20 @@
 
-  <sn></sn>
+  <sn><md>### Change to the home directory
+
+The default directory is the home directory ($HOME, typically /home/username), so cd without any directory takes you there
+
+
+``` bash
+cd
+cd $HOME
+cd ~
+```
+</md></sn>
   <config>
     <tags>#03.change to the home directory</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 11:27:35 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 11:29:02 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-YUNd7cATBY</id>
     <duration></duration>
   </config>
