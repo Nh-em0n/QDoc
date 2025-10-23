@@ -1,10 +1,54 @@
 
-  <sn></sn>
+  <sn><md>## Bash `ls` Command Cheat Sheet
+
+Here’s a comprehensive table summarizing the commonly used `ls` options and their purposes:
+
+| Option                         | Description                                                                | Example                        |
+| ------------------------------ | -------------------------------------------------------------------------- | ------------------------------ |
+| `ls`                           | List files and directories in the current directory (excluding dotfiles)   | `ls`                           |
+| `ls <directory>`               | List files in a specified directory                                        | `ls /home/user`                |
+| `ls -a` / `--all`              | List **all files**, including hidden dotfiles (`.` and `..`)               | `ls -a`                        |
+| `ls -A` / `--almost-all`       | List all files except `.` and `..`                                         | `ls -A`                        |
+| `ls -l`                        | List files in **long format** with permissions, owner, size, and timestamp | `ls -l`                        |
+| `ls -lh`                       | Long format with **human-readable sizes** (KB, MB, etc.)                   | `ls -lh`                       |
+| `ls -S`                        | Sort files by **size**, largest first                                      | `ls -lS`                       |
+| `ls -Sr`                       | Sort files by size in **ascending order**                                  | `ls -lSr`                      |
+| `ls -t`                        | Sort files by **modification time**, newest first                          | `ls -lt`                       |
+| `ls -tr`                       | Sort files by modification time, oldest first                              | `ls -ltr`                      |
+| `ls -r`                        | Reverse the order of any sort                                              | `ls -lr`                       |
+| `ls -R`                        | **Recursively** list files in subdirectories                               | `ls -R`                        |
+| `ls -d */`                     | List only **directories** in the current directory                         | `ls -d */`                     |
+| `ls -1`                        | List one file per line                                                     | `ls -1`                        |
+| `ls -i`                        | Show **inode numbers** of files                                            | `ls -i`                        |
+| `ls -F`                        | Append **indicator** (e.g., `/` for directories, `*` for executables)      | `ls -F`                        |
+| `ls --color`                   | Display files with **colors** based on type                                | `ls --color`                   |
+| `ls -X`                        | Sort files **alphabetically by extension**                                 | `ls -lX`                       |
+| `ls -v`                        | Sort files **naturally** (useful for numbered filenames)                   | `ls -lv`                       |
+| `ls --group-directories-first` | List **directories first**, then files                                     | `ls --group-directories-first` |
+
+---
+
+**Tips:**
+
+* Combine multiple options for advanced listing:
+
+```bash
+ls -lhS --color
+```
+
+* Use **globbing** to list specific file types:
+
+```bash
+ls *.jpg
+```
+
+* Use `man ls` for a full reference of all options.
+</directory></md></sn>
   <config>
     <tags>#cheatsheet</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 12:58:24 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 13:01:53 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-dmeYCRurBE</id>
     <duration></duration>
   </config>
