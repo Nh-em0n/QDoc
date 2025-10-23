@@ -33,7 +33,14 @@ $ tree -L 1 -d /tmp
     <tags>#06.list files in a tree like format</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 12:33:36 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 12:38:39 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-JNCH5ZmoII</id>
     <duration></duration>
   </config>
+<sn><md>### Install tree
+
+If tree is not recognised then install it by
+
+```bash
+sudo apt install tree
+```</md></sn>
