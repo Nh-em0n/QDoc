@@ -1,10 +1,78 @@
 
-  <sn></sn>
+  <sn><md>### Basic Debugging with `-x`
+
+1. **Script (`hello.sh`):**
+
+```bash
+#!/bin/bash
+echo "Hello World"
+```
+
+2. **Run in debug mode:**
+
+```bash
+bash -x hello.sh
+```
+
+**Output:**
+
+```
++ echo Hello World
+Hello World
+```
+
+* The `-x` option shows each command as it is executed, prefixed with `+`.
+</md></sn>
   <config>
     <tags>#06.hello world in debug mode</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 10:52:40 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 10:57:58 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-uVBHjv8ocj</id>
     <duration></duration>
   </config>
+<sn><md>### Debugging Errors in Scripts
+
+**Example Script with an Error:**
+
+```bash
+#!/bin/bash
+echo "Hello World\n"
+adding_string_to_number="s"
+v=$(expr 5 + $adding_string_to_number)
+```
+
+**Normal Execution:**
+
+```bash
+./hello.sh
+```
+
+**Output:**
+
+```
+Hello World
+expr: non-integer argument
+```
+
+* The error message alone is not enough to trace the problem.
+
+**Run in Debug Mode for Better Tracing:**
+
+```bash
+bash -x hello.sh
+```
+
+**Output:**
+
+```
++ echo Hello World\n
+Hello World
++ adding_string_to_number=s
++ expr 5 + s
+expr: non-integer argument
++ v=
+```
+
+* Debug mode shows the **exact line and variable values** where the error occurs, making it easier to troubleshoot.
+</md></sn>
