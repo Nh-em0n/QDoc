@@ -1,10 +1,44 @@
 
-  <sn></sn>
+  <sn><md>### List All Files Including Dotfiles
+
+A **dotfile** is a file whose name begins with a `.`. These files are normally hidden by `ls` and are not listed unless explicitly requested.
+
+**Example: Default `ls` output**
+
+```bash
+$ ls
+bin  pki
+```
+
+---
+
+### List All Files Including Dotfiles
+
+Use the `-a` or `--all` option to list all files, including dotfiles:
+
+```bash
+$ ls -a
+.  ..  .ansible  .bash_logout  .bashrc  .lesshst  .puppetlabs  .viminfo  .bash_history  .bash_profile  bin  pki  .ssh
+```
+
+* Here, `.` refers to the **current directory** and `..` refers to the **parent directory**.
+
+---
+
+### List Almost All Files (Excluding `.` and `..`)
+
+Use the `-A` or `--almost-all` option to list all files including dotfiles but **excluding `.` and `..`**:
+
+```bash
+$ ls -A
+.ansible  .bash_logout  .bashrc  .lesshst  .puppetlabs  .viminfo  .bash_history  .bash_profile  bin  pki  .ssh
+```
+</md></sn>
   <config>
     <tags>#03.list all files including dot files</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 12:18:43 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 12:25:01 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-PcX8GVm1Il</id>
     <duration></duration>
   </config>
