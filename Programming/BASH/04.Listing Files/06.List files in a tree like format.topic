@@ -1,10 +1,39 @@
 
-  <sn></sn>
+  <sn><md>## List Files in a Tree-Like Format
+
+The `tree` command lists the contents of a specified directory in a **tree-like format**.
+
+* If no directory is specified, it lists the contents of the **current directory** by default.
+
+**Example:**
+
+```bash
+$ tree /tmp
+/tmp
+├── 5037
+├── adb.log
+└── evince-20965
+    └── image.FPWTJY.png
+```
+
+### flags
+
+* Use the `-L` option to **limit the display depth**.
+* Use the `-d` option to **list only directories**.
+
+**Example:**
+
+```bash
+$ tree -L 1 -d /tmp
+/tmp
+└── evince-20965
+```
+</md></sn>
   <config>
     <tags>#06.list files in a tree like format</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 12:32:25 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 12:33:36 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-JNCH5ZmoII</id>
     <duration></duration>
   </config>
