@@ -1,10 +1,53 @@
 
-  <sn></sn>
+  <sn><md>## Other Shebangs
+
+The kernel recognizes **two kinds of programs**:
+
+1. **Binary programs** – Identified by their ELF (Executable and Linkable Format) header, usually produced by a compiler.
+2. **Scripts** – Any text-based script file.
+
+---
+
+### Shebang in Scripts
+
+* If a file starts with `#!` on the very first line, the next string must be the **pathname of an interpreter**.
+* When the kernel reads this line, it calls the interpreter specified by this path and passes all following words on the line as arguments.
+
+**Example with non-existent arguments:**
+
+```bash
+#!/bin/bash something wrong
+echo "This line never gets printed"
+```
+
+* Here, Bash tries to execute `"something wrong"` which does not exist.
+* The script file name is also passed as an argument to the interpreter.
+</md></sn>
   <config>
     <tags>#03.other shebangs</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 11:14:29 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 11:17:04 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-cUFWcveGVP</id>
     <duration></duration>
   </config>
+<sn><md>### Using `echo` to Demonstrate Shebang Arguments
+
+```bash
+# "#/bin/echo something wrong"
+```
+
+* If this script is named `thisscript` and run as:
+
+```bash
+./thisscript one two
+```
+
+* Output:
+
+```
+something wrong ./thisscript one two
+```
+
+&gt; Some programs, like `awk`, use this technique to execute longer scripts stored in a disk file.
+</md></sn>
