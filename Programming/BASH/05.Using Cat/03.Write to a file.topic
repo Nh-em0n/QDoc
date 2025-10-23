@@ -1,10 +1,111 @@
 
-  <sn></sn>
+  <sn><md>### Write Text to a File
+
+Use `cat` with `&gt;` to write input from the terminal to a file:
+
+```bash
+cat &gt; file
+```
+
+* Type the text you want to save.
+* Press `Ctrl+D` to end input.
+* The content will be saved to `file`.
+</md></sn>
   <config>
     <tags>#03.write to a file</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 13:28:57 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 14:22:42 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-zME6QYxWrj</id>
     <duration></duration>
   </config>
+<sn><md>### Append Text to a File
+
+Use `cat` with `&gt;&gt;` to **append** text to the end of an existing file:
+
+```bash
+cat  &gt;&gt; existing_file
+```
+
+* Press `Ctrl+D` to finish writing.
+</md></sn><sn><md>## heredoc
+
+A **here document** (or **heredoc**) lets you send multiple lines of text as input to a command **directly in the script or terminal**, without needing an external file.
+
+#### Example 1: Create a file using a heredoc
+
+```bash
+cat &lt;<end> message.txt
+Hello, World.
+This is a message written using a heredoc.
+END
+```
+
+**Output (inside the file):**
+
+```
+Hello, World.
+This is a message written using a heredoc.
+```
+
+---
+
+#### Use heredoc with another command
+
+You can pass multiline text directly into commands like `grep`, `tee`, or `mail`.
+
+```bash
+grep "apple" &lt;</end></md></sn><sn><md>###  **Prevent Variable Expansion or Command Substitution**
+
+By default, heredocs **expand** variables and commands before sending the text to the command.
+
+### ⚠️ Normal heredoc (expands variables)
+
+```bash
+name="Nazmul"
+cat &lt;&lt; END
+Hello, $name!
+END
+```
+
+**Output:**
+
+```
+Hello, Nazmul!
+```
+
+Bash replaced `$name` with its value.
+
+---
+
+### ✅ Quoted heredoc (no expansion)
+
+If you don’t want Bash to expand `$variables` or execute `commands`, **quote** the delimiter.
+
+```bash
+name="Nazmul"
+cat &lt;&lt;'END'
+Hello, $name!
+Today is `date`.
+END
+```
+
+**Output:**
+
+```
+Hello, $name!
+Today is `date`.
+```
+
+Here, `$name` and `` `date` `` are printed **literally**, not expanded.
+
+---
+
+### 🧠 Summary
+
+| Feature                     | Normal Heredoc | Quoted Heredoc |
+| --------------------------- | -------------- | -------------- |
+| Variables (`$var`) expand   | ✅ Yes          | ❌ No           |
+| Commands (`` `cmd` ``) run  | ✅ Yes          | ❌ No           |
+| Use quotes around delimiter | ❌ No           | ✅ Yes          |
+| Example delimiter           | `&lt;</md></sn>
