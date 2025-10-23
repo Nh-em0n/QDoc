@@ -1,10 +1,33 @@
 
-  <sn></sn>
+  <sn><md>## List Files Sorted by Size
+
+The `ls` command with the `-S` option sorts files in **descending order of size**.
+
+**Example:**
+
+```bash
+$ ls -l -S ./Fruits
+total 444
+-rw-rw-rw- 1 root root 295303 Jul 28 19:19 apples.jpg
+-rw-rw-rw- 1 root root 102283 Jul 28 19:19 kiwis.jpg
+-rw-rw-rw- 1 root root 50197  Jul 28 19:19 bananas.jpg
+```
+
+* To **reverse the sort order**, use the `-r` option with `-S`:
+
+```bash
+$ ls -l -S -r ./Fruits
+total 444
+-rw-rw-rw- 1 root root 50197  Jul 28 19:19 bananas.jpg
+-rw-rw-rw- 1 root root 102283 Jul 28 19:19 kiwis.jpg
+-rw-rw-rw- 1 root root 295303 Jul 28 19:19 apples.jpg
+```
+</md></sn>
   <config>
     <tags>#07.list files sorted by size</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 12:27:40 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 12:29:19 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-tPinT5HSut</id>
     <duration></duration>
   </config>
