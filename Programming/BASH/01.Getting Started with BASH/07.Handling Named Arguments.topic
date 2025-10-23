@@ -1,10 +1,27 @@
 
-  <sn></sn>
+  <sn><md>### Handling Named Arguments
+
+```bash
+#!/bin/bash
+deploy=false
+uglify=false
+while (( $# &gt; 1 )); do case $1 in
+ --deploy) deploy="$2";;
+ --uglify) uglify="$2";;
+ *) break;
+esac; shift 2
+done
+$deploy &amp;&amp; echo "will deploy... deploy = $deploy"
+$uglify &amp;&amp; echo "will uglify... uglify = $uglify"
+# how to run
+# chmod +x script.sh
+# ./script.sh --deploy true --uglify false
+```</md></sn>
   <config>
     <tags>#07.handling named arguments</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 11:00:36 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 11:01:14 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-EwKV7HZWFz</id>
     <duration></duration>
   </config>
