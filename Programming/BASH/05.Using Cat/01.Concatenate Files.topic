@@ -1,10 +1,43 @@
 
-  <sn></sn>
+  <sn><md>## Concatenate Files with `cat`
+
+The **primary purpose of `cat`** is to **read and concatenate files**.
+
+---
+
+### 1. Concatenate Multiple Files into a Single File
+
+You can combine the contents of multiple files and **redirect the output** into a new file:
+
+```bash
+cat file1 file2 file3 &gt; file_all
+```
+
+* `file1`, `file2`, `file3` – The source files to concatenate.
+* `&gt;` – Redirects the combined output to `file_all`.
+* Result: `file_all` contains the content of `file1`, followed by `file2`, then `file3`.
+
+---
+
+### 2. Concatenate Files in a Pipeline
+
+You can also use `cat` to feed the contents of files into **another command** via a pipeline:
+
+```bash
+cat file1 file2 file3 | grep foo
+```
+
+* Here, `cat` outputs all file contents.
+* The pipe `|` sends the output to `grep`, which searches for lines containing `foo`.
+* Useful for **filtering, processing, or analyzing multiple files** without creating a temporary file.
+
+&gt; This technique is common in Bash scripting to chain commands and process text efficiently.
+</md></sn>
   <config>
     <tags>#01.concatenate files</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 13:09:56 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 13:20:14 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-uJc2PYqzyd</id>
     <duration></duration>
   </config>
