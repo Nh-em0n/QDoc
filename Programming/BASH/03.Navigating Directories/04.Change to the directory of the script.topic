@@ -1,10 +1,28 @@
 
-  <sn></sn>
+  <sn><md>### Change to the Directory of the Script
+
+There are generally **two types of Bash scripts**:
+
+1. **System tools** – Operate from the current working directory.
+2. **Project tools** – Modify files relative to their own location in the file system.
+
+For the second type, it is useful to **change to the directory where the script is stored**. This can be done with:
+
+```bash
+cd "$(dirname "$(readlink -f "$0")")"
+```
+
+### How It Works
+
+1. `readlink -f "$0"` – Determines the **absolute path** to the current script (`$0`).
+2. `dirname` – Converts the script path to the **directory path** containing the script.
+3. `cd` – Changes the **current working directory** to the directory returned by `dirname`.
+</md></sn>
   <config>
     <tags>#04.change to the directory of the script</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 11:32:29 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 11:34:02 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-86bpbjt8bd</id>
     <duration></duration>
   </config>
