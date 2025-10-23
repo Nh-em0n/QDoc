@@ -1,10 +1,47 @@
 
-  <sn></sn>
+  <sn><md>### List Files Without Using `ls`
+
+You can use Bash's **filename expansion** and **brace expansion** to list files:
+
+* **Display all files and directories in the current directory:**
+
+```bash
+printf "%s\n" *
+```
+
+* **Display only directories in the current directory:**
+
+```bash
+printf "%s\n" */
+```
+
+* **Display only specific image files:**
+
+```bash
+printf "%s\n" *.{gif,jpg,png}
+```
+</md></sn>
   <config>
     <tags>#04.list file without ls</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 12:42:21 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 12:45:07 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-J2v7hLvIDG</id>
     <duration></duration>
   </config>
+<sn><md>### Capturing Files into a Variable
+
+* Use a **Bash array** to store files for processing:
+
+```bash
+files=( * )
+```
+
+* **Iterate over the files:**
+
+```bash
+for file in "${files[@]}"; do
+  echo "$file"
+done
+```
+</md></sn>
