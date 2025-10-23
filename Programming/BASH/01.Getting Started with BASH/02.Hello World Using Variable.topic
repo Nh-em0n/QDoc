@@ -1,10 +1,72 @@
 
-  <sn></sn>
+  <sn><md>## Hello World Using Variables{.text-center}
+
+1. **Create a new file** called `hello.sh` with the following content:
+
+```bash
+#!/usr/bin/env bash
+# Note that spaces cannot be used around the `=` assignment operator
+whom_variable="World"
+# Use printf to safely output the data
+printf "Hello, %s\n" "$whom_variable"
+#&gt; Hello, World
+```
+
+2. **Make it executable**
+
+```bash
+chmod +x hello.sh
+```
+
+3. **Run the script**
+
+```bash
+./hello.sh
+```
+
+* Output:
+
+```
+Hello, World
+```
+
+&gt; To tell Bash where the script is located, use `./` for the current working directory. If you do not specify a directory, Bash will search for the script in directories listed in your `$PATH` environment variable.
+</md></sn>
   <config>
     <tags>#02.hello world using variable</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 10:20:43 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 10:31:29 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-D0IcHsdXoc</id>
     <duration></duration>
   </config>
+<sn><md>## Using Command-Line Arguments
+
+1. **Modify the script** to accept the first argument `$1` and output it:
+
+```bash
+#!/usr/bin/env bash
+printf "Hello, %s\n" "$1"
+#&gt; Hello, World
+```
+
+2. **Run the script with an argument**
+
+```bash
+./hello.sh World
+```
+
+* Output:
+
+```
+Hello, World
+```
+
+&gt; Important: Always quote `$1` with double quotes (`"$1"`) to ensure proper expansion of the first command-line argument. Using single quotes (`'$1'`) will print the literal string `$1`.
+
+---
+
+:::.note
+#### Security Note{.fg-red}
+Forgetting to quote variables in Bash can lead to unexpected behavior or security issues. Always use double quotes around variable expansions to safely handle input.
+:::</md></sn>
