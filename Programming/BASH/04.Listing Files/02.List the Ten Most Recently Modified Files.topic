@@ -1,10 +1,18 @@
 
-  <sn></sn>
+  <sn><md>### List the Ten Most Recently Modified Files
+
+The following will list up to ten of the most recently modified files in the current directory, using a long listing
+
+format (-l) and sorted by time (-t).
+
+```bash
+ls -lt | head
+```</md></sn>
   <config>
     <tags>#02.list the ten most recently modified files</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 12:14:00 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 23 2025 12:18:06 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-54oHoRcLx6</id>
     <duration></duration>
   </config>
