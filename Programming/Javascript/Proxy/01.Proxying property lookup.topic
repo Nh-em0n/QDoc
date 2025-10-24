@@ -1,10 +1,35 @@
 
-  <sn></sn>
+  <sn><md>## Proxying Property Lookup
+
+To influence property lookup, the get handler must be used.
+In this example, we modify property lookup so that not only the value, but also the type of that value is returned.
+We use Reflect to ease this.
+
+```javascript
+let handler = {
+  get(target, property) {
+    if (!Reflect.has(target, property)) {
+      return {
+        value: undefined,
+        type: 'undefined'
+      };
+    }
+    let value = Reflect.get(target, property);
+    return {
+      value: value,
+      type: typeof value
+    };
+  }
+};
+
+let proxied = new Proxy({ foo: 'bar' }, handler);
+console.log(proxied.foo); // logs `Object {value: "bar", type: "string"}`
+```</md></sn>
   <config>
     <tags>#01.proxying property lookup</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 24 2025 08:25:38 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 24 2025 08:46:05 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-nnhlYn2U9I</id>
     <duration></duration>
   </config>
