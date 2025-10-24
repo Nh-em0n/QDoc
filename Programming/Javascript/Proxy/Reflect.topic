@@ -1,10 +1,128 @@
 
-  <sn></sn>
+  <sn><md>### Reflect
+
+In JavaScript, **`Reflect`** is a built-in global object introduced along with **Proxy** in ES6. It provides a set of **static methods** that mirror many of the low-level operations that the JavaScript engine itself performs — such as getting, setting, or deleting properties.
+
+It is often used **inside Proxy handlers** to perform the *default behavior* after applying custom logic.</md></sn>
   <config>
     <tags>#reflect</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 24 2025 08:30:54 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 24 2025 08:42:31 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-x98mSeQkLD</id>
     <duration></duration>
   </config>
+<sn><md>### Purpose of Reflect
+
+`Reflect` gives developers:
+
+* A clean, consistent way to perform object operations (like `get`, `set`, `has`, etc.).
+* Utility methods that often behave the same as their operators (like `in`, `delete`, `new`).
+* A standard way to forward operations in proxy handlers.
+
+Before `Reflect`, some of these operations were done with functions like `Object.defineProperty`, or even using operators like `obj[prop]`.
+With `Reflect`, we get a **unified API**.
+</md></sn><sn><md>### Basic Example
+
+```javascript
+const user = { name: "Alice", age: 25 };
+
+console.log(Reflect.get(user, "name"));  // Alice
+Reflect.set(user, "age", 30);
+console.log(user.age);                   // 30
+```
+
+Here:
+
+* `Reflect.get(obj, key)` is similar to `obj[key]`
+* `Reflect.set(obj, key, value)` is similar to `obj[key] = value`
+</md></sn><sn><md>### Using Reflect Inside Proxy
+
+`Reflect` is most commonly used *inside proxy handlers* to preserve normal behavior after adding custom logic.
+
+#### Example:
+
+```javascript
+const user = { name: "John" };
+
+const handler = {
+  get(target, prop, receiver) {
+    console.log(`Getting property: ${prop}`);
+    return Reflect.get(target, prop, receiver); // default behavior
+  },
+  set(target, prop, value, receiver) {
+    console.log(`Setting property: ${prop} = ${value}`);
+    return Reflect.set(target, prop, value, receiver); // default behavior
+  }
+};
+
+const proxyUser = new Proxy(user, handler);
+proxyUser.name;          // Logs "Getting property: name"
+proxyUser.name = "Doe";  // Logs "Setting property: name = Doe"
+```
+
+Here, `Reflect.get` and `Reflect.set` ensure the property access and assignment still behave normally — just wrapped with custom logging.
+
+</md></sn><sn><md>### Common Reflect Methods
+
+| **Method**                                         | **Description**                   | **Equivalent To / Used For**                                      |
+| -------------------------------------------------- | --------------------------------- | ----------------------------------------------------------------- |
+| `Reflect.get(target, prop, receiver)`              | Gets a property value.            | `target[prop]`                                                    |
+| `Reflect.set(target, prop, value, receiver)`       | Sets a property value.            | `target[prop] = value`                                            |
+| `Reflect.has(target, prop)`                        | Checks if a property exists.      | `'prop' in target`                                                |
+| `Reflect.deleteProperty(target, prop)`             | Deletes a property.               | `delete target[prop]`                                             |
+| `Reflect.ownKeys(target)`                          | Returns all own property keys.    | `Object.getOwnPropertyNames()` + `Object.getOwnPropertySymbols()` |
+| `Reflect.defineProperty(target, prop, descriptor)` | Defines a property.               | `Object.defineProperty(target, prop, descriptor)`                 |
+| `Reflect.getOwnPropertyDescriptor(target, prop)`   | Gets a property descriptor.       | `Object.getOwnPropertyDescriptor(target, prop)`                   |
+| `Reflect.isExtensible(target)`                     | Checks if object can be extended. | `Object.isExtensible(target)`                                     |
+| `Reflect.preventExtensions(target)`                | Makes an object non-extensible.   | `Object.preventExtensions(target)`                                |
+| `Reflect.apply(target, thisArg, args)`             | Calls a function.                 | `Function.prototype.apply.call(target, thisArg, args)`            |
+| `Reflect.construct(target, args, newTarget)`       | Calls a constructor with `new`.   | `new target(...args)`                                             |</md></sn><sn><md>### Using Reflect.apply
+
+```javascript
+function greet(name) {
+  return `Hello, ${name}`;
+}
+
+console.log(Reflect.apply(greet, null, ["World"])); 
+// Output: Hello, World
+```
+
+This example calls `greet()` using `Reflect.apply()` — similar to `Function.prototype.apply`.
+</md></sn><sn><md>### Why Use Reflect with Proxy
+
+When creating a Proxy handler, using Reflect:
+
+* **Prevents accidental recursion** or breaking native behavior.
+* **Keeps code clean and consistent** with built-in semantics.
+* **Improves compatibility** with internal object mechanisms.
+</md></sn><sn><md>#### Example (without Reflect – potential issue):
+
+```javascript
+const proxy = new Proxy({}, {
+  get(target, prop) {
+    return target[prop]; // could cause stack overflow if not careful
+  }
+});
+```
+
+#### Example (with Reflect – safe and standard):
+
+```javascript
+const proxy = new Proxy({}, {
+  get(target, prop, receiver) {
+    return Reflect.get(target, prop, receiver);
+  }
+});
+```
+</md></sn><sn><md>### Summary
+
+| **Aspect**   | **Reflect**                                   | **Proxy**                                                  |
+| ------------ | --------------------------------------------- | ---------------------------------------------------------- |
+| Purpose      | Provides standard low-level object operations | Intercepts and customizes object operations                |
+| Usage        | Used *inside* Proxy handlers or standalone    | Used to define custom traps                                |
+| Example      | `Reflect.get(obj, prop)`                      | `new Proxy(obj, handler)`                                  |
+| Relationship | Helps perform default behavior in traps       | Calls Reflect methods internally when no traps are defined |</md></sn><sn><md>### Conclusion
+
+`Reflect` in JavaScript complements `Proxy` by providing a **safe and consistent way** to perform default object operations after applying custom interception logic. It helps ensure proxies remain predictable, maintainable, and closer to the native language behavior while still allowing deep customization.
+</md></sn>
