@@ -1,10 +1,147 @@
 
-  <sn></sn>
+  <sn><md>## Proxy in JavaScript
+
+In JavaScript, a **Proxy** is a powerful object introduced in **ES6 (ECMAScript 2015)** that allows developers to intercept and customize the behavior of fundamental operations on objects. It provides a way to define custom behavior for actions like **reading**, **writing**, **deleting properties**, **function invocation**, and more.
+
+The `Proxy` object acts as a **wrapper** around another object (called the *target*), giving fine-grained control over how the target behaves when accessed or modified.
+
+---
+
+### Syntax
+
+```javascript
+const proxy = new Proxy(target, handler);
+```
+
+* **target** → The original object you want to wrap or observe.
+* **handler** → An object that defines which operations will be intercepted and how to redefine their behavior.
+</md></sn>
   <config>
     <tags>#00.what is proxy</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 24 2025 08:02:40 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 24 2025 08:19:35 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ZCSJqw2w5k</id>
     <duration></duration>
   </config>
+<sn><md>### Basic Proxy
+
+```javascript
+const user = { name: "John", age: 25 };
+
+const handler = {
+  get(target, property) {
+    console.log(`Getting ${property}`);
+    return target[property];
+  },
+  set(target, property, value) {
+    console.log(`Setting ${property} to ${value}`);
+    target[property] = value;
+  }
+};
+
+const proxyUser = new Proxy(user, handler);
+
+console.log(proxyUser.name);  // Getting name → John
+proxyUser.age = 30;           // Setting age to 30
+```
+
+In this example, accessing or modifying properties triggers the `get` and `set` traps defined in the handler.
+</md></sn><sn><md>### Common Proxy Traps
+
+| **Trap Name**                              | **Description**                           | **Example Use Case**                                |
+| ------------------------------------------ | ----------------------------------------- | --------------------------------------------------- |
+| `get(target, prop, receiver)`              | Intercepts property access.               | Logging or returning default values.                |
+| `set(target, prop, value, receiver)`       | Intercepts property assignment.           | Validation or type checking before setting a value. |
+| `has(target, prop)`                        | Intercepts the `in` operator.             | Restricting visibility of certain properties.       |
+| `deleteProperty(target, prop)`             | Intercepts property deletion.             | Preventing or allowing deletions conditionally.     |
+| `apply(target, thisArg, args)`             | Intercepts function calls.                | Function call logging or argument transformation.   |
+| `construct(target, args, newTarget)`       | Intercepts `new` operator.                | Custom object creation or instance control.         |
+| `ownKeys(target)`                          | Intercepts `Object.keys()` or `for...in`. | Hiding or exposing certain keys.                    |
+| `defineProperty(target, prop, descriptor)` | Intercepts `Object.defineProperty()`.     | Controlling property definitions.                   |
+</md></sn><sn><md>### Validation Using Proxy
+
+```javascript
+const user = {};
+
+const handler = {
+  set(target, prop, value) {
+    if (prop === "age" &amp;&amp; typeof value !== "number") {
+      throw new TypeError("Age must be a number");
+    }
+    target[prop] = value;
+  }
+};
+
+const proxyUser = new Proxy(user, handler);
+proxyUser.age = 25;     // Works fine
+proxyUser.age = "25";   // Throws TypeError
+```
+
+This proxy ensures that the `age` property only accepts numerical values.
+</md></sn><sn><md>### Example: Read-Only Proxy
+
+```javascript
+const settings = { theme: "dark", language: "en" };
+
+const readOnly = new Proxy(settings, {
+  set() {
+    throw new Error("Cannot modify read-only object");
+  }
+});
+
+readOnly.theme = "light";  // Error: Cannot modify read-only object
+```
+
+Here, the proxy prevents any modification attempts to the object.
+</md></sn><sn><md>### Function Proxy
+
+```javascript
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+const proxyGreet = new Proxy(greet, {
+  apply(target, thisArg, args) {
+    console.log("Function called with:", args);
+    return target(...args);
+  }
+});
+
+console.log(proxyGreet("Alice"));  
+// Logs: Function called with: [ 'Alice' ]
+// Output: Hello, Alice!
+```
+
+This demonstrates intercepting a function call using the `apply` trap.
+</md></sn><sn><md>### Revocable Proxy
+
+A **revocable proxy** can be disabled at any time using the `Proxy.revocable()` method.
+
+```javascript
+const { proxy, revoke } = Proxy.revocable({ name: "John" }, {});
+
+console.log(proxy.name); // John
+revoke();                // Disable the proxy
+// console.log(proxy.name); // TypeError: Cannot perform 'get' on a proxy that has been revoked
+```
+</md></sn><sn><md>### Use Cases of Proxy
+
+* **Data validation and sanitization**
+* **Logging or debugging property access**
+* **Creating reactive systems (used in frameworks like Vue.js)**
+* **Implementing access control or security layers**
+* **Simulating or mocking APIs for testing**
+</md></sn><sn><md>### Difference Between Proxy and Object.defineProperty()
+
+| **Feature**                    | **Proxy**          | **Object.defineProperty()** |
+| ------------------------------ | ------------------ | --------------------------- |
+| Intercepts multiple operations | Yes                | Only `get` and `set`        |
+| Works with arrays              | Yes                | Limited                     |
+| Supports function calls        | Yes (`apply` trap) | No                          |
+| Can create revocable proxies   | Yes                | No                          |
+| Modern and flexible            | Yes                | Partially                   |
+</md></sn><sn><md>### Conclusion
+
+The **Proxy** object in JavaScript provides a flexible mechanism to intercept and redefine fundamental operations on objects and functions. It opens up advanced use cases like validation, access control, and reactivity systems. However, proxies should be used thoughtfully since excessive use can make debugging and performance management more complex.
+</md></sn>
