@@ -1,4 +1,173 @@
-<sn><md>### **Object**
+<sn><md>### Verb
+
+![verb-category-diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/media/eng-verb-diagram.svg)
+
+Every sentence made up by small `sub + verb` combination called clause.
+
+&gt; **Note**
+&gt; Not even a single sentence can be made without a Main Verb.
+
+#### Common sentences
+
+* She `writes` letters.
+* He `played` hockey.
+* I **am** `going` to Shimla.
+* He **is** `going` to Shimla.
+* They **have** `gone` to Shimla.
+
+
+
+
+### Verb Form
+
+There are 5 form of verb
+
+| $v_1$ | $v_2$ | $v_3$ | $v_4$ | $v_5$ |
+|-----------|-----------|-----------|-----------|-----------|
+| Base `Plural`   | Past   | Past Participle   | $v_4$ +ing   | Base `Singular`   |
+| be/am/are   | was/were   | been   | being   | is |
+| do   | did   | done   | doing   | does |
+| have   | had   | had   | having   | has |
+| eat   | ate   | eaten   | eating   | eats |
+
+
+### Sentence Structure
+
+&gt; With Main Verb : $\text{sub hv MV obj}$
+&gt; Without Main Verb : $\text{sub hv obj}$
+
+### Helping verb as main verb
+
+&gt; **Note :** 
+&gt; Helping peform dual functionality in a sentence , With main verb they they act as normal helping verb but
+&gt; In the absence of main verb,helping verb act as main verb.
+
+* I `am` an architect. (here `am` is main verb)
+* She `was` a dancer. (here `was` is main verb)
+* She `has` a beautiful home. (here `has` is main verb)
+
+
+### Example
+
+| Sentece | hv | MV |
+|----------|----------|----------|
+| He `is` a good man. | null | is |
+| He is `learning` English | is | learning |
+| He `does` his homework daily. | null | does |
+| He does not `come` to classes regularly. | does | come |
+| They `have` an adventurous life | null | have |
+| They have `made` a prototype | have | made |
+
+
+
+### Has had / Have had / Had had
+
+
+## Have {.text-center}
+
+| hv | MV |
+|----------|----------|
+| He **has** eaten lunch.<br>They **have** eaten lunch. | Possession <br> Relationship <br> Eat/Drink/Spend time |
+
+When the forms of `have` act as a main verb.They denote
+
+| Role | Example |
+|----------|----------|
+| Possession | I `have` a car. |
+| Relationship | She `has` a great family |
+| Eat | I `had` lunch |
+| Spend(time) | We `had` a great time last night. |
+
+
+| $v_1$ | $v_2$ | $v_3$ | $v_4$ | $v_5$ |
+|-----------|-----------|-----------|-----------|-----------|
+| have   | had   | had   | having   | has |
+| eat   | ate   | eaten   | eating   | eats |
+
+
+As have can be used to denote eat,so we can replace corresponding form of eat by have form.
+
+### Simple Present Tense ( Sub + v1/v5 )
+
+* I usually eat bread and butter for breakfast.
+* I usually `have` bread and butter for breakfast.(here have denote eat)
+---
+* She `drinks` warm water with lemon in the morning.
+* She `has` warm water with lemon in the morning. (here has denote drink)
+---
+* She `drinks` warm water with lemon in the morning.
+* She `has` warm water with lemon in the morning. (here has denote drink)
+---
+### Simple Past ( Sub + v2 )
+* I `ate` lunch.
+* I `had` lunch.($v_2$ form)
+---
+* She `drank` warm water with lemon in the morning.
+* She `had` warm water with lemon in the morning.
+---
+### Present Perfect ( $\text{ Sub + has/has + v3}$ )
+
+&gt; **Note :**
+&gt; When two have sit partially,the first one is hv and the second one is mv
+
+* I have `eaten` lunch.
+* I have `had` lunch.(present participle)
+---
+* She has `eaten` lunch.
+* She has `had` lunch.(present participle)
+---
+* I have `drunk` warm water with lemon.
+* I have `had` warm water with lemon.(present participle)
+---
+
+### Past Perfect ( $\text{sub + had + v3}$ )
+
+* She had `eaten` dinner before I reached home.
+* She had `had` dinner before I reached home.
+---
+* She had drunk warm water with lemon before she left for the yoga class.
+* She had `had` warm water with lemon before she left for the yoga class.
+
+
+### Wrong Combination
+
+&gt; $\text{hav/has/had + v3}$
+
+* have [have]{.fg-red}
+* have [has]{.fg-red}
+* has [have]{.fg-red}
+* had [have]{.fg-red}
+* had [has]{.fg-red}
+
+
+### Test
+
+* Before I met him personally,I admit that I had `have` a poor opinion about him.
+* Before I met him personally,I admit that I had `had` a poor opinion about him.(had+v3)
+---
+* She must `had` completed her work by now because she is very beautiful.
+* She must `have` completed her work by now because she is very beautiful.(modal+v1)
+---
+* She `was` with me uptil now,so dont rebuke her for coming late.
+* She `has been` with me uptil now,so dont rebuke her for coming late.(present participle)
+---
+* This time election `did not had` that heat and dust usually associated with it.
+* This time election `did not have` that heat and dust usually associated with it.(did+v1/not+v1)
+---
+
+## Transitive Verb
+
+Mainverb is devided into two categories
+
+| Transitive | Intransitive |
+|----------|----------|
+| Always take an object | doesnt take any object |
+
+
+
+### Obeject Recap
+
++++
 
 An object is either a **noun** or a **pronoun**.
 
@@ -10,7 +179,7 @@ Objects are always associated with either verbs or prepositions.
 
 #### **Preposition Object**
 A preposition object occurs when a **preposition** is followed by a noun or pronoun.  
-- **Preposition &lt;space&gt; Object = Preposition Object**
+- **Preposition <space> Object = Preposition Object**
 
 Thus, any noun or pronoun that directly follows a preposition is the preposition's object.
 
@@ -35,7 +204,343 @@ Since **ran** is not directly linked to a noun/pronoun without a preposition, th
 
 #### **Note**
 - An object must be a **noun** or **pronoun**, never an adjective, adverb, preposition, or article.
-- An object is **one word** (e.g., *man*, *woman*, *he*), not a phrase (e.g., *a blind man*, *pink car*).&lt;/space&gt;</md></sn><config style="display:none"><tags>#11.object</tags><thumbnail></thumbnail><heading></heading><udate>Sat Jul 19 2025 08:16:16 GMT+0600 (Bangladesh Standard Time)</udate><id>article-IvLM5pXnij</id><duration></duration></config><sn><md>#### **Example: He kicked the ball.**
+- An object is **one word** (e.g., *man*, *woman*, *he*), not a phrase (e.g., *a blind man*, *pink car*).</space>
+
++++
+
+&gt; **Summary :** verb -&gt; noun/pronoun = verb has object = transitive verb
+&gt; ** verb -&gt; prepositino -&gt; noun/pronoun = preposition object so verb has not any object = intransitive verb
+
+
+### Lie vs Lay
+
+
+| $v_1$ | $v_2$ | $v_3$ | $v_4$ | $v_5$ |
+|-----------|-----------|-----------|-----------|-----------|
+| lie(Intransitive)   | lay   | lain   | lying   | lies |
+| lay(transitive)   | laid   | laid   | laying   | lays |
+
+
+### Inransitive
+
+#### To lie on a bench.{.text-center}
+* lie+on = verb has no object = intransitive
+* lie is intransitive verb base form
+
+#### A pen lay on the desk.{.text-center}
+* lay + on = verb has no object = intransitive verb = intransitive
+* lie is the base form here lay means it is in v2 form or past simple tense.
+
+
+### Transitive
+
+#### She laid the baby on the bed.{.text-center}
+* laid + article + noun = verb has object = transitive verb
+* lay is the base form,here laid means v2 form or past simple tense
+
+#### He laid the tray on the table.
+* laid + article + noun = verb has object = transitive verb
+* lay is the base form ,laid means it is in v2 form or past simple tense
+
+
+### Test
+
+&gt; #### **Note :** Clouses are not tense independent means
+&gt; * past tense coluse,present tense clause
+&gt; * present perfect coluse,present simple clause
+
+&gt; #### **Note :** verb two side of and are alwyas in same tense
+&gt; * He `came` and `sat`.
+
+#### He was `laying` comfortably on the bed.
+* laying + adverb = verb has no object = intransitive verb
+* lie is the base form
+* the sentence is in past continuous form
+* so we need v4 of lie,which is lying
+* Ans : He was `lying` comfortably on the bed
+---
+#### I am going to `lay` down in the room.
+* going + adverb = verb has no object = intransitive verb
+* lie is the intransitive verb in base form
+* to -&gt; v1 so we need v1 of lie,which is lie
+* Ans : I am going to `lie` down in the room
+---
+#### He lay the blanket out and sat.{.text-center}
+* lay + article + noun = verb has object = transitive verb
+* lay is the base form of transitive verb
+* verb is in past tense,verb between and always same,so as sat is v2 so lay will also be in second form
+* v2 of lay is laid
+* Ans : He `laid` the blanket out and `sat`
+---
+#### We are tired,lets lay in the shade for a while.
+* lay + preposition = verb has not object = intransitive
+* lie is the base form for intransitive
+* lets+v1 so the verb will be in v1 form which is lie
+* Ans : We are tired,lets `lie` in the shade for a while.
+---
+#### The problem laid in the fact that he was so unused to this lifestyle.
+* laid + in = verb has no object = intransitive verb
+* lie is the intransitive verb
+* the verb is in v2 form so lie will be in v2 form which is lay
+* Ans : The problem lay in the fact that he was so unused to this lifestyle.
+---
+#### The plan is to lie the foundations for the new apartments in October.
+* lie + article + noun = verb has object = transitive verb
+* lay is the transitive verb
+* to + v1 so lay will in v1 form
+* Ans : The plan is to lie the foundations for the new apartments in October
+---
+#### She `lay` her head against my shoulder and fall asleep.
+* lay + possesive adjective + noun = verb has object = transitive verb
+* lay is the transitive verb,the tense is in past tense,as all `fall`,we know that verb around and are in the same form,so lay will be in v2 form
+* lay v2 is laid
+* Ans : She `laid` her head against my shoulder and fall asleep
+
+
+## Rise vs Raise
+
+| $v_1$ | $v_2$ | $v_3$ | $v_4$ | $v_5$ |
+|-----------|-----------|-----------|-----------|-----------|
+| rise(Intransitive)   | rose   | risen   | rising  | rises |
+| raise(transitive)   | raised   | raised   | raising  | raises |
+
+:::.row
+:::.col-12 .col-md-6
+### Inransitive {.text-center}
+* The sun `rises` in the east.
+* The aircraft `rose` into air.
+:::
+
+:::.col-12 .col-md-6
+### Transitive {.text-center}
+* He `raised` an important issue.
+* They will not `raise` taxes.
+:::
+:::
+
+&gt; Can you some common pattern in Transitive verb liad,raised
+
+### Test
+
+#### Its a wonder we dint rise our arms in surrender.
+* rise + possesive adjective + noun = verb has object = transitive verb
+* raise is the base form of transitive
++ not + v1 ,so raise will in v1 form which is raise
+* Ans : Its a wonder we `dint raise` our arms in surrender.
+---
+#### In our country women have oppurtunities to `rise` to top in every walk of life.
+* rise + to = verb has no object = intransitive
+* rise is in intransitive form
+* to + v1 so rise will be in the v1 form which is rise
+* Ans : No error
+---
+#### Because of the incessant rain,the flood water is `raising`.
+* raising + nothing = verb has no object = intransitive
+* rise is intransitive, as raising so v4 will be rising
+* Ans: Because of the incessant rain,the flood water is `rising`.
+---
+#### Considering the high demand for flights to gulf countries,airlines may rise prices.
+* rise + price = verb has object = transitive
+* riase is transitive,may+v1 so raise will in v1 form which is raise
+* Ans:Considering the high demand for flights to gulf countries,airlines may `raise` prices
+---
+
+## Fall vs Fell 
+
+| $v_1$ | $v_2$ | $v_3$ | $v_4$ | $v_5$ |
+|-----------|-----------|-----------|-----------|-----------|
+| fall(Intransitive)   | fell   | fallen   | falling  | falls |
+| fell(transitive)   | felled   | felled   | felling  | fells |
+
+:::.row
+:::.col-12 .col-md-6
+### Inransitive {.text-center}
+* The tree fall down.
+* He fell into the river.
+:::
+
+:::.col-12 .col-md-6
+### Transitive {.text-center}
+* He felled the tree.
+:::
+:::
+
+### Test
+
+#### Silence felled between them and then he finally spoke.
+* felled + preposition = verb has no object = intransitive verb
+* fall is the transitive, _and_spoke(past) ,so fall will be in v2 form fell
+* Ans : Silence `fell` between them and then he finally spoke
+---
+#### To build his garage,he fell a very old tree.
+* fell + article + adjective + noun = verb has object = transitive
+* fell is the transitive form,as fell in v2 form so fell will be in v2 form,which is felled
+* Ans : To build his garage,he `felled` a very old tree
+---
+#### No one is allowed to fall the trees in the forest.
+* fall + article + noun = verb has object = transitive
+* fell is the transitive
++ to + v1 so fell will be in v1 form which is fell
+* Ans : No one is allowed to fell the trees in the forest
+---
+#### He wanted to know who had fallen the wall.
+* fallen + article + wall = verb as object = trnasitive verb
+* fell is the transitive verb,as fallen is in v3 form so as fell will be in v3 form,which is felled
+* He wanted to know who had `felled` the wall
+
+
+### Others
+
+| $v_1$ | $v_2$ | $v_3$ |
+|-----------|-----------|-----------|
+| overflow   | overflowed   | overflowed  |
+| hang  | hung | hung |
+| hang  | hanged | hanged |
+| find  | found | found |
+| found  | founded | founded |
+| broadcast  | broadcast | broadcast |
+| slay  | slew | slain |
+
+#### There was a heavy rain last night and the rivers have overflown their banks.
+* There was a heavy rain last night and the rivers have `overflowed` their banks.
+---
+#### The coat was drenched in rain water,I hanged it on the hook.
+* The coat was drenched in rain water,I `hung` it on the hook.
+---
+#### Hang your clothes on the line to dry.(no error)
+---
+#### The servant hanged the lamp on the wall.
+* The servant `hun` the lamp on the wall.
+--- 
+#### For his crime,the accused will be `hung` till death.
+*  For his crime,the accused will be `hanged` till death.
+---
+#### My mother `hanged` my clothes.
+* My mother `hung` my clothes.
+---
+#### Our organizations was found twenty years ago.
+* Our organizations was `founded` twenty years ago.
+---
+#### Such inqualities can be found in the constitutions of other countries also.(no error)
+* find in v3 form (okay)
+---
+#### In a group you may found one or two people...
+* In a group you may `find` one or two people...(may+v1)
+---
+#### The eminent speakers speech was broadcasted over all the major stations.
+* The eminent speakers speech was `broadcast` over all the major stations.
+---
+#### It cannot be forecasted how soceity will emerge generation hence.
+* It cannot be `forecast` how ...
+---
+#### 2 times like
+---
+#### The timid creature was driven into a narrow lane where it was slewed by the kidnapper.
+* The timid creature was driven into a narrow lane where it was `slain` by the kidnapper.(passive be+v3)
+---
+#### He has slayed his rival.
+* He has `slain` his rival.(has+v3)
+---
+
+## Finite vs Non-Finite
+
+| Finite | Non-Finite(independent) |
+|----------|----------|
+| verb must agree with the number and person of its subject | verb are not bound by tense and number of person of subject |
+| He eats rice | He have to eat rice |
+
+
+### Non-Finite
+* Infinitive
+* Gerund
+* Participle
+
+### Infinitive
+* to infinitve ( to + v1 )
+* bare infitive ( v1 )
+
+
+### Full or to Infinitive ( to + v1 )
+ 
+#### full infinitive as a subject
+
+* `To walk` is a good exercise.
+* `To swim` is good for health.
+
+#### full infinitive as an Object
+
+* I want `to go`.
+* I want `to speak`.
+* She loves `to play`.
+
+#### Infinitive is used after all these words
+
+&gt; afford,attempt,begin,continue,choose,refuse,pretend,intend,dare,offer,prefer,plan,prepare,try,manage
+
+* He attemped doing this work.
+* He attempted `to do` this work.
+---
+* She refused marrying me.
+* She refused `to marry` me.
+---
+* They cannot afford living in this posh area.
+* They cannot afford `to live` in this posh area.
+---
+
+
+### Bare Infinitive
+
+A + Bare infinitve
+
+* A = semi modal
+* modal/semi modal -&gt; v1
+* A = would rather,would sooner,had better,would rather ... than,would sonner ... than
+
+* I would rather `to wait` for her.
+* I would rather `wait` for her.
+---
+* I would rather die than `to beg`.
+* I would rather die than `beg`.
+---
+* I would rather go than `to waste` my time.
+* I would rather go than `waste` my time.
+---
+* He would sonner resign than `to fight` with the boss.
+* He would sonner resign than `fight` with the boss.
+---
+* You had better `left` the country and come to see me as soon as possible.
+* You had better `leave` the country and come to see me as soon as possible.
+---
+* You had better `gone` abroad for higher studies.
+* You had better `go` abroad for higher studies.
+---
+* It is raining cats and dogs and you `had better to take` an umbrella or wear raincoat.
+* It is raining cats and dogs and you had better `take` an umbrella or wear raincoat.
+---
+* You are still weak,so you `had better taken` some rest then resume your duty.
+* You are still weak,so you had better `take` some rest then resume your duty.
+
+&gt; Bare infinitive used after - why/why not
+
+* Why `to hire` a taxi ?
+* Why `hire` a taxi ?
+---
+* Why `to talk` to him ?
+* Why `talk` to him ?
+---
+* Why not `to go` to a good doctor?
+* Why not `go` to a good doctor?
+---
+* Why not `to inform` your parents.
+* Why not `inform` your parents.
+
+&gt; A + How + to + v1 - is used after all these words
+&gt; A = ask,explain,teach,discover,remember,forget
+
+* He `knows to befool` customers.
+* He `knows how to befool` customers.
+---
+</md></sn><config style="display:none"><tags>#11.object</tags><thumbnail></thumbnail><heading></heading><udate>Sat Oct 25 2025 13:05:45 GMT+0600 (Bangladesh Standard Time)</udate><id>article-IvLM5pXnij</id><duration></duration></config><sn><md>#### **Example: He kicked the ball.**
 
 - **He** is a pronoun.
 - **Kicked** is the verb in the *V2* form.
