@@ -1,10 +1,436 @@
 
-  <sn></sn>
+  <sn><md>### Transitive Verb (সকর্মক ক্রিয়া)
+
+**Finite Verb** দুটি ভাগে বিভক্ত—
+
+| Transitive                       | Intransitive                 |
+| -------------------------------- | ---------------------------- |
+| সবসময় একটি **object** গ্রহণ করে | কোনো **object** গ্রহণ করে না |
+</md></sn>
   <config>
     <tags>#03.transitive intransitive</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Oct 26 2025 11:27:13 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Oct 26 2025 11:49:39 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-LkaDySzryO</id>
     <duration></duration>
   </config>
+<sn><md>## Object Recap
+
++++ see 
+
+একটি **Object** সাধারণত একটি **noun** বা **pronoun** হয়।
+
+#### Types of Objects
+
+* **Verb Object** → (verb-এর পরপরই noun/pronoun থাকে)
+* **Preposition Object** → (preposition-এর পরপরই noun/pronoun থাকে)
+
+**Object** সবসময়ই কোনো **verb** বা **preposition**-এর সাথে সম্পর্কিত থাকে।
+
+---
+
+#### **Preposition Object**
+
+যখন কোনো **preposition**-এর পরে একটি **noun** বা **pronoun** আসে, তখন সেটি **Preposition Object** হয়।
+অর্থাৎ —
+**Preposition + Object = Preposition Object**
+
+যে **noun** বা **pronoun** সরাসরি **preposition**-এর পরে আসে, সেটিই ঐ preposition-এর **object**।
+
+---
+
+#### **Verb Object**
+
+যখন কোনো **verb**-এর সঙ্গে সরাসরি **noun** বা **pronoun** যুক্ত হয়, এবং মাঝখানে কোনো **preposition** থাকে না, তখন সেটি **Verb Object** বলে।
+
+* **Verb + What/Whom = Verb Object**
+* `verb + article/adjective + noun/pronoun` = **verb object**
+* `verb + preposition + noun/pronoun` = **preposition object**
+* `verb` + no noun/preposition = **not an object** (object অবশ্যই noun/pronoun হতে হবে)
+
+---
+
+👉 **গুরুত্বপূর্ণ বিষয়সমূহ:**
+
+* যদি কোনো **noun/pronoun** **verb**-এর পরে আসে (article বা adjective বাদ দিয়ে), এবং কোনো **preposition** না থাকে, তাহলে সেটি **verb object**।
+* যদি **verb**-এর পরে **preposition** আসে, তাহলে পরবর্তী noun/pronoun টি **preposition object**, verb-এর নয়।
+* যাচাই করতে চাইলে মূল **verb**-এর পরে “**what**” বা “**whom**” বসিয়ে প্রশ্ন করুন। (অন্য শব্দ উপেক্ষা করুন)
+
+---
+
+##### **Example (উদাহরণ)**
+
+* **The supporter ran away from the meeting.**
+
+  * ভুলভাবে প্রশ্ন: “The supporter ran away from what?”
+  * সঠিকভাবে প্রশ্ন: “The supporter ran what?”
+
+এখানে **ran** কোনো noun/pronoun-এর সঙ্গে সরাসরি যুক্ত নয়, বরং একটি **preposition** (“from”) আছে।
+তাই এখানে কোনো **verb object** নেই।
+
+---
+
+#### **Note (নোট)**
+
+* **Object** সবসময় **noun** বা **pronoun** হবে — কখনোই **adjective**, **adverb**, **preposition**, বা **article** নয়।
+* একটি **object** সবসময় একক শব্দ — যেমন: *man*, *woman*, *he* ইত্যাদি।
+  (Phrase যেমন *a blind man*, *pink car*— এগুলো পূর্ণ object নয়।)
+
+---
+
++++
+
+&gt; **Summary:** <br>
+&gt; **verb → noun/pronoun = verb has object = Transitive Verb** <br>
+&gt; **verb → preposition → noun/pronoun = preposition object (so verb has no object) = Intransitive Verb**
+</md></sn><sn><md>### Lie vs Lay
+
+
+| $v_1$                  | $v_2$ | $v_3$ | $v_4$  | $v_5$ |
+| ---------------------- | ----- | ----- | ------ | ----- |
+| lie (**Intransitive**) | lay   | lain  | lying  | lies  |
+| lay (**Transitive**)   | laid  | laid  | laying | lays  |
+
+---
+
+### Intransitive (অকর্মক ক্রিয়া)
+
+#### To lie on a bench {.text-center}
+
+* lie + on = verb-এর কোনো **object** নেই → **intransitive**
+* lie হলো intransitive verb-এর **base form**
+
+---
+
+#### A pen lay on the desk {.text-center}
+
+* lay + on = verb-এর কোনো **object** নেই → **intransitive verb**
+* lie হলো base form; এখানে **lay** হলো এর **v2 form (past simple tense)**
+
+---
+
+### Transitive (সকর্মক ক্রিয়া)
+
+#### She laid the baby on the bed {.text-center}
+
+* laid + article + noun = verb-এর **object** আছে → **transitive verb**
+* lay হলো base form, laid হলো এর **v2 form (past simple tense)**
+
+---
+
+#### He laid the tray on the table.
+
+* laid + article + noun = verb-এর **object** আছে → **transitive verb**
+* lay হলো base form, laid হলো এর **v2 form (past simple tense)**
+
+---
+
+### Test (পরীক্ষা)
+
+&gt; #### **Note:** Clauses কখনোই tense-independent নয়
+&gt;
+&gt; * past tense clause → past tense clause
+&gt; * present perfect clause → present simple clause
+
+&gt; #### **Note:** “and”-এর দুই পাশে থাকা verb সবসময় একই tense-এ হয়
+&gt;
+&gt; * He `came` and `sat`.
+
+---
+
+#### He was `laying` comfortably on the bed.
+
+* laying + adverb = verb-এর কোনো **object** নেই → **intransitive verb**
+* lie হলো base form
+* বাক্যটি **past continuous tense** এ আছে
+* তাই প্রয়োজন **v4** form → **lying**
+* ✅ **Ans:** He was `lying` comfortably on the bed
+
+---
+
+#### I am going to `lay` down in the room.
+
+* going + adverb = verb-এর কোনো **object** নেই → **intransitive verb**
+* lie হলো intransitive verb
+* “to” এর পরে verb থাকে **v1** form-এ
+* তাই প্রয়োজন **v1** form → **lie**
+* ✅ **Ans:** I am going to `lie` down in the room
+
+---
+
+#### He lay the blanket out and sat {.text-center}
+
+* lay + article + noun = verb-এর **object** আছে → **transitive verb**
+* lay হলো base form of **transitive verb**
+* “and”-এর দুই পাশে verb একই tense-এ থাকে → sat হলো **v2**, তাই lay-ও **v2** হবে
+* **v2** of lay হলো **laid**
+* ✅ **Ans:** He `laid` the blanket out and `sat`
+
+---
+
+#### We are tired, let’s lay in the shade for a while.
+
+* lay + preposition = verb-এর **object** নেই → **intransitive**
+* lie হলো base form of intransitive verb
+* “let’s + v1” → তাই verb থাকবে **v1** form-এ → **lie**
+* ✅ **Ans:** We are tired, let’s `lie` in the shade for a while.
+
+---
+
+#### The problem laid in the fact that he was so unused to this lifestyle.
+
+* laid + in = verb-এর **object** নেই → **intransitive verb**
+* lie হলো intransitive verb
+* verb হলো **v2** form → তাই lie-এর **v2** form হলো **lay**
+* ✅ **Ans:** The problem `lay` in the fact that he was so unused to this lifestyle.
+
+---
+
+#### The plan is to lie the foundations for the new apartments in October.
+
+* lie + article + noun = verb-এর **object** আছে → **transitive verb**
+* lay হলো transitive verb-এর base form
+* “to + v1” → তাই প্রয়োজন **v1** form → **lay**
+* ✅ **Ans:** The plan is to `lay` the foundations for the new apartments in October.
+
+---
+
+#### She `lay` her head against my shoulder and fall asleep.
+
+* lay + possessive adjective + noun = verb-এর **object** আছে → **transitive verb**
+* lay হলো transitive verb, tense হলো **past tense**
+* “and”-এর দুই পাশে verb একই form-এ থাকে → fall হলো base form, তাই lay হবে **v2** form
+* **v2** of lay হলো **laid**
+* ✅ **Ans:** She `laid` her head against my shoulder and `fell` asleep.
+</md></sn><sn><md>## Rise vs Raise
+
+| $v_1$                   | $v_2$  | $v_3$  | $v_4$   | $v_5$  |
+| ----------------------- | ------ | ------ | ------- | ------ |
+| rise (**Intransitive**) | rose   | risen  | rising  | rises  |
+| raise (**Transitive**)  | raised | raised | raising | raises |
+
+
+:::.row
+:::.col-12 .col-md-6
+
+### Intransitive {.text-center}
+
+* The sun `rises` in the east.
+* The aircraft `rose` into air.
+
+:::
+:::.col-12 .col-md-6
+
+### Transitive {.text-center}
+
+* He `raised` an important issue.
+* They will not `raise` taxes.
+
+:::
+:::
+
+---
+
+&gt; লক্ষ্য করুন:
+&gt; **Transitive verb** যেমন *laid*, *raised* — এগুলোর সঙ্গে সবসময়ই **object** থাকে।
+&gt; অন্যদিকে **Intransitive verb** (যেমন *rise*) কখনো **object** নেয় না।
+
+---
+
+### Test (পরীক্ষা)
+
+---
+
+#### It’s a wonder we `didn’t rise` our arms in surrender.
+
+* rise + possessive adjective + noun = verb-এর **object** আছে → **transitive verb**
+* raise হলো **transitive verb**-এর base form
+* not + v1 → তাই প্রয়োজন v1 form → **raise** <br>
+  ✅ **Ans:** It’s a wonder we `didn’t raise` our arms in surrender.
+
+---
+
+#### In our country women have opportunities to `rise` to top in every walk of life.
+
+* rise + to = verb-এর **object** নেই → **intransitive**
+* rise হলো **intransitive verb**, “to + v1” → তাই v1 form = **rise**<br>
+  ✅ **Ans:** No error
+
+---
+
+#### Because of the incessant rain, the flood water is `raising`.
+
+* raising + nothing = verb-এর **object** নেই → **intransitive verb**
+* rise হলো **intransitive verb**, এখানে tense হলো continuous → তাই v4 = **rising**<br>
+  ✅ **Ans:** Because of the incessant rain, the flood water is `rising`.
+
+---
+
+#### Considering the high demand for flights to Gulf countries, airlines `may rise` prices.
+
+* rise + prices = verb-এর **object** আছে → **transitive verb**
+* raise হলো **transitive verb**, “may + v1” → তাই v1 form = **raise**<br>
+  ✅ **Ans:** Considering the high demand for flights to Gulf countries, airlines may `raise` prices.
+
+---
+</md></sn><sn><md>## Fall vs Fell
+
+| $v_1$                   | $v_2$  | $v_3$  | $v_4$   | $v_5$ |
+| ----------------------- | ------ | ------ | ------- | ----- |
+| fall (**Intransitive**) | fell   | fallen | falling | falls |
+| fell (**Transitive**)   | felled | felled | felling | fells |
+
+:::.row
+:::.col-12 .col-md-6
+### Intransitive {.text-center}
+* The tree `fell` down.
+* He `fell` into the river.
+:::
+:::.col-12 .col-md-6
+### Transitive {.text-center}
+* He `felled` the tree.
+:::
+:::
+
+### Test{.text-center .fg-red}
+
+---
+
+#### Silence `felled` between them and then he finally spoke.
+
+* felled + preposition = verb-এর **object** নেই → **intransitive verb**
+* fall হলো intransitive verb
+* “and spoke” → spoke হলো past tense, তাই fall-ও থাকবে **v2** form-এ → **fell**<br>
+  ✅ **Ans:** Silence `fell` between them and then he finally spoke.
+
+---
+
+#### To build his garage, he `fell` a very old tree.
+
+* fell + article + adjective + noun = verb-এর **object** আছে → **transitive verb**
+* fell হলো **transitive verb**, এখানে tense হলো **past tense**
+* **v2** of fell = **felled**<br>
+  ✅ **Ans:** To build his garage, he `felled` a very old tree.
+
+---
+
+#### No one is allowed `to fall` the trees in the forest.
+
+* fall + article + noun = verb-এর **object** আছে → **transitive verb**
+* fell হলো **transitive verb**
+* “to + v1” → তাই verb থাকবে **v1 form**-এ → **fell**<br>
+  ✅ **Ans:** No one is allowed `to fell` the trees in the forest.
+
+---
+
+#### He wanted to know who `had fallen` the wall.
+
+* fallen + article + noun = verb-এর **object** আছে → **transitive verb**
+* fell হলো **transitive verb**, এখানে **v3 form** প্রয়োজন
+* **v3** of fell = **felled**<br>
+  ✅ **Ans:** He wanted to know who had `felled` the wall.
+</md></sn><sn><md>### Others
+
+| $v_1$     | $v_2$      | $v_3$      |
+| --------- | ---------- | ---------- |
+| overflow  | overflowed | overflowed |
+| hang      | hung       | hung       |
+| hang      | hanged     | hanged     |
+| find      | found      | found      |
+| found     | founded    | founded    |
+| broadcast | broadcast  | broadcast  |
+| slay      | slew       | slain      |
+
+#### There was a heavy rain last night and the rivers have overflown their banks.
+
+* **overflown** ❌
+* **overflowed** ✅ (have + v3 → overflowed) <br>
+  ✅ **Ans:** There was a heavy rain last night and the rivers have `overflowed` their banks.
+
+---
+
+#### The coat was drenched in rain water, I hanged it on the hook.
+
+* hang → hung/hanged
+* এখানে “hang” এর অর্থ *to suspend an object*, তাই ব্যবহার হবে **hung** <br>
+  ✅ **Ans:** The coat was drenched in rain water, I `hung` it on the hook.
+
+---
+
+#### Hang your clothes on the line to dry.
+
+*(no error)*
+→ এখানে verb টি present simple form-এ আছে, সঠিকভাবে ব্যবহৃত।
+
+---
+
+#### The servant hanged the lamp on the wall.
+
+* “lamp” মানে জিনিসপত্র টাঙানো (not execution), তাই **hung** হবে <br>
+  ✅ **Ans:** The servant `hung` the lamp on the wall.
+
+---
+
+#### For his crime, the accused will be hung till death.
+
+* মৃত্যুদণ্ডের ক্ষেত্রে **hanged** ব্যবহৃত হয় <br>
+  ✅ **Ans:** For his crime, the accused will be `hanged` till death.
+
+---
+
+#### My mother hanged my clothes.
+
+* “clothes” টাঙানোর কাজ → **hung** হবে <br>
+  ✅ **Ans:** My mother `hung` my clothes.
+
+---
+
+#### Our organization was found twenty years ago.
+
+* এখানে অর্থ দাঁড়ায় "প্রতিষ্ঠিত হওয়া" → **found** নয়, **founded** হবে <br>
+  ✅ **Ans:** Our organization was `founded` twenty years ago.
+
+---
+
+#### Such inequalities can be found in the constitutions of other countries also.
+
+*(no error)*
+→ এখানে “found” হলো **v3** of “find”, তাই সঠিক।
+
+---
+
+#### In a group you may found one or two people...
+
+* “may + v1” → তাই **find** হবে <br>
+  ✅ **Ans:** In a group you may `find` one or two people.
+
+---
+
+#### The eminent speaker’s speech was broadcasted over all the major stations.
+
+* “broadcast” একটি **same form verb** (v1 = v2 = v3) <br>
+  ✅ **Ans:** The eminent speaker’s speech was `broadcast` over all the major stations.
+
+---
+
+#### It cannot be forecasted how society will emerge generations hence.
+
+* “forecast” ও **same form verb** (v1 = v2 = v3) <br>
+  ✅ **Ans:** It cannot be `forecast` how society will emerge generations hence.
+
+---
+
+#### The timid creature was driven into a narrow lane where it was slewed by the kidnapper.
+
+* “slay” → slew (v2), slain (v3)
+* passive voice → **be + v3** → **slain**<br>
+  ✅ **Ans:** The timid creature was driven into a narrow lane where it was `slain` by the kidnapper.
+
+---
+
+#### He has slayed his rival.
+
+* “has + v3” → **slain** হবে <br>
+  ✅ **Ans:** He has `slain` his rival.
+</md></sn>
