@@ -1,10 +1,117 @@
 
-  <sn></sn>
+  <sn><md>### Reducing Values
+**Version ≥ 5.1**
+
+The `reduce()` method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
+
+#### **Array Sum**
+The `reduce()` method can condense all values of an array into a single value:
+```javascript
+[1, 2, 3, 4].reduce(function(a, b) {
+  return a + b;
+});
+// → 10
+```
+
+An optional second parameter can be passed to `reduce()`. Its value will be used as the first argument (`a`) for the first call to the callback:
+```javascript
+[2].reduce(function(a, b) {
+  console.log(a, b); // prints: 1 2
+  return a + b;
+}, 1);
+// → 3
+```
+
+---
+
+#### **Flatten Array of Objects**
+To flatten an array of objects into a single object, use `reduce()` as shown below:
+
+**Version ≤ 5.1:**
+```javascript
+var array = [{
+  key: 'one',
+  value: 1
+}, {
+  key: 'two',
+  value: 2
+}, {
+  key: 'three',
+  value: 3
+}];
+
+array.reduce(function(obj, current) {
+  obj[current.key] = current.value;
+  return obj;
+}, {});
+// Result: { one: 1, two: 2, three: 3 }
+```
+
+**Version ≥ 6:**
+```javascript
+array.reduce((obj, current) =&gt; Object.assign(obj, {
+  [current.key]: current.value
+}), {});
+```
+
+**Version ≥ 7:**
+```javascript
+array.reduce((obj, current) =&gt; ({...obj, [current.key]: current.value}), {});
+```
+
+Note: The Rest/Spread Properties is not supported by ES2016, but you can use the Babel plugin `babel-plugin-transform-object-rest-spread` for support.
+
+---
+
+#### **Map Using Reduce**
+You can use the initial value parameter to call a function on an array of items and return the results in a new array:
+```javascript
+function map(list, fn) {
+  return list.reduce(function(newList, item) {
+    return newList.concat(fn(item));
+  }, []);
+}
+
+// Usage:
+map([1, 2, 3], function(n) { return n * n; });
+// → [1, 4, 9]
+```
+
+&gt; **Note:** This is for illustration (of the initial value parameter) only. For list transformations, prefer using the native `map()`.
+
+---
+
+#### **Find Min or Max Value**
+You can use `reduce()` to track the min or max value in an array. Here's an example to find the minimum value:
+```javascript
+var arr = [4, 2, 1, -10, 9];
+arr.reduce(function(a, b) {
+  return a &lt; b ? a : b;
+}, Infinity);
+// → -10
+```
+
+---
+
+#### **Find Unique Values**
+To return unique values from an array, use `reduce()` with an empty array as the second argument:
+```javascript
+var arr = [1, 2, 1, 5, 9, 5];
+arr.reduce((prev, number) =&gt; {
+  if (prev.indexOf(number) === -1) {
+    prev.push(number);
+  }
+  return prev;
+}, []);
+// → [1, 2, 5, 9]
+```
+
+</md></sn>
   <config>
     <tags>#02.reducing values</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Oct 26 2025 20:31:30 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Oct 26 2025 20:45:12 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-XHBYUk2pfH</id>
     <duration></duration>
   </config>
