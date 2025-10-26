@@ -1,10 +1,73 @@
 
-  <sn></sn>
+  <sn><md>## Verb{.fg-red}
+
+![verb-category-diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/media/eng-verb-diagram.svg)
+
+প্রতিটি বাক্য ছোট ছোট `sub + verb` কম্বিনেশন দ্বারা গঠিত হয়, যাকে **clause** বলা হয়।
+
+&gt; **নোট:**
+&gt; কোনো বাক্যই **Main Verb** ছাড়া তৈরি করা যায় না।
+
+---
+
+### Common Sentences
+
+* She `writes` letters.
+* He `played` hockey.
+* I **am** `going` to Shimla.
+* He **is** `going` to Shimla.
+* They **have** `gone` to Shimla.
+</md></sn>
   <config>
     <tags>#01.verb basic</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Oct 26 2025 11:09:49 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Oct 26 2025 11:17:11 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-9JEwPz0fes</id>
     <duration></duration>
   </config>
+<sn><md>## Form of Verb
+
+**Verb**-এর মোট ৫টি রূপ আছে।
+
+| $v_1$         | $v_2$    | $v_3$           | $v_4$      | $v_5$           |
+| ------------- | -------- | --------------- | ---------- | --------------- |
+| Base `Plural` | Past     | Past Participle | $v_1$ -ing | Base `Singular` |
+| be/am/are     | was/were | been            | being      | is              |
+| do            | did      | done            | doing      | does            |
+| have          | had      | had             | having     | has             |
+| eat           | ate      | eaten           | eating     | eats            |
+</md></sn><sn><md>### Sentence Basic Structure
+
+&gt; **With Main Verb :** $\text{sub hv MV obj}$ <br>
+&gt; **Without Main Verb :** $\text{sub hv obj}$
+
+---
+
+### Helping Verb as Main Verb
+
+&gt; **নোট:**
+&gt; **Helping Verb** বাক্যে দ্বৈত ভূমিকা পালন করে।
+&gt;
+&gt; * **Main Verb** থাকলে এটি সাধারণ **Helping Verb** হিসেবে কাজ করে।
+&gt; * **Main Verb** না থাকলে, এটি নিজেই **Main Verb** হিসেবে কাজ করে।
+
+**উদাহরণ:**
+
+* I `am` an architect. → এখানে `am` হলো **Main Verb**
+* She `was` a dancer. → এখানে `was` হলো **Main Verb**
+* She `has` a beautiful home. → এখানে `has` হলো **Main Verb**
+
+---
+
+### Example
+
+| Sentence                                 | hv   | MV       |
+| ---------------------------------------- | ---- | -------- |
+| He `is` a good man.                      | null | is       |
+| He is `learning` English                 | is   | learning |
+| He `does` his homework daily.            | null | does     |
+| He does not `come` to classes regularly. | does | come     |
+| They `have` an adventurous life          | null | have     |
+| They have `made` a prototype             | have | made     |
+</md></sn>
