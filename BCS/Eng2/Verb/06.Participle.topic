@@ -1,10 +1,153 @@
 
-  <sn></sn>
+  <sn><md>## Participle
+
+&gt; যখন কোনো **verb** বাক্যে **verb** বা **adjective** হিসেবে কাজ করে, তখন তাকে **Participle** বলে।
+
+
+### Types of Participle
+
+1. Present Participle (v-ing)
+2. Past Participle (v₃)
+3. Perfect Participle
+
+   * having + v₃
+   * after + v-ing
+
+
+#### Example
+
+* A horse is `running`.
+* I saw a `running` horse.
+* She has `written` a letter.
+* Police wanted a `written` statement.
+</md></sn>
   <config>
     <tags>#06.participle</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Oct 26 2025 12:09:40 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Oct 26 2025 12:16:47 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ne4R6PdTB3</id>
     <duration></duration>
   </config>
+<sn><md>### Difference Between Gerund and Participle
+
+&gt; #### যদি **v-ing** কাজ করে —
+&gt;
+&gt; * **noun** হিসেবে → **Gerund**
+&gt; * **verb/adjective** হিসেবে → **Participle**
+</md></sn><sn><md>## Examples and Explanations{.text-center}
+
+#### `Snowboarding` is a winter sport.
+
+* Snowboarding → subject (subject সবসময় noun বা pronoun)
+* verb + ing noun হিসেবে কাজ করছে
+* ✅ তাই এটি **Gerund**
+
+---
+
+#### I love `snowboarding`.
+
+* love → verb, তার object হলো snowboarding
+* object সবসময় noun বা pronoun হয়
+* ✅ তাই **snowboarding** হলো **Gerund**
+
+---
+
+#### I am excited by `snowboarding`.
+
+* by → preposition → এর object হতে হবে noun বা noun-এর মতো শব্দ
+* ✅ তাই **snowboarding** → **Gerund**
+
+---
+
+#### What an `amazing` movie!
+
+* an → article, movie → noun
+* amazing → noun (movie) কে modify করছে → adjective
+* ✅ তাই **amazing** হলো **Participle**
+
+---
+
+#### He cares about `getting` a good job.
+
+* about → preposition → এর object → noun বা noun-এর মতো word
+* ✅ তাই **getting** হলো **Gerund**
+
+---
+
+#### I am `trying` to sleep.
+
+* trying → মূল verb হিসেবে কাজ করছে
+* ✅ তাই এটি **Participle**
+
+---
+
+#### She loves `travelling`.
+
+* loves → verb
+* travelling → object (noun হিসেবে কাজ করছে)
+* ✅ তাই **Gerund**
+
+---
+
+#### Many of his paintings show the `setting` sun.
+
+* the → article, sun → noun
+* setting → noun (sun) কে modify করছে → adjective
+* ✅ তাই **Participle**
+
+---
+
+#### Dolly decided that flying above the clouds was the most incredible experience she’d ever had.
+
+* প্রথম clause: Dolly → subject, decided → verb
+* দ্বিতীয় clause: flying → subject
+* ✅ subject noun হিসেবে কাজ করছে → **Gerund**
+
+---
+
+#### Next week they will have been building these offices for two years.
+
+* They → subject
+* will have been → helping verb
+* building → main verb
+* ✅ verb হিসেবে কাজ করছে → **Participle**
+
+---
+
+#### Do you mind my borrowing these supplies?
+
+* my → possessive adjective → এর পরে noun/gerund থাকে
+* borrowing → noun হিসেবে কাজ করছে
+* ✅ তাই **Gerund**
+
+---
+
+#### By reading, we can explore new worlds.
+
+* by → preposition → এর object noun হবে
+* reading → noun হিসেবে কাজ করছে
+* ✅ তাই **Gerund**
+
+---
+
+#### If I catch you `stealing` my apples again, there’ll be trouble.
+
+* stealing → subject বা object নয়, verb-এর মতো কাজ করছে
+* ✅ তাই **Participle**
+
+---
+
+#### Once Tom gave the order, he started `collecting` all the evidence.
+
+* he → subject, started → verb, collecting → verb-এর object
+* object noun হিসেবে কাজ করছে
+* ✅ তাই **Gerund**
+
+---
+
+#### We found some money `lying` on the ground.
+
+* lying → money (noun) কে modify করছে → adjective
+* ✅ তাই **Participle**
+</md></sn>
