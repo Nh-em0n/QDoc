@@ -1,10 +1,105 @@
 
-  <sn></sn>
+  <sn><md>## Have {.text-center}
+
+| hv                                                    | MV                                                     |
+| ----------------------------------------------------- | ------------------------------------------------------ |
+| He **has** eaten lunch.<br>They **have** eaten lunch. | Possession <br> Relationship <br> Eat/Drink/Spend time |
+
+যখন **have**-এর বিভিন্ন রূপ **Main Verb** হিসেবে ব্যবহৃত হয়, তখন এগুলো নিচের অর্থ প্রকাশ করে—
+
+| Role                            | Example                           |
+| ------------------------------- | --------------------------------- |
+| Possession (অধিকার বা মালিকানা) | I `have` a car.                   |
+| Relationship (সম্পর্ক)          | She `has` a great family.         |
+| Eat (খাওয়া)                    | I `had` lunch.                    |
+| Spend (time) (সময় কাটানো)      | We `had` a great time last night. |
+
+---
+
+| $v_1$ | $v_2$ | $v_3$ | $v_4$  | $v_5$ |
+| ----- | ----- | ----- | ------ | ----- |
+| have  | had   | had   | having | has   |
+| eat   | ate   | eaten | eating | eats  |
+
+যেহেতু **have** “eat” অর্থেও ব্যবহার করা যায়, তাই **eat**-এর জায়গায় তার উপযুক্ত **have form** ব্যবহার করা সম্ভব।
+</md></sn>
   <config>
     <tags>#02.have has had</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Oct 26 2025 11:18:53 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Oct 26 2025 11:26:17 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-KkSyBf0q7y</id>
     <duration></duration>
   </config>
+<sn><md>### Simple Present Tense ( Sub + v1/v5 )
+
+* I usually eat bread and butter for breakfast.
+* I usually `have` bread and butter for breakfast. (এখানে **have** দ্বারা **eat** বোঝানো হয়েছে)
+
+---
+
+* She `drinks` warm water with lemon in the morning.
+* She `has` warm water with lemon in the morning. (এখানে **has** দ্বারা **drink** বোঝানো হয়েছে)
+</md></sn><sn><md>### Simple Past ( $Sub + v2$ )
+
+* I `ate` lunch.
+* I `had` lunch. ($v_2$ form)
+
+---
+
+* She `drank` warm water with lemon in the morning.
+* She `had` warm water with lemon in the morning.
+</md></sn><sn><md>### Present Perfect ( $\text{Sub + has/have + v3}$ )
+
+&gt; **নোট:**
+&gt; যখন দুটি **have** পাশাপাশি থাকে, প্রথমটি **hv** এবং দ্বিতীয়টি **mv** হয়।
+
+* I have `eaten` lunch.
+* I have `had` lunch.
+
+---
+
+* She has `eaten` lunch.
+* She has `had` lunch. 
+
+---
+* I have `drunk` warm water with lemon.
+* I have `had` warm water with lemon.
+</md></sn><sn><md>### Past Perfect ( $\text{Sub + had + v3}$ )
+
+* She had `eaten` dinner before I reached home.
+* She had `had` dinner before I reached home.
+
+---
+
+* She had drunk warm water with lemon before she left for the yoga class.
+* She had `had` warm water with lemon before she left for the yoga class.
+</md></sn><sn><md>### Wrong Combination (ভুল সংযোজন)
+
+&gt; **গঠন:** $\text{have/has/had + v3}$ ভুলভাবে ব্যবহার করা যায় না
+
+* have [have]{.fg-red}
+* have [has]{.fg-red}
+* has [have]{.fg-red}
+* had [have]{.fg-red}
+* had [has]{.fg-red}
+</md></sn><sn><md>### Test (পরীক্ষা)
+
+* Before I met him personally, I admit that I had `have` a poor opinion about him.
+* Before I met him personally, I admit that I had `had` a poor opinion about him. (**had + v3**)
+
+---
+
+* She must `had` completed her work by now because she is very beautiful.
+* She must `have` completed her work by now because she is very beautiful. (**modal + v1**)
+
+---
+
+* She `was` with me uptil now, so don’t rebuke her for coming late.
+* She `has been` with me uptil now, so don’t rebuke her for coming late. (**present participle**)
+
+---
+
+* This time election `did not had` that heat and dust usually associated with it.
+* This time election `did not have` that heat and dust usually associated with it. (**did + v1 / not + v1**)
+</md></sn>
