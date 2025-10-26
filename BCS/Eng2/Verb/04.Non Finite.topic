@@ -1,10 +1,149 @@
 
-  <sn></sn>
+  <sn><md>## Finite vs Non-Finite
+
+| **Finite**                                                                             | **Non-Finite (Independent)**                                    |
+| -------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| ক্রিয়া অবশ্যই **subject-এর সংখ্যা ও ব্যক্তি (number &amp; person)** অনুসারে পরিবর্তিত হয় | ক্রিয়া **tense**, **number** বা **person** দ্বারা সীমাবদ্ধ নয় |
+| He eats rice                                                                           | He have to eat rice                                             |
+
+
+### Non-Finite Verb এর প্রকারভেদ
+
+* **Infinitive**
+* **Gerund**
+* **Participle**
+
+---
+
+### Infinitive
+
+* **To Infinitive → (to + v1)**
+* **Bare Infinitive → (v1)**
+</md></sn>
   <config>
     <tags>#04.non finite</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Oct 26 2025 11:50:29 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Oct 26 2025 11:59:35 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-KKG0TBLvSo</id>
     <duration></duration>
   </config>
+<sn><md>### Full Infinitive — *(to + v1)*
+
+#### **1. Subject হিসেবে ব্যবহার**
+
+* `To walk` is a good exercise.
+* `To swim` is good for health.
+
+এখানে **to walk**, **to swim** — sentence-এর **subject** হিসেবে ব্যবহৃত হয়েছে।
+
+---
+
+#### **2. Object হিসেবে ব্যবহার**
+
+* I want `to go`.
+* I want `to speak`.
+* She loves `to play`.
+
+এখানে **to infinitive** হলো verb-এর **object**।
+
+---
+
+#### **3. নিচের verb গুলোর পরে সবসময় infinitive ব্যবহৃত হয়**
+
+&gt; **afford, attempt, begin, continue, choose, refuse, pretend, intend, dare, offer, prefer, plan, prepare, try, manage**
+
+* He attempted doing this work. ❌
+* He attempted `to do` this work. ✅
+
+---
+
+* She refused marrying me. ❌
+* She refused `to marry` me. ✅
+
+---
+
+* They cannot afford living in this posh area. ❌
+* They cannot afford `to live` in this posh area. ✅
+</md></sn><sn><md>### Bare Infinitive (v1)
+
+#### **A + Bare Infinitive**
+
+* A = **Semi-modal verb**
+* Modal/Semi-modal → এর পর verb হয় **v1**
+
+**A = would rather, would sooner, had better, would rather ... than, would sooner ... than**
+
+---
+
+* I would rather `to wait` for her. ❌
+* I would rather `wait` for her. ✅
+
+---
+
+* I would rather die than `to beg`. ❌
+* I would rather die than `beg`. ✅
+
+---
+
+* I would rather go than `to waste` my time. ❌
+* I would rather go than `waste` my time. ✅
+
+---
+
+* He would sooner resign than `to fight` with the boss. ❌
+* He would sooner resign than `fight` with the boss. ✅
+
+---
+
+* You had better `left` the country and come to see me as soon as possible. ❌
+* You had better `leave` the country and come to see me as soon as possible. ✅
+
+---
+
+* You had better `gone` abroad for higher studies. ❌
+* You had better `go` abroad for higher studies. ✅
+
+---
+
+* It is raining cats and dogs and you `had better to take` an umbrella or wear raincoat. ❌
+* It is raining cats and dogs and you had better `take` an umbrella or wear raincoat. ✅
+
+---
+
+* You are still weak, so you `had better taken` some rest then resume your duty. ❌
+* You are still weak, so you had better `take` some rest then resume your duty. ✅</md></sn><sn><md>### Bare Infinitive ব্যবহৃত হয় “why / why not” এর পরে
+
+* Why `to hire` a taxi? ❌
+* Why `hire` a taxi? ✅
+---
+* Why `to talk` to him? ❌
+* Why `talk` to him? ✅
+---
+* Why not `to go` to a good doctor? ❌
+* Why not `go` to a good doctor? ✅
+---
+* Why not `to inform` your parents? ❌
+* Why not `inform` your parents? ✅</md></sn><sn><md>### A + How + to + v1
+
+**A = ask, explain, teach, discover, remember, forget**
+
+এই verb গুলোর পরে ব্যবহৃত হয় “how to + v1”
+
+* He `knows to befool` customers. ❌
+* He `knows how to befool` customers. ✅
+
+---
+
+* She taught me `to speak` English. ❌
+* She taught me `how to speak` English. ✅
+
+---
+
+* I learnt `to play` guitar. ❌
+* I learnt `how to play` guitar. ✅
+
+---
+
+* My teacher has taught me `to speak` English. ❌
+* My teacher has taught me `how to speak` English. ✅</md></sn>
