@@ -1,10 +1,121 @@
 
-  <sn></sn>
+  <sn><md>## Gerund
+
+যখন **verb + ing** একটি **noun** এর মতো কাজ করে, তখন তাকে **Gerund** বলে।
+
+:::.row
+:::.col-12 .col-md-6
+#### Gerund as Subject{.text-center}
+* `Walking` is a good exercise.
+* `Teaching` is a good profession.
+
+উপরের দুইটি বাক্যে **verb + ing** (walking, teaching) noun এর মতো কাজ করছে এবং **subject** হিসেবে ব্যবহৃত হয়েছে।
+:::
+
+:::.col-12 .col-md-6
+#### Gerund as Object{.text-center}
+* She likes `dancing`.
+* I enjoyed `drinking`.
+
+এখানে **dancing** ও **drinking** হলো **verb + ing**, যা **object** হিসেবে কাজ করছে।
+:::
+:::
+
+::: .note .p-2
+**Preposition + Object** <br>
+**Preposition + Noun** <br>
+**Preposition + Gerund** <br>
+**Preposition + v-ing**
+:::
+
+অর্থাৎ **preposition** এর পরে **noun** বা **verb + ing (gerund)** ব্যবহৃত হয়।
+
+</md></sn>
   <config>
     <tags>#05.gerund particple</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Oct 26 2025 12:00:18 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Oct 26 2025 12:09:25 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ZdQ44O19ME</id>
     <duration></duration>
   </config>
+<sn><md>## Exercise
+
+#### She is good at swim.
+
+* at → noun
+* at → v-ing → swimming (যেহেতু swimming noun হিসেবে কাজ করছে → gerund)<br>
+*  ✅ **Ans:** She is good at `swimming`.
+
+---
+
+#### I am sorry for tell you all this.
+
+* for → noun
+* for → v-ing → telling (telling noun-এর মতো কাজ করছে → gerund)<br>
+*  ✅ **Ans:** I am sorry for `telling` you all this.
+
+---
+
+#### I am tired of argue.
+
+* of → noun
+* of → v-ing → arguing (arguing noun-এর মতো কাজ করছে → gerund)<br>
+*  ✅ **Ans:** I am tired of `arguing`.
+
+---
+
+#### What did you do on see you result?
+
+* on → noun
+* on → v-ing → seeing (seeing noun হিসেবে কাজ করছে → gerund)<br>
+*  ✅ **Ans:** What did you do on `seeing` your result?
+
+---
+
+#### I am interest in learn more.
+
+* in → noun
+* in → v-ing → learning (learning noun হিসেবে কাজ করছে → gerund)<br>
+* ✅ **Ans:** I am interested in `learning` more.
+
+---
+
+### **Possessive Adjective + Gerund**
+
+* **Possessive Pronoun:** mine + _
+* **Possessive Adjective:** my / our / your / his / her / its / their + noun
+* **Possessive Adjective:** my + v-ing → gerund
+
+---
+
+#### You should not mind `her coming` late. ✅
+#### My teacher did not object `me using` the calculator. ❌
+
+* ✅ **Ans:** My teacher did not object `my using` the calculator.
+---
+
+#### Owing to him being a newcomer, he was unable to get the job. ❌
+
+* এখানে **being** হলো object, তাই এর আগে **possessive adjective** বসবে।<br>
+* ✅ **Ans:** Owing to `his being` a newcomer, he was unable to get the job.
+
+---
+
+### **Some Common Prepositions used before Gerund**
+
+&gt; **A + v-ing (Gerund)** <br>
+&gt; যেখানে A = with a view to, look forward to, accustomed to, habituated to, addicted to, be used to, committed to
+---
+#### He comes to me with a view to get some help. ❌ 
+* ✅ **Ans:** He comes to me with a view to `getting` some help.
+
+---
+
+#### Rahul used to work at night. ✅ *(no error — past habit)*
+#### Rahul is used to work at night. ❌
+* ✅ **Ans:** Rahul is used to `working` at night. *(present habit)*
+---
+#### He is addict to gamble. ❌ 
+* ✅ **Ans:** He is addicted to `gambling`.
+</md></sn>
