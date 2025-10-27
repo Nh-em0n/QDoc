@@ -1,10 +1,74 @@
 
-  <sn><md>## Markdown</md></sn>
+  <sn><md>### Create Element Proxy
+
+This function create a element proxy.With this now we can select child element dynamically
+
+```js
+function createElementProxy(root = document) {
+  return new Proxy(root, {
+
+    get(target, prop, receiver) {
+      if (prop === 'self') return  target        
+      if (prop in target) {
+        // use the actual target for both getters and methods
+        const value = Reflect.get(target, prop, target);
+        return typeof value === 'function' ? value.bind(target) : value;
+      }
+
+      // Try to find a child element by data-as, id, class, or tag name
+      const el =
+        target.querySelector?.(`[data-as="${prop}"]`) ||
+        target.querySelector?.(`#${prop}`) ||
+        target.querySelector?.(`.${prop}`) ||
+        target.querySelector?.(prop);
+
+      if (el) return createElementProxy(el);
+      return null;
+    },
+
+    set(target, prop, value, receiver) {
+      if (prop in target) {
+        // Force the set on the real element (not proxy)
+        return Reflect.set(target, prop, value, target);
+      }
+
+      // If it’s not a known property, optionally ignore or store custom data
+      return false;
+    }
+  });
+}
+
+window.layout = createElementProxy();
+window.createElementProxy = createElementProxy
+```
+</md></sn>
   <config>
     <tags>#03.create element proxy for dynamic selecting</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 24 2025 12:36:40 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Oct 27 2025 06:37:30 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Uema582tln</id>
     <duration></duration>
   </config>
+<sn><md>### Selecting child element dynamically
+
+```html
+<nav>
+<header></header>
+</nav>
+```
+
+```js
+const nav_header = layout.nav.header
+```</md></sn><sn><md>### Selecting with id
+
+```html
+<div>
+<p id="myParagraph"></p>
+<div>
+```
+
+```js
+const targetParagraph = layout.myParagraph
+```
+</div></div></md></sn>
