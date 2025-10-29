@@ -1,5 +1,5 @@
 
-  <sn><md>### Table
+  <sn><md>### Tense Table
 
 
 | Tense                                   | Structure                                      | When to Use (বাংলায় ব্যবহারের সময়)                                               |
@@ -21,7 +21,7 @@
     <tags>#all tense table</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 29 2025 17:02:56 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 29 2025 19:15:54 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-mtyPtdANto</id>
     <duration></duration>
   </config>
@@ -335,6 +335,14 @@ Here’s what it means:
 &gt; **Use:** Action that was `completed before another action` in the past <br>
 &gt; **বাংলায় ব্যবহার:** অতীতে কোনো কাজ `অন্য একটি কাজের আগে সম্পন্ন` হয়েছে বোঝাতে ব্যবহৃত হয়।
 
+### Fact
+* To use past perfect tense we have to compare to event that occured in the past
+* if both event occur in the same time they are in the past simple tense
+* but one occur before another then the earlier one will be in past perfect and the next event will be in past indefinite tense
+* The **Past Perfect Tense** emphasizes the `completion of an event` before another past event, whereas the **Past Perfect Continuous Tense** emphasizes the `continuity or ongoing progress of an event` before another past event, rather than its completion.
+* The same distinction applies to the **Future Perfect** and **Future Perfect Continuous Tenses**.
+
+
 +++ story
 Suppose one of your friends visits your house today, and while remembering an earlier day, you ask him:
 
@@ -349,6 +357,8 @@ Here’s what it means:
 * He **finished drinking tea first**, and **then** he **came to your house** — so one action **happened before another past action**.
 * This tense shows the **earlier of two past actions**.
 * For an action that was **completed before another action in the past**, we use **Past Perfect Tense**.
+* Though in both case they represent an event that occur before another event but it depends on what aspect we are emphasizing; based on that, either the **Perfect** or the **Perfect Continuous** tense will be used.If emphasize is on completion then perfect , and else if it is on continuity of that event then prefect continuous.
+
 
 &gt; **Note:**
 &gt; If he had said **"I drank tea before I came"**, it would still mean the same time order, but **"I had drunk tea"** gives a **clearer sense** that the drinking happened **first** and the visiting happened **after**.
@@ -377,6 +387,38 @@ Here’s what it means:
 &gt; **Use:** Action that `started in the past` and `continued up to another time or event` in the past <br>
 &gt; **বাংলায় ব্যবহার:** অতীতে কোনো কাজ `একটি নির্দিষ্ট সময় বা ঘটনার আগে পর্যন্ত চলছিল` বোঝাতে ব্যবহৃত হয়।
 
+### Fact
+
+* The **Past Perfect Continuous Tense** inherits its properties from the **Past Perfect Tense**, so it is used for an action that **occurred before another past event**.
+* However, this tense `emphasizes the continuous or ongoing nature` of the action during that earlier time.
+
+
++++ story
+Suppose one of your friends visits your house today, and while remembering an earlier day, you ask him:
+
+#### “What were you doing before you came to my house yesterday?”
+
+He replies:
+
+#### **"I had been drinking tea before I came."**
+
+Here’s what it means:
+
+* He **started drinking tea earlier** and **continued for some time** before he **came to your house**.
+* The action of **drinking tea** was **in progress for a period of time** before another past action (**coming to your house**) took place.
+* This tense shows the **duration or continuity** of an action that **was happening up to a certain point in the past**.
+
+&gt; **Note:**
+&gt; We use **Past Perfect Continuous Tense** to show that an action **was going on for some time** **before another action in the past**.
+
+**Example Structure:**
+
+&gt; I had been drinking tea before you called me.
+
+It means he was `in the middle of drinking tea` when or just before the **other past event** occurred.
++++ 
+---
+
 +++ Example
 
 | উদাহরণ                                                               | ব্যাখ্যা (কেন Past Perfect Continuous)                | বাংলা অর্থ                                                     |
@@ -391,6 +433,27 @@ Here’s what it means:
 | 8. I `had been trying` to fix the problem for hours.                 | ঘণ্টার পর ঘণ্টা ধরে চেষ্টা করছিলাম।                   | আমি ঘণ্টার পর ঘণ্টা ধরে সমস্যাটা ঠিক করার চেষ্টা করছিলাম।      |
 | 9. She `had been studying` hard before the exam.                     | পরীক্ষার আগ পর্যন্ত অধ্যয়ন চলছিল।                    | সে পরীক্ষার আগে অনেক পড়াশোনা করছিল।                           |
 | 10. They `had been building` the house for months before they moved. | অন্য জায়গায় যাওয়ার আগ পর্যন্ত কাজ চলছিল।           | তারা অন্য জায়গায় যাওয়ার আগে কয়েক মাস ধরে বাড়ি তৈরি করছিল। |
++++
+
+---
+
++++ see past perfect vs past perfect continuous
+
+#### Key Difference
+
+| Aspect      | Past Perfect                             | Past Perfect Continuous                                  |
+| ----------- | ---------------------------------------- | -------------------------------------------------------- |
+| **Form**    | had + past participle (V₃)               | had been + V-ing                                         |
+| **Focus**   | Completion of the action                 | Duration or continuity of the action                     |
+| **Example** | I had drunk tea before I came.           | I had been drinking tea before I came.                   |
+| **Meaning** | He `finished` drinking tea, then came. | He `was in the middle of drinking` tea before he came. |
+
+---
+
+#### Summary
+
+* **Past Perfect** → Emphasizes `what happened first` (completed action).
+* **Past Perfect Continuous** → Emphasizes `how long` or `how continuously` the first action was happening before another past action.
 
 +++
 </md></sn><sn><md>### Future Simple{.text-center}
@@ -398,6 +461,32 @@ Here’s what it means:
 &gt; **Structure:** Subject + will/shall + $v_1$ + ext <br>
 &gt; **Use:** Action that will `happen in the future` <br>
 &gt; **বাংলায় ব্যবহার:** ভবিষ্যতে `ঘটবে` এমন কাজ বোঝাতে ব্যবহৃত হয়।
+
+
++++ story..
+
+Suppose one of your friends visits your house today, and you talk about tomorrow. You ask him:
+
+#### “What will you do tomorrow morning?”
+
+He replies:
+
+#### **"I will drink tea."**
+
+Here’s what it means:
+
+* He is talking about an action that `will happen in the future` — the action of **drinking tea** has `not happened yet`.
+* This tense is used to express `a decision`, `a prediction`, or `a future plan`  ++made at the moment of speaking++.
+* The **Future Simple Tense** shows an action that **will occur after the present time**.
+
+&gt; I will drink tea tomorrow morning.
+
+**Explanation:**
+He has **not drunk the tea yet**, but he **intends or plans** to do it **in the future** — that is why we use **Future Simple Tense**.
+
++++
+
+---
 
 +++ Example
 
@@ -421,6 +510,31 @@ Here’s what it means:
 &gt; **Use:** Action that will be `ongoing` at a specific time in the future <br>
 &gt; **বাংলায় ব্যবহার:** ভবিষ্যতের `নির্দিষ্ট সময়ে চলমান` থাকবে এমন কাজ বোঝাতে ব্যবহৃত হয়।
 
++++ story 
+
+Suppose one of your friends visits your house today, and you talk about tomorrow. You ask him:
+
+#### “What will you be doing tomorrow morning?”
+
+He replies:
+
+#### **"I will be drinking tea."**
+
+Here’s what it means:
+
+* He will `start drinking tea` and `continue doing it for some time` in the **future**.
+* The **Future Continuous Tense** describes an action that `will be in progress` at a **specific time in the future**.
+* It focuses on the `continuity` or `duration` of the future action, ++not its completion++.
+
+&gt; I will be drinking tea at 8 a.m. tomorrow.
+
+**Explanation:**
+This means that at **8 a.m. tomorrow**, he **will be in the middle of drinking tea** — the action will be **ongoing** `at that time, not yet finished`.
+
++++
+
+---
+
 +++ Example
 
 | উদাহরণ                                               | ব্যাখ্যা (কেন Future Continuous)                    | বাংলা অর্থ                                      |
@@ -442,6 +556,40 @@ Here’s what it means:
 &gt; **Structure:** Subject + will have + $v_3$ + ext <br>
 &gt; **Use:** Action that will be `completed before a specific time or event` in the future <br>
 &gt; **বাংলায় ব্যবহার:** ভবিষ্যতের কোনো নির্দিষ্ট সময় বা ঘটনার আগে `কাজটি সম্পন্ন হয়ে যাবে` বোঝাতে ব্যবহৃত হয়।
+
+---
+
+### Fact
+* Future perfect emphasizes the `completion` of earlier work that will take place before another event occur in the future.
+* Whereas future perfect continuous emphasizes the `continuity` of an event for certain period of time that will occur before another future event. 
+
+
+---
+
++++ story
+
+Suppose one of your friends visits your house today, and you talk about tomorrow. You ask him:
+
+#### “Will you drink tea before you come to my house tomorrow?”
+
+He replies:
+
+#### **"Yes, I will have drunk tea before I come."**
+
+Here’s what it means:
+
+* He will `finish drinking tea first`, and **then** he will **come to your house**.
+* The **Future Perfect Tense** is used `for an action that will be completed before a specific time or another future action`.
+* It emphasizes **the completion** of an action in the **future** before something else happens.
+
+&gt; I will have drunk tea before you arrive.
+
+**Explanation:**
+This means that by the time **you arrive tomorrow**, the action of **drinking tea** will `already be finished`.
+
++++
+
+---
 
 +++ Example
 
@@ -465,6 +613,33 @@ Here’s what it means:
 &gt; **Use:** Action that will `continue up to a specific time or event` in the future <br>
 &gt; **বাংলায় ব্যবহার:** ভবিষ্যতের কোনো নির্দিষ্ট সময় বা ঘটনার আগে পর্যন্ত `চলতে থাকবে` এমন কাজ বোঝাতে ব্যবহৃত হয়।
 
+---
+
++++ story
+
+Suppose one of your friends visits your house today, and you talk about tomorrow. You ask him:
+
+#### “What will you have been doing before you come to my house tomorrow?”
+
+He replies:
+
+#### **"I will have been drinking tea before I come."**
+
+Here’s what it means:
+
+* He will **start drinking tea earlier**, and the action will `continue for some time` **until just before** he comes to your house.
+* The **Future Perfect Continuous Tense** describes an action that **will continue for a period of time** and **will still be going on (or just ending)** **before another future action or time**.
+* It `emphasizes both **duration** and **completion**`  up to a specific point in the future**.
+
+&gt; I will have been drinking tea for 10 minutes before you arrive.
+
+**Explanation:**
+This means that **by the time you arrive tomorrow**, he `will already have spent 10 minutes drinking tea`, showing the **continuity and duration** of the action before the next future event occurs.
+
++++
+
+---
+
 +++ Example
 
 | উদাহরণ                                                                     | ব্যাখ্যা (কেন Future Perfect Continuous)                    | বাংলা অর্থ                                                 |
@@ -481,102 +656,97 @@ Here’s what it means:
 | 10. They `will have been building` this bridge for six months by December. | ডিসেম্বরের আগ পর্যন্ত নির্মাণ কাজ চলবে।                     | ডিসেম্বরের আগে তারা ছয় মাস ধরে এই সেতুটি তৈরি করছে থাকবে। |
 
 +++
-</md></sn><sn><md>#### Base Sentence:
+</md></sn><sn><md>### Story: **The Journey of a Student – Arif’s Exam Week**
 
-&gt; **Verb:** eat (খাওয়া) <br>
-&gt; **Base sentence:** I eat rice. (আমি ভাত খাই)
-
----
-
-### Present Simple (Simple Present)
-
-* **Sentence:** I eat rice.
-* **বাংলা অর্থ:** আমি ভাত খাই।
-* **ব্যবহার:** অভ্যাস, সাধারণ সত্য, নিয়মিত কাজ বোঝাতে।
-
-### Present Continuous
-
-* **Sentence:** I am eating rice.
-* **বাংলা অর্থ:** আমি ভাত খাচ্ছি।
-* **ব্যবহার:** এখন যা ঘটছে বা চলমান কাজ বোঝাতে।
+Let’s follow **Arif**, a hardworking student, through time to understand how every tense applies to one situation.
 
 ---
 
-### Present Perfect
+#### **1. Present Simple Tense**
 
-* **Sentence:** I have eaten rice.
-* **বাংলা অর্থ:** আমি ভাত খেয়েছি।
-* **ব্যবহার:** কাজটি শেষ হয়েছে, কিন্তু তার প্রভাব এখনও আছে।
-
----
-
-### Present Perfect Continuous
-
-* **Sentence:** I have been eating rice for 10 minutes.
-* **বাংলা অর্থ:** আমি ১০ মিনিট ধরে ভাত খাচ্ছি।
-* **ব্যবহার:** কোনো কাজ অতীতে শুরু হয়েছে এবং এখনো চলছে।
+&gt; **Arif studies every day.** <br>
+&gt; This shows his **daily habit** or **routine** — something that happens regularly.
 
 ---
 
-### Past Simple (Simple Past)
+#### **2. Present Continuous Tense**
 
-* **Sentence:** I ate rice.
-* **বাংলা অর্থ:** আমি ভাত খেয়েছিলাম / খেয়েছি।
-* **ব্যবহার:** অতীতে সম্পন্ন কাজ বোঝাতে।
-
----
-
-### Past Continuous
-
-* **Sentence:** I was eating rice.
-* **বাংলা অর্থ:** আমি ভাত খাচ্ছিলাম।
-* **ব্যবহার:** অতীতে চলমান কাজ বোঝাতে।
+&gt; **Arif is studying for his exams now.** <br>
+&gt; This shows an action that is **happening at the moment of speaking**.
 
 ---
 
-### Past Perfect
+#### **3. Present Perfect Tense**
 
-* **Sentence:** I had eaten rice before you came.
-* **বাংলা অর্থ:** তুমি আসার আগে আমি ভাত খেয়েছিলাম।
-* **ব্যবহার:** অতীতে অন্য একটি কাজের আগেই সম্পন্ন হওয়া কাজ বোঝাতে।
-
----
-
-### Past Perfect Continuous
-
-* **Sentence:** I had been eating rice for 10 minutes before you came.
-* **বাংলা অর্থ:** তুমি আসার আগে আমি ১০ মিনিট ধরে ভাত খাচ্ছিলাম।
-* **ব্যবহার:** অতীতে কোনো নির্দিষ্ট সময় পর্যন্ত চলমান ছিল এমন কাজ।
+&gt; **Arif has finished two chapters.** <br>
+&gt; The action is **completed**, but the **result** (two chapters done) is still **relevant now**.
 
 ---
 
-### Future Simple (Simple Future)
+#### **4. Present Perfect Continuous Tense**
 
-* **Sentence:** I will eat rice.
-* **বাংলা অর্থ:** আমি ভাত খাব।
-* **ব্যবহার:** ভবিষ্যতে ঘটবে এমন কাজ বোঝাতে।
+&gt; **Arif has been studying for three hours.** <br>
+&gt; This emphasizes the **duration** of an action that **started earlier** and is **still continuing**.
 
----
-
-### Future Continuous
-
-* **Sentence:** I will be eating rice at 2 PM.
-* **বাংলা অর্থ:** দুপুর ২টায় আমি ভাত খাচ্ছি থাকব।
-* **ব্যবহার:** ভবিষ্যতের কোনো নির্দিষ্ট সময়ে চলমান কাজ বোঝাতে।
+Event started in the past and continue in present.Both present prefect and present prefect continuous started in the past,but in prefect the action already competed but in present perfect continuous the action still continue.
 
 ---
 
-### Future Perfect
+#### **5. Past Simple Tense**
 
-* **Sentence:** I will have eaten rice before you come.
-* **বাংলা অর্থ:** তুমি আসার আগে আমি ভাত খেয়ে ফেলব।
-* **ব্যবহার:** ভবিষ্যতের কোনো কাজের আগে সম্পন্ন হবে এমন কাজ বোঝাতে।
+&gt; **Arif studied very hard last night.** <br>
+&gt; This shows a **finished action** that happened at a **specific past time**.
 
 ---
 
-### Future Perfect Continuous
+#### **6. Past Continuous Tense**
 
-* **Sentence:** I will have been eating rice for 10 minutes before you come.
-* **বাংলা অর্থ:** তুমি আসার আগে আমি ১০ মিনিট ধরে ভাত খাচ্ছি থাকব।
-* **ব্যবহার:** ভবিষ্যতের নির্দিষ্ট সময় পর্যন্ত চলমান থাকবে এমন কাজ বোঝাতে।
-</md></sn>
+&gt; **Arif was studying when his friend called him.** <br>
+&gt; This means his **studying** was **in progress**, and the phone call **interrupted** that action.
+
+---
+
+#### **7. Past Perfect Tense**
+
+&gt; **Arif had studied before he went to bed.** <br>
+&gt; This indicates that **studying happened first**, and **sleeping happened later** — one past action before another.Emphasizes the `completion` of earlier event. 
+
+---
+
+#### **8. Past Perfect Continuous Tense**
+
+&gt; **Arif had been studying for hours before he went to bed.** <br>
+&gt; This highlights the **ongoing duration** of studying that **continued for some time** before he finally went to bed.Emphasizes `continuity` of earlier event..
+
+---
+
+#### **9. Future Simple Tense**
+
+&gt; **Arif will study tomorrow morning.** <br>
+&gt; This shows a **future plan or decision** to study.
+
+---
+
+#### **10. Future Continuous Tense**
+
+&gt; **Arif will be studying at 8 a.m. tomorrow.** <br>
+&gt; This indicates an action that **will be in progress** at a **specific future time**.
+
+---
+
+#### **11. Future Perfect Tense**
+
+&gt; **Arif will have studied all chapters before the exam starts.** <br>
+&gt; This expresses that his studying will be **completed before** another future action (**the exam**).Emphasizes the `completion`. 
+
+---
+
+#### **12. Future Perfect Continuous Tense**
+
+&gt; **Arif will have been studying for five hours before the exam starts.** <br>
+&gt; This emphasizes the `duration` of the studying — it will **continue up to** a particular future time (**the exam**).
+
+---
+
+
+### Arif need a doc [!!]{.fg-teal} {.text-center}</md></sn>
