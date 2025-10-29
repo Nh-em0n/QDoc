@@ -21,7 +21,7 @@
     <tags>#all tense table</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 29 2025 10:02:13 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 29 2025 12:29:54 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-mtyPtdANto</id>
     <duration></duration>
   </config>
@@ -116,4 +116,180 @@ will soon
 | 9. She `has been teaching` here for five years.         | পাঁচ বছর ধরে পড়াচ্ছে।                       | সে পাঁচ বছর ধরে এখানে পড়াচ্ছে।         |
 | 10. They `have been building` this house since January. | জানুয়ারি থেকে কাজ চলছে।                     | তারা জানুয়ারি থেকে এই বাড়ি তৈরি করছে। |
 
-+++</md></sn>
++++</md></sn><sn><md>### Past Simple{.text-center}
+
+&gt; **Structure:** Subject + $v_2$ + ext <br>
+&gt; **Use:** Action that `happened` and `completed` in the past <br>
+&gt; **বাংলায় ব্যবহার:** অতীতে `ঘটেছে এবং শেষ হয়েছে` এমন কাজ বোঝাতে ব্যবহৃত হয়।
+
++++ Example
+
+| উদাহরণ                                       | ব্যাখ্যা (কেন Past Simple)          | বাংলা অর্থ                             |
+| -------------------------------------------- | ----------------------------------- | -------------------------------------- |
+| 1. I `visited` my friend yesterday.          | গতকাল ঘটেছে এবং শেষ হয়েছে।         | আমি গতকাল আমার বন্ধুর সাথে দেখা করেছি। |
+| 2. She `went` to school in the morning.      | সকালে গিয়েছিল, কাজটি শেষ হয়েছে।   | সে সকালে স্কুলে গিয়েছিল।              |
+| 3. They `played` football yesterday evening. | অতীতে একটি নির্দিষ্ট সময়ে হয়েছে।  | তারা গতকাল বিকেলে ফুটবল খেলেছিল।       |
+| 4. He `bought` a new car last week.          | গত সপ্তাহে ক্রয় সম্পন্ন হয়েছে।    | সে গত সপ্তাহে একটি নতুন গাড়ি কিনেছিল। |
+| 5. We `watched` a movie last night.          | গত রাতে দেখা সম্পন্ন হয়েছে।        | আমরা গত রাতে একটি সিনেমা দেখেছিলাম।    |
+| 6. It `rained` heavily yesterday.            | গতকাল বৃষ্টি হয়েছিল → অতীতের ঘটনা। | গতকাল ভারি বৃষ্টি হয়েছিল।             |
+| 7. The baby `cried` all night.               | রাতভর কেঁদেছিল → এখন আর চলছে না।    | শিশুটি সারারাত কেঁদেছিল।               |
+| 8. I `worked` hard last month.               | গত মাসে কাজ সম্পন্ন হয়েছে।         | আমি গত মাসে কঠোর পরিশ্রম করেছি।        |
+| 9. She `studied` English in college.         | অতীতে একটি নির্দিষ্ট সময়ে পড়েছিল। | সে কলেজে ইংরেজি পড়েছিল।               |
+| 10. They `built` this house in 2010.         | ২০১০ সালে কাজটি সম্পন্ন হয়েছে।     | তারা ২০১০ সালে এই বাড়ি তৈরি করেছিল।   |
+
++++
+</md></sn><sn><md>### Past Continuous{.text-center}
+
+&gt; **Structure:** Subject + was/were + $v\text{-}ing$ + ext <br>
+&gt; **Use:** Action that was `ongoing` at a specific time in the past <br>
+&gt; **বাংলায় ব্যবহার:** অতীতে `কোনো নির্দিষ্ট সময়ে চলমান` ছিল এমন কাজ বোঝাতে ব্যবহৃত হয়।
+
++++ Example
+
+| উদাহরণ                                        | ব্যাখ্যা (কেন Past Continuous)                     | বাংলা অর্থ                                  |
+| --------------------------------------------- | -------------------------------------------------- | ------------------------------------------- |
+| 1. I `was reading` a book at 8 p.m.           | রাত ৮টায় পড়ছিলাম → অতীতে চলমান কাজ।              | আমি রাত ৮টায় একটি বই পড়ছিলাম।             |
+| 2. She `was cooking` when I called her.       | আমি ফোন করার সময় সে রান্না করছিল → চলমান ক্রিয়া। | আমি যখন ফোন করলাম, সে রান্না করছিল।         |
+| 3. They `were playing` football in the field. | খেলার কাজটি অতীতে চলছিল।                           | তারা মাঠে ফুটবল খেলছিল।                     |
+| 4. He `was sleeping` at that time.            | নির্দিষ্ট সময়ে ঘুমাচ্ছিল → চলমান কাজ।             | সে তখন ঘুমাচ্ছিল।                           |
+| 5. We `were watching` TV all evening.         | পুরো সন্ধ্যাটা ধরে কাজ চলছিল।                      | আমরা পুরো সন্ধ্যা টিভি দেখছিলাম।            |
+| 6. It `was raining` when I left home.         | আমি বাড়ি ছাড়ার সময় বৃষ্টি হচ্ছিল।               | আমি যখন বাড়ি থেকে বের হলাম, বৃষ্টি হচ্ছিল। |
+| 7. The baby `was crying` loudly.              | তখন শিশুটি কাঁদছিল → অতীতে চলমান অবস্থা।           | শিশুটি জোরে কাঁদছিল।                        |
+| 8. I `was trying` to fix the computer.        | চেষ্টা করছিলাম → অতীতে চলমান।                      | আমি কম্পিউটারটি ঠিক করার চেষ্টা করছিলাম।    |
+| 9. She `was teaching` when the bell rang.     | ঘণ্টা বাজার সময় পড়াচ্ছিল।                        | ঘণ্টা বাজার সময় সে পড়াচ্ছিল।              |
+| 10. They `were building` a house last year.   | গত বছর কাজ চলমান ছিল → শেষ হয়নি তখন।              | তারা গত বছর একটি বাড়ি তৈরি করছিল।          |
+
++++
+</md></sn><sn><md>### Past Perfect{.text-center}
+
+&gt; **Structure:** Subject + had + $v_3$ + ext <br>
+&gt; **Use:** Action that was `completed before another action` in the past <br>
+&gt; **বাংলায় ব্যবহার:** অতীতে কোনো কাজ `অন্য একটি কাজের আগে সম্পন্ন` হয়েছে বোঝাতে ব্যবহৃত হয়।
+
++++ Example
+
+| উদাহরণ                                              | ব্যাখ্যা (কেন Past Perfect)                | বাংলা অর্থ                                        |
+| --------------------------------------------------- | ------------------------------------------ | ------------------------------------------------- |
+| 1. I `had finished` my homework before dinner.      | ডিনারের আগে কাজটি শেষ → আগে সম্পন্ন কাজ।   | আমি রাতের খাবারের আগে আমার কাজ শেষ করেছিলাম।      |
+| 2. She `had left` the room before I arrived.        | আমি পৌঁছানোর আগেই চলে গিয়েছিল।            | আমি পৌঁছানোর আগেই সে ঘর ছেড়ে গিয়েছিল।           |
+| 3. They `had played` football before it rained.     | বৃষ্টি হওয়ার আগে খেলেছিল।                 | বৃষ্টি হওয়ার আগে তারা ফুটবল খেলেছিল।             |
+| 4. He `had eaten` when I came home.                 | আমি আসার আগে খাওয়া শেষ → আগে সম্পন্ন কাজ। | আমি বাড়ি আসার আগে সে খাওয়া শেষ করেছিল।          |
+| 5. We `had gone` to bed before midnight.            | রাত ১২টার আগেই শুয়ে পড়েছিলাম।            | আমরা রাত ১২টার আগেই ঘুমাতে গিয়েছিলাম।            |
+| 6. It `had stopped` raining before we went out.     | আমরা বের হওয়ার আগে বৃষ্টি থেমে গিয়েছিল।  | আমরা বের হওয়ার আগে বৃষ্টি থেমে গিয়েছিল।         |
+| 7. The baby `had slept` before guests arrived.      | অতিথিরা আসার আগে ঘুমিয়েছিল।               | অতিথিরা আসার আগে শিশুটি ঘুমিয়েছিল।               |
+| 8. I `had studied` English before moving abroad.    | বিদেশ যাওয়ার আগেই পড়া শেষ করেছিলাম।      | আমি বিদেশ যাওয়ার আগে ইংরেজি পড়েছিলাম।           |
+| 9. She `had cooked` dinner before her husband came. | স্বামী আসার আগে রান্না সম্পন্ন হয়েছিল।    | তার স্বামী আসার আগে সে রাতের খাবার রান্না করেছিল। |
+| 10. They `had built` the bridge before 2010.        | ২০১০ সালের আগেই কাজটি সম্পন্ন হয়েছিল।     | তারা ২০১০ সালের আগেই সেতুটি নির্মাণ করেছিল।       |
+
++++
+</md></sn><sn><md>### Past Perfect Continuous{.text-center}
+
+&gt; **Structure:** Subject + had been + $v\text{-}ing$ + ext <br>
+&gt; **Use:** Action that `started in the past` and `continued up to another time or event` in the past <br>
+&gt; **বাংলায় ব্যবহার:** অতীতে কোনো কাজ `একটি নির্দিষ্ট সময় বা ঘটনার আগে পর্যন্ত চলছিল` বোঝাতে ব্যবহৃত হয়।
+
++++ Example
+
+| উদাহরণ                                                               | ব্যাখ্যা (কেন Past Perfect Continuous)                | বাংলা অর্থ                                                     |
+| -------------------------------------------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------- |
+| 1. I `had been reading` for two hours before you came.               | তুমি আসার আগ পর্যন্ত পড়ছিলাম → অতীতে চলমান ও দীর্ঘ।  | তুমি আসার আগে আমি দুই ঘণ্টা ধরে পড়ছিলাম।                      |
+| 2. She `had been working` there for five years before she left.      | চাকরি ছাড়ার আগ পর্যন্ত কাজ করছিল।                    | সে পাঁচ বছর ধরে সেখানে কাজ করছিল।                              |
+| 3. They `had been playing` football before it started to rain.       | বৃষ্টি শুরু হওয়ার আগ পর্যন্ত খেলছিল।                 | বৃষ্টি শুরু হওয়ার আগে তারা ফুটবল খেলছিল।                      |
+| 4. He `had been sleeping` for three hours when I called.             | আমি ফোন করার আগে পর্যন্ত ঘুমাচ্ছিল।                   | আমি ফোন করার আগে সে তিন ঘণ্টা ধরে ঘুমাচ্ছিল।                   |
+| 5. We `had been waiting` for you since morning.                      | সকাল থেকে অপেক্ষা চলছিল → অতীতে একটি পর্যায় পর্যন্ত। | আমরা সকাল থেকে তোমার জন্য অপেক্ষা করছিলাম।                     |
+| 6. It `had been raining` since dawn before it stopped.               | থামার আগে ভোর থেকে বৃষ্টি চলছিল।                      | থামার আগে ভোর থেকে বৃষ্টি হচ্ছিল।                              |
+| 7. The baby `had been crying` for a long time before she slept.      | ঘুমানোর আগ পর্যন্ত কান্না করছিল।                      | ঘুমানোর আগে শিশুটি অনেকক্ষণ ধরে কাঁদছিল।                       |
+| 8. I `had been trying` to fix the problem for hours.                 | ঘণ্টার পর ঘণ্টা ধরে চেষ্টা করছিলাম।                   | আমি ঘণ্টার পর ঘণ্টা ধরে সমস্যাটা ঠিক করার চেষ্টা করছিলাম।      |
+| 9. She `had been studying` hard before the exam.                     | পরীক্ষার আগ পর্যন্ত অধ্যয়ন চলছিল।                    | সে পরীক্ষার আগে অনেক পড়াশোনা করছিল।                           |
+| 10. They `had been building` the house for months before they moved. | অন্য জায়গায় যাওয়ার আগ পর্যন্ত কাজ চলছিল।           | তারা অন্য জায়গায় যাওয়ার আগে কয়েক মাস ধরে বাড়ি তৈরি করছিল। |
+
++++
+</md></sn><sn><md>### Future Simple{.text-center}
+
+&gt; **Structure:** Subject + will/shall + $v_1$ + ext <br>
+&gt; **Use:** Action that will `happen in the future` <br>
+&gt; **বাংলায় ব্যবহার:** ভবিষ্যতে `ঘটবে` এমন কাজ বোঝাতে ব্যবহৃত হয়।
+
++++ Example
+
+| উদাহরণ                                      | ব্যাখ্যা (কেন Future Simple)                   | বাংলা অর্থ                             |
+| ------------------------------------------- | ---------------------------------------------- | -------------------------------------- |
+| 1. I `will go` to school tomorrow.          | আগামীকালের ঘটনা → ভবিষ্যৎ কাজ।                 | আমি আগামীকাল স্কুলে যাব।               |
+| 2. She `will help` you later.               | পরে সাহায্য করবে → ভবিষ্যৎ কাজ।                | সে পরে তোমাকে সাহায্য করবে।            |
+| 3. They `will play` football next week.     | আগামী সপ্তাহে কাজটি ঘটবে।                      | তারা আগামী সপ্তাহে ফুটবল খেলবে।        |
+| 4. He `will buy` a new car soon.            | এখনো কেনেনি → ভবিষ্যতে করবে।                   | সে শিগগিরই একটি নতুন গাড়ি কিনবে।      |
+| 5. We `will watch` a movie tonight.         | আজ রাতে ঘটবে → ভবিষ্যৎ পরিকল্পনা।              | আমরা আজ রাতে একটি সিনেমা দেখব।         |
+| 6. It `will rain` tomorrow.                 | আগামীকালের আবহাওয়া → ভবিষ্যৎ অনুমান।          | আগামীকাল বৃষ্টি হবে।                   |
+| 7. The baby `will sleep` after dinner.      | খাওয়ার পর ঘুমাবে → ভবিষ্যৎ সময় নির্দেশ করছে। | শিশুটি খাওয়ার পর ঘুমাবে।              |
+| 8. I `will call` you when I reach home.     | বাড়ি পৌঁছানোর পর কাজটি ঘটবে।                  | আমি বাড়ি পৌঁছালে তোমাকে ফোন করব।      |
+| 9. She `will study` medicine after college. | কলেজ শেষের পরের পরিকল্পনা → ভবিষ্যৎ কাজ।       | সে কলেজ শেষে চিকিৎসাশাস্ত্র পড়বে।     |
+| 10. They `will build` a bridge next year.   | আগামী বছরে ঘটবে → ভবিষ্যৎ কাজ।                 | তারা আগামী বছর একটি সেতু নির্মাণ করবে। |
+
++++
+</md></sn><sn><md>### Future Continuous{.text-center}
+
+&gt; **Structure:** Subject + will be + $v\text{-}ing$ + ext <br>
+&gt; **Use:** Action that will be `ongoing` at a specific time in the future <br>
+&gt; **বাংলায় ব্যবহার:** ভবিষ্যতের `নির্দিষ্ট সময়ে চলমান` থাকবে এমন কাজ বোঝাতে ব্যবহৃত হয়।
+
++++ Example
+
+| উদাহরণ                                               | ব্যাখ্যা (কেন Future Continuous)                    | বাংলা অর্থ                                      |
+| ---------------------------------------------------- | --------------------------------------------------- | ----------------------------------------------- |
+| 1. I `will be reading` a book at 8 p.m. tomorrow.    | আগামীকাল রাত ৮টায় পড়ছি → ভবিষ্যতে চলমান কাজ।      | আমি আগামীকাল রাত ৮টায় একটি বই পড়ব।            |
+| 2. She `will be cooking` dinner when you arrive.     | তুমি পৌঁছালে তখন রান্না চলবে।                       | তুমি আসার সময় সে রাতের খাবার রান্না করবে।      |
+| 3. They `will be playing` football in the field.     | ভবিষ্যতে নির্দিষ্ট সময়ে খেলা চলবে।                 | তারা মাঠে ফুটবল খেলবে (চলমান থাকবে)।            |
+| 4. He `will be sleeping` at that time.               | ভবিষ্যতের নির্দিষ্ট সময়ে ঘুমাচ্ছে থাকবে।           | সে তখন ঘুমাচ্ছে থাকবে।                          |
+| 5. We `will be watching` TV all evening.             | পুরো সন্ধ্যাটা ধরে কাজ চলবে।                        | আমরা পুরো সন্ধ্যা টিভি দেখব।                    |
+| 6. It `will be raining` when we reach there.         | পৌঁছানোর সময় বৃষ্টি চলবে → ভবিষ্যতের চলমান অবস্থা। | আমরা পৌঁছানোর সময় বৃষ্টি হবে।                  |
+| 7. The baby `will be crying` when she wakes up.      | জাগার পর কাঁদবে → চলমান ক্রিয়া নির্দেশ করছে।       | শিশুটি জেগে উঠলে কাঁদছে থাকবে।                  |
+| 8. I `will be trying` to contact you tomorrow.       | ভবিষ্যতের নির্দিষ্ট সময়ে চেষ্টা চলবে।              | আমি আগামীকাল তোমার সাথে যোগাযোগের চেষ্টা করব।   |
+| 9. She `will be teaching` at that time tomorrow.     | ভবিষ্যতের নির্দিষ্ট সময়ে পড়াচ্ছে থাকবে।           | সে আগামীকাল ওই সময় পড়াচ্ছে থাকবে।             |
+| 10. They `will be building` a new bridge next month. | আগামী মাসে নির্মাণ কাজ চলবে।                        | তারা আগামী মাসে একটি নতুন সেতু তৈরি করছে থাকবে। |
+
++++
+</md></sn><sn><md>### Future Perfect{.text-center}
+
+&gt; **Structure:** Subject + will have + $v_3$ + ext <br>
+&gt; **Use:** Action that will be `completed before a specific time or event` in the future <br>
+&gt; **বাংলায় ব্যবহার:** ভবিষ্যতের কোনো নির্দিষ্ট সময় বা ঘটনার আগে `কাজটি সম্পন্ন হয়ে যাবে` বোঝাতে ব্যবহৃত হয়।
+
++++ Example
+
+| উদাহরণ                                                      | ব্যাখ্যা (কেন Future Perfect)                         | বাংলা অর্থ                                           |
+| ----------------------------------------------------------- | ----------------------------------------------------- | ---------------------------------------------------- |
+| 1. I `will have finished` my homework before dinner.        | রাতের খাবারের আগে কাজ শেষ হবে → ভবিষ্যতে সম্পন্ন কাজ। | আমি রাতের খাবারের আগে আমার কাজ শেষ করে ফেলব।         |
+| 2. She `will have left` before you arrive.                  | তুমি পৌঁছানোর আগেই চলে যাবে → ভবিষ্যতের আগের ঘটনা।    | তুমি পৌঁছানোর আগেই সে চলে যাবে।                      |
+| 3. They `will have played` football before sunset.          | সূর্যাস্তের আগে খেলা শেষ হবে।                         | সূর্যাস্তের আগে তারা ফুটবল খেলে ফেলবে।               |
+| 4. He `will have eaten` by the time you come.               | তুমি আসার আগেই খাওয়া শেষ হবে।                        | তুমি আসার আগে সে খাওয়া শেষ করবে।                    |
+| 5. We `will have gone` to bed before midnight.              | রাত ১২টার আগে শুয়ে পড়বে → সম্পন্ন হবে।              | আমরা রাত ১২টার আগে ঘুমাতে যাব।                       |
+| 6. It `will have stopped` raining before morning.           | সকালে ওঠার আগে বৃষ্টি থেমে যাবে।                      | সকাল হওয়ার আগে বৃষ্টি থেমে যাবে।                    |
+| 7. The baby `will have slept` before guests arrive.         | অতিথিরা আসার আগেই ঘুমিয়ে পড়বে।                      | অতিথিরা আসার আগেই শিশুটি ঘুমিয়ে পড়বে।              |
+| 8. I `will have studied` English before I travel abroad.    | বিদেশ যাওয়ার আগেই পড়াশোনা সম্পন্ন হবে।              | আমি বিদেশ যাওয়ার আগে ইংরেজি পড়া শেষ করব।           |
+| 9. She `will have cooked` dinner before her parents return. | বাবা-মা আসার আগে রান্না শেষ করবে।                     | তার বাবা-মা আসার আগে সে রাতের খাবার রান্না শেষ করবে। |
+| 10. They `will have built` the house by next year.          | আগামী বছরের আগেই কাজ সম্পন্ন হবে।                     | তারা আগামী বছরের আগেই বাড়িটি তৈরি করে ফেলবে।        |
+
++++
+</md></sn><sn><md>### Future Perfect Continuous{.text-center}
+
+&gt; **Structure:** Subject + will have been + $v\text{-}ing$ + ext <br>
+&gt; **Use:** Action that will `continue up to a specific time or event` in the future <br>
+&gt; **বাংলায় ব্যবহার:** ভবিষ্যতের কোনো নির্দিষ্ট সময় বা ঘটনার আগে পর্যন্ত `চলতে থাকবে` এমন কাজ বোঝাতে ব্যবহৃত হয়।
+
++++ Example
+
+| উদাহরণ                                                                     | ব্যাখ্যা (কেন Future Perfect Continuous)                    | বাংলা অর্থ                                                 |
+| -------------------------------------------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------- |
+| 1. I `will have been reading` for two hours by 9 p.m.                      | রাত ৯টার আগ পর্যন্ত পড়া চলবে → ভবিষ্যতে চলমান ও দীর্ঘ কাজ। | আমি রাত ৯টার আগে দুই ঘণ্টা ধরে পড়ছি থাকব।                 |
+| 2. She `will have been working` here for ten years by next month.          | আগামী মাসে দশ বছর পূর্ণ হবে → কাজ চলমান থাকবে।              | আগামী মাসে সে এখানে দশ বছর ধরে কাজ করছে থাকবে।             |
+| 3. They `will have been playing` football for an hour before it rains.     | বৃষ্টি শুরু হওয়ার আগ পর্যন্ত খেলা চলবে।                    | বৃষ্টি শুরু হওয়ার আগে তারা এক ঘণ্টা ধরে খেলছে থাকবে।      |
+| 4. He `will have been sleeping` for three hours by the time you come.      | তুমি আসার আগ পর্যন্ত ঘুম চলবে।                              | তুমি আসার আগে সে তিন ঘণ্টা ধরে ঘুমাচ্ছে থাকবে।             |
+| 5. We `will have been waiting` for you since morning.                      | সকাল থেকে অপেক্ষা চলবে → ভবিষ্যতের নির্দিষ্ট সময় পর্যন্ত।  | আমরা সকাল থেকে তোমার জন্য অপেক্ষা করছি থাকব।               |
+| 6. It `will have been raining` since dawn before we reach there.           | আমরা পৌঁছানোর আগ পর্যন্ত বৃষ্টি চলবে।                       | আমরা পৌঁছানোর আগে ভোর থেকে বৃষ্টি হচ্ছি থাকবে।             |
+| 7. The baby `will have been crying` for a long time before she sleeps.     | ঘুমানোর আগ পর্যন্ত কান্না চলবে।                             | ঘুমানোর আগে শিশুটি অনেকক্ষণ ধরে কাঁদছে থাকবে।              |
+| 8. I `will have been trying` to solve this problem all day.                | সারাদিন ধরে চেষ্টা চলবে → ভবিষ্যতে দীর্ঘ ক্রিয়া।           | আমি সারাদিন ধরে এই সমস্যাটি সমাধানের চেষ্টা করছি থাকব।     |
+| 9. She `will have been studying` English for five years by 2026.           | ২০২৬ সালের আগ পর্যন্ত পড়া চলবে।                            | ২০২৬ সালের আগে সে পাঁচ বছর ধরে ইংরেজি পড়ছে থাকবে।         |
+| 10. They `will have been building` this bridge for six months by December. | ডিসেম্বরের আগ পর্যন্ত নির্মাণ কাজ চলবে।                     | ডিসেম্বরের আগে তারা ছয় মাস ধরে এই সেতুটি তৈরি করছে থাকবে। |
+
++++
+</md></sn>
