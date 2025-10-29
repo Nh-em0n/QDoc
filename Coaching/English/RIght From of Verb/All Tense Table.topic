@@ -21,7 +21,7 @@
     <tags>#all tense table</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 29 2025 12:29:54 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 29 2025 13:12:10 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-mtyPtdANto</id>
     <duration></duration>
   </config>
@@ -30,14 +30,25 @@
 &gt; **Structure:** Subject + $v_1/v_5$ + ext <br>
 &gt; **Use:** `Common Action` - Habitual action, universal truth, regular work, general fact<br>
 
-### Fact
+#### Fact
 
-* **Present Indefinite Tense** বর্তমানে ঘটছে এমন কাজ বোঝাতে ব্যবহার হয় না; এটি এমন সাধারণ কাজ `common action` বোঝাতে ব্যবহৃত হয় যা **বর্তমান, অতীত ও ভবিষ্যৎ—সব সময়েই বারবার বা নিয়মিতভাবে** ঘটে।
+* **Present Indefinite Tense** [বর্তমানে ঘটছে এমন কাজ বোঝাতে ব্যবহার হয় না]{.fg-red}; এটি এমন সাধারণ কাজ `common action` বোঝাতে ব্যবহৃত হয় যা **বর্তমান, অতীত ও ভবিষ্যৎ—সব সময়েই বারবার বা নিয়মিতভাবে** ঘটে।
 * এতে **Helping Verb থাকে না**।
 * **$v_1$** → plural
 * **$v_5$** → singular
- 
-+++ Examples
+
++++ story
+Suppose one of your friend visit your house,then you ask him tea or coffe?.Then he replied
+
+### "I drink tea."
+
+It means he usually drink tea or prefer tea.For this kind of context we can use present simple tense that describe common action.
++++
+
+--- 
+
+### Example
++++ see
 | উদাহরণ                          | ব্যাখ্যা (কেন Present Indefinite)                         | বাংলা অর্থ                 |
 | ------------------------------- | --------------------------------------------------------- | -------------------------- |
 | 1. He `goes` to school every day. | “goes” মানে সে প্রতিদিন যায় → নিয়মিত কাজ।               | সে প্রতিদিন স্কুলে যায়।   |
@@ -56,9 +67,37 @@
 &gt; **Use:** Actions happening right now or temporary actions <br>
 &gt; **ব্যবহার:** এখন চলছে এমন কাজ বা সাময়িক কাজ বোঝাতে ব্যবহৃত হয়।
 
-Something that is actually `happeining` right now in present.
+#### Fact
+* The only tense that describe current action.
+* am/is/are represent person whereas
+* v-ing denote time
+* Not all v-ing is any continuous tense it must have helping verb(am/is/are/was/were/etc)
+---
 
-+++ Examples
++++ story
+
+Suppose one of your friends visits your house, and you ask him:
+
+####  “What are you doing?”
+
+He replies:
+
+#### **"I am drinking tea."**
+
+Here’s what it means:
+
+* He is `currently drinking tea` at that moment.
+* This sentence describes an action that is happening `right now`.
+* For actions occurring at the moment of speaking, we use **Present Continuous Tense**.
+
+&gt; **Note:** If he had said **"I drink tea"**, it would mean he `usually drinks tea` or prefers tea in general — which is Present Simple.
++++
+
+---
+
+### Example
+
++++ read...
 | উদাহরণ                        | ব্যাখ্যা (কেন Present Continuous) | বাংলা অর্থ                |
 | ----------------------------- | --------------------------------- | ------------------------- |
 | 1. I `am reading` a book.       | “am reading” → কাজটি এখনই চলছে।   | আমি বই পড়ছি।             |
@@ -76,6 +115,69 @@ Something that is actually `happeining` right now in present.
 &gt; **Structure:** Subject + has/have + $v_3$ + ext <br>
 &gt; **Use:** `Action completed` recently or whose result exists now <br>
 &gt; **বাংলায় ব্যবহার:** `সদ্য সম্পন্ন` কাজ বা যার প্রভাব বর্তমানেও আছে।
+
+### Understanding present perfect and past simple
++++ read....
+
+Suppose one of your friends visits your house. You want to ask about his meal:
+
+### Present Perfect Tense{.text-center}
+
+You ask:
+
+#### “Have you eaten?”
+
+He replies:
+
+#### **"I have eaten tea."** *(or "I have eaten lunch.")*
+
+**Meaning and Context:**
+
+* He `finished eating at some point before now`.
+* The exact time of eating is **not mentioned**.
+* The action is **connected to the present** because he is now available and not hungry.
+* **Form:** `have/has + past participle (V3)`
+
+**Example Explanation:**
+
+* "I have eaten" → You are **full now**, the effect of eating is visible in the present.
+
+---
+
+### Past Indefinite (Simple Past) Tense{.text-center}
+
+You ask:
+
+#### “Did you eat yesterday?”
+
+He replies:
+
+#### **"I ate tea yesterday."**
+
+**Meaning and Context:**
+
+* He `finished eating at a specific time in the past`.
+* The time of the action **is mentioned or understood**.
+* The action is **completely in the past**, with no direct connection to the present.
+* **Form:** `V2 (past form of verb)`
+
+**Example Explanation:**
+
+* "I ate yesterday" → The action happened in the past, and now it is finished; it does **not** affect the present.
+
+---
+
+### Key Difference
+
+| Tense           | Example          | Time Reference   | Connection to Present                       |
+| --------------- | ---------------- | ---------------- | ------------------------------------------- |
+| Present Perfect | I have eaten.    | Unspecified past | Yes, affects present (he is not hungry now) |
+| Past Indefinite | I ate yesterday. | Specific past    | No, completely in the past                  |
+
+This way, **Present Perfect** shows completed actions with **present relevance**, while **Past Indefinite** talks about actions that happened **at a specific past time**.
++++
+
+---
 
 +++ Example
 | উদাহরণ                                    | ব্যাখ্যা (কেন Present Perfect)                        | বাংলা অর্থ                  |
@@ -292,4 +394,102 @@ will soon
 | 10. They `will have been building` this bridge for six months by December. | ডিসেম্বরের আগ পর্যন্ত নির্মাণ কাজ চলবে।                     | ডিসেম্বরের আগে তারা ছয় মাস ধরে এই সেতুটি তৈরি করছে থাকবে। |
 
 +++
+</md></sn><sn><md>#### Base Sentence:
+
+&gt; **Verb:** eat (খাওয়া) <br>
+&gt; **Base sentence:** I eat rice. (আমি ভাত খাই)
+
+---
+
+### Present Simple (Simple Present)
+
+* **Sentence:** I eat rice.
+* **বাংলা অর্থ:** আমি ভাত খাই।
+* **ব্যবহার:** অভ্যাস, সাধারণ সত্য, নিয়মিত কাজ বোঝাতে।
+
+### Present Continuous
+
+* **Sentence:** I am eating rice.
+* **বাংলা অর্থ:** আমি ভাত খাচ্ছি।
+* **ব্যবহার:** এখন যা ঘটছে বা চলমান কাজ বোঝাতে।
+
+---
+
+### Present Perfect
+
+* **Sentence:** I have eaten rice.
+* **বাংলা অর্থ:** আমি ভাত খেয়েছি।
+* **ব্যবহার:** কাজটি শেষ হয়েছে, কিন্তু তার প্রভাব এখনও আছে।
+
+---
+
+### Present Perfect Continuous
+
+* **Sentence:** I have been eating rice for 10 minutes.
+* **বাংলা অর্থ:** আমি ১০ মিনিট ধরে ভাত খাচ্ছি।
+* **ব্যবহার:** কোনো কাজ অতীতে শুরু হয়েছে এবং এখনো চলছে।
+
+---
+
+### Past Simple (Simple Past)
+
+* **Sentence:** I ate rice.
+* **বাংলা অর্থ:** আমি ভাত খেয়েছিলাম / খেয়েছি।
+* **ব্যবহার:** অতীতে সম্পন্ন কাজ বোঝাতে।
+
+---
+
+### Past Continuous
+
+* **Sentence:** I was eating rice.
+* **বাংলা অর্থ:** আমি ভাত খাচ্ছিলাম।
+* **ব্যবহার:** অতীতে চলমান কাজ বোঝাতে।
+
+---
+
+### Past Perfect
+
+* **Sentence:** I had eaten rice before you came.
+* **বাংলা অর্থ:** তুমি আসার আগে আমি ভাত খেয়েছিলাম।
+* **ব্যবহার:** অতীতে অন্য একটি কাজের আগেই সম্পন্ন হওয়া কাজ বোঝাতে।
+
+---
+
+### Past Perfect Continuous
+
+* **Sentence:** I had been eating rice for 10 minutes before you came.
+* **বাংলা অর্থ:** তুমি আসার আগে আমি ১০ মিনিট ধরে ভাত খাচ্ছিলাম।
+* **ব্যবহার:** অতীতে কোনো নির্দিষ্ট সময় পর্যন্ত চলমান ছিল এমন কাজ।
+
+---
+
+### Future Simple (Simple Future)
+
+* **Sentence:** I will eat rice.
+* **বাংলা অর্থ:** আমি ভাত খাব।
+* **ব্যবহার:** ভবিষ্যতে ঘটবে এমন কাজ বোঝাতে।
+
+---
+
+### Future Continuous
+
+* **Sentence:** I will be eating rice at 2 PM.
+* **বাংলা অর্থ:** দুপুর ২টায় আমি ভাত খাচ্ছি থাকব।
+* **ব্যবহার:** ভবিষ্যতের কোনো নির্দিষ্ট সময়ে চলমান কাজ বোঝাতে।
+
+---
+
+### Future Perfect
+
+* **Sentence:** I will have eaten rice before you come.
+* **বাংলা অর্থ:** তুমি আসার আগে আমি ভাত খেয়ে ফেলব।
+* **ব্যবহার:** ভবিষ্যতের কোনো কাজের আগে সম্পন্ন হবে এমন কাজ বোঝাতে।
+
+---
+
+### Future Perfect Continuous
+
+* **Sentence:** I will have been eating rice for 10 minutes before you come.
+* **বাংলা অর্থ:** তুমি আসার আগে আমি ১০ মিনিট ধরে ভাত খাচ্ছি থাকব।
+* **ব্যবহার:** ভবিষ্যতের নির্দিষ্ট সময় পর্যন্ত চলমান থাকবে এমন কাজ বোঝাতে।
 </md></sn>
