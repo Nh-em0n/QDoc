@@ -21,7 +21,7 @@
     <tags>#all tense table</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 29 2025 13:12:10 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 29 2025 17:02:56 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-mtyPtdANto</id>
     <duration></duration>
   </config>
@@ -119,9 +119,9 @@ Here’s what it means:
 ### Understanding present perfect and past simple
 +++ read....
 
-Suppose one of your friends visits your house. You want to ask about his meal:
-
 ### Present Perfect Tense{.text-center}
+
+Suppose one of your friends visits your house. You want to ask about his meal:
 
 You ask:
 
@@ -193,16 +193,38 @@ This way, **Present Perfect** shows completed actions with **present relevance**
 | 9. They `have just` arrived.                | সদ্য সম্পন্ন কাজ।                                     | তারা এখনই এসেছে।            |
 | 10. The teacher `has explained` the lesson. | ব্যাখ্যা সম্পন্ন হয়েছে।                              | শিক্ষক পাঠটি বুঝিয়েছেন।    |
 +++
-
-+++ Present Perfect vs Past Indefinite
-will soon
-+++
 </md></sn><sn><md>### Present Perfect Continuous{.text-center}
 
 &gt; **Structure:** Subject + has/have + been + $v-ing$ + ext <br>
 &gt; **Use:** Action `started` in the past and `still continuing` <br>
 &gt; **বাংলায় ব্যবহার:** কোনো কাজ অতীতে `শুরু হয়ে এখনো চলছে`।
 
+#### Fact
+* Both present perfect and present perfect continuous action started in the past but
+* Present perfect `end` and result exist in the present and
+* Present perfect continuous action `continue or just end` now
+
+---
++++ story
+Suppose one of your friends visits your house, and you ask him:
+
+#### “What have you been doing?”
+
+He replies:
+
+#### **"I have been drinking tea."**
+
+Here’s what it means:
+
+* He started drinking tea **some time ago** and is **still drinking it now**, or **just finished** drinking it.
+* This sentence describes an action that **began in the past** and has been **continuing up to the present**.
+* For actions that started earlier and are still going on (or have just recently stopped), we use **Present Perfect Continuous Tense**.
+
+&gt; **Note:**
+&gt; If he had said **"I have drunk tea"**, it would mean he **already finished** drinking tea — which is **Present Perfect Tense**.
+&gt; But **"I have been drinking tea"** emphasizes the **duration or continuity** of the action until now.
++++
+---
 +++ Example
 
 | উদাহরণ                                                | ব্যাখ্যা (কেন Present Perfect Continuous)    | বাংলা অর্থ                              |
@@ -224,6 +246,27 @@ will soon
 &gt; **Use:** Action that `happened` and `completed` in the past <br>
 &gt; **বাংলায় ব্যবহার:** অতীতে `ঘটেছে এবং শেষ হয়েছে` এমন কাজ বোঝাতে ব্যবহৃত হয়।
 
+
++++ story
+Suppose one of your friends visits your house today, and while chatting, you recall a past day and ask him:
+
+#### “What did you do at 4pm yesterday?”
+
+He replies:
+
+#### **"I drank tea at home."**
+
+Here’s what it means:
+
+* He **drank tea yesterday** — the action **happened in the past** and is **completely finished**.
+* This sentence talks about a **specific past event** (yesterday).
+* For actions that are **completed at a definite time in the past**, we use **Past Simple Tense**.
+
+&gt; **Note:**
+&gt; If he had said **"I have drunk tea"**, it would connect the action to the **present moment** (meaning the experience still feels recent or relevant).
+&gt; But **"I drank tea"** shows it **belongs only to the past** — it’s done and over.
++++
+
 +++ Example
 
 | উদাহরণ                                       | ব্যাখ্যা (কেন Past Simple)          | বাংলা অর্থ                             |
@@ -244,7 +287,31 @@ will soon
 
 &gt; **Structure:** Subject + was/were + $v\text{-}ing$ + ext <br>
 &gt; **Use:** Action that was `ongoing` at a specific time in the past <br>
-&gt; **বাংলায় ব্যবহার:** অতীতে `কোনো নির্দিষ্ট সময়ে চলমান` ছিল এমন কাজ বোঝাতে ব্যবহৃত হয়।
+&gt; **বাংলায় ব্যবহার:** অতীতে `কোনো নির্দিষ্ট সময়ে চলমান` ছিল এমন কাজ বোঝাতে ব্যবহৃত হয়
+
++++ story
+
+Suppose one of your friends visits your house today, and you both start talking about last evening.
+You ask him:
+
+#### “What were you doing yesterday evening?”
+
+He replies:
+
+#### **"I was drinking tea."**
+
+Here’s what it means:
+
+* He was `in the middle of drinking tea` at a particular time **in the past**.
+* The action **continued for some time** in the past but is **now finished**.
+* For actions that were **ongoing at a specific moment in the past**, we use **Past Continuous Tense**.
+
+&gt; **Note:**
+&gt; If he had said **"I drank tea"**, it would mean the action **started and finished** in the past.
+&gt; But **"I was drinking tea"** emphasizes the **process** — that the action was **happening** at that time.
++++
+
+---
 
 +++ Example
 
@@ -267,6 +334,26 @@ will soon
 &gt; **Structure:** Subject + had + $v_3$ + ext <br>
 &gt; **Use:** Action that was `completed before another action` in the past <br>
 &gt; **বাংলায় ব্যবহার:** অতীতে কোনো কাজ `অন্য একটি কাজের আগে সম্পন্ন` হয়েছে বোঝাতে ব্যবহৃত হয়।
+
++++ story
+Suppose one of your friends visits your house today, and while remembering an earlier day, you ask him:
+
+#### “Did you drink tea before you came to my house yesterday?”
+
+He replies:
+
+#### **"Yes, I had drunk tea before I came."**
+
+Here’s what it means:
+
+* He **finished drinking tea first**, and **then** he **came to your house** — so one action **happened before another past action**.
+* This tense shows the **earlier of two past actions**.
+* For an action that was **completed before another action in the past**, we use **Past Perfect Tense**.
+
+&gt; **Note:**
+&gt; If he had said **"I drank tea before I came"**, it would still mean the same time order, but **"I had drunk tea"** gives a **clearer sense** that the drinking happened **first** and the visiting happened **after**.
++++
+---
 
 +++ Example
 
