@@ -1,10 +1,67 @@
 
-  <sn></sn>
+  <sn><md>### Regular Expressions with `grep`
+
+`grep` supports **regular expressions**, allowing complex pattern matching.
+
+### Match beginning or end of line
+
+```bash
+grep "^start" file.txt
+```
+
+Matches lines starting with *start*.
+
+```bash
+grep "end$" file.txt
+```
+
+Matches lines ending with *end*.
+
+---
+
+### Match any single character
+
+```bash
+grep "h.t" file.txt
+```
+
+Matches *hat*, *hit*, *hot*, etc.
+
+---
+
+### Match one of several options
+
+```bash
+grep -E "cat|dog" file.txt
+```
+
+Matches lines containing either *cat* or *dog*.
+(`-E` enables **extended regex**.)
+
+---
+
+### Match repeated characters
+
+```bash
+grep -E "go+d" file.txt
+```
+
+Matches *god*, *good*, *goood*, etc.
+
+---
+
+### Match digits or character ranges
+
+```bash
+grep "[0-9]" file.txt
+```
+
+Matches any line containing a number.</md></sn>
   <config>
     <tags>#03.regular expression with grep</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 31 2025 13:06:53 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 31 2025 13:07:46 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TpG0nSqhHW</id>
     <duration></duration>
   </config>
