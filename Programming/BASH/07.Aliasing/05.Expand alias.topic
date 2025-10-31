@@ -1,10 +1,22 @@
 
-  <sn></sn>
+  <sn><md>### Expand an Alias
+
+Assume that **`bar`** is an alias for `someCommand -flag1`.
+
+When you type `bar` on the command line and then press **`Ctrl + Alt + E`**,
+the alias will expand in place, showing:
+
+```bash
+someCommand -flag1
+```
+
+This allows you to see what command the alias represents before executing it.
+</md></sn>
   <config>
     <tags>#05.expand alias</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 31 2025 15:32:45 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 31 2025 15:34:41 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ACRQKdKvJO</id>
     <duration></duration>
   </config>
