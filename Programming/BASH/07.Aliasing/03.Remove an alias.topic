@@ -1,10 +1,34 @@
 
-  <sn></sn>
+  <sn><md>### Remove an Alias
+
+To remove an existing alias, use:
+
+```bash
+unalias {alias_name}
+```
+
+#### Example
+
+```bash
+# create an alias
+$ alias now='date'
+
+# preview the alias
+$ now
+Thu Jul 21 17:11:25 CEST 2016
+
+# remove the alias
+$ unalias now
+
+# test if removed
+$ now
+-bash: now: command not found
+```</md></sn>
   <config>
     <tags>#03.remove an alias</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 31 2025 15:20:39 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 31 2025 15:21:51 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Von3Clg6ZV</id>
     <duration></duration>
   </config>
