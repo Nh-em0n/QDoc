@@ -1,10 +1,19 @@
 
-  <sn></sn>
+  <sn><md>### List All Aliases
+
+To display all currently defined aliases, use the following command:
+
+```bash
+alias -p
+```
+
+This will list all active aliases in the current shell session.
+</md></sn>
   <config>
     <tags>#06.list all aliases</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 31 2025 15:35:44 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 31 2025 15:36:31 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-neyh732Qgn</id>
     <duration></duration>
   </config>
