@@ -20,7 +20,7 @@ echo "Hello World"
     <tags>#01.hello world</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 10:14:50 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 31 2025 06:11:04 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-vFt4JIvDCv</id>
     <duration></duration>
   </config>
@@ -68,10 +68,37 @@ bash hello-world.sh       # Assuming /bin is in your $PATH
 sh hello-world.sh
 ```
 
-&gt; **Tip for production:**
-&gt;
-&gt; * You can omit the `.sh` extension (since this is a Bash script, not a sh script).
+&gt; **Tip for production:** <br>
+&gt; * You can omit the `.sh` extension (since this is a Bash script, not a sh script).Instead of `myscript.sh` you can save it as [myscript]{.fg-teal}
 &gt; * Move the file to a directory in your `$PATH` so it behaves like a system command (e.g., `cat` or `ls`).
+
+```bash
+  sudo mv myscript /usr/local/bin/
+```
+
++++ testing
+```bash
+emon~/Downloads/bash$ touch hello
+emon~/Downloads/bash$ chmod +x hello
+emon~/Downloads/bash$ subl hello
+emon~/Downloads/bash$ ./hello
+Hello,from terminal
+emon~/Downloads/bash$ sudo mv hello /usr/local/bin/
+[sudo] password for emon:         
+emon~/Downloads/bash$ hello
+Hello,from terminal
+emon~/Downloads/bash$
+```
+I add the following script on hello
+
+```bash
+#!/bin/bash
+echo "Hello,from terminal"
+```
+
++++
+
+
 </md></sn><sn><md>## Common Mistakes in Bash Scripts{.fg-red .text-center}
 
 1. **Forgetting to make the script executable**
