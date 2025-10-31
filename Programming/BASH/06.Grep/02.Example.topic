@@ -69,12 +69,52 @@ grep -c "404" access.log
 ```
 
 Displays how many lines contain the text *404*.
+
+#### Using `grep` to Highlight Matches
+
+```bash
+grep --color=auto "main" file.c
+```
+
+Highlights the matching text (*main*) in the output.
+
+---
+
+#### Using Multiple Patterns
+
+You can search for multiple patterns at once.
+
+```bash
+grep -E "error|fail|warning" logfile.txt
+```
+
+Searches for any of the three words in the file.
+
+Or, use multiple `-e` flags:
+
+```bash
+grep -e "apple" -e "banana" fruits.txt
+```
+
+#### Suppress filename in output:
+
+```bash
+grep -h "keyword" *.txt
+```
+
+#### Suppress error messages:
+
+```bash
+grep "text" * 2&gt;/dev/null
+```
+
 </md></sn>
   <config>
     <tags>#02.example</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 31 2025 13:05:46 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 31 2025 13:27:47 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ZG2UJd079d</id>
     <duration></duration>
   </config>
+<sn></sn>
