@@ -1,10 +1,80 @@
 
-  <sn></sn>
+  <sn><md>## Examples{.text-center}
+
+
+### Search for a word in a file
+
+```bash
+grep "hello" file.txt
+```
+
+Searches for the word **hello** in *file.txt* and prints all matching lines.
+
+---
+
+### Case-insensitive search
+
+```bash
+grep -i "hello" file.txt
+```
+
+Searches for **hello**, **Hello**, or **HELLO** (ignores case).
+
+---
+
+### Search recursively in directories
+
+```bash
+grep -r "main" /path/to/dir
+```
+
+Searches for **main** in all files under the specified directory.
+
+---
+
+### Display line numbers
+
+```bash
+grep -n "error" logfile.txt
+```
+
+Prints matching lines along with their line numbers.
+
+---
+
+### Show only filenames that contain the match
+
+```bash
+grep -l "TODO" *.py
+```
+
+Lists only the names of files containing the word **TODO**.
+
+---
+
+### Invert match (show lines that *do not* contain the pattern)
+
+```bash
+grep -v "success" logfile.txt
+```
+
+Displays all lines that **don’t** contain the word *success*.
+
+---
+
+### Count the number of matches
+
+```bash
+grep -c "404" access.log
+```
+
+Displays how many lines contain the text *404*.
+</md></sn>
   <config>
     <tags>#02.example</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 31 2025 13:04:56 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 31 2025 13:05:46 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ZG2UJd079d</id>
     <duration></duration>
   </config>
