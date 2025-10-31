@@ -1,10 +1,40 @@
 
-  <sn></sn>
+  <sn><md>### Create an Alias
+
+You can create an alias using the following syntax:
+
+```bash
+alias word='command'
+```
+
+Invoking **`word`** will run **`command`**.
+
+Any arguments supplied to the alias are simply appended to the target of the alias:
+
+```bash
+alias myAlias='some command --with --options'
+myAlias foo bar baz
+```
+
+The shell will then execute:
+
+```bash
+some command --with --options foo bar baz
+```
+
+To include multiple commands in the same alias, you can string them together with `&amp;&amp;`.
+
+#### Example
+
+```bash
+alias print_things='echo "foo" &amp;&amp; echo "bar" &amp;&amp; echo "baz"'
+```
+</md></sn>
   <config>
     <tags>#02.create an alias</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 31 2025 15:14:12 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 31 2025 15:19:28 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-CUNCg2BB1V</id>
     <duration></duration>
   </config>
