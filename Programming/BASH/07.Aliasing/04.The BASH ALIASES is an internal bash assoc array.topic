@@ -1,10 +1,61 @@
 
-  <sn></sn>
+  <sn><md>### The `BASH_ALIASES` Internal Bash Associative Array
+
+Aliases are named shortcuts of commands that can be defined and used in interactive Bash instances. They are stored in an associative array named **`BASH_ALIASES`**.
+
+To use this variable in a script, it must be run within an **interactive shell**.
+
+```bash
+#!/bin/bash -li
+# note the -li above! 
+# -l makes this behave like a login shell
+# -i makes it behave like an interactive shell
+#
+# shopt -s expand_aliases will not work in most cases
+
+echo There are ${#BASH_ALIASES[*]} aliases defined.
+
+for ali in "${!BASH_ALIASES[@]}"; do
+    printf "alias: %-10s triggers: %s\n" "$ali" "${BASH_ALIASES[$ali]}"
+done
+```
+</md></sn>
   <config>
     <tags>#04.the bash aliases is an internal bash assoc array</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 31 2025 15:23:25 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 31 2025 15:32:15 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-28ZysUH0sm</id>
     <duration></duration>
   </config>
+<sn><md>### Test 
+
++++see
+```bash
+emon~/Downloads/bash$ touch bash_alias_list
+emon~/Downloads/bash$ cat &gt;&gt; bash_alias_list
+#!/bin/bash -li
+# note the -li above! 
+# -l makes this behave like a login shell
+# -i makes it behave like an interactive shell
+#
+# shopt -s expand_aliases will not work in most cases
+
+echo There are ${#BASH_ALIASES[*]} aliases defined.
+
+for ali in "${!BASH_ALIASES[@]}"; do
+    printf "alias: %-10s triggers: %s\n" "$ali" "${BASH_ALIASES[$ali]}"
+done
+emon~/Downloads/bash$ chmod +x bash_alias_list
+emon~/Downloads/bash$ ./bash_alias_list
+There are 8 aliases defined.
+alias: alert      triggers: notify-send --urgency=low -i "$([ $? = 0 ] &amp;&amp; echo terminal || echo error)" "$(history|tail -n1|sed -e 's/^\s*[0-9]\+\s*//;s/[;&amp;|]\s*alert$//')"
+alias: egrep      triggers: egrep --color=auto
+alias: grep       triggers: grep --color=auto
+alias: fgrep      triggers: fgrep --color=auto
+alias: ll         triggers: ls -alF
+alias: la         triggers: ls -A
+alias: l          triggers: ls -CF
+alias: ls         triggers: ls --color=auto
+```
++++</md></sn>
