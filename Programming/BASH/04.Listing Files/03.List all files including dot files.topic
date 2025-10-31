@@ -21,7 +21,7 @@ $ ls -a
 .  ..  .ansible  .bash_logout  .bashrc  .lesshst  .puppetlabs  .viminfo  .bash_history  .bash_profile  bin  pki  .ssh
 ```
 
-* Here, `.` refers to the **current directory** and `..` refers to the **parent directory**.
+* Here, `.` refers to the [current directory]{.fg-orange} and `..` refers to the [parent directory]{.fg-red}.
 
 ---
 
@@ -38,7 +38,7 @@ $ ls -A
     <tags>#03.list all files including dot files</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 23 2025 12:25:01 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 31 2025 11:04:48 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-PcX8GVm1Il</id>
     <duration></duration>
   </config>
