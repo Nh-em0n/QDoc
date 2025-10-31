@@ -1,0 +1,50 @@
+
+  <sn><md>## Grep
+
+The `grep` command in Bash (and other Unix/Linux shells) is one of the most powerful and frequently used tools for searching and filtering text. It allows you to search for specific patterns (regular expressions or simple text) within files or input streams. The name **“grep”** stands for **Global Regular Expression Print**.
+
+---
+
+### What is `grep`?
+
+`grep` scans text line by line and prints the lines that match a given pattern. It is extremely useful for:
+
+* Searching within log files
+* Extracting lines containing keywords
+* Filtering command outputs
+* Performing case-sensitive or case-insensitive searches
+* Using complex regular expressions
+</md></sn>
+  <config>
+    <tags>#grep</tags>
+    <thumbnail></thumbnail>
+    <heading></heading>
+    <udate>Fri Oct 31 2025 13:03:16 GMT+0600 (Bangladesh Standard Time)</udate>
+    <id>article-mvvOEsT0y7</id>
+    <duration></duration>
+  </config>
+<sn><md>### Basic Syntax
+
+```bash
+grep [OPTIONS] PATTERN [FILE...]
+```
+
+**Parameters:**
+
+* `PATTERN`: The text or regular expression to search for.
+* `FILE`: One or multiple files to search within.
+  If no file is given, `grep` reads from standard input (stdin).</md></sn><sn><md>### Common Options
+
+| Option      | Description                            |
+| ----------- | -------------------------------------- |
+| `-i`        | Ignore case distinctions               |
+| `-r` / `-R` | Recursively search directories         |
+| `-n`        | Show line numbers                      |
+| `-v`        | Invert match (show non-matching lines) |
+| `-l`        | Print filenames with matches only      |
+| `-c`        | Count number of matching lines         |
+| `-w`        | Match whole words only                 |
+| `-x`        | Match the entire line exactly          |
+| `-e`        | Use multiple patterns                  |
+| `--color`   | Highlight matched text                 |
+</md></sn>
