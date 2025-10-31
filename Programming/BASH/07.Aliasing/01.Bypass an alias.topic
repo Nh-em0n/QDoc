@@ -1,10 +1,52 @@
 
-  <sn></sn>
+  <sn><md>## Shell Aliases
+
+Shell aliases are a simple way to create new commands or to wrap existing commands with code of your own. They somewhat overlap with shell functions, which are however more versatile and should therefore often be preferred.</md></sn>
   <config>
     <tags>#01.bypass an alias</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 31 2025 15:07:42 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 31 2025 15:13:49 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-uS0tJiWsMs</id>
     <duration></duration>
   </config>
+<sn><md>## Bypass an Alias
+
+Sometimes you may want to bypass an alias temporarily, without disabling it.
+
+#### Example Alias
+
+```bash
+alias ls='ls --color=auto'
+```
+
+#### Ways to Use the Original Command{.fg-teal .text-center}
+
+If you want to use the `ls` command without disabling the alias, you have several options:
+
+1. **Use the `command` builtin:**
+
+   ```bash
+   command ls
+   ```
+
+2. **Use the full path of the command:**
+
+   ```bash
+   /bin/ls
+   ```
+
+3. **Add a backslash (`\`) anywhere in the command name:**
+
+   ```bash
+   \ls
+   l\s
+   ```
+
+4. **Quote the command:**
+
+   ```bash
+   "ls"
+   'ls'
+   ```
+</md></sn>
