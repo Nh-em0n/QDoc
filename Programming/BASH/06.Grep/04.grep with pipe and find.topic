@@ -1,10 +1,41 @@
 
-  <sn></sn>
+  <sn><md>### Using `grep` with Pipes
+
+`grep` is often combined with other commands using the pipe (`|`) operator.
+
+```bash
+ps aux | grep "firefox"
+```
+
+Searches the process list for *firefox*.
+
+```bash
+dmesg | grep -i "usb"
+```
+
+Finds USB-related messages from kernel logs.</md></sn>
   <config>
     <tags>#04.grep with pipe and find</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 31 2025 13:18:22 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 31 2025 13:26:57 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-MtatWFZ2yU</id>
     <duration></duration>
   </config>
+<sn><md>### Using `grep` with `find`
+
+You can search inside specific files located by `find`:
+
+```bash
+find . -name "*.log" -exec grep "error" {} \;
+```
+
+Searches for *error* inside all `.log` files in the current directory and subdirectories.
+</md></sn><sn><md>### Difference Between `grep`, `egrep`, and `fgrep`
+
+| Command | Description                                      |
+| ------- | ------------------------------------------------ |
+| `grep`  | Basic regular expressions                        |
+| `egrep` | Extended regular expressions (same as `grep -E`) |
+| `fgrep` | Fixed strings, no regex (same as `grep -F`)      |
+</md></sn>
