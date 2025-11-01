@@ -1,10 +1,41 @@
 
-  <sn></sn>
+  
   <config>
     <tags>#02.week1</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Nov 01 2025 08:00:59 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Nov 01 2025 08:15:35 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-zVGHOQ9bTO</id>
     <duration></duration>
   </config>
+<sn><md>## Week 1 {.text-center .fg-red}
+
+#### ++1 to 7 Nov++ {.text-end}
+
+| **Category**    | **Task**                                                          |
+| --------------- | ----------------------------------------------------------------- |
+| [BCS]{.fg-orange}         | Eng Tense + Verb Revise + 1 story<br> Advanced Trigonmetry Note                                 |
+| [SES]{.fg-red}         | Soil Menrology Exam Preparation <br> Botany Next Exam Preparation                                      |
+| [Programming]{.fg-teal} | Javascript - Array,Object,Function,Prototype,Class,Proxy,This,Related Chapter <br> Bash Chapter -10 <br> QDoc Website Update + New Changes                                       |
+| [Religion]{.fg-blue}    | Surah:77 Mursalat Full + Note                                         |
+
+
+</md></sn><sn><md>## Nov 1 {.text-center .fg-red}
+
+| **Category**    | **Task**                                                          |
+| --------------- | ----------------------------------------------------------------- |
+| **SES**    | Soil Menrology Exam Preparation Chapter 1 and 2 |
+| **BCS**         | Eng 1 story |
+| **Programming** | Javascript - Array |
+| **Religion**   | Surah:77 Mursalat 10 verse |
+</md></sn><sn><md>## Nov 2 {.text-center .fg-red}
+
+Form Fill Up
+
+| **Category**    | **Task**                                                          |
+| --------------- | ----------------------------------------------------------------- |
+| **SES**    | Soil Menrology Exam Preparation Chapter 1(revise) and Chapter 3 |
+| **BCS**         | Tense complete remain Note + Story Revised |
+| **Programming** | Javascript - Object |
+| **Religion**   | Surah:77 Mursalat 20 verse |
+</md></sn>
