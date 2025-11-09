@@ -1,10 +1,56 @@
 
-  <sn></sn>
+  <sn><md>### Checking if an Object is an Array
+
+To check if an object is an array, you can use the `Array.isArray()` method, which returns `true` if the object is an array and `false` otherwise.
+
+---
+
+#### Using `Array.isArray()`
+
+```javascript
+Array.isArray([]); // true
+Array.isArray([1, 2, 3]); // true
+Array.isArray({}); // false
+Array.isArray(1); // false
+```
+
+&gt; `Array.isArray()` reliably checks if an object is an array.
+
+---
+
+#### Using `instanceof`
+
+In most cases, you can also use `instanceof` to check if an object is an array:
+
+```javascript
+[] instanceof Array; // true
+{} instanceof Array; // false
+```
+
+&gt; `instanceof` works for most cases but has limitations when the prototype of the array is modified.
+
+---
+
+#### Advantages of `Array.isArray()`
+
+&gt; `Array.isArray()` is more robust than `instanceof` because it will return `true` even if the prototype of the array has been modified. It will also return `false` if a non-array object’s prototype is changed to the array prototype.
+
+Example:
+
+```javascript
+var arr = [];
+Object.setPrototypeOf(arr, null);
+Array.isArray(arr); // true
+arr instanceof Array; // false
+```
+
+&gt; `Array.isArray()` can handle edge cases where the prototype of an object has been altered.
+</md></sn>
   <config>
     <tags>#30.checking if an object typeof array</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Oct 27 2025 05:55:28 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Nov 09 2025 10:29:48 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-JSUkRj2pwM</id>
     <duration></duration>
   </config>
