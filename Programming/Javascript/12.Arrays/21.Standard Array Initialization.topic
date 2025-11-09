@@ -1,10 +1,75 @@
 
-  <sn></sn>
+  <sn><md>### Using Array Literals
+
+The most common way to create an array is by using array literals.
+
+```javascript
+  var arr = [1, 2, 3, 4];
+```
+</md></sn>
   <config>
     <tags>#21.standard array initialization</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Oct 27 2025 05:51:19 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Nov 09 2025 11:36:33 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-1XDjprSN4p</id>
     <duration></duration>
   </config>
+<sn><md>### Using the `Array` Constructor
+
+You can also use the `Array` constructor to create arrays.
+
+```javascript
+  var arr2 = new Array(1, 2, 3, 4);
+```
+
+**Without Arguments:**  
+If the `Array` constructor is called without any arguments, an empty array is created.
+```javascript
+var arr3 = new Array();
+// arr3 = []
+ ```
+
+**With One Numeric Argument:**  
+If called with a single numeric argument, it creates an array of the specified length, filled with `undefined`.
+```javascript
+var arr4 = new Array(4);
+// arr4 = [undefined, undefined, undefined, undefined]
+```
+
+**With One Non-Numeric Argument:**  
+If the single argument is non-numeric, the array contains the value as its first element.
+```javascript
+var arr5 = new Array("foo");
+// arr5 = ["foo"]
+```
+</md></sn><sn><md>### Using `Array.of`
+
+The `Array.of()` method creates a new array instance from its arguments.
+
+**Example:**
+```javascript
+  Array.of(21, "Hello", "World");
+  // Result: [21, "Hello", "World"]
+```
+
+**Key Difference:**  <br>
+Unlike the `Array` constructor, `Array.of(23)` creates `[23]` instead of an array with a length of 23.</md></sn><sn><md>### Using `Array.from`
+
+The `Array.from()` method creates a new array from an array-like or iterable object. You can also provide a mapping function to initialize values.
+
+**Example:**
+```javascript
+var newArray = Array.from({ length: 5 }, (_, index) =&gt; Math.pow(index, 4));
+// Result: [0, 1, 16, 81, 256]
+```
+</md></sn><sn><md>### Summary of Array Initialization Methods
+
+| **Method**            | **Description**                                                    | **Example**                           | **Result**                                  |
+|------------------------|--------------------------------------------------------------------|---------------------------------------|---------------------------------------------|
+| **Array Literal**      | Creates a new array with specified elements.                      | `[1, 2, 3, 4]`                        | `[1, 2, 3, 4]`                              |
+| **Array Constructor**  | Creates an array based on arguments or length.                   | `new Array(4)`                        | `[undefined, undefined, undefined, undefined]` |
+| **Array.of()**         | Creates an array with given arguments, even a single number.      | `Array.of(23)`                        | `[23]`                                      |
+| **Array.from()**       | Creates an array from an iterable or array-like object.           | `Array.from({ length: 5 })`           | `[0, 1, 2, 3, 4]`                           |
+
+</md></sn>
