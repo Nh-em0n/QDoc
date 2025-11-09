@@ -1,10 +1,43 @@
 
-  <sn></sn>
+  <sn><md>### Using the `join()` Method
+
+The `join()` method is used to concatenate all elements of an array into a single string. A specified separator is placed between each element in the resulting string.
+
+1. **Joining with No Separator**  
+   ```javascript
+   console.log(["Hello", " ", "world"].join("")); 
+   // Output: "Hello world"
+   ```
+
+2. **Joining with a Hyphen**  
+   ```javascript
+   console.log([1, 800, 555, 1234].join("-")); 
+   // Output: "1-800-555-1234"
+   ```</md></sn>
   <config>
     <tags>#22.array to string</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Oct 27 2025 05:51:37 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Nov 09 2025 11:52:10 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Zci8E86EM5</id>
     <duration></duration>
   </config>
+<sn><md>### Key Notes
+
+:::.row
+:::.col-12 .col-md-6
+**Automatic Conversion:**<br>
+Elements that are not strings are automatically converted to strings before joining.
+Example: Numbers in the second example are converted to strings before being concatenated.
+:::
+
+:::.col-12 .col-md-6
+**Default Separator:**  
+If no separator is provided, a comma (`,`) is used by default.
+```javascript
+console.log(["apple", "banana", "cherry"].join()); 
+// Output: "apple,banana,cherry"
+```
+:::
+:::
+</md></sn>
