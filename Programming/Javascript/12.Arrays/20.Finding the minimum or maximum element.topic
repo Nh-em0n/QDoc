@@ -1,10 +1,89 @@
 
-  <sn></sn>
+  <sn><md>### Using `Math.min.apply` and `Math.max.apply`
+
+If your array contains only numeric values, you can use `Math.min.apply` or `Math.max.apply`.
+
+- **Example:**
+  ```javascript
+  var myArray = [1, 2, 3, 4];
+  Math.min.apply(null, myArray); // 1
+  Math.max.apply(null, myArray); // 4
+  ```
+
++++ Using the Spread Operator (`...`)
+
+With ES6, you can use the spread operator to pass array elements to `Math.min` or `Math.max`.
+
+**Example:**
+  ```javascript
+  var myArray = [1, 2, 3, 4, 99, 20];
+  var maxValue = Math.max(...myArray); // 99
+  var minValue = Math.min(...myArray); // 1
+```
+
++++
+</md></sn>
   <config>
     <tags>#20.finding the minimum or maximum element</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Oct 27 2025 05:50:54 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Nov 09 2025 11:21:39 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-e4ccwjL8Zn</id>
     <duration></duration>
   </config>
+<sn><md>#### Using a `for` Loop
+
+A `for` loop can iterate through the array to determine the minimum or maximum value.
+
+```javascript
+  var maxValue = myArray[0];
+  for (var i = 1; i &lt; myArray.length; i++) {
+      var currentValue = myArray[i];
+      if (currentValue &gt; maxValue) {
+          maxValue = currentValue;
+      }
+  }
+```
+</md></sn><sn><md>### Using `Array.prototype.reduce`
+
+The `reduce()` method can find the minimum or maximum value in an array.
+
+```javascript
+  var myArray = [1, 2, 3, 4];
+
+  myArray.reduce(function(a, b) {
+      return Math.min(a, b);
+  }); // 1
+
+  myArray.reduce(function(a, b) {
+      return Math.max(a, b);
+  }); // 4
+```
+
+**With Arrow Functions (Version ≥ 6)**
+  ```javascript
+  myArray.reduce((a, b) =&gt; Math.min(a, b)); // 1
+  myArray.reduce((a, b) =&gt; Math.max(a, b)); // 4
+  ```</md></sn><sn><md>#### Generalizing `reduce` for Edge Cases
+
+To handle edge cases, such as an empty array, pass an initial value to `reduce()`.
+
+**Generalized Function**
+```javascript
+  function myMax(array) {
+      return array.reduce(function(maxSoFar, element) {
+          return Math.max(maxSoFar, element);
+      }, -Infinity);
+  }
+
+  myMax([3, 5]); // 5
+  myMax([]); // -Infinity
+```
+
+**Important Note:**  
+Calling `Math.max.apply(null, [])` directly will also return `-Infinity`.
+</md></sn><sn><md>#### Recommended Approach
+
+- Use the **spread operator** for simplicity if supported (`Math.max(...myArray)`).
+- Use `reduce()` with an initial value for generalized scenarios.
+</md></sn>
