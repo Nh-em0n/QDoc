@@ -1,10 +1,135 @@
 
-  <sn></sn>
+  <sn><md>### Sorting a Multidimensional Array in JavaScript
+
+In JavaScript, sorting multidimensional arrays (arrays that contain other arrays) is a common task, especially when working with structured data like key–value pairs, records, or tables. The `Array.sort()` method provides an efficient way to perform this operation.
+
+---
+
+### Example Dataset
+
+Consider the following array:
+
+```javascript
+var array = [
+  ["key1", 10],
+  ["key2", 3],
+  ["key3", 40],
+  ["key4", 20]
+];
+```
+
+Each sub-array contains a **key** (string) and a **numeric value**.
+We want to sort the array based on the **second element** (the number).
+</md></sn>
   <config>
     <tags>#32.sorting multidimensional array</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Oct 27 2025 05:56:29 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Nov 09 2025 09:33:44 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-BLRaMrfEuk</id>
     <duration></duration>
   </config>
+<sn><md>### Sorting Using the `sort()` Method
+
+The `sort()` method can take a **comparison function** that defines the sorting order.
+To sort by the second element of each sub-array (the number), use:
+
+```javascript
+array.sort(function(a, b) {
+  return a[1] - b[1];
+});
+```
+
+This comparison function subtracts the second element of `b` from that of `a`.
+
+* If the result is **negative**, `a` comes before `b`.
+* If the result is **positive**, `b` comes before `a`.
+* If the result is **zero**, their order remains unchanged.
+
++++ Using ES6 Arrow Function Syntax
+
+The same result can be achieved more concisely with arrow functions:
+
+```javascript
+array.sort((a, b) =&gt; a[1] - b[1]);
+```
+
+This provides a cleaner and more modern approach, widely used in ES6 and beyond.
+
++++
+
+**Output :**<br>
+After sorting, the array becomes:
+
+```javascript
+[
+  ["key2", 3],
+  ["key1", 10],
+  ["key4", 20],
+  ["key3", 40]
+]
+```
+
+Now the sub-arrays are arranged in **ascending order** based on the numeric values.
+
+
+</md></sn><sn><md>### Sorting in Descending Order
+
+To sort in **descending order**, simply reverse the subtraction:
+
+```javascript
+array.sort((a, b) =&gt; b[1] - a[1]);
+```
+
+**Result:**
+
+```javascript
+[
+  ["key3", 40],
+  ["key4", 20],
+  ["key1", 10],
+  ["key2", 3]
+]
+```
+</md></sn><sn><md>### Important Note About `sort()` Behavior
+
+The `Array.sort()` method **modifies the original array** in place.
+This means the array you call `sort()` on will be directly changed, not copied.
+
+**Example:**
+
+```javascript
+var data = [[1, 5], [2, 1], [3, 3]];
+var sorted = data.sort((a, b) =&gt; a[1] - b[1]);
+
+console.log(data === sorted); // true
+```
+
+Both `data` and `sorted` refer to the **same sorted array**.
+
+If you want to keep the original array intact, you can create a copy first:
+
+```javascript
+var sortedCopy = [...array].sort((a, b) =&gt; a[1] - b[1]);
+```
+
+This ensures **immutability**, which is especially important in **functional programming** or frameworks like **React** where direct mutations are discouraged.
+
+</md></sn><sn><md>### Summary
+
+| Concept                     | Explanation                                       |
+| --------------------------- | ------------------------------------------------- |
+| **Goal**                    | Sort a multidimensional array by a specific index |
+| **Ascending Order**         | `array.sort((a, b) =&gt; a[1] - b[1])`               |
+| **Descending Order**        | `array.sort((a, b) =&gt; b[1] - a[1])`               |
+| **Modifies Original Array** | Yes                                               |
+| **Safe Copy Option**        | Use `[...array].sort(...)` to avoid mutation      |
+</md></sn><sn><md>### Key Takeaways
+
+* The `sort()` method can easily handle multidimensional arrays with custom comparison logic.
+* It **sorts in place**, modifying the original array.
+* Use **arrow functions** for cleaner syntax.
+* Clone the array first (`[...array]`) if you need to preserve the original data.
+
+Sorting multidimensional arrays is a foundational skill in JavaScript, especially when handling tabular or paired data structures efficiently.
+</md></sn>
