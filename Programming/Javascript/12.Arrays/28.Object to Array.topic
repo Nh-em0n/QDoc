@@ -1,10 +1,40 @@
 
-  <sn></sn>
+  <sn><md>### **Object Keys and Values to Array**
+
+You can convert an object's keys and values into an array of key-value pairs using a `for...in` loop. Here's how:
+
+```javascript
+var object = {
+    key1: 10,
+    key2: 3,
+    key3: 40,
+    key4: 20
+};
+
+var array = [];
+for (var people in object) {
+    array.push([people, object[people]]);
+}
+```
+
+**Resulting Array:**
+
+```javascript
+[
+    ["key1", 10],
+    ["key2", 3],
+    ["key3", 40],
+    ["key4", 20]
+]
+```
+
+- Each element in the array is a sub-array, where the first value is the key and the second value is the corresponding value from the object.
+</md></sn>
   <config>
     <tags>#28.object to array</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Oct 27 2025 05:54:35 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Nov 09 2025 10:51:13 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-vDKobqMEb9</id>
     <duration></duration>
   </config>
