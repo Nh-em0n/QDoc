@@ -1,10 +1,84 @@
 
-  <sn></sn>
+  <sn><md>### Overwriting with a New Array
+
+You can create a new array and overwrite the existing array reference.
+
+**Example:**
+```javascript
+var arr = [1, 2, 3, 4];
+arr = [];
+```
+
+**Important Note:** <br>
+This method does not actually delete elements from the original array. If the original array is referenced elsewhere (e.g., in a closure), it remains in memory, potentially causing memory leaks.  
+
+**Memory Leak Example:**
+
+```javascript
+var count = 0;
+function addListener(arr) { // `arr` is closed over
+      var b = document.body.querySelector("#foo" + (count++));
+      b.addEventListener("click", function(e) {
+          // do something but does not need `arr`
+      });
+ }
+
+  arr = ["big data"];
+  var i = 100;
+  while (i &gt; 0) {
+      addListener(arr); // `arr` is passed to the function
+      arr = [];         // only removes the reference; original array remains
+      arr.push("some large data"); // allocates more memory
+      i--;
+  }
+  ```
+
+  **Outcome:**  
+  - 100 arrays are closed over, each referencing a different array.  
+  - No items are actually deleted, leading to memory leaks.
+
+</md></sn>
   <config>
     <tags>#19.removing all elements</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Oct 27 2025 05:50:24 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Nov 09 2025 20:29:20 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-LjE2eUF0Xq</id>
     <duration></duration>
   </config>
+<sn><md>### Setting `length` to 0
+
+This method deletes all elements from the array by resetting its `length` property to 0.  
+
+```javascript
+var arr = [1, 2, 3, 4];
+arr.length = 0;
+ ```
+
+**Benefits:**  <br>
+* Keeps the reference to the original array.  
+* Most efficient way to clear an array and dereference its items.
+</md></sn><sn><md>### Using `splice()`
+
+The `splice()` method can remove all elements from an array.  
+
+```javascript
+var arr = [1, 2, 3, 4];
+arr.splice(0);
+```
+
+**When to Use:**  <br>
+* Only use this method if you need a new array containing the removed elements.  
+* If you don’t need the removed items, this method is inefficient because it creates a new array only to dereference it.
+
+**Example with Retained Items:**
+```javascript
+var keepArr = arr.splice(0); 
+// `arr` is now empty
+// `keepArr` contains the removed elements
+```
+</md></sn><sn><md>#### Recommended Approach
+
+- **Use Method 2 (`arr.length = 0`)** for efficiency and to avoid memory leaks.  
+- Avoid Method 1 if the original array is referenced elsewhere.
+</md></sn>
