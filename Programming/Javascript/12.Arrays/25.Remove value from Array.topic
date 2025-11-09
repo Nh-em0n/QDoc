@@ -1,10 +1,49 @@
 
-  <sn></sn>
+  <sn><md>### Removing a Specific Value (Without Modifying the Original Array)
+
+To remove a specific value from an array and create a new array without that value, you can use the `filter()` method:
+
+```javascript
+array.filter(function(val) { return val !== to_remove; });
+```
+
+&gt; **Note:** <br> This approach **does not** modify the original array. It returns a new array with the value removed.</md></sn>
   <config>
     <tags>#25.remove value from array</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Oct 27 2025 05:52:42 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Nov 09 2025 20:08:25 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-SmVE2CsKeZ</id>
     <duration></duration>
   </config>
+<sn><md>### Modifying the Original Array
+
+If you need to modify the array directly (e.g., within a function that manipulates the array), use a `while` loop with `indexOf()` and `splice()`:
+
+```javascript
+while (index = array.indexOf(3) !== -1) {
+    array.splice(index, 1);
+}
+```
+
+&gt; **Note :** <br> This loop will continue removing all occurrences of `3` until none remain.
+</md></sn><sn><md>### Removing Only the First Occurrence
+
+If you want to remove only the first occurrence of the value found, you can simplify the process by eliminating the `while` loop:
+
+```javascript
+var index = array.indexOf(to_remove);
+if (index !== -1) {
+    array.splice(index, 1);
+}
+```
+
+&gt; **Note :** This snippet will only remove the first occurrence of `to_remove` and will stop after that.
+</md></sn><sn><md>### Summary
+
+| **Approach**                             | **Effect**                                        |
+|------------------------------------------|--------------------------------------------------|
+| **Using `filter()`**                     | Creates a new array without the value (non-destructive). |
+| **Using `while` + `splice()`**           | Removes all occurrences of the value (destructive). |
+| **Using `indexOf()` + `splice()` once** | Removes only the first occurrence of the value (destructive). |
+</md></sn>
