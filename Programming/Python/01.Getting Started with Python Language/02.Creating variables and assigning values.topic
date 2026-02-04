@@ -1,10 +1,318 @@
 
-  <sn></sn>
+  <sn><md>### Creating Variables in Python
+
+Variables are fundamental `building blocks` in Python. They allow programmers to `store data in memory`, refer to it by name, and manipulate it throughout a program. Python makes working with variables especially simple and flexible compared to many other programming languages.
+
+
+In Python, a `variable is created the moment you assign a value to it`. The general syntax is:
+
+```python
+<variable_name> = <value>
+```
+
+Python uses the `=` operator for assignment. There is **no need to declare a variable beforehand** or specify its data type explicitly. Assignment itself both **declares and initializes** the variable. As a result, there is no concept of declaring a variable without giving it an initial value.
+</value></variable_name></md></sn>
   <config>
     <tags>#02.creating variables and assigning values</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Feb 04 2026 17:22:08 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Feb 04 2026 18:58:17 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-b3ZV1KUKra</id>
     <duration></duration>
   </config>
+<sn><md>## Basic Examples of Variable Assignment{.text-center}
+
+#### Integer Variables
+
+```python
+a = 2
+print(a)
+# Output: 2
+```
+
+```python
+b = 9223372036854775807
+print(b)
+# Output: 9223372036854775807
+```
+
+#### Floating-Point Variable
+
+```python
+pi = 3.14
+print(pi)
+# Output: 3.14
+```
+
+#### String Variables
+
+```python
+c = 'A'
+print(c)
+# Output: A
+```
+
+```python
+name = 'John Doe'
+print(name)
+# Output: John Doe
+```
+
+#### Boolean Variable
+
+```python
+q = True
+print(q)
+# Output: True
+```
+
+#### Empty or Null Value
+
+```python
+x = None
+print(x)
+# Output: None
+```</md></sn><sn><md>### Direction of Assignment
+
+Variable assignment in Python works **from left to right**. The left-hand side must always be a valid variable name.
+
+```python
+0 = x
+```
+
+This results in:
+
+```text
+SyntaxError: can't assign to literal
+```
+</md></sn><sn><md>### Python Keywords as Variable Names
+
+Python keywords cannot be used as variable names. You can view the list of keywords using:
+
+```python
+import keyword
+print(keyword.kwlist)
+```
+
+Attempting to use a keyword as a variable name will cause a syntax error.
+</md></sn><sn><md>### Rules for Naming Variables{.text-center}
+
+#### 1. Starting Characters
+
+Variable names must begin with a **letter** or an **underscore (_)**.
+
+```python
+x = True      # valid
+_y = True     # valid
+```
+
+Invalid examples:
+
+```python
+9x = False    # starts with a number
+$y = False    # starts with a symbol
+```
+
+#### 2. Allowed Characters
+
+After the first character, variable names may contain:
+
+* Letters
+* Numbers
+* Underscores
+
+```python
+has_0_in_it = "Still Valid"
+```
+
+#### 3. Case Sensitivity (x !== X)
+
+Python variable names are **case-sensitive**.
+
+```python
+x = 9
+y = X * 5
+```
+
+This results in:
+
+```text
+NameError: name 'X' is not defined
+```
+</md></sn><sn><md>### Automatic Type Assignment
+
+Although you do not explicitly define a data type, Python automatically assigns the most suitable built-in type to each variable.
+
+```python
+a = 2
+print(type(a))
+# Output: <class 'int'="">
+```
+
+```python
+pi = 3.14
+print(type(pi))
+# Output: <class 'float'="">
+```
+
+```python
+name = 'John Doe'
+print(type(name))
+# Output: <class 'str'="">
+```
+
+```python
+q = True
+print(type(q))
+# Output: <class 'bool'="">
+```
+
+```python
+x = None
+print(type(x))
+# Output: <class 'nonetype'="">
+```</class></class></class></class></class></md></sn><sn><md>### Understanding Assignment as Naming Objects
+
+In Python, assignment does **not copy values**. Instead, it binds a **name** to an **object**.
+
+```python
+a_name = an_object
+```
+
+This means the name on the left becomes a reference to the object on the right. For example:
+
+```python
+pi = 3.14
+```
+
+Here, `pi` is a name referring to the floating-point object `3.14`. Multiple names can refer to the same object.
+</md></sn><sn><md>### Multiple Variable Assignment
+
+Python allows assigning multiple values to multiple variables in a single line.
+
+```python
+a, b, c = 1, 2, 3
+print(a, b, c)
+# Output: 1 2 3
+```
+
+#### Mismatched Values
+
+```python
+a, b, c = 1, 2
+```
+
+```text
+ValueError: need more than 2 values to unpack
+```
+
+```python
+a, b = 1, 2, 3
+```
+
+```text
+ValueError: too many values to unpack
+```
+
+---
+
+#### Using the Underscore (_) as a Dummy Variable
+
+Unused values can be assigned to `_` by convention.
+
+```python
+a, b, _ = 1, 2, 3
+print(a, b)
+# Output: 1 2
+```
+
+The number of variables must still match the number of values:
+
+```python
+a, b, _ = 1, 2, 3, 4
+```
+
+```text
+ValueError: too many values to unpack (expected 3)
+```
+
+#### Assigning One Value to Multiple Variables
+
+A single value can be assigned to several variables at once.
+
+```python
+a = b = c = 1
+print(a, b, c)
+# Output: 1 1 1
+```
+
+All variables refer to the **same object** in memory. Reassigning one variable does not affect the others:
+
+```python
+b = 2
+print(a, b, c)
+# Output: 1 2 1
+```</md></sn><sn><md>### Cascading Assignment with Mutable Objects
+
+With mutable objects like lists, cascading assignment requires caution.
+
+```python
+x = y = [7, 8, 9]
+x[0] = 13
+print(y)
+# Output: [13, 8, 9]
+```
+
+Both `x` and `y` refer to the same list object, so modifying the list through one name affects the other.
+
+Assigning a new object breaks the link:
+
+```python
+x = [13, 8, 9]
+print(y)
+# Output: [7, 8, 9]
+```
+
+
+#### Nested Lists
+
+Python supports nested data structures, such as lists inside lists.
+
+```python
+x = [1, 2, [3, 4, 5], 6, 7]
+print(x[2])
+# Output: [3, 4, 5]
+
+print(x[2][1])
+# Output: 4
+```</md></sn><sn><md>### Dynamic Typing in Python
+
+Variables in Python are **not bound to a single data type**. A variable can be reassigned to a value of a different type at any time.
+
+```python
+a = 2
+print(a)
+# Output: 2
+
+a = "New value"
+print(a)
+# Output: New value
+```
+
+This works because the variable name simply points to a different object after reassignment.
+</md></sn><sn><md>### Summary Table
+
+| Concept              | Explanation                                      |
+| -------------------- | ------------------------------------------------ |
+| Variable Creation    | Variables are created by assignment              |
+| Type Declaration     | Not required; Python assigns types automatically |
+| Naming Rules         | Start with letter or `_`, case-sensitive         |
+| Assignment Meaning   | Names reference objects, not values              |
+| Multiple Assignment  | Assign several values in one line                |
+| Dummy Variable `_`   | Used to ignore unwanted values                   |
+| Cascading Assignment | Multiple names may reference one object          |
+| Mutable Types        | Changes affect all references                    |
+| Dynamic Typing       | Variables can change type anytime                |
+
+Python’s variable system emphasizes **simplicity, flexibility, and readability**, making it especially beginner-friendly while remaining powerful enough for complex applications.
+</md></sn>
