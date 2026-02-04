@@ -1,10 +1,265 @@
 
-  <sn></sn>
+  <sn><md>### Getting Started with Python
+
+![logo](https://upload.wikimedia.org/wikipedia/commons/f/f8/Python_logo_and_wordmark.svg)
+
+Python is a widely used **high-level programming language** designed for general-purpose programming. It was created by **Guido van Rossum** and first released in **1991**. Since its inception, Python has focused on simplicity, readability, and productivity, making it one of the most popular programming languages in the world today.
+
+Python uses a `dynamic type system`, meaning variable types are determined at runtime, and it provides **automatic memory management**, which frees programmers from manual memory allocation and deallocation. The language supports multiple programming paradigms, including:
+
+* Object-oriented programming
+* Imperative programming
+* Functional programming
+* Procedural programming
+
+Another major strength of Python is its **large and comprehensive standard library**, which allows developers to perform a wide range of tasks—such as file handling, networking, mathematics, and system operations—without installing additional packages.
+</md></sn>
   <config>
     <tags>#01.introduction</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Feb 04 2026 15:59:03 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Feb 04 2026 16:44:51 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-DVqZXe8IvM</id>
     <duration></duration>
   </config>
+<sn><md>### Python Versions Overview
+
+Currently, two major versions of Python are in use:
+
+:::.row
+:::.col-12 .col-md-6
+#### Python 3.x{.text-center}
+
+* The **current and actively developed** version
+* Introduced improved Unicode support
+* Cleaner syntax and better consistency
+* Recommended for all new projects
+:::
+
+:::.col-12 .col-md-6
+#### Python 2.x{.text-center}
+
+* The **legacy version**
+* Final release: Python 2.7
+* Receives only security updates until **2020**
+* No new features are implemented
+* Many older projects still use Python 2, though migration to Python 3 is now easier
+:::
+:::
+
+Both versions can be downloaded from the official Python website. In addition, third-party distributors provide **re-packaged Python distributions** that bundle commonly used libraries for specific purposes such as mathematics, data analysis, and scientific computing.</md></sn><sn><md>### Verifying Python Installation
+
+After installing Python, it is important to verify that the installation was successful.
+
+Open your terminal (or Command Prompt on Windows) and run:
+
+```bash
+python --version
+```
+Expected Output
+
+:::.row
+:::.col-12 .col-md-6
+##### Python 3.x (Version ≥ 3.0) {.text-center}
+```bash
+$ python --version
+Python 3.6.0
+```
+:::
+
+:::.col-12 .col-md-6
+##### Python 2.x (Version ≤ 2.7) {.text-center}
+```bash
+$ python --version
+Python 2.7.13
+```
+:::
+:::
+
+If Python 3 is installed but the command shows Python 2, it means **both versions are installed**. This is common on macOS and Linux systems. In that case, explicitly use:
+
+```bash
+python3 --version
+```
+</md></sn><sn><md>### Hello, World Using IDLE
+
+**IDLE** is a simple graphical editor and interactive shell that comes bundled with Python.
+
+##### Steps to Create a Hello, World Program in IDLE
+
+1. Open IDLE on your system.
+
+   * On Windows: Find it in All Programs or search for “IDLE”
+   * On Unix-based systems: Run `idle` or `python3` from the terminal
+2. A Python shell window opens with the prompt:
+
+   ```text
+   &gt;&gt;&gt;
+   ```
+3. Type the following command:
+
+   ```python
+   print("Hello, World")
+   ```
+4. Press Enter.
+
+##### Output
+
+```text
+Hello, World
+```</md></sn><sn><md>### Hello, World Using a Python File
+
+Create a new file named **hello.py** and add the following code:
+
+:::.row
+:::.col-12 .col-md-6
+##### Python 3.x (Version ≥ 3.0)
+```python
+print('Hello, World')
+```
+:::
+
+:::.col-12 .col-md-6
+##### Python 2.x (Version ≥ 2.6, Recommended)
+```python
+from __future__ import print_function
+print('Hello, World')
+```
+:::
+:::
+
+##### Python 2.x (Version ≤ 2.7, Not Recommended)
+```python
+print 'Hello, World'
+```
+
+Navigate to the file’s directory in the terminal and run:
+
+```bash
+python hello.py
+```
+
+#### Output
+
+```text
+Hello, World
+```
+
+You may also run the file using its full path, for example:
+
+```bash
+python /home/user/hello.py
+```</md></sn><sn><md>### Launching the Interactive Python Shell
+
+Running the `python` command without arguments starts an **interactive Python shell**, also known as the **Python Interpreter** or **REPL (Read–Evaluate–Print Loop)**.
+
+#### Python 2 Interactive Shell
+
+```bash
+$ python
+&gt;&gt;&gt; print 'Hello, World'
+Hello, World
+```
+
+#### Python 3 Interactive Shell
+
+```bash
+$ python3
+&gt;&gt;&gt; print('Hello, World')
+Hello, World
+```
+
+You can also start the interpreter and load a file simultaneously:
+
+```bash
+python -i hello.py
+```</md></sn><sn><md>### Exiting the Python Shell
+
+There are several ways to exit the interactive shell:
+
+```python
+exit()
+```
+
+or
+
+```python
+quit()
+```
+
+Alternatively:
+
+* **CTRL + D** → Exit the shell
+* **CTRL + C** → Cancel the current command
+</md></sn><sn><md>### Online Python Shells
+
+Online Python shells allow users to run Python code without installing Python locally. They are useful for:
+
+* Learning and teaching Python basics
+* Running small code snippets on devices without Python
+* Solving online programming problems
+
+#### Popular Online Python Shells
+
+* [https://www.python.org/shell/](https://www.python.org/shell/)
+* [https://ideone.com/](https://ideone.com/)
+* [https://repl.it/languages/python3](https://repl.it/languages/python3)
+* [https://www.tutorialspoint.com/execute_python_online.php](https://www.tutorialspoint.com/execute_python_online.php)
+* [http://rextester.com/l/python3_online_compiler](http://rextester.com/l/python3_online_compiler)
+</md></sn><sn><md>### Running Python Commands as a String
+
+Python code can be executed directly from the command line using the `-c` option:
+
+```bash
+python -c 'print("Hello, World")'
+```
+
+##### Output
+
+```text
+Hello, World
+```
+
+This is especially useful when combining scripts or automating tasks in shell environments.
+</md></sn><sn><md>### Package Management
+
+The recommended package manager for Python is **pip**. To install a package:
+
+```bash
+pip install numpy
+```
+
+On Windows, if pip is not in PATH:
+
+```bash
+python -m pip install numpy
+```
+</md></sn><sn><md>### Python Shells
+
+* **IDLE**: Default GUI shell
+* **IPython**: Advanced interactive shell with extended features
+</md></sn><sn><md>### Python Programs
+
+For long-term projects, Python code is saved in `.py` files and executed using:
+
+* Command-line shells
+* IDEs such as PyCharm
+* Jupyter Notebooks
+</md></sn><sn><md>### Code Style and Debugging
+
+* **Python Tutor** helps visualize program execution step by step
+* **PEP 8** defines standard formatting guidelines for Python code to improve readability and maintainability
+</md></sn><sn><md>### Summary Table
+
+| Topic              | Key Points                                   |
+| ------------------ | -------------------------------------------- |
+| Python Overview    | High-level, dynamic, multi-paradigm language |
+| Versions           | Python 3 (current), Python 2 (legacy)        |
+| Installation Check | `python --version`, `python3 --version`      |
+| First Program      | `print("Hello, World")`                      |
+| Execution Methods  | IDLE, terminal, script files, online shells  |
+| Package Management | pip, python -m pip                           |
+| Best Practices     | Use Python 3, follow PEP 8                   |
+
+Python’s simple syntax, flexibility, and powerful ecosystem make it an excellent language for beginners as well as professionals getting started in programming.
+</md></sn>
