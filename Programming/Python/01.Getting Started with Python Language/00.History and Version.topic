@@ -1,10 +1,86 @@
 
-  <sn></sn>
+  <sn><md>## History of Python
+
+:::.row
+:::.col-12 .col-md-8
+Python is a high-level, **interpreted** programming language known for its `simplicity and readability`.
+
+* **Creator**: Guido van Rossum
+* **Origin**: Developed in the late 1980s at **Centrum Wiskunde &amp; Informatica (CWI)**, Netherlands
+* **First Release**: **1991**
+:::
+
+:::.col-12 .col-md-4
+![author](https://live.staticflickr.com/3113/2343216724_e0e4bef263_b.jpg)
+:::
+:::
+
+Guido van Rossum wanted a language that was:
+
+* Easy to read and write
+* Powerful but simple
+* Suitable for scripting and rapid application development
+
+The name **Python** was inspired by the BBC comedy show `Monty Python’s Flying Circus`, not the snake.
+</md></sn>
   <config>
     <tags>#00.history and version</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Feb 04 2026 15:22:34 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Feb 04 2026 15:52:00 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ZZripVGYzF</id>
     <duration></duration>
   </config>
+<sn><md>#### Python 1.x<br> 
+(1991–2000)
+
+* First official version: **Python 1.0 (1994)**
+* Key features:
+
+  * High-level built-in data types (list, string, dictionary)
+  * Automatic memory management
+  * Basic exception handling
+* Mainly used for scripting and early software development
+</md></sn><sn><md>### Python 2.x <br>
+(2000–2010)
+
+* First release: **Python 2.0 (2000)**
+* Important additions:
+
+  * List comprehensions
+  * Garbage collection
+  * Support for Unicode (limited)
+* Widely adopted in industry
+* **Python 2.7** was the final version
+* **End of Life**: January 1, 2020
+</md></sn><sn><md>### Python 3.x 
+<br>(2008–Present)
+
+* First release: **Python 3.0 (2008)**
+* Designed to fix flaws of Python 2
+* Major improvements:
+
+  * Better Unicode support
+  * Clear separation between text and binary data
+  * Improved integer division
+  * Enhanced standard library
+* Backward incompatible with Python 2 (initially)
+* Actively developed and maintained
+</md></sn><sn><md>### Python Release Philosophy
+
+* Open-source and community-driven
+* Regular releases with long-term support
+* Strong emphasis on:
+
+  * Readability
+  * Simplicity
+  * Cross-platform compatibility</md></sn><sn><md>#### Summary Table
+
+| Version    | Release Period | Key Highlights                                   |
+| ---------- | -------------- | ------------------------------------------------ |
+| Python 1.x | 1991–2000      | Core language, basic data structures             |
+| Python 2.x | 2000–2010      | List comprehensions, Unicode support             |
+| Python 3.x | 2008–Present   | Unicode by default, performance, modern features |
+
+Python’s evolution reflects its goal: **making programming easier while remaining powerful**, which is why it’s widely used today in web development, data science, AI, automation, and education.
+</md></sn>
