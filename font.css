@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sofia&display=swap');
+
+.font-bricolage{
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:inherit;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.font-sofia{
+  font-family: "Sofia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-nunito{
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
