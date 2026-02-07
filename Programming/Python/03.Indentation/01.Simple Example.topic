@@ -1,10 +1,101 @@
 
-  <sn></sn>
+  <sn><md>### Indentation in Python
+
+- One of the most *distinctive features* of Python is its `use of indentation` to define the structure and grouping of statements.
+- Unlike many other programming languages that rely on braces `{ }`, Python uses `whitespace` to determine which statements belong together. 
+- This design choice was introduced by Python’s creator, `Guido van Rossum`, to improve code readability and enforce clean, consistent formatting.
+
+Indentation rules and their philosophy are discussed in detail in the `Design and History` section of the Python FAQ, but understanding the basics is essential for writing correct Python programs.
+</md></sn>
   <config>
     <tags>#01.simple example</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Feb 07 2026 22:13:30 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Feb 07 2026 23:11:42 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-aSfuGsN7tX</id>
     <duration></duration>
   </config>
+<sn><md>### Code Blocks and Colons
+
+- In Python, a **colon (`:`)** is used to indicate the `start of an indented code block`. 
+- Any statement that follows a colon must be `indented at the same level` to be considered part of that block. 
+- This applies to classes, functions, conditionals, and loops.
+</md></sn><sn><md>#### Indentation in Classes and Functions
+
+```python
+class ExampleClass:
+    # Every function belonging to a class must be indented equally
+    def __init__(self):
+        name = "example"
+
+    def someFunction(self, a):
+        # Everything belonging to a function must be indented
+        if a &gt; 5:
+            return True
+        else:
+            return False
+
+# If a function is not indented to the same level,
+# it will not be considered part of the parent class
+def separateFunction(b):
+    for i in b:
+        # Loops are indented and nested conditions start a new indentation
+        if i == 1:
+            return True
+    return False
+
+separateFunction([2, 3, 5, 6, 1])
+```
+
++++ show diagram
+```python
+ExampleClass
+|
+|- __init__(self)
+|  |
+|  |- name = "example"
+|
+|- someFunction(self, a)
+|  |
+|  |- if a &gt; 5
+|  |  |
+|  |  |- return True
+|  |
+|  |- else
+|     |
+|     |- return False
+
+
+separateFunction(b)
+|
+|- for i in b
+|  |
+|  |- if i == 1
+|  |  |
+|  |  |- return True
+|
+|- return False
+
+```
++++
+
+---
+
+**Understanding the Indentation Levels**
+
+* The **class body** is indented once under `class ExampleClass:`
+* Each **method inside the class** is indented at the same level
+* Statements inside a **function**, **if–else block**, or **loop** are indented further
+* Any function defined without the same indentation as the class methods is treated as a **separate function**, not part of the class
+
+Incorrect indentation can change the logic of the program or cause syntax errors.</md></sn><sn><md>#### Spaces or Tabs?
+
+Python allows both `spaces` and `tabs` for indentation, but consistency is mandatory.
+
+* Use `4 spaces` per indentation level (official Python style guide recommendation)
+* Do **not mix tabs and spaces** in the same program
+
+##### Why Consistency Matters
+
+* In **Python 3**, mixing tabs and spaces raises an error
+* In **Python 2**, it may lead to unexpected behavior and hard-to-find bugs</md></sn>
