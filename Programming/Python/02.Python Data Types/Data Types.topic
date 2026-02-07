@@ -1,10 +1,191 @@
 
-  <sn></sn>
+  <sn><md>### Python Data Types
+
+- In Python, **data types** define the `kind of value a variable can store` in memory. 
+- Unlike many other programming languages, Python does `not require explicit variable declarations`. Memory is automatically allocated when a value is assigned to a variable. This makes Python flexible, readable, and beginner-friendly.
+
+This chapter introduces the most commonly used built-in data types in Python, along with clear explanations and examples.{.fs-09}
+</md></sn>
   <config>
     <tags>#data types</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Feb 07 2026 19:50:12 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Feb 07 2026 22:10:20 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-WgJ2a4e4LY</id>
     <duration></duration>
   </config>
+<sn><md>### String Data Type
+
+- A **string** is a `sequence of characters` enclosed within single quotes (`' '`) or double quotes (`" "`). 
+- Strings are **immutable**, meaning once a string is created, it cannot be changed. Any modification results in the creation of a new string object.
+
+**Example**
+
+```python
+a_str = 'Hello World'
+print(a_str)
+# Output: Hello World
+
+print(a_str[0])
+# Output: H
+
+print(a_str[0:5])
+# Output: Hello
+```
+
+Here:
+
+* `a_str[0]` accesses the first character.
+* `a_str[0:5]` slices the string from index 0 to 4.
+</md></sn><sn><md>### Set Data Types
+
+- A **set** is an unordered `collection of unique elements`. 
+- Sets automatically remove duplicate values. 
+
+Python provides two types of sets:
+
+:::.row
+:::.col-12 .col-md-6
+##### Normal Set {.text-center}
+
+A `normal set` can be [modified]{.fg-teal} after creation.
+
+```python
+basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+print(basket)
+# Output: {'orange', 'banana', 'pear', 'apple'}
+
+a = set('abracadabra')
+print(a)
+# Output: {'a', 'r', 'b', 'c', 'd'}
+
+a.add('z')
+print(a)
+# Output: {'a', 'c', 'r', 'b', 'z', 'd'}
+```
+:::
+
+:::.col-12 .col-md-6
+##### Frozen Set{.text-center}
+
+A `frozenset` [cannot be modified]{.fg-pink} once it is created.
+
+```python
+b = frozenset('asdfagsa')
+print(b)
+# Output: frozenset({'f', 'g', 'd', 'a', 's'})
+
+cities = frozenset(["Frankfurt", "Basel", "Freiburg"])
+print(cities)
+# Output: frozenset({'Frankfurt', 'Basel', 'Freiburg'})
+```
+:::
+:::
+</md></sn><sn><md>### Number Data Types
+
+Python supports several numeric data types:
+
+* `int` – Integer values
+* `float` – Decimal values
+* `complex` – Complex numbers
+* `long` – (Used in Python 2; in Python 3, `int` handles long values)
+
+**Example**
+
+```python
+int_num = 10          # Integer
+float_num = 10.2      # Float
+complex_num = 3.14j   # Complex
+long_num = 1234567    # Long integer (Python 3)
+```
+</md></sn><sn><md>### List Data Type
+
+- A **list** is an `ordered collection of elements` enclosed in square brackets `[ ]`. 
+- Lists are `mutable`, meaning their elements can be changed. 
+- A list can contain elements of different data types.
+
+**Example**
+
+```python
+list = [123, 'abcd', 10.2, 'd']
+list1 = ['hello', 'world']
+
+print(list)
+# Output: [123, 'abcd', 10.2, 'd']
+
+print(list[0:2])
+# Output: [123, 'abcd']
+
+print(list1 * 2)
+# Output: ['hello', 'world', 'hello', 'world']
+
+print(list + list1)
+# Output: [123, 'abcd', 10.2, 'd', 'hello', 'world']
+```
+</md></sn><sn><md>### Dictionary Data Type
+
+- A **dictionary** stores data in `key–value pairs`. 
+- It is enclosed in curly braces `{}` and allows fast data retrieval using keys.
+
+**Example**
+
+```python
+dic = {'name': 'red', 'age': 10}
+
+print(dic)
+# Output: {'name': 'red', 'age': 10}
+
+print(dic['name'])
+# Output: red
+
+print(dic.values())
+# Output: dict_values(['red', 10])
+
+print(dic.keys())
+# Output: dict_keys(['name', 'age'])
+```
+</md></sn><sn><md>### Tuple Data Type
+
+- A **tuple** is `similar to a list`, but it is [immutable]{.fg-pink}. 
+- Tuples are enclosed in parentheses `( )` and cannot be modified after creation.
+
+**Example**
+
+```python
+tuple = (123, 'hello')
+tuple1 = ('world',)
+
+print(tuple)
+# Output: (123, 'hello')
+
+print(tuple[0])
+# Output: 123
+
+print(tuple + tuple1)
+# Output: (123, 'hello', 'world')
+
+tuple[1] = 'update'
+# This will raise an error
+```
+</md></sn><sn><md>### Differences
+
+| Data Type      | Enclosed In | Mutability                              | Example                  |
+| -------------- | ----------- | --------------------------------------- | ------------------------ |
+| **Set**        | `{ }`       | Mutable (elements can be added/removed) | `st = {1, 2, 3}`         |
+| **List**       | `[ ]`       | Mutable (can be changed)                | `lst = [1, 2, 3]`        |
+| **Tuple**      | `( )`       | Immutable (cannot be changed)           | `tup = (1, 2, 3)`        |
+| **Dictionary** | `{ }`       | Mutable (keys &amp; values can be changed)  | `dic = {'a': 1, 'b': 2}` |
+
+
+:::.note
+**Quick notes to remember** <br>
+
+* **Set** → unordered, no duplicates
+* **List** → ordered, allows duplicates
+* **Tuple** → ordered but fixed (read-only)
+* **Dictionary** → key–value pairs
+:::
+</md></sn><sn><md>### Conclusion
+
+Python data types provide a strong foundation for storing, manipulating, and organizing data. Understanding strings, sets, numbers, lists, dictionaries, and tuples is essential for writing efficient and meaningful Python programs. Mastery of these core data types will significantly improve problem-solving skills and code clarity.
+</md></sn>
