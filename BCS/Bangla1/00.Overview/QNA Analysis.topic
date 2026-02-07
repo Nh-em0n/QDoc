@@ -1,10 +1,18 @@
 
-  <sn></sn>
+  <sn><md>### Bangla Literature QNA Analysis
+
+* **কবি পরিচয়**
+* **লেখক ও তাঁর গ্রন্থ**
+* **মধ্যযুগীয় ও প্রাচীন যুগের গ্রন্থ**
+* **মুক্তিযুদ্ধ ও ভাষা আন্দোলন বিষয়ক সাহিত্য**
+* **বিখ্যাত গ্রন্থের উক্তি**
+* **বিখ্যাত পত্রিকা ও তাদের প্রকাশকাল**
+* **শিশুতোষ কবিতার লেখক**</md></sn>
   <config>
     <tags>#qna analysis</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Feb 07 2026 10:43:44 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Feb 07 2026 11:03:19 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-v0JYv3BuXa</id>
     <duration></duration>
   </config>
