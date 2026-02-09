@@ -1,10 +1,27 @@
 
-  <sn></sn>
+  <sn><md>### কম্পিউটার ও তথ্যপ্রযুক্তি
+
+এই বিষয়টি বিজ্ঞান বিভাগের শিক্ষার্থীদের জন্য বিশেষ সুবিধাজনক।
+
+:::.row
+:::.col-12 .col-md-8
+* একাদশ–দ্বাদশ শ্রেণির আইসিটি পাঠ্যবই
+* Guide Book ICT for MCQ Practise
+* QNA
+:::
+
+:::.col-12 .col-md-4
+![ict-book-cover](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/media/HSC-ICT-Book-Cover.png)
+
+[Download](https://drive.google.com/file/d/1u8XBDqaTmWk64_Zw_Xye9mcu_V0u4csv/view)
+:::
+:::
+</md></sn>
   <config>
     <tags>#resources</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Feb 09 2026 10:34:15 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Feb 09 2026 11:18:27 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-LQs48XTD4Z</id>
     <duration></duration>
   </config>
