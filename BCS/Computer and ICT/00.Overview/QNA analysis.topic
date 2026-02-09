@@ -1,10 +1,44 @@
 
-  <sn></sn>
+  <sn><md>### Computer
+
+| Topic | Frequency |
+|----------|----------|
+| Computer Architecture | 25  |
+| Number System,logic gate,boolean algebra | 12 |
+| Computer Peripherals | 11 |
+| Computer Programme | 11 |
+| Database Design | 10 |
+| Operating System | 7 |
+| Computer in Practical Field | 1 |
+| Embedded Computer | 1 |
+| History of Computer | 0 |
+| Computer Performance | 0 |
+| Types of Computer | 0 |
+</md></sn>
   <config>
     <tags>#qna analysis</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Feb 09 2026 10:09:53 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Feb 09 2026 10:25:03 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-d9IXcdO3ug</id>
     <duration></duration>
   </config>
+<sn><md>### Information Technology
+
+| Topic | Frequency |
+|----------|----------|
+| Computer Network | 27 |
+| Cellular Network | 5 |
+| Cloud Computing | 6 |
+| Tech Giant | 4 |
+| World Wide Web | 5 |
+| Daily Use Technology | 4 |
+| Social Networking | 3 |
+| Mobile Features | 1 |
+| E-commerce | 1 |
+| Internet | 1  |
+| Robotics | 1 |
+| Cyber Crime | 0 |
+| Client Server Management | 0 |
+| SmartPhones | 0 |
+| It in Practical Field | 0 |</md></sn>
