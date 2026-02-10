@@ -1,10 +1,46 @@
 
-  <sn></sn>
+  <sn><md>### General Science
+
+:::.row
+:::.col-12 .col-md-6
+**SSC** <br>
+- Biology
+- Physics
+- Chemistry
+:::
+
+:::.col-12 .col-md-6
+And Some Basics from **HSC** <br>
+- Biology
+- Physics
+- Chemistry
+:::
+:::
+</md></sn>
   <config>
     <tags>#resources</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Feb 09 2026 11:20:45 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Feb 10 2026 08:15:44 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TnmryF1zlK</id>
     <duration></duration>
   </config>
+<sn><md>#### Books
+
+:::.row
+:::.col-12 .col-md-4
+
+[![ssc-physics](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/media/ssc-physics-book-cover.png)](https://drive.usercontent.google.com/download?id=13P5E08HcNbpALj8-aC-RUCy0d3iwodet&amp;export=download&amp;authuser=0&amp;confirm=t&amp;uuid=bbbd56ce-f1a2-45ca-9f4b-c53925ecf924&amp;at=APcXIO07KoSYLH2kQ9NXXaQTPups%3A1770688978475)
+:::
+
+:::.col-12 .col-md-4
+
+[![ssc-chemistry](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/media/ssc-chemistry-book-cover.png)](https://drive.usercontent.google.com/download?id=1lbgge3uWpQmuHOBvlxJ4AuPP2Na1RYQ8&amp;export=download&amp;authuser=0)
+:::
+
+:::.col-12 .col-md-4
+
+[![ssc-biology](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/media/ssc-biology-book-cover.png)
+](https://drive.usercontent.google.com/download?id=11WRMSWpqi4KtgxClDCBXely2XdiAhoju&amp;export=download&amp;authuser=0&amp;confirm=t&amp;uuid=8f33f5f2-2dc2-4f36-8011-b55246022332&amp;at=APcXIO26YOORpFgi3AMovIzcFXjf%3A1770689028870)
+:::
+:::</md></sn>
