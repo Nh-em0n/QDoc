@@ -1,10 +1,36 @@
 
-  <sn></sn>
+  <sn><md>### How Indentation Is Parsed
+
+- Whitespace in Python is `handled before parsing`, during the **lexical analysis** phase. 
+- Indentation is converted into `special tokens` so that the parser can understand code blocks without directly dealing with whitespace.
+</md></sn>
   <config>
     <tags>#02.how indentation is parsed</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Feb 10 2026 18:16:39 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Feb 11 2026 06:14:22 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-dZbmgG5MhP</id>
     <duration></duration>
   </config>
+<sn><md>### Lexical Analyzer and Whitespace
+
+* Whitespace is processed by the `lexical analyzer`, not the parser.
+* The analyzer converts `source code` into a `stream of tokens`.
+* Indentation handling is fully completed at this stage.
+</md></sn><sn><md>### Indentation Stack
+
+* The lexical analyzer uses a **stack** to store indentation levels.
+* At the start, the stack contains only:
+
+  ```
+  [0]
+  ```
+  which represents the leftmost position.
+</md></sn><sn><md>### INDENT Token Generation
+
+* When a new nested block begins, the indentation level increases.
+* The new indentation level is pushed onto the stack.
+* An `INDENT` token is inserted into the token stream.
+* There can **never** be more than one `INDENT` token in a row.
+  Otherwise, an `IndentationError` occurs.
+</md></sn>
