@@ -1,10 +1,121 @@
 
-  <sn></sn>
+  <sn><md>### Sentence
+
+A **sentence** is a complete group of words arranged in a structure that expresses a full thought.
+It must contain:
+
+* A **subject**
+* A **predicate (verb)**
+* A **complete idea**
+
+**Examples** :
+
+1. She is reading a book.
+2. The sun rises in the east.
+3. They are playing football.
+
+A sentence begins with a capital letter and ends with a full stop (.), question mark (?), or exclamation mark (!).
+</md></sn>
   <config>
     <tags>#01.clause</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Feb 18 2026 19:44:24 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Feb 18 2026 22:59:56 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ttLmM55rUf</id>
     <duration></duration>
   </config>
+<sn><md>### Types of Sentences
+
+* **Declarative** – She likes tea.
+* **Interrogative** – Do you like tea?
+* **Imperative** – Close the door.
+* **Exclamatory** – What a beautiful day!</md></sn><sn><md>### Clause
+
+A **clause** is a group of words that contains a subject and a verb.<br>
+It may or may not express a complete thought.
+
+There are two main types:
+
+:::.row
+:::.col-12 .col-md-6
+#### Independent Clause{.text-center}
+
+* Expresses a complete thought.
+* Can stand alone as a sentence.
+
+**Examples:**
+
+1. I went home.
+2. She completed her work.
+:::
+
+:::.col-12 .col-md-6
+#### Dependent (Subordinate) Clause
+
+* Does not express a complete thought.
+* Cannot stand alone.
+* Usually begins with subordinating words like *because, although, if, when, that, which* etc.
+
+**Examples:**
+
+1. Because I was tired
+2. When the rain stopped
+3. If you study hard
+
++++ Example in a sentence:
+
+* I went home **because I was tired**.
+
+  * "I went home" → Independent clause
+  * "because I was tired" → Dependent clause
++++  
+:::
+:::
+</md></sn><sn><md>### Relation
+
+In grammar, **relation** refers to the connection between clauses or ideas within a sentence. It shows how one part of a sentence is connected to another.
+
+Relations are often shown using:
+
+* **Conjunctions** (and, but, because, although)
+* **Relative pronouns** (who, which, that)
+* **Adverbs** (therefore, however)
+</md></sn><sn><md>### Coordinating Relation
+
+Connects equal ideas using coordinating conjunctions (and, but, or, so, yet).
+
+Example:
+
+* She studied hard, **and** she passed the exam.
+</md></sn><sn><md>### Subordinating Relation
+
+Connects a dependent clause to an independent clause.
+
+Example:
+
+* She passed the exam **because** she studied hard.
+</md></sn><sn><md>### Relative Relation
+
+Uses relative pronouns to give more information about a noun.
+
+Example:
+
+* The boy **who won the prize** is my friend.
+</md></sn><sn><md>### Simple Comparison Example
+
+&gt; Sentence: <br> She was late because she missed the bus.
+
+Breakdown:
+
+* Whole sentence → Complete idea
+* "She was late" → Independent clause
+* "because she missed the bus" → Dependent clause
+* "because" → Shows the relation (cause)
+</md></sn><sn><md>### Conclusion
+
+* A **sentence** expresses a complete thought.
+* A **clause** is a part of a sentence containing a subject and verb.
+* A **relation** shows how clauses or ideas are connected.
+
+Understanding these three concepts helps in writing clear, complex, and grammatically correct sentences.
+</md></sn>
