@@ -1,10 +1,44 @@
 
-  <sn></sn>
+  <sn><md>### Programmatically Accessing Docstrings
+
+In Python, **docstrings** (documentation strings) are different from regular comments. Unlike normal comments, docstrings are stored as an **attribute of the function, class, or module** they document. This means you can **access them programmatically** to retrieve information about the code.
+</md></sn>
   <config>
     <tags>#02.docstring</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Feb 19 2026 11:50:22 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Feb 19 2026 13:04:52 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-eDh8X8uRjh</id>
     <duration></duration>
   </config>
+<sn><md>### Basic Function Docstring
+
+```python
+def func():
+    """This is a function that does nothing at all"""
+    return
+
+# Accessing the docstring
+print(func.__doc__)
+```
+
+**Output:**
+
+```
+This is a function that does nothing at all
+```
+
+You can also use the built-in `help()` function to display the docstring along with general information about the function:
+
+```python
+help(func)
+```
+
+**Output:**
+
+```
+Help on function func in module __main__:
+
+func()
+    This is a function that does nothing at all
+```</md></sn>
