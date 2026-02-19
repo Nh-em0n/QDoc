@@ -1,10 +1,35 @@
 
-  <sn></sn>
+  <sn><md>### Single-Line Comments
+
+Comments are used to explain code when the code itself isn’t clear. Python ignores comments, so they will `not be executed` or cause syntax errors even if they contain plain English sentences.
+
+Single-line comments begin with the hash character (`#`) and continue to the end of the line.
+
+```python
+# This is a single line comment in Python
+```</md></sn>
   <config>
     <tags>#01.comments</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Feb 19 2026 10:47:33 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Feb 19 2026 11:29:18 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-eZj6JYuKeV</id>
     <duration></duration>
   </config>
+<sn><md>### Inline Comments
+
+Inline comments are placed on the same line as a statement to explain it.
+
+```python
+print("Hello World")  # This line prints "Hello World"
+```</md></sn><sn><md>### Multiline Comments
+
+Comments spanning multiple lines use triple quotes (`"""` or `'''`) at the beginning and end. They are similar to multiline strings but are used for commenting purposes.
+
+```python
+"""
+This type of comment spans multiple lines.
+These are mostly used for documentation of functions, classes, and modules.
+"""
+```
+</md></sn>
