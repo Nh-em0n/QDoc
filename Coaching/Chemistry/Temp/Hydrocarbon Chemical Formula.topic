@@ -1,10 +1,99 @@
 
-  <sn></sn>
+  <sn><md>### Alkane
+
+| ক্রম | নাম (বাংলা) | ইংরেজি নাম | আণবিক সংকেত | সংকুচিত গঠন সংকেত |
+| ---- | ----------- | ---------- | ----------- | ----------------- |
+| 1    | মিথেন       | Methane    | CH₄         | CH₄               |
+| 2    | ইথেন        | Ethane     | C₂H₆        | CH₃–CH₃           |
+| 3    | প্রোপেন     | Propane    | C₃H₈        | CH₃–CH₂–CH₃       |
+| 4    | বিউটেন      | Butane     | C₄H₁₀       | CH₃–CH₂–CH₂–CH₃   |
+| 5    | পেন্টেন     | Pentane    | C₅H₁₂       | CH₃–(CH₂)₃–CH₃    |
+| 6    | হেক্সেন     | Hexane     | C₆H₁₄       | CH₃–(CH₂)₄–CH₃    |
+| 7    | হেপ্টেন     | Heptane    | C₇H₁₆       | CH₃–(CH₂)₅–CH₃    |
+| 8    | অক্টেন      | Octane     | C₈H₁₈       | CH₃–(CH₂)₆–CH₃    |
+| 9    | নোনেন       | Nonane     | C₉H₂₀       | CH₃–(CH₂)₇–CH₃    |
+| 10   | ডেকেন       | Decane     | C₁₀H₂₂      | CH₃–(CH₂)₈–CH₃    |
+
+
+### ইথিন থেকে ডেকিন (Alkene Series)
+
+| নাম (বাংলা) | সংকুচিত গঠন সংকেত |
+| ----------- | ----------------- |
+| ইথিন        | CH₂=CH₂           |
+| প্রোপিন     | CH₂=CH–CH₃        |
+| বিউটিন      | CH₂=CH–CH₂–CH₃    |
+| পেন্টিন     | CH₂=CH–(CH₂)₂–CH₃ |
+| হেক্সিন     | CH₂=CH–(CH₂)₃–CH₃ |
+| হেপ্টিন     | CH₂=CH–(CH₂)₄–CH₃ |
+| অক্টিন      | CH₂=CH–(CH₂)₅–CH₃ |
+| নোনিন       | CH₂=CH–(CH₂)₆–CH₃ |
+| ডেকিন       | CH₂=CH–(CH₂)₇–CH₃ |
+
+
+### ইথাইন থেকে ডেকাইন (Alkyne Series)
+
+| নাম (বাংলা) | সংকুচিত গঠন সংকেত |
+| ----------- | ----------------- |
+| ইথাইন       | HC≡CH             |
+| প্রোপাইন    | HC≡C–CH₃          |
+| বিউটাইন     | HC≡C–CH₂–CH₃      |
+| পেন্টাইন    | HC≡C–(CH₂)₂–CH₃   |
+| হেক্সাইন    | HC≡C–(CH₂)₃–CH₃   |
+| হেপ্টাইন    | HC≡C–(CH₂)₄–CH₃   |
+| অক্টাইন     | HC≡C–(CH₂)₅–CH₃   |
+| নোনাইন      | HC≡C–(CH₂)₆–CH₃   |
+| ডেকাইন      | HC≡C–(CH₂)₇–CH₃   |
+
+
+### ইথানল থেকে ডেকানল (Alcohol Series)
+
+| নাম (বাংলা) | সংকুচিত গঠন সংকেত |
+| ----------- | ----------------- |
+| ইথানল       | CH₃–CH₂–OH        |
+| প্রোপানল    | CH₃–CH₂–CH₂–OH    |
+| বিউটানল     | CH₃–(CH₂)₂–CH₂–OH |
+| পেন্টানল    | CH₃–(CH₂)₃–CH₂–OH |
+| হেক্সানল    | CH₃–(CH₂)₄–CH₂–OH |
+| হেপ্টানল    | CH₃–(CH₂)₅–CH₂–OH |
+| অক্টানল     | CH₃–(CH₂)₆–CH₂–OH |
+| নোনানল      | CH₃–(CH₂)₇–CH₂–OH |
+| ডেকানল      | CH₃–(CH₂)₈–CH₂–OH |
+
+### ইথানাল থেকে ডেকানাল (Aldehyde Series)
+
+| নাম (বাংলা) | সংকুচিত গঠন সংকেত |
+| ----------- | ----------------- |
+| ইথানাল      | CH₃–CHO           |
+| প্রোপানাল   | CH₃–CH₂–CHO       |
+| বিউটানাল    | CH₃–(CH₂)₂–CHO    |
+| পেন্টানাল   | CH₃–(CH₂)₃–CHO    |
+| হেক্সানাল   | CH₃–(CH₂)₄–CHO    |
+| হেপ্টানাল   | CH₃–(CH₂)₅–CHO    |
+| অক্টানাল    | CH₃–(CH₂)₆–CHO    |
+| নোনানাল     | CH₃–(CH₂)₇–CHO    |
+| ডেকানাল     | CH₃–(CH₂)₈–CHO    |
+
+
+### ইথাইনিক অ্যাসিড থেকে ডেকাইনিক অ্যাসিড (Alkynoic Acid Series)
+
+| নাম (বাংলা)        | সংকুচিত গঠন সংকেত |
+| ------------------ | ----------------- |
+| ইথাইনিক অ্যাসিড    | HC≡C–COOH         |
+| প্রোপাইনিক অ্যাসিড | HC≡C–CH₂–COOH     |
+| বিউটাইনিক অ্যাসিড  | HC≡C–(CH₂)₂–COOH  |
+| পেন্টাইনিক অ্যাসিড | HC≡C–(CH₂)৩–COOH  |
+| হেক্সাইনিক অ্যাসিড | HC≡C–(CH₂)৪–COOH  |
+| হেপ্টাইনিক অ্যাসিড | HC≡C–(CH₂)৫–COOH  |
+| অক্টাইনিক অ্যাসিড  | HC≡C–(CH₂)৬–COOH  |
+| নোনাইনিক অ্যাসিড   | HC≡C–(CH₂)৭–COOH  |
+| ডেকাইনিক অ্যাসিড   | HC≡C–(CH₂)৮–COOH  |
+
+</md></sn>
   <config>
     <tags>#hydrocarbon chemical formula</tags>
     <thumbnail></thumbnail>
-    <heading></heading>
-    <udate>Thu Feb 19 2026 08:22:01 GMT+0600 (Bangladesh Standard Time)</udate>
+    <heading>Rahmatullah Private</heading>
+    <udate>Thu Feb 19 2026 08:23:20 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-4kcH8xwVjL</id>
-    <duration></duration>
+    <duration>4</duration>
   </config>
