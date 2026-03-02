@@ -1,10 +1,76 @@
 
-  <sn></sn>
+  <sn><md>### Basic `datetime` Objects Usage
+
+The `datetime` module contains three primary types of objects:
+
+* `date`
+* `time`
+* `datetime`
+</md></sn>
   <config>
     <tags>#04.basic datetime object usage</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Mar 02 2026 09:20:33 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Mar 02 2026 09:36:48 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-FTFC4amEJp</id>
     <duration></duration>
   </config>
+<sn><md>### Creating Date, Time, and Datetime Objects
+
+```python
+import datetime
+
+# Date object
+today = datetime.date.today()
+new_year = datetime.date(2017, 1, 1)  
+# datetime.date(2017, 1, 1)
+
+# Time object
+noon = datetime.time(12, 0, 0)  
+# datetime.time(12, 0)
+
+# Current datetime
+now = datetime.datetime.now()
+
+# Datetime object
+millenium_turn = datetime.datetime(2000, 1, 1, 0, 0, 0)  
+# datetime.datetime(2000, 1, 1, 0, 0)
+```</md></sn><sn><md>### Arithmetic Rules
+
+Arithmetic operations are supported **only within the same datatype**.
+Performing operations between different types raises a `TypeError`.
+
+```python
+# Subtraction of noon from today
+noon - today
+```
+
+Output:
+
+```python
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for -: 'datetime.time' and 'datetime.date'
+```
+</module></stdin></md></sn><sn><md>### Converting Between Types
+
+You can convert types before performing arithmetic.
+
+#### Time since the millennium at midnight
+
+```python
+print(
+    "Time since the millennium at midnight:",
+    datetime.datetime(today.year, today.month, today.day) - millenium_turn
+)
+```
+
+#### Time since the millennium at noon
+
+```python
+print(
+    "Time since the millennium at noon:",
+    datetime.datetime.combine(today, noon) - millenium_turn
+)
+```
+</md></sn>
