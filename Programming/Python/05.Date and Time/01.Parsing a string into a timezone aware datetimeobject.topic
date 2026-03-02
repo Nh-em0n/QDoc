@@ -1,10 +1,55 @@
 
-  <sn></sn>
+  <sn><md>### Parsing a String into a Timezone-Aware `datetime` Object
+
+**Python 3.2+ (Built-in Support for `%z`)** {.text-end}
+
+Python 3.2 and later versions support the `%z` format specifier in `strptime()`.
+
+`%z` → UTC offset in the form `+HHMM` or `-HHMM`
+(Empty string if the object is naive)
+
+```python
+import datetime
+
+dt = datetime.datetime.strptime(
+    "2016-04-15T08:27:18-0500",
+    "%Y-%m-%dT%H:%M:%S%z"
+)
+
+print(dt)
+```
+
+Output:
+
+```python
+datetime.datetime(2016, 4, 15, 8, 27, 18, tzinfo=datetime.timezone(datetime.timedelta(days=-1, seconds=68400)))
+```
+</md></sn>
   <config>
     <tags>#01.parsing a string into a timezone aware datetimeobject</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Mar 02 2026 08:30:04 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Mar 02 2026 08:51:00 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-U5Fi21k6BF</id>
     <duration></duration>
   </config>
+<sn><md>### For Other Python Versions (Using `dateutil`)
+
+For older versions of Python that do not support `%z`, you can use the external library `dateutil`.
+
+```python
+import dateutil.parser
+
+dt = dateutil.parser.parse("2016-04-15T08:27:18-0500")
+
+print(dt)
+```
+
+Output:
+
+```python
+datetime.datetime(2016, 4, 15, 8, 27, 18, tzinfo=tzoffset(None, -18000))
+```
+
+The `dt` variable is now a timezone-aware `datetime` object.
+</md></sn>
