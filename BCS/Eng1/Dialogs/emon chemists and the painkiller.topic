@@ -1,10 +1,51 @@
 
-  <sn></sn>
+  <sn><md>### Dialogue: Emon and the Chemists {.text-center}
+
+**Scene:** Emon enters a pharmacy looking for a painkiller.
+
+---
+
+**Day 1 – First Chemist**
+
+- **Emon:** Hello, can I get a painkiller? I’ve been having a headache.
+
+- **Chemist:** Sure. We have **Rolack**, but I think this one might be too strong. Let me give you something gentler.
+
+- **Emon:** Okay… what is it?
+
+- **Chemist:** This is **Vitonex**. It should help you feel better.
+
+- **Emon:** Oh… but I asked for Rolack.
+
+- **Chemist:** Trust me, this will work. It’s effective for mild headaches.
+
+- **Emon:** Alright, I’ll try it.
+
+*(Emon buys Vitonex and leaves.)*
+</md></sn>
   <config>
     <tags>#emon chemists and the painkiller</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Mar 02 2026 17:31:47 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Mar 02 2026 17:34:48 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-wi6qyYOEX5</id>
     <duration></duration>
   </config>
+<sn><md>**Day 2 – Same Pharmacy, Another Chemist (Chemist1)**
+
+---
+
+- **Emon:** Hi, I was here yesterday for Rolack, but I got this medicine instead. Can I exchange it for Rolack?
+
+- **Chemist1:** Oh, I’m **Chemist1**. Let me check… So you want **Rolack**, the painkiller?
+
+- **Emon:** Yes, please. I really needed a proper painkiller.
+
+- **Chemist1:** No problem. Here’s the Rolack. Just take one tablet after food.
+
+- **Emon:** Thank you!
+
+- **Chemist1:** You’re welcome. And next time, mention the exact brand you want, so there’s no mix-up.
+
+- **Emon:** Will do. Thanks again!
+</md></sn>
