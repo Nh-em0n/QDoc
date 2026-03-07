@@ -10,7 +10,7 @@ No preposition after `Enter`
     <tags>#02.words with no preposition</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Mar 07 2026 10:49:44 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Mar 07 2026 11:10:34 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ZuTIRJSnZ9</id>
     <duration></duration>
   </config>
@@ -91,7 +91,7 @@ No preposition after `comprise`
 - He could not `cope up with` the temperature. ❌
 - He could not `cope with` the temperature. ✅
 - I will `cope with` the new employees if the .... ✅
-</md></sn><sn><md>### Order for = ask for
+</md></sn><sn><md>### Order [for]{.text-decoration-line-through} = ask for
 
 No preposition after order
 
@@ -130,7 +130,7 @@ No preposition after order
 </md></sn><sn><md>### In-transitive Verb
 
 &gt; B = propose / report / say / suggest + **to** + somebody
-&gt; A is transitive verb <br>
+&gt; B is in-transitive verb <br>
 &gt; B **to** somebody
 
 - She `suggested` me a great idea. ❌
