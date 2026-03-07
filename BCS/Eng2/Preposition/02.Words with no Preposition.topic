@@ -10,7 +10,7 @@ No preposition after `Enter`
     <tags>#02.words with no preposition</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Mar 07 2026 11:10:34 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Mar 07 2026 11:15:13 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ZuTIRJSnZ9</id>
     <duration></duration>
   </config>
@@ -86,7 +86,8 @@ No preposition after `comprise`
 
 - The orienter `emphasized on` the value of discipline in our lives ?  ❌
 - The orienter `emphasized` the value of discipline in our lives ?   ✅
-</md></sn><sn><md>### Cope [up]{.text-decoration-line-through} with
+
+#### Emphasis on  ✅</md></sn><sn><md>### Cope [up]{.text-decoration-line-through} with
 
 - He could not `cope up with` the temperature. ❌
 - He could not `cope with` the temperature. ✅
