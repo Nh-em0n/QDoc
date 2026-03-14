@@ -1,10 +1,64 @@
 
-  <sn></sn>
+  <sn><md>### Store GitHub Token Locally in Git
+
+Since **GitHub** no longer allows passwords for Git operations, you use a **Personal Access Token (PAT)**. You can store it locally so Git does not ask every time.
+</md></sn>
   <config>
     <tags>#02.store github token locally</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Mar 15 2026 05:37:39 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Mar 15 2026 05:43:09 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-APAJjQWXH6</id>
     <duration></duration>
   </config>
+<sn><md>### Store token permanently (simplest)
+
+Run:
+
+```bash
+git config --global credential.helper store
+```
+
+Now push once:
+
+```bash
+git push
+```
+
+Git will ask:
+
+```
+Username: Nh-em0n
+Password: <paste your="" token="">
+```
+
+Git will save it in a file:
+
+```
+~/.git-credentials
+```
+
+Example content:
+
+```
+https://Nh-em0n:ghp_xxxxxxxxxxxxx@github.com
+```
+
+After this, Git will **not ask again**.</paste></md></sn><sn><md>### Store token temporarily (more secure)
+
+Use the cache helper:
+
+```bash
+git config --global credential.helper cache
+```
+
+Default cache time: **15 minutes**.
+
+You can increase it:
+
+```bash
+git config --global credential.helper 'cache --timeout=36000'
+```
+
+(10 hours)
+</md></sn>
