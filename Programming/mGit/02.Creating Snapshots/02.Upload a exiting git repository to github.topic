@@ -1,10 +1,181 @@
 
-  <sn></sn>
+  <sn><md>You already have the project locally, so you just need to **connect your local Git repository to a GitHub repository and push it**. Since you are using **Linux Mint**, these commands will work directly in your terminal.
+</md></sn>
   <config>
     <tags>#02.upload a exiting git repository to github</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Mar 15 2026 05:05:12 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Mar 15 2026 05:37:03 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-wgVqDfIbZy</id>
     <duration></duration>
   </config>
+<sn><md>### 1. Create a repository on GitHub
+
+1. Go to **GitHub** → [https://github.com](https://github.com)
+2. Click **New repository**
+3. Enter:
+
+   * Repository name
+   * Description (optional)
+4. **Do NOT check**:
+
+   * Add README
+   * Add .gitignore
+5. Click **Create repository**
+
+GitHub will show commands like `git remote add origin`.
+</md></sn><sn><md>### 2. Go to your project folder
+
+Open terminal and navigate to your project.
+
+```bash
+cd /path/to/your/project
+```
+
+Example:
+
+```bash
+cd ~/projects/my-app
+```
+</md></sn><sn><md>### 3. Initialize git (only if not already initialized)
+
+Check first:
+
+```bash
+git status
+```
+
+If it says **not a git repository**, run:
+
+```bash
+git init
+```
+</md></sn><sn><md>### 4. Add all project files
+
+```bash
+git add .
+```
+</md></sn><sn><md>### 5. Commit the files
+
+```bash
+git commit -m "Initial commit"
+```
+</md></sn><sn><md>### 6. Connect your GitHub repository
+
+Copy the repository URL from GitHub and run:
+
+```bash
+git remote add origin https://github.com/USERNAME/REPOSITORY.git
+```
+
+Example:
+
+```bash
+git remote add origin https://github.com/emon123/my-project.git
+```
+</md></sn><sn><md>### 7. Push the project to GitHub
+
+```bash
+git branch -M main
+git push -u origin main
+```
+
+GitHub will ask for **username + personal access token (not password)**.
+
+
++++  [authentication Error]{.text-danger}
+
+```
+Username for 'https://github.com': Nh-em0n
+Password for 'https://Nh-em0n@github.com': 
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/Nh-em0n/QDoc-Dev.git/'
+```
+
+This happens because **GitHub removed password authentication** for Git operations.
+You must use a **Personal Access Token (PAT)** instead of your password.
+
+---
+
+**1. Create a GitHub Personal Access Token**
+
+1. Open:
+   [https://github.com/settings/tokens](https://github.com/settings/tokens)
+
+2. Click **Generate new token → Generate new token (classic)**
+
+3. Fill:
+
+* Note → `git-access`
+* Expiration → choose (90 days or No expiration)
+* Scopes → check:
+
+```
+repo
+```
+
+4. Click **Generate token**
+
+GitHub will show something like:
+
+```
+ghp_xxxxxxxxxxxxxxxxxxxxx
+```
+
+⚠️ **Copy it immediately** (you cannot see it again).
+
+---
+
+**Push again**
+
+Run:
+
+```bash
+git push -u origin main
+```
+
+Now enter:
+
+```
+Username: Nh-em0n
+Password: <paste your="" token="" here="">
+```
+
+⚠️ **Paste the token instead of your GitHub password.**
+
+---
+
+**Optional (avoid entering token every time)**
+
+Run:
+
+```bash
+git config --global credential.helper store
+```
+
+Then push once again:
+
+```bash
+git push
+```
+
+Git will save the token locally.
+
+---
+
+✅ After this, your project will appear at:
+
+```
+https://github.com/Nh-em0n/QDoc-Dev
+```
++++
+</paste></md></sn><sn><md>### 8. After that (future updates)
+
+Whenever you change your project:
+
+```bash
+git add .
+git commit -m "update"
+git push
+```
+</md></sn>
