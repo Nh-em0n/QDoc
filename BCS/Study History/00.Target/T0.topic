@@ -1,10 +1,31 @@
 
-  <sn></sn>
+  <sn><md>### T0 {.text-center}
+
+- Target datetime : 29 March to 2 April
+- Target Group : A,C,++B++
+
+**Group A**
+- Math : `Profits`
+- General Science : `Food and Nutritions`
+
+---
+
+**Group C**
+- Bangladesh-Affairs : `The Organs of Bangladesh Government and Administrative Systems`
+- International-Affairs : `World Geography(south America)`
+
+---
+
+**Group B(revise)**
+- Eng2 : `Preposition Note and Revise`
+- Bangla2 : `Online Guideline`
+
+</md></sn>
   <config>
     <tags>#t0</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Mar 29 2026 10:57:33 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Mar 29 2026 11:25:01 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Kcl0q668DY</id>
     <duration></duration>
   </config>
