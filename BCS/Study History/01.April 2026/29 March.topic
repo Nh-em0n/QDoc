@@ -1,10 +1,82 @@
 
-  <sn></sn>
+  <sn><md>### NCTB Book Chapter
+
+:::.row
+
+:::.col-12 .col-md-6
+**JSC** {.text-center}
+- Patterns
+- Profits
+- Measurement
+- Algebric formulae and Application
+- Algebric Fractions
+- Simple Simultaneous Equations
+- Set
+- Quadrilateral
+- Pythagoras Theorem
+- Circle
+- Information and Data
+:::
+
+:::.col-12 .col-md-6
+**SSC General Math** {.text-center}
+- Real Numbers
+- Sets and Functions
+- Algebric Expressions
+- Exponents and Logarithims
+- Equations in One variable
+- Lines,Angles and Triangles
+- Practical Geometry
+- Circle
+- Trigonometric Ratio
+- Distance and Elevation
+- Algebric Ratio and Proportion
+- Simple Simultaneous Equations in Two variable
+- Finite Series
+- Ratio,Similarity and Symmetry
+- Area Related Theorems and Construction
+- Mensuration
+- Statistics
+:::
+
+:::.col-12 .col-md-6
+**SSC Higher Math** {.text-center}
+- Set and Function
+- Algebric Expression
+- Geometry
+- Geometric Constructions
+- Equation
+- Inequality
+- Infinte Series
+- Trigonometry
+- Exponential and Logarithmic Function
+- Binomial Expansion
+- Coordinate Geometry
+- Planar Vector
+- Solid Geometry
+- Probability
+:::
+
+:::.col-12 .col-md-6
+**HSC** {.text-center}
+- Matrix
+- Vector
+- Straight Line
+- Circle
+- Binnash and Somabesh
+- Trigonometic Ratios
+- Songjukto koner Trigonometric Ratio
+- Function o Functioner Lekhchitro
+- Differentiation
+- Integration
+:::
+:::
+</md></sn>
   <config>
     <tags>#29 march</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Mar 29 2026 07:36:59 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Mar 29 2026 09:00:09 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ibFtwqbMlu</id>
     <duration></duration>
   </config>
