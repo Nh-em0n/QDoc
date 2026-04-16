@@ -1,10 +1,77 @@
 
-  <sn></sn>
+  <sn><md>## **Title: Determination of clay mineral type using CEC method**
+
+### **Definition:**
+Cation exchange capacity is the amount of exchangeable cations present in soil, which are held on the surface of soil particles at pH 7.
+
+These cations include:
+$Ca^{2+}$, $Mg^{2+}$, $Na^{+}$, $K^{+}$, $H^{+}$, $Al^{3+}$
+
+So $CEC = Ca^{2+} + Mg^{2+} + Na^{+} + K^{+} + H^{+} + Al^{3+}$
+
+---
+
+### **Principle:**
+The cation exchange capacity is usually measured by leaching the soil with an excess of $1N$ ammonium acetate solution at a neutral pH value and then washing out the excess salts with an alcohol. The amount of cations ($NH_4^+$) retained by soil after washing is the measure of CEC in soil.
+
+---
+
+### **Apparatus:**
+1. 250 mL conical flask
+2. Funnel, filter paper (Whatman no. 42)
+3. 250 mL volumetric flask
+4. Distillation apparatus and other requirements which are used in alkali distillation on nitrogen determination.
+
+---
+
+### **Reagents:**
+1. **Ammonium Acetate ($NH_4OAc$):**
+2. **95% Ethyl alcohol**
+3. **$1N$ Sodium chloride:** (Dissolve $58.5g$ NaCl in $1L$ volumetric flask and adjust pH to pH 7 with NaOH).
+
+---
+
+### **Procedure:**
+1. At first we collected soil from the central field.
+2. Then we measured $10g$ of soil using weighing balance.
+3. Transfer $10g$ of soil in $250 \text{ mL}$ conical flask.
+4. Then prepare $1N$ $NH_4OAc$ solution by mixing $57 \text{ mL}$ acetic acid and $69 \text{ mL}$ ammonium hydroxide in about $900 \text{ mL}$ water to get neutral pH and add more water to get the volume of 1 liter. 
+5. Add $100 \text{ mL}$ $1N$ $NH_4OAc$ solution in the conical flask.
+6. Shake the mixture and leave it to stand overnight.
+7. Filter the mixture through filter paper and transfer the filtrate in $250 \text{ mL}$ volumetric flask.
+8. Wash the residue on the filter paper 5 times using ethyl alcohol. Take $10 \text{ mL}$ each time and discard the filtrate.
+9. Then wash the soil residue on the filter paper with neutral $1N$ NaCl solution 4 times. Collect the filtrate (solution) in $250 \text{ mL}$ volumetric flask and make the final volume up to the mark with NaCl solution.
+10. **Alkali distillation:** Take $10 \text{ mL}$ of solution, add $10 \text{ mL}$ NaOH and add $100 \text{ mL}$ distilled water and put it in the distillation machine.
+11. Collect $60 \text{ mL}$ of distillate in a conical flask and $10 \text{ mL}$ boric acid is added to it.
+12. Take standard $H_2SO_4$ solution in a burette and titrate the distillate (add it to the conical flask) until the blue colour of the solution is changed to orange colour and indicate the end point.
+13. Run a blank experiment simultaneously using all the chemicals except soil.
+
+---
+
+### **Data Table:**
+
+| No. | IBR | FBR | Diff | Mean |
+| :--- | :--- | :--- | :--- | :--- |
+| **Soil Sample 01** | 0 | 3.1 | 3.1 | 3.1 |
+| **Soil Sample 02** | 3.1 | 6.2 | 3.1 | |
+| **Blank 01** | 0 | 0.14 | 0.14 | 0.14 |
+| **Blank 02** | 0.14 | 0.28 | 0.14 | |
+
+---
+
+### **Calculation:**
+
+$$\%N \text{ in soil} = \frac{14 \times 0.018 \times 250 \times 100}{1000 \times 10 \times 10} \times (T-B)$$
+
+$$= 0.063 \times (3.1 - 0.14)$$
+$$= 0.1865$$
+
+$$\therefore \text{CEC in soil} = \frac{0.1865 \times 1000}{14} = 13.32$$</md></sn>
   <config>
     <tags>#temp</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Apr 16 2026 07:19:06 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Apr 16 2026 07:19:47 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-tXzTJx5XeD</id>
     <duration></duration>
   </config>
