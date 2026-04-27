@@ -1,10 +1,53 @@
 
-  <sn></sn>
+  <sn><md>### Mental Ability
+
+---
+
+### Problem Solving
+
+১. **প্রশ্ন:** ১ জন লোক ১টা কলা ১ মিনিটে খেতে পারে। তাহলে ৫ জন লোকের ৫টা কলা খেতে কত মিনিট সময় লাগবে?
+**উত্তর:** ১
+
+২. **প্রশ্ন:** একটা বাক্সে ৪টা লাল, ৩টা নীল, ২টা হলুদ ও ১টা সবুজ বল আছে। কমপক্ষে কয়টা বল উঠালে সেখানে অন্তত একটি লাল বল থাকবেই?
+**উত্তর:** ৭
+
+---
+
+### Numerical Ability
+
+১. **প্রশ্ন:** নিচের ধারার পরবর্তী সংখ্যা কোনটি: ১, √6, ৫, √49, ...?
+**উত্তর:** ১২
+
+---
+
+### Verbal Reasoning
+
+১. **প্রশ্ন:** যদি গতকাল শুক্রবার হতো, তাহলে আজ থেকে ৮তম দিন কি বার হবে?
+**উত্তর:** রবিবার
+
+---
+
+### Mechanical Reasoning
+
+১. **প্রশ্ন:** ৫ মিটার লম্বা একটি স্কেলের এক প্রান্তে ১০ কেজি ওজন বাঁধা হয়েছে। একই প্রান্ত থেকে স্কেলের দৈর্ঘ্যের ৩:২ অনুপাতে একটি পেরেক লাগানো আছে। অপর প্রান্তে কত কেজি ওজন দিলে স্কেলের ভারসাম্য থাকবে?
+**উত্তর:** ১৫
+
+---
+
+| Category              | Frequency |
+| --------------------- | --------- |
+| Problem Solving       | 2         |
+| Numerical Ability     | 1         |
+| Verbal Reasoning      | 1         |
+| Mechanical Reasoning  | 1         |
+| Spelling and Language | 0         |
+| Space Relation        | 0         |
+</md></sn>
   <config>
     <tags>#49</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Apr 27 2026 20:41:54 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Apr 27 2026 20:42:35 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-tQct3eunZS</id>
     <duration></duration>
   </config>
