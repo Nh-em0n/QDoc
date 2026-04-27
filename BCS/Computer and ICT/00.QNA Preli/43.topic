@@ -1,10 +1,100 @@
 
-  <sn></sn>
+  <sn><md>### Computer and ICT (BCS)
+
+---
+
+#### হার্ডওয়্যার ও ডিভাইস
+
+১। **RFID বলতে বোঝায়-**
+উত্তর: Radio Frequency Identification
+
+২। **কোন মাধ্যমে আলোর পাল্‌স ব্যবহৃত হয়?**
+উত্তর: অপটিক্যাল ফাইবার
+
+৫। **নিচের কোনটি output device নয়?**
+উত্তর: microphone
+
+১৪। **নিচের কোন মেমোরিতে Access Time সবচেয়ে কম?**
+উত্তর: Cache memory
+
+১৫। **Bluetooth-এর IEEE standard?**
+উত্তর: IEEE 802.15
+
+১৮। **নিচের কোন ডিভাইসটি ডিজিটাল সিগন্যালকে অ্যানালগ সিগন্যালে পরিবর্তনে ব্যবহৃত হয়?**
+উত্তর: Modem
+
+---
+
+#### সফটওয়্যার ও সিস্টেম
+
+৪। **নিচের কোনটি anti-virus সফটওয়্যার নয়?**
+উত্তর: Oracle
+
+৬। **নিচের কোনটি একটি প্রতিষ্ঠানের ওয়েব ঠিকানাকে নির্দেশ করে?**
+উত্তর: URL
+
+১০। **নিচের কোনটি Open Source DBMS?**
+উত্তর: MySQL
+
+১১। **নিচের Job Scheduling Policy সমূহের মধ্যে কোনটি Starvation থেকে মুক্ত?**
+উত্তর: Round-robin
+
+১৯। **নিচের কোনটি multi-tasking operating system নয়?**
+উত্তর: DOS
+
+---
+
+#### নেটওয়ার্ক ও যোগাযোগ
+
+৩। **কোন চিহ্নটি ই-মেইল ঠিকানায় অবশ্যই থাকবে?**
+উত্তর: @
+
+৮। **Keyboard এবং CPU-এর মধ্যে কোন পদ্ধতিতে data transmission হয়?**
+উত্তর: Simplex
+
+১৩। **যে সাইবার আক্রমণ সংঘটিত হলে গ্রাহকের বৈধ অনুরোধসমূহ কোন একটি web server সম্পন্ন করতে ব্যর্থ হয় সেটি কী নামে পরিচিত?**
+উত্তর: Denial of Service
+
+১৭। **DNS সার্ভারের কাজ হচ্ছে ______ কে ______ address-এ পরিবর্তন করা।**
+উত্তর: Domain name, IP
+
+---
+
+#### আধুনিক প্রযুক্তি
+
+৭। **নিচের কোন প্রযুক্তি ‘Pay as You Go’ সার্ভিস মডেল অনুসরণ করে?**
+উত্তর: Cloud Computing
+
+৯। **Block chain-এর প্রতিটি block কী তথ্য বহন করে?**
+উত্তর: A hash pointer to the previous block, Timestamp, List of transactions
+
+১২। **নিচের কোন প্রযুক্তি Face Recognition System-এর সহায়ক ভূমিকা পালন করে?**
+উত্তর: Applied Artificial Intelligence (AI)
+
+---
+
+#### সংখ্যা পদ্ধতি
+
+১৬। **১০১১১০ বাইনারি নাম্বারের সমতুল্য ডেসিমাল নাম্বার কোনটি?**
+উত্তর: ৪৬
+
+---
+
+### Frequency Table
+
+| Category             | Number of Questions |
+| -------------------- | ------------------- |
+| হার্ডওয়্যার ও ডিভাইস | 6                   |
+| সফটওয়্যার ও সিস্টেম  | 5                   |
+| নেটওয়ার্ক ও যোগাযোগ  | 4                   |
+| আধুনিক প্রযুক্তি     | 3                   |
+| সংখ্যা পদ্ধতি        | 1                   |
+</md></sn>
   <config>
     <tags>#43</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Apr 27 2026 13:09:34 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Apr 27 2026 13:09:45 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-enNskZlSUg</id>
     <duration></duration>
   </config>
