@@ -1,10 +1,98 @@
 
-  <sn></sn>
+  <sn><md>### Computer and ICT
+
+---
+
+### Digital Logic &amp; Boolean Algebra
+
+* **৪৬. যে ইলেকট্রনিক লজিক গেটের আউটপুট লজিক ০ শুধুমাত্র যখন সকল ইনপুট লজিক ১ তার নাম কী?**
+  উত্তর: NAND গেট
+
+* **৪৮. নিচের কোনটি ১০০ এর ২'স কমপ্লিমেন্ট (2's Complement)?**
+  উত্তর: ০১১
+
+* **৫১. নিচের কোনটি সঠিক নয়?**
+  উত্তর: (A+B)' = A' + B' (এটি সঠিক নয়, ডিমরগ্যান-এর সূত্র অনুযায়ী এটি হবে (A+B)' = A' . B')
+
+---
+
+### Networking &amp; Communication
+
+* **৪৭. নিচের কোনটির যোগাযোগের দূরত্ব সবচেয়ে কম?**
+  উত্তর: Bluetooth
+
+* **৪৯. RFID বলতে কী বোঝায়?**
+  উত্তর: Radio Frequency Identification
+
+* **৫৩. কোন নেটওয়ার্ক টপোলজিতে হাব (hub) ব্যবহার করা হয়?**
+  উত্তর: স্টার টপোলজি
+
+* **৫৯. ব্লুটুথ কত দূরত্ব পর্যন্ত কাজ করে?**
+  উত্তর: ১০-১০০ মিটার
+
+---
+
+### Computer Fundamentals / OS
+
+* **৫৪. একটি কম্পিউটার Boot করতে পারে না যদি তাতে কী না থাকে?**
+  উত্তর: Operating system
+
+* **৫৬. যে কম্পিউটার ভাষায় সবকিছু শুধুমাত্র বাইনারি কোডে লেখা হয় তাকে কী বলে?**
+  উত্তর: Machine language
+
+---
+
+### Software &amp; Programming
+
+* **৫০. Apache (অ্যাপাচি) এক ধরনের কী?**
+  উত্তর: Web Server
+
+* **৫৫. নিচের কোনটি Anti-virus সফটওয়্যার নয়?**
+  উত্তর: Oracle
+
+* **৫৭. API মানে কী?**
+  উত্তর: Application Programming Interface
+
+---
+
+### Web &amp; Internet Technologies
+
+* **৫৮. মাইক্রোসফট IIS হচ্ছে একটি কী?**
+  উত্তর: ওয়েব সার্ভার
+
+---
+
+### Cloud Computing
+
+* **৫২. ক্লাউড কম্পিউটিং-এর সার্ভিস মডেল কোনটি?**
+  উত্তর: সবকটি (IaaS, PaaS এবং SaaS)
+
+---
+
+### ICT &amp; Internet Personalities
+
+* **১৯০. স্টিভ চেন ও চাড হার্লির সাথে যৌথভাবে কোন বাংলাদেশি ইউটিউব (YouTube) প্রতিষ্ঠা করেন?**
+  উত্তর: জাওয়েদুল করিম
+
+---
+
+### Frequency Table
+
+| Category                        | Number of Questions |
+| ------------------------------- | ------------------- |
+| Digital Logic &amp; Boolean Algebra | 3                   |
+| Networking &amp; Communication      | 4                   |
+| Computer Fundamentals / OS      | 2                   |
+| Software &amp; Programming          | 3                   |
+| Web &amp; Internet Technologies     | 1                   |
+| Cloud Computing                 | 1                   |
+| ICT &amp; Internet Personalities    | 1                   |
+</md></sn>
   <config>
     <tags>#41</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Apr 27 2026 09:21:18 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Apr 27 2026 09:21:29 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-l5keGHjk6l</id>
     <duration></duration>
   </config>
