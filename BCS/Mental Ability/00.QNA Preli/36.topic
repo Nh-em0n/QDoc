@@ -1,10 +1,89 @@
 
-  <sn></sn>
+  <sn><md>### Numerical Ability{.text-center}
+
+**১৭৬. ১ + ৫ + ৯ + ......... + ৮১ = ?**
+উত্তর: (ক) ৮৬১
+
+**১৮০. √১৫.৬২৫ = ?**
+উত্তর: (গ) ৩.৯৫
+
+**১৮৮. ২-এর কত শতাংশ ৮ হবে?**
+উত্তর: (খ) ৪০০%
+
+---
+
+### Verbal Reasoning{.text-center}
+
+**১৭৭. ধারা পূরণ করো (A₂, C₄, E₆; G₃, I₅, ?; M₅, O₉, Q₁₄)**
+উত্তর: (ঘ) K₈
+
+**১৭৯. ইংরেজি বর্ণমালার ১৮তম অক্ষরের বামদিকে ১০ম অক্ষর কোনটি?**
+উত্তর: (ক) H
+
+**১৮১. ৩, ৭, ৪, ১৪, ৫, ২১, ৬, ......... ধারার অষ্টম সংখ্যা কত?**
+উত্তর: (ঘ) ২৮
+
+**১৮৯. ৩, ১০, ৯, ৮, ২৭, ৬, ৮১, ৪, ২৪৩, ?**
+উত্তর: (ক) ২
+
+---
+
+### Problem Solving{.text-center}
+
+**১৭৮. ৫ + ৩ = ৮১৩, ২ + ১ = ৩১২ হলে ৫ + ৪ = ?**
+উত্তর: (খ) ৯১৯
+
+**১৯০. প্রশ্নবোধক স্থানে কোন সংখ্যা বসবে?**
+উত্তর: (গ) ৩২
+
+---
+
+### Mechanical Reasoning{.text-center}
+
+**১৮৪. ভারসাম্য রক্ষা করতে বাম পাশে কত ওজন দরকার?**
+উত্তর: (ক) ৮ কেজি
+
+---
+
+### Space Relation{.text-center}
+
+**১৮২. দুটি সমান্তরাল রেখা কত বিন্দুতে ছেদ করে?**
+উত্তর: (খ) ০
+
+**১৮৩. প্রদত্ত চিত্রের আয়নার প্রতিফলন কোনটি?**
+উত্তর: (খ)
+
+**১৮৫. আয়নায় কোন শব্দ অপরিবর্তিত থাকে?**
+উত্তর: (গ) SOS
+
+**১৮৭. আয়নায় প্রতিবিম্ব কত দূরে দেখা যাবে?**
+উত্তর: (ঘ) ২ ফুট
+
+---
+
+### Spelling and Language{.text-center}
+
+**১৮৬. সঠিক বানান কোনটি?**
+উত্তর: (ক) কুসংস্কার
+
+---
+
+## Frequency Table
+
+| Category              | Questions |
+| --------------------- | --------- |
+| Verbal Reasoning      | 4         |
+| Numerical Ability     | 3         |
+| Space Relation        | 4         |
+| Problem Solving       | 2         |
+| Mechanical Reasoning  | 1         |
+| Spelling and Language | 1         |
+</md></sn>
   <config>
     <tags>#36</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Apr 28 2026 23:08:06 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Apr 28 2026 23:08:16 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-5J4tLcnlMH</id>
     <duration></duration>
   </config>
