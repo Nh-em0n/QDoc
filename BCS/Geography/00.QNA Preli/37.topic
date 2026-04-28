@@ -1,10 +1,68 @@
 
-  <sn></sn>
+  <sn><md>### Geography, Environment &amp; Hazard Management{.text-center}
+
+---
+
+#### Physical Geography (Bangladesh &amp; World){.text-center}
+
+* **Question:** বাংলাদেশের জেলাসমূহের মধ্যে কোন জেলায় নিচু ভূমির (Low land) পরিমাণ সবচেয়ে বেশি?
+  **Answer:** হবিগঞ্জ (হাওর অঞ্চল বেশি থাকার কারণে)
+
+* **Question:** বাংলাদেশের দীর্ঘতম নদী কোনটি?
+  **Answer:** মেঘনা
+
+* **Question:** বাংলাদেশের কোন অঞ্চল বেশি খরাপ্রবণ?
+  **Answer:** উত্তর-পশ্চিম অঞ্চল (রাজশাহী, চাঁপাইনবাবগঞ্জ, নওগাঁ ইত্যাদি)
+
+* **Question:** নিচের কোন নিয়ামকটি একটি অঞ্চলের জলবায়ু নির্ধারণ করে না?
+  **Answer:** দ্রাঘিমারেখা
+
+---
+
+#### Climate &amp; Rainfall{.text-center}
+
+* **Question:** বাংলাদেশের কোন অঞ্চলে বার্ষিক সর্বোচ্চ গড় বৃষ্টিপাত রেকর্ড করা হয়?
+  **Answer:** সিলেট
+
+---
+
+#### Environment &amp; Resource Impact{.text-center}
+
+* **Question:** FCDI (Flood Control, Drainage &amp; Irrigation) ব্যবস্থার কারণে বাংলাদেশের কোন অঞ্চল বেশি ক্ষতিগ্রস্ত?
+  **Answer:** বরেন্দ্র অঞ্চল
+
+* **Question:** কোন আপদ (Hazard) পৃথিবীতে মানুষের মৃত্যুর প্রধান কারণ?
+  **Answer:** বায়ু দূষণ
+
+---
+
+#### Disaster Management{.text-center}
+
+* **Question:** সার্ক দুর্যোগ ব্যবস্থাপনা কেন্দ্র কোথায় অবস্থিত?
+  **Answer:** নতুন দিল্লি
+
+* **Question:** কোন পর্যায়ে দুর্যোগের ক্ষতি মূল্যায়ন করা হয়?
+  **Answer:** পুনর্বাসন পর্যায়
+
+* **Question:** কোন দুর্যোগটি জীবিকা পরিবর্তনে দীর্ঘস্থায়ী প্রভাব ফেলে?
+  **Answer:** সমুদ্রের জলস্তরের বৃদ্ধি (Sea level rise)
+
+---
+
+### Frequency Table
+
+| Category                      | Number of Questions |
+| ----------------------------- | ------------------- |
+| Physical Geography            | 4                   |
+| Climate &amp; Rainfall            | 1                   |
+| Environment &amp; Resource Impact | 2                   |
+| Disaster Management           | 3                   |
+</md></sn>
   <config>
     <tags>#37</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Apr 28 2026 23:45:57 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Apr 28 2026 23:46:09 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-uIdzToW3Sv</id>
     <duration></duration>
   </config>
