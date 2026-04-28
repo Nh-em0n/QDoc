@@ -1,10 +1,91 @@
 
-  <sn></sn>
+  <sn><md>### Computer and ICT
+
+#### Input Devices{.text-center}
+
+146. **কম্পিউটার সিস্টেম-এ Scanner একটি কোন ধরনের যন্ত্র?**
+     Answer: (ক) Input
+
+---
+
+#### Computer Memory &amp; Storage{.text-center}
+
+147. **কম্পিউটারের মূল মেমোরি তৈরি হয় কী দিয়ে?**
+     Answer: (গ) সিলিকন
+
+148. **Back up প্রোগ্রাম বলতে কী বোঝানো হয়?**
+     Answer: (খ) নির্ধারিত ফাইল কপি করা
+
+149. **কম্পিউটার মেমোরি থেকে সংরক্ষিত ডাটা উত্তোলনের পদ্ধতিকে কী বলে?**
+     Answer: (গ) Read
+
+---
+
+#### Networking &amp; Internet{.text-center}
+
+149. **একটি প্রতিষ্ঠানে ডিভাইস ভাগাভাগি করে নেওয়ার সুবিধা হলো—**
+     Answer: (ঘ) উপরের সবকটি (অর্থ সাশ্রয়, সময় সাশ্রয়, স্থানের সাশ্রয়)
+
+150. **নিচের কোনটি ছাড়া Internet-এ প্রবেশ করা সহজ নয়?**
+     Answer: (ঘ) Web browser
+
+151. **পারসোনাল কম্পিউটার যুক্ত করে নিচের কোনটি তৈরি করা যায়?**
+     Answer: (খ) Network
+
+---
+
+#### Database &amp; Programming Concepts{.text-center}
+
+154. **নিচের কোনটি ডাটাবেজ ল্যাঙ্গুয়েজ?**
+     Answer: (ঘ) উপরের সবকটি (DDL, DML, Query Language)
+
+---
+
+#### Software &amp; Systems{.text-center}
+
+150. **নিচের কোন সাইটটি কেনা-বেচার জন্য নয়?**
+     Answer: (গ) google.com
+
+151. **MICR-এর পূর্ণরূপ কী?**
+     Answer: (ক) Magnetic Ink Character Reader
+
+152. **প্রোগ্রাম থেকে কপি করা ডাটা কোথায় থাকে?**
+     Answer: (খ) Clipboard
+
+---
+
+#### ICT &amp; Applications{.text-center}
+
+155. **সোশ্যাল নেটওয়ার্কিং টুইটার কত সালে তৈরি হয়?**
+     Answer: (খ) ২০০৬
+
+156. **নিচের কোন স্মার্টফোন অপারেটিং সিস্টেমটি ওপেন সোর্স প্ল্যাটফর্ম?**
+     Answer: (গ) Android
+
+157. **মোবাইল কমিউনিকেশনে 4G-এর ক্ষেত্রে 3G এর তুলনায় অতিরিক্ত বৈশিষ্ট্য কী?**
+     Answer: (ঘ) ব্রডব্যান্ড ইন্টারনেট সেবা
+
+158. **Oracle Corporation-এর প্রতিষ্ঠাতা কে?**
+     Answer: (ঘ) Lawrence J. Ellison
+
+---
+
+### Frequency Table
+
+| Category                        | Number of Questions |
+| ------------------------------- | ------------------- |
+| Input Devices                   | 1                   |
+| Computer Memory &amp; Storage       | 3                   |
+| Networking &amp; Internet           | 3                   |
+| Database &amp; Programming Concepts | 1                   |
+| Software &amp; Systems              | 4                   |
+| ICT &amp; Applications              | 4                   |
+</md></sn>
   <config>
     <tags>#35</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Apr 28 2026 21:58:20 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Apr 28 2026 21:58:31 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-b4ISNbNoJw</id>
     <duration></duration>
   </config>
