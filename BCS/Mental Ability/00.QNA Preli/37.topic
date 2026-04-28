@@ -1,10 +1,101 @@
 
-  <sn></sn>
+  <sn><md>### Mental Ability{.text-center}
+
+---
+
+#### Verbal Reasoning (শব্দ, অর্থ ও ভাষাগত যুক্তি){.text-center}
+
+* **Question 176:** কোনটি ‘অগ্নি’-র সমার্থক শব্দ নয়?
+  **Answer:** প্রজ্বলিত
+
+* **Question 185:** Find out the correct synonym of ‘TENUOUS’—
+  **Answer:** Thin
+
+* **Question 187:** কোন বানানটি শুদ্ধ?
+  **Answer:** Achievement
+
+---
+
+#### Problem Solving (গাণিতিক ও যৌক্তিক সমস্যা){.text-center}
+
+* **Question 179:** ৫-এর কত শতাংশ ৭ হবে?
+  **Answer:** ১৪০%
+
+* **Question 180:** $0.4 \times 0.02 \times 0.08 = ?$
+  **Answer:** 0.00064
+
+* **Question 184:** কোনো বৃত্তের ব্যাসার্ধ ২০% কমলে ক্ষেত্রফল কত % কমবে?
+  **Answer:** ৩৬%
+
+---
+
+#### Space Relation (দিক, ঘূর্ণন, অবস্থান){.text-center}
+
+* **Question 177:** সূর্য সামনে রেখে হাঁটার পর দিক পরিবর্তনের পর মুখ কোনদিকে থাকবে?
+  **Answer:** পূর্ব
+
+---
+
+#### Mechanical Reasoning (বল, গতি, যন্ত্র){.text-center}
+
+* **Question 178:** মোটা ও চিকন হাতলযুক্ত স্ক্রু-ড্রাইভারের ক্ষেত্রে কী ঘটবে?
+  **Answer:** চিকন হাতলের ড্রাইভার বেশি বার ঘুরাতে হবে
+
+* **Question 181:** নৌকার গতি বাড়াতে বৈঠা কোন দিকে ব্যবহার করতে হবে?
+  **Answer:** পিছনে
+
+* **Question 189:** লন রোলার টানলে ও ঠেললে কার বেশি কষ্ট হবে?
+  **Answer:** ঠেলে নেওয়া ব্যক্তির
+
+---
+
+#### Numerical Ability (সংখ্যা, কোডিং, গণনা){.text-center}
+
+* **Question 180:** $0.4 \times 0.02 \times 0.08$ এর মান কত?
+  **Answer:** 0.00064
+
+* **Question 183:** ২০০৯ সালের ২৮ আগস্ট শুক্রবার ছিল। ১ অক্টোবর কী বার ছিল?
+  **Answer:** বৃহস্পতিবার
+
+* **Question 186:** (চিত্রভিত্তিক সংখ্যা ধাঁধা) ২য় বৃত্তের সঠিক সংখ্যা কত?
+  **Answer:** ৯
+
+---
+
+#### Coding-Decoding (কোড ভাষা){.text-center}
+
+* **Question 188:** LOYAL → JOWAJ হলে PRONE → ?
+  **Answer:** NRMNC
+
+---
+
+#### Analogies (সম্পর্ক নির্ণয়){.text-center}
+
+* **Question 182:** Telephone : Cable :: Radio : ?
+  **Answer:** Wireless
+
+* **Question 190:** বিভা : কিরণ :: সুবলিত : ?
+  **Answer:** সুগঠিত
+
+---
+
+### Frequency Table
+
+| Category             | Number of Questions |
+| -------------------- | ------------------- |
+| Verbal Reasoning     | 3                   |
+| Problem Solving      | 3                   |
+| Space Relation       | 1                   |
+| Mechanical Reasoning | 3                   |
+| Numerical Ability    | 3                   |
+| Coding-Decoding      | 1                   |
+| Analogies            | 2                   |
+</md></sn>
   <config>
     <tags>#37</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Apr 28 2026 23:56:00 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Apr 28 2026 23:56:13 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-G4LsKvXHo1</id>
     <duration></duration>
   </config>
