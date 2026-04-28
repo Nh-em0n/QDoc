@@ -1,10 +1,91 @@
 
-  <sn></sn>
+  <sn><md>### Mental Ability
+
+#### Verbal Reasoning{.text-center}
+
+176. **সঠিক উত্তর কোনটি?**
+     Answer: (খ) সচেতনতা
+
+177. **শব্দ : কর্ণ ; আলো : ?**
+     Answer: (গ) চক্ষু
+
+---
+
+#### Space Relation{.text-center}
+
+183. **নিচের আয়নায় কোন শব্দটির প্রতিফলন? (উল্টো করে লেখা 'RELATION')**
+     Answer: (খ) RELATION
+
+---
+
+#### Numerical Ability{.text-center}
+
+186. **0.03 × 0.006 × 0.007 = ?**
+     Answer: (ঘ) 0.00000126
+
+187. **? / ৭ = ২৮০ / ?**
+     Answer: (ঘ) ৪৯
+
+188. **৫টি আধুলি ও ৮টি সিকি আছে। আর কয়টি ১০ পয়সার মুদ্রা দিলে মোট ৫ টাকা হবে?**
+     Answer: (গ) ৫টি
+
+189. **১২-এর কত শতাংশ ১৮ হবে?**
+     Answer: (খ) ১৫০%
+
+---
+
+#### Problem Solving{.text-center}
+
+178. **প্রশ্নবোধক স্থানে কোন সংখ্যাটি বসবে? (চিত্র অনুযায়ী)**
+     Answer: (গ) ৬
+
+179. **২, √5, ৮, √25, ? সিরিজে প্রশ্নবোধক মান কত?**
+     Answer: (ক) ৬
+
+180. **চিত্রে মোট কয়টি ত্রিভুজ আছে?**
+     Answer: (ঘ) ২১টি
+
+181. **চিত্রে মোট কয়টি ত্রিভুজ আছে?**
+     Answer: (গ) ৮টি
+
+182. **নম্বর সিরিজ: ১, ২, ৮, ৪৮, ৩৮৪, ...**
+     Answer: (গ) ৩৮৪০
+
+---
+
+#### Spelling and Language{.text-center}
+
+181. **কোন বানানটি শুদ্ধ?**
+     Answer: (গ) শ্রদ্ধাঞ্জলি
+
+182. **কোনটি শুদ্ধ বানান?**
+     Answer: (খ) শ্বশুর
+
+---
+
+#### Mechanical Reasoning{.text-center}
+
+180. **কোনো বিয়ে অনুষ্ঠানে পোশাক ছিঁড়ে গেলে আপনি কী করবেন?**
+     Answer: (ঘ) পোশাকের ছেঁড়া অংশটুকু যেভাবে আছে সেভাবে রাখবেন
+
+---
+
+### Frequency Table
+
+| Category              | Number of Questions |
+| --------------------- | ------------------- |
+| Verbal Reasoning      | 2                   |
+| Space Relation        | 1                   |
+| Numerical Ability     | 3                   |
+| Problem Solving       | 5                   |
+| Spelling and Language | 2                   |
+| Mechanical Reasoning  | 1                   |
+</md></sn>
   <config>
     <tags>#35</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Apr 28 2026 22:12:36 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Apr 28 2026 22:12:47 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-8oGp1Fs0aK</id>
     <duration></duration>
   </config>
