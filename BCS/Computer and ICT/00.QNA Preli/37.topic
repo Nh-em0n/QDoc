@@ -1,10 +1,84 @@
 
-  <sn></sn>
+  <sn><md>### Computer and ICT{.text-center}
+
+---
+
+#### Computer Fundamentals (CPU, Memory, Hardware){.text-center}
+
+* **Question:** কম্পিউটারের CPU-এর কোন অংশে গাণিতিক সিদ্ধান্ত গ্রহণের কাজ করে?
+  **Answer:** ক) ALU (Arithmetic Logic Unit)
+
+* **Question:** EDSAC কম্পিউটারে ডেটা সংরক্ষণের জন্য কি ধরনের মেমরি ব্যবহার হতো?
+  **Answer:** Mercury Delay Lines
+
+---
+
+#### Number Systems &amp; Logic Gates{.text-center}
+
+* **Question:** “একটি ২ ইনপুট লজিক সেটের আউটপুট ০ হবে, যদি এর ইনপুটগুলো সমান হয়”— এই উক্তিটি কোন সেটের জন্য সত্য?
+  **Answer:** Ex-OR (Exclusive OR)
+
+---
+
+#### Operating System{.text-center}
+
+* **Question:** কোনটি অপারেটিং সিস্টেম নয়?
+  **Answer:** C (এটি একটি প্রোগ্রামিং ভাষা)
+
+* **Question:** Android অপারেটিং সিস্টেমের ক্ষেত্রে নিচের কোনটি সঠিক?
+  **Answer:** ঘ) উপরের সবগুলো সঠিক (Linux kernel-based, Google developed, touchscreen device oriented)
+
+* **Question:** iOS মোবাইল অপারেটিং সিস্টেমটি কোন প্রতিষ্ঠান বাজারজাত করে?
+  **Answer:** Apple
+
+---
+
+#### Networking &amp; Internet{.text-center}
+
+* **Question:** ক্লাউড সার্ভার নিচের কোনটিতে সবচেয়ে ভালো বর্ণনা করা সম্ভব?
+  **Answer:** ব্যবহারকারীর চাহিদা অনুযায়ী কম্পিউটিং সেবা দেওয়া
+
+* **Question:** IP-V6 অ্যাড্রেস কত বিটের?
+  **Answer:** 128 বিট
+
+* **Question:** ই-মেইল আদান প্রদানে ব্যবহৃত SMTP-এর পূর্ণরূপ কী?
+  **Answer:** Simple Mail Transfer Protocol
+
+* **Question:** TCP দিয়ে কোনটি বোঝানো হয়?
+  **Answer:** প্রোটোকল
+
+* **Question:** Wi-Fi নেটওয়ার্কে সংযোগের জন্য সংশ্লিষ্ট ডিভাইসটির সংযোগ মাধ্যম কোনটি?
+  **Answer:** তারহীন সংযোগ
+
+---
+
+#### Input Devices &amp; IT Concepts{.text-center}
+
+* **Question:** নিচের কোনটি ইনপুট ডিভাইস?
+  **Answer:** OMR
+
+* **Question:** ইউনিকোডের মাধ্যমে সম্ভাব্য কতগুলো চিহ্নকে নির্দিষ্ট করা যায়?
+  **Answer:** 65536টি
+
+---
+
+#### E-Commerce &amp; Technology History{.text-center}
+
+* **Question:** ই-কমার্স সাইট amazon.com কত সালে প্রতিষ্ঠিত হয়?
+  **Answer:** 1994 সাল
+
+---
+
+#### Data Structure (Stack){.text-center}
+
+* **Question:** Push এবং Pop নিচের কার সাথে সম্পর্কিত?
+  **Answer:** Stack
+</md></sn>
   <config>
     <tags>#37</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Apr 28 2026 23:39:59 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Apr 28 2026 23:40:10 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-AY9SXaweFS</id>
     <duration></duration>
   </config>
