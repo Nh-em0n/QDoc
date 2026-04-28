@@ -1,10 +1,28 @@
 
-  <sn></sn>
+  <sn><md>### কম্পিউটার ও তথ্যপ্রযুক্তি
+
+#### Computer Fundamentals{.text-center}
+
+৩৪. **The term PC means—**
+(ক) Private Computer
+(খ) Prime Computer
+(গ) Personal Computer
+(ঘ) Professional Computer
+উত্তর: (গ) Personal Computer
+
+---
+
+### Frequency Table
+
+| Category              | Number of Questions |
+| --------------------- | ------------------- |
+| Computer Fundamentals | 1                   |
+</md></sn>
   <config>
     <tags>#34</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Apr 28 2026 14:49:35 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Apr 28 2026 14:49:46 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Nu4QRmCcNC</id>
     <duration></duration>
   </config>
