@@ -1,10 +1,78 @@
 
-  <sn></sn>
+  <sn><md>### General Science{.text-center}
+
+---
+
+#### Physics{.text-center}
+
+* **Question:** আকাশে রঙধনু সৃষ্টির কারণ কী?
+  **Answer:** বৃষ্টির কণা (যা প্রিজমের মতো কাজ করে)
+
+* **Question:** চন্দ্রে কোনো বস্তুর ওজন পৃথিবীর ওজনের কত ভাগ?
+  **Answer:** ছয় ভাগের একভাগ
+
+* **Question:** তাপ ইঞ্জিনের (Heat Engine) কাজ কী?
+  **Answer:** তাপশক্তিকে যান্ত্রিক শক্তিতে রূপান্তর করা
+
+* **Question:** শূন্য মাধ্যমে শব্দের বেগ কত?
+  **Answer:** ০ (শব্দ চলাচলের জন্য মাধ্যম প্রয়োজন)
+
+* **Question:** বস্তুর ওজন কোথায় সবচেয়ে বেশি হয়?
+  **Answer:** মেরু অঞ্চলে
+
+---
+
+#### Biology{.text-center}
+
+* **Question:** ঈস্টের (Yeast) সংশ্লিষ্টতা নেই কোন শিল্পে?
+  **Answer:** সাইট্রিক অ্যাসিড উৎপাদন
+
+* **Question:** মানবদেহে রোগ প্রতিরোধে প্রাথমিক প্রতিরক্ষাস্তরের অন্তর্ভুক্ত নয় কোনটি?
+  **Answer:** লিম্ফোসাইট
+
+* **Question:** নিচের কোনটি ভাইরাসের জন্য সত্য নয়?
+  **Answer:** রাইবোজোম থাকে (ভাইরাসে রাইবোজোম থাকে না)
+
+* **Question:** দৈনিক খাদ্য তালিকায় সামুদ্রিক মাছ বা শৈবাল অন্তর্ভুক্ত করলে কোন রোগের প্রাদুর্ভাব কমানো সম্ভব?
+  **Answer:** হাইপো-থাইরয়েডিজম
+
+* **Question:** নিউক্লিয়াসের বিভাজনকে কী বলা হয়?
+  **Answer:** ফিশন
+
+* **Question:** চা পাতায় কোন ভিটামিন থাকে?
+  **Answer:** ভিটামিন বি কমপ্লেক্স
+
+---
+
+#### Environmental Science / Modern Science{.text-center}
+
+* **Question:** গ্রিনহাউজ আসলে কী?
+  **Answer:** কাঁচের তৈরি ঘর
+
+* **Question:** নিচের কোনটি জারক পদার্থ নয়?
+  **Answer:** হাইড্রোজেন
+
+* **Question:** ধরিত্রী সম্মেলন (Earth Summit) কোথায় অনুষ্ঠিত হয়েছিল?
+  **Answer:** রিও ডি জেনিরো, ব্রাজিল
+
+* **Question:** প্রাকৃতিক গ্যাসে মিথেনের পরিমাণ সাধারণত কত থাকে?
+  **Answer:** ৮০–৯০ ভাগ
+
+---
+
+### Frequency Table
+
+| Category                               | Number of Questions |
+| -------------------------------------- | ------------------- |
+| Physics                                | 5                   |
+| Biology                                | 6                   |
+| Environmental Science / Modern Science | 4                   |
+</md></sn>
   <config>
     <tags>#37</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Apr 28 2026 23:41:34 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Apr 28 2026 23:41:45 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-tUTm5iEwZD</id>
     <duration></duration>
   </config>
