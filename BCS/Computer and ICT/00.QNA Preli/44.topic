@@ -1,10 +1,98 @@
 
-  <sn></sn>
+  <sn><md>### Computer and ICT{.text-center}
+
+---
+
+### Programming &amp; Software{.text-center}
+
+১০১. **নিচের কোনটি Structured Query Language নয়?**
+উত্তর: (ক) Java
+
+১০৯. **নিচের কোনটি system software নয়?**
+উত্তর: (গ) Mozilla Firefox
+
+---
+
+### Networking &amp; Internet{.text-center}
+
+১০২. **Hostname-কে IP Address-এ অনুবাদ করে –**
+উত্তর: (গ) DNS Server
+
+১১০. **ই-মেইল ট্রান্সফারের জন্য কোন TCP/IP প্রটোকল ব্যবহৃত হয়?**
+উত্তর: (ঘ) SMTP
+
+১১১. **যে প্রোগ্রাম নিজে নিজে অন্য কম্পিউটারে কপি হয় তাকে কী বলে?**
+উত্তর: (খ) Worms
+
+১১৪. **ইন্টারনেটে তথ্য আদান-প্রদানের নিরাপত্তা নিশ্চিত করে কোন প্রোটোকল?**
+উত্তর: (খ) HTTPS
+
+---
+
+### Cloud Computing &amp; Modern Tech{.text-center}
+
+১০৩. **নিচের কোন মডেলটি Cloud Computing সেবা প্রদানকারীগণ ব্যবহার করে না?**
+উত্তর: (ক) CaaS
+
+১০৪. **অ্যামাজনের ক্লাউড প্লাটফর্ম কোনটি?**
+উত্তর: (খ) AWS
+
+১১২. **৪G স্ট্যান্ডার্ড প্রস্তুতকরণে কোন প্রতিষ্ঠান সম্পৃক্ত?**
+উত্তর: (খ) ITU
+
+---
+
+### Computer Hardware &amp; Devices{.text-center}
+
+১০৬. **SCSI-এর পূর্ণরূপ কী?**
+উত্তর: (ক) Small Computer System Interface
+
+১০৭. **কোন ডিভাইস ইনপুট ও আউটপুট উভয় হিসেবে কাজ করে?**
+উত্তর: (গ) Touch Screen
+
+---
+
+### Number Systems &amp; Digital Logic{.text-center}
+
+১০৮. **Decimal 55-এর সমতুল্য Octal সংখ্যা কোনটি?**
+উত্তর: (গ) 67
+
+---
+
+### Cyber Security{.text-center}
+
+১০৫. **যে আক্রমণে কম্পিউটার লক করে অর্থ দাবি করা হয় সেটি কী?**
+উত্তর: (গ) Ransomware
+
+---
+
+### Open Source &amp; Networking Concepts{.text-center}
+
+১১৩. **নিচের কোনটি Open Source Software?**
+উত্তর: (ক) Google Chrome
+
+১১৫. **Piconet কী?**
+উত্তর: (গ) Bluetooth Network
+
+---
+
+## Frequency Table
+
+| Category                          | Number of Questions |
+| --------------------------------- | ------------------- |
+| Programming &amp; Software            | 2                   |
+| Networking &amp; Internet             | 4                   |
+| Cloud Computing &amp; Modern Tech     | 3                   |
+| Computer Hardware &amp; Devices       | 2                   |
+| Number Systems &amp; Digital Logic    | 1                   |
+| Cyber Security                    | 1                   |
+| Open Source &amp; Networking Concepts | 2                   |
+</md></sn>
   <config>
     <tags>#44</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Apr 29 2026 21:47:51 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Apr 29 2026 21:48:45 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-5ai5pok4d7</id>
     <duration></duration>
   </config>
