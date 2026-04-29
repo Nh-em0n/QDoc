@@ -1,10 +1,67 @@
 
-  <sn></sn>
+  <sn><md>### Physics{text-center}
+
+(No প্রশ্ন এই অংশে পাওয়া যায়নি)
+
+---
+
+### Biology{text-center}
+
+* **প্রশ্ন:** নিচের কোনটির কোনো মেমব্রেন নেই?
+  **উত্তর:** Ribosome
+
+* **প্রশ্ন:** থাইরয়েড ফলিকলে কোন এপিথেলিয়াম থাকে?
+  **উত্তর:** Cuboidal epithelium
+
+* **প্রশ্ন:** Blood-brain barrier কী দিয়ে গঠিত?
+  **উত্তর:** Endothelial cell
+
+* **প্রশ্ন:** কোনটি DNA ভাইরাস?
+  **উত্তর:** Parvovirus
+
+* **প্রশ্ন:** কোনটি killed vaccine নয়?
+  **উত্তর:** Rubella
+
+* **প্রশ্ন:** Graves disease-এ কী কমে যায়?
+  **উত্তর:** TSH secretion
+
+* **প্রশ্ন:** নবজাতকের প্রধান অ্যান্টিবডি কোনটি?
+  **উত্তর:** IgG
+
+* **প্রশ্ন:** কোন গ্যাস সহজে কোষে diffusion করে?
+  **উত্তর:** Oxygen
+
+* **প্রশ্ন:** ধ্বনি তৈরিতে সহায়ক অঙ্গসমূহকে কী বলে?
+  **উত্তর:** বাক প্রত্যঙ্গ
+
+---
+
+### Modern Science{text-center}
+
+* **প্রশ্ন:** Kyoto Protocol কবে গৃহীত হয়?
+  **উত্তর:** ১৯৯৭
+
+* **প্রশ্ন:** IUCN-এর কাজ কী?
+  **উত্তর:** প্রাকৃতিক সম্পদ সংরক্ষণ
+
+* **প্রশ্ন:** Cartagena Protocol কবে স্বাক্ষরিত হয়?
+  **উত্তর:** ২০০০
+
+---
+
+### Frequency Table
+
+| Category       | Number of Questions |
+| -------------- | ------------------- |
+| Physics        | 0                   |
+| Biology        | 9                   |
+| Modern Science | 3                   |
+</md></sn>
   <config>
     <tags>#42</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Apr 29 2026 22:11:01 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Apr 29 2026 22:12:42 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-VprvNgsNGo</id>
     <duration></duration>
   </config>
