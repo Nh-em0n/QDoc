@@ -1,10 +1,34 @@
 
-  <sn></sn>
+  <sn><md>### Famous Quotes – Author Identification {.text-center}
+
+1. ‘If winter comes, can spring be far behind?’
+   উত্তর: (ঘ) Shelley
+
+---
+
+### Publication-related Facts {.text-center}
+
+2. Who did write the first English dictionary?
+   উত্তর: (গ) Samuel Johnson
+
+---
+
+### Author and His/Her Work {.text-center}
+
+3. ‘Animal Farm’ was written by—
+   উত্তর: (ক) George Orwell
+
+| Category                              | Count |
+| ------------------------------------- | ----- |
+| Famous Quotes – Author Identification | 1     |
+| Publication-related Facts             | 1     |
+| Author and His/Her Work               | 1     |
+</md></sn>
   <config>
     <tags>#28</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Apr 29 2026 13:44:05 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Apr 29 2026 13:44:37 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-tY6PvgAGMP</id>
     <duration></duration>
   </config>
