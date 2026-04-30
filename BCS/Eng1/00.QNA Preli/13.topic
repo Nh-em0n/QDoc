@@ -1,10 +1,52 @@
 
-  <sn></sn>
+  <sn><md>### Author and His/Her Work (Who wrote what){.text-center}
+
+Question: 'The Rainbow' is—
+Answer: A novel by D. H. Lawrence
+
+Question: The literary work 'Kubla Khan' is—
+Answer: A verse by Coleridge
+
+Question: What was the real name of the great American short story writer 'O. Henry'?
+Answer: William Sydney Porter
+
+---
+
+### Publication-related Facts{.text-center}
+
+Question: 'Tom Jones' by Henry Fielding was first published in—
+Answer: The 1st half of 18th century
+
+---
+
+### Nationality of Author (British, American, Irish etc.){.text-center}
+
+Question: T. S. Eliot was born in—
+Answer: USA
+
+---
+
+### Genre Identification (Novel, Play, Epic, Poem, Essay){.text-center}
+
+Question: What is the meaning of the word 'euphemism'?
+Answer: Inoffensive expression
+
+---
+
+### Frequency Table
+
+| Category                  | Number of Questions |
+| ------------------------- | ------------------- |
+| Author and His/Her Work   | 3                   |
+| Publication-related Facts | 1                   |
+| Nationality of Author     | 1                   |
+| Genre Identification      | 1                   |
+</md></sn>
   <config>
     <tags>#13</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Apr 30 2026 09:55:29 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Apr 30 2026 09:55:38 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-nDahiOIp8L</id>
     <duration></duration>
   </config>
