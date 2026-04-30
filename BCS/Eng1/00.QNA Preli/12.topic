@@ -1,10 +1,41 @@
 
-  <sn></sn>
+  <sn><md>### English Literature{.text-center}
+
+---
+
+### Author and His/Her Work{.text-center}
+
+1. **'Caesar and Cleopatra' is—** a play by **George Bernard Shaw**
+2. **'A Farewell to Arms'** — **Ernest Hemingway**
+3. **Most famous satirist in English literature** — **Jonathan Swift**
+
+---
+
+### Literary Movement / School{.text-center}
+
+2. **Greatest modern English dramatist** — **George Bernard Shaw**
+
+---
+
+### Publication-related Facts{.text-center}
+
+3. **Modern philosopher awarded Nobel Prize for Literature** — **Bertrand Russell (1950)**
+
+---
+
+### Frequency Table{.text-center}
+
+| Category                   | Count |
+| -------------------------- | ----: |
+| Author and His/Her Work    |     3 |
+| Literary Movement / School |     1 |
+| Publication-related Facts  |     1 |
+</md></sn>
   <config>
     <tags>#12</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Apr 30 2026 09:36:28 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Apr 30 2026 09:36:38 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-BxUbcET6hY</id>
     <duration></duration>
   </config>
