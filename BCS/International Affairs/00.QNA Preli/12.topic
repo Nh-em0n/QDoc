@@ -1,10 +1,52 @@
 
-  <sn></sn>
+  <sn><md>### International Affairs{.text-center}
+
+---
+
+### Historical Events{.text-center}
+
+1. **Japan attacked Pearl Harbor on—** 7 December 1941
+2. **Treaty signed between Iraq and Iran over Shatt al-Arab—** Algiers Agreement
+3. **Fall of the Bastille occurred on—** 14 July 1789
+4. **Egypt nationalized the Suez Canal in—** 1956
+
+---
+
+### International Organizations / Alliances{.text-center}
+
+9. **Regional organization of the Persian Gulf—** GCC (Gulf Cooperation Council)
+
+---
+
+### Countries &amp; General Knowledge{.text-center}
+
+8. **Land of thousand lakes—** Finland
+9. **Former name of the Republic of Congo—** Zaire
+10. **Trafalgar Square is located in—** London
+
+---
+
+### Economic / Political Concepts{.text-center}
+
+6. **“500 Days Plan” refers to—** proposed transition to market economy in the Soviet Union
+7. **Purpose of US troop deployment in Saudi Arabia—** (multiple correct answers: protection from Iraq attack, ending Kuwait occupation, ensuring oil supply)
+
+---
+
+### Frequency Table{.text-center}
+
+| Category                                | Count |
+| --------------------------------------- | ----: |
+| Historical Events                       |     4 |
+| International Organizations / Alliances |     1 |
+| Countries &amp; General Knowledge           |     3 |
+| Economic / Political Concepts           |     2 |
+</md></sn>
   <config>
     <tags>#12</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Apr 30 2026 09:41:19 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Apr 30 2026 09:41:30 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-20FxsoKKE4</id>
     <duration></duration>
   </config>
