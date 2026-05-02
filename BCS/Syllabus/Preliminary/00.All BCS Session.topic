@@ -1,10 +1,37 @@
 
-  <sn></sn>
+  <sn><md>| BCS  | Year | BCS            | Year |
+| ---- | ---: | -------------- | ---: |
+| 1st  | 1982 | 26th           | 2004 |
+| 2nd  | 1983 | 27th           | 2005 |
+| 3rd  | 1983 | 28th           | 2006 |
+| 4th  | 1984 | 29th           | 2008 |
+| 5th  | 1984 | 30th           | 2008 |
+| 6th  | 1985 | 31st           | 2010 |
+| 7th  | 1985 | 32nd           | 2010 |
+| 8th  | 1986 | 33rd           | 2012 |
+| 9th  | 1988 | 34th           | 2012 |
+| 10th | 1989 | 35th           | 2014 |
+| 11th | 1990 | 36th           | 2015 |
+| 12th | 1991 | 37th           | 2016 |
+| 13th | 1993 | 38th           | 2017 |
+| 14th | 1995 | 39th (Special) | 2018 |
+| 15th | 1996 | 40th           | 2018 |
+| 16th | 1997 | 41st           | 2019 |
+| 17th | 1998 | 42nd (Special) | 2020 |
+| 18th | 1999 | 43rd           | 2020 |
+| 19th | 2000 | 44th           | 2021 |
+| 20th | 2001 | 45th           | 2022 |
+| 21st | 2001 | 46th           | 2023 |
+| 22nd | 2003 | 47th           | 2024 |
+| 23rd | 2003 | 48th (Special) | 2025 |
+| 24th | 2003 | 49th (Special) | 2025 |
+| 25th | 2003 | 50th           | 2025 |
+</md></sn>
   <config>
     <tags>#00.all bcs session</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat May 02 2026 20:01:48 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat May 02 2026 20:04:13 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-888KewQKEo</id>
     <duration></duration>
   </config>
