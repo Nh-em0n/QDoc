@@ -1,14 +1,5 @@
 
-  <sn></sn>
-  <config>
-    <tags>#47</tags>
-    <thumbnail></thumbnail>
-    <heading></heading>
-    <udate>Sat May 02 2026 13:32:31 GMT+0600 (Bangladesh Standard Time)</udate>
-    <id>article-lzR2vpSTYX</id>
-    <duration></duration>
-  </config>
-<md>### Verbal Reasoning{.text-center}
+  <sn><md>### Verbal Reasoning{.text-center}
 
 ১৭৬. Seed : Sapling :: Egg : ? — Chick
 
@@ -75,4 +66,12 @@
 | Spelling and Language                    | 2                   |
 | Mechanical Reasoning                     | 1                   |
 | Space Relation / Science-based reasoning | 1                   |
-</md>
+</md></sn>
+  <config>
+    <tags>#47</tags>
+    <thumbnail></thumbnail>
+    <heading></heading>
+    <udate>Sat May 02 2026 13:32:44 GMT+0600 (Bangladesh Standard Time)</udate>
+    <id>article-lzR2vpSTYX</id>
+    <duration></duration>
+  </config>
