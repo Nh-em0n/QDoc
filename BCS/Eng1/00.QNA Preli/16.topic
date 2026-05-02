@@ -1,10 +1,28 @@
 
-  <sn></sn>
+  <sn><md>### Author and His/Her Work{.text-center}
+
+* 57. Shakespeare is known mostly for his— plays
+
+---
+
+### Literary Period / Age Identification{.text-center}
+
+* 59. In which century was the Victorian period? — 19th century
+
+---
+
+### Frequency Table
+
+| Category                             | Count |
+| ------------------------------------ | ----- |
+| Author and His/Her Work              | 1     |
+| Literary Period / Age Identification | 1     |
+</md></sn>
   <config>
     <tags>#16</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat May 02 2026 10:47:48 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat May 02 2026 10:48:02 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-3qhrmFxnpK</id>
     <duration></duration>
   </config>
