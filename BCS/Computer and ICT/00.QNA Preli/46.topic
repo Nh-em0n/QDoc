@@ -1,10 +1,65 @@
 
-  <sn></sn>
+  <sn><md>### Operating System &amp; Basics{.text-center}
+
+76. Windows অপারেটিং সিস্টেম সম্পর্কিত নিম্নের কোন তথ্যটি সঠিক? উত্তর: এটি মাল্টি টাস্কিং অপারেটিং সিস্টেম
+77. একটি অপারেটিং সিস্টেম একজন ব্যক্তিকে বিভিন্ন symbols, icon অথবা visual metaphor এর মাধ্যমে কম্পিউটারের সাথে সংযোগ স্থাপনে ভূমিকা পালন করে। নিচের কোনটি এ শ্রেণির কাজকে নির্দেশ করে? উত্তর: Graphical User Interface
+
+---
+
+### Computer Hardware &amp; Performance{.text-center}
+
+77. নিচের কোনটি কম্পিউটার মেমোরি হিসেবে দ্রুততম? উত্তর: Register
+78. নিচের কোনটি কম্পিউটার সিস্টেমের কর্মক্ষমতায় কোনো ভূমিকা রাখে না? উত্তর: Size of ROM
+
+---
+
+### Number System &amp; Conversion{.text-center}
+
+79. নিচের কোনটি অক্টাল সংখ্যা (২৪)₈ এর সঠিক বাইনারি রূপ? উত্তর: (০১০ ১০০)₂
+
+---
+
+### Programming &amp; Software Concepts{.text-center}
+
+81. নিচের কোন বিবৃতিটি কম্পাইলার সম্পর্কিত সঠিক? উত্তর: এটি একবারে পুরো প্রোগ্রাম অনুবাদ করে
+
+---
+
+### Internet, Networking &amp; Communication{.text-center}
+
+83. Cellular Data Network এর ক্ষেত্রে GPRS বলতে কী বুঝায়? উত্তর: General Packet Radio Service
+84. বাহিরের আক্রমণ থেকে প্রাইভেট নেটওয়ার্ক রক্ষার্থে নিচের কোনটি ব্যবহৃত হয়? উত্তর: Firewall
+85. ইন্টারনেট জগতে hyper-linked document গুলোর কালেকশানকে কী বলে? উত্তর: WWW
+86. নিচের কোন নেটওয়ার্কটি সবচেয়ে বেশি জায়গা ব্যাপ্তি হয়? উত্তর: WAN
+87. নেটওয়ার্ক ট্রান্সমিশন রেট বোঝাতে ব্যবহৃত 'Mbps' এর পূর্ণরূপ কী? উত্তর: Megabits per second
+
+---
+
+### ICT Applications &amp; Modern Tech{.text-center}
+
+82. নিচের কোনটি সোস্যাল মিডিয়া প্ল্যাটফর্ম নয়? উত্তর: Google
+83. নিচের কোনটি সার্চ ইঞ্জিন নয়? উত্তর: Safari
+84. গ্রাহকের চাহিদা অনুযায়ী, ইউটিলিটি-ভিত্তিক কম্পিউটিং পরিষেবা প্রদানের জন্য কোন প্রযুক্তিটি Distributed Computing এর একটি দৃষ্টান্ত? উত্তর: Cloud Computing
+85. নিচের কোন প্রযুক্তি Face Recognition সিস্টেমে ব্যবহার করা হয়? উত্তর: Applied AI
+
+---
+
+### ফ্রিকোয়েন্সি টেবিল
+
+| Category                             | Questions |
+| ------------------------------------ | --------- |
+| Operating System &amp; Basics            | 2         |
+| Computer Hardware &amp; Performance      | 2         |
+| Number System &amp; Conversion           | 1         |
+| Programming &amp; Software Concepts      | 1         |
+| Internet, Networking &amp; Communication | 5         |
+| ICT Applications &amp; Modern Tech       | 4         |
+</md></sn>
   <config>
     <tags>#46</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat May 02 2026 13:56:29 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat May 02 2026 13:56:40 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-onAJLpxqsd</id>
     <duration></duration>
   </config>
