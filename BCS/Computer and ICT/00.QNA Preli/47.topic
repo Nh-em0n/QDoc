@@ -1,10 +1,79 @@
 
-  <sn></sn>
+  <sn><md>### Computer Architecture &amp; Hardware{.text-center}
+
+১৪৬. একটি কম্পিউটারের প্রোসেসর ক্লক স্পিড ৪.০০ গিগা হার্জ হলে এর ক্লক সাইকেল টাইম কত? — ২.৫ ন্যানো সেকেন্ড (ns)
+
+১৫০. নিচের কোন ডিভাইসটি প্রধানত এম্বেডেড সিস্টেম ব্যবহৃত হয়? — মাইক্রোকন্ট্রোলার
+
+১৫৫. কোন CPU আর্কিটেকচার স্মার্টফোনে বেশি ব্যবহৃত হয়? — RISC
+
+১৫৭. কোন ধরনের Storage Device সবচেয়ে দ্রুত গতি সম্পন্ন? — SSD
+
+১৫৯. LLM চালানোর জন্য নিম্নোক্ত কম্পিউটারের কোন যন্ত্রাংশ সবচেয়ে বেশি গুরুত্বপূর্ণ? — Graphics Card
+
+---
+
+### Operating System &amp; System Concepts{.text-center}
+
+১৪৮. অপারেটিং সিস্টেমে ভার্চুয়াল মেমোরি ব্যবহার করা হয়- — সেকেন্ডারি স্টোরেজ ব্যবহার করে RAM বাড়াতে
+
+১৪৯. কম্পিউটার সিস্টেমের বেঞ্চমার্কিং করা হয় কী পরিমাপের জন্য? — সিস্টেমের কর্ম ক্ষমতা (Performance)
+
+১৫৬. কম্পিউটার টার্ন অন এর সময় সঠিক অর্ডার নিচের কোনটি? — POST → Bootloader → Kernel
+
+---
+
+### Networking &amp; Internet Security{.text-center}
+
+১৫১. ই-কমার্সে সুরক্ষিত অনলাইন লেনদেনে প্রধানত কোন প্রটোকল ব্যবহৃত হয়? — HTTPS
+
+১৫২. বিভিন্ন নেটওয়ার্কের মধ্যে যোগাযোগ স্থাপনের জন্য নিচের কোন ডিভাইসটি ব্যবহৃত হয়? — রাউটার
+
+---
+
+### Cloud Computing{.text-center}
+
+১৫৩. ক্লাউড কম্পিউটিং এর কোন মডেলটি অ্যাপ্লিকেশন তৈরি করার জন্য প্রোগ্রামারদেরকে প্লাটফর্ম সরবরাহ করে? — PaaS
+
+---
+
+### Number System &amp; Data Representation{.text-center}
+
+১৫৪. একটি কম্পিউটার সিস্টেমে (১১০০১০১১)₂ বাইনারি সংখ্যাটির মান ডেসিমেল এ কত হবে? — উপরিউক্ত সবকটি হতে পারে
+
+---
+
+### Algorithms &amp; Complexity{.text-center}
+
+১৫৮. ধরা যাক Algorithm A এর running time O(n2) এবং Algorithm B এর running time O(n)। তাহলে নিচের কোনটি সবচেয়ে সঠিক? — Algorithm A, Algorithm B এর চেয়ে asymptotically ধীর গতির
+
+---
+
+### Emerging Technologies (IoT, AI, Quantum){.text-center}
+
+১৪৭. Precision Agriculture এ সাধারণত নিচের কোন প্রযুক্তি ব্যবহৃত হয়? — আই.ও.টি (IoT), সেন্সর
+
+১৬০. Quantum Computing এর জনক কাকে মনে করা হয়? — David Deutsch
+
+---
+
+## Frequency Table
+
+| Category                                 | Number of Questions |
+| ---------------------------------------- | ------------------- |
+| Computer Architecture &amp; Hardware         | 5                   |
+| Operating System &amp; System Concepts       | 3                   |
+| Networking &amp; Internet Security           | 2                   |
+| Cloud Computing                          | 1                   |
+| Number System &amp; Data Representation      | 1                   |
+| Algorithms &amp; Complexity                  | 1                   |
+| Emerging Technologies (IoT, AI, Quantum) | 2                   |
+</md></sn>
   <config>
     <tags>#47</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat May 02 2026 13:28:39 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat May 02 2026 13:29:45 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-11ebTaNZJ5</id>
     <duration></duration>
   </config>
