@@ -1,10 +1,37 @@
 
-  <sn></sn>
+  <sn><md>### Genre Identification{.text-center}
+
+* **6. Doctor Faustus is ____** — a tragedy
+
+---
+
+### Author and His/Her Work{.text-center}
+
+* **10. John Keats wrote ___** — Ode on a Grecian urn
+* **18. Who composed 'Paradise Lost'?** — John Milton
+* **55. Lord of the Flies was written by ___.** — William Golding
+
+---
+
+### Nationality of Author{.text-center}
+
+* **45. Charles Dickens was an English ___** — novelist
+
+---
+
+### Frequency Table
+
+| Category                | Number of Questions |
+| ----------------------- | ------------------- |
+| Genre Identification    | 1                   |
+| Author and His/Her Work | 3                   |
+| Nationality of Author   | 1                   |
+</md></sn>
   <config>
     <tags>#48</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat May 02 2026 12:54:39 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat May 02 2026 12:54:50 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Nm3zppat2r</id>
     <duration></duration>
   </config>
