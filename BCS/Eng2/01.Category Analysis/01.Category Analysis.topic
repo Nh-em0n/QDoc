@@ -1,10 +1,18 @@
 
-  <sn></sn>
+  <sn><md>| Category | Number of Questions | Percentage of Grammar Questions |
+|----------|--------------------|-------------------------------|
+| **Words** (Vocabulary, Synonyms, Antonyms, Spelling, Gender, Singular/Plural, Word Meanings) | ~175 | 28.5% |
+| **Parts of Speech** (Nouns, Verbs, Adjectives, Adverbs, Prepositions, Conjunctions, Interjections, Gerunds, Participles) | ~150 | 24.4% |
+| **Sentences and Transformations** (Active/Passive Voice, Direct/Indirect Narration, Simple/Compound/Complex Sentences, Degrees of Comparison, Conditionals) | ~120 | 19.5% |
+| **Corrections** (Identifying Correct/Incorrect Sentences, Error Detection) | ~80 | 13.0% |
+| **Idioms and Phrases** | ~50 | 8.1% |
+| **Clauses** (Noun Clauses, Adjective Clauses, Adverb Clauses) | ~40 | 6.5% |
+| **Total** | **~615** | **100%** |</md></sn>
   <config>
     <tags>#01.category analysis</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon May 04 2026 22:51:23 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon May 04 2026 23:12:42 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-klPsF6iP0f</id>
     <duration></duration>
   </config>
