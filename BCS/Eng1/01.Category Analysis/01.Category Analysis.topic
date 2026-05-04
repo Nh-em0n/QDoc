@@ -1,70 +1,18 @@
+  <sn><md>## Literature Categories – Number of Questions and Percentage (Total ~485)
 
-  <sn><md>### Literature Analysis
-
-| Category | Number of Questions | Percentage of Literature Questions |
-|----------|--------------------|-----------------------------------|
-| **1. Author and His/Her Work** (Who wrote what) | ~135 | 27.8% |
-| **7. Character–Author / Character–Work Matching** | ~95 | 19.6% |
-| **3. Famous Quotes – Author Identification** | ~65 | 13.4% |
-| **5. Literary Movement / School** (Romanticism, Victorianism, Modernism, etc.) | ~50 | 10.3% |
-| **2. Literary Period / Age Identification** | ~45 | 9.3% |
-| **4. Genre Identification** (Novel, Play, Epic, Poem, Essay) | ~40 | 8.2% |
-| **8. Nationality of Author** (British, American, Irish, etc.) | ~35 | 7.2% |
-| **6. Publication-related Facts** (First novel, famous book, year — rare) | ~20 | 4.1% |
-| **Total** | **~485** | **100%** |
-
----
-
-## Detailed Explanation with Examples from PDF
-
-### 1. Author and His/Her Work (~135 questions, 27.8%)
-Most frequent category. Questions ask directly about who wrote what.
-- *“Who wrote ‘A Vindication of the Rights of Women’?”* → Mary Wollstonecraft
-- *“Who composed ‘Paradise Lost’?”* → John Milton
-- *“The novel ‘Wuthering Heights’ was penned by the author under the penname”* → Ellis Bell (Emily Brontë)
-
-### 2. Character–Author / Character–Work Matching (~95 questions, 19.6%)
-Identifying which character appears in which work, or who created a character.
-- *“Elizabeth Bennet appears in the novel”* → Pride and Prejudice
-- *“Caliban is an important character from Shakespeare’s”* → The Tempest
-- *“Clym Yeobright is the protagonist of the novel”* → The Return of the Native
-
-### 3. Famous Quotes – Author Identification (~65 questions, 13.4%)
-Recognizing famous lines and their authors (often from plays or poems).
-- *“To be, or not to be, that is the question”* → Hamlet (Shakespeare)
-- *“Frailty, thy name is woman”* → Hamlet
-- *“If Winter comes, can Spring be far behind?”* → P.B. Shelley
-- *“Good fences make good neighbors”* → Robert Frost
-
-### 4. Literary Movement / School (~50 questions, 10.3%)
-Identifying characteristics of movements or which writer belongs to which school.
-- *“Which of these is not characteristic of English Romantic Poetry?”* → Inane and gaudy phraseology
-- *“Who is not a Romantic poet?”* → T.S. Eliot
-- *“The Romantic Age in English literature began with the publication of”* → Preface to Lyrical Ballads
-
-### 5. Literary Period / Age Identification (~45 questions, 9.3%)
-Naming or recognizing specific historical periods in English literature.
-- *“Which period is known as ‘The Golden Age of English Literature’?”* → The Elizabethan Age
-- *“Restoration period in English literature refers to”* → 1660
-- *“In which century was the Victorian period?”* → 19th century
-
-### 6. Genre Identification (~40 questions, 8.2%)
-Classifying a work as tragedy, comedy, epic, lyric, mock-heroic, etc.
-- *“Doctor Faustus is”* → a tragedy
-- *“The Rape of the Lock by Alexander Pope is a/an”* → mock-heroic poem
-- *“Shakespeare’s ‘Measure for Measure’ is a successful”* → comedy
-
-### 7. Nationality of Author (~35 questions, 7.2%)
-Identifying whether a writer is British, American, Irish, etc.
-- *“Who is not an Irish writer?”* → D.H. Lawrence
-- *“Which of the following is not an American poet?”* → W.B. Yeats
-- *“Of the following authors, who wrote an epic?”* (nationality implied) → John Milton (British)
-
-### 8. Publication-related Facts (~20 questions, 4.1%)
-Rare but appears occasionally – dates, first editions, significant publication events.
-- *“The Romantic Age in English literature began with the publication of”* → Lyrical Ballads (1798)
-- *“When was the first English dictionary compiled?”* → 1755 by Samuel Johnson
-- *“Shakespeare was born in”* → 1564
+| Category | Number of Questions | Percentage |
+|----------|--------------------|-------------|
+| Author and His/Her Work | 110 | 22.7% |
+| Character–Author / Character–Work Matching | 80 | 16.5% |
+| Famous Quotes – Author Identification | 55 | 11.3% |
+| Literary Terms & Devices | 45 | 9.3% |
+| Literary Movement / School | 45 | 9.3% |
+| Literary Period / Age Identification | 40 | 8.2% |
+| Genre Identification | 35 | 7.2% |
+| Theme, Symbolism & Interpretation | 30 | 6.2% |
+| Nationality of Author | 25 | 5.2% |
+| Publication-related Facts (incl. author biography) | 20 | 4.1% |
+| **Total** | **485** | **100%** |
 </md></sn>
   <config>
     <tags>#01.category analysis</tags>
