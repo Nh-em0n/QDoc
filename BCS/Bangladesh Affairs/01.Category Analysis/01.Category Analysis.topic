@@ -1,10 +1,26 @@
 
-  <sn></sn>
+  <sn><md>### Category Analysis
+
+
+| Category | Question Count | Percentage (%) |
+|----------|---------------|----------------|
+| বাংলাদেশের ইতিহাস (History) | 152 | 27.9% |
+| বাংলাদেশের অর্থনীতি (Economy) | 72 | 13.2% |
+| বাংলাদেশের সংবিধান (Constitution) | 67 | 12.3% |
+| বাংলাদেশের কৃষি সম্পদ (Agriculture) | 56 | 10.3% |
+| বাংলাদেশের সরকার ব্যবস্থা (Government System) | 53 | 9.7% |
+| বাংলাদেশের শিল্প ও বাণিজ্য (Industry &amp; Trade) | 41 | 7.5% |
+| বাংলাদেশের রাজনৈতিক ব্যবস্থা (Political System) | 44 | 8.1% |
+| বাংলাদেশের জনসংখ্যা ও জাতি গোষ্ঠী (Population &amp; Ethnic Groups) | 35 | 6.4% |
+| বাংলাদেশের বিশিষ্ট (Special Things / Unique Features) | 25 | 4.6% |
+| **Total** | **545** | **100%** |
+
+</md></sn>
   <config>
     <tags>#01.category analysis</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon May 04 2026 21:36:16 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon May 04 2026 21:52:49 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-n5y5gPqcgA</id>
     <duration></duration>
   </config>
