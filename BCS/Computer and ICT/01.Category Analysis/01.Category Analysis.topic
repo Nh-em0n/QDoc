@@ -1,10 +1,38 @@
 
-  <sn></sn>
+  <sn><md>| Category | Count | Percentage |
+|---|---|---|
+| Computer Network | 35 | 19.3% |
+| Computer Architecture | 30 | 16.6% |
+| Computer Peripherals | 11 | 6.1% |
+| Number Systems of Computer | 10 | 5.5% |
+| Cyber Crime | 10 | 5.5% |
+| Operating Systems | 9 | 5.0% |
+| Computer Program | 9 | 5.0% |
+| Information Technologies in Practical Fields | 9 | 5.0% |
+| Database System | 7 | 3.9% |
+| World Wide Web (WWW) | 7 | 3.9% |
+| Cloud Computing | 6 | 3.3% |
+| Internet | 5 | 2.8% |
+| E-Commerce | 4 | 2.2% |
+| Cellular Data Network | 4 | 2.2% |
+| Smartphone | 4 | 2.2% |
+| Daily-Use Computing Technology | 4 | 2.2% |
+| Computer in Practical Fields | 3 | 1.7% |
+| History of Computer | 3 | 1.7% |
+| Tech-Giants Services &amp; Information | 3 | 1.7% |
+| Social Networking | 3 | 1.7% |
+| Computer Performance | 2 | 1.1% |
+| Types of Computers | 2 | 1.1% |
+| Embedded Computer | 1 | 0.6% |
+| Client-Server Management | 0 | 0% |
+| Mobile Features | 0 | 0% |
+| Robotics | 0 | 0% |
+</md></sn>
   <config>
     <tags>#01</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue May 05 2026 12:18:58 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue May 05 2026 12:19:49 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ZO7oXLmpEP</id>
     <duration></duration>
   </config>
