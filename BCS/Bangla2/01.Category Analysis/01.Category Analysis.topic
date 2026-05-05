@@ -1,10 +1,25 @@
 
-  <sn></sn>
+  <sn><md>| শ্রেণি | প্রশ্ন সংখ্যা | শতকরা হার |
+| :--- | :--- | :--- |
+| বানান ও বাক্য শুদ্ধি | ৬০ | ১৭.০% |
+| বাক্য | ৪৮ | ১৩.৬% |
+| প্রয়োগ-অপপ্রয়োগ | ৩৮ | ১০.৮% |
+| শব্দ | ৩৮ | ১০.৮% |
+| সমাস | ৩২ | ৯.১% |
+| সমার্থক ও বিপরীতার্থক শব্দ | ২৭ | ৭.৭% |
+| ধ্বনি | ২৫ | ৭.১% |
+| প্রত্যয় | ২৪ | ৬.৮% |
+| সন্ধি | ২২ | ৬.৩% |
+| পদ | ১৮ | ৫.১% |
+| পরিভাষা | ১২ | ৩.৪% |
+| বর্ণ | ৮ | ২.৩% |
+| **মোট** | **৩৫২** | **১০০%** |
+</md></sn>
   <config>
     <tags>#01.category analysis</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue May 05 2026 10:08:16 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue May 05 2026 10:08:28 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-5w5fnehPz8</id>
     <duration></duration>
   </config>
