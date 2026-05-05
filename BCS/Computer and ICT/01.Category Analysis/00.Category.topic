@@ -1,10 +1,37 @@
 
-  <sn></sn>
+  <sn><md>### Category
+
+1. Computer Network
+2. Computer Architecture
+3. Computer Peripherals
+4. Number Systems of Computer
+5. Cyber Crime
+6. Operating Systems
+7. Computer Program
+8. Information Technologies in Practical Fields
+9. Database System
+10. World Wide Web (WWW)
+11. Cloud Computing
+12. Internet
+13. E-Commerce
+14. Cellular Data Network
+15. Smartphone
+16. Daily-Use Computing Technology
+17. Computer in Practical Fields
+18. History of Computer
+19. Tech-Giants Services &amp; Information
+20. Social Networking
+21. Computer Performance
+22. Types of Computers
+23. Embedded Computer
+24. Client-Server Management
+25. Mobile Features
+26. Robotics</md></sn>
   <config>
     <tags>#00.category</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue May 05 2026 12:20:09 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue May 05 2026 12:22:49 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-28HW1FBDGC</id>
     <duration></duration>
   </config>
