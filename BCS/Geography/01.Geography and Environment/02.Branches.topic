@@ -1,10 +1,173 @@
 
-  <sn></sn>
+  <sn><md>#### Branches of `Geography`
+
+```text
+                 Geography
+                     │
+          ┌──────────┴──────────┐
+          │                     │
+          ▼                     ▼
+   Physical Geography    Human Geography
+```
+
+
+```
++-----------------------------+
+|      BRANCHES OF GEOGRAPHY |
++-----------------------------+
+              |
+              |
+      +-------+-------+
+      |               |
+      v               v
++------------+   +------------+
+|  PHYSICAL  |   |   HUMAN    |
+| GEOGRAPHY  |   | GEOGRAPHY  |
++------------+   +------------+
+      |               |
+      |               |
+      v               v
++------------+   +------------+
+| 1. Geo-    |   | 1. Economic|
+|    morphology|   |   Geography|
++------------+   +------------+
+| 2. Climato- |   | 2. Popula- |
+|    logy     |   |   tion Geo.|
++------------+   +------------+
+| 3. Bio-     |   | 3. Regional|
+|    geography|   |   Geography|
++------------+   +------------+
+| 4. Soil     |   | 4. Political|
+|    geography|   |   Geography|
++------------+   +------------+
+| 5. Oceano-  |   | 5. Quantita-|
+|    graphy   |   |   tive Geo. |
++------------+   +------------+
+                | 6. Transport|
+                |   Geography |
+                +------------+
+                | 7. Urban    |
+                |   Geography |
+                +------------+
+                | 8. Disaster |
+                |   Management|
+                +------------+
+```
+</md></sn>
   <config>
     <tags>#02.scope and branches</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun May 17 2026 10:39:21 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun May 17 2026 11:24:47 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-eCLwr39Qgk</id>
     <duration></duration>
   </config>
+<sn><md>#### Physical Geography
+
+(a) Physical geography : Physical Geography is that branch of Geography dealing with the natural features of the earth, the home of human beings. Physical Geography deals with water, air, animals, and the land of the planet earth i.e. everything that is part of the four spheres-the `atmosphere`, `biosphere`, `hydrosphere` and `lithosphere`.
+
+
+```text
+           Physical Geography
+                    │
+      ┌─────────────┼─────────────┐
+      │             │             │
+   Water           Air         Land
+      │                           │
+      └─────────────┬─────────────┘
+                    │
+     Atmosphere • Biosphere •
+     Hydrosphere • Lithosphere
+```
+</md></sn><sn><md>#### Branches of `Physical Geography`
+
+1. `Geomorphology` : Geomorphologists study the landforms of the planet, from their development to their disappearance through erosion and other processes.
+
+2. `Climatology` : Climate geographers investigate the distribution of long term weather patterns and activities of the earth's atmosphere.
+
+3. `Biogeography` : Biogeography studies the distribution of plants and animals on or near the surface of the earth.
+
+4. `Soil geography` : Soil geographers study the upper layer of the lithosphere, the soil of the earth and its categorization and patterns of distribution.
+
+5. `Oceanography`: About three fourth of the earth is water. Oceanography discusses the transport and communication among continents through ocean, the rise and fall of ocean surface, determination of chemical quality and salinity and the management of ocean resources.
+
+| Branch           | Focus                        |
+| ---------------- | ---------------------------- |
+| `Geomorphology`  | landforms                    |
+| `Climatology`    | weather patterns, atmosphere |
+| `Biogeography`   | plants and animals           |
+| `Soil geography` | soil, lithosphere            |
+| `Oceanography`   | ocean, salinity, resources   |
+
+**সারসংক্ষেপ:** geomorphology, climatology, biogeography, soil, oceanography
+
+```text
+         Physical Geography
+                  │
+    ┌─────────────┼─────────────┐
+    │             │             │
+ Landforms     Climate      Living Things
+    │             │             │
+ Geomorphology Climatology Biogeography
+    │
+ Soil ───── Ocean
+```</md></sn><sn><md>#### Human Geography
+
+(b) Human geography is a major branch of geography that studies people and their interaction with the earth and with their organization of space on the earth's surface.
+
+**সারসংক্ষেপ:** human geography, people, interaction, space
+
+```text
+            Human Geography
+                    │
+          ┌─────────┴─────────┐
+          │                   │
+        People          Earth Surface
+          │                   │
+          └────── Interaction ──────┘
+```</md></sn><sn><md>#### Branches of `Human Geography`
+
+1. `Economic geography`: Economic geography deals with economic activities people undergo to live and cope with nature and natural environment.
+
+2. `Population geography`: Population Geography focuses on population, trend of population growth, its cause and effect, its influence on social and economic life.
+
+3. `Regional geography`: As per regions, the earth has distinctive physiography, climate, vegetation, animals, population and lifestyle. Regional Geography focuses on studying geographical matters of different regions of the earth.
+
+4. `Political geography`: Political Geography deals with political evolution, political division and boundary demarcation.
+
+5. `Quantitative geography`: Quantitative geography uses quantitative techniques and models to test hypothesis. Quantitative methods are often used in many other branches of Geography but some geographers are specialized in quantitative methods only.
+
+6. `Transport geography`: Transport geographers study government and non-government transport system and transportation of people and goods from one place to another.
+
+7. `Urban geography`: Urban Geography deals with the origin, evolution, classifications, environment and different areas of cities and towns.
+
+8. `Disaster management`: Disaster management focuses on how to reduce loss during disasters and how to protect environment and oceans from disasters.
+
+| Branch                   | Focus                    |
+| ------------------------ | ------------------------ |
+| `Economic geography`     | economic activities      |
+| `Population geography`   | population growth        |
+| `Regional geography`     | regional characteristics |
+| `Political geography`    | politics, boundaries     |
+| `Quantitative geography` | techniques, models       |
+| `Transport geography`    | transport systems        |
+| `Urban geography`        | cities and towns         |
+| `Disaster management`    | disaster loss reduction  |
+
+**সারসংক্ষেপ:** economic, population, regional, political, quantitative, transport, urban, disaster
+
+```text
+            Human Geography
+                    │
+   ┌────────────────┼────────────────┐
+   │                │                │
+ Economy        Population        Region
+   │                │                │
+ Politics     Transport        Urban Life
+                    │
+              Disaster Management
+```
+</md></sn><sn><md>#### `Geography` and `Environment`
+
+Whatever branch we discuss, environment is always an issue. At present Geography and Environment are taught in an integrated way. Natural and social environment bear equal importance in geographical science.
+</md></sn>
