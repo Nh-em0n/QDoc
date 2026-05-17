@@ -1,11 +1,75 @@
 
-  <sn></sn>
+  <sn><md>#### Concept of `Environment`
+
+
+People live in an environment. An environment is made up of rivers, oceans, mountains, forests, streets, roads, plants, animals, water, soil and air. All activities of human beings have profound effect on natural and man-made features of the environment. Environmental scientist `Arts` said, "Environment is the surrounding organic and natural situations of animals."
+
+&gt; `C.C. Park` says, "Environment means the sum of all the situations of humans at the point of place and time."
+
+Environment changes with the change of time and place. For example, at the beginning of mankind, water, air, plants and animals made up the environment. Later, human interference, social, economic, cultural and political activities developed a new environment i.e. `human environment`.
+
+
+```text
+                Environment
+                     │
+      ┌──────────────┼──────────────┐
+      │              │              │
+   Nature         Humans        Activities
+      │              │              │
+      └──────────────┼──────────────┘
+                     │
+              Change of Time
+              Change of Place
+```</md></sn>
   <config>
     <tags>#03.concept of environment</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun May 17 2026 11:28:00 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun May 17 2026 11:35:00 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-oB6bIQdNfv</id>
     <duration></duration>
   </config>
-<sn></sn><sn></sn><sn></sn><sn></sn>
+<sn><md>#### `Elements` of Environment
+
+Environment is made of two kinds of elements - `living` and `non living` elements. Those who have life, take food, have intelligence, have birth/death and growth are living things/elements.Trees, birds and animals, insects, humans and other animals are living things. These are the living elements of environment. Earth, water, air, mountains, rivers, seas, light, temperature, moisture are the non living things/elements. They make non living environment.
+
+
+| Element Type | Examples                                                                 |
+| ------------ | ------------------------------------------------------------------------ |
+| `Living`     | Trees, birds and animals, insects, humans and other animals              |
+| `Non living` | Earth, water, air, mountains, rivers, seas, light, temperature, moisture |
+
+```text
+               Environment
+                    │
+        ┌───────────┴───────────┐
+        │                       │
+        ▼                       ▼
+      Living               Non Living
+        │                       │
+ Trees, Birds,            Earth, Water,
+ Animals, Humans          Air, Light
+        │                       │
+        └────── Inter-relationship ──────┘
+```
+</md></sn><sn><md>#### `Types` of Environment
+
+**Types of environment :** There are two types of environment- - `natural environment` and `social environment`. Earth, water, air, mountains, rivers, seas, light, trees, birds, animals and insects, constitute natural environment. On the other hand, human behaviours, rituals, education, values, economics and politics constitute social environment.
+
+| Type                  | Elements                                                                             |
+| --------------------- | ------------------------------------------------------------------------------------ |
+| `Natural environment` | Earth, water, air, mountains, rivers, seas, light, trees, birds, animals and insects |
+| `Social environment`  | Human behaviours, rituals, education, values, economics and politics                 |
+
+```text
+                Environment
+                     │
+         ┌───────────┴───────────┐
+         │                       │
+         ▼                       ▼
+   Natural Environment    Social Environment
+         │                       │
+  Earth, Water, Air       Behaviour, Education,
+  Trees, Animals          Economics, Politics
+```
+</md></sn><sn></sn><sn></sn>
