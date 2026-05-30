@@ -1,10 +1,20 @@
 
-  <sn></sn>
+  <sn><md>### Field
+
+Field is the brnach that describe the profession on which we act on throught my life.
+
+```
+field
+|--- BCS
+|--- Programming
+|--- SES
+|--- Religious Study
+```</md></sn>
   <config>
     <tags>#01.field</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat May 30 2026 17:44:33 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat May 30 2026 17:54:33 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-O7kOvLxwjC</id>
     <duration></duration>
   </config>
