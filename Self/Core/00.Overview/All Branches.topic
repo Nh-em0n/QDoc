@@ -1,10 +1,34 @@
 
-  <sn></sn>
+  <sn><md>#### Branches
+
+In the making of Emon , I create some branches upon which we will work . The branches are :
+
+```
+self
+|---&gt; field 
+|---&gt; character
+|---&gt; communication
+|---&gt; core
+|---&gt; course
+|---&gt; Entertainment
+|---&gt; framework
+|---&gt; habit
+|---&gt; health
+|---&gt; wealth
+|---&gt; philosophy
+|---&gt; profile
+|---&gt; skill
+|---&gt; style
+|---&gt; target
+|---&gt; update
+|---&gt; changed
+|---&gt; preparation
+```</md></sn>
   <config>
     <tags>#all branches</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat May 30 2026 17:35:41 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat May 30 2026 17:43:27 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-UYsLwZFU2M</id>
     <duration></duration>
   </config>
