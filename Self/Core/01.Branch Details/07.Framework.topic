@@ -1,10 +1,28 @@
 
-  <sn></sn>
+  <sn><md>#### Framework
+
+Framework is a mechanism by which we get most effiecient output of our action.Instead of random work we analyze the procedure and make step by step action to fullfil certain action.
+
+Like instead of randomly reading a page we create a framework of completing a page
+- Write the title
+- Overview of overall page
+- Read whole page once
+- Divide whole content into different section
+- 5 min loop
+  in each loop
+  - read whole section
+  - highlight important segment
+  - explain to imaginery classroom
+  - summarize content
+  - tell the highlight again
+  - END
+
+  </md></sn>
   <config>
     <tags>#06.framework</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat May 30 2026 18:28:52 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat May 30 2026 19:56:07 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-QIs461e6zC</id>
     <duration></duration>
   </config>
