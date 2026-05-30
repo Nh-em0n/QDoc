@@ -1,10 +1,21 @@
 
-  <sn></sn>
+  <sn><md>### Target
+
+Target is a sequence of event in a certain period.It contains action that proceed all branches mission.A target is composed of 3 things
+
+- **Period** <br>
+The duration over which we have to perform our action.
+
+- **Actions** <br>
+List of action to perform in given period.
+
+- **Prediction** <br>
+Prdict the ways by which our action will not be completed or ruined.</md></sn>
   <config>
     <tags>#15.target</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat May 30 2026 18:30:36 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat May 30 2026 19:12:44 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Yu3QahcsyE</id>
     <duration></duration>
   </config>
