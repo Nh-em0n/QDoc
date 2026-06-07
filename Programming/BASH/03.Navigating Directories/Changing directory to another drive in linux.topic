@@ -1,10 +1,193 @@
 
-  <sn></sn>
+  <sn><md>##### Changing directory to another drive in linux
+
+Linux doesn’t use **D:, E:** like Windows. Instead, all drives are mounted into one tree starting from `/`.
+
+See all drives first
+
+```bash
+lsblk
+```
+
+or
+
+```bash
+sudo fdisk -l
+```
+
+You’ll see something like:
+
+* `/dev/sda1`
+* `/dev/sdb1`
+</md></sn>
   <config>
     <tags>#changing directory to another drive in linux</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Jun 07 2026 09:50:41 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Jun 07 2026 10:13:50 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-7MzIaSziiy</id>
     <duration></duration>
   </config>
+<sn><md>### Check where they are mounted
+
+```bash
+df -h
+```
+
+Look for mount points like:
+
+* `/`
+* `/home`
+* `/media/emon/DriveName`
+</md></sn><sn><md>#### Go to another drive (like D/E equivalent)
+
+Most external or secondary drives are auto-mounted under `/media` or `/mnt`.
+
+Example:
+
+```bash
+cd /media/$USER/DriveName
+```
+
+or
+
+```bash
+cd /mnt
+```
+</md></sn><sn><md>#### If the drive is NOT mounted, mount it manually
+
+Example:
+
+```bash
+sudo mkdir /mnt/disk2
+sudo mount /dev/sdb1 /mnt/disk2
+cd /mnt/disk2
+```
+</md></sn><sn><md>#### list all mountable partitions
+
+```bash
+ls /dev/sd*
+```
+</md></sn><sn><md>#### Check my Filesystem {.text-center .text-light}
+
++++ filesystem output 
+
+```bash
+
+emon@em09:~$ lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0     4K  1 loop /snap/bare/5
+loop1    7:1    0  55.5M  1 loop /snap/core18/2999
+loop2    7:2    0  63.8M  1 loop /snap/core20/2866
+loop3    7:3    0    74M  1 loop /snap/core22/2411
+loop4    7:4    0  66.8M  1 loop /snap/core24/1587
+loop5    7:5    0  66.8M  1 loop /snap/core24/1643
+loop6    7:6    0  19.6M  1 loop /snap/desktop-security-center/150
+loop7    7:7    0    20M  1 loop /snap/desktop-security-center/151
+loop8    7:8    0 131.1M  1 loop /snap/falcon-pdf/1
+loop9    7:9    0 273.7M  1 loop /snap/firefox/8107
+loop10   7:10   0  16.5M  1 loop /snap/firmware-updater/226
+loop11   7:11   0 606.1M  1 loop /snap/gnome-46-2404/153
+loop12   7:12   0 164.8M  1 loop /snap/gnome-3-28-1804/198
+loop13   7:13   0 531.4M  1 loop /snap/gnome-42-2204/247
+loop14   7:14   0  91.7M  1 loop /snap/gtk-common-themes/1535
+loop15   7:15   0   1.7M  1 loop /snap/gnome-system-monitor/193
+loop16   7:16   0   4.3M  1 loop /snap/lxqt-support-core24/16
+loop17   7:17   0   395M  1 loop /snap/mesa-2404/1165
+loop18   7:18   0   1.4G  1 loop /snap/kf6-core24/36
+loop19   7:19   0  70.2M  1 loop /snap/okular/174
+loop20   7:20   0  18.8M  1 loop /snap/prompting-client/204
+loop21   7:21   0  49.3M  1 loop /snap/snapd/26865
+loop22   7:22   0  18.8M  1 loop /snap/prompting-client/222
+loop23   7:23   0  15.7M  1 loop /snap/snap-store/1367
+loop24   7:24   0   580K  1 loop /snap/snapd-desktop-integration/361
+loop25   7:25   0  72.8M  1 loop /snap/sublime-merge/127
+loop26   7:26   0  64.7M  1 loop /snap/sublime-text/219
+loop27   7:27   0 322.9M  1 loop /snap/wine-platform-6-stable/19
+loop29   7:29   0 346.7M  1 loop /snap/wine-platform-runtime/409
+loop30   7:30   0  28.9M  1 loop /snap/pdfarranger/41
+sda      8:0    0 931.5G  0 disk 
+├─sda1   8:1    0   100M  0 part 
+├─sda2   8:2    0    16M  0 part 
+├─sda3   8:3    0 296.1G  0 part 
+├─sda4   8:4    0  97.7G  0 part /run/media/emon/Study
+├─sda5   8:5    0 244.1G  0 part 
+├─sda6   8:6    0   293G  0 part 
+└─sda7   8:7    0   576M  0 part 
+sdb      8:16   0 111.8G  0 disk 
+├─sdb1   8:17   0   100M  0 part /boot/efi
+├─sdb2   8:18   0    16M  0 part 
+├─sdb3   8:19   0  61.1G  0 part 
+├─sdb4   8:20   0   7.8G  0 part 
+├─sdb5   8:21   0   750M  0 part 
+└─sdb6   8:22   0    42G  0 part /
+emon@em09:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           1.1G  3.8M  1.1G   1% /run
+/dev/sdb6        42G   22G   18G  56% /
+tmpfs           2.6G   47M  2.6G   2% /dev/shm
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+/dev/sdb1        96M   33M   64M  34% /boot/efi
+tmpfs           2.6G   11M  2.6G   1% /tmp
+tmpfs           527M  124K  527M   1% /run/user/1000
+/dev/sda4        98G  3.3G   95G   4% /run/media/emon/Study
+
+```
+
++++
+
+My “Study” drive is already mounted here:
+
+```
+/run/media/emon/Study
+```
+
+Move into it
+
+Just use `cd`:
+
+```bash
+cd /run/media/emon/Study
+```
+
+Verifying I am inside
+
+```bash
+pwd
+```
+
+should see:
+
+```
+/run/media/emon/Study
+```
+
+List files in it
+
+```bash
+ls
+```
+
+---
+
+faster access (shortcut idea)
+
+Instead of typing full path every time:
+
+```bash
+cd /media
+cd /run/media/emon/Study
+```
+
+or create a shortcut:
+
+```bash
+alias study='cd /run/media/emon/Study'
+```
+
+Then just:
+
+```bash
+study
+```</md></sn>
