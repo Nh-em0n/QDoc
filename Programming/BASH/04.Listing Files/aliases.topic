@@ -1,10 +1,18 @@
 
-  <sn></sn>
+  <sn><md>### Useful Aliases
+
+```bash
+
+alias files='tree -L 1'
+
+alias Files='tree'
+
+```</md></sn>
   <config>
     <tags>#aliases</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Jun 07 2026 14:55:17 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Jun 07 2026 14:58:32 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-XSAMYUimuM</id>
     <duration></duration>
   </config>
