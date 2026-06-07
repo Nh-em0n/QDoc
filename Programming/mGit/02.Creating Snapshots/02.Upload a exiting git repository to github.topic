@@ -1,11 +1,11 @@
 
-  <sn><md>You already have the project locally, so you just need to **connect your local Git repository to a GitHub repository and push it**. Since you are using **Linux Mint**, these commands will work directly in your terminal.
+  <sn><md>You already have the project locally, so you just need to **connect your local Git repository to a GitHub repository and push it**. Since you are using **Linux**, these commands will work directly in your terminal.
 </md></sn>
   <config>
     <tags>#02.upload a exiting git repository to github</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Mar 15 2026 05:37:03 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Jun 07 2026 10:44:13 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-wgVqDfIbZy</id>
     <duration></duration>
   </config>
