@@ -1,10 +1,129 @@
 
-  <sn></sn>
+  <sn><md># Fixing Drive Mounting Problems in Linux
+
+When a drive can be accessed in Windows but fails to mount in Linux, the issue is often caused by filesystem inconsistencies, NTFS journal locks, or improper shutdowns in Windows. Linux provides tools to identify the drive and repair common NTFS-related mounting problems.
+
+## Step 1: Identify the Drive Partition
+
+Open a terminal and run:
+
+```bash
+sudo fdisk -l
+```
+
+This command lists all detected disks and their partitions.
+
+Look for the partition you want to mount, such as:
+
+```text
+/dev/sda3
+/dev/sda4
+/dev/sdb1
+/dev/sdb2
+```
+
+Here:
+
+* `sda`, `sdb`, `sdc` represent different storage devices.
+* The final number (`1`, `2`, `3`, etc.) represents a partition on that device.
+
+Make a note of the partition that is causing the mounting problem.
+
+---
+
+## Step 2: Install Required Utilities
+
+Install NFS utilities:
+
+```bash
+sudo apt-get install nfs-common
+```
+
+Install CIFS/SMB utilities:
+
+```bash
+sudo apt-get install cifs-utils
+```
+
+These packages provide additional filesystem and network mounting support that may be required by some systems.
+
+---
+
+## Step 3: Remove the NTFS Dirty Flag
+
+If the partition uses NTFS and Linux reports errors such as:
+
+```text
+Failed to mount
+NTFS is either inconsistent
+Windows is hibernated
+Input/output error
+```
+
+run:
+
+```bash
+sudo ntfsfix -d /dev/your_partition
+```
+
+Replace `your_partition` with the actual partition name.
+
+Example:
+
+```bash
+sudo ntfsfix -d /dev/sda3
+```
+
+The `-d` option clears the NTFS dirty flag, allowing Linux to attempt mounting the partition again.
+
+---
+
+## Step 4: Mount the Drive Again
+
+After the repair process completes, try mounting the drive again using your file manager or the `mount` command.
+
+Example:
+
+```bash
+sudo mount /dev/sda3 /mnt
+```
+
+If the mount succeeds, the drive should now be accessible from Linux.
+
+---
+
+## Notes
+
+* Always back up important data if the drive shows signs of corruption.
+* If `ntfsfix` reports severe errors repeatedly, run a full disk check from Windows:
+
+```cmd
+chkdsk /f X:
+```
+
+Replace `X:` with the drive letter.
+
+* Repeated mounting failures may indicate a failing HDD/SSD rather than a filesystem problem.
+
+## Quick Commands
+
+```bash
+sudo fdisk -l
+
+sudo apt-get install nfs-common
+
+sudo apt-get install cifs-utils
+
+sudo ntfsfix -d /dev/sda3
+```
+
+[watch tutorial](https://youtu.be/hDq96zim1V4?si=l2B4I0ImtqtSVdTl)
+</md></sn>
   <config>
     <tags>#linux drive mounting error</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jun 08 2026 17:31:40 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jun 08 2026 17:39:33 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-w40U9nc8k5</id>
     <duration></duration>
   </config>
