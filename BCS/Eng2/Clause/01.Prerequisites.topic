@@ -1,10 +1,158 @@
 
-  <sn></sn>
+  <sn><md>### Prerequisite Concepts {.text-center}
+
+Clause শেখার আগে কিছু মৌলিক ব্যাকরণগত ধারণা পরিষ্কার থাকা জরুরি। এই ভিত্তিগুলো ভালোভাবে জানা থাকলে Clause বুঝতে এবং শনাক্ত করতে অনেক সহজ হবে।Clause হলো এমন একটি শব্দগুচ্ছ যার মধ্যে একটি Subject এবং একটি Verb থাকে `( sub+verb )` combinition । কিন্তু Clause শেখার আগে আমাদের কিছু মৌলিক ধারণা জানতে হবে।
+</md></sn>
   <config>
     <tags>#01.prerequisites</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jun 09 2026 01:32:09 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Jun 09 2026 01:53:18 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-eYJDfana7X</id>
     <duration></duration>
   </config>
+<sn><md>### Sentence
+
+Sentence হলো এমন একটি শব্দসমষ্টি যা একটি পূর্ণাঙ্গ অর্থ প্রকাশ করে।
+
+**উদাহরণ:**
+
+* I read books.
+* He is a student.
+* They are playing football.
+
+Clause মূলত Sentence-এর অংশ, তাই Sentence সম্পর্কে পরিষ্কার ধারণা থাকতে হবে।
+</md></sn><sn><md>### **Clause**
+
+A **Clause** is a group of words,which gives complete meaning, and also has a sub-verb combination.
+
+- She is hungry.
+- I am feeling well today.
+
+**Note** : 
+- A simple sentence can also be called **one** caluse.
+- The number of clause in sentence determine the number of `sub+verb` group
+
+So both of example aforementioned is a sentence as well as a clause.
+
+</md></sn><sn><md>#### Now what is the difference between caluse and sentence ?
+---
+A sentence may have more than 1 caluse.
+
+- **She is hungry**
+    - (she + is) - 1 `(sub+verb)` group
+    - 1 sentence with 1 clause.
+- **I waiter for her** but **she did not come**.
+     - (I + waited),(she+did) - 2 `(sub+verb)` group
+     - 1 sentence with 2 clause.
+- **Sonali likes me** but **I like Tanu** because **I want to marry her**.
+     - (Sonali + likes),(I+like),(I+want) - 3 `(sub+verb)` group
+     - 1 sentence with 3 clause.</md></sn><sn><md>### Parts of a Sentence
+
+প্রত্যেক Sentence সাধারণত দুইটি প্রধান অংশ নিয়ে গঠিত।
+
+:::.row
+:::.col-12 .col-md-6
+**`Subject`**
+
+যাকে নিয়ে কথা বলা হয়।
+
+**উদাহরণ:**
+
+* **Rahim** plays cricket.
+* **The boy** is reading.
+:::
+
+:::.col-12 .col-md-6
+**`Predicate`**
+
+Subject সম্পর্কে যা বলা হয়।
+
+**উদাহরণ:**
+
+* Rahim **plays cricket**.
+* The boy **is reading**.
+
+Clause শনাক্ত করার সময় Subject ও Verb খুঁজে বের করা সবচেয়ে গুরুত্বপূর্ণ কাজ।
+:::
+:::
+</md></sn><sn><md>### Verb
+
+Verb হলো সেই শব্দ যা কাজ, অবস্থা বা ঘটনার প্রকাশ করে।
+
+**উদাহরণ:**
+
+* She **writes** a letter.
+* They **play** football.
+* He **is** happy.
+
+প্রত্যেক Clause-এ অন্তত একটি Verb থাকে।
+</md></sn><sn><md>### Finite Verb
+
+Clause বুঝার জন্য Finite Verb সম্পর্কে পরিষ্কার ধারণা থাকা আবশ্যক।
+
+Finite Verb:
+
+* Subject অনুযায়ী পরিবর্তিত হয়।
+* Tense অনুযায়ী পরিবর্তিত হয়।
+
+**উদাহরণ:**
+
+* He **goes** to school.
+* They **go** to school.
+* He **went** to school.
+
+একটি Clause সাধারণত একটি Finite Verb কেন্দ্র করে গঠিত হয়।
+</md></sn><sn><md>### Phrase
+
+Phrase হলো এমন শব্দগুচ্ছ যার মধ্যে Subject-Verb জুটি থাকে না।
+
+**উদাহরণ:**
+
+* in the room
+* a beautiful flower
+* after the rain
+
+Phrase পূর্ণ Clause নয়।
+</md></sn><sn><md>### Phrase ও Clause-এর পার্থক্য
+
+| Phrase               | Clause                        |
+| -------------------- | ----------------------------- |
+| Subject-Verb নেই     | Subject-Verb আছে              |
+| অসম্পূর্ণ ধারণা দেয় | তুলনামূলক সম্পূর্ণ ধারণা দেয় |
+| in the room          | he is in the room             |
+| after the rain       | after the rain stopped        |
+
+Clause শেখার আগে এই পার্থক্য স্পষ্টভাবে জানা জরুরি।
+</md></sn><sn><md>### Conjunction
+
+Clause শেখার ক্ষেত্রে সবচেয়ে গুরুত্বপূর্ণ পূর্বশর্তগুলোর একটি।
+
+**উদাহরণ:**
+
+* I came **because** I was invited.
+* **Although** he is poor, he is honest.
+* **If** you study, you will pass.
+
+এখানে because, although, if বিভিন্ন Clause-কে সংযুক্ত করেছে।
+</md></sn><sn><md>#### Simple, Compound ও Complex Sentence
+
+| Sentence Type         | সংজ্ঞা                                                         | গঠন                                                            | উদাহরণ                      |
+| --------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- | --------------------------- |
+| **Simple Sentence**   | একটি মাত্র Principal Clause থাকে                               | একটিমাত্র Subject + Verb যুক্ত Clause                          | He plays football.          |
+| **Complex Sentence**  | একটি Principal Clause এবং এক বা একাধিক Subordinate Clause থাকে | Principal Clause + Subordinate Clause (Dependent Clause)       | I know that he is honest.   |
+| **Compound Sentence** | দুই বা ততোধিক Principal Clause থাকে                            | Principal Clause + Coordinating Conjunction + Principal Clause | He came and I welcomed him. |
+
+</md></sn><sn><md>#### Clause শেখার মূল প্রস্তুতি
+
+Clause শেখা শুরু করার আগে নিশ্চিত হও যে তুমি নিচের বিষয়গুলো পারো—
+
+☑ Subject শনাক্ত করতে পারো। <br>
+☑ Verb ও Finite Verb চিনতে পারো।<br>
+☑ Phrase এবং Clause-এর পার্থক্য জানো।<br>
+☑ Parts of Speech সম্পর্কে মৌলিক ধারণা আছে।<br>
+☑ Conjunction চিনতে পারো।<br>
+☑ Simple, Compound ও Complex Sentence-এর পার্থক্য জানো।<br>
+
+এই ভিত্তিগুলো আয়ত্ত করার পর Principal Clause, Subordinate Clause, Noun Clause, Adjective Clause এবং Adverbial Clause শেখা অনেক সহজ হয়ে যাবে।
+</md></sn>
