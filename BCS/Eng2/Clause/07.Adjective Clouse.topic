@@ -1,10 +1,100 @@
 
-  <sn></sn>
+  <sn><md>### Adjective Clause{.text-center}
+
+**Adjective Clause** হলো এমন একটি Subordinate Clause যা কোনো Noun বা Pronoun-কে বিশেষিত (modify) করে।
+অর্থাৎ, এটি Adjective-এর মতো কাজ করে।
+
+**উদাহরণ**
+
+* The man **who came here** is my uncle.
+* I know the boy **who won the prize**.
+* This is the book **that I bought**.
+
+এখানে highlighted অংশগুলো Adjective Clause।
+</md></sn>
   <config>
     <tags>#07.adjective clouse</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jun 09 2026 16:07:35 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Jun 09 2026 17:06:31 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-wHe4gVBm4L</id>
     <duration></duration>
   </config>
+<sn><md>### Adjective Clause-এর কাজ
+
+Adjective Clause সবসময় একটি Noun বা Pronoun-কে modify করে।
+
+উদাহরণ বিশ্লেষণ:
+
+* The student **who studies hard** will pass.
+
+এখানে:
+
+* Noun = student
+* Adjective Clause = who studies hard
+* কাজ = student-কে describe করছে
+</md></sn><sn><md>### Adjective Clause-এর বৈশিষ্ট্য
+
+- Noun/Pronoun-এর পরে আসে<br>
+  এটি সবসময় একটি Noun-এর পর
+- Relative Pronoun দিয়ে শুরু হয়<br>
+   সাধারণত নিচের words দিয়ে শুরু হয়: who,whom,whose,which,that
+- Dependent Clause<br>
+  এটি একা দাঁড়াতে পারে না।<br>
+  ❌ Who came here (অসম্পূর্ণ)
+</md></sn><sn><md>### Adjective Clause চেনার কৌশল
+
+- দেখো এটি Noun-এর পরে এসেছে কিনা<br>
+  → হলে সম্ভাবনা Adjective Clause
+- দেখো এটি Noun-কে describe করছে কিনা<br>
+  → করলে Adjective Clause
+- Relative Pronoun আছে কিনা<br>
+  → who/which/that ইত্যাদি
+</md></sn><sn><md>### Relative Pronouns এবং ব্যবহার
+
+| Pronoun | ব্যবহার         |
+| ------- | --------------- |
+| who     | মানুষ (subject) |
+| whom    | মানুষ (object)  |
+| whose   | possession      |
+| which   | বস্তু/প্রাণী    |
+| that    | মানুষ/বস্তু উভয় |
+
+**উদাহরণ**
+
+* The girl **who is singing** is my sister.
+* The book **which I read** is interesting.
+* The man **whose car is broken** is sad.
+</md></sn><sn><md>#### Adjective Clause-এর অবস্থান
+
+Adjective Clause সাধারণত Noun-এর ঠিক পরে বসে।
+
+* The house **that Jack built** is big.
+* The boy **who helped me** is honest.
+</md></sn><sn><md>### Adjective Clause-এর প্রকারভেদ
+
+:::.row
+:::.col-12 .col-md-6
+**Defining Clause** {.text-center}
+
+অর্থ পরিষ্কার করার জন্য প্রয়োজনীয় তথ্য দেয়।
+
+* The boy **who is wearing red shirt** is my brother.
+:::
+
+:::.col-12 .col-md-6
+**Non-defining Clause** {.text-center}
+
+অতিরিক্ত তথ্য দেয়, কমা ব্যবহার হয়।
+
+* My father, **who is a doctor**, is kind.
+:::
+:::
+</md></sn><sn><md>### গুরুত্বপূর্ণ পয়েন্ট
+
+* Adjective Clause = Noun/Pronoun modify করে
+* Relative Pronoun দিয়ে শুরু হয়
+* Complex Sentence-এর অংশ
+* দুটি ধরনের: Defining ও Non-defining
+* Sentence joining ও transformation-এ খুব গুরুত্বপূর্ণ
+</md></sn>
