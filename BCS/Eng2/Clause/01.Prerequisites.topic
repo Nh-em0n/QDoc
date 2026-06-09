@@ -7,7 +7,7 @@ Clause শেখার আগে কিছু মৌলিক ব্যাকর
     <tags>#01.prerequisites</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jun 09 2026 02:10:55 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Jun 09 2026 14:24:18 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-eYJDfana7X</id>
     <duration></duration>
   </config>
@@ -29,11 +29,21 @@ A **Clause** is a group of words,which gives complete meaning, and also has a su
 - She is hungry.
 - I am feeling well today.
 
+
 **Note** : 
 - A simple sentence can also be called **one** caluse.
 - The number of clause in sentence determine the number of `sub+verb` group
 
 So both of example aforementioned is a sentence as well as a clause.
+
+**Summary** <br>
+Clause is
+- **sub+verb** combinition
+- give complete meaning
+  
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Eng2/Clause/subject-clause-diagram.svg)
+
+
 
 </md></sn><sn><md>#### Now what is the difference between caluse and sentence ?
 ---
@@ -108,6 +118,8 @@ Finite Verb:
 </md></sn><sn><md>### Phrase
 
 Phrase হলো এমন শব্দগুচ্ছ যার মধ্যে Subject-Verb জুটি থাকে না।
+It is opposite of clause so it has no `sub+verb` combinition and not give a complete meaning.
+
 
 **উদাহরণ:**
 
@@ -117,7 +129,7 @@ Phrase হলো এমন শব্দগুচ্ছ যার মধ্যে
 
 Phrase পূর্ণ Clause নয়।
 
-&gt; There might be one subject or one verb in a phrase but not as a together</md></sn><sn><md>### Phrase ও Clause-এর পার্থক্য
+&gt; There may be one subject or one verb in a phrase but not as a together<br></md></sn><sn><md>### Phrase ও Clause-এর পার্থক্য
 
 | Phrase               | Clause                        |
 | -------------------- | ----------------------------- |
