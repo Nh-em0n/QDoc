@@ -1,10 +1,137 @@
 
-  <sn></sn>
+  <sn><md>### Noun Clause{.text-center}
+
+**Noun Clause** হলো এমন একটি Subordinate Clause যা Sentence-এ Noun-এর মতো কাজ করে।
+
+অর্থাৎ, এটি Subject, Object বা Complement হিসেবে ব্যবহৃত হয়।
+
+**উদাহরণ**
+
+* I know **that he is honest.**
+* **What he said** is true.
+* The fact is **that he is honest.**
+
+এখানে highlighted অংশগুলো Noun Clause।
+
+Replace the whole clause by `something`.
+* I know **that he is honest.** <br>
+  I know something
+* **What he said** is true.<br>
+  Something is true
+* The fact is **that he is honest.** <br>
+   The fact is something.
+</md></sn>
   <config>
     <tags>#06.noun clouse</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jun 09 2026 16:07:23 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Jun 09 2026 16:26:38 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-njanwy2tKT</id>
     <duration></duration>
   </config>
+<sn><md>### Noun Clause-এর কাজ
+
+Noun Clause সাধারণত তিনটি প্রধান অবস্থানে ব্যবহৃত হয়:
+
+
+:::.row
+:::.col-12 .col-md-4
+**Subject হিসেবে** {.text-center}
+
+যখন Clause Sentence-এর Subject হিসেবে কাজ করে।
+
+উদাহরণ:
+
+* **What he said** is true.
+* **That he failed the exam** surprised everyone.
+
+বিশ্লেষণ:
+
+* Subject = Noun Clause
+:::
+
+
+:::.col-12 .col-md-4
+**Object হিসেবে**  {.text-center}
+
+যখন Clause Verb-এর Object হিসেবে ব্যবহৃত হয়।
+
+উদাহরণ:
+
+* I know **that he is honest.**
+* She said **that she would come.**
+
+বিশ্লেষণ:
+
+* Verb = know / said
+* Object = Noun Clause
+:::
+
+:::.col-12 .col-md-4
+**Complement হিসেবে** {.text-center}
+
+যখন Clause Subject-এর অর্থ সম্পূর্ণ করে।
+
+উদাহরণ:
+
+* The problem is **that he is lazy.**
+* The truth is **that she lied.**
+:::
+:::
+
+</md></sn><sn><md>### Noun Clause-এর বৈশিষ্ট্য
+
+- Noun-এর মতো কাজ করে<br>
+  এটি Sentence-এ Noun-এর জায়গা নেয়।
+- Connector দ্বারা শুরু হয় <br>
+  সাধারণত নিচের words দিয়ে শুরু হয়: that,what,whether,if,how,why
+- Dependent Clause <br>
+  এটি একা দাঁড়াতে পারে না।<br>
+  ❌ That he is honest (অসম্পূর্ণ)
+</md></sn><sn><md>### Noun Clause চেনার কৌশল
+</md></sn><sn><md>### Common Connectors of Noun Clause
+
+| Connector    | ব্যবহার          |
+| ------------ | ---------------- |
+| that         | statement clause |
+| what         | general idea     |
+| whether / if | yes-no condition |
+| how          | manner           |
+| why          | reason           |
+| when         | time             |
+</md></sn><sn><md>### উদাহরণ বিশ্লেষণ
+
+Example:
+
+* I don’t know **what he wants.**
+
+Breakdown:
+
+* Principal Clause: I don’t know
+* Noun Clause: what he wants
+* Function: Object
+</md></sn><sn><md>### Common Mistakes
+
+- “That” দেখলেই Noun Clause ধরে নেওয়া<br>
+   → ভুল, structure দেখে নিশ্চিত হতে হয়।
+- Noun Clause সবসময় sentence-এর শুরুতে থাকে<br>
+  → ভুল, এটি শুরু / মাঝ / শেষে যেকোনো জায়গায় থাকতে পারে।
+
+</md></sn><sn><md>#### Examples
+
+1. **What he said** is not true.
+2. I know **that he is coming today**.
+3. She believes **that honesty is the best policy**.
+4. **That he failed the exam** surprised everyone.
+5. I don’t know **what he wants**.
+6. Tell me **why you are late**.
+7. I am sure **that she will win**.
+8. He asked me **whether I could help him**.
+9. I understand **how he solved the problem**.
+10. The truth is **that he was absent yesterday**.
+11. I cannot explain **why she left early**.
+12. They do not know **where he lives**.
+13. I wonder **what she is doing now**.
+14. It is clear **that the earth moves around the sun**.
+15. I asked him **if he was ready**.
+</md></sn>
