@@ -1,10 +1,69 @@
 
-  <sn></sn>
+  <sn><md>                 CLAUSE IDENTIFICATION ALGORITHM (OPTIMIZED)
+                                 │
+                                 ▼
+                     START (Given Sentence)
+                                 │
+                                 ▼
+            ┌────────────────────────────────────┐
+            │ STEP 1: Clause segment করো        │
+            │ (that, who, when, if, because...) │
+            └────────────────────────────────────┘
+                                 │
+                                 ▼
+                 LOOP: প্রতিটি clause check করো
+                                 │
+                                 ▼
+            ┌────────────────────────────────────┐
+            │ STEP 2: Independent?               │
+            │ (Complete Meaning আছে?)           │
+            └────────────────────────────────────┘
+                      │ YES                      │ NO
+                      ▼                          ▼
+           PRINCIPAL CLAUSE         ┌──────────────────────────┐
+                                   │ STEP 3: ADVERBIAL CHECK  │
+                                   │ Time/Place/Reason/       │
+                                   │ Condition/Purpose/Result  │
+                                   └──────────────────────────┘
+                                              │ YES
+                                              ▼
+                                    ADVERBIAL CLAUSE
+                                              │
+                                              ▼
+                                   (NEXT CLAUSE)
+                                              │
+                                              ▼
+                          ┌────────────────────────────────┐
+                          │ STEP 4: ADJECTIVE CHECK        │
+                          │ Noun modify করে? (who/which)   │
+                          └────────────────────────────────┘
+                                              │ YES
+                                              ▼
+                                   ADJECTIVE CLAUSE
+                                              │
+                                              ▼
+                                   (NEXT CLAUSE)
+                                              │
+                                              ▼
+                          ┌────────────────────────────────┐
+                          │ STEP 5: NOUN CHECK             │
+                          │ Noun position?                 │
+                          │ Subject/Object/Complement     │
+                          └────────────────────────────────┘
+                                              │ YES
+                                              ▼
+                                     NOUN CLAUSE
+                                              │
+                                              ▼
+                                            END
+                                              │
+                                              ▼
+                                      FINAL OUTPUT</md></sn>
   <config>
     <tags>#09.identifying clause</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jun 09 2026 17:21:50 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Jun 09 2026 19:14:51 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-x7T8ybzhOW</id>
     <duration></duration>
   </config>
