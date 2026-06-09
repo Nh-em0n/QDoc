@@ -7,13 +7,13 @@ Clause ইংরেজি ব্যাকরণের একটি অত্য�
     <tags>#03.basic of clause</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jun 09 2026 15:11:56 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Jun 09 2026 15:25:43 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-9bQduqd1zh</id>
     <duration></duration>
   </config>
 <sn><md>### Clause কী?
 
-&gt; ( sub+verb ) combinition that gives complete meaning<br>
+&gt; ( sub+verb ) combinition that gives complete/incomplete meaning<br>
 It is the core of a sentence so it is important to learn clause
 
 **Clause** হলো এমন একটি word group যার মধ্যে একটি **Subject** এবং একটি **Finite Verb** থাকে।
@@ -64,6 +64,23 @@ Clause সাধারণত দুই প্রকার:
 
 1. Principal Clause
 2. Subordinate Clause
+
+```bash
+                               CLAUSE
+                                  │
+                                  │
+                      (Subject + Finite Verb)
+                                  │
+                    ┌─────────────┴─────────────┐
+                    │                           │
+                    │                           │
+             Complete Meaning           Incomplete Meaning
+                    │                           │
+                    │                           │
+          Principal Clause           Subordinate Clause
+             (Independent)              (Dependent)
+```
+
 
 ```bash
 Clause
