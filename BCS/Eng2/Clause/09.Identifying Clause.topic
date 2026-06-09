@@ -64,7 +64,7 @@
     <tags>#09.identifying clause</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jun 09 2026 19:32:21 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Jun 09 2026 19:38:08 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-x7T8ybzhOW</id>
     <duration></duration>
   </config>
@@ -73,11 +73,11 @@
 
 ##### I know ++that he is honest++. {.text-center}
 
-**Step 1:** Clause → *that he is honest* <br>
+**Step 1:** Subordinate Clause → *that he is honest* <br>
 **Step 2 (Independent?):** No <br>
-**Step 3 (Adverbial?):** No <br>
-**Step 4 (Adjective?):** No <br>
-**Step 5 (Noun position?):** Yes (Object of “know”) <br>
+**Step 3 (Adverbial?):** No  !condition,reason,time,place... <br>
+**Step 4 (Adjective?):** No !not after noun/pronoun  <br>
+**Step 5 (Noun position?):** Yes = I know something,yes work (Object of “know”) <br>
 **Result:** **Noun Clause** 
 
 
