@@ -1,10 +1,79 @@
 
-  <sn></sn>
+  <sn><md>### Subordinate Clause{.text-center}
+
+**Subordinate Clause** হলো এমন একটি Clause যা:
+
+* নিজে সম্পূর্ণ অর্থ প্রকাশ করতে পারে না
+* একটি Principal Clause-এর উপর নির্ভরশীল
+* Sentence-এর `অংশ` হিসেবে কাজ করে
+
+**উদাহরণ**
+
+* I know **that he is honest.**
+* She said **that she would come.**
+* He is the man **who helped me.**
+
+এখানে highlighted অংশগুলো Subordinate Clause।
+</md></sn>
   <config>
     <tags>#05.subordinate clause</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jun 09 2026 15:37:05 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Jun 09 2026 15:49:13 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-RoUGOY5cdX</id>
     <duration></duration>
   </config>
+<sn><md>#### Subordinate Clause চেনার কৌশল
+
+- দেখো একা দাঁড়াতে পারে কিনা
+- Connector আছে কিনা <br>
+  → that, who, if, when ইত্যাদি
+- Principal Clause-এর উপর নির্ভর করছে কিনা
+</md></sn><sn><md>#### সাধারণ ভুল ধারণা
+
+- “Long sentence মানেই Subordinate Clause আছে”<br>
+→ ভুল, Sentence ছোট হলেও Subordinate থাকতে পারে।
+- “That থাকলেই Subordinate Clause”<br>
+→ ভুল, Context ছাড়া নিশ্চিত হওয়া যায় না।
+</md></sn><sn><md>### Clause Category
+
+```bash
+             SUBORDINATE CLAUSE
+                      │
+     ┌───────────────┼───────────────┐
+     │               │               │
+ Noun Clause   Adjective Clause  Adverbial Clause
+```
+
+```bash
+
+                 SUBORDINATE CLAUSE
+                          │
+        ┌─────────────────┼─────────────────┐
+        │                 │                 │
+        │                 │                 │
+   Noun Clause     Adjective Clause   Adverbial Clause
+        │                 │                 │
+        │                 │                 │
+   (Acts as Noun)   (Describes Noun)   (Modifies Verb/
+        │                 │             Adjective/Sentence)
+        │                 │                 │
+   ┌────┴────┐      ┌─────┴─────┐     ┌────┴─────────────────────┐
+   │         │      │           │     │                          │
+Subject   Object   Who/Which   That  Time  Place  Condition  Reason
+Complement         Clause      Clause        │        │          │
+                                            When    Where     Because
+                                                     If        Since
+                                                     Unless    So that
+                                                     Though    etc.
+
+
+```                                                     
+
+| Clause Type          | বাংলা সংজ্ঞা                                                                         | কীভাবে কাজ করে                                  | সাধারণ Connector                          | উদাহরণ                                 |
+| -------------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------- | ----------------------------------------- | -------------------------------------- |
+| **Noun Clause**      | যে Clause Noun-এর মতো কাজ করে তাকে Noun Clause বলে।                                  | Subject / Object / Complement হিসেবে ব্যবহৃত হয় | that, what, whether, how, why             | I know **that he is honest**.          |
+| **Adjective Clause** | যে Clause কোনো Noun বা Pronoun-কে বিশেষিত করে তাকে Adjective Clause বলে।             | Noun/Pronoun-এর পরে এসে তার বৈশিষ্ট্য বলে       | who, whom, whose, which, that             | The man **who came here** is my uncle. |
+| **Adverbial Clause** | যে Clause Verb, Adjective বা পুরো Sentence-কে বিশেষিত করে তাকে Adverbial Clause বলে। | Verb/Adjective/Sentence-কে modify করে           | when, while, because, if, though, so that | I went home **when the rain stopped**. |
+
+</md></sn>
