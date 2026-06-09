@@ -1,10 +1,125 @@
 
-  <sn></sn>
+  <sn><md>### Clause-এর মৌলিক ধারণা {.text-center}
+
+Clause ইংরেজি ব্যাকরণের একটি অত্যন্ত গুরুত্বপূর্ণ বিষয়। Sentence Transformation, Completing Sentence, Right Form of Verb, Narration, এবং Complex-Compound-Simple Sentence রূপান্তরে Clause সম্পর্কে পরিষ্কার ধারণা থাকা আবশ্যক।
+</md></sn>
   <config>
     <tags>#03.basic of clause</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jun 09 2026 14:44:01 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Jun 09 2026 15:11:56 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-9bQduqd1zh</id>
     <duration></duration>
   </config>
+<sn><md>### Clause কী?
+
+&gt; ( sub+verb ) combinition that gives complete meaning<br>
+It is the core of a sentence so it is important to learn clause
+
+**Clause** হলো এমন একটি word group যার মধ্যে একটি **Subject** এবং একটি **Finite Verb** থাকে।
+
+* Rahim plays football.
+
+এখানে,
+
+* Subject = Rahim
+* Finite Verb = plays
+
+সুতরাং এটি একটি Clause।
+
+আরও উদাহরণ:
+
+* He came.
+* They are studying.
+* We shall win.
+
+প্রতিটি উদাহরণেই Subject এবং Finite Verb রয়েছে।
+
+</md></sn><sn><md>### Clause ও Phrase-এর পার্থক্য
+
+| Clause                                    | Phrase                   |
+| ----------------------------------------- | ------------------------ |
+| Subject ও Finite Verb থাকে                | Subject-Verb থাকে না     |
+| পূর্ণ অর্থ প্রকাশ করতে পারে               | পূর্ণ অর্থ প্রকাশ করে না |
+| Sentence-এর অংশ বা পুরো Sentence হতে পারে | Sentence-এর অংশমাত্র     |
+
+:::.row
+:::.col-12 .col-md-6
+**Clause:**
+
+* He is reading a book.
+:::
+
+:::.col-12 .col-md-6
+**Phrase:**
+
+* In the room
+* At night
+* Very beautiful
+:::
+:::
+</md></sn><sn><md>### Clause-এর প্রধান শ্রেণিবিভাগ
+
+Clause সাধারণত দুই প্রকার:
+
+1. Principal Clause
+2. Subordinate Clause
+
+```bash
+Clause
+│
+├── Principal Clause
+│
+└── Subordinate Clause
+    │
+    ├── Noun Clause
+    ├── Adjective Clause
+    └── Adverbial Clause
+```</md></sn><sn><md>:::.row
+:::.col-12 .col-md-6
+**Principal Clause** {.text-center}
+
+Principal | Independent | Main
+
+
+যে Clause নিজেই সম্পূর্ণ অর্থ প্রকাশ করতে পারে এবং অন্য কোনো Clause-এর উপর নির্ভরশীল নয় তাকে Principal Clause বলে।
+
+**উদাহরণ:**
+
+* He works hard.
+* I know the truth.
+* They will come.
+
+প্রতিটি Clause স্বাধীনভাবে অর্থ প্রকাশ করতে পারে।
+:::
+
+:::.col-12 .col-md-6
+**Subordinate Clause** {.text-center}
+
+Subordinate | Dependent
+
+
+যে Clause নিজে সম্পূর্ণ অর্থ প্রকাশ করতে পারে না এবং অন্য Clause-এর উপর নির্ভরশীল থাকে তাকে Subordinate Clause বলে।
+
+**উদাহরণ:**
+
+* I know **that he is honest.**
+
+এখানে,
+
+* Principal Clause = I know
+* Subordinate Clause = that he is honest
+
+"that he is honest" অংশটি একা সম্পূর্ণ অর্থ প্রকাশ করতে পারে না।
+:::
+:::
+</md></sn><sn><md>#### Simple, Compound ও Complex Sentence
+
+Sentence Category based on clause
+
+| Sentence Type         | সংজ্ঞা                                                         | গঠন                                                            | উদাহরণ                      |
+| --------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- | --------------------------- |
+| **Simple Sentence**   | একটি মাত্র Principal Clause থাকে                               | একটিমাত্র Subject + Verb যুক্ত Clause                          | He plays football.          |
+| **Complex Sentence**  | একটি Principal Clause এবং এক বা একাধিক Subordinate Clause থাকে | Principal Clause + Subordinate Clause (Dependent Clause)       | I know that he is honest.   |
+| **Compound Sentence** | দুই বা ততোধিক Principal Clause থাকে                            | Principal Clause + Coordinating Conjunction + Principal Clause | He came and I welcomed him. |
+</md></sn>
