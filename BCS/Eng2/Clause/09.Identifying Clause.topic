@@ -6,8 +6,8 @@
                                  │
                                  ▼
             ┌────────────────────────────────────┐
-            │ STEP 1: Clause segment করো        │
-            │ (that, who, when, if, because...) │
+            │ STEP 1: Clause segment করো                                         
+            │ (that, who, when, if, because...)                                     
             └────────────────────────────────────┘
                                  │
                                  ▼
@@ -15,15 +15,15 @@
                                  │
                                  ▼
             ┌────────────────────────────────────┐
-            │ STEP 2: Independent?               │
-            │ (Complete Meaning আছে?)           │
+            │ STEP 2: Independent?                                                    
+            │ (Complete Meaning আছে?)                                            
             └────────────────────────────────────┘
                       │ YES                      │ NO
                       ▼                          ▼
            PRINCIPAL CLAUSE         ┌──────────────────────────┐
-                                   │ STEP 3: ADVERBIAL CHECK  │
-                                   │ Time/Place/Reason/       │
-                                   │ Condition/Purpose/Result  │
+                                   │ STEP 3: ADVERBIAL CHECK                                     
+                                   │ Time/Place/Reason/                                                
+                                   │ Condition/Purpose/Result                                       
                                    └──────────────────────────┘
                                               │ YES
                                               ▼
@@ -34,8 +34,9 @@
                                               │
                                               ▼
                           ┌────────────────────────────────┐
-                          │ STEP 4: ADJECTIVE CHECK        │
-                          │ Noun modify করে? (who/which)   │
+                          │ STEP 4: ADJECTIVE CHECK                                
+                          │ Noun modify করে? (who/which)
+                          │ After noun/pronoun
                           └────────────────────────────────┘
                                               │ YES
                                               ▼
@@ -46,9 +47,9 @@
                                               │
                                               ▼
                           ┌────────────────────────────────┐
-                          │ STEP 5: NOUN CHECK             │
-                          │ Noun position?                 │
-                          │ Subject/Object/Complement     │
+                          │ STEP 5: NOUN CHECK                                           
+                          │ Noun position?                                                      
+                          │ replace clause by something                               
                           └────────────────────────────────┘
                                               │ YES
                                               ▼
@@ -63,7 +64,91 @@
     <tags>#09.identifying clause</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jun 09 2026 19:14:51 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Jun 09 2026 19:32:21 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-x7T8ybzhOW</id>
     <duration></duration>
   </config>
+<sn><md>## Clause Identification
+
+
+##### I know ++that he is honest++. {.text-center}
+
+**Step 1:** Clause → *that he is honest* <br>
+**Step 2 (Independent?):** No <br>
+**Step 3 (Adverbial?):** No <br>
+**Step 4 (Adjective?):** No <br>
+**Step 5 (Noun position?):** Yes (Object of “know”) <br>
+**Result:** **Noun Clause** 
+
+
+#### The boy ++who came here++ is my brother. {.text-center}
+
+**Clause:** who came here<br>
+**Independent?:** No<br>
+**Adverbial?:** No<br>
+**Adjective?:** Yes (modifies “boy”)<br>
+**Result:** **Adjective Clause** <br>
+
+#### I went home ++when the rain stopped++. {.text-center}
+
+**Clause:** when the rain stopped <br>
+**Independent?:** No <br>
+**Adverbial?:** Yes (Time) <br>
+**Result:** **Adverbial Clause**
+
+
+#### She said ++that she was tired++. {.text-center}
+
+**Clause:** that she was tired <br>
+**Independent?:** No <br>
+**Adverbial?:** No <br>
+**Adjective?:** No <br>
+**Noun position?:** Yes (Object of “said”) <br>
+**Result:** **Noun Clause** <br>
+
+#### This is the book ++that I bought yesterday++. {.text-center}
+
+**Clause:** that I bought yesterday <br>
+**Independent?:** No <br>
+**Adjective?:** Yes (modifies “book”) <br>
+**Result:** **Adjective Clause**
+
+#### He failed ++because he did not study++. {.text-center}
+
+**Clause:** because he did not study <br>
+**Independent?:** No <br>
+**Adverbial?:** Yes (Reason) <br>
+**Result:** **Adverbial Clause**
+
+
+#### ++What he said++ is true. {.text-center}
+
+**Clause:** What he said <br>
+**Independent?:** No <br>
+**Adverbial?:** No <br>
+**Adjective?:** No <br>
+**Noun position?:** Yes (Subject) <br>
+**Result:** **Noun Clause**
+
+#### ++If you work hard++, you will succeed.
+
+**Clause:** If you work hard <br>
+**Independent?:** No <br>
+**Adverbial?:** Yes (Condition) <br>
+**Result:** **Adverbial Clause**
+
+#### The man ++whom I met yesterday++ is a doctor.
+
+**Clause:** whom I met yesterday <br>
+**Independent?:** No <br>
+**Adjective?:** Yes (modifies “man”) <br>
+**Result:** **Adjective Clause**
+
+
+#### I don’t know ++where he lives++.
+**Clause:** where he lives <br>
+**Independent?:** No <br>
+**Adverbial?:** No <br>
+**Adjective?:** No <br>
+**Noun position?:** Yes (Object of “know”)  <br>
+**Result:** **Noun Clause**</md></sn>
