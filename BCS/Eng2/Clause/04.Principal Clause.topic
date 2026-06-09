@@ -1,10 +1,38 @@
 
-  <sn></sn>
+  <sn><md>### Principal Clause{.text-center}
+
+**Principal Clause** হলো এমন একটি Clause যা:
+
+* নিজে সম্পূর্ণ অর্থ প্রকাশ করতে পারে
+* অন্য কোনো Clause-এর উপর নির্ভরশীল নয়
+* একা একটি পূর্ণ Sentence হিসেবে দাঁড়াতে পারে
+
+```bash
+ ( sub+verb ) + complete meaning ---&gt; Principal Clause <br>
+ Principal Clause = Subject + Finite Verb + Complete Meaning**
+```
+
+**উদাহরণ**
+
+* He reads a book.
+* I know the truth.
+* They are playing football.
+
+প্রতিটি উদাহরণে একটি সম্পূর্ণ অর্থ প্রকাশ পাচ্ছে, তাই এগুলো Principal Clause।
+</md></sn>
   <config>
     <tags>#04.principal clause</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jun 09 2026 15:27:27 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Jun 09 2026 15:36:49 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Tr8BCC7aZk</id>
     <duration></duration>
   </config>
+<sn><md>**ভুল ধারণা**
+
+- “Long sentence মানেই Subordinate Clause আছে”<br>
+→ ভুল, Sentence বড় হলেও সব Clause Principal হতে পারে।
+
+- “And, but থাকলেই Compound Sentence” <br>
+→ ভুল, সংযোজিত দুই অংশই Principal Clause হতে হবে।
+</md></sn>
