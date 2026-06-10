@@ -11,7 +11,7 @@
 
 ---
 
-#### 2. This is the book I lost.
+#### 2. This is the book ++I lost++.The underlined clause is -
 
 * **1 :** Dependent Clause → This is the book ++I lost++
 * **2 :** Clause টি **book** (Noun)-এর পরে এসেছে। ✅
@@ -19,7 +19,7 @@
 
 ---
 
-#### 3. This is the place where I was born.
+#### 3. This is the place ++where I was born++.The underlined clause is -
 
 * **1 :** Dependent Clause → This is the place ++where I was born++
 * **2 :** Clause টি **place** (Noun)-এর পরে এসেছে। ✅
@@ -27,15 +27,15 @@
 
 ---
 
-#### 4. I know that he will come. (underlined: I know)
+#### 4. I know that he will come.Here 'I know' is -
 
 * **1 :** Main Clause → ++I know++
 * **2 :** এটি Dependent Clause নয়। ❌
-  👉 `Principal/Main Clause`
+  👉 `none above`
 
 ---
 
-#### 5. ‘I know that he will come’ (underlined: I know that he will come)
+#### 5. ++I know++ that he will come .Here the underline part is
 
 * **1 :** Clause → ++I know that he will come++
 * **2 :** সম্পূর্ণ বাক্যটি একটি স্বাধীন বক্তব্য। ❌
@@ -43,7 +43,7 @@
 
 ---
 
-#### 6. Behave as a gentleman behave.
+#### 6. Behave ++as a gentleman behave++.The underlined part is -
 
 * **1 :** Dependent Clause → Behave ++as a gentleman behave++
 * **2 :** Clause টি কোনো Noun/Pronoun-এর পরে আসেনি। ❌
@@ -52,7 +52,7 @@
 
 ---
 
-#### 7. I know how he became successful.
+#### 7. I know ++how he became successful++.The underlined part is
 
 * **1 :** Dependent Clause → I know ++how he became successful++
 * **2 :** Clause টি কোনো Noun/Pronoun-এর পরে আসেনি। ❌
@@ -61,10 +61,9 @@
 
 ---
 
-#### 8. Complete the sentence: It was long since _
+#### 8. Complete the sentence with an appropiate clause -
 
-* **Answer:** ++I had seen you++
-  👉 `Adverbial Clause (Time-related structure)`
+* **Answer:** What would you have done
 
 ---
 
@@ -90,7 +89,7 @@
 
 ---
 
-#### 12. The question is how he will respond
+#### 12. The question is ++how he will respond++.The underlined part is
 
 * **1 :** Dependent Clause → ++how he will respond++
 * **2 :** Subject Complement হিসেবে কাজ করছে। ✅
@@ -98,7 +97,7 @@
 
 ---
 
-#### 13. I know where he lives.
+#### 13. I know ++where he lives++. The underlined part is -
 
 * **1 :** Dependent Clause → ++where he lives++
 * **2 :** Object হিসেবে কাজ করছে। ✅
@@ -113,7 +112,7 @@
 
 ---
 
-#### 15. I know that he is thoroughly honest.
+#### 15. I know ++that he is thoroughly honest++. The underlined part is -
 
 * **1 :** Dependent Clause → ++that he is thoroughly honest++
 * **2 :** Object হিসেবে কাজ করছে। ✅
@@ -121,14 +120,14 @@
 
 ---
 
-#### 16. Qualifying in the admission test is not easy.
+#### 16. ++Qualifying in the admission test++ is not easy.The underlined part is -
 
 * **1 :** Structure → ++Qualifying in the admission test++
   👉 `Gerund phrase acting as noun (Subject)`
 
 ---
 
-#### 17. That he is very intelligent is known to me.
+#### 17. ++That he is very intelligent++ is known to me.The underlined part is -
 
 * **1 :** Dependent Clause → ++That he is very intelligent++
 * **2 :** Subject হিসেবে কাজ করছে। ✅
@@ -136,7 +135,7 @@
 
 ---
 
-#### 18. He tells a tale that sounds untrue.
+#### 18. He tells a tale ++that sounds untrue++.The underlined part is -
 
 * **1 :** Dependent Clause → ++that sounds untrue++
 * **2 :** **tale** (Noun)-এর পরে এসেছে। ✅
@@ -144,7 +143,7 @@
 
 ---
 
-#### 19. He asked me whether I would help him.
+#### 19. He asked me ++whether I would help him++.The underlined part is
 
 * **1 :** Dependent Clause → ++whether I would help him++
 * **2 :** Object হিসেবে কাজ করছে। ✅
@@ -152,11 +151,76 @@
 
 ---
 
-#### 20. They asked me if I could meet them in the afternoon.
+#### 20. They asked me ++if I could meet them in the afternoon++.
 
 * **1 :** Dependent Clause → ++if I could meet them in the afternoon++
 * **2 :** Object হিসেবে কাজ করছে। ✅
   👉 `Noun Clause`
+
++++ explanation
+
+Let’s break **No. 20** properly:
+
+*They asked me if I could meet them in the afternoon.*
+
+**Step 1:** Identify the dependent clause<br>
+**Dependent Clause →** ++if I could meet them in the afternoon++
+
+**Step 2:** Check noun/pronoun position rule
+* It is **NOT after a noun/pronoun describing it**
+* So ❌ not Adjective Clause
+
+**Step 3:** Check adverbial meaning (time, reason, condition, etc.)<br>
+Ask this:<br>
+👉 Does this clause show **time, reason, condition, purpose, result, place**?
+
+* “if I could meet them”<br>
+  ❌ does NOT mean condition in real meaning here<br>
+  ❌ it is NOT like: *If it rains, I will go* (true condition)
+
+Here “if” is NOT functioning as a real conditional connector.
+
+**Step 4:** Test substitution rule<br>
+Replace clause with **“something”**:<br>
+👉 They asked me something.<br>
+✔ Sentence still makes sense grammatically<br>
+✔ Clause works as **object of “asked”**
+
+---
+
+Key rule (VERY IMPORTANT for BCS)
+
+“if / whether” in reported speech =
+
+👉 Always **Noun Clause**
+
+Because it works as:
+
+* Object of verb (asked, know, wonder, tell, etc.)
+
+Compare:
+
+**✔ Noun Clause**
+
+* I don’t know **if he will come**.<br>
+  → I don’t know **something**
+
+**✔ Adverbial Clause (Condition)**
+
+* **If he comes**, I will gob.<br>
+  → real condition + future result
+
+Final conclusion for Q20
+
+* Clause type: ++if I could meet them in the afternoon++
+* Function: Object of “asked”
+* Rule: “if/whether after reporting verb = Noun Clause”
+
+👉 **Answer: Noun Clause**
+
+
++++
+
 
 ---
 
@@ -167,7 +231,7 @@
 
 ---
 
-#### 22. This is the place where I was born.
+#### 22. This is the place ++where I was born++.
 
 * **1 :** Dependent Clause → ++where I was born++
 * **2 :** **place** (Noun)-এর পরে এসেছে। ✅
@@ -177,7 +241,7 @@
     <tags>#10.qna practice</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jun 10 2026 08:21:37 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jun 10 2026 08:43:23 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-PazXUMi74d</id>
     <duration></duration>
   </config>
