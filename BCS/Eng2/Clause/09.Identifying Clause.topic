@@ -1,154 +1,110 @@
 
-  <sn><md>                 CLAUSE IDENTIFICATION ALGORITHM (OPTIMIZED)
-                                 │
-                                 ▼
-                     START (Given Sentence)
-                                 │
-                                 ▼
-            ┌────────────────────────────────────┐
-            │ STEP 1: Clause segment করো                                         
-            │ (that, who, when, if, because...)                                     
-            └────────────────────────────────────┘
-                                 │
-                                 ▼
-                 LOOP: প্রতিটি clause check করো
-                                 │
-                                 ▼
-            ┌────────────────────────────────────┐
-            │ STEP 2: Independent?                                                    
-            │ (Complete Meaning আছে?)                                            
-            └────────────────────────────────────┘
-                      │ YES                      │ NO
-                      ▼                          ▼
-           PRINCIPAL CLAUSE         ┌──────────────────────────┐
-                                   │ STEP 3: ADVERBIAL CHECK                                     
-                                   │ Time/Place/Reason/                                                
-                                   │ Condition/Purpose/Result                                       
-                                   └──────────────────────────┘
-                                              │ YES
-                                              ▼
-                                    ADVERBIAL CLAUSE
-                                              │
-                                              ▼
-                                   (NEXT CLAUSE)
-                                              │
-                                              ▼
-                          ┌────────────────────────────────┐
-                          │ STEP 4: ADJECTIVE CHECK                                
-                          │ Noun modify করে? (who/which)
-                          │ After noun/pronoun
-                          └────────────────────────────────┘
-                                              │ YES
-                                              ▼
-                                   ADJECTIVE CLAUSE
-                                              │
-                                              ▼
-                                   (NEXT CLAUSE)
-                                              │
-                                              ▼
-                          ┌────────────────────────────────┐
-                          │ STEP 5: NOUN CHECK                                           
-                          │ Noun position?                                                      
-                          │ replace clause by something                               
-                          └────────────────────────────────┘
-                                              │ YES
-                                              ▼
-                                     NOUN CLAUSE
-                                              │
-                                              ▼
-                                            END
-                                              │
-                                              ▼
-                                      FINAL OUTPUT</md></sn>
+  <sn><md>### Identifying Clause {.text-center}
+
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Eng2/Clause/Identifying%20Clause.svg)
+
+- **1 :** Subordinate clause শনাক্ত করতে হলে আগে বাক্যের `Independent Clause ও Dependent Clause আলাদা` করতে হবে। কারণ Subordinate Clause সবসময় একটি Independent Clause-এর উপর নির্ভরশীল থাকে।
+- **2 :** Dependent Clause খুঁজে পাওয়ার পর দেখতে হবে এটি কোনো `Noun/Pronoun-এর পরে এসেছে কি না`। যদি আসে এবং সেই Noun/Pronoun-কে বর্ণনা করে, তবে সেটি `Adjective` Clause হওয়ার সম্ভাবনা বেশি।
+- **3 :** যদি Dependent Clause `সময়, স্থান, কারণ, শর্ত, তুলনা, concession, ফলাফল বা উদ্দেশ্য` বোঝায়, তবে সেটি সাধারণত `Adverbial` Clause হয়।
+- **4 :** যদি Dependent Clause-কে `“something” দিয়ে প্রতিস্থাপন করা যায় এবং সেটি বাক্যে Subject বা Object` হিসেবে কাজ করে, তবে সেটি `Noun` Clause হওয়ার সম্ভাবনা বেশি।
+
+
+</md></sn>
   <config>
     <tags>#09.identifying clause</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jun 09 2026 19:38:40 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jun 10 2026 07:41:10 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-x7T8ybzhOW</id>
     <duration></duration>
   </config>
-<sn><md>## Subordinate Clause Identification
+<sn><md>#### Solving Problem with Reasoning
 
+#### I know that he is honest.
 
-##### I know ++that he is honest++. {.text-center}
+* **1 :** Dependent Clause → I know ++that he is honest++
+* **2 :** Clause টি কোনো Noun/Pronoun-এর পরে আসেনি। ❌
+* **3 :** Time, Place, Reason, Condition, Purpose ইত্যাদি প্রকাশ করছে না। ❌
+* **4 :** I know ++something++. এখানে **something** Object হিসেবে কাজ করছে।
+* 👉 `Noun Clause`
 
-**Step 1:** Subordinate Clause → *that he is honest* <br>
-**Step 2 (Independent?):** No <br>
-**Step 3 (Adverbial?):** No  !condition,reason,time,place... <br>
-**Step 4 (Adjective?):** No !not after noun/pronoun  <br>
-**Step 5 (Noun position?):** Yes = I know something,yes work (Object of “know”) <br>
-**Result:** **Noun Clause** 
+---
 
+#### The boy who won the race is my friend.
 
-#### The boy ++who came here++ is my brother. {.text-center}
+* **1 :** Dependent Clause → The boy ++who won the race++ is my friend.
+* **2 :** Clause টি **boy** (Noun)-এর পরে এসেছে। ✅
+* 👉 `Adjective Clause`
 
-**Clause:** who came here<br>
-**Independent?:** No<br>
-**Adverbial?:** No<br>
-**Adjective?:** Yes (modifies “boy”)<br>
-**Result:** **Adjective Clause** <br>
+---
 
-#### I went home ++when the rain stopped++. {.text-center}
+#### I will call you when I arrive.
 
-**Clause:** when the rain stopped <br>
-**Independent?:** No <br>
-**Adverbial?:** Yes (Time) <br>
-**Result:** **Adverbial Clause**
+* **1 :** Dependent Clause → I will call you ++when I arrive++
+* **2 :** Clause টি কোনো Noun/Pronoun-এর পরে আসেনি। ❌
+* **3 :** এটি Time (সময়) প্রকাশ করছে। ✅
+* 👉 `Adverbial Clause (Time)`
 
+---
 
-#### She said ++that she was tired++. {.text-center}
+#### She stayed home because she was sick.
 
-**Clause:** that she was tired <br>
-**Independent?:** No <br>
-**Adverbial?:** No <br>
-**Adjective?:** No <br>
-**Noun position?:** Yes (Object of “said”) <br>
-**Result:** **Noun Clause** <br>
+* **1 :** Dependent Clause → She stayed home ++because she was sick++
+* **2 :** Clause টি কোনো Noun/Pronoun-এর পরে আসেনি। ❌
+* **3 :** এটি Reason (কারণ) প্রকাশ করছে। ✅
+* 👉 `Adverbial Clause (Reason)`
 
-#### This is the book ++that I bought yesterday++. {.text-center}
+---
 
-**Clause:** that I bought yesterday <br>
-**Independent?:** No <br>
-**Adjective?:** Yes (modifies “book”) <br>
-**Result:** **Adjective Clause**
+#### The house that stands on the hill belongs to my uncle.
 
-#### He failed ++because he did not study++. {.text-center}
+* **1 :** Dependent Clause → The house ++that stands on the hill++ belongs to my uncle.
+* **2 :** Clause টি **house** (Noun)-এর পরে এসেছে। ✅
+* 👉 `Adjective Clause`
 
-**Clause:** because he did not study <br>
-**Independent?:** No <br>
-**Adverbial?:** Yes (Reason) <br>
-**Result:** **Adverbial Clause**
+---
 
+#### What he said surprised everyone.
 
-#### ++What he said++ is true. {.text-center}
+* **1 :** Dependent Clause → ++What he said++ surprised everyone.
+* **2 :** Clause টি কোনো Noun/Pronoun-এর পরে আসেনি। ❌
+* **3 :** Time, Place, Reason, Condition, Purpose ইত্যাদি প্রকাশ করছে না। ❌
+* **4 :** ++Something++ surprised everyone. এখানে **something** Subject হিসেবে কাজ করছে।
+* 👉 `Noun Clause`
 
-**Clause:** What he said <br>
-**Independent?:** No <br>
-**Adverbial?:** No <br>
-**Adjective?:** No <br>
-**Noun position?:** Yes (Subject) <br>
-**Result:** **Noun Clause**
+---
 
-#### ++If you work hard++, you will succeed.
+#### If you work hard, you will succeed.
 
-**Clause:** If you work hard <br>
-**Independent?:** No <br>
-**Adverbial?:** Yes (Condition) <br>
-**Result:** **Adverbial Clause**
+* **1 :** Dependent Clause → ++If you work hard++, you will succeed.
+* **2 :** Clause টি কোনো Noun/Pronoun-এর পরে আসেনি। ❌
+* **3 :** এটি Condition (শর্ত) প্রকাশ করছে। ✅
+* 👉 `Adverbial Clause (Condition)`
 
-#### The man ++whom I met yesterday++ is a doctor.
+---
 
-**Clause:** whom I met yesterday <br>
-**Independent?:** No <br>
-**Adjective?:** Yes (modifies “man”) <br>
-**Result:** **Adjective Clause**
+#### The man whose car was stolen reported to the police.
 
+* **1 :** Dependent Clause → The man ++whose car was stolen++ reported to the police.
+* **2 :** Clause টি **man** (Noun)-এর পরে এসেছে। ✅
+* 👉 `Adjective Clause`
 
-#### I don’t know ++where he lives++.
-**Clause:** where he lives <br>
-**Independent?:** No <br>
-**Adverbial?:** No <br>
-**Adjective?:** No <br>
-**Noun position?:** Yes (Object of “know”)  <br>
-**Result:** **Noun Clause**</md></sn>
+---
+
+#### I don't know where she lives.
+
+* **1 :** Dependent Clause → I don't know ++where she lives++
+* **2 :** Clause টি কোনো Noun/Pronoun-এর পরে আসেনি। ❌
+* **3 :** Place নির্দেশক word থাকলেও Clause টি Place বোঝাচ্ছে না; এটি Verb-এর Object হিসেবে কাজ করছে। ❌
+* **4 :** I don't know ++something++. এখানে **something** Object হিসেবে কাজ করছে।
+* 👉 `Noun Clause`
+
+---
+
+#### He spoke loudly so that everyone could hear him.
+
+* **1 :** Dependent Clause → He spoke loudly ++so that everyone could hear him++
+* **2 :** Clause টি কোনো Noun/Pronoun-এর পরে আসেনি। ❌
+* **3 :** এটি Purpose (উদ্দেশ্য) প্রকাশ করছে। ✅
+* 👉 `Adverbial Clause (Purpose)`
+</md></sn>
