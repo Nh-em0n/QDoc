@@ -1,10 +1,62 @@
 
-  <sn></sn>
+  <sn><md>### The State, Citizenship and Law {.text-center}
+
+The state is the most important `political institution` of the social life. The state had emerged to `unify all citizens` and to `resolve their problems` as well as_ to `ensure their welfare`. In a certain level of the evolving process, the state emerged from the society. In the `ancient and middle ages`, the state was considered an `organization formed by the God`. The `modern political thinkers` explain the state as an organization `to provide common welfare` and indispensable for the independence of the people and flourishing their personality’. The state is for the citizens. 
+
+The state has to discharge many responsibilities to ensure citizens' peace and happiness. Some of these works are `mandatory` and some of the works are `optional`. Besides, the citizens also have some duties and responsibilities to the state. On the other hand, rules and regulations are necessary to `ensure security of the citizens`, and `solve the existing problems` of the society, In this chapter we will learn about the state, citizen and law.
+
+
++++ summary
+
+```bash
+State, Citizen and Law
+│
+├── State
+│   │
+│   ├── Most Important Political Institution
+│   │
+│   ├── Purpose
+│   │   ├── Unify Citizens
+│   │   ├── Resolve Problems
+│   │   └── Ensure Welfare
+│   │
+│   ├── Origin
+│   │   └── Emerged from Society
+│   │
+│   └── Views About State
+│       ├── Ancient &amp; Middle Ages
+│       │   └── Formed by God
+│       │
+│       └── Modern Political Thinkers
+│           ├── Ensures Common Welfare
+│           ├── Protects Independence
+│           └── Helps Personality Development
+│
+├── Responsibilities of State
+│   │
+│   ├── Maintain Peace
+│   ├── Ensure Happiness
+│   ├── Mandatory Functions
+│   └── Optional Functions
+│
+├── Citizens
+│   │
+│   └── Duties &amp; Responsibilities
+│       └── Towards the State
+│
+└── Law
+    │
+    ├── Ensures Security
+    ├── Solves Social Problems
+    └── Maintains Order in Society
+```
+
++++</md></sn>
   <config>
     <tags>#01.the concept of the state</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 11 2026 12:15:49 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 11 2026 12:23:50 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-h0FvlJw7Se</id>
     <duration></duration>
   </config>
