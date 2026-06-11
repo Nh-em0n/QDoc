@@ -1,10 +1,41 @@
 
-  <sn></sn>
+  <sn><md>### The Basic Elements of the State {.text-center}
+
+If we analyse the concept of state, we will notice four essential elements of it: the people, the specific geographical territory, the government, and the sovereignty. Each state consists of these four elements.
+
+```bash
+THE STATE
+│
+├── People
+│   ├── Politically organized citizens
+│   ├── No fixed number required
+│   └── Foundation of the state
+│
+├── Specific Geographical Territory
+│   ├── Land, sea, and air space
+│   ├── Defined borders
+│   ├── Can be large or small
+│   └── Basis of national identity &amp; security
+│
+├── Government
+│   ├── Law-making branch
+│   ├── Executive (administration)
+│   ├── Judiciary
+│   └── Controls and manages the state
+│
+└── Sovereignty
+    ├── Supreme and absolute power
+    ├── Internal authority over citizens
+    ├── External independence from other states
+    └── Essential for state recognition
+```
+</md></sn>
   <config>
     <tags>#02.the basic elements of the state</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 11 2026 12:16:06 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 11 2026 14:09:22 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-FhrkpOD0zc</id>
     <duration></duration>
   </config>
+<sn><md>### Markdown Template</md></sn>
