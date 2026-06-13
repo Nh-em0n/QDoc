@@ -1,10 +1,40 @@
 
-  <sn></sn>
+  <sn><md>### Percentage {.text-center}
+
+
+**Essential Information and Formulas**
+
+* Percentage is a fraction whose denominator is 100. It is expressed using the symbol `%`.
+
+  * Example: $5% = \frac{5}{100}$
+
+* $100%$ represents the whole or complete part of something.
+
+* The following table shows the relationship between some common fractions and their percentages:
+
+| Fraction        | Decimal | Percentage Fraction | Percentage       |
+| :-------------- | :------ | :------------------ | :--------------- |
+| $\frac{1}{4}$   | 0.25    | $\frac{25}{100}$    | 25%              |
+| $\frac{1}{5}$   | 0.20    | $\frac{20}{100}$    | 20%              |
+| $\frac{3}{2}$   | 1.50    | $\frac{150}{100}$   | 150%             |
+| $\frac{1}{8}$   | 0.125   | $12\frac{1}{2}/100$ | $12\frac{1}{2}%$ |
+| $\frac{1}{200}$ | 0.005   | $\frac{1}{2}/100$   | $\frac{1}{2}%$   |
+
+* Other basic concepts and formulas related to percentages are discussed under each type in the previous years' question-solving section.
+</md></sn>
   <config>
     <tags>#02.basics</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Jun 13 2026 09:31:40 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Jun 13 2026 09:32:49 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-i2vMfyoySL</id>
     <duration></duration>
   </config>
+<sn><md>**Related Topics from Board Textbooks**
+
+| Class                                      | Exercise |
+| :----------------------------------------- | :------- |
+| Class Six                                  | 2.2      |
+| Class Eight (2009 Edition)                 | 2.1      |
+| Class Nine–Ten (Mathematics, 1983 Edition) | 4.1      |
+</md></sn>
