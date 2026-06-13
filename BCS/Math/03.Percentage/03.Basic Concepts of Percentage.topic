@@ -32,7 +32,7 @@
     <tags>#03.basic concepts of percentage</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Jun 13 2026 10:51:18 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Jun 13 2026 11:14:06 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-CXNC6NyW7N</id>
     <duration></duration>
   </config>
@@ -47,4 +47,623 @@
 | $\frac{1}{4} = 25%$                           | $\frac{1}{10} = 10%$                          |
 | $\frac{3}{4} = 75%$                           | |
 | $\frac{1}{5} = 20%$                           |   |
+</md></sn><sn><md>Qna {.text-end}
+
+**1. What percent of 12 is 18? [36th BCS]**<br>
+a. 110<br> b. 125<br> c.`150`<br> d. 160
+
++++ check
+Let $x%$ of 12 = 18
+$$
+12 \times \frac{x}{100} = 18
+$$
+$$
+x = \frac{18 \times 100}{12} = 150
+$$
+
+**Answer: 150%**
++++
+
+---
+
+**2. $\frac{1}{2}$ is what percent of $\frac{3}{4}$? [26th BCS]**<br>
+a. 120%<br> b. 125%<br> c. 140%<br> d. `150%`
+
++++ check
+Let $\frac{1}{2}$ be $x%$ of $\frac{3}{4}$
+$$
+\frac{1}{2} \times \frac{x}{100} = \frac{3}{4}
+$$
+$$
+x = \frac{3 \times 100 \times 2}{4} = 150
+$$
+
+**Answer: 150%**
++++
+
+---
+
+**3. What is 1.2% of 66 liters? [Primary Head Teacher - 1999]**<br>
+a. 6.12 L<br> b. 1.22 L<br> c. `0.792 L`<br> d. 0.972 L
+
++++ check
+$$
+66 \times \frac{1.2}{100} = 0.792
+$$
+
+**Answer: 0.792 L**
++++
+
+---
+
+**4. Convert 0.4 into percentage [Primary Govt Teacher - 2010]**<br>
+a. 80%<br> b. 60%<br> c. 20%<br> d. `40%`
+
++++ check
+$$
+0.4 \times 100 = 40%
+$$
+
+**Answer: 40%**
++++
+
+---
+
+**5. What is 13% of 96? [Primary Assistant Teacher - 2018]**<br>
+a. 14.13<br> b. `12.48`<br> c. 12.24<br> d. 11.39
+
++++ check
+$$
+96 \times \frac{13}{100} = 12.48
+$$
+
+**Answer: 12.48**
++++
+
+---
+
+**6. What is 3% of 0.07? [Ministry of Foreign Affairs - 2019]**<br>
+a. 21%<br> b. `0.21%`<br> c. 0.021%<br> d. 2.1%
+
++++ check
+$$
+0.07 \times \frac{3}{100} = 0.0021 = 0.21%
+$$
+
+**Answer: 0.21%**
++++
+
+---
+
+**7. 25% of 75% of 40 is what? [18th Teacher Registration - 2019]**<br>
+a. 10<br> b. `15`<br> c. 20<br> d. 25
+
++++ check
+$$
+40 \times \frac{75}{100} \times \frac{25}{100} = 15
+$$
+
+**Answer: 15**
++++
+
+---
+
+**8. What is 25% of $\frac{2}{5}$? [Revenue Assistant Officer - 2015]**<br>
+a. `0.1`<br> b. 0.3<br> c. 0.2<br> d. 0.4
+
++++ check
+$$
+\frac{2}{5} \times \frac{25}{100} = 0.1
+$$
+
+**Answer: 0.1**
++++
+
+---
+
+**9. What is 12.5% of 88? [Family Welfare Inspector - 2015]**<br>
+a. 10<br> b. `11`<br> c. 12<br> d. 14
+
++++ check
+$$
+88 \times \frac{12.5}{100} = 11
+$$
+
+**Answer: 11**
++++
+
+---
+
+**10. 90 is 75% of which number? [PM Office Assistant Director - 2015]**<br>
+a. `120`<br> b. 125<br> c. 150<br> d. 275
+
++++ check
+$$
+100% = \frac{90 \times 100}{75} = 120
+$$
+
+**Answer: 120**
++++
+</md></sn><sn><md>Qna {.text-end}
+
+**11. 24 is equal to 32% of which number? [11th Private Lecturer Registration - 2014]**<br>
+a. 60<br> b. 65<br> c. 70<br> d. `75`
+
++++ check
+Let the number be $x$
+$$
+32% \text{ of } x = 24
+$$
+$$
+x \times \frac{32}{100} = 24
+$$
+$$
+x = \frac{24 \times 100}{32} = 75
+$$
+
+**Answer: 75**
++++
+
+---
+
+**12. What is 35% of $\frac{11}{56}$ of 160? [Assistant Food Inspector - 2009]**<br>
+a. 14<br> b. 12<br> c. `11<br>` d. None of these
+
++++ check
+$$
+160 \times \frac{11}{56} \times \frac{35}{100} = 11
+$$
+
+**Answer: 11**
++++
+
+---
+
+**13. 13$\frac{3}{4}$% is equal to which fraction? [30th BCS]**<br>
+a. $\frac{11}{80}$<br> b. $\frac{3}{20}$<br> c. $\frac{11}{8}$<br> d. $\frac{5}{8}$
+
++++ check
+$$
+13\frac{3}{4}% = \frac{55}{4}% = \frac{55}{400} = \frac{11}{80}
+$$
+
+**Answer: $\frac{11}{80}$**
++++
+
+---
+
+**14. $66\frac{2}{3}%$ is equal to which fraction? [Railway Assistant Commandant - 2007]**<br>
+a. $\frac{1}{3}$<br> b. $\frac{1}{4}$<br> c. $\frac{8}{5}$<br> d. $\frac{2}{3}$
+
++++ check
+$$
+66\frac{2}{3}% = \frac{200}{3}% = \frac{200}{300} = \frac{2}{3}
+$$
+
+**Answer: $\frac{2}{3}$**
++++
+
+---
+
+**15. What is 20% of 0.2? [12th Private Lecturer Registration - 2015]**<br>
+a. 4<br> b. `0.04`<br> c. 0.4<br> d. 0.004
+
++++ check
+$$
+0.2 \times \frac{20}{100} = 0.04
+$$
+
+**Answer: 0.04**
++++
+
+---
+
+**16. 144 is 40% of which number? [Govt Secondary School Assistant Teacher - 2019]**<br>
+a. 260<br> b. 290<br> c. `360`<br> d. 380
+
++++ check
+Let number be $x$
+$$
+x \times \frac{40}{100} = 144
+$$
+$$
+x = \frac{144 \times 100}{40} = 360
+$$
+
+**Answer: 360**
++++
+
+---
+
+**17. In a class of 60 students, 42 failed. What is the pass percentage? [24th BCS]**<br>
+a. 25%<br> b. 28%<br> c. `30%`<br> d. 32%
+
++++ check
+Passed students = $60 - 42 = 18$
+$$
+\frac{18}{60} \times 100 = 30%
+$$
+
+**Answer: 30%**
++++
+
+---
+
+**18. Mr. Reza gave 12% to wife, 58% to son, and the remaining 7,20,000 BDT to daughter. What is the total property value? [38th BCS]**<br>
+a. 24,00,000<br> b. 20,00,000<br> c. 16,00,000<br> d. 12,00,000
+
++++ check
+Remaining percentage = $100 - 12 - 58 = 30%$
+$$
+30% = 720000
+$$
+$$
+100% = \frac{720000 \times 100}{30} = 2400000
+$$
+
+**Answer: 24,00,000**
++++
+
+---
+
+**19. Abu earns 40% more than Babu and $\frac{7}{8}$ of Bodi. Babu earns 5000 BDT. What is total income? [NSI Assistant Director - 2019]**<br>
+a. 14000<br> b. 19000<br> c. 19500<br> d. `20000`
+
++++ check
+Abu’s income = $5000 + 40% \text{ of } 5000 = 7000$
+Bodi’s income = $7000 \times \frac{8}{7} = 8000$
+Total = $5000 + 7000 + 8000 = 20000$
+
+**Answer: 20000**
++++
+
+---
+
+**20. A shop sells sweets at 350 BDT per kg. VAT is 4%. What is total VAT for 3 kg? [36th BCS]**<br>
+a. 14<br> b. `42`<br> c. 12<br> d. 105
+
++++ check
+Total price = $350 \times 3 = 1050$
+$$
+\text{VAT} = \frac{4}{100} \times 1050 = 42
+$$
+
+**Answer: 42**
++++
+</md></sn><sn><md>Qna {.text-end}
+
+**21. In a class of 120 students, 30 students failed. What is the pass percentage? [Primary Pre-Primary Assistant Teacher - 2015]**<br>
+a. 40%<br> b. 25%<br> c. 80%<br> d. `75%`
+
++++ check
+Pass students = $120 - 30 = 90$
+$$
+\frac{90}{120} \times 100 = 75%
+$$
+
+**Answer: 75%**
++++
+
+---
+
+**22. In a 12-member committee, 9 are women. What percentage are men? [16th Teacher Registration Exam - 2019]**<br>
+a. `25%`<br> b. 40%<br> c. 15%<br> d. 20%
+
++++ check
+Men = $12 - 9 = 3$
+$$
+\frac{3 \times 100}{12} = 25%
+$$
+
+**Answer: 25%**
++++
+
+---
+
+**23. In an exam, 288 out of 480 students passed. What is the pass percentage? [Registered Primary Assistant Teacher]**<br>
+a. 80%<br> b. 70%<br> c. 65%<br> d. `60%`
+
++++ check
+$$
+\frac{288}{480} \times 100 = 60%
+$$
+
+**Answer: 60%**
++++
+
+---
+
+**24. If 20% of 20 oranges are rotten, how many are good? [12th Private Lecturer Registration - 2015]**<br>
+a. 4<br> b. 8<br> c. `16`<br> d. 20
+
++++ check
+Rotten = $20 \times \frac{20}{100} = 4$
+Good = $20 - 4 = 16$
+
+**Answer: 16**
++++
+
+---
+
+**25. Price increased from 1000 to 1250. What is the percentage increase? [Primary Assistant Teacher - 2010]**<br>
+a. `25%`<br> b. 21.5%<br> c. 2.5%<br> d. 1.25%
+
++++ check
+Increase = $1250 - 1000 = 250$
+$$
+\frac{250}{1000} \times 100 = 25%
+$$
+
+**Answer: 25%**
++++
+
+---
+
+**26. Out of 75 questions, Rafiq answered 60 correctly. What is the percentage of correct answers? [Primary Assistant Teacher - 2010]**<br>
+a. `80%`<br> b. 90%<br> c. 60%<br> d. 75%
+
++++ check
+$$
+\frac{60}{75} \times 100 = 80%
+$$
+
+**Answer: 80%**
++++
+
+---
+
+**27. Commission rate is 2.50 per 100. What is commission on 2000? [Primary Assistant Teacher - 2010]**<br>
+a. 25<br> b. `50`<br> c. 75<br> d. 100
+
++++ check
+$$
+\frac{2.5}{100} \times 2000 = 50
+$$
+
+**Answer: 50**
++++
+
+---
+
+**28. Income : Expenditure = 20 : 15. What is savings as percentage of income? [Upazila Women &amp; Child Officer - 2007]**<br>
+a. 20%<br> b. 15%<br> c. `25%`<br> d. 30%
+
++++ check
+Savings = $20 - 15 = 5$
+$$
+\frac{5}{20} \times 100 = 25%
+$$
+
+**Answer: 25%**
++++
+
+---
+
+**29. Income : Expenditure = 20 : 15. What percentage of income is saved? [10th BCS - 1996]**<br>
+a. 30%<br> b. 15%<br> c. 23%<br> d. `25%`
+
++++ check
+Savings = $5$ out of $20$
+$$
+\frac{5}{20} \times 100 = 25%
+$$
+
+**Answer: 25%**
++++
+
+---
+
+**30. A school has 450 students, 18% are girls. How many girls are there? [Passport Department Assistant Director - 2011]**<br>
+a. `81`<br> b. 82<br> c. 83<br> d. 84
+
++++ check
+$$
+450 \times \frac{18}{100} = 81
+$$
+
+**Answer: 81**
++++
+</md></sn><sn><md>Qna {.text-end}
+
+**31. A student lost 200 marks out of 500. What percentage of marks did he lose? [DRS Officer - 1997]**<br>
+a. 75%<br> b. 25%<br> c. 40%<br> d. 20%
+
++++ check
+Lost percentage =
+$$
+\frac{200}{500} \times 100 = 40%
+$$
+
+**Answer: 40%**
++++
+
+---
+
+**32. A student scored 600 out of 800 marks. What percentage did he lose? [Ministry of Home Affairs Sub-Inspector - 2019]**<br>
+a. 60%<br> b. 30%<br> c. 20%<br> d. 25%
+
++++ check
+Scored percentage =
+$$
+\frac{600}{800} \times 100 = 75%
+$$
+Lost percentage =
+$$
+100 - 75 = 25%
+$$
+
+**Answer: 25%**
++++
+
+---
+
+**33. In a computer science exam, 30% students passed. 12 failed participated in course and 30 did not. How many students appeared? [18th BCS]**<br>
+a. 60<br> b. 80<br> c. 100<br> d. 120
+
++++ check
+Failed students = $12 + 30 = 42$
+Passed = 30% ⇒ Failed = 70%
+
+$$
+70% = 42
+$$
+$$
+100% = \frac{42 \times 100}{70} = 60
+$$
+
+**Answer: 60**
++++
+
+---
+
+**34. In an exam, 85% passed English. If 75 failed, how many students appeared? [Primary Assistant Teacher - 2006]**<br>
+a. 500<br> b. 300<br> c. 775<br> d. 650
+
++++ check
+Failed percentage = $100 - 85 = 15%$
+$$
+15% = 75
+$$
+$$
+100% = \frac{75 \times 100}{15} = 500
+$$
+
+**Answer: 500**
++++
+
+---
+
+**35. If 5 kg potatoes cost equal to 4 kg earlier, what is percentage decrease in price? [Account General Selection - 2018]**<br>
+a. 21%<br> b. 22%<br> c. 20%<br> d. 23%
+
++++ check
+Assume 4 kg = 100
+1 kg = 25
+Old 1 kg = 25, new 1 kg = 20
+Decrease = 5
+
+$$
+\frac{5}{25} \times 100 = 20%
+$$
+
+**Answer: 20%**
++++
+
+---
+
+**36. A book is sold at 60 instead of 80. What is discount percentage? [BRDB Assistant Rural Dev Officer - 2007]**<br>
+a. 15%<br> b. 12%<br> c. 17⅚%<br> d. 25%
+
++++ check
+$$
+\frac{80 - 60}{80} \times 100 = 25%
+$$
+
+**Answer: 25%**
++++
+
+---
+
+**37. 8 workers complete a task in 12 days. If 2 workers are removed, how much more time is needed (percentage)? [23rd BCS]**<br>
+a. 25%<br> b. 50%<br> c. 33⅓%<br> d. 66⅔%
+
++++ check
+Total work = $8 \times 12 = 96$
+New time = $96 / 6 = 16$ days
+Increase = $4$ days
+
+$$
+\frac{4}{12} \times 100 = 33\frac{1}{3}%
+$$
+
+**Answer: 33⅓%**
++++
+
+---
+
+**38. A shop offers 25% discount. If you buy items worth 500, how much discount? [Defense Ministry Assistant Director - 2016]**<br>
+a. 125<br> b. 75<br> c. 100<br> d. 90
+
++++ check
+$$
+500 \times \frac{25}{100} = 125
+$$
+
+**Answer: 125**
++++
+
+---
+
+**39. In a school, 40% are boys. 30% of boys and 20% of girls join debate club. What percentage join? [NSI Junior Field Officer - 2019]**<br>
+a. 12%<br> b. 24%<br> c. 26%<br> d. 50%
+
++++ check
+Boys = 40%, Girls = 60%
+
+Boys in club = $40 \times \frac{30}{100} = 12$
+Girls in club = $60 \times \frac{20}{100} = 12$
+
+Total = $24%$
+
+**Answer: 24%**
++++
+
+---
+
+**40. A car runs at 80 km/h. A person runs 1 km in 5 minutes. What is his speed as percentage of car speed? [NSI Junior Field Officer - 2019]**<br>
+a. 10%<br> b. 15%<br> c. 25%<br> d. 30%
+
++++ check
+Speed of person:
+$$
+1 \text{ km in 5 min} = 12 \text{ km/h}
+$$
+
+Percentage:
+$$
+\frac{12}{80} \times 100 = 15%
+$$
+
+**Answer: 15%**
++++
+</md></sn><sn><md>Qna {.text-end}
+
+**41. If 120% of a number ‘A’ is equal to 80% of another number ‘B’, then what is (A + B)? [NSI Assistant Director - 2019]**<br>
+a. 1.5A<br> b. 2A<br> c. 2.5A<br> d. 3A
+
++++ check
+Given:
+$$
+120% \text{ of } A = 80% \text{ of } B
+$$
+$$
+A \times \frac{120}{100} = B \times \frac{80}{100}
+$$
+$$
+\frac{B}{A} = \frac{120}{80} = 1.5 \Rightarrow B = 1.5A
+$$
+$$
+A + B = A + 1.5A = 2.5A
+$$
+
+**Answer: 2.5A**
++++
+
+---
+
+**42. If 0.875 part of a property is worth 1212, what is the value of 0.75 part? [Govt Secondary School Assistant Teacher - 2019]**<br>
+a. 7469<br> b. 9996<br> c. 8969<br> d. 8996
+
++++ check
+Value of 1 part:
+$$
+\frac{1212}{0.875}
+$$
+Value of 0.75 part:
+$$
+\frac{1212 \times 0.75}{0.875} = 7469
+$$
+
+**Answer: 7469**
++++
 </md></sn>
