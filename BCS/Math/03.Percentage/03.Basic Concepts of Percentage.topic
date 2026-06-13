@@ -1,10 +1,50 @@
 
-  <sn></sn>
+  <sn><md>#### Type : Basic Concepts of Percentage {.text-center}
+
+**Key Formulas**
+
+* **x is what percent of y?**
+  $$
+  \frac{x}{y} \times 100%
+  $$
+
+* **p% of q?**
+  $$
+  q \times \frac{p}{100}
+  $$
+
+  **Example:** What is 10% of 80?
+  $$
+  80 \times \frac{10}{100} = 8
+  $$
+
+* **x is what percent greater than y?**
+  $$
+  \frac{x - y}{y} \times 100%
+  $$
+
+* **x is what percent lesser than y?**
+  $$
+  \frac{y - x}{y} \times 100%
+  $$
+</md></sn>
   <config>
     <tags>#03.basic concepts of percentage</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Jun 13 2026 10:42:49 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Jun 13 2026 10:51:18 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-CXNC6NyW7N</id>
     <duration></duration>
   </config>
+<sn><md>#### Important Fraction–Percentage Conversions
+
+| Fraction                                      | Fraction                                      |
+| :-------------------------------------------- | :-------------------------------------------- |
+| $1 = 100%$                                    | $\frac{1}{6} = 16\frac{2}{3}% \approx 16.67%$ |
+| $\frac{1}{2} = 50%$                           | $\frac{1}{7} = 14\frac{2}{7}% \approx 14.28%$ |
+| $\frac{1}{3} = 33\frac{1}{3}% \approx 33.33%$ | $\frac{1}{8} = 12.5%$                         |
+| $\frac{2}{3} = 66\frac{2}{3}% \approx 66.67%$ | $\frac{1}{9} = 11.11%$                        |
+| $\frac{1}{4} = 25%$                           | $\frac{1}{10} = 10%$                          |
+| $\frac{3}{4} = 75%$                           | |
+| $\frac{1}{5} = 20%$                           |   |
+</md></sn>
