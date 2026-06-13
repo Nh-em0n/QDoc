@@ -1,5 +1,109 @@
 
-  <sn><md>### Percentage {.text-center}
+  <sn><md>### Understanding Percentage {.text-center}
+
+Percentage denotes per hundred.<br>
+Percentage means how much of something exists out of 100.
+
+For example, suppose there are 56 students in a class and 50 students are present. The question is: **What percentage of students are present?**
+
+* Out of 56 students, 50 are present.
+* Out of 1 student, present students = $\frac{50}{56}$
+* Out of 100 students, present students = $\frac{50}{56} \times 100$
+
+$$
+\frac{50}{56}\times100=89.29%
+$$
+
+So, **89.29% of the students are present.**
+
+Percentage gives us a standard way to express a quantity in terms of **how much it would be out of 100**. This makes comparison easier, regardless of the actual size of the group.
+</md></sn><sn><md>#### Why `100`
+
+Percentage is evaluated out of **100** because humans needed a **standard scale** that is easy to understand and compare.
+
+Think about these three possibilities:
+
+| Scale      | Example      | Easy to Understand? |
+| ---------- | ------------ | ------------------- |
+| Out of 1   | 0.75         | [Not very intuitive]{.fg-orange}  |
+| Out of 10  | 7.5/10       | [Better]{.fg-indigo}              |
+| Out of 100 | 75/100 = 75% | [Very easy]{.fg-teal}           |
+
+**Why not 1?**
+
+We actually do use "out of 1." It is called a **fraction** or **decimal**.
+
+$$
+\frac{3}{4}=0.75
+$$
+
+But when someone says "0.75 of students passed," most people need a moment to interpret it.
+
+**Why not 10?**
+
+Suppose:
+
+$$
+\frac{37}{56}=6.61/10
+$$
+
+The meaning is less clear. We lose precision unless we use decimals.
+
+**Why 100?**
+
+Because our number system is base-10. One hundred is:
+
+$$
+100=10\times10
+$$
+
+This makes conversion very simple:
+
+* 1% = one part out of 100
+* 25% = one quarter
+* 50% = one half
+* 75% = three quarters
+
+Also, people can immediately visualize 100 parts:
+
+```text
+100%
+├── 50%  = Half
+├── 25%  = Quarter
+├── 10%  = One tenth
+└── 1%   = One hundredth
+```
+
+**The deeper idea**
+
+Percentage is not fundamentally about 100. It is about **creating a common reference point**.
+
+For example:
+
+* 40 out of 56 students present
+* 70 out of 100 students present
+* 350 out of 500 students present
+
+These numbers have different totals, so they are hard to compare directly.
+
+By converting everything to a scale of 100:
+
+$$
+\frac{40}{56}\times100=71.43%
+$$
+
+$$
+\frac{70}{100}\times100=70%
+$$
+
+$$
+\frac{350}{500}\times100=70%
+$$
+
+Now comparison becomes easy.
+
+&gt; So, **100 was chosen not because mathematics requires it, but because it is a convenient human-made standard that works well with our decimal number system.**
+</md></sn><sn><md>### Percentage {.text-center}
 
 
 **Essential Information and Formulas**
@@ -26,7 +130,7 @@
     <tags>#02.basics</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Jun 13 2026 09:32:49 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Jun 13 2026 10:13:28 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-i2vMfyoySL</id>
     <duration></duration>
   </config>
