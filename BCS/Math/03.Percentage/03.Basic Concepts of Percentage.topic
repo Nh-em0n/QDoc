@@ -33,7 +33,7 @@
     <tags>#03.basic concepts of percentage</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Jun 13 2026 14:47:26 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Jun 14 2026 18:16:07 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-CXNC6NyW7N</id>
     <duration></duration>
   </config>
@@ -630,7 +630,7 @@ $$
 </md></sn><sn><md>Qna {.text-end}
 
 **41. If 120% of a number ‘A’ is equal to 80% of another number ‘B’, then what is (A + B)? [NSI Assistant Director - 2019]**<br>
-a. 1.5A<br> b. 2A<br> c. 2.5A<br> d. 3A
+a. 1.5A<br> b. 2A<br> c. `2.5A`<br> d. 3A
 
 +++ check
 Given:
