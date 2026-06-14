@@ -14,10 +14,10 @@
   $$
 * **Final Equation** :
   $$
-   \text{Past Price} = \frac{\text{Current Price} \times 100}{\text{corresponding past percentage of current price}}
+   \text{Past Value} = \frac{\text{Current Value} \times 100}{\text{corresponding past percentage of current value}}
   $$
    $$
-   \text{x} = \frac{\text{Current Price} \times 100}{100 \pm y}
+   \text{x} = \frac{\text{Current Value} \times 100}{100 \pm y}
    $$
 **Important Concept**
 
@@ -28,7 +28,7 @@ When a value increases or decreases, the resulting value represents a percentage
     <tags>#04.percentage increase or decrease in value</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Jun 14 2026 19:22:10 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Jun 14 2026 19:25:08 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-YU7qokjBsy</id>
     <duration></duration>
   </config>
