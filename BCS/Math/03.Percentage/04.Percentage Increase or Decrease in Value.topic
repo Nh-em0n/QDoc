@@ -1,10 +1,88 @@
 
-  <sn></sn>
+  <sn><md>### Percentage Increase or Decrease in Value {.text-center}
+
+**Key Formulas**
+
+* **If a value increases by y%, the new value is:**
+  $$
+  (100 + y)\% \text{ of } x
+  $$
+
+* **If a value decreases by y%, the new value is:**
+  $$
+  (100 - y)\% \text{ of } x
+  $$
+
+**Important Concept**
+
+**100% always represents the original or complete value.**<br>
+When a value increases or decreases, the resulting value represents a percentage of the original/previous value.
+</md></sn>
   <config>
     <tags>#04.percentage increase or decrease in value</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Jun 14 2026 18:34:08 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Jun 14 2026 19:01:03 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-YU7qokjBsy</id>
     <duration></duration>
   </config>
+<sn><md>#### Percentage Increase
+
+**A product's price becomes 55 after a 10% increase. What was its original price?**
+
+After a 10% increase:
+
+$$
+(100 + 10)\% = 110\%
+$$
+
+Here u have to consider two scenerio,<br>
+110% of past price = current price or 100% of current price<br>
+we have to determine the past price or the 100% of past price
+
+
+Given:
+
+$$
+110\% \text{of past price} = 55 \text{current price}
+$$
+
+$$
+1\%\text{of past price} = \frac{55}{110\%} \text{current price}
+$$
+
+Therefore,
+
+$$
+100\%\text{of past price} = \frac{55 \times 100}{110} = 50
+$$
+
+**Answer: 50**
+</md></sn><sn><md>#### Percentage Decrease
+
+**A product's price becomes 45 after a 10% decrease. What was its original price?**
+
+After a 10% decrease:
+
+$$
+(100 - 10)\% = 90\%
+$$
+
+Given:
+
+$$
+90\% \text{of past price} = 45 \text{current price}
+$$
+
+$$
+1\% \text{of past price} = \frac{45}{90\%} \text{current price}
+$$
+
+Therefore,
+
+$$
+100\% \text{of past price} = \frac{45 \times 100}{90} = 50
+$$
+
+**Answer: 50**
+</md></sn>
