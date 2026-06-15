@@ -89,7 +89,7 @@ And $y = \frac{100 \times 100}{100 \pm y}$
     <tags>#05.maintaining the same expense after a price change</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jun 15 2026 21:24:03 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jun 15 2026 21:26:53 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-OeosbV70yn</id>
     <duration></duration>
   </config>
@@ -136,4 +136,114 @@ $$
 
 **Answer: 20%**
 +++
-</md></sn>
+
+**61. Due to a 20% increase in the price of sugar, by what percentage should a family reduce consumption so that total expenditure remains unchanged? [Islamic Bank Officer - 2008]**<br>
+a. 20%<br> b. 10%<br> c. `16.67%`<br> d. 25%
+
++++ check
+
+Given price increase = (20%)
+
+Required reduction:
+$$
+\left(\frac{20}{100+20}\times100\right)\%
+= \frac{20}{120}\times100
+= 16.67\%
+$$
+
+**Answer: 16.67%**
++++
+
+---
+
+**62. If the price of cloth decreases by 20%, by what percentage can a person increase consumption without increasing expenditure? [Passport &amp; Immigration Assistant Director - 2014; ACC Inspector - 1998]**<br>
+a. `25%`<br> b. 20%<br> c. 33⅓%<br> d. 40%
+
++++ check
+
+Given price decrease = (20%)
+
+Required increase:
+$$
+\left(\frac{20}{100-20}\times100\right)\%
+= \frac{20}{80}\times100
+= 25\%
+$$
+
+**Answer: 25%**
++++
+
+---
+
+**63. If A’s salary is 35% more than B’s salary, by what percentage is B’s salary less than A’s salary? [11th BCS]**<br>
+a. 27%<br> b. `25.93%`<br> c. 40%<br> d. 25.50%
+
++++ check
+
+Let B = 100
+Then A = 135
+
+B is less than A by:
+$$
+\frac{35}{135}\times100 = 25.93\%
+$$
+
+**Answer: 25.93%**
++++
+
+---
+
+**64. Rahim’s income is 25% more than Karim’s income. By what percentage is Karim’s income less than Rahim’s income? [Govt Secondary School Assistant Teacher - 2019]**<br>
+a. 20%<br> b. `25%`<br> c. 30%<br> d. 35%
+
++++ check
+
+Let Karim = 100
+Rahim = 125
+
+Decrease from Rahim to Karim:
+$$
+\frac{25}{125}\times100 = 20\%
+$$
+
+**Answer: 20%**
++++
+
+---
+
+**65. Russell’s income is 25% more than Asma’s income. By what percentage is Asma’s income less than Russell’s income? [PM Office Assistant Director - 2015]**<br>
+a. `20%`<br> b. 30%<br> c. 40%<br> d. 50%
+
++++ check
+
+Let Asma = 100
+Russell = 125
+
+Decrease:
+$$
+\frac{25}{125}\times100 = 20\%
+$$
+
+**Answer: 20%**
++++
+
+---
+
+**66. Kamal’s income is 16% more than Rafiq’s income. By what percentage is Rafiq’s income less than Kamal’s income? [BRDB Rural Development Officer - 2016]**<br>
+a. `13.8%`<br> b. 20%<br> c. 84%<br> d. 10%
+
++++ check
+
+Let Rafiq = 100
+Kamal = 116
+
+Decrease:
+$$
+\frac{16}{116}\times100 = 13.79\% \approx 13.8\%
+$$
+
+**Answer: 13.8%**
++++
+
+
+</md></sn><sn></sn>
