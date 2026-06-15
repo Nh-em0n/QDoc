@@ -80,7 +80,9 @@ In this example, the family maintains the same expenditure (50 Tk), but the quan
 
 #### Our equation is 
 
-**Equation :** $x = 100 \pm y$ <br>
+**Equation :** <br>
+$x = 100 - y$ on value increase  or <br> 
+ $x = y - 100$ on value decrease <br>
 And $y = \frac{100 \times 100}{100 \pm y}$
 
 
@@ -89,7 +91,7 @@ And $y = \frac{100 \times 100}{100 \pm y}$
     <tags>#05.maintaining the same expense after a price change</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jun 15 2026 21:26:53 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jun 15 2026 21:39:02 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-OeosbV70yn</id>
     <duration></duration>
   </config>
