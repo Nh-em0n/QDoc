@@ -1,10 +1,155 @@
 
-  <sn></sn>
+  <sn><md>70.Yesterday, the price of sugar increased by 10%. Today, it decreased by 10%. What is the overall change in the price of sugar?
+[Primary Head Teacher (Khulna) - ’09]
+
+**Options:**<br>
+A. `1% decrease`<br>
+B. 1% increase<br>
+C. 1.5% decrease<br>
+D. 1.5% increase
+
+**Answer:** A. 1% decrease
+
+
+**Explanation**<br>
+
+Using the formula for successive percentage change:
+
+Assume the original price of sugar = 100 currency units.
+
+After a 10% increase: $100 + 10% \text{ of } 100 = 110$ <br>
+After a 10% decrease on 110: $110 - ( 10\% \text{ of } 110 ) = 110 - 11 = 99$ <br>
+So, the final price = 99 <br>
+Decrease in price: $100 - 99 = 1$$ <br>
+Percentage decrease: $\frac{1}{100} \times 100 = 1\%$ 
+
+
+
++++ Using the formula for successive percentage change
+
+$$x - y + \frac{x(-y)}{100}$$
+
+$$= 10 - 10 + \frac{10(-10)}{100}$$
+
+$$= -1$$
+
+So, the price decreases by 1%.
+
++++
+</md></sn>
   <config>
     <tags>#07.successive percentage increase decrease</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jun 15 2026 22:17:38 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jun 15 2026 22:25:39 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-LqhTUvJpXr</id>
     <duration></duration>
   </config>
+<sn><md>#### Successive Percentage Increase/Decrease
+
+**Formula**
+
+If a quantity changes by (x%) and then by (y%), the total change is:
+
+$$
+\left(x + y + \frac{xy}{100}\right)\%
+$$
+
+* Use **+x** for increase
+* Use **−y** for decrease
+
+So the general case becomes:
+
+$$
+x - y + \frac{x(-y)}{100}
+$$
+</md></sn><sn><md>**71. If the length of a rectangle increases by 20% and width decreases by 10%, what is the percentage change in area? [Primary Assistant Teacher - 2010]**<br>
+
+a. 108% increase<br> b. 108% decrease<br> c. `8% increase`<br> d. 8% decrease
+
++++ check
+
+Net change:
+$$
+20 - 10 + \frac{20(-10)}{100} = 10 - 2 = 8%
+$$
+
+So area increases by 8%.
+
+**Answer: 8% increase**
++++
+
+---
+
+**72. If water tax increases by 30% and usage decreases by 30%, what is the change in total expense? (NSI Junior Field Officer - 2019)**<br>
+
+a. 9% increase<br> b. 7.75% decrease<br> c. `9% decrease`<br> d. 8.25% increase
+
++++ check
+
+Net change:
+$$
+30 - 30 + \frac{30(-30)}{100} = -9%
+$$
+
+So expense decreases by 9%.
+
+**Answer: 9% decrease**
++++
+
+---
+
+**73. Sugar price decreases by 20% and consumption increases by 20%. What is the net change in expenditure? [Savings Department Assistant Director - 2009]**<br>
+
+a. 7%<br> b. 6%<br> c. 5%<br> d. `4%`
+
++++ check
+
+Net change:
+$$
+-20 + 20 + \frac{(-20)(20)}{100} = -4%
+$$
+
+So expenditure decreases by 4%.
+
+**Answer: 4% decrease**
++++
+
+---
+
+**74. A DVD gets 10% discount twice successively. What is the total discount on original price? [BRDB Upazila Rural Dev Officer - 2009]**<br>
+
+a. 20%<br> b. `19%`<br> c. 18%<br> d. 11%
+
++++ check
+
+Net discount:
+$$
+-10 - 10 + \frac{(-10)(-10)}{100} = -20 + 1 = -19%
+$$
+
+So total discount = 19%.
+
+**Answer: 19%**
++++
+
+---
+
+**75. A stock price decreases by 20% yesterday and increases by 30% today. What is the net change? [BRDB Upazila Rural Dev Officer - 2009]**<br>
+
+a. 10% increase<br> b. `4% increase`<br> c. 6% increase<br> d. 4% decrease
+
++++ check
+
+Net change:
+$$
+-20 + 30 + \frac{(-20)(30)}{100}
+= 10 - 6
+= 4%
+$$
+
+So price increases by 4%.
+
+**Answer: 4% increase**
++++
+</md></sn>
