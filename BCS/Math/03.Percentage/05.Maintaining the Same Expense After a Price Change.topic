@@ -1,19 +1,74 @@
 
-  <sn><md>#### Concept
+  <sn><md>#### Maintaining the Same Expense After a Price Change {.text-center}
+
+**Key Formulas**
+
+:::.row
+:::.col-12 .col-md-6
+Price Increases<br>
+If the price of a commodity increases by (x%), then to keep the total expenditure unchanged, consumption must be reduced by:
+
+$$
+\left(\frac{x}{100+x}\times100\right)\%
+$$
+:::
+
+:::.col-12 .col-md-6
+Price Decreases<br>
+If the price of a commodity decreases by (x%), then to keep the total expenditure unchanged, consumption may be increased by:
+
+$$
+\left(\frac{x}{100-x}\times100\right)\%
+$$
+:::
+
+:::.col-12 .col-md-6
+Salary Comparison (More → Less)<br>
+If A's salary is (x%) more than B's salary, then B's salary is less than A's salary by:
+$$
+\left(\frac{x}{100+x}\times100\right)\%
+$$
+:::
+
+:::.col-12 .col-md-6
+Salary Comparison (Less → More)<br>
+If A's salary is (x%) less than B's salary, then B's salary is more than A's salary by:
+$$
+\left(\frac{x}{100-x}\times100\right)\%
+$$
+:::
+:::
+</md></sn><sn><md>#### Concept
 
 Suppose the price of sugar was originally **50 Tk per kg**.
 
-Due to an economic crisis, the price increases to **70 Tk per kg**. However, a family still has only **50 Tk** allocated for buying sugar. They ask the shopkeeper to provide as much sugar as possible for 50 Tk.
+Due to an economic crisis, the price increases to **70 Tk** or **125%** per kg. However, a family still has only **50 Tk** allocated for buying sugar. They ask the shopkeeper to provide as much sugar as possible for 50 Tk.
 
 **Past Situation** 1 kg sugar = 50 Tk <br>
-**Present Situation** 1 kg sugar = 70 Tk
+**Present Situation** 1 kg sugar = 70 Tk or 125%
 
 Now, in the present market:
 
+:::.row
+:::.col-12 .col-md-6
 For **70 Tk**, we get **1 kg sugar**.<br>
 For **70 Tk**, we get **100% sugar**.<br>
 For **1 Tk**, we get:$\frac{100}{70}\%$ <br>
 For **50 Tk**, we get:$\frac{100 \times 50}{70}\% = 71.43%$
+:::
+
+:::.col-12 .col-md-6
+if price is increases in percentage then 
+
+For **125 Tk**, we get **1 kg sugar**.<br>
+For **125 Tk**, we get **100% sugar**.<br>
+For **1 Tk**, we get:$\frac{100}{125}\%$ <br>
+For **100 Tk**, we get:$\frac{100 \times 100}{125}\% = 71.43%$
+
+answer is not correct,shown just for demonstration pupose only,i will fix it later
+:::
+:::
+
 
 Therefore, with 50 Tk, the customer can buy only **71.43\%** of the previous 1 kg quantity.
 
@@ -22,12 +77,19 @@ The reduction in quantity is:$(100 - 71.43)\% = 28.57\%$
 **Conclusion**<br>
 When the price of a product increases but the amount of money available remains the same, the quantity purchased must decrease.<br>
 In this example, the family maintains the same expenditure (50 Tk), but the quantity of sugar decreases by **28.57\%**.
+
+#### Our equation is 
+
+**Equation :** $x = 100 \pm y$ <br>
+And $y = \frac{100 \times 100}{100 \pm y}$
+
+
 </md></sn>
   <config>
     <tags>#05.maintaining the same expense after a price change</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jun 15 2026 20:41:17 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jun 15 2026 21:20:32 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-OeosbV70yn</id>
     <duration></duration>
   </config>
