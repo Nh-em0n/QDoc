@@ -89,7 +89,51 @@ And $y = \frac{100 \times 100}{100 \pm y}$
     <tags>#05.maintaining the same expense after a price change</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jun 15 2026 21:20:32 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jun 15 2026 21:24:03 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-OeosbV70yn</id>
     <duration></duration>
   </config>
+<sn><md>Qna {.text-end}
+
+**59. If the price of oil increases by 25%, by what percentage should consumption be reduced so that total expenditure remains unchanged? [36th BCS]**<br>
+a. 16%<br> b. `20%`<br> c. 25%<br> d. 24%
+
++++ check
+
+Given price increase = (25%)
+
+Required reduction formula:
+$$
+\left(\frac{x}{100+x}\times100\right)\%
+$$
+
+Substituting (x = 25):
+
+$$
+\frac{25}{100+25}\times100 = \frac{25}{125}\times100 = 20\%
+$$
+
+**Answer: 20%**
++++
+
+---
+
+**60. Due to a 25% increase in sugar price, a family reduces consumption so that total expenditure remains unchanged. By what percentage did they reduce consumption? [24th, 12th &amp; 10th BCS]**<br>
+a. 22%<br> b. 25%<br> c. `20%`<br> d. 30%
+
++++ check
+
+Price increase = (25%)
+
+Required reduction:
+$$
+\left(\frac{25}{100+25}\times100\right)\%
+$$
+
+$$
+= \frac{25}{125}\times100 = 20\%
+$$
+
+**Answer: 20%**
++++
+</md></sn>
