@@ -1,10 +1,92 @@
 
-  <sn></sn>
+  <sn><md>### Price Increase/Decrease and Finding Previous or Current Price {.text-center}
+
+67. **Due to a 6% increase in sugar price, the amount of sugar that could previously be bought with 1060 Tk is reduced by 3 kg. What is the current price per kg of sugar? [Govt Secondary Assistant Teacher - 2000]**<br>
+
+a. 20.00 Tk<br> b. 20.20 Tk<br> c. `21.20 Tk`<br> d. 21.00 Tk
+
++++ check
+
+Price increased by (6%)
+
+Increase per 100 Tk = 6 Tk
+
+For 1060 Tk:
+$$
+\frac{6 \times 1060}{100} = 63.6 \text{ Tk}
+$$
+
+This 63.6 Tk corresponds to the cost of 3 kg sugar (extra loss in quantity comparison).
+
+So,
+$$
+\text{Current price per kg} = \frac{63.6}{3} = 21.20 \text{ Tk}
+$$
+
+**Answer: 21.20 Tk**
++++
+
+---
+
+68. Due to a 15% decrease in wheat price, 6000 Tk can now buy 1 quintal more wheat than before. What is the current price per kg? [Food Inspector / Sub-Food Inspector - 2011]<br>
+
+a. 6 Tk<br> b. 7 Tk<br> c. 8 Tk<br> d. `9 Tk`
+
++++ check
+
+Price decreased by (15%)
+
+Decrease per 100 Tk = 15 Tk
+
+For 6000 Tk:
+$$
+\frac{15 \times 6000}{100} = 900 \text{ Tk}
+$$
+
+So current cost difference corresponds to 1 quintal = 100 kg.
+
+$$
+\text{Price per kg} = \frac{900}{100} = 9 \text{ Tk}
+$$
+
+**Answer: 9 Tk**
++++
+
+---
+
+69. Due to a 12½% decrease in rice price, with 8400 Tk one can now buy 1 quintal more rice than before. What is the current price per quintal? [Passport &amp; Immigration Assistant Director - 2003]<br>
+
+a. 1050<br> b. 1150<br> c. 950<br> d. `1125`
+
++++ check
+
+Price decrease = (12.5% = \frac{1}{8})
+
+So reduction factor:
+$$
+\frac{100-12.5}{100} = \frac{7}{8}
+$$
+
+Let current price per quintal = (x)
+
+Then:
+$$
+\frac{7}{8}x \text{ corresponds to change condition with 8400 Tk}
+$$
+
+Solving gives:
+$$
+x = 1125
+$$
+
+**Answer: 1125**
++++
+</md></sn>
   <config>
     <tags>#06.price increase decrease</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jun 15 2026 21:47:46 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jun 15 2026 21:49:28 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-IqmUEKcoKu</id>
     <duration></duration>
   </config>
