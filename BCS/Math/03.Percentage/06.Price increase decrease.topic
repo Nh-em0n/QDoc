@@ -7,23 +7,37 @@ a. 20.00 Tk<br> b. 20.20 Tk<br> c. `21.20 Tk`<br> d. 21.00 Tk
 
 +++ check
 
-Price increased by (6%)
+**Problem Statement:**
 
-Increase per 100 Tk = 6 Tk
+Due to a $6\%$ increase in the price of sugar, $3\text{ kg}$ less sugar can be bought now for $1060\text{ Tk}$ than before. What is the current price of sugar per kg?
 
-For 1060 Tk:
-$$
-\frac{6 \times 1060}{100} = 63.6 \text{ Tk}
-$$
+**Step-by-step Solution:**
 
-This 63.6 Tk corresponds to the cost of 3 kg sugar (extra loss in quantity comparison).
+**Step 1: Calculate the total increase in price**
 
-So,
-$$
-\text{Current price per kg} = \frac{63.6}{3} = 21.20 \text{ Tk}
-$$
+The price of sugar has increased by $6\%$. This means the extra amount of money required to buy the same original quantity of sugar is $6\%$ of the original total cost ($1060\text{ Tk}$).
 
-**Answer: 21.20 Tk**
+in past in 1060tk we get x kg sugar<br>
+in present in 1060 + its 6% we get x kg sugar<br>
+in present in 1060 we get x-3 kg sugar<br>
+in present in 1060+its 6% we get x-3 + 3 kg sugar<br>
+so in present in 6% of 1060 we get 3kg sugar<br>
+
+$$\text{Increase in price} = 6\% \text{ of } 1060\text{ Tk}$$
+
+$$\text{Increase in price} = 1060 \times \frac{6}{100} = \frac{6360}{100} = 63.6\text{ Tk}$$
+
+**Step 2: Find the current price per kg**
+
+Because the price increased by $63.6\text{ Tk}$, a person gets $3\text{ kg}$ less sugar for the same $1060\text{ Tk}$. This implies that the current value/cost of that $3\text{ kg}$ of sugar is exactly equal to the increased amount of $63.6\text{ Tk}$.
+
+Therefore, the current price of $1\text{ kg}$ of sugar is:
+
+$$\text{Current price per kg} = \frac{63.6}{3} = 21.2\text{ Tk}$$
+
+**Answer:**
+
+The current price of sugar is **$21.2\text{ Tk}$** per kg (or $21\text{ Tk}$ and $20\text{ Poisha}$).
 +++
 
 ---
@@ -86,7 +100,7 @@ $$
     <tags>#06.price increase decrease</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jun 15 2026 21:49:28 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Jun 16 2026 22:04:01 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-IqmUEKcoKu</id>
     <duration></duration>
   </config>
