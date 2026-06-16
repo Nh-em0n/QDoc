@@ -19,7 +19,7 @@
     <tags>#05.subordinate clause</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jun 09 2026 15:49:13 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Jun 16 2026 23:38:33 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-RoUGOY5cdX</id>
     <duration></duration>
   </config>
@@ -36,6 +36,11 @@
 - “That থাকলেই Subordinate Clause”<br>
 → ভুল, Context ছাড়া নিশ্চিত হওয়া যায় না।
 </md></sn><sn><md>### Clause Category
+
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Eng2/Clause/subordinate-clause-type.png)
+
+
++++ ascii diagram
 
 ```bash
              SUBORDINATE CLAUSE
@@ -69,6 +74,8 @@ Complement         Clause      Clause        │        │          │
 
 
 ```                                                     
++++
+
 
 | Clause Type          | বাংলা সংজ্ঞা                                                                         | কীভাবে কাজ করে                                  | সাধারণ Connector                          | উদাহরণ                                 |
 | -------------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------- | ----------------------------------------- | -------------------------------------- |
