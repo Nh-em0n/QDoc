@@ -1,14 +1,72 @@
 
-  <sn></sn>
+  <sn><md>### Facts
+
+- Percentage denotes per hundred.
+- Percentage means how much of something exists out of 100.
+- Percentage is evaluated out of 100 because humans needed a standard scale that is easy to understand and compare.
+- By converting everything to a scale of 100 comparison becomes easy.
+- 100 represents the whole or complete part of something.
+- will be added later
+</md></sn>
   <config>
     <tags>#09.chapter summary</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jun 16 2026 22:44:16 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Jun 16 2026 22:52:06 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-9husHluF4f</id>
     <duration></duration>
   </config>
-<sn></sn><sn><md>### Type Based Math{.text-center}
+<sn><md>### Equation
+
+- fraction to percentage = $\frac{part}{whole} \times 100$
+- percentage to decimal = $\text{percentage} \times 100$
+- **x is what percent of y?**
+  $$
+  \frac{x}{y} \times 100
+  $$
+  ![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Math/03.Percentage/media/dg0.svg)
+
+- **p% of q?**
+  $$
+  q \times \frac{p}{100}
+  $$
+
+  **Example:** What is 10% of 80?
+  $$
+  80 \times \frac{10}{100} = 8
+  $$
+
+- **x is what percent greater than y?**
+  $$
+  \frac{x - y}{y} \times 100
+  $$
+  ![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Math/03.Percentage/media/dg2.svg)
+- **x is what percent lesser than y?**
+  $$
+  \frac{y - x}{y} \times 100
+  $$
+
+- **Percentage Increase or Decrease in Value** :
+  $$
+   \text{Past Value} = \frac{\text{Current Value} \times 100}{\text{corresponding past percentage of current value}}
+  $$
+   $$
+   \text{x} = \frac{\text{Current Value} \times 100}{100 \pm y}
+
+- **Maintaining the same expense After a price Change by adjusting usage :** <br>
+  $x = 100 - y$ on value increase  or <br> 
+  $x = y - 100$ on value decrease <br>
+  And $y = \frac{100 \times 100}{100 \pm y}$
+   
+- successive percentage increase decrease<br>
+  Use **+x** for increase<br>
+  Use **−y** for decrease
+
+  $$
+  \left(x + y + \frac{xy}{100}\right)\%
+  $$
+
+</md></sn><sn><md>### Type Based Math{.text-center}
 
 #### Basic
 
@@ -152,4 +210,6 @@ $$x - y + \frac{x(-y)}{100}$$
 $$= 10 - 10 + \frac{10(-10)}{100}$$
 $$= -1$$
 So, the price decreases by 1%.
-</md></sn>
+</md></sn><sn><md>#### Important Math
+
+1,2,6,7,10,11,12,14,15,18,19,20,23,25,27,`28`,`33`,`35`,`37`,39,`40`,41,42,45,47,`50`,`51`,54,56,58,61,62,68,`76`,78</md></sn>
