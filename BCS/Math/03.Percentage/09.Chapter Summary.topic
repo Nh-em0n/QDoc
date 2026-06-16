@@ -4,7 +4,152 @@
     <tags>#09.chapter summary</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jun 16 2026 22:04:55 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Jun 16 2026 22:44:16 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-9husHluF4f</id>
     <duration></duration>
   </config>
+<sn></sn><sn><md>### Type Based Math{.text-center}
+
+#### Basic
+
+In a classrom there are 56 students where 50 students are attended. The question is: <br>
+**What percentage of students are present?**
+
+* Out of 56 students, 50 are present.
+* Out of 1 student, present students = $\frac{50}{56}$
+* Out of 100 students, present students = $\frac{50}{56} \times 100 = 89.29%$
+
+Percentage gives us a standard way to express a quantity in terms of **how much it would be out of 100**. This makes comparison easier, regardless of the actual size of the group.
+</md></sn><sn><md>### Percentage Increase or Decrease in Value
+
+**A product's price becomes 55 after a 10% increase. What was its original price?**
+
+After a 10% increase:
+
+$$
+(100 + 10)\% = 110\%
+$$
+
+Here u have to consider two scenerio,<br>
+110% of past price = current price or 100% of current price<br>
+we have to determine the past price or the 100% of past price
+
+
+Given:
+
+$$
+110\% \text{of past price} = 55 \text{current price}
+$$
+
+$$
+1\%\text{of past price} = \frac{55}{110} \text{current price}
+$$
+
+Therefore,
+
+$$
+100\% \text{ of past price} = \frac{55 \times 100}{110} = 50
+$$
+
+**Answer: 50**
+</md></sn><sn><md>### Maintaining the Same Expense After a Price Change
+
+Suppose the price of sugar was originally **50 Tk per kg**.
+
+Due to an economic crisis, the price increases to **70 Tk** or **125%** per kg. However, a family still has only **50 Tk** allocated for buying sugar. They ask the shopkeeper to provide as much sugar as possible for 50 Tk.
+
+70tk is not 125% of 50.given just for understanding,i dont have enough time. {.text-secondary}
+
+**Past Situation** 1 kg sugar = 50 Tk <br>
+**Present Situation** 1 kg sugar = 70 Tk or 125%<br>
+Now, in the present market:
+
+:::.row
+:::.col-12 .col-md-6
+For **70 Tk**, we get **1 kg sugar**.<br>
+For **70 Tk**, we get **100% sugar**.<br>
+For **1 Tk**, we get:$\frac{100}{70}\%$ <br>
+For **50 Tk**, we get:$\frac{100 \times 50}{70}\% = 71.43%$
+:::
+
+:::.col-12 .col-md-6
+if price is increases in percentage then 
+
+For **125 Tk**, we get **1 kg sugar**.<br>
+For **125 Tk**, we get **100% sugar**.<br>
+For **1 Tk**, we get:$\frac{100}{125}\%$ <br>
+For **100 Tk**, we get:$\frac{100 \times 100}{125}\% = 71.43%$
+
+:::
+:::
+
+
+Therefore, with 50 Tk, the customer can buy only **71.43\%** of the previous 1 kg quantity.<br>
+The reduction in quantity is:$(100 - 71.43)\% = 28.57\%$
+
+**Conclusion**<br>
+When the price of a product increases but the amount of money available remains the same, the quantity purchased must decrease.<br>
+In this example, the family maintains the same expenditure (50 Tk), but the quantity of sugar decreases by **28.57\%**.
+
+So shorcut our equation is 
+
+**Maintaining the same expense After a price Change by adjusting usage :** <br>
+$x = 100 - y$ on value increase  or <br> 
+ $x = y - 100$ on value decrease <br>
+And $y = \frac{100 \times 100}{100 \pm y}$
+</md></sn><sn><md>### Price Increase Decrease
+
+**Due to a 6% increase in sugar price, the amount of sugar that could previously be bought with 1060 Tk is reduced by 3 kg. What is the current price per kg of sugar? [Govt Secondary Assistant Teacher - 2000]**<br>
+
+**Problem Statement:**
+
+Due to a $6\%$ increase in the price of sugar, $3\text{ kg}$ less sugar can be bought now for $1060\text{ Tk}$ than before. What is the current price of sugar per kg?
+
+**Step-by-step Solution:** {.text-center}
+
+**Step 1: Calculate the total increase in price**
+
+The price of sugar has increased by $6\%$. This means the extra amount of money required to buy the same original quantity of sugar is $6\%$ of the original total cost ($1060\text{ Tk}$).
+
+in past in 1060tk we get x kg sugar<br>
+in present in 1060 + its 6% we get x kg sugar<br>
+in present in 1060 we get x-3 kg sugar<br>
+in present in 1060+its 6% we get x-3 + 3 kg sugar<br>
+so in present in 6% of 1060 we get 3kg sugar<br>
+
+$$\text{Increase in price} = 6\% \text{ of } 1060\text{ Tk}$$
+
+$$\text{Increase in price} = 1060 \times \frac{6}{100} = \frac{6360}{100} = 63.6\text{ Tk}$$
+
+**Step 2: Find the current price per kg**
+
+Because the price increased by $63.6\text{ Tk}$, a person gets $3\text{ kg}$ less sugar for the same $1060\text{ Tk}$. This implies that the current value/cost of that $3\text{ kg}$ of sugar is exactly equal to the increased amount of $63.6\text{ Tk}$.
+
+Therefore, the current price of $1\text{ kg}$ of sugar is:
+
+$$\text{Current price per kg} = \frac{63.6}{3} = 21.2\text{ Tk}$$
+
+**Answer:**
+
+The current price of sugar is **$21.2\text{ Tk}$** per kg (or $21\text{ Tk}$ and $20\text{ Poisha}$).</md></sn><sn><md>### Successive Percentage Increase Decrease
+
+**Yesterday, the price of sugar increased by 10%. Today, it decreased by 10%. What is the overall change in the price of sugar**
+
+**Explanation**<br>
+Using the formula for successive percentage change:<br>
+Assume the original price of sugar = 100 currency units.
+
+After a 10% increase: $100 + 10% \text{ of } 100 = 110$ <br>
+After a 10% decrease on 110: $110 - ( 10\% \text{ of } 110 ) = 110 - 11 = 99$ <br>
+So, the final price = 99 <br>
+Decrease in price: $100 - 99 = 1$$ <br>
+Percentage decrease: $\frac{1}{100} \times 100 = 1\%$ 
+
+
+
+**Using the formula for successive percentage change**
+$$x - y + \frac{x(-y)}{100}$$
+$$= 10 - 10 + \frac{10(-10)}{100}$$
+$$= -1$$
+So, the price decreases by 1%.
+</md></sn>
