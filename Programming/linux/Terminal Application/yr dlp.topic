@@ -1,10 +1,185 @@
 
-  <sn></sn>
+  <sn><md># Complete Guide to Using yt-dlp in Linux {.text-center}
+</md></sn>
   <config>
     <tags>#yr dlp</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 18 2026 21:40:59 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 18 2026 21:46:37 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-CgFolVJS5I</id>
     <duration></duration>
   </config>
+<sn><md>### Introduction
+
+**yt-dlp** is a powerful command-line program used to download videos, audio, subtitles, playlists, and other media from YouTube and thousands of supported websites. It is a community-maintained fork of youtube-dl and offers better performance, more features, and frequent updates.
+
+Whether you want to download a single video, an entire playlist, extract audio, or automate downloads, yt-dlp provides extensive options for Linux users.
+</md></sn><sn><md>### Installing yt-dlp
+
+**Ubuntu / Debian**
+
+```bash
+sudo apt update
+sudo apt install yt-dlp
+```
+
+**Install Latest Version**
+
+```bash
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp \
+-o /usr/local/bin/yt-dlp
+
+sudo chmod a+rx /usr/local/bin/yt-dlp
+```
+
+**Verify installation:**
+
+```bash
+yt-dlp --version
+```
+
+</md></sn><sn><md>### Updating yt-dlp
+
+```bash
+yt-dlp -U
+```
+
+If installed through a package manager:
+
+```bash
+sudo apt update
+sudo apt upgrade yt-dlp
+```
+</md></sn><sn><md>Basic Usage
+
+**Download a Video**
+
+```bash
+yt-dlp "https://www.youtube.com/watch?v=VIDEO_ID"
+```
+
+Example:
+
+```bash
+yt-dlp "https://youtu.be/dQw4w9WgXcQ"
+```
+</md></sn><sn><md>**Viewing Available Formats**
+
+Before downloading, you can inspect available formats:
+
+```bash
+yt-dlp -F URL
+```
+
+Example:
+
+```bash
+yt-dlp -F https://youtu.be/dQw4w9WgXcQ
+```
+
+Output includes:
+
+* Format ID
+* Resolution
+* Codec
+* File size
+</md></sn><sn><md>### Downloading Specific Video Quality
+
+**Download 1080p**
+
+```bash
+yt-dlp -f 137+140 URL
+```
+
+Where:
+
+* 137 = 1080p video
+* 140 = Audio
+
+---
+
+**Download Best Quality**
+
+```bash
+yt-dlp -f bestvideo+bestaudio URL
+```
+
+or
+
+```bash
+yt-dlp -f bv+ba URL
+```
+</md></sn><sn><md>**Download Best Combined Format**
+
+```bash
+yt-dlp -f best URL
+```
+</md></sn><sn><md>#### Downloading Audio Only
+
+**Best Audio**
+
+```bash
+yt-dlp -f ba URL
+```
+
+**Convert to MP3**
+
+Requires FFmpeg.
+
+```bash
+yt-dlp -x --audio-format mp3 URL
+```
+
+---
+
+**Convert to AAC**
+
+```bash
+yt-dlp -x --audio-format aac URL
+```
+
+---
+
+**Convert to FLAC**
+
+```bash
+yt-dlp -x --audio-format flac URL
+```
+
+</md></sn><sn><md>#### Installing FFmpeg
+
+Ubuntu:
+
+```bash
+sudo apt install ffmpeg
+```
+
+Verify:
+
+```bash
+ffmpeg -version
+```
+</md></sn><sn><md>#### Downloading Playlists
+
+**Entire Playlist**
+
+```bash
+yt-dlp PLAYLIST_URL
+```
+
+---
+
+**First 10 Videos**
+
+```bash
+yt-dlp --playlist-items 1-10 PLAYLIST_URL
+```
+
+---
+
+**Specific Videos**
+
+```bash
+yt-dlp --playlist-items 5,7,10 PLAYLIST_URL
+```
+</md></sn>
