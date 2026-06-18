@@ -5,7 +5,7 @@
     <tags>#yr dlp</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 18 2026 21:46:37 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 18 2026 21:54:16 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-CgFolVJS5I</id>
     <duration></duration>
   </config>
@@ -182,4 +182,313 @@ yt-dlp --playlist-items 1-10 PLAYLIST_URL
 ```bash
 yt-dlp --playlist-items 5,7,10 PLAYLIST_URL
 ```
+</md></sn><sn><md>#### Downloading YouTube Shorts
+
+Single short:
+
+```bash
+yt-dlp SHORT_URL
+```
+
+Channel Shorts Tab:
+
+```bash
+yt-dlp https://www.youtube.com/@CHANNEL/shorts
+```
+</md></sn><sn><md>#### Downloading an Entire Channel
+
+```bash
+yt-dlp https://www.youtube.com/@CHANNEL/videos
+```
+
+</md></sn><sn><md>#### Download Only New Videos
+
+```bash
+yt-dlp --download-archive archive.txt CHANNEL_URL
+```
+
+This keeps track of downloaded videos.
+</md></sn><sn><md>#### Downloading Subtitles
+
+**All Available Subtitles**
+
+```bash
+yt-dlp --list-subs URL
+```
+
+---
+
+**English Subtitles**
+
+```bash
+yt-dlp --write-subs --sub-lang en URL
+```
+
+---
+
+**Automatic Subtitles**
+
+```bash
+yt-dlp --write-auto-subs URL
+```
+
+---
+
+**Downloading Metadata**
+
+```bash
+yt-dlp --write-info-json URL
+```
+
+Creates:
+
+```text
+video.info.json
+```
+
+containing video metadata.
+</md></sn><sn><md>### Custom Output Names
+
+**Default**
+
+```bash
+yt-dlp -o "%(title)s.%(ext)s" URL
+```
+
+---
+
+**Organize by Channel**
+
+```bash
+yt-dlp -o "%(uploader)s/%(title)s.%(ext)s" URL
+```
+
+---
+
+**Include Upload Date**
+
+```bash
+yt-dlp -o "%(upload_date)s-%(title)s.%(ext)s" URL
+```
+
+---
+
+**Downloading to a Specific Directory**
+
+```bash
+yt-dlp -P ~/Downloads/Videos URL
+```
+
+
+
+</md></sn><sn><md>#### Downloading Multiple Videos
+
+Create:
+
+```text
+urls.txt
+```
+
+```text
+https://youtu.be/video1
+https://youtu.be/video2
+https://youtu.be/video3
+```
+
+Download:
+
+```bash
+yt-dlp -a urls.txt
+```
+</md></sn><sn><md>#### Limiting Download Speed
+
+```bash
+yt-dlp -r 1M URL
+```
+
+1 MB/s maximum speed.
+
+---
+
+**Resume Interrupted Downloads**
+
+```bash
+yt-dlp -c URL
+```
+
+</md></sn><sn><md>#### Downloading Thumbnails
+
+```bash
+yt-dlp --write-thumbnail URL
+```
+
+
+**Embed Thumbnail into MP3**
+
+```bash
+yt-dlp -x --audio-format mp3 \
+--embed-thumbnail URL
+```
+
+**Embedding Metadata**
+
+```bash
+yt-dlp --embed-metadata URL
+```
+</md></sn><sn><md>**Downloading Live Streams**
+
+```bash
+yt-dlp URL
+```
+
+For active streams:
+
+```bash
+yt-dlp --live-from-start URL
+```
+</md></sn><sn><md>#### Downloading Age-Restricted Videos
+
+Use browser cookies:
+
+```bash
+yt-dlp --cookies-from-browser firefox URL
+```
+
+or
+
+```bash
+yt-dlp --cookies-from-browser chrome URL
+```
+
+</md></sn><sn><md>### Search Without Opening YouTube
+
+Search and download:
+
+```bash
+yt-dlp "ytsearch:linux tutorial"
+```
+
+First five results:
+
+```bash
+yt-dlp "ytsearch5:linux tutorial"
+```
+</md></sn><sn><md>#### Extracting Video Information
+
+```bash
+yt-dlp --print title URL
+```
+
+Uploader:
+
+```bash
+yt-dlp --print uploader URL
+```
+
+Duration:
+
+```bash
+yt-dlp --print duration URL
+```
+</md></sn><sn><md>#### Useful Format Selectors
+
+| Selector | Meaning                 |
+| -------- | ----------------------- |
+| best     | Best combined format    |
+| worst    | Lowest quality          |
+| bv       | Best video              |
+| ba       | Best audio              |
+| bv+ba    | Best video + best audio |
+| 137+140  | 1080p video + audio     |
+| 22       | Specific format ID      |
+
+</md></sn><sn><md>#### Useful Examples
+
+**Best Quality Video**
+
+```bash
+yt-dlp -f bv+ba URL
+```
+
+**MP3 Download**
+
+```bash
+yt-dlp -x --audio-format mp3 URL
+```
+
+**Entire Playlist**
+
+```bash
+yt-dlp PLAYLIST_URL
+```
+
+**Download New Videos Only**
+
+```bash
+yt-dlp --download-archive archive.txt CHANNEL_URL
+```
+
+**Download Shorts**
+
+```bash
+yt-dlp https://www.youtube.com/@CHANNEL/shorts
+```
+
+**Save into Organized Folders**
+
+```bash
+yt-dlp -o "%(uploader)s/%(title)s.%(ext)s" URL
+```
+
+---
+
+**Configuration File**
+
+Create:
+
+```bash
+mkdir -p ~/.config/yt-dlp
+nano ~/.config/yt-dlp/config
+```
+
+Example:
+
+```text
+-f bv+ba
+-o %(uploader)s/%(title)s.%(ext)s
+--embed-metadata
+--embed-thumbnail
+```
+
+These options will automatically apply to every yt-dlp command.
+</md></sn><sn><md>### Troubleshooting
+
+**Update yt-dlp**
+
+```bash
+yt-dlp -U
+```
+
+**Update FFmpeg**
+
+```bash
+sudo apt update
+sudo apt install ffmpeg
+```
+
+**Check Available Formats**
+
+```bash
+yt-dlp -F URL
+```
+
+**Use Browser Cookies**
+
+```bash
+yt-dlp --cookies-from-browser firefox URL
+```
+
+</md></sn><sn><md>#### Conclusion
+
+yt-dlp is one of the most versatile media downloading tools available on Linux. With support for thousands of websites, playlists, channels, subtitles, metadata extraction, and format customization, it can handle nearly any downloading task. Combining yt-dlp with FFmpeg unlocks advanced capabilities such as audio conversion, metadata embedding, thumbnail integration, and automated media management.
 </md></sn>
