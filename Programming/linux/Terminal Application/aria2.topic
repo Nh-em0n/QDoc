@@ -1,10 +1,412 @@
 
-  <sn></sn>
+  <sn><md>#### Useful Examples
+
+**Fast Download**
+
+```bash
+aria2c -x 16 -s 16 URL
+```
+
+**Resume Download**
+
+```bash
+aria2c -c URL
+```
+
+**Download Multiple URLs**
+
+```bash
+aria2c -i urls.txt
+```
+
+**Parallel Downloads**
+
+```bash
+aria2c -i urls.txt -j 10
+```
+
+**Torrent Download**
+
+```bash
+aria2c file.torrent
+```
+
+**Magnet Download**
+
+```bash
+aria2c "magnet:?xt=urn:btih:..."
+```
+
+**Download to Folder**
+
+```bash
+aria2c -d ~/Downloads URL
+```
+
+**Custom Filename**
+
+```bash
+aria2c -o myfile.zip URL
+```
+</md></sn><sn><md>### Comparison with Other Download Tools
+
+| Feature                   | Aria2 | wget | curl |
+| ------------------------- | ----- | ---- | ---- |
+| Multi-Connection Download | ✓     | ✗    | ✗    |
+| Resume Downloads          | ✓     | ✓    | ✓    |
+| Torrent Support           | ✓     | ✗    | ✗    |
+| Magnet Support            | ✓     | ✗    | ✗    |
+| Metalink Support          | ✓     | ✗    | ✗    |
+| RPC Interface             | ✓     | ✗    | ✗    |
+| Lightweight               | ✓     | ✓    | ✓    |
+</md></sn><sn><md>### Introduction
+
+**Aria2** is a lightweight, high-speed command-line download utility for Linux, Windows, and macOS. Unlike traditional download managers, Aria2 can accelerate downloads by splitting files into multiple segments and downloading them simultaneously.
+
+It supports:
+
+* HTTP
+* HTTPS
+* FTP
+* SFTP
+* BitTorrent
+* Magnet Links
+* Metalink
+
+Aria2 is widely used for downloading large files, Linux ISOs, software packages, videos, datasets, and torrents efficiently.
+
+</md></sn>
   <config>
     <tags>#aria2</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 18 2026 22:35:50 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 18 2026 22:50:31 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-NfHwN1N9K3</id>
     <duration></duration>
   </config>
+<sn><md>### Installing Aria2
+
+**Ubuntu / Debian**
+
+```bash
+sudo apt update
+sudo apt install aria2
+```
+
+Verify installation:
+
+```bash
+aria2c --version
+```
+</md></sn><sn><md>### Basic Usage
+
+Download a File
+
+```bash
+aria2c URL
+```
+
+Example:
+
+```bash
+aria2c https://example.com/file.zip
+```
+</md></sn><sn><md>#### Saving Files with Custom Names
+
+```bash
+aria2c -o myfile.zip URL
+```
+
+Example:
+
+```bash
+aria2c -o ubuntu.iso https://example.com/download.iso
+```
+</md></sn><sn><md>### Download to a Specific Directory
+
+```bash
+aria2c -d ~/Downloads URL
+```
+
+Example:
+
+```bash
+aria2c -d ~/Downloads/Linux ubuntu.iso
+```
+
+</md></sn><sn><md>#### Accelerating Downloads
+
+One of Aria2's most powerful features is segmented downloading.
+
+## Use Multiple Connections
+
+```bash
+aria2c -x 16 -s 16 URL
+```
+
+Options:
+
+| Option | Description                    |
+| ------ | ------------------------------ |
+| -x     | Maximum connections per server |
+| -s     | Number of download segments    |
+
+Example:
+
+```bash
+aria2c -x 16 -s 16 https://example.com/bigfile.iso
+```
+</md></sn><sn><md>#### Resume Interrupted Downloads
+
+```bash
+aria2c -c URL
+```
+
+Example:
+
+```bash
+aria2c -c https://example.com/file.zip
+```
+
+The download continues from where it stopped.
+
+</md></sn><sn><md>### Limiting Download Speed
+
+**Limit to 1 MB/s**
+
+```bash
+aria2c --max-download-limit=1M URL
+```
+
+**Limit to 500 KB/s**
+
+```bash
+aria2c --max-download-limit=500K URL
+```
+
+</md></sn><sn><md>### Download Multiple Files
+
+Create a file:
+
+```text
+urls.txt
+```
+
+Example:
+
+```text
+https://example.com/file1.zip
+https://example.com/file2.zip
+https://example.com/file3.zip
+```
+
+Download:
+
+```bash
+aria2c -i urls.txt
+```
+</md></sn><sn><md>### Parallel Downloads
+
+Download multiple files simultaneously:
+
+```bash
+aria2c -i urls.txt -j 5
+```
+
+Option:
+
+```text
+-j = Number of concurrent downloads
+```
+</md></sn><sn><md>### Downloading Torrents
+
+**Torrent File**
+
+```bash
+aria2c file.torrent
+```
+
+**Magnet Link**
+
+```bash
+aria2c "magnet:?xt=urn:btih:..."
+```
+</md></sn><sn><md>#### Downloading Linux ISOs
+
+Example:
+
+```bash
+aria2c -x 16 -s 16 \
+https://releases.ubuntu.com/ubuntu.iso
+```
+
+This often downloads faster than a browser.
+
+</md></sn><sn><md>#### Using Metalink Files
+
+Metalink provides multiple mirrors and checksums.
+
+```bash
+aria2c file.metalink
+```
+
+Benefits:
+
+* Automatic mirror selection
+* Integrity verification
+* Faster downloads
+</md></sn><sn><md>#### Downloading with Authentication
+
+**Username and Password**
+
+```bash
+aria2c \
+--http-user=username \
+--http-passwd=password \
+URL
+```
+
+**Basic Authentication URL**
+
+```bash
+aria2c https://user:password@example.com/file.zip
+```
+
+</md></sn><sn><md>#### Using Cookies
+
+```bash
+aria2c --load-cookies=cookies.txt URL
+```
+
+Useful for:
+
+* Private downloads
+* Logged-in websites
+* Session-based access
+
+</md></sn><sn><md>#### Setting User-Agent
+
+Some websites block unknown download tools.
+
+```bash
+aria2c \
+--user-agent="Mozilla/5.0" \
+URL
+```
+
+</md></sn><sn><md>#### Verifying Checksums
+
+**SHA256**
+
+```bash
+aria2c \
+--checksum=sha-256=HASH_VALUE \
+URL
+```
+
+Example:
+
+```bash
+aria2c \
+--checksum=sha-256=abc123... \
+ubuntu.iso
+```
+
+Aria2 verifies file integrity automatically.
+</md></sn><sn><md>### RPC Server Mode
+
+Aria2 can run as a background download server.
+
+Start RPC:
+
+```bash
+aria2c \
+--enable-rpc \
+--rpc-listen-all=true \
+--rpc-allow-origin-all
+```
+
+Useful for:
+
+* Remote management
+* Web interfaces
+* Automation scripts
+
+</md></sn><sn><md>#### Running in Background
+
+```bash
+nohup aria2c URL &amp;
+```
+
+or
+
+```bash
+screen -S download
+aria2c URL
+```
+</md></sn><sn><md>### Configuration File
+
+Create:
+
+```bash
+mkdir -p ~/.config/aria2
+nano ~/.config/aria2/aria2.conf
+```
+
+Example:
+
+```text
+continue=true
+max-connection-per-server=16
+split=16
+min-split-size=1M
+max-concurrent-downloads=5
+check-certificate=true
+```
+
+Now every download automatically uses these settings.
+</md></sn><sn><md>### Useful Keyboard Shortcuts
+
+While Aria2 is running:
+
+```text
+Ctrl + C    Stop download
+Ctrl + Z    Suspend process
+fg          Resume suspended process
+```
+</md></sn><sn><md>#### Troubleshooting
+
+**SSL Certificate Error**
+
+Ignore certificate verification:
+
+```bash
+aria2c --check-certificate=false URL
+```
+
+Use only when necessary.
+
+
+**Connection Timeout**
+
+Increase timeout:
+
+```bash
+aria2c --timeout=120 URL
+```
+
+
+**Too Many Connections**
+
+Reduce:
+
+```bash
+aria2c -x 4 -s 4 URL
+```
+
+Some servers block excessive connections.
+
+</md></sn><sn><md>#### Conclusion
+
+Aria2 is one of the fastest and most versatile download managers available for Linux. Its support for segmented downloads, torrents, magnet links, Metalink files, authentication, and remote control makes it an excellent choice for power users. When properly configured, Aria2 can significantly outperform traditional browser downloads and many other command-line download tools.
+</md></sn>
