@@ -1,10 +1,17 @@
 
-  <sn></sn>
+  <sn><md>### Blockquote
+
+
+&gt; The `blockquote` element is used to represent a section of text that is quoted from another source. It is typically displayed as an indented block by browsers.
+
+**.note-x**
+
+&gt; The `blockquote` element is used to represent a section of text that is quoted from another source. It is typically displayed as an indented block by browsers {.note-x}</md></sn>
   <config>
     <tags>#blockquote</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Jun 19 2026 11:46:01 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Jun 19 2026 16:04:08 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-2w1PUweOA9</id>
     <duration></duration>
   </config>
