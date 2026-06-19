@@ -1,17 +1,28 @@
 
   <sn><md>### Blockquote
 
+&gt; **default** <br>
+The `blockquote` element is used to represent a section of text that is quoted from another source. It is typically displayed as an indented block by browsers.
 
-&gt; The `blockquote` element is used to represent a section of text that is quoted from another source. It is typically displayed as an indented block by browsers.
+&gt; **.note-x** <br>
+The `blockquote` element is used to represent a section of text that is quoted from another source. It is typically displayed as an indented block by browsers {.note-x}
 
-**.note-x**
+&gt; **.note-y** <br>
+The `blockquote` element is used to represent a section of text that is quoted from another source. It is typically displayed as an indented block by browsers {.note-y}
 
-&gt; The `blockquote` element is used to represent a section of text that is quoted from another source. It is typically displayed as an indented block by browsers {.note-x}</md></sn>
+&gt; **.note-end** <br>
+The `blockquote` element is used to represent a section of text that is quoted from another source. It is typically displayed as an indented block by browsers {.note-end}
+
+&gt; **.note-top** <br>
+The `blockquote` element is used to represent a section of text that is quoted from another source. It is typically displayed as an indented block by browsers {.note-top}
+
+&gt; **.note-bottom** <br>
+The `blockquote` element is used to represent a section of text that is quoted from another source. It is typically displayed as an indented block by browsers {.note-bottom}</md></sn>
   <config>
     <tags>#blockquote</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Jun 19 2026 16:04:08 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Jun 19 2026 16:19:42 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-2w1PUweOA9</id>
     <duration></duration>
   </config>
