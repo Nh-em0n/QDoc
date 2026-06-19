@@ -4,14 +4,14 @@
     <tags>#blockquote</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Jun 19 2026 16:55:07 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Jun 19 2026 16:57:31 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-2w1PUweOA9</id>
     <duration></duration>
   </config>
 <sn><md>#### blockquote
 
-:::.quote
-#### Notice
+:::.quote ._pink
+#### Notice {.teal}
 The project we were working on finnaly succeed this morning.<br>
 Congrats to all <br>
 -- Emon
