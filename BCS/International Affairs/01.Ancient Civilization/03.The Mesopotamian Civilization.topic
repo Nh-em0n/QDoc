@@ -27,7 +27,7 @@ The Mesopotamian Civilization includes several major civilizations:
     <tags>#03.the mesopotamian civilization</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Jun 21 2026 21:23:51 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Jun 21 2026 21:36:24 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Tpl0Uujcgt</id>
     <duration></duration>
   </config>
@@ -124,28 +124,35 @@ Babylonian Civilization
         |
         +--&gt; Ancient map
 ```
-</md></sn><sn><md>#### অ্যাসীয় সভ্যতা Assyrian
+</md></sn><sn><md>#### Assyrian Civilization
 
-ব্যাবলিন থেকে প্রায় দুইশত মাইল উত্তরে টাইগ্রিস নদীর তীরে `আশুর` নামে একটি সমৃদ্ধ শহর গড়ে ওঠে। *অ্যাসীয় সম্রাট* নিজেকে মনে করতেন `সূর্যদেবতা শামসের প্রতিনিধি`। 
+About *two hundred miles north of Babylon*, on the banks of the Tigris River, a prosperous city called `Ashur` developed. <br>
+The Assyrian *emperor considered himself* the representative of the sun god `Shamash`. <br>
 
+:::.row
+:::.col-12 .col-md-6
+- In history, the Assyrians are known as a `military state`.<br> They were the first to build an `iron-armed military force` and to use `war chariots`.<br>
+- The Assyrians were the first to divide a `circle into 360°`.<br> 
+They also first divided the Earth into `latitudes** and **longitudes`.
+:::
+:::.col-12 .col-md-6
 ![img](https://www.historyforkids.net/wp-content/uploads/2019/07/assyrian-empire.jpg)
+:::
+:::
 
-ইতিহাসে অ্যাসীয়রা পরিচিত `সামরিক রাষ্ট্র` হিসেবে। তারাই প্রথমে `লোহার অস্ত্রসজ্জিত বাহিনী` গঠন করে এবং যুদ্ধরথ ব্যবহার করে। 
-
-অ্যাসীয়রা প্রথম `বৃত্তকে ৩৬০°` তে ভাগ করে। পৃথিবীকে সর্বপ্রথম তারা `অক্ষাংশ` (Latitudes) ও `দ্রাঘিমাংশে` (Longitudes) ভাগ করেছিল।
-
-```
-অ্যাসীয় সভ্যতা
+```id="assyrian-civ"
+Assyrian Civilization
         |
-        +--&gt; সামরিক শক্তি
-        +--&gt; লোহা অস্ত্র
-        +--&gt; যুদ্ধরথ
-        +--&gt; জ্যামিতি ও ভূগোল
+        +--&gt; Military strength
+        +--&gt; Iron weapons
+        +--&gt; War chariots
+        +--&gt; Geometry &amp; Geography
               |
               +--&gt; 360°
-              +--&gt; অক্ষাংশ
-              +--&gt; দ্রাঘিমাংশ
-```</md></sn><sn><md>#### ক্যালডীয় সভ্যতা Chaldean
+              +--&gt; Latitude
+              +--&gt; Longitude
+```
+</md></sn><sn><md>#### ক্যালডীয় সভ্যতা Chaldean
 
 ব্যাবলিন শহরকে কেন্দ্র করে গড়ে ওঠায় ক্যালডীয় সভ্যতা ইতিহাসে `নতুন ব্যাবলিনীয় সভ্যতা` নামেও পরিচিত। 
 
