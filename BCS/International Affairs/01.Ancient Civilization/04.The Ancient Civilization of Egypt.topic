@@ -31,7 +31,7 @@ Ancient Egypt
     <tags>#04.the ancient civilization of egypt</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jun 22 2026 17:41:52 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jun 22 2026 17:46:40 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-BEXfjYcVQ7</id>
     <duration></duration>
   </config>
@@ -141,80 +141,94 @@ Architecture &amp; Sculpture
                 |
                 +--&gt; Tomb discovery (1922)
 ```
-</md></sn><sn><md>#### লিখন পদ্ধতির উদ্ভাবন
+</md></sn><sn><md>#### Invention of Writing System
+
+::: .row
+
+::: .col-12 .col-md-6
+
+The Egyptians developed an early writing system. In the beginning, they expressed thoughts through `drawings and pictures`. Each picture represented a symbol or letter.
+
+This picture-based script is called `Hieroglyphics`. The Greek word “Hieroglyphics” means `sacred writing`. They also made a type of paper using the bark of a reed plant called `Papyrus`.
+
+:::
+
+::: .col-12 .col-md-6
 
 ![img](https://t3.ftcdn.net/jpg/03/24/54/80/360_F_324548043_rq5Cd0OTg0cVJ4QABFEnJOkVVBY0Dbdu.jpg)
 
-মিশরীয়রা একটি লিখন পদ্ধতি উদ্ভাবন করে। `প্রথম দিকে ছবি এঁকে এঁকে` মিশরীয়রা মনের ভাব প্রকাশ করত। এক `একটি ছবি ছিল এক একটি অক্ষরের` প্রতীক। অক্ষরভিত্তিক মিশরীয় এ চিত্রলিপিকে বলা হয় `হায়ারোগ্লিফিক` (Hieroglyphics)। গ্রিক শব্দ ‘হায়ারোগ্লিফিক’ অর্থ `পবিত্র লিপি`। `প্যাপিরাস` নামক এক ধরণের `নল গাছের বাকল` দিয়ে তারা সাদা রঙের কাগজও তৈরি করত।
+:::
 
-```
-লিখন পদ্ধতি
-        |
-        +--&gt; ছবি ভিত্তিক লেখা
-        |
-        +--&gt; হায়ারোগ্লিফিক
-                |
-                +--&gt; পবিত্র লিপি
-        |
-        +--&gt; প্যাপিরাস (কাগজ)
-```
+:::
 
-</md></sn><sn><md>#### বিজ্ঞান
+```text id="xjfsyl"
+Writing System
+        |
+        +--&gt; Picture-based writing
+        |
+        +--&gt; Hieroglyphics
+        |       |
+        |       +--&gt; Sacred writing
+        |
+        +--&gt; Papyrus (paper)
+```
+</md></sn><sn><md>#### Science
+
+::: .row
+
+::: .col-12 .col-md-6
+
+The Egyptians were the first to introduce a calendar system based on `12 months in a year` and `30 days in a month`.<br>
+Since Pharaohs were believed to rule in the afterlife, Egyptian scientists developed techniques to preserve dead bodies from decay.<br>
+This led to the invention of `mummification`, a process used to prevent decomposition and preserve the body for the afterlife.
+
+:::
+
+::: .col-12 .col-md-6
 
 ![img](https://static.vecteezy.com/system/resources/thumbnails/012/249/637/small/philadelphia-usa-april-27-2017-egyptian-newborn-baby-mummy-detail-free-photo.JPG)
 
-মিশরীয়রা সর্বপ্রথম `১২ মাসে ১ বছর`, `৩০ দিনে ১ মাস` এই গণনারীতি চালু করেন। যেহেতু ফারাও মৃত্যুর পর পরকালে রাজা হবেন সেহেতু তাঁর মৃতদেহকে ++পচন থেকে রক্ষার জন্য++ মিশরীয় বিজ্ঞানীরা `মমি` তৈরি করতে শেখেন।
+:::
 
-```
-বিজ্ঞান
+:::
+
+```text id="xjfsyl"
+Science
         |
-        +--&gt; সময় গণনা
+        +--&gt; Time Calculation
         |       |
-        |       +--&gt; ১ বছর = ১২ মাস
-        |       +--&gt; ১ মাস = ৩০ দিন
+        |       +--&gt; 1 year = 12 months
+        |       +--&gt; 1 month = 30 days
         |
-        +--&gt; মমি প্রস্তুত
+        +--&gt; Mummification
                 |
-                +--&gt; মৃতদেহ সংরক্ষণ
+                +--&gt; Body preservation
 ```
-
 </md></sn><sn><md>#### MCQ Solution
 
-১. প্রাচীন মিশরীয় সভ্যতা গড়ে উঠেছিল - [Khulna University / City Bank / AB Bank]
-উত্তর: মিশরীয় সভ্যতা
+১. Ancient Egyptian civilization developed in which region? [Khulna University / City Bank / AB Bank] <br> Answer: ++Ancient Egyptian civilization++
 
-২. হায়ারোগ্লিফিক কি? [Dutch-Bangla Bank]
-উত্তর: প্রাচীন মিশরীয় চিত্রভিত্তিক লিখন পদ্ধতি
+২. What is Hieroglyphics? [Dutch-Bangla Bank] <br> Answer: ++Ancient Egyptian picture-based writing system++
 
-৩. হায়ারোগ্লিফিক হলো- [রাজশাহী বিশ্ববিদ্যালয়]
-উত্তর: একটি লিখন পদ্ধতি
+৩. Hieroglyphics is a - [Rajshahi University] <br> Answer: ++Writing system++
 
-৪. বুক অব ডেথ কোন সভ্যতার? [জাহাঙ্গীরনগর বিশ্ববিদ্যালয়]
-উত্তর: মিশরীয় সভ্যতা
+৪. The Book of the Dead belongs to which civilization? [Jahangirnagar University] <br> Answer: ++Egyptian civilization++
 
-৫. প্রাচীন মিশরের স্থাপত্য বিদ্যার অন্যতম নিদর্শন - [জাহাঙ্গীরনগর বিশ্ববিদ্যালয়]
-উত্তর: পিরামিড
+৫. One of the major architectural monuments of ancient Egypt is - [Jahangirnagar University] <br> Answer: ++Pyramid++
 
-৬. পৃথিবীর সবচেয়ে পুরাতন কীর্তিস্তম্ভ কোনটি? [রাজশাহী বিশ্ববিদ্যালয় / মেডিকেল]
-উত্তর: পিরামিড
+৬. What is the oldest monumental structure in the world? [Rajshahi University / Medical] <br> Answer: ++Pyramid++
 
-৭. স্ফিংস কোথায় অবস্থিত? [রাজশাহী বিশ্ববিদ্যালয়]
-উত্তর: মিশর
+৭. Where is the Sphinx located? [Rajshahi University] <br> Answer: ++Egypt++
 
-৮. প্রাচীন মিশরীয়রা কোন বর্ণ দিয়ে তাদের ভাব প্রকাশ করত? [থানা শিক্ষা অফিসার]
-উত্তর: হায়ারোগ্লিফিক
+৮. Which script did ancient Egyptians use to express their thoughts? [Thana Education Officer] <br> Answer: ++Hieroglyphics++
 
-৯. মিশরীয় চিত্রকলা ছিল? [জাহাঙ্গীরনগর বিশ্ববিদ্যালয়]
-উত্তর: ত্রিমাত্রিক
+৯. Egyptian sculpture was - [Jahangirnagar University] <br> Answer: ++Three-dimensional++
 
-১০. ‘প্যাপিরাস’ কোন সংস্কৃতির সাথে সম্পর্কিত? [জাহাঙ্গীরনগর বিশ্ববিদ্যালয়]
-উত্তর: মিশরীয় সভ্যতা
+১০. Papyrus is associated with which civilization? [Jahangirnagar University] <br> Answer: ++Egyptian civilization++
 
-১১. ১২ মাসে ১ বছর, ৩০ দিনে ১ মাস এই রীতি কাদের? [ঢাকা বিশ্ববিদ্যালয়]
-উত্তর: মিশরীয়
+১১. The system of 12 months in a year and 30 days in a month was introduced by - [Dhaka University] <br> Answer: ++Egyptians++
 
-১২. প্রথম একেশ্বরবাদী ধর্ম কোনটি? [রাজশাহী বিশ্ববিদ্যালয়]
-উত্তর: প্রাচীন মিশরীয় ধর্ম
+১২. The first monotheistic religion was introduced in - [Rajshahi University] <br> Answer: ++Ancient Egyptian religion++
 
-১৩. তুতেনখামেনের সমাধি আবিষ্কৃত হয় - [পররাষ্ট্র মন্ত্রণালয়]
-উত্তর: ১৯২২ সালে</md></sn><sn></sn>
+১৩. Tutankhamun’s tomb was discovered in - [Ministry of Foreign Affairs] <br> Answer: ++1922++
+</md></sn><sn></sn>
