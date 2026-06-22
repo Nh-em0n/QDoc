@@ -1,28 +1,37 @@
 
-  <sn><md>#### প্রাচীন মিশরীয় সভ্যতা Egypt
+  <sn><md>#### Ancient Egyptian Civilization {.text-center}
 
-`৫০০০-৩২০০০` খ্রিস্টপূর্বাব্দ পর্যন্ত সময়ের মিশরকে `প্রাক-রাজবংশীয়` যুগ বলা হয়। এ সময় মিশর কতগুলো ছোট ছোট নগর রাষ্ট্রে বিভক্ত ছিল। এগুলোকে বলা হতো `নোম`। 
+::: .row
 
+::: .col-md-8
+
+The period from `5000–3200 BCE` in Egypt is known as the `Pre-Dynastic Period`. During this time, Egypt was divided into several small city-states known as `Nomes`.
+
+In `3200 BCE`, a king named `Menes` united all of Egypt and established a single unified kingdom. `Memphis`, located in southern Egypt, became its capital. This marked the beginning of the dynastic era in Egypt.
+
+```text id="xjfsyl"
+Ancient Egypt
+      |
+      +--&gt; Nomes (City-States)
+      |
+      +--&gt; Menes
+            |
+            +--&gt; Unified Egypt
+            +--&gt; Capital: Memphis
+```
+:::
+
+::: .col-md-4
 ![img](https://www.egypttoursportal.com/images/2018/01/King-Menes-Narmer-Egypt-Tours-Portal.jpg)
+:::
 
-৩২০০ খ্রিস্টপূর্বাব্দে `মেনেস` নামক এক রাজা সমগ্র মিশরকে একত্রিত করে একটি নগর রাষ্ট্র গড়ে তোলেন। দক্ষিণ মিশরের `মেম্ফিস` হয় এর রাজধানী। এভাবে মিশরে রাজবংশের সূচনা হয়
-
-```
-প্রাচীন মিশর
-        |
-        +--&gt; নোম (নগর রাষ্ট্র)
-        |
-        +--&gt; মেনেস
-              |
-              +--&gt; একত্রিত মিশর
-              +--&gt; রাজধানী: মেম্ফিস
-```
+:::
 </md></sn>
   <config>
     <tags>#04.the ancient civilization of egypt</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue May 19 2026 22:10:52 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jun 22 2026 17:33:55 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-BEXfjYcVQ7</id>
     <duration></duration>
   </config>
