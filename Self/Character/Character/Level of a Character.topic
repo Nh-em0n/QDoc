@@ -1,10 +1,17 @@
 
-  <sn></sn>
+  <sn><md>### Level of Character
+
+I decided to divide people into three categories:
+
+* **Level A**: People who are naturally strict in certain virtues and consistently follow rules.
+* **Level B**: People who sometimes break rules or fail to maintain consistency in their behavior.
+* **Level C**: People who are fully aware of their wrong actions but still continue them intentionally.
+</md></sn>
   <config>
     <tags>#level of a character</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jun 22 2026 12:29:56 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jun 22 2026 12:32:40 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-7N1W0roduC</id>
     <duration></duration>
   </config>
