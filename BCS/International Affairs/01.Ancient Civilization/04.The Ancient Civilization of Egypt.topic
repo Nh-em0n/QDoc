@@ -31,7 +31,7 @@ Ancient Egypt
     <tags>#04.the ancient civilization of egypt</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jun 22 2026 17:36:14 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jun 22 2026 17:41:52 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-BEXfjYcVQ7</id>
     <duration></duration>
   </config>
@@ -67,38 +67,79 @@ Religion
               +--&gt; Akhenaten
                       |
                       +--&gt; Concept of Monotheism
-```</md></sn><sn><md>#### স্থাপত্য ও ভাস্কর্য
+```</md></sn><sn><md>#### Architecture and Sculpture
 
-প্রাচীন মিশরের রাজাদের বলা হতো `ফারাও`। মিশরীয়রা মৃত্যুর পর আরেকটি জীবনের অস্তিত্বে বিশ্বাস করত। সে জীবনেও রাজা হবেন ফারাও। 
+::: .row
+
+::: .col-12 .col-md-6
+
+In ancient Egypt, kings were known as `Pharaohs`. Egyptians believed in the existence of life after death, where the king would continue his existence as a Pharaoh.
+
+For the preservation of the **mortal body of Pharaohs**, the `Pyramids` were constructed. The pyramids are considered the `oldest monumental structures in the world`. The largest pyramid in Egypt is the pyramid of `Pharaoh Khufu`, built over an area of about thirteen acres with a height of approximately `450 feet`.
+
+:::
+
+::: .col-12 .col-md-6
 
 ![img](https://cdn.create.vista.com/api/media/small/188327392/stock-photo-the-great-pyramids-at-giza)
 
-ফারাও রাজাদের ++মৃতদেহ সংরক্ষণের জন্য++ তৈরি করা হয় `পিরামিড`। পৃথিবীর `সবচেয়ে পুরাতন কীর্তিস্তম্ভ` পিরামিড। মিশরের সবচেয়ে বড় পিরামিড হচ্ছে ফারাও `খুফুর` পিরামিড। খুফুর পিরামিড গড়ে উঠেছিল তের একর জায়গা জুড়ে। এর উচ্চতা ছিল প্রায় `সাড়ে চারশ ফুট`।
+:::
 
-![img](https://media.gettyimages.com/id/513613977/photo/great-sphinx-and-pyramid-of-khafre.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=Fx7Uv4FLI9vr7qvXsC9zsRmz2qbFElDkyW9LGY3L9Mk=)
+:::
 
-মিশরীয় ভাস্কর্যের সবচেয়ে বড় গৌরব `স্ফিংস`। বহুখণ্ড পাথরের গায়ে ফুটিয়ে তোলা হতো এ ভাস্কর্য। স্ফিংসের দেহ `সিংহের আকৃতির`, আর `মাথা ছিল ফারাওয়ের`। ফারাওদের আভিজাত্য শক্তির প্রতীক ছিল এ মূর্তি।
+---
+
+::: .row
+
+::: .col-12 .col-md-6
+
+![img](https://media.gettyimages.com/id/513613977/photo/great-sphinx-and-pyramid-of-khafre.jpg?s=612x612\&amp;w=0\&amp;k=20\&amp;c=Fx7Uv4FLI9vr7qvXsC9zsRmz2qbFElDkyW9LGY3L9Mk=)
+
+:::
+
+::: .col-12 .col-md-6
+
+The greatest achievement of Egyptian sculpture is the `Sphinx`. It was carved on massive stone blocks. The Sphinx has the `body of a lion` and the `head of a Pharaoh`, symbolizing royal power and authority.
+
+:::
+
+:::
+
+---
+
+::: .row
+
+::: .col-12 .col-md-6
+
+Pharaoh `Tutankhamun` ruled Egypt from `1333–1324 BCE`. <br>
+In `1922`, **Howard Carter** discovered his tomb, which created worldwide sensation.
+
+:::
+
+::: .col-12 .col-md-6
 
 ![img](https://www.historytoday.com/sites/default/files/tutankhamun.jpg)
 
-ফারাও `তুতেনখামেন` খ্রিস্টপূর্ব **১৩৩৩ - ১৩২৪** অব্দে মিশরে রাজত্ব করেন। **১৯২২** সালে `হাওয়ার্ড কার্টার` তুতেনখামেনের সমাধি আবিষ্কার করে বিশ্বব্যাপী আলোড়ন তোলেন।
+:::
 
-```
-স্থাপত্য ও ভাস্কর্য
+:::
+
+```text id="xjfsyl"
+Architecture &amp; Sculpture
         |
-        +--&gt; ফারাও
+        +--&gt; Pharaohs
         |       |
-        |       +--&gt; পিরামিড
+        |       +--&gt; Pyramids
         |               |
-        |               +--&gt; খুফুর পিরামিড
+        |               +--&gt; Pyramid of Khufu
         |
-        +--&gt; স্ফিংস
+        +--&gt; Sphinx
         |       |
-        |       +--&gt; সিংহ দেহ + ফারাও মাথা
+        |       +--&gt; Lion body + Pharaoh head
         |
-        +--&gt; তুতেনখামেন
+        +--&gt; Tutankhamun
                 |
-                +--&gt; সমাধি আবিষ্কার (১৯২২)
+                +--&gt; Tomb discovery (1922)
 ```
 </md></sn><sn><md>#### লিখন পদ্ধতির উদ্ভাবন
 
