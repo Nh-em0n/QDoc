@@ -1,10 +1,47 @@
 
-  <sn></sn>
+  <sn><md>### Determination of Time {.text-center}
+
+**Example 7.** In how many years will the profit of Tk. 10,000 be Tk. 4,800 at the rate of 12% profit?
+
+**Solution:**
+
+We know, $I = Prn$<br>
+or, $n = \dfrac{I}{Pr}$
+
+:::.row
+:::.col-12 .col-md-8
+
+Therefore, Time = $\dfrac{\text{Profit}}{\text{Principal} \times \text{Rate of profit}}$
+
+* $= \dfrac{4,800}{10,000 \times 12\%}$
+
+* $= \dfrac{4,800}{10,000 \times \frac{12}{100}}$
+
+* $= \dfrac{4,800}{10,000 \times 0.12}$
+
+* $= \dfrac{4,800}{1,200}$
+
+* $= 4$ years
+
+∴ Time is **4 years**.
+:::
+
+:::.col-12 .col-md-4
+**Where,**
+| Symbol | Value |
+|--------|-------|
+| $P$ | Principal = Tk. 10,000 |
+| $I$ | Profit = Tk. 4,800 |
+| $r$ | Rate of Profit = 12% |
+| $n$ | Time = Required |
+:::
+:::
+</md></sn>
   <config>
     <tags>#07.determination of time</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jun 24 2026 17:38:42 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jun 24 2026 18:38:46 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Z4MT0TpSQT</id>
     <duration></duration>
   </config>
