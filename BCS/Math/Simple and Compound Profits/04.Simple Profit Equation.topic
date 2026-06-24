@@ -16,7 +16,7 @@ The money which was first deposited in the bank is her **principal amount**. To 
     <tags>#04.simple profit equation</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jun 24 2026 16:41:02 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jun 24 2026 16:42:53 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-M39XYHhQfH</id>
     <duration></duration>
   </config>
@@ -47,13 +47,13 @@ Algebraic Symbols Used in This Chapter:
 :::
 
 **Relations:**
-- $ A = P + I $
-- $ P = A - I $
-- $ I = A - P $
+- $A = P + I$
+- $P = A - I$
+- $I = A - P$
 
 Which gives:
 
-- Profit-principal = Principal + Profit, i.e., $A = P + I$
+- Profit-principal = Principal + Profit,  <br>  $A = P + I$
 - $P = A - I$
 - $I = A - P$
 </md></sn>
