@@ -1,10 +1,50 @@
 
-  <sn></sn>
+  <sn><md>### Determination of Principal
+
+**Example 4.** If the rate of profit is $8 \frac{1}{2}\%$ per annum, what amount will make profit Tk. 2,550 in 6 years?
+
+**Solution:**
+
+Rate of profit = $8 \frac{1}{2}\%$ or $\frac{17}{2}\%$ <br>
+We know, $I = Prn$ <br>
+or, $P = \dfrac{I}{rn}$
+
+Therefore, Principal = $\dfrac{\text{Profit}}{\text{Rate of profit} \times \text{Time}}$
+
+:::.row
+:::.col-12 .col-md-8
+* $= \text{Tk. } \dfrac{2,550}{\frac{17}{2}\% \times 6}$
+
+* $= \text{Tk. } \dfrac{2,550}{\frac{17}{2} \times \frac{1}{100} \times 6}$
+
+* $= \text{Tk. } \dfrac{2,550}{\frac{17 \times 6}{200}}$
+
+* $= \text{Tk. } 2,550 \times \dfrac{200}{17 \times 6}$
+
+* $= \text{Tk. } \dfrac{2,550 \times 200}{102}$
+
+* $= \text{Tk. } 5,000$
+
+∴ Principal is **Tk. 5,000**.
+:::
+
+:::.col-12 .col-md-4
+**Where,**
+
+| Symbol | Value |
+|--------|-------|
+| $P$ | Principal = Required |
+| $I$ | Profit = Tk. 2,550 |
+| $r$ | Rate of Profit = $8 \frac{1}{2}\%$ or $\frac{17}{2}\%$ |
+| $n$ | Time = 6 years |
+:::
+:::
+</md></sn>
   <config>
     <tags>#05.determination of principle</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jun 24 2026 17:37:59 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jun 24 2026 17:42:45 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-CEihcpmc0j</id>
     <duration></duration>
   </config>
