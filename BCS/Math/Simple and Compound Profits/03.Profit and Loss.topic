@@ -4,7 +4,7 @@
 A businessman adds the shop-rent, transport cost, and other related expenditures to the buying price of commodities to fix the actual cost price (or briefly, the **cost price**).
 
 ```
-cost price = shop-rent + transport cost + other related expenditures
+selling price = cost price + shop-rent + transport cost + other related expenditures
 ```
 
 
@@ -28,7 +28,7 @@ For comparison, profit or loss is also expressed in percentage.</md></sn>
     <tags>#03.profit and loss</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jun 24 2026 15:50:38 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jun 24 2026 16:03:22 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-arhcB7fD1J</id>
     <duration></duration>
   </config>
