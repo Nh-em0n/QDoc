@@ -1,10 +1,28 @@
 
-  <sn></sn>
+  <sn><md>### Introduction
+
+In day to day life all of us are associated with `buying-selling and mutual transactions`. 
+
+Someone invests money in industry, produces commodities and sell those commodities to the wholesale traders in the markets. Then the wholesale traders sell those commodities to the retail traders. Finally, the retail traders sell their commodities to the common buyers. 
+
+```
+Industry ➜ wholesale trader ➜ retail traders ➜ Customer
+```
+
+In each stage everyone wants to make a profit. But, there may also be loss due to different causes, such as, in the share market, as there is profit, there is also loss due to the fall of market price. 
+
+Again, we deposit our money in the banks for safety. Bank invests that money in different sectors and makes a profit. Bank also gives profits to the depositors.
+
+Therefore, everyone needs to have a clear idea about the investment and the profit.<br> 
+In this chapter, we have discussed profits and losses, especially profits.
+
+![image](https://media.geeksforgeeks.org/wp-content/uploads/20230825113137/Profit-and-Loss-1.png)
+</md></sn>
   <config>
     <tags>#02.introduction</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jun 24 2026 11:50:12 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jun 24 2026 11:50:56 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ADeGDbHXKf</id>
     <duration></duration>
   </config>
