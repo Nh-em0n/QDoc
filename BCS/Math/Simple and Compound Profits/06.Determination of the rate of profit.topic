@@ -1,10 +1,103 @@
 
-  <sn></sn>
+  <sn><md>### Determination of the Rate of Profit {.text-center}
+
+**Example 5.** What is the rate of profit by which the profit of Tk. 3,000 will be Tk. 1,500 in 5 years?
+
+**Solution:**
+
+We know, $I = Prn$<br>
+or, $r = \dfrac{I}{Pn}$
+
+:::.row
+:::.col-12 .col-md-8
+
+Therefore, Rate of profit = $\dfrac{\text{Profit}}{\text{Principal} \times \text{Time}}$
+
+* $= \dfrac{1,500}{3,000 \times 5}$
+
+* $= \dfrac{1,500}{15,000}$
+
+* $= \dfrac{1}{10}$
+
+* $= \dfrac{1 \times 100}{10 \times 100}$
+
+* $= 10\%$
+
+∴ The rate of profit is **10%**.
+:::
+
+:::.col-12 .col-md-4
+**Where,**
+| Symbol | Value |
+|--------|-------|
+| $P$ | Principal = Tk. 3,000 |
+| $I$ | Profit = Tk. 1,500 |
+| $r$ | Rate of Profit = Required |
+| $n$ | Time = 5 years |
+:::
+:::
+</md></sn>
   <config>
     <tags>#06.determination of the rate of profit</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jun 24 2026 17:38:20 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jun 24 2026 18:04:18 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Gn4FucgQeE</id>
     <duration></duration>
   </config>
+<sn><md>**Example 6.** The profit-principal of some principal is Tk. 5,500 in 3 years. If the profit is $\frac{3}{8}$ part of the principal, find the principal and the rate of profit.
+
+**Solution:**
+
+We know, Principal + Profit = Profit-principal<br>
+i.e., $P + I = A$<br>
+or, $P + \frac{3}{8}P = A$<br>
+or, $\left(1 + \frac{3}{8}\right) \times P = 5,500$<br>
+or, $\frac{11}{8} \times P = 5,500$
+
+:::.row
+:::.col-12 .col-md-8
+
+* or, $P = 5,500 \times \dfrac{8}{11}$
+
+* $= \text{Tk. } \dfrac{5,500 \times 8}{11}$
+
+* $= \text{Tk. } 4,000$
+
+Therefore, Profit = Profit-principal $-$ Principal
+
+* $= \text{Tk. } (5,500 - 4,000)$
+
+* $= \text{Tk. } 1,500$
+
+Again, we know, $I = Prn$
+
+* or, $r = \dfrac{I}{Pn}$
+
+* $= \dfrac{1,500}{4,000 \times 3}$
+
+* $= \dfrac{1,500}{12,000}$
+
+* $= \dfrac{1}{8}$
+
+* $= \dfrac{1 \times 100}{8 \times 100}$
+
+* $= 12.5\%$
+
+* $= 12\frac{1}{2}\%$
+
+∴ Principal is **Tk. 4,000** and rate of profit is **$12\frac{1}{2}\%$**.
+:::
+
+:::.col-12 .col-md-4
+**Where,**
+| Symbol | Value |
+|--------|-------|
+| $P$ | Principal = Required |
+| $I$ | Profit = Tk. 1,500 |
+| $r$ | Rate of Profit = Required |
+| $n$ | Time = 3 years |
+| $A$ | Profit-principal = Tk. 5,500 |
+:::
+:::
+</md></sn>
