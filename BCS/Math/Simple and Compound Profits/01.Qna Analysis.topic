@@ -50,7 +50,68 @@
     <tags>#01.qna analysis</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jun 24 2026 11:21:10 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jun 24 2026 11:29:27 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-yIuUnFjAiR</id>
     <duration></duration>
   </config>
+<sn><md>#### Analysis
+
+**Question Frequency**
+
+| Topic                                      | No. of Questions | Question Numbers          |
+| ------------------------------------------ | ---------------- | ------------------------- |
+| Simple Interest (SI)                       | 7                | 6, 10, 11, 12, 13, 14, 15 |
+| Compound Interest (CI)                     | 5                | 1, 2, 3, 4, 5             |
+| Difference between SI and CI               | 2                | 2, 7                      |
+| Average Rate of Return / Weighted Interest | 1                | 9                         |
+
+
+**Difficulty Analysis**
+
+| Difficulty | Questions | Percentage |
+| ---------- | --------- | ---------- |
+| Easy       | 10        | 67%        |
+| Medium     | 4         | 27%        |
+| Hard       | 1         | 6%         |
+
+
+**Trend**
+
+Recent Focus Order
+
+1. Compound Interest (growth, doubling, rate)
+2. SI vs CI difference
+3. Reverse problems (finding rate/time)
+4. Semi-annual compounding
+5. Weighted average profit
+6. Simple Interest basics
+
+**Key insight** : The exam is moving from:
+
+❌ direct formula substitution<br>
+to<br>
+✅ reverse thinking + exponential growth + comparison problems
+
+So the **core shift is: “find the hidden rate or structure” rather than “calculate the answer directly.”**
+
+
+
+**Question Type**
+
+```
+Most Important
+├── Simple Interest
+│   ├── Find Principal
+│   ├── Find Rate
+│   ├── Find Time
+│   └── Find Amount
+│
+├── Compound Interest
+│   ├── Find Amount
+│   ├── Find Rate
+│   └── Doubling of Money
+│
+├── Difference of SI and CI
+│
+└── Average Interest / Profit
+```</md></sn>
