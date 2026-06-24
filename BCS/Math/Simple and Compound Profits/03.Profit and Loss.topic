@@ -28,7 +28,7 @@ For comparison, profit or loss is also expressed in percentage.</md></sn>
     <tags>#03.profit and loss</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jun 24 2026 15:45:28 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jun 24 2026 15:50:38 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-arhcB7fD1J</id>
     <duration></duration>
   </config>
@@ -50,4 +50,94 @@ Loss = loss in Percentage<br>
 
 [Loss]{.fg-red} = $\frac{\text{loss} \times 100}{\text{cost price}}$
 :::
-:::</md></sn>
+:::</md></sn><sn><md>#### Example :  If a shopkeeper buys eggs at Tk. 25 per quad (hali) and sells at Tk. 56 per 2 quads, how much profit will he make?
+
+**Solution:**
+
+* The cost price of 1 quad of eggs = Tk. 25
+* $\therefore$ The cost price of 2 quads of eggs = $\text{Tk. } 25 \times 2 = \text{Tk. } 50$
+
+Again, the selling price of 2 quads of eggs = Tk. 56. Since the selling price is more than the cost price, there will be a profit.
+
+$$\text{Profit} = \text{Tk. } (56 - 50) = \text{Tk. } 6$$
+
+Using the unitary method to find the percentage profit:
+
+* In Tk. 50, profit = Tk. 6
+* In Tk. 1, profit = $\text{Tk. } \frac{6}{50}$
+* In Tk. 100, profit = $\text{Tk. } \frac{6 \times 100}{50} = \text{Tk. } 12$
+
+$\therefore$ **The profit is 12%.**
+</md></sn><sn><md>#### Example : A goat is sold at a loss of 8%. If it were sold at Tk. 800 more, there would be a profit of 8%. What was the cost price of the goat?
+
+**Solution:**
+Let's assume the base cost price of the goat is Tk. 100.
+
+* At an 8% loss, the selling price would be: $\text{Tk. } (100 - 8) = \text{Tk. } 92$
+* At an 8% profit, the selling price would be: $\text{Tk. } (100 + 8) = \text{Tk. } 108$
+
+The difference between the two selling prices:
+
+
+$$\therefore \text{Selling price difference} = \text{Tk. } (108 - 92) = \text{Tk. } 16$$
+
+Now, using the unitary method to find the actual cost price:
+
+* If the selling price were Tk. 16 more, the cost price would be Tk. 100.
+* If the selling price were Tk. 1 more, the cost price would be $\text{Tk. } \frac{100}{16}$.
+* If the selling price were Tk. 800 more, the cost price would be:
+
+$$\text{Cost Price} = \text{Tk. } \frac{100 \times 800}{16} = \text{Tk. } 5000$$
+
+$\therefore$ **The cost price of the goat is Tk. 5000.**</md></sn><sn><md>#### Activity: Completed Table
+
+| Cost Price (Tk.) | Selling Price (Tk.) | Profit/Loss | Percentage of Profit/Loss |
+| --- | --- | --- | --- |
+| 600 | 660 | Profit Tk. 60 | Profit 10% |
+| 600 | 552 | Loss Tk. 48 | Loss 8% |
+| **550** | 583 | Profit Tk. 33 | **Profit 6%** |
+| 856 | **749** | Loss Tk. 107 | **Loss 12.5%** |
+| **800** | **864** | Profit Tk. 64 | Profit 8% |
+
++++ see
+
+**Step-by-Step Calculations**
+
+**Row 3**
+
+* **Given:** Selling Price = Tk. 583, Profit = Tk. 33
+* **Find Cost Price:** Since there is a profit, $\text{Cost Price} = \text{Selling Price} - \text{Profit}$
+
+$$\text{Cost Price} = 583 - 33 = \mathbf{550}$$
+
+
+* **Find Percentage:** 
+$$\text{Percentage Profit} = \frac{\text{Profit}}{\text{Cost Price}} \times 100 = \frac{33}{550} \times 100 = \mathbf{6\%}$$
+
+---
+
+**Row 4**
+
+* **Given:** Cost Price = Tk. 856, Loss = Tk. 107
+* **Find Selling Price:** Since there is a loss, $\text{Selling Price} = \text{Cost Price} - \text{Loss}$
+
+$$\text{Selling Price} = 856 - 107 = \mathbf{749}$$
+
+
+* **Find Percentage:** 
+$$\text{Percentage Loss} = \frac{\text{Loss}}{\text{Cost Price}} \times 100 = \frac{107}{856} \times 100 = \mathbf{12.5\%}$$
+
+---
+
+**Row 5**
+
+* **Given:** Profit = Tk. 64, Percentage Profit = 8%
+* **Find Cost Price:** Since $\text{Profit} = \text{Cost Price} \times \text{Percentage Profit}$, we can rearrange it:
+
+$$\text{Cost Price} = \frac{\text{Profit}}{\text{Percentage Profit}} \times 100 = \frac{64}{8} \times 100 = \mathbf{800}$$
+
+
+* **Find Selling Price:** 
+$$\text{Selling Price} = \text{Cost Price} + \text{Profit} = 800 + 64 = \mathbf{864}$$
+
++++</md></sn>
