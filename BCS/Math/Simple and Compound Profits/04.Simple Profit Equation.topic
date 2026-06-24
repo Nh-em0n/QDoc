@@ -16,7 +16,7 @@ The money which was first deposited in the bank is her **principal amount**. To 
     <tags>#04.simple profit equation</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jun 24 2026 16:52:31 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jun 24 2026 17:03:41 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-M39XYHhQfH</id>
     <duration></duration>
   </config>
@@ -71,4 +71,48 @@ where,
 - $n$ = Time
 - $A$ = Profit-principal (total amount)
 
-</md></sn><sn></sn>
+[How the equation form](#how-equation-form)</md></sn><sn><md>### Determination of Profit
+
+**Example 3.** Mr. Ramiz deposited Tk. 5,000 in a bank and decided not to withdraw any amount from the bank till next 6 years. The annual profit given by the bank is 10%. How much profit will he get after 6 years? What will be the profit-principal?
+
+**Solution:**
+
+* The profit of Tk. 100 in 1 year is Tk. 10.
+* the profit of Tk. 1 in 1 year is Tk. $\frac{10}{100}$.
+* the profit of Tk. 5,000 in 1 year is Tk. $\frac{10 \times 5,000}{100}$.
+* the profit of Tk. 5,000 in 6 years is Tk. $\frac{10 \times 5,000}{100} \times 6 = \text{Tk. } 3,000$.
+
+∴ Profit = Tk. 3,000
+
+* Therefore, Profit-principal = Principal + Profit.
+* $= \text{Tk. } (5,000 + 3,000)$
+* $= \text{Tk. } 8,000$
+
+∴ Profit is **Tk. 3,000** and Profit-principal is **Tk. 8,000**.
+
+
+::: #how-equation-form .m-2 .p-3 .border
+**We observe:** 
+
+Profit of Tk. 5,000 in 6 years at the rate of 10% per annum = $\text{Tk. } \left(5,000 \times \frac{10}{100} \times 6\right)$ <br>
+And this is how the equation form `I = prn`
+:::
+
+**Alternative Solution to Example 3**
+
+We know, $I = Prn$
+
+i.e., Profit = Principal × Rate of profit × Time
+
+* Therefore, the profit is:
+
+  * $= \text{Tk. } \left(5,000 \times \frac{10}{100} \times 6\right)$
+  * $= \text{Tk. } 3,000$
+
+* Therefore, Profit-principal = Principal + Profit.
+
+  * $= \text{Tk. } (5,000 + 3,000)$
+  * $= \text{Tk. } 8,000$
+
+* Therefore, the **profit is Tk. 3,000** and the **profit-principal is Tk. 8,000**.
+</md></sn>
