@@ -1,10 +1,59 @@
 
-  <sn></sn>
+  <sn><md>### Profit {.text-center}
+
+Farida Begum decided to deposit her savings in a bank. She deposited Tk. 10,000 in a bank. After one year, she went to the bank to take a bank statement. She noticed that her deposited amount had been increased by Tk. 700 and her balance became Tk. 10,700.
+
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Math/Simple%20and%20Compound%20Profits/Assets/How_bank_works_diagram.png)
+
+
+++How was the amount of money of Farida Begum increased by Tk. 700?++
+
+When money is deposited in a bank, the bank invests that money as loans in different sectors, such as business, house-building, etc., and gets profit from those sectors. From that profit, the bank gives some money to the depositor. This money is the **profit** of the depositor.
+
+The money which was first deposited in the bank is her **principal amount**. To deposit or give money as a loan and to take money from anyone as a loan is accomplished by a process. This process relates to the **principal**, the **rate of profit**, **time**, and **profit**.
+</md></sn>
   <config>
     <tags>#04.simple profit equation</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jun 24 2026 16:15:17 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jun 24 2026 16:41:02 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-M39XYHhQfH</id>
     <duration></duration>
   </config>
+<sn><md>#### We Observe:
+
+:::.row
+:::.col-12 .col-md-6
+- **Rate of Profit:** A profit of Tk. 100 in 1 year is called the rate of profit or percentage of profit per annum.
+
+- **Period of Time:** The time for which a profit is calculated is called the period of time.
+
+- **Simple Profit:** The profit which is accounted each year **only on the primary or initial principal** is called the simple profit. Usually, profit means the simple profit.
+:::
+
+:::.col-12 .col-md-6
+
+Algebraic Symbols Used in This Chapter:
+
+| Symbol | Meaning |
+|--------|---------|
+| $P$ | Principal |
+| $r$ | Rate of profit (rate of interest) |
+| $n$ | Time |
+| $I$ | Profit |
+| $A$ | Profit-principal (total amount) = Principal + Profit |
+
+:::
+:::
+
+**Relations:**
+- $ A = P + I $
+- $ P = A - I $
+- $ I = A - P $
+
+Which gives:
+
+- Profit-principal = Principal + Profit, i.e., $A = P + I$
+- $P = A - I$
+- $I = A - P$
+</md></sn>
