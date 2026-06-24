@@ -6,7 +6,12 @@
 **Solution:**
 
 We know, $I = Prn$<br>
-or, $r = \dfrac{I}{Pn}$
+or, $r = \dfrac{I}{Pn}$ <br>
+or, $r\% = \dfrac{I}{Pn}$ <br>
+or, $\frac{r}{100} = \dfrac{I}{Pn}$ <br>
+or, $r = \dfrac{I \times 100}{Pn}$
+
+
 
 :::.row
 :::.col-12 .col-md-8
@@ -41,7 +46,7 @@ Therefore, Rate of profit = $\dfrac{\text{Profit}}{\text{Principal} \times \text
     <tags>#06.determination of the rate of profit</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jun 24 2026 18:04:18 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jun 24 2026 18:09:14 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Gn4FucgQeE</id>
     <duration></duration>
   </config>
