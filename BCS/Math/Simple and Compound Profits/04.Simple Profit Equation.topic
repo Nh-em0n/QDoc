@@ -16,7 +16,7 @@ The money which was first deposited in the bank is her **principal amount**. To 
     <tags>#04.simple profit equation</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jun 24 2026 16:42:53 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jun 24 2026 16:52:31 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-M39XYHhQfH</id>
     <duration></duration>
   </config>
@@ -56,4 +56,19 @@ Which gives:
 - Profit-principal = Principal + Profit,  <br>  $A = P + I$
 - $P = A - I$
 - $I = A - P$
-</md></sn>
+
+If any three of the four data namely principal, rate of profit, time and profit are known, the remaining one can be found.
+</md></sn><sn><md>#### Formula
+
+&gt; Profit = $\text{Principal} \cdot \text{Rate of Profit} \cdot \text{time}$ <br>
+&gt; $I = P \cdot r \cdot n$ <br>
+&gt; $A = P + I = P + Prn = P(1 + rn)$
+
+where,
+- $I$ = Profit
+- $P$ = Principal
+- $r$ = Rate of profit
+- $n$ = Time
+- $A$ = Profit-principal (total amount)
+
+</md></sn><sn></sn>
