@@ -28,7 +28,26 @@ For comparison, profit or loss is also expressed in percentage.</md></sn>
     <tags>#03.profit and loss</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jun 24 2026 15:34:41 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jun 24 2026 15:45:28 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-arhcB7fD1J</id>
     <duration></duration>
   </config>
+<sn><md>#### Percentage Profit Loss
+
+:::.row
+:::.col-12 .col-md-6
+profit = $\text{selling price} - \text{cost price}$ <br>
+profit = actual profit<br>
+Profit = profit in Percentage<br>
+
+[Profit]{.fg-teal} = $\frac{\text{profit} \times 100}{\text{cost price}}$
+:::
+
+:::.col-12 .col-md-6
+loss = $\text{cost price} - \text{selling price}$ <br>
+loss = actual loss<br>
+Loss = loss in Percentage<br>
+
+[Loss]{.fg-red} = $\frac{\text{loss} \times 100}{\text{cost price}}$
+:::
+:::</md></sn>
