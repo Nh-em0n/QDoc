@@ -1,10 +1,34 @@
 
-  <sn></sn>
+  <sn><md>### Profit and Loss {.text-center}
+
+A businessman adds the shop-rent, transport cost, and other related expenditures to the buying price of commodities to fix the actual cost price (or briefly, the **cost price**).
+
+```
+cost price = shop-rent + transport cost + other related expenditures
+```
+
+
+* **Investment:** This `actual cost price` is called investment, and this investment is considered to be the buying price for determining profit or loss.
+* **Selling Price:** The price of selling the commodities is its selling price.
+
+**Key Rules**
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Math/Simple%20and%20Compound%20Profits/Assets/Profit_loss_diagram.png)
+
+The cost and selling price is considered from the seller perspective not from customer perspective. {.text-secondary}
+
+* **Profit:** If the selling price is more than its cost price, there will be a profit.
+* **Loss:** On the other hand, if the selling price is less than the cost price, there will be a loss.
+* **No Profit, No Loss:** Again, if the cost price and the selling price are equal, there will be no profit and no loss.But actually it has a loss even though the selling price and cost price are equals.If u buy 10 quad of banana in 100 and sold it in 100 then what is the cost of your efforts.Is it not a loss. 
+
+&gt; **Note:** Profit or loss is always determined by its ++cost price++.
+
+For comparison, profit or loss is also expressed in percentage.</md></sn>
   <config>
     <tags>#03.profit and loss</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jun 24 2026 15:12:45 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jun 24 2026 15:34:41 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-arhcB7fD1J</id>
     <duration></duration>
   </config>
