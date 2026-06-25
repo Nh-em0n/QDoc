@@ -1,10 +1,61 @@
 
-  <sn></sn>
+  <sn><md>### Compound Profit {.text-center}
+
+**Definition:**  
+In the case of compound profit, the profit earned on any principal is added to the original principal at the end of each year, and this `total sum becomes the new principal for the following year`.
+
+**Example:**<br>
+A depositor Mr.Nazmul Hossan deposits **Tk. 1,000** in a bank.  
+The bank offers a profit rate of **12% per annum**.
+
+:::.row
+:::.col-12 .col-md-6
+++Year 1:++
+- Profit = 12% of Tk. 1,000  
+  = Tk. 1,000 × 12/100  
+  = **Tk. 120**
+- Principal at end of Year 1 = Tk. 1,000 + Tk. 120 = **Tk. 1,120**  
+  (This becomes the **compound principal** for Year 2.On the otherhand in simple profit 1000 remain as the principal for 2nd year.)
+:::
+
+:::.col-12 .col-md-6
+++Year 2:++
+- Profit = 12% of Tk. 1,120  
+  = Tk. 1,120 × 12/100  
+  = **Tk. 134.40**
+- Principal at end of Year 2 = Tk. 1,120 + Tk. 134.40 = **Tk. 1,254.40**  
+  (This becomes the compound principal for Year 3)
+:::
+:::
+
+Year 3 and onward: The principal continues to increase in the same manner each year.
+
+
+**Key Terms:**
+- **Compound Principal** – The `increased principal` at the end of each year (original principal + accumulated profit).
+- **Compound Profit** – The profit calculated on the compound principal.
+
+&gt; Profit intervals may vary. Instead of yearly, profit may be given every **three months**, **six months**, or even for shorter periods.
+
+The main difference between simple and compound profit is 
+- Principal in simple profit is ++fixed++ which is the initial value
+- Whreares in compound profit the pricipal is ++dynamic++ ;it increases with new profit in each interval
+
+
+::: .p-3 .m-3 .border
+
+#### Formula
+
+**Compound Principal** = Previous Year Principal + end Profit<br>
+**Compound Profit** = end Compound Principal - Initial Principal
+
+:::
+</md></sn>
   <config>
     <tags>#09.concept of compound profit</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 25 2026 08:11:27 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 25 2026 08:28:08 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-L0Kl938Ipd</id>
     <duration></duration>
   </config>
