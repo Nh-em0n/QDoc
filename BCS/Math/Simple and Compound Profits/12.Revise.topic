@@ -16,7 +16,7 @@
     <tags>#12.revise</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 25 2026 22:41:24 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 25 2026 23:41:18 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-MK2NNO5PFz</id>
     <duration></duration>
   </config>
@@ -479,4 +479,102 @@ $T = (4,800 \times 100) / (10,000 \times 12) = 4\text{ years}$
 - $\text{More Time required} = 15 - 4 = 11\text{ years}$<br>
 *(Note: The textbook options count the total required duration from the beginning as the answer, which matches option d).*
 +++
-</md></sn>
+</md></sn><sn><md>### Double,Triple,Quaruple of Profit-Principle {.text-center}
+
+
+**Equation and Fact :**
+
+- rate of profit for profit-pincipal to be N times of principal<br>
+What must be the rate of simple interest per annum for any principal to N times itself in $n$ years?<br>
+let the principal is 100<br>
+profit_principle = $N \times 100$<br>
+profit = profit_principle - principle <br>
+profit = $N \times 100 - 100$ = $100(N-1)$ <br>
+rate of profit $r= \frac{I \times 100}{pn}$ <br>
+rate of profit $r= \frac{100(N-1) \times 100}{100n}$ <br>
+rate of profit $r= \frac{N-1 \times 100}{n}$ <br>
+rate of profit $r= \frac{N-1}{n} \times 100$ <br>
+
+- n year for profit-pincipal to be N times of principal at r profit rate<br>
+let the principal is 100<br>
+profit_principle = $N \times 100$<br>
+profit = profit_principle - principle <br>
+profit = $N \times 100 - 100$ = $100(N-1)$ <br>
+time $r= \frac{I \times 100}{pr}$ <br>
+time profit $r= \frac{100(N-1) \times 100}{100r}$ <br>
+time $r= \frac{N-1 \times 100}{r}$ <br>
+time $r= \frac{N-1}{r} \times 100$ <br>
+
+
+
+**Type of Question :**
+- determining rate
+- determining time
+- multiple application
+
+
+#### Math
+
+**67.** At what simple interest rate per annum will any principal double itself in $8$ years?<br>
+[Biman Bangladesh Airlines (Traffic Helper)-2024] + [BPC (Upper Division Assistant)-2024]
+
+* a. 10%
+* b. 11.5%
+* c. `12.5%`
+* d. 13%
+
++++ Solution:
+Let the Principal be $P$.<br>
+If the principal doubles itself, the Total Amount becomes $2P$.
+
+- $\text{Interest (I)} = 2P - P = P$
+- $R = \frac{I \times 100}{P \times T} = \frac{P \times 100}{P \times 8} = \frac{100}{8} = 12.5\%$
++++
+
+**69.** At $12.5\%$ annual simple interest, in how many years will the interest be equal to the principal?<br>
+[CAAB (Aerodrome/Inspector/Assistant Store Officer)-2021]
+
+* a. 4
+* b. `8`
+* c. 7
+* d. 5
+
++++ Solution:
+Let the principal be $P$.
+Since the interest is equal to the principal, Interest ($I$) = $P$. <br>
+Given, Rate of interest ($r$) = $12.5\%$ <br>
+We know,
+
+- $I = \frac{P \times r \times t}{100}$
+- $P = \frac{P \times 12.5 \times t}{100}$
+- $1 = \frac{12.5 \times t}{100}$
+- $t = \frac{100}{12.5} = 8\text{ years}$
++++
+
+**71.** At the same rate of interest, if a principal doubles itself in 6 years as total amount (principal + interest), in how many years will it become three times the principal as total amount?<br>
+[Primary School (Asst. Teacher)-2019 (4th Phase)] + [Jiban Bima Corporation (Office Asst. cum Computer Typist)-2021] + [Class 8 Board Book]
+
+* a. 8 years
+* b. `12 years`
+* c. 10 years
+* d. 9 years
+
++++ solution
+- $r = \frac{N-1}{n} \times 100$
+- $n = \frac{N-1}{r} \times 100$
++++
+
+**73.** If a principal doubles itself in 20 years as total amount (principal + interest), in how many years will it become three times the principal as total amount?<br>
+[Sadharan Bima Corporation-2016] + [Bangladesh Hi-Tech Park Authority (Store Keeper)-2021]
+
+* a. 30 years
+* b. 25 years
+* c. `40 years`
+* d. 60 years
+
+**75.** In how many years will Tk. 8,888 become Tk. 17,776 as total amount (principal + interest) at 10% annual interest?
+
+* a. 8
+* b. 20
+* c. 15
+* d. `10`</md></sn>
