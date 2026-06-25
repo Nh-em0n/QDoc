@@ -25,7 +25,7 @@ Profit intervals may vary. Instead of yearly, profit may be given every **three 
     <tags>#09.concept of compound profit</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 25 2026 08:56:10 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 25 2026 09:04:41 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-L0Kl938Ipd</id>
     <duration></duration>
   </config>
@@ -116,4 +116,93 @@ $$
 :::.m-3 .border .px-3
 **Compound Principal** after $n$ years: $P(1 + r)^n$ <br>
 **Compound Profit** after $n$ years: $P(1 + r)^n - P$
-:::</md></sn>
+:::</md></sn><sn><md>### Applying the Compound Principal Formula
+
+Now, we apply the formula for compound principal to the earlier example where:
+- Initial principal $P = \text{Tk. } 1{,}000$
+- Profit rate $r = 12\% = \frac{12}{100} = 0.12$
+
+:::.row
+:::.col-12 .col-md-6
+**End of 1st Year**
+
+Using the formula: Compound principal = $P(1 + r)$
+
+$$
+= \text{Tk. } 1{,}000 \times \left(1 + \frac{12}{100}\right)
+$$
+
+$$
+= \text{Tk. } 1{,}000 \times (1 + 0.12)
+$$
+
+$$
+= \text{Tk. } 1{,}000 \times 1.12
+$$
+
+$$
+= \text{Tk. } 1{,}120
+$$
+:::
+
+:::.col-12 .col-md-6
+**End of 2nd Year**
+
+Using the formula: Compound principal = $P(1 + r)^2$
+
+$$
+= \text{Tk. } 1{,}000 \times \left(1 + \frac{12}{100}\right)^2
+$$
+
+$$
+= \text{Tk. } 1{,}000 \times (1 + 0.12)^2
+$$
+
+$$
+= \text{Tk. } 1{,}000 \times (1.12)^2
+$$
+
+$$
+= \text{Tk. } 1{,}000 \times 1.2544
+$$
+
+$$
+= \text{Tk. } 1{,}254.40
+$$
+:::
+
+:::.col-12 .col-md-6
+**End of 3rd Year**
+
+Using the formula: Compound principal = $P(1 + r)^3$
+
+$$
+= \text{Tk. } 1{,}000 \times \left(1 + \frac{12}{100}\right)^3
+$$
+
+$$
+= \text{Tk. } 1{,}000 \times (1 + 0.12)^3
+$$
+
+$$
+= \text{Tk. } 1{,}000 \times (1.12)^3
+$$
+
+$$
+= \text{Tk. } 1{,}000 \times 1.404928
+$$
+
+$$
+= \text{Tk. } 1{,}404.93 \text{ (approx.)}
+$$
+:::
+:::
+
+#### Summary Table
+
+| Year | Formula Used | Calculation | Compound Principal |
+|------|--------------|-------------|---------------------|
+| 1st  | $P(1 + r)$   | $1{,}000 \times 1.12$ | Tk. 1,120.00 |
+| 2nd  | $P(1 + r)^2$ | $1{,}000 \times (1.12)^2$ | Tk. 1,254.40 |
+| 3rd  | $P(1 + r)^3$ | $1{,}000 \times (1.12)^3$ | Tk. 1,404.93 (approx.) |
+</md></sn>
