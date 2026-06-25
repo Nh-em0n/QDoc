@@ -16,7 +16,7 @@
     <tags>#12.revise</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 25 2026 21:41:56 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 25 2026 22:41:24 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-MK2NNO5PFz</id>
     <duration></duration>
   </config>
@@ -398,4 +398,85 @@ $r = ..$
 
 
 
+</md></sn><sn><md>### 04 : Determination of Time {.text-center}
+
+**Equation and Time**
+- time in years $n = \frac{I \times 100}{Pr}$
+
+
+**Types of Math**
+- Total profit is given
+- profit_principal is given
+
+
+#### Math
+
+**52.** Mijan borrowed Tk. $10,000$ at $8\%$ profit and repaid Tk. $12,800$ after $x$ years. What is the value of $x$?<br>
+[Ministry of Commerce (Office Assistant)-2023]
+
+* a. 2 years
+* b. `3 years`
+* c. 5 years
+* d. 6 years
+
++++ Solution:
+- $I = 12,800 - 10,000 = 2,400$
+- $x = (2,400 \times 100) / (10,000 \times 8) = 3\text{ years}$
++++
+
+**53.** In how many years will the profit on Tk. $10,000$ be Tk. $4,800$ at an annual profit rate of $12\%$?<br>
+[Class 8, Ex: 2.1, Example: 7] + [Department of DNC (Sub-Inspector)-2019] + [Family Planning (Medical Techno)-2023] + [Primary School (Asst. Teacher)-2024 (3rd Phase)]
+
+* a. 3 years
+* b. `4 years`
+* c. 5 years
+* d. 6 years
+
++++ Solution:
+$T = (4,800 \times 100) / (10,000 \times 12) = 4\text{ years}$
++++
+
+**57.** At an annual interest rate of $6\frac{1}{4}\%$, in how many years will a principal of Tk. $200$ amount to Tk. $250$ (principal + interest)?<br>
+[Class 9-10, 1983 Edition, Ex: 4.3]
+
+* a. 2 years
+* b. 3 years
+* c. `4 years`
+* d. 5 years
+
++++ Solution:
+- $I = 250 - 200 = 50$
+- $R = 6\frac{1}{4}\% = \frac{25}{4}\%$
+- $T = (50 \times 100) / (200 \times \frac{25}{4}) = (50 \times 100 \times 4) / (200 \times 25) = 4\text{ years}$
++++
+
+**59.** At an annual interest rate of $6\%$, in how much time will a principal of Tk. $450$ amount to Tk. $558$ (principal + interest)?<br>
+[BBS (Junior Statistical Assistant)-2020] + [Jiban Bima Corporation (Office Assistant)-2021] + [40th BCS Preli] + [CAAB (Security Supervisor)-2024] + [Palli Bidyut Samity (Meter Reader)-2024]
+
+* a. `4 years`
+* b. 4.5 years
+* c. 5 years
+* d. 6 years
+
++++ Solution:
+- $I = 558 - 450 = 108$
+- $T = (108 \times 100) / (450 \times 6) = 4\text{ years}$
++++
+
+**61.** A person deposited Tk. $4,000$ in a bank and found that after $4$ years, the total amount with profit was Tk. $5,280$. After how many *more* years will he be able to see Tk. $8,800$ in his account?<br>
+[Payra Port Authority (Assistant Director) (IBA)-2023]
+
+* a. 8 years
+* b. 10 years
+* c. 12 years
+* d. `15 years`
+
++++ Solution:
+- $\text{Initial Profit } (I_1) = 5,280 - 4,000 = 1,280$
+- $\text{Profit Rate } (R) = (1,280 \times 100) / (4,000 \times 4) = 8\%$
+- $\text{Target Profit for the total duration } (I_2) = 8,800 - 4,000 = 4,800$
+- $\text{Total Time required } (T_{\text{total}}) = (4,800 \times 100) / (4,000 \times 8) = 15\text{ years}$
+- $\text{More Time required} = 15 - 4 = 11\text{ years}$<br>
+*(Note: The textbook options count the total required duration from the beginning as the answer, which matches option d).*
++++
 </md></sn>
