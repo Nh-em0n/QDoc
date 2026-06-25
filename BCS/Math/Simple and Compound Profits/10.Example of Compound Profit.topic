@@ -1,10 +1,77 @@
 
-  <sn></sn>
+  <sn><md>**Example 1.** Find the compound principal of Tk. 62,500 in 3 years at the profit of Tk. 8 percent per annum.
+
+**Solution:** We know, compound principal $C = P(1 + r)^n$.
+
+Given,
+- initial principal $P = \text{Tk. } 62{,}500$
+- percentage of profit $r = 8\% = 0.08$
+- time $n = 3$ years
+
+$$
+\therefore C = 62{,}500 \times \left(1 + \frac{8}{100}\right)^3
+$$
+
+Calculation steps:
+- $1 + \frac{8}{100} = 1 + 0.08 = 1.08$
+- $(1.08)^3 = 1.08 \times 1.08 \times 1.08 = 1.259712$
+- $62{,}500 \times 1.259712 = 78{,}732$
+
+$$
+\therefore \text{Compound principal is Tk. } 78{,}732
+$$</md></sn>
   <config>
     <tags>#10.example of compound profit</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 25 2026 09:28:58 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 25 2026 09:38:35 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-bKbl1N0bqh</id>
     <duration></duration>
   </config>
+<sn><md>**Example 2.** Find the compound profit of Tk. 5,000 at the profit of 10.50% per annum in 2 years.
+
+**Solution:** To find out the compound profit, at first we find the compound principal.
+
+We know,  
+compound principal $C = P(1+r)^n$, where  
+- principal $P = \text{Tk. } 5{,}000$  
+- percentage of profit $r = 10.50\% = \frac{21}{200}$  
+- time $n = 2$ years.
+
+
+Calculation:
+- $\therefore C = P(1+r)^2$
+- $= \text{Tk. } 5{,}000 \times \left(1 + \frac{21}{200}\right)^2$
+- $= \text{Tk. } 5{,}000 \times \left(\frac{221}{200}\right)^2$
+- $1 + \frac{21}{200} = \frac{221}{200}$
+- $\left(\frac{221}{200}\right)^2 = \frac{48{,}841}{40{,}000}$
+- $5{,}000 \times \frac{48{,}841}{40{,}000} = \frac{48{,}841}{8} = 6{,}105.125 \approx 6{,}105.13$
+- $\therefore C = \text{Tk. } 6{,}105.13 \text{ (approx.)}$
+
+**Compound profit:**
+- $\text{Compound profit} = C - P$
+- $= \text{Tk. } (6{,}105.13 - 5{,}000)$
+- $= \text{Tk. } 1{,}105.13 \text{ (approx.)}$</md></sn><sn><md>**Example 3.** A flat owners welfare association deposited the surplus money of Tk. 2,00,000 from its service charges in a bank in the fixed deposit scheme on the basis of compound profit for six months' interval. If the percentage of profit is Tk. 12, how much profit will be credited to the account of the association? What will be the compound principal after one year?
+
+**Solution:** Given,  
+- principal $P = \text{Tk. } 2{,}00{,}000$  
+- rate of profit $r = 12\%$  
+- time $n = 6$ months = $\frac{1}{2}$ year
+
+**Calculation of profit after 6 months:**
+- $\text{Profit} = P \cdot r \cdot n$
+- $= \text{Tk. } 2{,}00{,}000 \times \frac{12}{100} \times \frac{1}{2}$
+- $= \text{Tk. } 12{,}000$
+- $\therefore \text{Profit after 6 months will be Tk. } 12{,}000$
+
+**Calculation of compound principal after 6 months:**
+- Compound principal = $P + \text{Profit}$
+- $= \text{Tk. } (2{,}00{,}000 + 12{,}000)$
+- $= \text{Tk. } 2{,}12{,}000$
+
+**Calculation of compound principal after 1 year:**
+- Compound principal = $2{,}12{,}000 \times \left(1 + \frac{12}{100} \times \frac{1}{2}\right)$
+- $= \text{Tk. } 2{,}12{,}000 \times (1 + 0.06)$
+- $= \text{Tk. } 2{,}12{,}000 \times 1.06$
+- $= \text{Tk. } 2{,}24{,}720$
+- $\therefore \text{Compound principal after 1 year will be Tk. } 2{,}24{,}720$</md></sn>
