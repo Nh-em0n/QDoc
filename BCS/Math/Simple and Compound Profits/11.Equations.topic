@@ -4,7 +4,7 @@
     <tags>#11.summary</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 25 2026 10:37:03 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 25 2026 11:17:33 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-VjSz3ACah0</id>
     <duration></duration>
   </config>
@@ -60,16 +60,46 @@ where,
 - $\boxed{C = P(1 + rn_r)^n}$ (if rate of profits is not in 1 years)
 </md></sn><sn><md>### Facts
 
-- In $I=Prn$ equation the default time format is year<br>
-  Given month or date the time must be converted into years<br>
-  For example for 3 month $n = \frac{3}{12} $years<br>
-  And for 20 days $n = \frac{20}{365}$ years
+- In $I=Prn$ equation the default time format is **year**
+  - Given month or date the time `must be converted into years`<br>
+    For example for 3 month $n = \frac{3}{12}$ years ( monthly profit )<br>
+    And for 20 days $n = \frac{20}{365}$ years ( daily profit )
+  - If year and month are given together then add years with fraction year<br>
+    For 2 year 4 month the n = $2 + \frac{4}{12}$ y
+
+- In most of the simple profit math if the principle include double `00` then these two 00 are cutted by 100 in rate of profit fraction, in these case we can easily use $I=prn$ where p is without 00.<br>
+For example p=1000, r=5%, n=4 we can do $I = 10 \times 5 \times 4$
+
+- Profit means simple profit. In compound math if they ask for profit then it must be simple profit. But compound profit is always asked by **compound profit**
 
 - While determining rate of profit
   - $I = Prn$
-  - $r = \frac{I}{Pn}$ ( here the value of r is in fraction form,but value of r must me in percentage form )
+  - $r = \frac{I}{Pn}$ ( here the value of r is in fraction form, but value of r must be in percentage form )
   - $r = \frac{I}{Pn} \times 100$ ( so we multiply it with 100 )  
   - $r = Ans\%$ ( Now the answer in Percentage form )    
 
 - In the Compound Profit Equation $C = P(1+r)^n$ the r must be in decimal form<br>
-  For example if rate of profit is 8% then in equation it will be, r = 0.08  </md></sn>
+  For example if rate of profit is 8% then in equation it will be, r = 0.08  
+
+- If rate of profit is given in mix fraction then convert it into improper fraction<br>
+  $a\frac{b}{c} \to \frac{a\times c + b}{c}$
+
+- What will be 1000 for rate 7% per annum after 18 month, Here they ask for Profit-Principal
+
+- Equation Procedure <br>
+  3y A  = 460 ----- (1)<br>
+  5y A = 500 ----- (2)
+
+  ---
+  Profit in 2y  = 40tk<br>
+  Profit in 1y  = 20tk<br>
+  Here $A=P+I$ P is fixed so the extra amount denotes the profit amount <br>
+
+- Emon take 300tk for 2y and 500tk for 5y as lend. We give total 155 as profit. What is the rate of profit(x) in both of cases?<br>
+  $I_1= Prn = 300 \times \frac{x}{100} \times 2$ ---- (1)<br>
+  $I_2= Prn = 500 \times \frac{x}{100} \times 5$ ---- (2)<br>
+  Now $I_1 + I_2 = 155$ evaluate x.
+
+- $\frac{100 \times 7}{6 \times \frac{13}{10}} \to \frac{100 \times 7 \times 10}{6 \times 13}$ [ multiplying both sides with 10 ]
+
+- Simplifying multiplication 25 x 14 = 25 x ( 10 + 4 ) = 250 + 100 = 350</md></sn>
