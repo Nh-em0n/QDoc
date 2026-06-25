@@ -16,8 +16,143 @@
     <tags>#12.revise</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 25 2026 12:08:19 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 25 2026 19:26:28 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-MK2NNO5PFz</id>
     <duration></duration>
   </config>
-<sn></sn>
+<sn><md>### 01. Determination of Total Interest {.text-center}
+
+**Types of Math**
+- year given
+- month given
+- year+month given
+- day given or daily interest
+- rate of profit appear in mix fraction or in decimal fraction
+
+
+**Equation and Facts***
+- Equation = $I = Pnr$
+
+- In most of the simple profit math if the principle include double `00` then these two 00 are cutted by 100 in rate of profit fraction, in these case we can easily use $I=prn$ where p is without 00.<br>
+
+For example p=1000, r=5%, n=4 we can do $I = 10 \times 5 \times 4$
+- In $I=Prn$ equation the default time format is **year**
+  - Given month or date the time `must be converted into years`<br>
+    For example for 3 month $n = \frac{3}{12}$ years ( monthly profit )<br>
+    And for 20 days $n = \frac{20}{365}$ years ( daily profit )
+  - If year and month are given together then add years with fraction year<br>
+    For 2 year 4 month the n = $2 + \frac{4}{12}$ y
+
+- If rate of profit is given in mix fraction then convert it into improper fraction<br>
+  $a\frac{b}{c} \to \frac{a\times c + b}{c}$
+
+
+
+#### Math
+
+**2.** If the annual interest rate is 12%, what will be the interest on Tk. 10,000 for 4 years?  
+[NSI (Field Officer): 2021] + [Youth &amp; Sports Ministry: (Offi)-2025] + [C.A.AB-(Regular Officer):-2028]  
+- a. Tk. 8900<br>  
+- b. Tk. 8420<br>  
+- c. Tk. 8680<br>  
+- d. `Tk. 4800`<br>  
+
++++ Solution:  
+I = (100 × 12 × 4) = 4800  
++++
+
+---
+
+**5.** If the basic interest rate is Tk. 12.50 per annum, what will be the interest on Tk. 1000 for 2 years?  
+(Co-operative Department (Assistant Education Planner)-2020)  
+- a. `Tk. 250`<br>  
+- b. Tk. 120<br>  
+- c. Tk. 100<br>  
+- d. Tk. 50<br>  
+
++++ Solution:  
+12.5 × 2 × 10 = 250  
++++
+
+---
+
+**7.** At 20% simple interest, Tk. 800 is invested. At 15% simple interest, Tk. 600 is invested. Some amount is invested at a certain rate.  
+(Department of Agriculture (Directorate) - 2021 / Krishi Spashtaran Adhi (Dop-sah Krishi Karmakarta) - 2013 / + (Grihi Binudh Samiti (Binod Sidar))-2021  
+- a. Tk. 200<br>  
+- b. `Tk. 250`<br>  
+- c. Tk. 224<br>  
+- d. Tk. 220<br>  
+
++++ Solution:  
+( 20 x 8 x 1 ) + ( 15 x 6 x 1 ) = 250 
++++
+
+---
+
+**8.** A person has to pay 8% interest on the first Tk. 600 of his total expenses, and 7% interest on the amount exceeding Tk. 600. If his total expense in a year is Tk. 6000, how much interest does he have to pay that year?  
+(IDAE (Store Keeper)-2017)  
+- a. Tk. 480<br>  
+- b. Tk. 420<br>  
+- c. Tk. 378<br>  
+- d. `Tk. 426`<br>  
+
++++ Solution:  
+(6 × 8) + (54 × 7) = 426  
++++
+
+---
+
+**9** : Solve $\frac{650 \times 7 \times 6}{100}$
+
+---
+
+**6.** What is the interest on Tk. 10,000 for 9 months at 6% per annum?  
+(Unit Investment Society (Day Allocation)-2024 3rd)  
+- a. Tk. 180<br>  
+- b. Tk. 200<br>  
+- c. Tk. 250<br>  
+- d. `Tk. 450`<br>  
+
++++ Solution:  
+(10000 × 6 × 9) / (100 × 12) = 450  
++++
+
+---
+
+**15.** If the annual interest rate is $6\%$, what will be the interest on Tk. $10,000$ for $9$ months?<br>
+[25th BCS] + [Primary School (Asst. Teacher)-2024 (3rd Phase)] + [Ministry of Defence (Asst. Dir.)-2023] + [Palli Bidyut Samity (Meter Reader)-2024] + [DGDA (Office Asst.)-2024]
+
+* a. Tk. 180
+* b. Tk. 200
+* c. Tk. 250
+* d. `Tk. 450`
+
++++ Solution:
+$I = (100 \times 6 \times 9) / 12 = 450$
++++
+
+
+---
+
+
+**17.** If the annual interest rate is 5½ Tk. what will be the interest on Tk. 800 for 4 years and 3 months?  
+[Singard Bank Lower (Chip-20) - 2019 + Secondary Free (Assistant Teacher)-2008]  
+- a. Tk. 113<br>  
+- b. `Tk. 187`<br>  
+- c. Tk. 133<br>  
+- d. Tk. 283<br>  
+
+---
+
+**19.** If the rate of profit is Tk. 9.50 per annum, how much will an investor get after 2 years by investing Tk. 1,000?  
+(Defence Pension Office-2006)  
+- a. `Tk. 1190`<br>  
+- b. Tk. 2000<br>  
+- c. Tk. 2500<br>  
+- d. Tk. 3000<br>  
+
+Here they ask for `prfit-principal` amount.
+
++++ Solution:  
+1000 + (9.5 × 10 × 2) = 1000 + 190 = 1190  
++++</md></sn>
