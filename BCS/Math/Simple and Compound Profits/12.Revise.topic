@@ -16,7 +16,7 @@
     <tags>#12.revise</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 25 2026 23:41:18 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Jun 26 2026 01:25:21 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-MK2NNO5PFz</id>
     <duration></duration>
   </config>
@@ -577,4 +577,86 @@ We know,
 * a. 8
 * b. 20
 * c. 15
-* d. `10`</md></sn>
+* d. `10`</md></sn><sn><md>#### 06 : Determination of Principle{.text-center}
+
+**Equation and Fact :**
+- Principal $P = \frac{I \times 100}{rn}$
+- Profit_principal $A = P + I$ <br>
+  $A = P + Prn$ <br>
+  $A = P(1+rn)$ <br>
+  $P = \frac{A}{1+n\frac{r}{100}}$ <br>
+  $P = \frac{A}{\frac{100+nr}{100}}$ <br>
+  $P = \frac{A \times 100}{100+nr}$
+- Getting time from profit-principal <br>
+  Profit_principal $A = P+I$<br>
+  $A = P+Prn$<br>
+  $A = P(1+rn)$<br>
+  $\frac{A}{P} = 1+rn$<br>
+  $1+rn = \frac{A}{P}$<br>
+  $rn = \frac{A}{P} - 1$<br>
+  times $n = \frac{\frac{A}{P} - 1}{r} \times 100$
+
+- Principal is the 100% amount that we invest in,if it is not given we can consider it as 100
+- It is fixed in simple profit
+- For monthly profit $n = \frac{1}{2}$
+
+**Types of Math**
+- Profit is given
+- Profit_principle is given
+
+#### Math
+
+**78.** At an annual interest rate of $8\frac{1}{2}\%$, what principal amount will yield an interest of Tk. 2,550 in 6 years?<br>
+[Directorate General of Family Planning (Family Welfare Visitor)-2023] + [Class 8, Ex: 2.1, Example: 4]
+
+* a. `5000`
+* b. 7500
+* c. 6000
+* d. 6500
+
+**81.** At an annual interest rate of 5%, what principal amount will yield a monthly interest of Tk. 100?<br>
+[Ministry of Health and Family Welfare (Home Economist - 10th Grade)-2024]
+
+* a. 10000
+* b. 20000
+* c. 22000
+* d. `24000`
+
+
+**84.** How much money needs to be invested at 4.5% annual simple interest to become Tk. 826 in 4 years?<br>
+[20th BCS] + [Ministry of Defence (Asst. Dir.)-2018] + [Directorate of Secondary and Higher Education (Laboratory Assistant)-2021] + [LGED (Community Organizer)-2023]
+
+* a. Tk. 458
+* b. Tk. 650
+* c. `Tk. 700`
+* d. Tk. 725
+
+**86.** Mr. Kabir deposited some money in a bank at $6\frac{1}{4}\%$ simple interest and received Tk. 50,000 as total amount (principal + interest) after 16 years. How much money did he deposit in the bank?<br>
+[Public Works Department (Sub-Assistant Engineer) Recruitment-2018]
+
+* a. 30000
+* b. `25000`
+* c. 35000
+* d. 22000
+
+**89.** An amount of money becomes Tk. 1300 as total amount (principal + interest) in 5 years at 6% annual interest rate. In how many years will that same money become Tk. 1390 as total amount?<br>
+[Auditor-1998] + [10th NTRCA (Non-Government Teacher Registration)-2014]
+
+* a. 2.2 years
+* b. 3.5 years
+* c. 4.5 years
+* d. `6.5 years`
+
++++ Hint
+- times $n = \frac{\frac{A}{P} - 1}{r} \times 100$
+- $P = \frac{A \times 100}{100+nr}$
++++
+
+
+**90.** An amount of money becomes Tk. 1860 as total amount (principal + profit) in 3 years at 8% profit rate. After how many years will that same money become Tk. 2040 as total amount?<br>
+[Thana Assistant Education Officer-2009] + [Directorate General of Health Services (Medical Technician)-2020]
+
+* a. 2
+* b. `4.5`
+* c. 3.5
+* d. 5</md></sn>
