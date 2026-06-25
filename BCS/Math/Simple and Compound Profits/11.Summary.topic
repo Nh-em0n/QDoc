@@ -4,7 +4,7 @@
     <tags>#11.summary</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 25 2026 10:19:14 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 25 2026 10:20:03 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-VjSz3ACah0</id>
     <duration></duration>
   </config>
@@ -37,7 +37,7 @@ Loss = loss in Percentage<br>
 :::.col-12 .col-md-6
 - Profit = $\text{Principal} \cdot \text{Rate of Profit} \cdot \text{time}$
 - $I = Prn$
-- $A = P + I <br>= P + Prn <br>= P(1 + rn)$
+- $A = P + I$ <br>$= P + Prn$ <br>$= P(1 + rn)$
 - $I = A-P$ or $P = A-I$
 :::
 
