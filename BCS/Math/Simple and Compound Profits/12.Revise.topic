@@ -16,7 +16,7 @@
     <tags>#12.revise</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 25 2026 19:46:15 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 25 2026 21:41:56 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-MK2NNO5PFz</id>
     <duration></duration>
   </config>
@@ -209,5 +209,193 @@ $I = (10 \times 7 \times \frac{3}{2}) = 105$
 
 $\text{Total Amount} = 1000 + 105 = 1105$
 +++
+
+</md></sn><sn><md>### 03.Determination of Rate of Profit {.text-center}
+
+**Equation and Fact** :
+
+- **rate of profit** $r=\frac{I}{pn} \times 100$ ( percentage form )
+
+- **principal and profit of two different times given** <br>
+Principal + Profit in $n_2$ years = $T_2$ Tk<br>
+Principal + Profit in $n_1$ years = $T_1$ Tk<br>
+$\text{Profit in } (n_2-n_1)\text{ years} = T_2-T_1$ Where $T_2&gt;T_1$<br>
+Since the principal remains fixed, the increase in the total amount represents the profit earned during $(n_2-n_1)$ years.<br>
+$\text{Profit in 1 year} = \frac{T_2-T_1}{n_2-n_1}$<br>
+**Note:** $T_2-T_1$ is the additional amount accumulated between years $n_1$ and $n_2$. Since this increase was earned over $(n_2-n_1)$ years, dividing by the number of years gives the profit earned in one year
+
+- **Both principal have same rate of profit** <br>
+$P_1$ tk for $n_1$ years and $P_2$ tk for $n_2$ give total profit T tk.If rate of profit in both cases are equal what is the rate of profit ?<br>
+$I_1 + I_2 = T$<br>
+$P_1rn_1 + P_2rn_2 = T$<br>
+$r = ..$
+
+
+**Type of Math** :
+- IPn given
+- profit-principal given instead of profit
+- profit and principal given of two different time
+- both principal have same rate
+
+
+#### Math
+
+**29.** Mr. Suleman deposited Tk. $15,000$ in a bank and earned Tk. $1,275$ as interest in a year. What is the annual interest rate?<br>
+[Various Ministries (Personal Officer)-2019] + [BREB (Meter Reader)-2024]
+
+* a. 8%
+* b. 8.25%
+* c. `8.5%`
+* d. 8.6%
+
++++ Solution:
+- $R = (1,275 \times 100) / (15,000 \times 1) = 8.5\%$
++++
+
+---
+
+**33.** At what annual interest rate will the interest on Tk. $450$ for $12$ years be Tk. $162$?<br>
+[Pre-Primary School (Head Teacher)- 1999]
+
+* a. 8%
+* b. 2%
+* c. 5%
+* d. `3%`
+
++++ Solution:
+- $R = (162 \times 100) / (450 \times 12) = 3\%$
++++
+
+**which.** If the annual interest rate is $6\%$, what will be the interest on Tk. $10,000$ for $9$ months?<br>
+[25th BCS] + [Primary School (Asst. Teacher)-2024 (3rd Phase)] + [Ministry of Defence (Asst. Dir.)-2023] + [Palli Bidyut Samity (Meter Reader)-2024] + [DGDA (Office Asst.)-2024]
+
+* a. Tk. 180
+* b. Tk. 200
+* c. Tk. 250
+* d. `Tk. 450`
+
++++ Solution:
+- $\text{Time} = 9\text{ months} = \frac{9}{12}\text{ years}$
+- $I = \left(10,000 \times 6 \times \frac{9}{12}\right) / 100 = 450$
++++
+
+**37.** If Tk. $3,000$ is invested at $10\%$ profit and Tk. $2,000$ is invested at $8\%$ profit, what will be the average profit rate on the total principal?<br>
+[37th BCS Preli] + [Directorate of Food (Various Posts)-2020] + [SPCBL-(AM)-2023]
+
+* a. 9%
+* b. `9.2%`
+* c. 8%
+* d. 8.2%
+
++++ Solution:
+- $\text{Profit from Tk. 3000} = (3000 \times 10) / 100 = 300$
+- $\text{Profit from Tk. 2000} = (2000 \times 8) / 100 = 160$
+- $\text{Total Capital} = 3000 + 2000 = 5000$
+- $\text{Total Profit} = 3000 \times \frac{10}{100} + 2000 \times \frac{8}{100} = 300 + 160 = 460$
+- $\text{Average Profit Rate} = (460 \times 100) / 5000 = 9.2\%$
++++
+
+**39.** At what annual interest rate will Tk. $425$ amount to Tk. $476$ (principal + interest) in $3$ years?<br>
+[Primary School Assistant Teacher (Dhansiri)-2008] + [Pre-Primary Asst. Teachers Exam (Shitalakshya)-2013] + [Biman Bangladesh Airlines (Admin Assistant)-2023]
+
+* a. `4%`
+* b. $4\frac{1}{2}\%$
+* c. 5%
+* d. 6%
+
++++ Solution:
+- $I = 476 - 425 = 51$
+- $R = (51 \times 100) / (425 \times 3) = 4\%$
++++
+
+**41.** Tk. $650$ was deposited in a bank at simple interest. If the total amount received after $5$ years is Tk. $763.75$, what is the interest rate?<br>
+[President's Office (Asst. Protocol Officer)-2024] + [Ministry of Foreign Affairs (Personal Officer)-2024]
+
+* a. 3%
+* b. `3.5%`
+* c. 4%
+* d. 4.5%
+
++++ Solution:
+- $I = 763.75 - 650 = 113.75$
+- $R = (113.75 \times 100) / (650 \times 5) = 3.5\%$
++++
+
+**43.** If a certain principal amounts to Tk. $460$ (with interest) in $3$ years and to Tk. $500$ (with interest) in $5$ years, what will be the annual interest rate?<br>
+[Directorate of Technical Education (Chief Assistant/Accountant)-2021] + [PKSF (AM)-2023]
+
+* a. `5%`
+* b. 7%
+* c. 8%
+* d. 10%
+
++++ Solution:
+- $\text{Interest for 2 years (5 - 3)} = 500 - 460 = 40$
+- $\text{Interest for 1 year} = 40 / 2 = 20$
+- $\text{Interest for 3 years} = 20 \times 3 = 60$
+- $\text{Principal (P)} = 460 - 60 = 400$
+- $R = (20 \times 100) / (400 \times 1) = 5\%$
++++
+
+**44.** If a certain principal amounts to Tk. $460$ in $3$ years with simple profit and to Tk. $600$ in $5$ years with simple profit, what is the profit rate?<br>
+[Class 9-10, Ex: 3.5, No: 28] + [15th BCS]
+
+* a. 20%
+* b. 25%
+* c. `28%`
+* d. 30%
+
++++ Solution:
+- $\text{Profit for 2 years (5 - 3)} = 600 - 460 = 140$
+- $\text{Profit for 1 year} = 140 / 2 = 70$
+- $\text{Profit for 3 years} = 70 \times 3 = 210$
+- $\text{Principal (P)} = 460 - 210 = 250$
+- $\text{Rate} = (70 \times 100) / (250 \times 1) = 28\%$
++++
+
+**45.** If a certain principal amounts to Tk. $600$ (with interest) in $4$ years and to Tk. $700$ (with interest) in $6$ years, what is the principal amount?<br>
+[Palli Sanchay Bank (Cash)-2018]
+
+* a. Tk. 300
+* b. Tk. 600
+* c. `Tk. 400`
+* d. Tk. 650
+
++++ Solution:
+- $\text{Interest for 2 years (6 - 4)} = 700 - 600 = 100$
+- $\text{Interest for 1 year} = 100 / 2 = 50$
+- $\text{Interest for 4 years} = 50 \times 4 = 200$
+- $\text{Principal (P)} = 600 - 200 = 400$
++++
+
+**47.** If the interest on Tk. $500$ for $4$ years and the interest on Tk. $600$ for $5$ years together equal Tk. $500$, what is the interest rate?<br>
+[16th BCS] + [Primary School Asst. Teachers Exam-2014 (Held in 2018)]
+
+* a. `10%`
+* b. 12%
+* c. 5%
+* d. 6%
+
++++ Solution:
+- $\text{Equivalent Principal for 1 year} = (500 \times 4) + (600 \times 5) = 2000 + 3000 = 5000$
+- $R = (500 \times 100) / (5000 \times 1) = 10\%$
++++
+
+**49.** If the simple interest on Tk. $700$ for $2$ years and the simple interest on Tk. $800$ for $3$ years together equal Tk. $190$ at the same rate, what is the rate of interest?<br>
+[NSI (Field Officer)-2019]
+
+* a. 2%
+* b. `5%`
+* c. 6%
+* d. 8%
+
++++ Solution:
+- $\text{Equivalent Principal for 1 year} = (700 \times 2) + (800 \times 3) = 1400 + 2400 = 3800$
+- $R = (190 \times 100) / (3800 \times 1) = 5\%$
++++
+
+
+
+
 
 </md></sn>
