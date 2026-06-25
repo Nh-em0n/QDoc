@@ -1,0 +1,61 @@
+
+  <sn><md>### Basic</md></sn>
+  <config>
+    <tags>#11.summary</tags>
+    <thumbnail></thumbnail>
+    <heading></heading>
+    <udate>Thu Jun 25 2026 10:20:03 GMT+0600 (Bangladesh Standard Time)</udate>
+    <id>article-VjSz3ACah0</id>
+    <duration></duration>
+  </config>
+<sn><md>### Equations
+
+##### Percentage Profit Loss
+
+:::.row
+:::.col-12 .col-md-6
+profit = $\text{selling price} - \text{cost price}$ <br>
+profit = actual profit<br>
+Profit = profit in Percentage<br>
+
+[Profit]{.fg-teal} = $\frac{\text{profit} \times 100}{\text{cost price}}$
+:::
+
+:::.col-12 .col-md-6
+loss = $\text{cost price} - \text{selling price}$ <br>
+loss = actual loss<br>
+Loss = loss in Percentage<br>
+
+[Loss]{.fg-red} = $\frac{\text{loss} \times 100}{\text{cost price}}$
+:::
+:::
+
+
+##### Simple Profit
+
+:::.row
+:::.col-12 .col-md-6
+- Profit = $\text{Principal} \cdot \text{Rate of Profit} \cdot \text{time}$
+- $I = Prn$
+- $A = P + I$ <br>$= P + Prn$ <br>$= P(1 + rn)$
+- $I = A-P$ or $P = A-I$
+:::
+
+:::.col-12 .col-md-6
+where,
+- $I$ = Profit
+- $P$ = Principal
+- $r$ = Rate of profit ( Percentage form )
+- $n$ = Time
+- $A$ = Profit-principal (total amount)
+:::
+:::
+
+
+##### Compound Profit
+
+- **Compound Principal** = Previous Year Principal + end Profit
+- **Compound Profit** = end Compound Principal - Initial Principal
+- $\boxed{C = P(1 + r)^n}$
+- $\boxed{C = P(1 + rn_r)^n}$ (if rate of profits is not in 1 years)
+</md></sn><sn><md>### Facts</md></sn>
