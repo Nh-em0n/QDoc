@@ -25,7 +25,7 @@ Profit intervals may vary. Instead of yearly, profit may be given every **three 
     <tags>#09.concept of compound profit</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 25 2026 08:31:10 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 25 2026 08:56:10 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-L0Kl938Ipd</id>
     <duration></duration>
   </config>
@@ -35,7 +35,7 @@ The bank offers a profit rate of **12% per annum**.
 
 :::.row
 :::.col-12 .col-md-6
-++Year 1:++
+Year 1:
 - Profit = 12% of Tk. 1,000  
   = Tk. 1,000 × 12/100  
   = **Tk. 120**
@@ -44,7 +44,7 @@ The bank offers a profit rate of **12% per annum**.
 :::
 
 :::.col-12 .col-md-6
-++Year 2:++
+Year 2:
 - Profit = 12% of Tk. 1,120  
   = Tk. 1,120 × 12/100  
   = **Tk. 134.40**
@@ -53,4 +53,67 @@ The bank offers a profit rate of **12% per annum**.
 :::
 :::
 
-Year 3 and onward: The principal continues to increase in the same manner each year.</md></sn>
+Year 3 and onward: The principal continues to increase in the same manner each year.</md></sn><sn><md>### Formation of the Formulae for Compound Principal and Compound Profit
+
+Given:<br>
+Initial principal = $P$ <br>
+Rate of compound profit per annum = $r$ <br>(expressed as a decimal, e.g., 12% = 0.12) <br>
+by default n = 1y ,as we said per annum
+
+Step-by-Step Derivation:
+
+**End of 1st Year:** <br>
+Compound principal $C_1$ = Principal + Profit $= P + P \times r \times 1 = P(1 + r)$
+
+:::.row
+:::.col-12 .col-md-6
+**End of 2nd Year:** <br>
+Compound principal $C_2$ 
+- $C_1$ + Profit on $C_1$
+- $= C_1 + C_1 \times r$
+- $= P(1 + r) + P(1 + r) \times r$
+- $= P(1 + r) \times 1 + P(1 + r) \times r$
+- $= P(1 + r)(1 + r) = P(1 + r)^2$
+:::
+
+:::.col-12 .col-md-6
+**End of 3rd Year:**
+Compound principal $C_3$ : 
+- $C_2$ + Profit on $C_2$
+- $= C_2 + C_2 \times r$
+- $= P(1 + r)^2 + P(1 + r)^2 \times r$
+- $= P(1 + r)^2 \times 1 + P(1 + r)^2 \times r$
+- $= P(1 + r)^2 \times (1+r)$
+- $= P(1 + r)^3$
+:::
+:::
+
+
+**Observing the Pattern:**
+
+| Year | Compound Principal | Index of $(1 + r)$ |
+|------|---------------------|---------------------|
+| 1st  | $P(1 + r)^1$        | 1                   |
+| 2nd  | $P(1 + r)^2$        | 2                   |
+| 3rd  | $P(1 + r)^3$        | 3                   |
+| ...  | ...                 | ...                 |
+| nth  | $P(1 + r)^n$        | $n$                 |
+
+
+**General Formula:** <br>
+If $C$ = compound principal at the end of $n$ years, then:
+
+$$
+\boxed{C = P(1 + r)^n}
+$$
+
+And,
+
+$$
+\boxed{\text{Compound Profit} = C - P = P(1 + r)^n - P}
+$$
+
+:::.m-3 .border .px-3
+**Compound Principal** after $n$ years: $P(1 + r)^n$ <br>
+**Compound Profit** after $n$ years: $P(1 + r)^n - P$
+:::</md></sn>
