@@ -25,11 +25,86 @@ Profit intervals may vary. Instead of yearly, profit may be given every **three 
     <tags>#09.concept of compound profit</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 25 2026 09:04:41 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 25 2026 09:24:36 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-L0Kl938Ipd</id>
     <duration></duration>
   </config>
-<sn><md>#### Example :
+<sn><md>### Why Compound Profit is Profitable
+
+Assume you invest **Tk. 1000** at **10% annual profit (interest)** for **3 years**.
+
+:::.row
+:::.col-12 .col-md-6
+##### Simple Profit {.text-center}
+
+Profit is calculated only on the original amount.
+
+Yearly profit:
+
+$$
+1000 \times \frac{10}{100} = 100
+$$
+
+After 3 years:
+
+$$
+\text{Profit} = 100 \times 3 = 300
+$$
+
+Total amount:
+
+$$
+1000 + 300 = \text{Tk. }1300
+$$
+:::
+
+:::.col-12 .col-md-6
+##### Compound Profit {.text-center}
+
+Profit is calculated on the original amount **and** on previously earned profit.
+
+| Year | Amount at Start | Profit (10%) | Amount at End |
+| ---- | --------------: | -----------: | ------------: |
+| 1    |        Tk. 1000 |      Tk. 100 |      Tk. 1100 |
+| 2    |        Tk. 1100 |      Tk. 110 |      Tk. 1210 |
+| 3    |        Tk. 1210 |      Tk. 121 |      Tk. 1331 |
+
+Total amount after 3 years:
+
+$$
+\text{Tk. }1331
+$$
+
+Total profit:
+
+$$
+1331 - 1000 = \text{Tk. }331
+$$
+:::
+:::
+
+
+##### Comparison
+
+| Method          | Total Profit | Final Amount |
+| --------------- | -----------: | -----------: |
+| Simple Profit   |      Tk. 300 |     Tk. 1300 |
+| Compound Profit |      Tk. 331 |     Tk. 1331 |
+
+Extra profit from compound profit:
+
+$$
+331 - 300 = \text{Tk. }31
+$$
+
+##### Why is Compound Profit Higher?
+
+In simple profit, every year you earn profit only on **Tk. 1000**.
+
+In compound profit, after the first year the profit (**Tk. 100**) is added to the principal, so in the second year you earn profit on **Tk. 1100**, then on **Tk. 1210**, and so on.
+
+So compound profit is more profitable because you earn **profit on previous profits**, not just on the original money. This is often called **"profit on profit"**.
+</md></sn><sn><md>#### Example :
 A depositor Mr.Nazmul Hossan deposits **Tk. 1,000** in a bank.  
 The bank offers a profit rate of **12% per annum**.
 
