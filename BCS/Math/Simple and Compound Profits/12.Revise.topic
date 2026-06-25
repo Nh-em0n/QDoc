@@ -16,7 +16,7 @@
     <tags>#12.revise</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 25 2026 19:26:28 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 25 2026 19:46:15 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-MK2NNO5PFz</id>
     <duration></duration>
   </config>
@@ -155,4 +155,59 @@ Here they ask for `prfit-principal` amount.
 
 +++ Solution:  
 1000 + (9.5 × 10 × 2) = 1000 + 190 = 1190  
-+++</md></sn>
++++</md></sn><sn><md>### 02 : Determination of Profit-Principal {.text-center}
+
+**Equation and Fact**
+- Profit-Principal $A = P + I$ = $P+Prn$
+
+
+#### Math
+
+**21.** If the annual interest rate is $7\%$, what will be the total amount (principal + interest) on Tk. $650$ after $6$ years?<br>
+[DPDC Switch Board Attendant- 2021]
+
+- a. Tk. 723
+- b. Tk. 823
+- c. `Tk. 923`
+- d. Tk. 1023
+
++++ Solution:
+$I = (650 \times 7 \times 6) / 100 = 273$
+
+$\text{Total Amount} = 650 + 273 = 923$
++++
+
+---
+
+**24.** A person deposited Tk. $1,000$ in a bank for $4$ years. The bank will pay him interest at a rate of $10\%$ for the first $2$ years and at a rate of $5\%$ for the last $2$ years. How much money will the person receive at the end of $4$ years?<br>
+[BADC (Admin Officer)-2020]
+
++++ Solution:
+$\text{Interest for first 2 years} = (1000 \times 10 \times 2) / 100 = 200$
+
+$\text{Interest for last 2 years} = (1000 \times 5 \times 2) / 100 = 100$
+
+$\text{Total Interest} = 200 + 100 = 300$
+
+$\text{Total Amount} = 1000 + 300 = 1300$
++++
+
+---
+
+**25.** What will be the total amount (principal + interest) on Tk. $1,000$ after $18$ months at an annual interest rate of $7\%$?<br>
+[PKB- (EO) - 2017]
+
+* a. Tk. 1100
+* b. Tk. 1450
+* c. `Tk. 1105`
+* d. Tk. 800
+
++++ Solution:
+$\text{Time} = 18\text{ months} = 18 / 12 = 1.5\text{ years}$
+
+$I = (10 \times 7 \times \frac{3}{2}) = 105$
+
+$\text{Total Amount} = 1000 + 105 = 1105$
++++
+
+</md></sn>
