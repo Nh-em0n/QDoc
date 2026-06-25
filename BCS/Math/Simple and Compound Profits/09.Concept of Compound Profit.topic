@@ -25,7 +25,7 @@ Profit intervals may vary. Instead of yearly, profit may be given every **three 
     <tags>#09.concept of compound profit</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 25 2026 09:26:47 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 25 2026 09:51:31 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-L0Kl938Ipd</id>
     <duration></duration>
   </config>
@@ -134,6 +134,10 @@ Given:<br>
 Initial principal = $P$ <br>
 Rate of compound profit per annum = $r$ <br>(expressed as a decimal, e.g., 12% = 0.12) <br>
 by default n = 1y ,as we said per annum
+
+&gt; **Important** <br>
+&gt; - If month is 3 then n is not 1 it will be $\frac{3}{12}$ , then the equation will be $P(1+r \times \frac{3}{12})$
+&gt; - The rate must be in decimal form
 
 Step-by-Step Derivation:
 
