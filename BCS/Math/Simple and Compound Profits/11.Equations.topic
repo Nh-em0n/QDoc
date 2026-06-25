@@ -4,7 +4,7 @@
     <tags>#11.summary</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 25 2026 21:38:50 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 25 2026 23:17:50 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-VjSz3ACah0</id>
     <duration></duration>
   </config>
@@ -78,6 +78,33 @@ $P_1$ tk for $n_1$ years and $P_2$ tk for $n_2$ give total profit T tk.If rate o
 $I_1 + I_2 = T$<br>
 $P_1rn_1 + P_2rn_2 = T$<br>
 $r = ..$
+
+
+#### rate of profit for profit-pincipal to be N times of principal
+
+What must be the rate of simple interest per annum for any principal to N times itself in $n$ years?
+
+let the principal is 100<br>
+profit_principle = $N \times 100$<br>
+profit = profit_principle - principle <br>
+profit = $N \times 100 - 100$ = $100(N-1)$ <br>
+rate of profit $r= \frac{I \times 100}{pn}$ <br>
+rate of profit $r= \frac{100(N-1) \times 100}{100n}$ <br>
+rate of profit $r= \frac{N-1 \times 100}{n}$ <br>
+rate of profit $r= \frac{N-1}{n} \times 100$ <br>
+
+
+#### n year for profit-pincipal to be N times of principal at r profit rate
+
+let the principal is 100<br>
+profit_principle = $N \times 100$<br>
+profit = profit_principle - principle <br>
+profit = $N \times 100 - 100$ = $100(N-1)$ <br>
+time $r= \frac{I \times 100}{pr}$ <br>
+time profit $r= \frac{100(N-1) \times 100}{100r}$ <br>
+time $r= \frac{N-1 \times 100}{r}$ <br>
+time $r= \frac{N-1}{r} \times 100$ <br>
+
 </md></sn><sn><md>### Facts
 
 - In $I=Prn$ equation the default time format is **year**
