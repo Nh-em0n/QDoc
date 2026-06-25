@@ -4,7 +4,7 @@
     <tags>#11.summary</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 25 2026 11:17:33 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 25 2026 21:38:50 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-VjSz3ACah0</id>
     <duration></duration>
   </config>
@@ -58,6 +58,26 @@ where,
 - **Compound Profit** = end Compound Principal - Initial Principal
 - $\boxed{C = P(1 + r)^n}$
 - $\boxed{C = P(1 + rn_r)^n}$ (if rate of profits is not in 1 years)
+
+
+##### principal_profit of two different times given
+
+Principal + Profit in $n_2$ years = $T_2$ Tk<br>
+Principal + Profit in $n_1$ years = $T_1$ Tk<br>
+$\text{Profit in } (n_2-n_1)\text{ years} = T_2-T_1$ Where $T_2&gt;T_1$<br>
+Since the principal remains fixed, the increase in the total amount represents the profit earned during $(n_2-n_1)$ years.<br>
+$\text{Profit in 1 year} = \frac{T_2-T_1}{n_2-n_1}$
+
+**Note:** $T_2-T_1$ is the additional amount accumulated between years $n_1$ and $n_2$. Since this increase was earned over $(n_2-n_1)$ years, dividing by the number of years gives the profit earned in one year
+
+
+##### Both principal have same rate of profit
+
+$P_1$ tk for $n_1$ years and $P_2$ tk for $n_2$ give total profit T tk.If rate of profit in both cases are equal what is the rate of profit ?
+
+$I_1 + I_2 = T$<br>
+$P_1rn_1 + P_2rn_2 = T$<br>
+$r = ..$
 </md></sn><sn><md>### Facts
 
 - In $I=Prn$ equation the default time format is **year**
