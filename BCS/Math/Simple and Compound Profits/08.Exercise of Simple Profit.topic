@@ -1,59 +1,385 @@
 
-  <sn><md>**Exercise 2.1**
+  <sn><md>#### Exercise
+
+NCTB Class-8 Math-Book Chapter 2.1 {.text-end .text-secondary}
 
 ---
 
-1. On selling a commodity, the profit of a wholesale seller is 20% and the profit of the retail seller is 20%. If the retail selling price of the commodity is Tk. 576, what is the cost price of the wholesaler?
 
-2. A shopkeeper sold some amount of pulses for Tk. 2,375 at a loss of 5%. What would be the selling price of the pulses to make a profit of 6%?
 
-3. An equal number of bananas is bought at 10 and 15 pieces per Tk. 30, and all the bananas are sold at 12 pieces per Tk. 30. What will be the percentage of profit or loss?
+**1.** On selling a commodity, the profit of a wholesale seller is 20% and the profit of the retail seller is 20%. If the retail selling price of the commodity is Tk. 576, what is the cost price of the wholesaler?
 
-4. What will be the profit on Tk. 2,000 in 5 years if the rate of profit is Tk. 10.50 per annum?
++++ view
+**Solution:**  
+Let the wholesale cost price = Tk. x  
+Wholesaler sells to retailer at 20% profit → Retailer's cost price = x × 1.20 = 1.20x  
+Retailer sells at 20% profit → Retail selling price = 1.20x × 1.20 = 1.44x  
+Given: 1.44x = 576 → x = 576 / 1.44 = 400  
 
-5. How much less will be the profit on Tk. 3,000 in 3 years if the rate of profit per annum is decreased from 10% to 8%?
+**Answer:** Tk. 400
++++
+---
 
-6. What is the rate of profit per annum by which Tk. 13,000 will become Tk. 18,850 as profit-principal in 5 years?
+**2.** A shopkeeper sold some amount of pulses for Tk. 2,375 at a loss of 5%. What would be the selling price of the pulses to make a profit of 6%?
 
-7. At what rate of profit per annum will a principal double itself in 8 years (in terms of profit-principal)?
++++ view
 
-8. How much money will become Tk. 10,200 as profit-principal in 4 years at the same rate of profit at which Tk. 6,500 becomes Tk. 8,840 as profit-principal in 4 years?
+**Solution:**  
+Selling at 5% loss means SP = 95% of CP  
+0.95 × CP = 2375 → CP = 2375 / 0.95 = 2500  
+For 6% profit, SP = 2500 × 1.06 = 2650  
 
-9. Mr. Riaz deposited some money in a bank and got a profit of Tk. 4,760 after 4 years. If the rate of profit of the bank is Tk. 8.50 per annum, what amount of money did he deposit?
+**Answer:** Tk. 2,650
 
-10. What amount of money will become Tk. 2,050 as profit-principal in 4 years, at the same rate of profit at which some principal becomes double as profit-principal in 6 years?
++++
+---
 
-11. For how much money will the profit at the rate of 5% per annum in 2 years 6 months be the same as that of Tk. 500 at the rate of 6% per annum in 4 years?
 
-12. Due to an increase in the rate of profit from 8% to 10%, the income of Tisha Marma increased by Tk. 128 in 4 years. How much was her principal?
+**3.** An equal number of bananas is bought at 10 and 15 pieces per Tk. 30, and all the bananas are sold at 12 pieces per Tk. 30. What will be the percentage of profit or loss?
 
-13. Some principal becomes Tk. 1,578 as profit-principal in 3 years and Tk. 1,830 as profit-principal in 5 years. Find the principal and the rate of profit.
++++ view
 
-14. Tk. 3,000 at the rate of 10% profit and Tk. 2,000 at the rate of 8% profit are invested. What will be the average percentage of profit on the total sum of the principals?
+**Solution:**  
+Let equal number = LCM of 10, 15, 12 = 60 pieces from each source.  
+Cost:  
+- First lot: 10 pcs/Tk.30 → 60 pcs cost = (60/10)×30 = 180  
+- Second lot: 15 pcs/Tk.30 → 60 pcs cost = (60/15)×30 = 120  
+Total CP = 180 + 120 = 300 for 120 pieces  
 
-15. Rodrick Gomage borrowed Tk. 10,000 for 3 years and Tk. 15,000 for 4 years from a bank and paid Tk. 9,900 in total as profit. If the rate of profit is the same in both cases, find the rate of profit.
+Selling: 12 pcs/Tk.30 → 120 pcs sell for (120/12)×30 = 300  
+SP = 300, CP = 300 → No profit, no loss.  
 
-16. Some principal becomes double as profit-principal in 6 years at a certain rate of profit. In how many years will it become thrice as profit-principal at the same rate?
+**Answer:** 0% (No profit, no loss)
++++
+---
 
-17. The profit-principal for a certain period of time is Tk. 5,600 and the profit is \(\frac{2}{5}\) of the principal. If the rate of profit is 8%, find the principal and the time.
+**4.** What will be the profit on Tk. 2,000 in 5 years if the rate of profit is Tk. 10.50 per annum?
 
-18. After receiving his pension, Mr. Jamil bought pension savings certificates of Tk. 10 lac for a 5-year term, with profit paid at three-month intervals. If the rate of profit is 12% per annum, what amount of profit will he get at the first installment, i.e., after the first three months?
++++ view
 
-19. A fruit seller bought some bananas at the cost of Tk. 36 for 12 pieces from Jessore and Tk. 36 for 18 pieces from Kustia. He bought equal pieces of bananas both from Jessore and Kustia. His salesman sold the bananas at Tk. 36 for 15 pieces.  
-   **A.** What was the cost price of 100 pieces from Jessore?  
-   **B.** If the salesman sold all bananas, how much would be profit or loss?  
-   **C.** If the fruit seller wants to make 25% profit, what would be the selling price for 4 pieces of banana?
+**Solution:**  
+Simple profit = P × r × t = 2000 × 10.50/100 × 5 = 2000 × 0.105 × 5 = 1050  
 
-20. A principal is turned to an amount in 3 years of Tk. 28,000 and in 5 years of Tk. 30,000 at simple interest.  
-   **A.** Using the symbols in detail, write the formula for Principal.  
-   **B.** Find out the rate of interest or profit.  
-   **C.** How much principal should be deposited to get the amount of Tk. 48,000 at the same rate of interest?
+**Answer:** Tk. 1,050
++++
+---
+
+**5.** How much less will be the profit on Tk. 3,000 in 3 years if the rate of profit per annum is decreased from 10% to 8%?
+
++++ view
+**Solution:**  
+Profit at 10% = 3000 × 0.10 × 3 = 900  
+Profit at 8% = 3000 × 0.08 × 3 = 720  
+Difference = 900 − 720 = 180  
+
+**Answer:** Tk. 180 less
++++
+---
+
+**6.** What is the rate of profit per annum by which Tk. 13,000 will become Tk. 18,850 as profit-principal in 5 years?
+
++++ view
+
+**Solution:**  
+Principal (P) = 13000, Amount (A) = 18850, Time (t) = 5 years  
+Profit = A − P = 18850 − 13000 = 5850  
+Rate = (Profit × 100) / (P × t) = (5850 × 100) / (13000 × 5) = 585000 / 65000 = 9%  
+
+**Answer:** 9% per annum
++++
+---
+
+**7.** At what rate of profit per annum will a principal double itself in 8 years (in terms of profit-principal)?
+
++++ view
+
+**Solution:**  
+If principal doubles, Profit = P  
+Profit = P × r × t → P = P × r × 8 → r = 1/8 = 0.125 = 12.5%  
+
+**Answer:** 12.5% per annum
+
+---
+
+**8.** How much money will become Tk. 10,200 as profit-principal in 4 years at the same rate of profit at which Tk. 6,500 becomes Tk. 8,840 as profit-principal in 4 years?
+
++++ view
+
+**Solution:**  
+First find rate: For 6500 → 8840 in 4 years  
+Profit = 8840 − 6500 = 2340  
+Rate = (2340 × 100) / (6500 × 4) = 234000 / 26000 = 9%  
+
+Now for unknown principal P: A = 10200, t = 4, r = 9%  
+Profit = P × 0.09 × 4 = 0.36P  
+A = P + 0.36P = 1.36P = 10200 → P = 10200 / 1.36 = 7500  
+
+**Answer:** Tk. 7,500
+
++++
+---
+
+**9.** Mr. Riaz deposited some money in a bank and got a profit of Tk. 4,760 after 4 years. If the rate of profit of the bank is Tk. 8.50 per annum, what amount of money did he deposit?
+
++++ view
+
+**Solution:**  
+Profit = P × r × t → 4760 = P × 0.085 × 4 → 4760 = P × 0.34 → P = 4760 / 0.34 = 14000  
+
+**Answer:** Tk. 14,000
+
++++ view
+
+---
+
+**10.** What amount of money will become Tk. 2,050 as profit-principal in 4 years, at the same rate of profit at which some principal becomes double as profit-principal in 6 years?
+
++++ view
+
+**Solution:**  
+First find rate: If principal doubles in 6 years, Profit = P  
+P = P × r × 6 → r = 1/6 = 16.666...%  
+
+Now for unknown P: A = 2050, t = 4, r = 1/6  
+Profit = P × (1/6) × 4 = (4/6)P = (2/3)P  
+A = P + (2/3)P = (5/3)P = 2050 → P = 2050 × (3/5) = 1230  
+
+**Answer:** Tk. 1,230
+
++++
+
+---
+
+**11.** For how much money will the profit at the rate of 5% per annum in 2 years 6 months be the same as that of Tk. 500 at the rate of 6% per annum in 4 years?
+
++++ view
+
+**Solution:**  
+Profit from Tk.500 at 6% for 4 years = 500 × 0.06 × 4 = 120  
+Let required principal = P  
+Profit = P × 0.05 × 2.5 = 120 → P × 0.125 = 120 → P = 120 / 0.125 = 960  
+
+**Answer:** Tk. 960
+
++++
+
+
+---
+
+**12.** Due to an increase in the rate of profit from 8% to 10%, the income of Tisha Marma increased by Tk. 128 in 4 years. How much was her principal?
+
++++ view
+
+**Solution:**  
+Increase in rate = 10% − 8% = 2%  
+Extra profit = P × 0.02 × 4 = 0.08P  
+Given 0.08P = 128 → P = 128 / 0.08 = 1600  
+
+**Answer:** Tk. 1,600
+
++++
+
+---
+
+**13.** Some principal becomes Tk. 1,578 as profit-principal in 3 years and Tk. 1,830 as profit-principal in 5 years. Find the principal and the rate of profit.
+
++++ view
+
+**Solution:**  
+Let Principal = P, Rate = r  
+In 3 years: P + P×r×3 = 1578 → P(1 + 3r) = 1578 ...(1)  
+In 5 years: P + P×r×5 = 1830 → P(1 + 5r) = 1830 ...(2)  
+
+Divide (2) by (1):  
+(1 + 5r) / (1 + 3r) = 1830/1578 = 1.159696 (approx)  
+Cross multiply: 1 + 5r = 1.159696 (1 + 3r)  
+1 + 5r = 1.159696 + 3.479088r  
+5r − 3.479088r = 1.159696 − 1  
+1.520912r = 0.159696 → r ≈ 0.105 = 10.5%  
+
+From (1): P(1 + 3×0.105) = 1578 → P(1.315) = 1578 → P = 1578 / 1.315 = 1200  
+
+**Answer:** Principal = Tk. 1,200, Rate = 10.5% per annum
+
++++
+---
+
+**14.** Tk. 3,000 at the rate of 10% profit and Tk. 2,000 at the rate of 8% profit are invested. What will be the average percentage of profit on the total sum of the principals?
+
++++ view
+
+**Solution:**  
+Profit from first = 3000 × 0.10 = 300 (for 1 year)  
+Profit from second = 2000 × 0.08 = 160 (for 1 year)  
+Total profit = 460, Total principal = 5000  
+Average rate = (460 / 5000) × 100 = 9.2%  
+
+**Answer:** 9.2% per annum
+
++++
+
+---
+
+**15.** Rodrick Gomage borrowed Tk. 10,000 for 3 years and Tk. 15,000 for 4 years from a bank and paid Tk. 9,900 in total as profit. If the rate of profit is the same in both cases, find the rate of profit.
+
++++ view
+
+**Solution:**  
+Let rate = r  
+Profit from first = 10000 × r × 3 = 30000r  
+Profit from second = 15000 × r × 4 = 60000r  
+Total profit = 90000r = 9900 → r = 9900 / 90000 = 0.11 = 11%  
+
+**Answer:** 11% per annum
+
++++
+---
+
+**16.** Some principal becomes double as profit-principal in 6 years at a certain rate of profit. In how many years will it become thrice as profit-principal at the same rate?
+
++++ view
+
+**Solution:**  
+For doubling: Profit = P → P = P × r × 6 → r = 1/6  
+For tripling: Profit = 2P → 2P = P × (1/6) × t → 2 = t/6 → t = 12 years  
+
+**Answer:** 12 years
++++
+---
+
+**17.** The profit-principal for a certain period of time is Tk. 5,600 and the profit is \(\frac{2}{5}\) of the principal. If the rate of profit is 8%, find the principal and the time.
+
++++ view
+
+**Solution:**  
+Let Principal = P, Profit = (2/5)P  
+Amount = P + (2/5)P = (7/5)P = 5600 → P = 5600 × (5/7) = 4000  
+Profit = (2/5) × 4000 = 1600  
+Profit = P × r × t → 1600 = 4000 × 0.08 × t → 1600 = 320t → t = 5 years  
+
+**Answer:** Principal = Tk. 4,000, Time = 5 years
++++ view
+
+---
+
+**18.** After receiving his pension, Mr. Jamil bought pension savings certificates of Tk. 10 lac for a 5-year term, with profit paid at three-month intervals. If the rate of profit is 12% per annum, what amount of profit will he get at the first installment, i.e., after the first three months?
+
++++ view
+
+**Solution:**  
+Principal = 10,00,000, Rate = 12% per annum = 3% per quarter (3 months)  
+Profit for 1 quarter = 10,00,000 × 0.03 × 1 = 30,000  
+
+**Answer:** Tk. 30,000
+
++++
+---
+
+**19.** A fruit seller bought some bananas at the cost of Tk. 36 for 12 pieces from Jessore and Tk. 36 for 18 pieces from Kustia. He bought equal pieces of bananas both from Jessore and Kustia. His salesman sold the bananas at Tk. 36 for 15 pieces.  
+**A.** What was the cost price of 100 pieces from Jessore?  
+**B.** If the salesman sold all bananas, how much would be profit or loss?  
+**C.** If the fruit seller wants to make 25% profit, what would be the selling price for 4 pieces of banana?
+
++++ view
+
+**Solution (19A):**  
+Jessore: 12 pieces cost Tk. 36 → 1 piece cost = 36/12 = Tk. 3  
+100 pieces cost = 3 × 100 = Tk. 300  
+
+**Answer (19A):** Tk. 300
+
+---
+
+**Solution (19B):**  
+Let equal number = LCM of 12, 18, 15 = 180 pieces from each place.  
+Total bought = 360 pieces.  
+
+Cost:  
+- Jessore: 180 pcs at 36/12 = 3 Tk/pc → 180 × 3 = 540  
+- Kustia: 180 pcs at 36/18 = 2 Tk/pc → 180 × 2 = 360  
+Total CP = 540 + 360 = 900  
+
+Selling: 15 pcs for Tk. 36 → 1 pc = 36/15 = 2.40 Tk  
+Total SP = 360 × 2.40 = 864  
+
+Loss = 900 − 864 = 36  
+
+**Answer (19B):** Loss of Tk. 36
+
+---
+
+**Solution (19C):**  
+Average cost price per piece:  
+Total CP = 900 for 360 pieces → CP per piece = 900/360 = 2.50 Tk  
+For 25% profit, SP per piece = 2.50 × 1.25 = 3.125 Tk  
+For 4 pieces, SP = 3.125 × 4 = 12.50 Tk  
+
+**Answer (19C):** Tk. 12.50
+
++++
+
+---
+
+**20.** A principal is turned to an amount in 3 years of Tk. 28,000 and in 5 years of Tk. 30,000 at simple interest.  
+**A.** Using the symbols in detail, write the formula for Principal.  
+**B.** Find out the rate of interest or profit.  
+**C.** How much principal should be deposited to get the amount of Tk. 48,000 at the same rate of interest?
+
++++ view
+
+**Solution (20A):**  
+Let Principal = P, Rate = r (as a decimal), Time = t years, Amount = A  
+Simple Interest (I) = P × r × t  
+Amount A = P + I = P + P × r × t = P (1 + r t)  
+Therefore, **Formula for Principal:**  
+\( P = \frac{A}{1 + r t} \)
+
+---
+
+**Solution (20B):**  
+Amount in 3 years = 28000 → P(1 + 3r) = 28000 ...(1)  
+Amount in 5 years = 30000 → P(1 + 5r) = 30000 ...(2)  
+
+Divide (2) by (1):  
+(1 + 5r) / (1 + 3r) = 30000/28000 = 15/14  
+Cross multiply: 14(1 + 5r) = 15(1 + 3r)  
+14 + 70r = 15 + 45r  
+70r − 45r = 15 − 14  
+25r = 1 → r = 1/25 = 0.04 = 4%  
+
+**Answer (20B):** 4% per annum
+
+---
+
+**Solution (20C):**  
+We have r = 0.04. From (1): P(1 + 3×0.04) = 28000 → P(1.12) = 28000 → P = 28000 / 1.12 = 25,000  
+
+Now, for Amount = 48,000 at same rate, let time be t (not specified, assume we need principal for same time? Usually if time is same as? The question says "How much principal should be deposited to get the amount of Tk. 48,000 at the same rate of interest?" – It does not specify time. Typically, if time is not given, we use the same time as earlier? But there are two times.  
+
+Re-reading: It likely means: What principal will yield an amount of 48,000 at the same rate (4%) over the same period? But which period? Since it doesn't specify, the standard interpretation is: find P such that at r=4%, the amount becomes 48,000 **for an unspecified time**. However, without time, we cannot get a unique P.  
+
+If we assume the time is the same as in the first case (3 years or 5 years)? Not clear.  
+
+Most logical: The question likely expects to use the formula with the found rate and the given amount, but time is missing. Possibly it means: "How much principal should be deposited to get an amount of Tk. 48,000 at the same rate of interest **in the same time period as the original (i.e., 5 years?)**"  
+
+Let's check: In many textbook problems, they mean: at the same rate, what principal will amount to 48,000 in the same time as the given data (usually the longer period, 5 years).  
+
+If t = 5 years, r = 4%:  
+A = P(1 + 0.04×5) = P(1.20) = 48000 → P = 48000 / 1.20 = 40,000  
+
+If t = 3 years: P = 48000 / (1 + 0.04×3) = 48000 / 1.12 = 42,857.14  
+
+Since the problem does not specify time, I'll provide the formula and state that time is needed. However, based on common practice, I will assume t = 5 years.  
+
+**Answer (20C):** Tk. 40,000 (if time is 5 years). If time is not specified, the formula is \( P = \frac{48000}{1 + 0.04t} \).
+
++++
 </md></sn>
   <config>
     <tags>#08.exercise of simple profit</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jun 24 2026 21:10:12 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 25 2026 08:03:24 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-MlSjLKcKzy</id>
     <duration></duration>
   </config>
