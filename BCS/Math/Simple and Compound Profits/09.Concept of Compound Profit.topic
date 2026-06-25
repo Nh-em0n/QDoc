@@ -25,7 +25,7 @@ Profit intervals may vary. Instead of yearly, profit may be given every **three 
     <tags>#09.concept of compound profit</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Jun 25 2026 09:24:36 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Jun 25 2026 09:26:47 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-L0Kl938Ipd</id>
     <duration></duration>
   </config>
@@ -103,7 +103,7 @@ In simple profit, every year you earn profit only on **Tk. 1000**.
 
 In compound profit, after the first year the profit (**Tk. 100**) is added to the principal, so in the second year you earn profit on **Tk. 1100**, then on **Tk. 1210**, and so on.
 
-So compound profit is more profitable because you earn **profit on previous profits**, not just on the original money. This is often called **"profit on profit"**.
+So compound profit is more profitable because you earn ++`profit on previous profits`++, not just on the original money. This is often called **"profit on profit"**.
 </md></sn><sn><md>#### Example :
 A depositor Mr.Nazmul Hossan deposits **Tk. 1,000** in a bank.  
 The bank offers a profit rate of **12% per annum**.
