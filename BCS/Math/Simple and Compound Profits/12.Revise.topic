@@ -16,7 +16,7 @@
     <tags>#12.revise</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jun 29 2026 12:41:48 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jun 29 2026 13:58:30 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-MK2NNO5PFz</id>
     <duration></duration>
   </config>
@@ -871,4 +871,35 @@ for r$ + for 2%
 +++ Ans
 Tk. 10000
 +++
-</md></sn>
+</md></sn><sn><md>#### 10 {.text-center}
+
+**128.** The interest obtained on Tk. 250 in 6 years at an annual interest rate of 3% is equal to the interest obtained on what principal amount in 4 years at an annual interest rate of 5%?<br>
+[Class 8, Ex: 2.2]
+
+* a. 252
+* b. 522
+* c. 325
+* d. `225`
+
+**132.** The profit obtained by investing Tk. 6,000 for 5 years at a 4% simple profit rate is equal to the profit obtained by investing Tk. 10,000 for 3 years at what simple profit rate?<br>
+
+* a. 10%
+* b. 12%
+* c. 9%
+* d. `4%`
+
+**133.** At a certain interest rate, Tk. 650 becomes Tk. 806 as total amount (principal + interest) in 4 years. At the same interest rate, what principal amount will become Tk. 1040 as total amount (principal + interest) in 5 years?<br>
+[Bangladesh Petrobangla (Assistant Manager Written)-2011]
+
+* a. 500
+* b. 600
+* c. 700
+* d. `800`
+
++++ Ans
+$r_2 = \frac{I_2 \times 100}{P_2n_2}$<br>
+$r_2 = \frac{A_2-P_2 \times 100}{P_2n_2}$<br>
+require $r_2$, as $r_1 = r_2$<br>
+$r_1 = \frac{I_1 \times 100}{P_1n_1}$<br> 
+$r_1 = \frac{A_1-P_1 \times 100}{P_1n_1}$ 
++++</md></sn>
