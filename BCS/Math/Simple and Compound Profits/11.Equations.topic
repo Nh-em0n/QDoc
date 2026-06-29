@@ -4,7 +4,7 @@
     <tags>#11.summary</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jun 29 2026 10:04:01 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jun 29 2026 11:36:34 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-VjSz3ACah0</id>
     <duration></duration>
   </config>
@@ -123,6 +123,11 @@ $\frac{A}{P} = 1+rn$<br>
 $1+rn = \frac{A}{P}$<br>
 $rn = \frac{A}{P} - 1$<br>
 time $n = \frac{\frac{A}{P} - 1}{r} \times 100$
+
+##### Profit increase or Decrease
+principal = $\frac{M \times 100}{D}$ <br>
+M : corresponding money in n years <br>
+D : $n \times ( x - y)$
 </md></sn><sn><md>### Facts
 
 - In $I=Prn$ equation the default time format is **year**
