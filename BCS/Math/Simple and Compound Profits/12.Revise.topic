@@ -16,7 +16,7 @@
     <tags>#12.revise</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jun 29 2026 10:31:46 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jun 29 2026 12:41:48 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-MK2NNO5PFz</id>
     <duration></duration>
   </config>
@@ -739,20 +739,136 @@ We know,
 * a. Principal 200; Interest rate 7%
 * `b`. Principal 225; Interest rate 7$\frac{1}{5}$%
 * c. Principal 250; Interest rate 8%
-* d. Principal 300; Interest rate 9%</md></sn><sn><md>### 08 : Increase or Decrease of rate of profit
+* d. Principal 300; Interest rate 9%</md></sn><sn><md>### 08 : Increase or Decrease of rate of profit {.text-center}
 
 **Fact and Equation**
 
 Rate of profit decreases from **x%** to **y%**, so the annual profit decreases by **M Tk.** What is the principal?<br>
-$(x-y)\%$ = Corresponding decrease in annual profit ,where x &gt; y <br> 
+$(x-y)\%$ decrease = Corresponding decrease in annual profit <br>
 $D\% = M$ <br>
 $1\% = \frac{M}{D}$ <br>
 $100\% = \frac{M}{D} \times 100$ <br>
-Here, **100% represents the principal.** <br>
+Here, **100% represents the principal.**
 
 If the problem gives a period of **n years** instead of **1 year**, then:<br>
 $n \times (x-y)\%$ = Corresponding decrease in profit for **n years** <br>
-$n \times D\% = n \times M$ <br>
+$n \times D\% = M$ <br>
 $1\% = \frac{M}{D}$ <br>
 $100\% = \frac{M}{D} \times 100$ <br>
+
+:::.p-3 .border
+So the Equation is : <br>
+principal = $\frac{M \times 100}{D}$ <br>
+M : corresponding money in n years <br>
+D : $n \times ( x - y)$
+:::
+
+#### Math
+
+**104.** Due to the interest rate decreasing from 6% to 4%, a person's annual income decreased by Tk. 20. What is the principal amount?<br>
+[Directorate of Technical Education (Upper Division Assistant)-2021]
+
+* a. `Tk. 1000`
+* b. Tk. 1200
+* c. Tk. 1500
+* d. Tk. 1800
+
+**107.** Due to the annual profit rate increasing from 8% to 10%, Tisha Marma's income increased by Tk. 128 in 4 years. What was her capital?<br>
+[Class 8, Ex: 2.1, No. 12] + [RAKUB Officer-2015]
+
+* a. Tk. 1500
+* b. `Tk. 1600`
+* c. Tk. 2000
+* d. Tk. 2200
+
+**109.** Due to a 0.75 percentage decrease in the interest rate, a depositor's interest income over 4 years decreased by Tk. 750. What is the total amount of his deposit?<br>
+[ICB Capital Management (AP)-2019]
+
+* a. `Tk. 25000`
+* b. Tk. 18750
+* c. Tk. 30000
+* d. Tk. 100000
+
+**110.** Due to the annual profit rate decreasing from 12.5% to 10.75%, Mr. Jamil's income decreased by Tk. 280 in 4 years. What is his capital?<br>
+[Department of Youth Development (Cashier)-2018]
+
+* a. 3500
+* b. 1600
+* c. 2500
+* d. `4000`
+
+**111.** Due to the annual interest rate decreasing from 5% to $4\frac{3}{8}\%$, a person's income decreased by Tk. 40. What was his capital?<br>
+[Asst. Secondary School Teacher Recruitment-2019] + [Ministry of Land (Auditor)-2023] + [GTCL (Technician)-2023]
+
+* a. Tk. 16000
+* b. `Tk. 64000`
+* c. Tk. 32200
+* d. Tk. 32000
+
+**113.** At a simple interest rate, Tk. 800 became Tk. 956 in 3 years. If the interest rate increases by 4%, how much will Tk. 800 become in 3 years?<br>
+[Bangladesh Bank (AD)-2016]
+
+* a. 1020
+* b. 1025
+* c. `1052`
+* d. None of these
+
+
+**114.** At a simple interest rate, Tk. 600 becomes Tk. 720 as total amount (principal + interest) in 4 years. If the interest rate increases by 2%, what will be the total amount?<br>
+[Janata Bank (EO)-2017 (afternoon)]
+
+* a. Tk. 648
+* b. `Tk. 768`
+* c. Tk. 726
+* d. Tk. 792
+
++++ note
+
+At a simple interest rate, Tk. 600 becomes Tk. 720 as total amount (principal + interest) in 4 years. If the interest rate increases by 2%, what will be the total amount
+
+Profit-Principal + new inreases amount <br>
+not 600 + ...  <br>
+suppose iterest rate was r% for which we get 720,by increasing 2% the r became r'= r+2 so we get total money r' which include r that provide 720<br>
+for r$ + for 2%
+720 + for 2 ..
++++</md></sn><sn><md>### 09 : Equation {.text-center}
+
+**115.** If the interest on Tk. $x$ for 4 years at $x\%$ annual interest rate is Tk. $x$, then $x =$ how much?<br>
+[BDBL - (SO)-2017]
+
+* a. `25`
+* b. 20
+* c. 30
+* d. 32
+
+**118.** Rana took a simple interest loan of Tk. 1200 where the annual interest rate was equal to the total number of years for the loan term. If he paid Tk. 432 as interest at the end of the term, what was the rate of interest?<br>
+[Public Service Commission (Asst. Director)-2015]
+
+* a. 3.6%
+* b. `6%`
+* c. 18%
+* d. None of these
+
+**119.** A certain principal is loaned out for 6 years. The profit rate is fixed at 5% for the first 3 years and 4% for the last 3 years. After 6 years, if the total amount including profit is Tk. 127, what is the principal?<br>
+[Pre-Primary Asst. Teacher Recruitment Exam (Volga)-2013] + [Chittagong Port Authority Recruitment-2017]
+
+* a. `Tk. 100`
+* b. Tk. 90
+* c. Tk. 80
+* d. Tk. 70
+
+
+**120.** Jemi and Simi borrow different amounts of money from the same bank on the same day at a 10% simple profit rate. If the total amount (principal + profit) repaid by Jemi after 2 years is equal to the total amount repaid by Simi after 3 years, find the ratio of their loans.<br>
+[Class 9-10 (Ex: 11.2)] + [28th BCS Preli]
+
++++ Ans
+13:12
++++
+
+**124.** Selim invests Tk. 10,000 in a bank at 6% simple interest. How much more money does he need to invest at 8% simple interest so that he will receive an overall interest rate of 7% on the total amount? <br>
+[NSI (Assistant Director)-2019]
+
++++ Ans
+Tk. 10000
++++
 </md></sn>
