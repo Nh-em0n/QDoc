@@ -16,7 +16,7 @@
     <tags>#12.revise</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jun 29 2026 10:02:40 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jun 29 2026 10:31:46 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-MK2NNO5PFz</id>
     <duration></duration>
   </config>
@@ -739,4 +739,20 @@ We know,
 * a. Principal 200; Interest rate 7%
 * `b`. Principal 225; Interest rate 7$\frac{1}{5}$%
 * c. Principal 250; Interest rate 8%
-* d. Principal 300; Interest rate 9%</md></sn>
+* d. Principal 300; Interest rate 9%</md></sn><sn><md>### 08 : Increase or Decrease of rate of profit
+
+**Fact and Equation**
+
+Rate of profit decreases from **x%** to **y%**, so the annual profit decreases by **M Tk.** What is the principal?<br>
+$(x-y)\%$ = Corresponding decrease in annual profit ,where x &gt; y <br> 
+$D\% = M$ <br>
+$1\% = \frac{M}{D}$ <br>
+$100\% = \frac{M}{D} \times 100$ <br>
+Here, **100% represents the principal.** <br>
+
+If the problem gives a period of **n years** instead of **1 year**, then:<br>
+$n \times (x-y)\%$ = Corresponding decrease in profit for **n years** <br>
+$n \times D\% = n \times M$ <br>
+$1\% = \frac{M}{D}$ <br>
+$100\% = \frac{M}{D} \times 100$ <br>
+</md></sn>
