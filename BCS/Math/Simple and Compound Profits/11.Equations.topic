@@ -4,7 +4,7 @@
     <tags>#11.summary</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Jun 26 2026 01:15:10 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jun 29 2026 10:04:01 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-VjSz3ACah0</id>
     <duration></duration>
   </config>
@@ -167,4 +167,31 @@ For example p=1000, r=5%, n=4 we can do $I = 10 \times 5 \times 4$
 
 - $\frac{100 \times 7}{6 \times \frac{13}{10}} \to \frac{100 \times 7 \times 10}{6 \times 13}$ [ multiplying both sides with 10 ]
 
-- Simplifying multiplication 25 x 14 = 25 x ( 10 + 4 ) = 250 + 100 = 350</md></sn>
+- Simplifying multiplication 25 x 14 = 25 x ( 10 + 4 ) = 250 + 100 = 350
+
+- Interest is $\frac{x}{y}$ of principal,what is the principal amount?<br>
+  Let principal = $P$ <br>
+  Interest = $\frac{x}{y} \text{of} P$<br>
+  Interest = $\frac{Px}{y}$<br>
+  Now $A = P + I$<br>
+  $A = P + \frac{Px}{y}$  <br>
+  evaluate P
+- The interest is what portion of principal<br>
+  $\frac{I}{P} = ?$
+
+- For what rate of interest the interest for 1 years will be $\frac{1}{5}$ of principal?<br>
+  $\frac{I}{P} = \frac{1}{5}$ so $P=5I$ <br>
+  Now, $r=\frac{I \times 100}{Pn}$ <br>
+  $r =\frac{I \times 100}{Pn}$ <br>
+  $r =\frac{I \times 100}{5In}$ <br>
+  $r =\frac{100}{5n}$ <br>
+  $r =\frac{100}{\text{X}n}$ <br>
+  X : 
+  - what time principal is larger than interest or
+  - interest is what portion of principal <br>
+    Use standard equation instead of this shortcut as it may sometimes introduce invalid calculation,use shortcut to double check
+
+- interest is $\frac{x}{y}$ of principal<br>
+  interest is $\frac{x}{y}$ of profit-principal<br>
+  both are not equal,be caution on this
+</md></sn>
