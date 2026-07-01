@@ -1,10 +1,19 @@
 
-  <sn></sn>
+  <sn><md>### Daily Routine Framework
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Self/Framework/Daily%20Routine/resources/Daily%20Routine%20Framework.png)
+
+| Section       |  Hours | Purpose                                                                                                                        |
+| ------------- | -----: | ------------------------------------------------------------------------------------------------------------------------------ |
+| **Fixed**     | **9** | Sleep, meals, bathing, prayer, commuting, family time, and other unavoidable daily activities.                                 |
+| **Primary**   |  **8** | First Period of Main Action                                                    |
+| **Secondary** |  **7** | Second Period of Main Action |
+</md></sn>
   <config>
     <tags>#01.daily routine framework</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jul 01 2026 11:02:10 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jul 01 2026 11:08:32 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-hidQBtXhC8</id>
     <duration></duration>
   </config>
