@@ -1,10 +1,96 @@
 
-  <sn></sn>
+  <sn><md>You can configure **Sublime Text** as your Git editor on Linux.
+
+### 1. Check the executable name
+
+Run:
+
+```bash
+which subl
+```
+
+If it returns something like:
+
+```text
+/usr/bin/subl
+```
+
+you're good to go.
+
+If it doesn't, try:
+
+```bash
+which sublime_text
+```
+
+or
+
+```bash
+which sublime
+```
+
+---
+
+### 2. Set Sublime as the Git editor
+
+If the executable is `subl`:
+
+```bash
+git config --global core.editor "subl -n -w"
+```
+
+* `-n` → Opens a new window.
+* `-w` → Makes Git wait until you close the file before continuing.
+
+If your executable is different, replace `subl` with the correct command.
+
+For example:
+
+```bash
+git config --global core.editor "sublime_text -n -w"
+```
+
+---
+
+### 3. Verify
+
+```bash
+git config --global core.editor
+```
+
+Output:
+
+```text
+subl -n -w
+```
+
+---
+
+### 4. Test it
+
+Run:
+
+```bash
+git commit
+```
+
+(or)
+
+```bash
+git rebase -i HEAD~2
+```
+
+Git should open Sublime Text and wait until you save and close the file.
+
+---
+
+If `which subl` returns nothing, tell me **how you installed Sublime Text** (APT, Snap, Flatpak, or manual `.tar.xz`), and I'll provide the correct setup.
+</md></sn>
   <config>
     <tags>#set sublime as text editor for git in linux</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Jul 04 2026 10:45:32 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Jul 04 2026 10:45:46 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-kJFa061KQo</id>
     <duration></duration>
   </config>
