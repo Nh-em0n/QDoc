@@ -4,7 +4,7 @@
     <tags>#june</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jul 01 2026 10:22:17 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Jul 04 2026 12:08:14 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TIyfLmp0RP</id>
     <duration></duration>
   </config>
@@ -26,35 +26,32 @@
 | Morality   | Ethics and Values |
 </md></sn><sn><md>#### self.field.ses
 - Soil and Enviromental Quality Mid Preparation
-- 
-- follow class routine and study
+
 </md></sn><sn><md>#### self.field.programming
 
 :::.row
 
 :::.col-6 .col-md-3
 **System Programming**
-- C 20 Chapters
+- C 10 Chapters
 :::
 
 :::.col-6 .col-md-3
 **Web**
-- PHP 15 Chapter and practice
-- Javascript 10 Chapter and make library
-- Css 10 Chapter and make class library
-- Markdownit library fully understand and make one plugin by yourself
+- PHP 5 Chapter and practice
+- Javascript 5 Chapter and make library
+- Css 5 Chapter and make class library
 :::
 
 :::.col-6 .col-md-3
 **QDoc**
-- complete all task from target.md
+- complete all task of content and doc from target.md
 :::
 
 :::.col-6 .col-md-3
 **Extras**
-- Bash first 15 chapter (BashNotesForProfessional)
-- Git revise and Digital Note (chapter 1 and 2)
-- Regex 
+- Bash first 5 chapter (BashNotesForProfessional)
+ 
 :::
 :::
 
@@ -64,47 +61,13 @@
 :::.col-6 .col-md-4
 **Surah Memorization**
 - Surah 71
-- Surah 100-114
-:::
-
-:::.col-6 .col-md-4
-**Note Law and Fact**
-- Surah 7
-:::
-
-:::.col-6 .col-md-4
-**Extras**
-- Watch others Analiysis
-- Watch documentaries
 :::
 :::
-</md></sn><sn><md>### self.others
+</md></sn><sn><md>#### self.others
 
 
 #### self.course
-- Crash Course Computer Science ( 20 vid )
-
-#### self.health
-
-**Update**
-- Cheeck BMI
-- Note your physical characteristics like weight,height,age,size of biceps,leg,belly
-
-**Process**
-- How a child born in mother womb
-- How Food digestion Work
-
-**Disease**
-- Cancer
-
-**Disorder**
-- stuttering disorder
-
-
-#### self.character
-- Work on it
-- Human Emotions ,why they occur,limitation,
-- List of Good and Bad Attributte
+- Crash Course Computer Science ( 10 vid )
 
 #### self.communication
 - understanding ethics and manner
@@ -114,11 +77,4 @@
 - understanding boundaries
 - rules and regulation
 
-#### self.wealth
-- theory
-- property
-- update
-- expenditure
-- source
-- saving
 </md></sn>
