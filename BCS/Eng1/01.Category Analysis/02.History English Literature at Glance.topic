@@ -1,10 +1,141 @@
 
-  <sn></sn>
+  <sn><md>![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Eng1/01.Category%20Analysis/resources/English-Literature-Periods-Diagram.png)</md></sn><sn><md><pre class="d-none data">+++ view ascii code
+
+```
+HISTORY OF ENGLISH LITERATURE
+            AT A GLANCE
+
+||  
+||--. The Old English Period OR The Anglo-Saxon Period (450 - 1066)
+||  |   [Shield Icon]
+||  
+||--. The Middle English Period (1066 - 1500)
+||  |   |   [Book Icon]
+||  |   '--. The Anglo-Norman Period (1066 - 1240)
+||  |   '--. The Age of Chaucer (1340 - 1400)
+||  |   '--. The Age of Barren or Dark Age (1400 - 1500)
+||  
+||--. The Renaissance Period (1500 - 1600)
+||  |   |   [Calendar Icon]
+||  |   '--. Elizabethan Age (1558 - 1603)
+||  |   '--. Jacobean Age (1603 - 1625)
+||  |   '--. Caroline Age (1625 - 1649)
+||  |   '--. Commonwealth Period (1649 - 1660)
+||  
+||--. The Neoclassical Period (1660 - 1700)
+||  |   |   [Scroll Icon]
+||  |   '--. The Restoration Period (1660 - 1700)
+||  |   '--. The Augustan Age or The Age of Pope (1700 - 1745)
+||  |   '--. The Age of Sensibility or The Age of Johnson (1745 - 1785)
+||  
+||--. The Romantic Period (1798 - 1832)
+||  
+||--. The Victorian Period (1832 - 1901)
+||  |   |   [Train Icon]
+||  |   '--. The Pre-Raphaelites (1848 - 1860)
+||  |   '--. Aestheticism and Decadence (1880 - 1901)
+||  
+||--. The Modern Period (1901 - 1939)
+||  |   |   [Globe Icon]
+||  |   '--. The Edwardian Period (1901 - 1910)
+||  |   '--. The Georgian Period (1910 - 1936)
+||  
+|'--. The Post-modern Period (1939 - ...ongoing)
+
+```
++++</pre><temp><dl>
+<pre class="copy-container"><i class="fa-light fa-clone i-btn hover rounded-1 copy-btn code-copy-btn" title="Copy"></i><code class="copy-text hljs language-sql" data-highlighted="yes">HISTORY <span class="hljs-keyword">OF</span> ENGLISH LITERATURE
+            <span class="hljs-keyword">AT</span> A GLANCE
+
+<span class="hljs-operator">||</span>  
+<span class="hljs-operator">||</span><span class="hljs-comment">--. The Old English Period OR The Anglo-Saxon Period (450 - 1066)</span>
+<span class="hljs-operator">||</span>  <span class="hljs-operator">|</span>   [Shield Icon]
+<span class="hljs-operator">||</span>  
+<span class="hljs-operator">||</span><span class="hljs-comment">--. The Middle English Period (1066 - 1500)</span>
+<span class="hljs-operator">||</span>  <span class="hljs-operator">|</span>   <span class="hljs-operator">|</span>   [Book Icon]
+<span class="hljs-operator">||</span>  <span class="hljs-operator">|</span>   <span class="hljs-string">'--. The Anglo-Norman Period (1066 - 1240)
+||  |   '</span><span class="hljs-comment">--. The Age of Chaucer (1340 - 1400)</span>
+<span class="hljs-operator">||</span>  <span class="hljs-operator">|</span>   <span class="hljs-string">'--. The Age of Barren or Dark Age (1400 - 1500)
+||  
+||--. The Renaissance Period (1500 - 1600)
+||  |   |   [Calendar Icon]
+||  |   '</span><span class="hljs-comment">--. Elizabethan Age (1558 - 1603)</span>
+<span class="hljs-operator">||</span>  <span class="hljs-operator">|</span>   <span class="hljs-string">'--. Jacobean Age (1603 - 1625)
+||  |   '</span><span class="hljs-comment">--. Caroline Age (1625 - 1649)</span>
+<span class="hljs-operator">||</span>  <span class="hljs-operator">|</span>   <span class="hljs-string">'--. Commonwealth Period (1649 - 1660)
+||  
+||--. The Neoclassical Period (1660 - 1700)
+||  |   |   [Scroll Icon]
+||  |   '</span><span class="hljs-comment">--. The Restoration Period (1660 - 1700)</span>
+<span class="hljs-operator">||</span>  <span class="hljs-operator">|</span>   <span class="hljs-string">'--. The Augustan Age or The Age of Pope (1700 - 1745)
+||  |   '</span><span class="hljs-comment">--. The Age of Sensibility or The Age of Johnson (1745 - 1785)</span>
+<span class="hljs-operator">||</span>  
+<span class="hljs-operator">||</span><span class="hljs-comment">--. The Romantic Period (1798 - 1832)</span>
+<span class="hljs-operator">||</span>  
+<span class="hljs-operator">||</span><span class="hljs-comment">--. The Victorian Period (1832 - 1901)</span>
+<span class="hljs-operator">||</span>  <span class="hljs-operator">|</span>   <span class="hljs-operator">|</span>   [Train Icon]
+<span class="hljs-operator">||</span>  <span class="hljs-operator">|</span>   <span class="hljs-string">'--. The Pre-Raphaelites (1848 - 1860)
+||  |   '</span><span class="hljs-comment">--. Aestheticism and Decadence (1880 - 1901)</span>
+<span class="hljs-operator">||</span>  
+<span class="hljs-operator">||</span><span class="hljs-comment">--. The Modern Period (1901 - 1939)</span>
+<span class="hljs-operator">||</span>  <span class="hljs-operator">|</span>   <span class="hljs-operator">|</span>   [Globe Icon]
+<span class="hljs-operator">||</span>  <span class="hljs-operator">|</span>   <span class="hljs-string">'--. The Edwardian Period (1901 - 1910)
+||  |   '</span><span class="hljs-comment">--. The Georgian Period (1910 - 1936)</span>
+<span class="hljs-operator">||</span>  
+<span class="hljs-operator">|</span><span class="hljs-string">'--. The Post-modern Period (1939 - ...ongoing)
+
+</span></code></pre>
+</dl>
+</temp>++ view ascii code
+
+```
+HISTORY OF ENGLISH LITERATURE
+            AT A GLANCE
+
+||  
+||--. The Old English Period OR The Anglo-Saxon Period (450 - 1066)
+||  |   [Shield Icon]
+||  
+||--. The Middle English Period (1066 - 1500)
+||  |   |   [Book Icon]
+||  |   '--. The Anglo-Norman Period (1066 - 1240)
+||  |   '--. The Age of Chaucer (1340 - 1400)
+||  |   '--. The Age of Barren or Dark Age (1400 - 1500)
+||  
+||--. The Renaissance Period (1500 - 1600)
+||  |   |   [Calendar Icon]
+||  |   '--. Elizabethan Age (1558 - 1603)
+||  |   '--. Jacobean Age (1603 - 1625)
+||  |   '--. Caroline Age (1625 - 1649)
+||  |   '--. Commonwealth Period (1649 - 1660)
+||  
+||--. The Neoclassical Period (1660 - 1700)
+||  |   |   [Scroll Icon]
+||  |   '--. The Restoration Period (1660 - 1700)
+||  |   '--. The Augustan Age or The Age of Pope (1700 - 1745)
+||  |   '--. The Age of Sensibility or The Age of Johnson (1745 - 1785)
+||  
+||--. The Romantic Period (1798 - 1832)
+||  
+||--. The Victorian Period (1832 - 1901)
+||  |   |   [Train Icon]
+||  |   '--. The Pre-Raphaelites (1848 - 1860)
+||  |   '--. Aestheticism and Decadence (1880 - 1901)
+||  
+||--. The Modern Period (1901 - 1939)
+||  |   |   [Globe Icon]
+||  |   '--. The Edwardian Period (1901 - 1910)
+||  |   '--. The Georgian Period (1910 - 1936)
+||  
+|'--. The Post-modern Period (1939 - ...ongoing)
+
+```
++++</md></sn>
   <config>
     <tags>#02.english literature periods</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jul 06 2026 04:58:45 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jul 06 2026 05:02:48 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-DbAwQlxk81</id>
     <duration></duration>
   </config>
