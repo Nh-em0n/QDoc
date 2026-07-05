@@ -4,7 +4,7 @@
     <tags>#15.bengali magazine</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Jul 05 2026 10:26:00 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Jul 05 2026 10:33:25 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-vw3IxMxmuX</id>
     <duration></duration>
   </config>
@@ -19,7 +19,7 @@
 * **সংবাদপত্র:** মূল উদ্দেশ্য হলো সাম্প্রতিক খবর, ঘটনা, বিশ্লেষণ ও জনস্বার্থের তথ্য প্রকাশ করা। এটি সাধারণত দৈনিক বা সাপ্তাহিক প্রকাশিত হয়।
 
 :::.row
-:::.col-12 .col-md-9
+:::.col-12 .col-md-6
 **পার্থক্য সংক্ষেপে:**
 
 | বিষয়      | সাময়িকপত্র                                        | সংবাদপত্র                            |
@@ -29,8 +29,8 @@
 | বিষয়বস্তু | সাহিত্য, সংস্কৃতি, বিজ্ঞান, প্রবন্ধ, সংবাদ ইত্যাদি | খবর, সম্পাদকীয়, বিশ্লেষণ, বিজ্ঞপ্তি |
 :::
 
-:::.col-12 .col-md-3
-![img](https://cdn.langeek.co/photo/32437/original/newspaper-vs-magazine?type=png)
+:::.col-12 .col-md-6
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Bangla1/Special%20in%20Bengali%20Literature/resources/newpaper_vs_megazine_bn_diagram.png)
 :::
 :::
 
