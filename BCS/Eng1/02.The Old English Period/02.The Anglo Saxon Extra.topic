@@ -1,10 +1,41 @@
 
-  <sn></sn>
+  <sn><md>### The Anglo-Saxon Age {.text-center}
+
+Origins, Culture, and Literary Foundations
+
+The **Anglo-Saxon Age**, often referred to as the `Old English` period or the `Dark Age`, serves as the `starting point for British literature`. Spanning approximately from ++450 AD to 1066 AD++ (with some scholars noting its beginning as early as `410 AD`), this era laid the foundational structures of the English language, culture, and governance.
+</md></sn>
   <config>
     <tags>#02.the anglo saxon extra</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jul 06 2026 18:07:11 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Jul 06 2026 18:14:22 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-wwUDnVeFIQ</id>
     <duration></duration>
   </config>
+<sn><md>#### Historical Foundations and the Germanic Migration
+
+Before the arrival of the Anglo-Saxons, the land was known as `Britannia` and was inhabited by the `Celts`. Following a `150-year period of Roman rule`, during which the native Celts largely lost their self-defense skills, the Roman Empire withdrew its forces to protect its own borders. This left Britannia vulnerable to invasions from **Germanic tribes**.
+
+`Three` primary tribes migrated and established dominance: the `Angles, Saxons, and Jutes`. A fourth tribe, the `Frisians`, was also involved but did not establish a lasting kingdom. These tribes brought their own languages, customs, and cultures, eventually transforming `Angla-land` to `Englaland` into `England`. During this transition, legendary figures like `King Arthur`, a `Celtic leader`, are believed to have ++fought these invaders around `500 AD` to defend the original inhabitants++.
+
+</md></sn><sn><md>#### The Heptarchy and Regional Centers
+
+The Anglo-Saxons divided England into several *kingdoms*, often called the `Heptarchy`. Key regions included:
+
+:::.row
+:::.col-12 .col-md-6
+*   **Northumbria:** The primary center for **literary activity**.
+*   **Mercia:** The center for **political and commercial activities**.
+*   **Wessex:** The kingdom of the **West Saxons**, whose dialect eventually became the most dominant in surviving literature.
+*   **Kent:** The only kingdom ruled by the **Jutes**.
+:::
+
+:::.col-12 .col-md-6
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Eng1/02.The%20Old%20English%20Period/resources/old-anglo-saxon-map.png)
+:::
+:::
+
+Other notable kingdoms included **East Anglia**, **Essex**, and **Sussex**. A significant historical landmark from this time is ++Offa’s Dyke++, a wall built by King Offa of `Mercia` to separate England from Wales, where the Celts maintained control.
+
+</md></sn>
