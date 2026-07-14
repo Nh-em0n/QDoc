@@ -1,10 +1,25 @@
 
-  <sn></sn>
+  <sn><md>### Space and Universe
+
+:::.row
+:::.col-12 .col-md-6
+**Space:** The limitless sky where our Earth, Sun, Moon, and innumerable stars, planets, and satellites exist. These ++celestial entities++ `move around space on their own axes at certain motions`.
+
+**Extra-Terrestrial Bodies:** `Any celestial body found in the universe`. Examples include the ++Sun, Moon, planets, stars, comets, meteors, nebulae, pulsars, black dwarfs, and black holes++.
+
+**Nature of the Universe:** Some celestial bodies have their own light, while others do not. The ++true size, nature, and form++ of the universe `remain largely unknown`. Some scientists ++believe++ it `has no beginning or ending`, while others believe it `has a definite form and diameter`.
+:::
+
+:::.col-12 .col-md-6
+![img](https://bigthink.com/wp-content/uploads/2021/11/https___blogs-images.forbes.com_startswithabang_files_2019_03_NASA-Dana-Berry.jpg?resize=960,630)
+:::
+:::
+</md></sn>
   <config>
     <tags>#02.space and universe</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jul 14 2026 18:24:36 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Jul 14 2026 20:28:08 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Bz2LYlOJzu</id>
     <duration></duration>
   </config>
