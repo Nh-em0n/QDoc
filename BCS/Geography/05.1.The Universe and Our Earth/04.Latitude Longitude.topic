@@ -1,10 +1,38 @@
 
-  <sn></sn>
+  <sn><md>:::.row
+:::.col-12 .col-md-5
+### What is Latitude?
+
+* **Definition:** Latitude provides horizontal axis by carving the globe into parallel rings.It gives the `↑↓ vertical jump` to reach a point vertically in a map.
+* **Parallels of Latitude:** There are 180° parallels of latitude.Starting from 0 to 90 top(North) and 0 to -90(South).So total 180 vertical jump line.Each line is called parallel.
+* Each parallel forms a complete **circle**.
+* The distance between any two parallels of latitude is **always equal**.But parallels are **not of equal length**.The equator has the maximum length.
+:::
+
+:::.col-12 .col-md-7
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/05.1.The%20Universe%20and%20Our%20Earth/resources/latitude-dgrm1.png)
+:::
+:::
+
+
+:::.row
+:::.col-12 .col-md-6
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/05.1.The%20Universe%20and%20Our%20Earth/resources/latitude-dgrm2.png)
+:::
+
+:::.col-12 .col-md-6
+**Key Reference Points:**
+
+* **The Equator ($0^\circ$):** The most important latitude and the largest circle (known as the *great circle*). It divides the earth into the Northern Hemisphere and the Southern Hemisphere.
+* **The North Pole ($90^\circ\text{ N}$) and South Pole ($90^\circ\text{ S}$):** Fixed points that serve as the basic points of reference.
+:::
+:::
+</md></sn>
   <config>
     <tags>#04.latitude longitude</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jul 14 2026 18:25:04 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jul 15 2026 18:17:16 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-jKJq0EIr3B</id>
     <duration></duration>
   </config>
