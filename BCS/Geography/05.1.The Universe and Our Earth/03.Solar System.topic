@@ -4,7 +4,7 @@
     <tags>#03.solar system</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jul 15 2026 09:47:22 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jul 15 2026 10:34:00 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-cth3IKOXTm</id>
     <duration></duration>
   </config>
@@ -172,4 +172,15 @@
 * **Satellites:** Neptune has `14 satellites`.
 :::
 :::
-</md></sn>
+</md></sn><sn><md>#### Summary Table
+
+| Planet | Features | from Sun | Diameter | Orbital Time | Atmospheric Composition | Total Satellites |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Mercury** | Smallest and nearest; surface resembles Earth's moon; has weak gravity. | 5.8 crore | 4,850 | 88 days | No atmosphere (No air, water, rain, or clouds) | 0 |
+| **Venus** | Brightest and hottest planet; <br>known as the morning/evening star; <br>rotates backwards (East to West). | 10.8 crore | 12,104 | 225 days | Thick dark clouds composed mainly of Carbon Dioxide; experiences acid rain | 0 |
+| **Earth** | Our habitat; the only planet in the solar system where life exists. | 15 crore | Nearly 12,667 | 365 days, 5 hours, 48 minutes, and 47 seconds | Balanced, proper amounts of Oxygen, Nitrogen, and Carbon Dioxide | 1 (The Moon) |
+| **Mars** | Nearest planetary neighbor to Earth; length of day and night is equal to Earth's; has scarce water. | 22.8 crore | 6,787 | 687 days | Very high amounts of Carbon Dioxide | 2 (Phobos and Deimos) |
+| **Jupiter** | Largest planet(1,300 times larger than Earth). | 77.8 crore  | 1,42,984 | 4,331 days | Hydrogen and Helium | 97 |
+| **Saturn** | Second largest planet; famously features the brightest ring system. | 143 crore | 1,20,000 | 29.5 years | Mixture of Hydrogen, Helium, Methane, and Ammonia | 82 |
+| **Uranus** | Third largest planet; possesses faint, less bright rings. | 287 crore | 49,000 | 84 years | Extremely high concentration of Methane | 27 |
+| **Neptune** | Most distant planet; total area is as large as 72 Earths; receives minimal heat and light. | About 450 crore | 48,400 | 165 years | Methane and Ammonia | 14 |</md></sn>
