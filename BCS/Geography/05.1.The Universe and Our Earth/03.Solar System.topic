@@ -4,7 +4,7 @@
     <tags>#03.solar system</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jul 15 2026 09:42:36 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jul 15 2026 09:47:22 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-cth3IKOXTm</id>
     <duration></duration>
   </config>
@@ -141,4 +141,35 @@
 * **Satellites:** Saturn has `82 satellites`.
 :::
 :::
-</md></sn><sn></sn>
+</md></sn><sn><md>:::.row
+:::.col-12 .col-md-6
+#### Uranus
+
+* **Size:** The `third largest planet` in the solar system.
+* **Distance &amp; Diameter:** It lies `287 crore` kilometers ($2,870,000,000\text{ km}$) away from the Sun and has a diameter of `49,000` kilometers.
+* **Orbit:** Takes `84 Earth years` to orbit the Sun once.
+* **Atmosphere &amp; Features:** `Methane gas` concentrations are extremely high in its atmosphere. It features a `ring system`, though they are faint and not bright like Saturn's.
+* **Satellites:** Uranus has `27 satellites`.
+:::
+
+:::.col-12 .col-md-6
+![img](https://www.titech.ac.jp/english/news/img/news_25131_2.jpg)
+:::
+:::
+
+
+
+:::.row
+:::.col-12 .col-md-6
+![img](https://i.pinimg.com/736x/44/82/93/44829357bbb19e25afab48b0ce755917.jpg)
+:::
+
+:::.col-12 .col-md-6
+#### Neptune
+
+* **Distance &amp; Diameter:** The `most distant planet`, sitting roughly `450 crore kilometers` ($4,500,000,000\text{ km}$) away from the Sun. Its diameter measures `48,400` kilometers.
+* **Orbit &amp; Environment:** Because it is so far away, light and heat from the sun are minimal. Its ++total surface area++ is as large as `72 Earths combined`, and its ++atmosphere++ is composed of `methane and ammonia`. It takes `165 Earth years` to circumnavigate the sun once.
+* **Satellites:** Neptune has `14 satellites`.
+:::
+:::
+</md></sn>
