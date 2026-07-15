@@ -4,7 +4,7 @@
     <tags>#03.solar system</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jul 15 2026 10:34:00 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jul 15 2026 10:42:09 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-cth3IKOXTm</id>
     <duration></duration>
   </config>
@@ -183,4 +183,35 @@
 | **Jupiter** | Largest planet(1,300 times larger than Earth). | 77.8 crore  | 1,42,984 | 4,331 days | Hydrogen and Helium | 97 |
 | **Saturn** | Second largest planet; famously features the brightest ring system. | 143 crore | 1,20,000 | 29.5 years | Mixture of Hydrogen, Helium, Methane, and Ammonia | 82 |
 | **Uranus** | Third largest planet; possesses faint, less bright rings. | 287 crore | 49,000 | 84 years | Extremely high concentration of Methane | 27 |
-| **Neptune** | Most distant planet; total area is as large as 72 Earths; receives minimal heat and light. | About 450 crore | 48,400 | 165 years | Methane and Ammonia | 14 |</md></sn>
+| **Neptune** | Most distant planet; total area is as large as 72 Earths; receives minimal heat and light. | About 450 crore | 48,400 | 165 years | Methane and Ammonia | 14 |</md></sn><sn><md>### Size and Shape of the Earth
+
+The exact true shape and physical dimensions of the Earth were heavily debated throughout history. Absolute visual proof arrived on `April 12, 1961`, when `Russian astronaut Yuri Gagarin` orbited the planet. His observations and photographs confirmed the real shape of the Earth.
+
+:::.row
+:::.col-12 .col-md-8
+* **True Shape:** The Earth is an `oblate spheroid` —meaning it is `fundamentally round`, but ++slightly flattened++ at the `North and South` poles, with a slight ++bulge++ along the `East-West equator`.
+* **Dimensional Discrepancy:** Because it is not a perfect sphere, its `dimensions differ by region`:
+* **Actual Equatorial (East-West) Diameter:** 12,714 km *(Note: Text states 12,714 km for equatorial and 12,751 km for polar)*.
+* **Actual Polar (North-South) Diameter:** 12,751 km.
+:::
+
+:::.col-12 .col-md-4
+![img](https://geo.libretexts.org/@api/deki/files/18143/oblate_spheriod.jpg?revision=1)
+![img](https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2010/04/earth_explorers_the_earth_s_true_shape/10167709-2-eng-GB/Earth_Explorers_The_Earth_s_true_shape_pillars.jpg)
+:::
+:::
+
+
+:::.row
+:::.col-12 .col-md-6
+![img](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS41EpWBUA8vmAhyajhrqca8s37_1PMjBFbOubBGHaL_6t2vBANMdctoQZJ&amp;s=10)
+:::
+
+:::.col-12 .col-md-6
+* **Standardized Rounding Measurements:** For the sake of simplified calculations and geographic benefit, scientists utilize standardized rounded figures:
+* **Standard Calculation Diameter:** $12,800\text{ km}$.
+* **Standard Average Radius:** $6,400\text{ km}$.
+* **Actual Equatorial Circumference:** $40,009\text{ km}$ (rounded down to $40,000\text{ km}$ for convenience).
+:::
+:::
+</md></sn>
