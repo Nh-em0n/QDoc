@@ -4,7 +4,7 @@
     <tags>#03.solar system</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jul 15 2026 09:34:25 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jul 15 2026 09:38:55 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-cth3IKOXTm</id>
     <duration></duration>
   </config>
@@ -79,4 +79,35 @@
 * **Satellites:** Venus has `no satellites`.
 :::
 :::
-</md></sn><sn></sn>
+</md></sn><sn><md>:::.row
+:::.col-12 .col-md-6
+#### Earth
+
+* **Position &amp; Significance:** Earth is our habitat and the `third nearest planet` to the sun. It is unique as the only planet in the solar system `where life exists`.
+* **Distance &amp; Diameter:** Its average distance from the sun is `15 crore` kilometers ($150,000,000\text{ km}$), and its diameter is nearly `12,667` kilometers.
+* **Orbit:** Takes `365 days, 5 hours, 48 minutes, and 47 seconds` to complete its orbit around the Sun.
+* **Atmosphere:** Contains a perfectly `balanced amount` of oxygen, nitrogen, and carbon dioxide required for plants and animals to survive.
+* **Satellites:** Has exactly one `natural satellite: the Moon`.
+:::
+
+:::.col-12 .col-md-6
+![img](https://psu-gatsby-files-prod.s3.amazonaws.com/s3fs-public/styles/4_3_1500w/public/2023/11/psu-news-230269-moon1.jpg?h=652e55f1&amp;itok=d27AdNs9)
+:::
+:::
+
+:::.row
+:::.col-12 .col-md-6
+![img](https://wl-brightside.cf.tsp.li/resize/728x/png/04b/d94/0c553a570aa43be132a1e3c428.png)
+:::
+
+:::.col-12 .col-md-6
+#### Mars
+
+* **Position:** The nearest planetary `neighbour to Earth`.
+* **Distance &amp; Diameter:** Lies at an average distance of `22.8` crore kilometers ($228,000,000\text{ km}$) from the Sun, with a diameter of `6,787` kilometers.
+* **Orbit &amp; Day:** Takes `687 days` to orbit the Sun, though its `length of day and night is nearly equal to Earth's`.
+* **Environment:** ++Life cannot survive++ here due to a severe `scarcity of water` and a very `high level of carbon dioxide` in the air.
+* **Satellites:** Has two satellites: `Phobos and Deimos`.
+:::
+:::
+</md></sn>
