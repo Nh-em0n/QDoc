@@ -32,7 +32,7 @@
     <tags>#04.latitude longitude</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jul 15 2026 20:07:11 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jul 15 2026 20:12:18 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-jKJq0EIr3B</id>
     <duration></duration>
   </config>
@@ -70,6 +70,25 @@ To understand how latitude is calculated geographically, it helps to look at the
 * A location north of the equator is designated as **north latitude**.
 * A location south of the equator is designated as **south latitude**.
 
+:::
+:::
+</md></sn><sn><md>:::.row
+:::.col-12 .col-md-6
+#### Famous Lines of Latitude
+
+Specific parallels are widely recognized due to their geographic significance:
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/05.1.The%20Universe%20and%20Our%20Earth/resources/latitude-dgrm5.png)
+:::
+
+:::.col-12 .col-md-6
+| Parallel Name | Degree Value | Hemisphere |
+| --- | --- | --- |
+| **Equator** | $0^\circ$ | Neutral (Great Circle) |
+| **Tropic of Cancer** | $23.5^\circ\text{ N}$ | Northern Hemisphere |
+| **Tropic of Capricorn** | $23.5^\circ\text{ S}$ | Southern Hemisphere |
+| **Arctic Circle** | $66.5^\circ\text{ N}$ | Northern Hemisphere |
+| **Antarctic Circle** | $66.5^\circ\text{ S}$ | Southern Hemisphere |
 :::
 :::
 </md></sn>
