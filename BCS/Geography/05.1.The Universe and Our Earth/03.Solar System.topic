@@ -4,7 +4,7 @@
     <tags>#03.solar system</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jul 15 2026 09:38:55 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jul 15 2026 09:42:36 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-cth3IKOXTm</id>
     <duration></duration>
   </config>
@@ -110,4 +110,35 @@
 * **Satellites:** Has two satellites: `Phobos and Deimos`.
 :::
 :::
-</md></sn>
+</md></sn><sn><md>:::.row
+:::.col-12 .col-md-6
+#### Jupiter
+
+* **Size:** The `largest planet` in the solar system—so massive that it is `1,300 times larger than Earth`.
+* **Distance &amp; Diameter:** Located `77.8` crore kilometers ($778,000,000\text{ km}$) away from the Sun, boasting a massive diameter of `1,42,984` kilometers.
+* **Orbit:** Takes `4,331` Earth days to complete one single orbit around the Sun.
+* **Atmosphere:** Composed primarily of gases like `hydrogen and helium`.
+* **Satellites:** Jupiter has `97 satellites`.
+:::
+
+:::.col-12 .col-md-6
+![img](https://news.ucr.edu/sites/default/files/2022-07/jupiter_rings_bright.jpg)
+:::
+:::
+
+:::.row
+:::.col-12 .col-md-6
+![img](https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg)
+:::
+
+:::.col-12 .col-md-6
+#### Saturn
+
+* **Size &amp; Features:** The `second largest` planet in the solar system, famously known for `possessing the brightest ring system`.
+* **Distance &amp; Diameter:** Its distance from the Sun is `143 crore` kilometers ($1,430,000,000\text{ km}$), with a diameter of `1,20,000` kilometers.
+* **Orbit:** Takes `29.5` Earth years to orbit the Sun once.
+* **Atmosphere:** Contains a dense mixture of `hydrogen gas, helium gas, methane, and ammonia`.
+* **Satellites:** Saturn has `82 satellites`.
+:::
+:::
+</md></sn><sn></sn>
