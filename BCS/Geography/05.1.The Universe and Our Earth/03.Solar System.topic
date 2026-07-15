@@ -1,10 +1,10 @@
 
   
-  <config>
+  <sn><md>@[embedded solar system](https://eyes.nasa.gov/apps/solar-system/#/home?featured=false&amp;detailPanel=false&amp;logo=false&amp;search=false&amp;shareButton=false&amp;menu=false&amp;collapseSettingsOptions=true)</md></sn><config>
     <tags>#03.solar system</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jul 15 2026 09:08:57 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jul 15 2026 09:34:25 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-cth3IKOXTm</id>
     <duration></duration>
   </config>
@@ -46,4 +46,37 @@
 ![img](https://i.pinimg.com/736x/38/59/68/385968d53de96c17aaced39c74e6c401.jpg)
 
 +++
-</md></sn><sn><md>@[embedded solar system](https://eyes.nasa.gov/apps/solar-system/#/home?featured=false&amp;detailPanel=false&amp;logo=false&amp;search=false&amp;shareButton=false&amp;menu=false&amp;collapseSettingsOptions=true)</md></sn>
+</md></sn><sn><md>:::.row
+:::.col-12 .col-md-8
+### Mercury
+
+* **Position &amp; Size:** The `smallest and nearest` planet to the Sun.
+* **Distance &amp; Diameter:** Average distance from the sun is `5.8` crore kilometers ($58,000,000\text{ km}$); its diameter measures `4,850` kilometers.
+* **Orbit:** Takes `88 days` to complete one trip around the Sun, meaning one year on Mercury equals 88 Earth days.
+* **Surface &amp; Environment:** Because it is so `close to the Sun`, intense light occasionally renders it invisible. Its `gravity is too weak` to retain an atmosphere, meaning there is `no air, water, rain, or clouds—making life` impossible. Photos captured by the American *Mariner-10* spacecraft in 1974 revealed a `cratered surface looking very much like Earth's moon`.
+* **Satellites:** Mercury has `no satellites`.
+:::
+
+:::.col-12 .col-md-4
+![img](https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Mercury_render_with_Blender_01.png/250px-Mercury_render_with_Blender_01.png)
+:::
+:::
+
+
+:::.row
+:::.col-12 .col-md-5
+![img](https://www.astronomy.com/wp-content/uploads/2023/03/venuslakepukaki.jpg)
+![img](https://www.pittwire.pitt.edu/sites/default/files/styles/small_article_image/public/2025-08/artistsvenuslavarendering_small.jpg?h=d8076212&amp;itok=8JL0WwWa)
+:::
+
+:::.col-12 .col-md-7
+### Venus
+
+* **Appearance:** Commonly referred to as the `morning star` or `evening star,` though it is actually a planet that glows brilliantly by reflecting sunlight. It stands as the `brightest and hottest planet` in the entire solar system.
+* **Distance &amp; Diameter:** Located `10.8` crore kilometers ($108,000,000\text{ km}$) from the Sun, with a diameter of `12,104` kilometers.
+* **Orbit &amp; Rotation:** Takes `225 days` to move around the sun (a year of 225 days). Unlike most planets that move from west to east, Venus rotates on its axis backwards from `east to west`.
+* **Atmosphere:** ++Covered++ completely in `thick, dark clouds`, meaning the Sun can never be viewed directly from its surface. The ++cloudy atmosphere++ consists primarily of `carbon dioxide`, which experiences acidic rain. There is `no significant difference in light between day and night`.
+* **Satellites:** Venus has `no satellites`.
+:::
+:::
+</md></sn><sn></sn>
