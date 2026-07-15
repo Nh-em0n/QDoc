@@ -32,7 +32,7 @@
     <tags>#04.latitude longitude</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jul 15 2026 20:01:18 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jul 15 2026 20:07:11 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-jKJq0EIr3B</id>
     <duration></duration>
   </config>
@@ -50,6 +50,26 @@
 **Ans :**
 
 ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/05.1.The%20Universe%20and%20Our%20Earth/resources/ans1.png)
+:::
+:::
+</md></sn><sn><md>### Determining Latitude Geometric Concepts
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/05.1.The%20Universe%20and%20Our%20Earth/resources/latitude-dgrm4.png)
+
+:::.row
+:::.col-12 .col-md-6
+
+To understand how latitude is calculated geographically, it helps to look at the Earth as a sphere:
+
+* The total angular measurement around the centre circle of the Earth is $360^\circ$.
+* These angles are divided systematically into **degrees** ($^\circ$), **minutes** ($'$), and **seconds** ($''$).
+:::
+
+:::.col-12 .col-md-6
+* If a line is drawn from any place on the Earth to its center, that line creates an angle with the **equatorial plane**. The value of that angle equals the latitude of that specific place.
+* A location north of the equator is designated as **north latitude**.
+* A location south of the equator is designated as **south latitude**.
+
 :::
 :::
 </md></sn>
