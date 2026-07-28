@@ -19,7 +19,7 @@
     <tags>#01. paleolithic age</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jul 28 2026 16:34:35 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Jul 28 2026 16:53:36 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-5IWKeLKGo3</id>
     <duration></duration>
   </config>
@@ -118,16 +118,8 @@ After the Neolithic Age came the `Age of Metals`. Metals include `copper, bronze
 | Bronze | 3500 BCE |
 | Iron   | 1500 BCE |
 
-```text id="n3kq8d"
-New Stone Age
-        │
-        ├── Stone tools
-        │
-        └── Age of metals
-               │
-               ├── Copper
-               ├── Bronze
-               └── Iron
+```text
+copper -&gt; bronze -&gt; iron
 ```
 </md></sn><sn><md>#### MCQ Solution
 
