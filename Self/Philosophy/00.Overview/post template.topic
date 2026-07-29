@@ -1,10 +1,20 @@
 
-  <sn></sn>
+  <sn><md>:::.row
+:::.col-12 .col-md-3
+![img](https://i.dailymail.co.uk/1s/2021/08/01/12/46153223-9849167-image-a-44_1627816847845.jpg)
+**Douglas Bader**
+:::
+
+:::.col-12 .col-md-9
+#  " ++Rules++ are for the `obedience of fools` and the `guidance of wise` men. "
+:::
+:::
+</md></sn>
   <config>
     <tags>#post template</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jul 29 2026 23:23:50 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Jul 29 2026 23:36:09 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-3cLnBTuRk9</id>
     <duration></duration>
   </config>
