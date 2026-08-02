@@ -1,10 +1,72 @@
 
-  <sn></sn>
+  <sn><md>August 1 - 7
+
+**self.field.bcs**
+
+| Subject | Contents |
+| -------- | -------- |
+| Bng1    | [পত্রপত্রিকা revise]{.text-secondary} |
+| Bng2    | Baghdhara |
+| Eng2    | Synonyms and Antonyms <br> Idoms and Phrases |
+| Math    | অনুপাত ও সমানুপাত Theory <br> সরল ও যৌগিক মুনাফা(rest) |
+| G.Science    | B.Z.Food and Nutrition |
+| ICT    | Operating System<br>History of Computer |
+| Geography   | G.Basic of Geography <br> G.The Universe and Our Earth |
+
+
+**self.field.programming**
+
+:::.row
+
+:::.col-6 .col-md-3
+**System Programming**
+- C 10 Chapters
+:::
+
+:::.col-6 .col-md-3
+**Web**
+- PHP 5 Chapter and practice
+- Javascript 5 Chapter and make library
+- Markdownit library Stuructured understand and make one plugin by yourself
+:::
+
+:::.col-6 .col-md-3
+**QDoc**
+- complete task from target.md
+:::
+
+:::.col-6 .col-md-3
+**Extras**
+:::
+:::
+
+
+**self.field.religion**
+
+:::.row
+:::.col-6 .col-md-4
+**Surah Memorization**
+- Surah 71 (1-30)
+:::
+
+:::.col-6 .col-md-4
+**Note Law and Fact**
+- Marriage and Divorce
+:::
+
+:::.col-6 .col-md-4
+**Extras**
+:::
+:::
+
+
+**self.Other**
+- Read and Memorize Quotes</md></sn>
   <config>
     <tags>#01.week1</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Jul 27 2026 19:30:48 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Aug 02 2026 09:55:09 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-l5QTSoxJ52</id>
     <duration></duration>
   </config>
