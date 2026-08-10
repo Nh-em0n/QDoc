@@ -17,7 +17,7 @@
     <tags>#03.carbohydrates</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 10 2026 09:10:51 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 10 2026 09:21:07 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-omqttJE7m5</id>
     <duration></duration>
   </config>
@@ -49,4 +49,53 @@
 :::
 :::
 
-</md></sn>
+</md></sn><sn><md>##### Nutritional Value of Carbohydrates
+
+* **Energy &amp; Heat Production:** Carbohydrates play an important role in nutrition by `producing energy and heat` in the body. During respiration, `carbohydrates are oxidized` to supply energy for metabolism.
+* **Energy Reserve:** ++Glycogen++ serves as a `backup energy source` during times of food deficiency or strenuous physical labor.
+* **Digestive Function:** ++Cellulose++ is a `non-digestible`, fibrous carbohydrate that `promotes regular bowel movements and prevents constipation`.
+* **Nutrient Synthesis:** Carbohydrates serve as ++precursor building blocks++ from which `proteins and fats are synthesized`.
+
+
+##### Sugar Intake &amp; Health Impact
+
+* **Optimal Intake:** Consuming an optimum daily amount of sugar prevents sugar deficiency diseases.
+* **Excess Sugar:** ++Excess intake++ leads to the extra sugar being `stored as body fat`, which can result in `obesity and potentially diabetes`.
+
+##### Respiration &amp; Cellular Energy
+
+* **Oxygen Transport:** Inhaled oxygen mixes with blood in the lungs and is carried to cells throughout the body by red blood cells.
+* **Energy Generation:** In the body's cells, `oxygen reacts with glucose` to produce `heat and other forms of energy`, forming the foundation of human metabolic energy.
+
+```
+blood(oxygen) -&gt; cell -&gt; glucose(oxygen) -&gt; heat + energy
+```</md></sn><sn><md>#### Food Calories &amp; Daily Energy Requirements
+
+**Definitions &amp; Units**
+
+* **Calorie:** The `amount of energy` needed to `raise the temperature of 1 gram of water by 1°C`.
+* **Food Calorie (Kilocalorie):** The `amount of heat energy` produced by the `oxidation of 1 gram of food`. One kilocalorie (1kcal) = 1,000 calories.
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/General%20Science/B.Z.Food%20and%20Nutrition/assets/Caloric-values-diagram.png)
+
+
+:::.row
+:::.col-12 .col-md-6
+**Caloric Values of Nutrients**
+
+* **Carbohydrates:** $4\text{ kcal/g}$
+* **Proteins:** $4\text{ kcal/g}$
+* **Fats:** $9\text{ kcal/g}$ *(highest caloric density)*
+
+**CPF** = `4:4:9` 
+:::
+
+:::.col-12 .col-md-6
+**Daily Caloric Requirements**
+
+* **Adult Man:** Approximately $2,500\text{ kcal/day}$
+* **Adult Woman:** Approximately $2,000\text{ kcal/day}$
+:::
+:::
+
+</md></sn><sn></sn>
