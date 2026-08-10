@@ -1,10 +1,24 @@
 
-  <sn></sn>
+  <sn><md>:::.row
+:::.col-12 .col-md-9
+### Carbohydrates {.text-center}
+
+- Carbohydrates serve as a `primary dietary component` for humans, composed chemically of `CHO` carbon, hydrogen, and oxygen. 
+- Their main biological function is `providing heat and energy` to the body. 
+- ++Sugar++, a common carbohydrate, is `sweet, colorless, and odorless`.
+:::
+
+:::.col-12 .col-md-3
+![img](https://i.pinimg.com/736x/bc/d5/41/bcd541a5b125db33d2a6500d5dadccea.jpg)
+:::
+:::
+</md></sn>
   <config>
     <tags>#03.carbohydrates</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Aug 08 2026 07:58:09 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 10 2026 09:03:24 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-omqttJE7m5</id>
     <duration></duration>
   </config>
+<sn></sn>
