@@ -17,8 +17,36 @@
     <tags>#03.carbohydrates</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 10 2026 09:03:24 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 10 2026 09:10:51 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-omqttJE7m5</id>
     <duration></duration>
   </config>
-<sn></sn>
+<sn><md>### Sources of Carbohydrates {.text-center}
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/General%20Science/B.Z.Food%20and%20Nutrition/assets/Source-of-Carbohydrates.png)
+
+:::.row
+:::.col-12 .col-md-6
+##### Plant Sources
+
+* **Starch:** Found abundantly in `cereal grains` like 
+    = rice, wheat, and maize, as well as root crops such as potatoes, sweet potatoes, and arum.
+* **Glucose:** A moderately sweet carbohydrate found `in fruits and vegetables` like  
+     = grapes, apples, carrots, and dates.
+* **Fructose (Fruit Sugar):** Present `in sweet fruits` such as 
+    = mangoes, papayas, bananas, and oranges, as well as natural honey.
+* **Sucrose:** Derived from `sugarcane`, 
+    = table sugar, molasses, and sugar candy.
+* **Cellulose:** A `structural plant component` found in 
+    = wood apples, mangoes, bananas, watermelons, groundnuts, dried fruits, and various vegetables.
+:::
+
+:::.col-12 .col-md-6
+##### Animal Sources
+
+* **Lactose (Milk Sugar):** Found naturally `in milk` produced by cows, goats, and other mammals.
+* **Glycogen:** `Stored form of carbohydrate` found `in animal tissues` such as poultry and bird meat (e.g., chicken, pigeon) and liver.
+:::
+:::
+
+</md></sn>
