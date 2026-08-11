@@ -1,10 +1,34 @@
 
-  <sn></sn>
+  <sn><md>:::.row
+:::.col-12 .col-md-8
+### Proteins {.text-center .fg-red}
+
+##### Chemical Composition &amp; Building Blocks
+
+* **Elemental Structure:** Proteins consist of `CHON-S` carbon, hydrogen, oxygen, and nitrogen, with sulfur occasionally present.
+* **Digestion &amp; Units:** During digestion, proteins break down into `amino acids`, which serve as the ++fundamental structural units++ of protein. The human body contains `20 distinct` types of amino acids.
+:::
+
+:::.col-12 .col-md-4
+![img](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0yv9j-6lBJRW35citNSnlZumPTOrgw_-h-5NmaRXT5uIaaC9ucl45ryi_&amp;s=10)
+:::
+:::
+</md></sn>
   <config>
     <tags>#04.proteins</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Aug 08 2026 07:58:18 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Aug 12 2026 04:12:01 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-1XJU180n5a</id>
     <duration></duration>
   </config>
+<sn><md>#### Classification by Source
+
++++ view
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/General%20Science/B.Z.Food%20and%20Nutrition/assets/protiens_source.png)
++++
+
+* **Animal Proteins:** Sourced from animal products, such as `meat, fish, eggs, milk, and cheese`.
+* **Plant Proteins:** Sourced from botanical origins, including `beans, pulses, seeds, nuts, and peas`.
+
+</md></sn>
