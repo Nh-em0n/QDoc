@@ -1,10 +1,52 @@
 
-  <sn></sn>
+  <sn><md>:::.row
+:::.col-12 .col-md-8
+### Fibre {.text-center}
+
+Fibre (or roughage) is an `essential component` of food obtained `mainly from plants`. It `consists chiefly of cellulose` found in `plant cell walls`. 
+
+Although roughage `passes` through the intestines `undigested` and `provides no direct nutrients` to the body, it plays a critical protective `role against `constipation, heart disease, and diabetes`.
+:::
+
+:::.col-12 .col-md-4
+![img](https://d35oenyzp35321.cloudfront.net/high_fibre_foods_e8192c7232.jpg)
+:::
+:::
+</md></sn>
   <config>
     <tags>#09.fibre</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Aug 08 2026 07:59:07 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Aug 12 2026 15:48:31 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-tkZDCCE0ww</id>
     <duration></duration>
   </config>
+<sn><md>:::.row
+:::.col-12 .col-md-6
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/General%20Science/B.Z.Food%20and%20Nutrition/assets/dietary_sources_of_fibre.png)
+:::
+
+:::.col-12 .col-md-6
+#### Dietary Sources
+
+Roughage is primarily `found in plant`-based foods:
+
+* **Whole Grains &amp; Seeds:** Entire seeds, pulses, and peas.
+* **Produce:** Potatoes, vegetables, and unpeeled fruits.
+* **Other Sources:** Dried fruits, cumin, and coriander.
+:::
+:::
+</md></sn><sn><md>### Importance and Benefits of Roughage
+
++++ view
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/General%20Science/B.Z.Food%20and%20Nutrition/assets/benefits_of_fibre.png)
++++
+
+1. **Aids Digestion:** `Absorbs water` and `adds bulk to stool` to facilitate smooth bowel movements.
+2. **Waste Elimination:** Helps `clear undigested food` materials from the body.
+3. **Weight &amp; Fat Management:** Helps `reduce body fat` and curbs frequent `hunger cravings`.
+4. **Disease Prevention:** Associated with a `reduced risk of gallbladder diseases`, intestinal and colon cancers, hemorrhoids (piles), appendicitis, heart disease, and obesity.
+
+</md></sn><sn><md>#### Recommended Daily Intake
+
+It is recommended to consume `20–30 grams of fiber daily`, best sourced through a ++diet++ rich in `fruits and vegetables`.</md></sn>
