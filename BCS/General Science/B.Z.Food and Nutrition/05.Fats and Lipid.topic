@@ -1,10 +1,57 @@
 
-  <sn></sn>
+  <sn><md>:::.row
+:::.col-12 .col-md-8
+### Fats and Lipids {.text-center .red}
+
+#### Composition and Classification
+
+Fats are **biological molecules** made up of `glycerol and fatty acids`, with dietary sources containing around `20 distinct types of fatty acids`. The specific fatty acid profile determines the overall characteristics of a fat:
+
+* **Solid Fats (Saturated Lipids):** Composed primarily of `saturated fatty acids`, these `remain solid under standard temperature and pressure` conditions (e.g., fats found in ++meat and fish++).
+
+* **Oils (Unsaturated Lipids):** Composed of `unsaturated fatty acids`, these `remain liquid at normal room temperature and pressure` (e.g., ++soybean oil, mustard oil++).
+:::
+
+:::.col-12 .col-md-4
+![img](https://e7.pngegg.com/pngimages/613/610/png-clipart-unsaturated-fat-saturated-and-unsaturated-compounds-fatty-acid-examples-of-saturated-fats-food-oil-thumbnail.png)
+:::
+:::
+</md></sn>
   <config>
     <tags>#05.fats and lipid</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Aug 08 2026 07:58:33 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Aug 12 2026 12:06:01 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-3feaOTdMzf</id>
     <duration></duration>
   </config>
+<sn><md>#### Dietary Sources
+
+Lipids are broadly categorized based on where they originate:
+
++++ view
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/General%20Science/B.Z.Food%20and%20Nutrition/assets/dietary_source_of_lipids.png)
++++
+
+1. **Animal Sources:** Found in fatty `meats, butter, ghee, cheese, and egg yolks`.
+2. **Plant Sources:** Derived from `vegetable oils` (such as mustard, soybean, sesame, linseed, maize, coconut, sunflower`, and palm oil) as well as `nuts` (including cashews, pistachios, and peanuts).
+</md></sn><sn><md>#### Key Functions of Lipids
+
++++ view
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/General%20Science/B.Z.Food%20and%20Nutrition/assets/function_of_lipids.png)
++++
+
+* **Energy Production:** Delivers the `highest amount of heat and energy` per gram compared to other macronutrients.
+* **Growth and Maintenance:** Provides `structural support` essential for physical growth and systemic nutrition.
+* **Energy Storage &amp; Temperature Regulation:** Functions as a `reserve energy source` while preventing thermal heat loss.
+* **Dermatological Health:** Maintains `skin hydration, softness`, and structural integrity, protecting against certain `skin conditions`.
+* **Nutrient Absorption:** Facilitates the dissolution and biological absorption of fat-soluble vitamins (A, D, E, and K).
+</md></sn><sn><md>#### Health Effects of Lipid Imbalance
+
++++ ...
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/General%20Science/B.Z.Food%20and%20Nutrition/assets/lipid_imbalance.png)
++++
+
+* **Deficiency Effects:** ++Short-term++ deficiency leads to `dry, rough skin`. 
+  ++Extended shortage++ forces the body to `break down stored muscle protein`, resulting in `weight loss and muscle wasting`.
+* **Excess Effects:** Overconsumption can `restrict blood circulation` and lead to `obesity`, raising the overall `risk of metabolic and cardiovascular diseases`.</md></sn>
