@@ -22,7 +22,7 @@
     <tags>#04.proteins</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Aug 12 2026 08:56:22 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Aug 12 2026 10:31:05 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-1XJU180n5a</id>
     <duration></duration>
   </config>
@@ -47,28 +47,36 @@
 
 There are **20 standard amino acids** used to `build proteins` in the human body. They can be classified into **essential** (must be obtained from food) and **non-essential** (can generally be synthesized by the body).
 
+**Code**
+- E  : Essential
+- CE : Conditionally Essential
+- NE : Non-Essential
+
 | No. | Amino Acid    | 3-Letter Code | 1-Letter Code | Classification              |
 | --: | ------------- | ------------- | ------------- | --------------------------- |
-|   1 | Alanine       | Ala           | A             | **Non-essential**           |
-|   2 | Arginine      | Arg           | R             | **Conditionally essential** |
-|   3 | Asparagine    | Asn           | N             | **Non-essential**           |
-|   4 | Aspartic acid | Asp           | D             | **Non-essential**           |
-|   5 | Cysteine      | Cys           | C             | **Conditionally essential** |
-|   6 | Glutamic acid | Glu           | E             | **Non-essential**           |
-|   7 | Glutamine     | Gln           | Q             | **Conditionally essential** |
-|   8 | Glycine       | Gly           | G             | **Non-essential**           |
-|   9 | Proline       | Pro           | P             | **Conditionally essential** |
-|  10 | Serine        | Ser           | S             | **Non-essential**           |
-|  11 | Tyrosine      | Tyr           | Y             | **Conditionally essential** |
-|  12 | Histidine     | His           | H             | **Essential**               |
-|  13 | Isoleucine    | Ile           | I             | **Essential**               |
-|  14 | Leucine       | Leu           | L             | **Essential**               |
-|  15 | Lysine        | Lys           | K             | **Essential**               |
-|  16 | Methionine    | Met           | M             | **Essential**               |
-|  17 | Phenylalanine | Phe           | F             | **Essential**               |
-|  18 | Threonine     | Thr           | T             | **Essential**               |
-|  19 | Tryptophan    | Trp           | W             | **Essential**               |
-|  20 | Valine        | Val           | V             | **Essential**               |
+|   1 | Alanine       | Ala           | A             | **NE**           |
+|   2 | Arginine      | Arg           | R             | **CE** |
+|   3 | Asparagine    | Asn           | N             | **NE**           |
+|   4 | Aspartic acid | Asp           | D             | **NE**           |
+|   -  |               |               |               |                  |
+|   5 | Cysteine      | Cys           | C             | **CE** |
+|   6 | Glutamic acid | Glu           | E             | **NE**           |
+|   7 | Glutamine     | Gln           | Q             | **CE** |
+|   8 | Glycine       | Gly           | G             | **NE**           |
+|   -  |               |               |               |                  |
+|   9 | Proline       | Pro           | P             | **CE** |
+|  10 | Serine        | Ser           | S             | **NE**           |
+|  11 | Tyrosine      | Tyr           | Y             | **CE** |
+|  -   |               |               |               |                     |
+|  12 | Histidine     | His           | H             | **E**               |
+|  13 | Isoleucine    | Ile           | I             | **E**               |
+|  14 | Leucine       | Leu           | L             | **E**               |
+|  15 | Lysine        | Lys           | K             | **E**               |
+|  16 | Methionine    | Met           | M             | **E**               |
+|  17 | Phenylalanine | Phe           | F             | **E**               |
+|  18 | Threonine     | Thr           | T             | **E**               |
+|  19 | Tryptophan    | Trp           | W             | **E**               |
+|  20 | Valine        | Val           | V             | **E**               |
 
 **Mnemonic:** `HILL MP TTV`
 → **H**istidine, **I**soleucine, **L**eucine, **L**ysine, **M**ethionine, **P**henylalanine, **T**hreonine, **T**ryptophan, **V**aline.
