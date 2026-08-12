@@ -18,7 +18,7 @@
     <tags>#04.proteins</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Aug 12 2026 04:12:01 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Aug 12 2026 08:18:03 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-1XJU180n5a</id>
     <duration></duration>
   </config>
@@ -31,4 +31,46 @@
 * **Animal Proteins:** Sourced from animal products, such as `meat, fish, eggs, milk, and cheese`.
 * **Plant Proteins:** Sourced from botanical origins, including `beans, pulses, seeds, nuts, and peas`.
 
-</md></sn>
+</md></sn><sn><md>#### Nutritional Comparison:
+
+* ++Animal proteins++ generally offer `higher nutritional value` because they `readily provide` these essential amino acids.
+* Plant sources like `soybeans, pulses, peas, and maize` have higher protein quality relative to other plant foods, which often lack complete essential amino acid profiles.
+</md></sn><sn><md>#### Nutritional Value &amp; Essential Amino Acids
+
+**Essential Amino Acids:** Nine of the 20 or `9/20` amino acids cannot be produced by the human body and `must be acquired through food` (examples include lysine, tryptophan, methionine, valine, leucine, isoleucine, histidine, phenylalanine, and threonine).
+
+**20 Amino Acids in the Human Body**
+
+There are **20 standard amino acids** used to `build proteins` in the human body. They can be classified into **essential** (must be obtained from food) and **non-essential** (can generally be synthesized by the body).
+
+| No. | Amino Acid    | 3-Letter Code | 1-Letter Code | Classification              |
+| --: | ------------- | ------------- | ------------- | --------------------------- |
+|   1 | Alanine       | Ala           | A             | **Non-essential**           |
+|   2 | Arginine      | Arg           | R             | **Conditionally essential** |
+|   3 | Asparagine    | Asn           | N             | **Non-essential**           |
+|   4 | Aspartic acid | Asp           | D             | **Non-essential**           |
+|   5 | Cysteine      | Cys           | C             | **Conditionally essential** |
+|   6 | Glutamic acid | Glu           | E             | **Non-essential**           |
+|   7 | Glutamine     | Gln           | Q             | **Conditionally essential** |
+|   8 | Glycine       | Gly           | G             | **Non-essential**           |
+|   9 | Proline       | Pro           | P             | **Conditionally essential** |
+|  10 | Serine        | Ser           | S             | **Non-essential**           |
+|  11 | Tyrosine      | Tyr           | Y             | **Conditionally essential** |
+|  12 | Histidine     | His           | H             | **Essential**               |
+|  13 | Isoleucine    | Ile           | I             | **Essential**               |
+|  14 | Leucine       | Leu           | L             | **Essential**               |
+|  15 | Lysine        | Lys           | K             | **Essential**               |
+|  16 | Methionine    | Met           | M             | **Essential**               |
+|  17 | Phenylalanine | Phe           | F             | **Essential**               |
+|  18 | Threonine     | Thr           | T             | **Essential**               |
+|  19 | Tryptophan    | Trp           | W             | **Essential**               |
+|  20 | Valine        | Val           | V             | **Essential**               |
+
+**Mnemonic:** `HILL MP TTV`
+→ **H**istidine, **I**soleucine, **L**eucine, **L**ysine, **M**ethionine, **P**henylalanine, **T**hreonine, **T**ryptophan, **V**aline.
+
+**Note:** Arginine, cysteine, glutamine, proline, and tyrosine are often called `conditionally essential` because the body can normally synthesize them, but dietary supply may become important during growth, illness, injury, or other physiological stress.
+</md></sn><sn><md>#### Biological Importance &amp; Function
+
+* **Structural Role:** Essential for `growth and tissue formation`, making up key structures like `muscles, bones, hair, nails, feathers, and horns`.
+* **Cellular Biomass:** Protein accounts for approximately `half of an animal cell's dry weight`.</md></sn>
