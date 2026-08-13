@@ -18,7 +18,7 @@ The easiest way to understand them is:
     <tags>#set up severtal editor or tool for git operation in linux</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 13 2026 09:21:36 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 13 2026 09:28:26 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-hvGXxe6lKH</id>
     <duration></duration>
   </config>
@@ -201,38 +201,90 @@ Think of Git operations like this:
                   ▼
              resolve conflict
 ```
-</md></sn><sn><md>### In your Sublime Merge setup
+</md></sn><sn><md>### Set submile_merge as diff.tool and merge.tool
 
-You can have **all three** configured independently:
+On **Ubuntu**, you can configure Sublime Merge as both Git's **difftool** and **mergetool**.
+
+First check `smerge`
 
 ```bash
-# Visual comparison
+which smerge
+```
+
+If it returns:
+
+```text
+/usr/bin/smerge
+```
+
+you're ready.
+</md></sn><sn><md>#### 1. Configure Sublime Merge as `difftool`
+
+```bash
 git config --global diff.tool sublime
-
-# Conflict resolution
-git config --global merge.tool sublime
-
-# Git text editor
-git config --global core.editor "smerge --wait"
+git config --global difftool.sublime.cmd 'smerge mergetool "$LOCAL" "$REMOTE"'
 ```
 
-So, for your earlier workflow of **checking the differences between `main` and `ui` and selectively bringing files over**, you'll primarily use:
+Test it:
 
 ```bash
-git diff main..ui
+git difftool
 ```
 
-and/or:
+For comparing branches:
 
 ```bash
 git difftool main..ui
 ```
+</md></sn><sn><md>#### 3. Configure Sublime Merge as `mergetool`
 
-You only need:
+```bash
+git config --global merge.tool sublime
+git config --global mergetool.sublime.cmd 'smerge mergetool "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"'
+```
+
+Test during a merge conflict:
 
 ```bash
 git mergetool
 ```
 
-when Git has actually created **merge conflicts**.
+Sublime Merge should open the conflict resolution interface.
+</md></sn><sn><md>#### Verify both
+
+```bash
+git config --global --list | grep -E 'diff.tool|difftool|merge.tool|mergetool'
+```
+
+You should see something similar to:
+
+```text
+diff.tool=sublime
+difftool.sublime.cmd=smerge mergetool "$LOCAL" "$REMOTE"
+merge.tool=sublime
+mergetool.sublime.cmd=smerge mergetool "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
+```
+</md></sn><sn><md>#### One important note
+
+The two commands have different purposes:
+
+```text
+git difftool
+      ↓
+Compare two versions
+      ↓
+LOCAL vs REMOTE
+```
+
+while:
+
+```text
+git mergetool
+      ↓
+Resolve a conflict
+      ↓
+BASE + LOCAL + REMOTE → MERGED
+```
+
+So **don't use the same command configuration for both**. The `difftool` needs `$LOCAL` and `$REMOTE`, while the `mergetool` also needs `$BASE` and `$MERGED`.
 </md></sn>
