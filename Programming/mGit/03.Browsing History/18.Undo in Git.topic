@@ -14,7 +14,7 @@ The most important rule is:
     <tags>#18.undo in git</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 13 2026 11:12:27 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 13 2026 11:25:39 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-giyUQQ3Cwr</id>
     <duration></duration>
   </config>
@@ -1107,4 +1107,490 @@ A → B → C → D → E → F
 ```
 
 This is usually the correct approach for shared repositories.
-</commit-hash></md></sn>
+</commit-hash></md></sn><sn><md>#### 31. Undo Changes to One File from an Older Commit
+
+Sometimes you don't want to revert an entire commit. You only want a particular file from an older commit.
+
+You can restore a file from a specific commit:
+
+```bash
+git restore --source=<commit> -- path/to/file
+```
+
+Example:
+
+```bash
+git restore --source=abc1234 -- index.php
+```
+
+Now `index.php` contains the version from commit `abc1234`.
+
+Then:
+
+```bash
+git add index.php
+git commit -m "Restore index.php from previous version"
+```
+
+This is extremely useful when combining files from different versions or branches.
+</commit></md></sn><sn><md>#### 32. Restore a File from Another Branch
+
+Suppose you are currently on:
+
+```text
+main
+```
+
+and want the version of:
+
+```text
+config.php
+```
+
+from:
+
+```text
+production
+```
+
+You can use:
+
+```bash
+git restore --source=production -- config.php
+```
+
+Then check:
+
+```bash
+git diff
+```
+
+If it is correct:
+
+```bash
+git add config.php
+git commit -m "Restore production config"
+```
+
+This changes only that file; it does not merge the entire branch.
+</md></sn><sn><md>#### 33. Undo a Branch Merge Before Committing
+
+If Git is performing a merge and conflicts occur:
+
+```bash
+git merge --abort
+```
+
+If the merge has not created a commit yet, this is usually the cleanest way to cancel it.
+</md></sn><sn><md>#### 34. Undo a Completed Merge
+
+If the merge has already been committed:
+
+```text
+A → B → M
+```
+
+where `M` is the merge commit, you generally have two options.
+
+
+:::.row
+:::.col-12 .col-md-6
+**Shared branch**
+
+Use:
+
+```bash
+git revert -m 1 <merge-commit>
+```
+:::
+
+:::.col-12 .col-md-6
+**Private/local branch**
+
+You can potentially reset:
+
+```bash
+git reset --hard HEAD~1
+```
+
+The choice depends on whether the merge commit has already been shared.
+:::
+:::
+</merge-commit></md></sn><sn><md>#### 35. Undo a Rebase
+
+If the rebase is currently running:
+
+```bash
+git rebase --abort
+```
+
+If the rebase has already completed, `git reflog` can often help you find the branch position before the rebase.
+
+For example:
+
+```bash
+git reflog
+```
+
+Find the entry before the rebase and then carefully restore it:
+
+```bash
+git reset --hard <old-commit>
+```
+</old-commit></md></sn><sn><md>#### 36. Undo a Cherry-Pick
+
+If cherry-pick is in progress:
+
+```bash
+git cherry-pick --abort
+```
+
+If it has already created a commit, you can usually undo that commit with:
+
+```bash
+git revert <cherry-picked-commit>
+```
+</cherry-picked-commit></md></sn><sn><md>#### 37. Undo a Tag
+
+If you accidentally created a local tag:
+
+```bash
+git tag v1.0
+```
+
+delete it with:
+
+```bash
+git tag -d v1.0
+```
+
+If the tag was pushed:
+
+```bash
+git push origin --delete v1.0
+```
+
+Be careful with deleting tags that others may already use.
+</md></sn><sn><md>#### 38. Undo a Branch Creation
+
+A local branch can be deleted with:
+
+```bash
+git branch -d branch-name
+```
+
+If Git refuses because the branch contains unmerged commits:
+
+```bash
+git branch -D branch-name
+```
+
+`-D` forcefully deletes the branch reference.
+
+The commits may still be recoverable through reflog for some time.
+
+</md></sn><sn><md>#### 39. Undo a Remote Branch Deletion
+
+If you accidentally delete a remote branch:
+
+```bash
+git push origin --delete feature
+```
+
+you may be able to recreate it if you still know the commit:
+
+```bash
+git push origin <commit>:refs/heads/feature
+```
+
+Or, if a local branch still exists:
+
+```bash
+git push -u origin feature
+```
+</commit></md></sn><sn><md>#### 40. Undo File Changes Safely with Stash
+
+Sometimes you don't actually want to delete your changes.
+
+You just want to temporarily remove them.
+
+Use:
+
+```bash
+git stash
+```
+
+Your working directory becomes clean, while your changes are stored in the stash.
+
+Later:
+
+```bash
+git stash pop
+```
+
+restores them.
+
+You can inspect stashes:
+
+```bash
+git stash list
+```
+
+Example:
+
+```text
+stash@{0}: WIP on main
+stash@{1}: WIP on production
+```
+
+Restore a specific stash:
+
+```bash
+git stash apply stash@{0}
+```
+</md></sn><sn><md>#### 41. Delete a Stash
+
+If you are sure you no longer need a stash:
+
+```bash
+git stash drop stash@{0}
+```
+
+Delete all stashes:
+
+```bash
+git stash clear
+```
+
+Be careful with `git stash clear`, because recovering cleared stashes can be difficult.
+
+</md></sn><sn><md>#### 42. A Complete Git Undo Decision Tree
+
+When you want to undo something, first ask:
+
+```text
+What do I want to undo?
+        │
+        ├── Local file modification?
+        │       └── git restore <file>
+        │
+        ├── Staged file?
+        │       └── git restore --staged <file>
+        │
+        ├── Untracked file?
+        │       └── rm / del / git clean
+        │
+        ├── Last local commit?
+        │       ├── Keep staged → git reset --soft HEAD~1
+        │       ├── Keep unstaged → git reset HEAD~1
+        │       └── Delete changes → git reset --hard HEAD~1
+        │
+        ├── Already-pushed commit?
+        │       └── git revert <commit>
+        │
+        ├── Merge currently running?
+        │       └── git merge --abort
+        │
+        ├── Rebase currently running?
+        │       └── git rebase --abort
+        │
+        ├── Cherry-pick currently running?
+        │       └── git cherry-pick --abort
+        │
+        └── Lost commit?
+                └── git reflog
+```
+</commit></file></file></md></sn><sn><md>#### 43. The Most Important Undo Commands
+
+| Situation                           | Command                     |
+| ----------------------------------- | --------------------------- |
+| Discard file modification           | `git restore file`          |
+| Discard all local modifications     | `git restore .`             |
+| Unstage file                        | `git restore --staged file` |
+| Unstage everything                  | `git restore --staged .`    |
+| Delete untracked files              | `git clean -f`              |
+| Preview untracked deletion          | `git clean -n`              |
+| Undo last commit, keep staged       | `git reset --soft HEAD~1`   |
+| Undo last commit, keep changes      | `git reset HEAD~1`          |
+| Undo last commit and delete changes | `git reset --hard HEAD~1`   |
+| Undo pushed commit safely           | `git revert HEAD`           |
+| Revert specific commit              | `git revert <commit>`       |
+| Cancel merge                        | `git merge --abort`         |
+| Cancel rebase                       | `git rebase --abort`        |
+| Cancel cherry-pick                  | `git cherry-pick --abort`   |
+| Recover lost commits                | `git reflog`                |
+| Temporarily save changes            | `git stash`                 |
+| Restore stash                       | `git stash pop`             |
+| Fix previous commit                 | `git commit --amend`        |
+</commit></md></sn><sn><md>#### 44. `restore`, `reset`, `revert`, and `reflog` Compared
+
+These four commands are often confused.
+
+| Command       | Main purpose                                    |
+| ------------- | ----------------------------------------------- |
+| `git restore` | Restore files                                   |
+| `git reset`   | Move branch/HEAD or change staging state        |
+| `git revert`  | Create a new commit that reverses an old commit |
+| `git reflog`  | Find previous positions of `HEAD`               |
+
+A useful mental model is:
+
+```text
+restore → files
+reset   → branch/history/staging
+revert  → shared history
+reflog  → recovery
+```
+</md></sn><sn><md>#### 45. The Golden Rule of Git Undo
+
+Before using an undo command, determine:
+
+```text
+1. Is the change committed?
+2. Is it staged?
+3. Is it pushed?
+4. Do I want to keep the changes?
+5. Is the branch shared with other people?
+```
+
+Then choose the command.
+
+For example:
+
+- Modified file, not staged
+
+```bash
+git restore file
+```
+
+- Staged file
+
+```bash
+git restore --staged file
+```
+
+- Local commit, not pushed
+
+```bash
+git reset --soft HEAD~1
+```
+
+or:
+
+```bash
+git reset --hard HEAD~1
+```
+
+depending on whether you want to keep the changes.
+
+- Pushed/shared commit
+
+```bash
+git revert <commit>
+```
+
+- Lost commit
+
+```bash
+git reflog
+```
+</commit></md></sn><sn><md>#### 46. Final Practical Example
+
+Suppose your project has:
+
+```text
+main
+production
+```
+
+You make changes to:
+
+```text
+index.php
+config.php
+style.css
+```
+
+Then:
+
+```bash
+git add .
+git commit -m "Update project"
+git push
+```
+
+Later you discover that `config.php` should not have been changed.
+
+If the commit is already pushed, **do not reset the shared branch just to remove that file**.
+
+Instead, restore the correct version of `config.php`:
+
+```bash
+git restore --source=HEAD~1 -- config.php
+```
+
+Then commit the correction:
+
+```bash
+git add config.php
+git commit -m "Restore production config"
+git push
+```
+
+History becomes:
+
+```text
+A → B → C → D
+         │   │
+         │   └── Restore config.php
+         │
+         └── Original update
+```
+
+This is often much safer for a shared `production` branch than rewriting its history.
+
+</md></sn><sn><md>#### 47. Conclusion
+
+Git does not have one universal "undo" command. Different types of changes require different tools.
+
+The essential commands to remember are:
+
+```bash
+git restore
+git restore --staged
+git reset
+git revert
+git reflog
+git stash
+```
+
+The simplest way to remember them is:
+
+```text
+UNCOMMITTED FILE CHANGE
+        ↓
+    git restore
+
+STAGED CHANGE
+        ↓
+git restore --staged
+
+LOCAL COMMIT
+        ↓
+    git reset
+
+SHARED/PUSHED COMMIT
+        ↓
+    git revert
+
+LOST COMMIT / RECOVERY
+        ↓
+    git reflog
+
+TEMPORARILY HIDE CHANGES
+        ↓
+    git stash
+```
+
+Most importantly, **be very careful with `git reset --hard`, `git clean -f`, and force-pushing**. These operations can permanently discard work or rewrite history. For shared branches, prefer creating a new corrective commit with `git revert`.
+</md></sn>
