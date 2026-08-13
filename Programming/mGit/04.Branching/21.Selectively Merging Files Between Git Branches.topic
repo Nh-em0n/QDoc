@@ -14,7 +14,7 @@ Use this workflow when:
     <tags>#21.selectively merging files between git branches</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 13 2026 08:15:45 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 13 2026 08:25:22 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-XdSLEto2HD</id>
     <duration></duration>
   </config>
@@ -346,4 +346,135 @@ git diff
 ```
 git add assets
 git commit -m "Selectively sync assets from ui"
-```</md></sn>
+```</md></sn><sn><md>### Handling Every Possible Situation
+
+
+::: .my-3 .border .p-2
+`Case 1: New Files Exist in UI` {.text-center}
+
+**Example:**
+```
+ui/assets/new.css
+```
+
+**If you don't want it:**
+
+Don't restore the whole folder.
+
+**Instead:**
+```
+git restore --source=ui -- assets/style.css
+```
+
+**Result:**
+`new.css` is ignored.
+:::
+
+
+
+::: .my-3 .border .p-2
+
+`Case 2: Files Deleted in UI` {.text-center}
+
+**Example:**
+```
+main/assets/logo.png
+ui/assets/logo.png   (deleted)
+```
+
+If you restore the entire folder, deletion may be reflected.
+
+**Instead:**
+
+Restore only desired files.
+:::
+
+
+::: .my-3 .border .p-2
+
+
+`Case 3: Both Branches Edited Same File` {.text-center}
+
+**Example:**
+
+`main/style.css` contains:
+```
+color: blue;
+```
+
+`ui/style.css` contains:
+```
+color: green;
+```
+
+**Use:**
+```
+git restore --source=ui --patch assets/style.css
+```
+
+Choose which change to keep.
+:::
+
+
+
+::: .my-3 .border .p-2
+
+`Case 4: Merge Conflict` {.text-center}
+
+Although selective restore usually avoids merge commits, conflicts can still happen if your working tree has uncommitted edits.
+
+Git may show:
+```
+error: Your local changes would be overwritten.
+```
+
+**Fix:**
+
+**Option 1:**
+```
+git stash
+```
+
+**Option 2:**
+```
+git commit
+```
+
+Then retry.
+:::
+
+::: .my-3 .border .p-2
+
+`Case 5: You Restored the Wrong File` {.text-center}
+
+Undo before committing.
+
+```
+git restore assets/style.css
+```
+
+File returns to the current branch version.
+:::
+
+
+::: .my-3 .border .p-2
+
+`Case 6: Already Committed by Mistake` {.text-center}
+
+Undo last commit while keeping changes:
+
+```
+git reset --soft HEAD~1
+```
+
+Undo completely:
+
+```
+git reset --hard HEAD~1
+```
+
+**Use --hard carefully because it discards changes.**
+:::
+
+
+</md></sn>
