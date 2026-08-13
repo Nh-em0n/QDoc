@@ -1,10 +1,238 @@
 
-  <sn></sn>
+  <sn><md>### Understaning
+
+The easiest way to understand them is: 
+- `editor` edits Git messages,
+- `diff` compares, 
+- `difftool` visually compares and
+- `mergetool` resolves conflicts
+
+| Command/tool    | Purpose                              | Opens GUI? | Typical use                                     |
+| --------------- | ------------------------------------ | ---------: | ----------------------------------------------- |
+| **Git editor**      | Edit Git-generated text              |    Depends | Write commit/merge/rebase messages              |
+| `git diff`      | Show differences                     |          ❌ | Inspect code changes `only in terminal`                |
+| `git difftool`  | Show differences using a visual tool |          ✅ | Compare files in Sublime Merge                  |
+| `git mergetool` | Resolve merge conflicts              |          ✅ | Decide how conflicting files should be combined |
+</md></sn>
   <config>
     <tags>#set up severtal editor or tool for git operation in linux</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 13 2026 09:08:03 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 13 2026 09:21:36 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-hvGXxe6lKH</id>
     <duration></duration>
   </config>
+<sn><md>### Git editor
+
+This is a completely different concept.
+
+When Git needs you to write text, it launches your configured editor.
+
+For example:
+
+```bash
+git commit
+```
+
+Git may open an editor asking you to enter:
+
+```text
+Merge branch 'ui' into main
+
+# Please enter a commit message...
+```
+
+Similarly:
+
+```bash
+git rebase -i HEAD~5
+```
+
+may open an editor containing:
+
+```text
+pick abc123 first commit
+pick def456 second commit
+pick ghi789 third commit
+```
+
+This is **not file comparison**.
+
+You can configure an editor such as Sublime Text:
+
+```bash
+git config --global core.editor "subl -n -w"
+```
+
+Then:
+
+```bash
+git commit
+```
+
+will open the commit message in Sublime.
+
+</md></sn><sn><md>#### `git diff`
+
+Compares two versions and prints the changes in the terminal.
+
+```bash
+git diff
+```
+
+For example:
+
+```text
+- old code
++ new code
+```
+
+You can compare branches:
+
+```bash
+git diff main..ui
+```
+
+Or specific files:
+
+```bash
+git diff main..ui -- App.js
+```
+
+It **doesn't modify anything**.
+</md></sn><sn><md>### `git difftool`
+
+Does essentially the same comparison as `git diff`, but sends the files to a configured visual diff application.
+
+For example, with Sublime Merge:
+
+```bash
+git difftool main..ui
+```
+
+Instead of seeing:
+
+```text
+- old line
++ new line
+```
+
+you get a visual comparison such as:
+
+```text
+┌──────────────┬──────────────┐
+│     main     │      ui      │
+│              │              │
+│ old code     │ new code     │
+└──────────────┴──────────────┘
+```
+
+**Think:**
+
+&gt; `git diff` = textual comparison
+&gt; `git difftool` = graphical comparison
+</md></sn><sn><md>### `git mergetool`
+
+This is different.
+
+Suppose you have:
+
+```bash
+git merge ui
+```
+
+and Git reports:
+
+```text
+CONFLICT (content): Merge conflict in App.js
+```
+
+Now you have something like:
+
+```text
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+code from main
+=======
+code from ui
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; ui
+```
+
+`git mergetool` opens a tool such as Sublime Merge to help you **resolve the conflict**.
+
+Conceptually:
+
+```text
+             MERGE CONFLICT
+
+       main              ui
+        │                 │
+        ▼                 ▼
+   ┌─────────┐       ┌─────────┐
+   │ version │       │ version │
+   └────┬────┘       └────┬────┘
+        │                 │
+        └────────┬────────┘
+                 ▼
+          ┌─────────────┐
+          │   MERGED    │
+          │   VERSION   │
+          └─────────────┘
+```
+
+Unlike `git difftool`, **mergetool is intended to produce the final merged file**.
+</md></sn><sn><md>### The important distinction
+
+Think of Git operations like this:
+
+```text
+                 GIT
+                  │
+       ┌──────────┼──────────┐
+       │          │          │
+       ▼          ▼          ▼
+    COMPARE     MERGE      WRITE TEXT
+       │          │          │
+       ▼          ▼          ▼
+   git diff   git mergetool  editor
+       │          │          │
+       ▼          ▼          ▼
+   terminal    Sublime      Sublime
+                  │
+                  ▼
+             resolve conflict
+```
+</md></sn><sn><md>### In your Sublime Merge setup
+
+You can have **all three** configured independently:
+
+```bash
+# Visual comparison
+git config --global diff.tool sublime
+
+# Conflict resolution
+git config --global merge.tool sublime
+
+# Git text editor
+git config --global core.editor "smerge --wait"
+```
+
+So, for your earlier workflow of **checking the differences between `main` and `ui` and selectively bringing files over**, you'll primarily use:
+
+```bash
+git diff main..ui
+```
+
+and/or:
+
+```bash
+git difftool main..ui
+```
+
+You only need:
+
+```bash
+git mergetool
+```
+
+when Git has actually created **merge conflicts**.
+</md></sn>
