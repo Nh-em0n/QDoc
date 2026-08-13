@@ -14,7 +14,7 @@ Use this workflow when:
     <tags>#21.selectively merging files between git branches</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 13 2026 08:12:57 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 13 2026 08:15:45 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-XdSLEto2HD</id>
     <duration></duration>
   </config>
@@ -71,8 +71,10 @@ components/      ← not copied
 
 #### Step 1
 
+::: .text-center
 `Check Your Current Branch`
 Always confirm where you are before making changes.
+:::
 
 ```
 git branch --show-current
@@ -104,8 +106,10 @@ git switch main
 ```
 </md></sn><sn><md>#### Step 2: 
 
-**Check Repository Status**
+::: .text-center
+`Check Repository Status`
 Make sure there are no uncommitted changes.
+:::
 
 ```
 git status
@@ -140,8 +144,10 @@ git stash
 
 </md></sn><sn><md>#### Step 3: 
 
-**Verify Available Branches**
+::: .text-center
+`Verify Available Branches`
 List all branches.
+:::
 
 ```
 git branch
@@ -160,7 +166,7 @@ git branch -a
 </md></sn><sn><md>#### Step 4: 
 
 :::.text-center
-**Compare Branch Differences**
+`Compare Branch Differences`
 Before copying anything, inspect what actually changed.
 :::
 
@@ -211,7 +217,7 @@ Git displays line-by-line differences.
 
 </md></sn><sn><md>#### Step 5: 
 
-**Understand What Can Happen** {.text-center}
+`Understand What Can Happen` {.text-center}
 
 **Suppose:**
 
@@ -240,7 +246,7 @@ assets/
 | Same file edited differently | May cause conflict |
 </md></sn><sn><md>#### Step 6: 
 
-**Choose Your Merge Strategy** {.text-center}
+`Choose Your Merge Strategy` {.text-center}
 
 
 :::.p-2 .border .bg-teal
@@ -314,7 +320,7 @@ This gives maximum control.
 </md></sn><sn><md>#### Step 7: 
 
 :::.text-center
-**Review Before Committing**
+`Review Before Committing`
 Always inspect changes.
 :::
 
@@ -335,7 +341,7 @@ git diff
 ```
 </md></sn><sn><md>#### Step 8: 
 
-Commit Selected Changes {.text-center}
+`Commit Selected Changes` {.text-center}
 
 ```
 git add assets
