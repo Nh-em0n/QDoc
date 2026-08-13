@@ -14,7 +14,7 @@ The most important rule is:
     <tags>#18.undo in git</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 13 2026 10:34:10 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 13 2026 10:56:28 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-giyUQQ3Cwr</id>
     <duration></duration>
   </config>
@@ -282,4 +282,510 @@ git restore --source=HEAD --staged --worktree index.php
 ```
 
 This returns the file completely to its latest committed state.
-</md></sn>
+</md></sn><sn><md>#### 8. Undo an Untracked File
+
+Suppose you created:
+
+```text
+test.php
+```
+
+but never ran `git add`.
+
+`git status` shows:
+
+```text
+Untracked files:
+    test.php
+```
+
+Git does not track this file yet.
+
+You can delete it normally:
+
+```bash
+rm test.php
+```
+
+On Windows CMD:
+
+```cmd
+del test.php
+```
+
+If you want Git to remove untracked files:
+
+```bash
+git clean
+```
+
+First preview what would be deleted:
+
+```bash
+git clean -n
+```
+
+Then actually delete:
+
+```bash
+git clean -f
+```
+
+For untracked directories too:
+
+```bash
+git clean -fd
+```
+
+**Very important**
+
+`git clean` can permanently delete untracked files.
+
+Always use:
+
+```bash
+git clean -n
+```
+
+first.
+</md></sn><sn><md>#### 9. Undo the Last Commit but Keep the Changes
+
+Suppose you made:
+
+```bash
+git add .
+git commit -m "Update UI"
+```
+
+Then realize:
+
+&gt; I committed too early. I want to modify the files more.
+
+Use:
+
+```bash
+git reset --soft HEAD~1
+```
+
+The commit disappears, but the changes remain **staged**.
+
+```text
+Before:
+
+Working Directory
+       ↓
+Staging Area
+       ↓
+Commit A
+```
+
+After:
+
+```text
+Working Directory
+       ↓
+Staging Area
+       ↓
+HEAD
+```
+
+The changes are still staged.
+</md></sn><sn><md>#### 10. Undo the Last Commit and Unstage the Changes
+
+Use:
+
+```bash
+git reset --mixed HEAD~1
+```
+
+or simply:
+
+```bash
+git reset HEAD~1
+```
+
+This removes the last commit while keeping the file modifications in the working directory.
+
+Afterwards:
+
+```bash
+git status
+```
+
+will show:
+
+```text
+Changes not staged for commit:
+    modified: index.php
+```
+
+So:
+
+```text
+Commit removed
+      ↓
+Changes kept
+      ↓
+Changes unstaged
+```
+
+This is one of the most useful ways to undo a local commit.
+
+</md></sn><sn><md>#### 11. Undo the Last Commit and Delete the Changes
+
+If you want to completely destroy the last commit **and its changes**:
+
+```bash
+git reset --hard HEAD~1
+```
+
+This moves `HEAD` backward and makes the working directory match that commit.
+
+```text
+Before:
+
+A → B → C
+        ↑
+       HEAD
+
+After:
+
+A → B
+    ↑
+   HEAD
+```
+
+Commit `C` is removed from the current branch.
+
+&gt; **Warning**
+&gt; `--hard` can destroy uncommitted work.
+
+Never use it casually.
+</md></sn><sn><md>#### 12. Understanding `HEAD~1`
+
+You will frequently see:
+
+```bash
+HEAD~1
+```
+
+It means:
+
+&gt; The parent of the current commit.
+
+For example:
+
+```text
+A → B → C
+        ↑
+       HEAD
+```
+
+Then:
+
+```text
+HEAD      = C
+HEAD~1    = B
+HEAD~2    = A
+```
+
+Therefore:
+
+```bash
+git reset --soft HEAD~1
+```
+
+means:
+
+&gt; Move the current branch one commit backward.
+</md></sn><sn><md>#### 13. Undo Multiple Local Commits
+
+Suppose history is:
+
+```text
+A → B → C → D → E
+              ↑
+             HEAD
+```
+
+To remove the last three commits:
+
+```bash
+git reset --hard HEAD~3
+```
+
+Result:
+
+```text
+A → B
+    ↑
+   HEAD
+```
+
+Again, this rewrites local history.
+</md></sn><sn><md>#### 14. Undo a Commit but Keep Its Changes
+
+There are three important reset modes:
+
+| Command                    | Commit removed? | Changes kept? | Changes staged? |
+| -------------------------- | --------------: | ------------: | --------------: |
+| `git reset --soft HEAD~1`  |             Yes |           Yes |             Yes |
+| `git reset --mixed HEAD~1` |             Yes |           Yes |              No |
+| `git reset --hard HEAD~1`  |             Yes |            No |              No |
+
+This is one of the most important Git concepts.
+
+**Soft**
+
+```bash
+git reset --soft HEAD~1
+```
+
+**Undo commit, keep changes staged.**
+
+**Mixed**
+
+```bash
+git reset --mixed HEAD~1
+```
+
+**Undo commit, keep changes unstaged.**
+
+**Hard**
+
+```bash
+git reset --hard HEAD~1
+```
+
+**Undo commit and discard changes.**
+
+</md></sn><sn><md>#### 15. Fix the Last Commit Instead of Undoing It
+
+Sometimes you don't actually need to undo the commit.
+
+Suppose you forgot to include:
+
+```text
+style.css
+```
+
+in the last commit.
+
+Stage it:
+
+```bash
+git add style.css
+```
+
+Then modify the previous commit:
+
+```bash
+git commit --amend
+```
+
+Or:
+
+```bash
+git commit --amend --no-edit
+```
+
+`--no-edit` keeps the existing commit message.
+
+So:
+
+```bash
+git add style.css
+git commit --amend --no-edit
+```
+
+turns:
+
+```text
+Commit A
+```
+
+into an updated:
+
+```text
+Commit A'
+```
+</md></sn><sn><md>#### 16. Undo a Commit That Has Already Been Pushed
+
+This is where things become more important.
+
+Suppose:
+
+```text
+Local:
+A → B → C
+
+Remote:
+A → B → C
+```
+
+You want to undo commit `C`.
+
+If the commit has already been shared with others, the safest approach is usually:
+
+```bash
+git revert C
+```
+
+Git creates a new commit that reverses the changes introduced by `C`.
+
+Result:
+
+```text
+A → B → C → D
+             ↑
+        revert C
+```
+
+Commit `D` effectively undoes `C`.
+
+</md></sn><sn><md>#### 17. `git revert` vs `git reset`
+
+This distinction is extremely important.
+
+| Situation                         | Recommended  |
+| --------------------------------- | ------------ |
+| Undo local commit                 | `git reset`  |
+| Rewrite local history             | `git reset`  |
+| Undo already-pushed/shared commit | `git revert` |
+| Keep commit history unchanged     | `git revert` |
+
+:::.row
+:::.col-12 .col-md-6
+**Reset**
+
+```bash
+git reset --hard HEAD~1
+```
+
+moves the branch backward.
+:::
+
+:::.col-12 .col-md-6
+**Revert**
+
+```bash
+git revert HEAD
+```
+
+creates a new commit that reverses the previous commit.
+
+For shared branches such as:
+
+```text
+main
+production
+```
+
+`git revert` is generally safer than rewriting history.
+:::
+:::
+</md></sn><sn><md>#### 18. Revert a Specific Older Commit
+
+Suppose:
+
+```text
+A → B → C → D → E
+```
+
+You discover that `B` introduced a bug.
+
+First find its hash:
+
+```bash
+git log --oneline
+```
+
+Example:
+
+```text
+e5a1234 Update documentation
+d7b4321 Fix login
+c8f1234 Update UI
+b2a5678 Add authentication
+a1c2345 Initial commit
+```
+
+Then:
+
+```bash
+git revert b2a5678
+```
+
+Git creates a new commit reversing the changes introduced by that commit.
+
+The history becomes:
+
+```text
+A → B → C → D → E → F
+                     ↑
+               revert of B
+```
+
+The original commit remains in history.
+</md></sn><sn><md>#### 19. Undo Multiple Commits with Revert
+
+You can revert multiple commits, but be careful about the order and whether the changes depend on each other.
+
+For example:
+
+```bash
+git revert HEAD
+```
+
+undoes the latest commit.
+
+You can also specify a range:
+
+```bash
+git revert OLDER_COMMIT..NEWER_COMMIT
+```
+
+Git will create revert commits for the specified commits.
+
+If conflicts occur, resolve them and continue:
+
+```bash
+git add .
+git revert --continue
+```
+
+To cancel the operation:
+
+```bash
+git revert --abort
+```
+</md></sn><sn><md>#### 20. Undo a Merge Commit
+
+Merge commits require special handling.
+
+Suppose:
+
+```text
+A → B → C
+     \     \
+      D → E → M
+```
+
+`M` is a merge commit.
+
+To revert it:
+
+```bash
+git revert -m 1 <merge-commit>
+```
+
+The `-m 1` tells Git which parent should be treated as the mainline.
+
+For example:
+
+```bash
+git revert -m 1 abc1234
+```
+
+This is particularly useful when a branch was merged into `main` and you want to undo the merge without rewriting shared history.
+</merge-commit></md></sn><sn></sn>
