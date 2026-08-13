@@ -14,7 +14,7 @@ The most important rule is:
     <tags>#18.undo in git</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 13 2026 11:25:39 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 13 2026 16:59:19 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-giyUQQ3Cwr</id>
     <duration></duration>
   </config>
@@ -53,7 +53,10 @@ file.php
 ```
 
 Each state requires a different undo technique.
-</md></sn><sn><md>#### 2. Check What You Need to Undo
+
++++ view
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/assets/file_states_in_gits.png)
++++</md></sn><sn><md>#### 2. Check What You Need to Undo
 
 Always start with:
 
@@ -390,7 +393,10 @@ HEAD
 ```
 
 The changes are still staged.
-</md></sn><sn><md>#### 10. Undo the Last Commit and Unstage the Changes
+
++++ view
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/assets/Undo_the_last_commit_but_keep_the_changes.png)
++++</md></sn><sn><md>#### 10. Undo the Last Commit and Unstage the Changes
 
 Use:
 
@@ -431,7 +437,9 @@ Changes unstaged
 
 This is one of the most useful ways to undo a local commit.
 
-</md></sn><sn><md>#### 11. Undo the Last Commit and Delete the Changes
++++ view
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/assets/undo_commit_and%20_unstage.png)
++++</md></sn><sn><md>#### 11. Undo the Last Commit and Delete the Changes
 
 If you want to completely destroy the last commit **and its changes**:
 
