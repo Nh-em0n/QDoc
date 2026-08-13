@@ -1,10 +1,343 @@
 
-  <sn></sn>
+  <sn><md>### Selectively Merging Files Between Git Branches
+
+When Should You Use This Method?
+
+Use this workflow when:
+
+* You want to copy only specific files or folders from another branch.
+* You don't want new directories from the source branch.
+* You don't want unrelated commits merged.
+* You want complete control over every imported change.
+</md></sn>
   <config>
     <tags>#21.selectively merging files between git branches</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 13 2026 07:42:07 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 13 2026 08:12:57 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-XdSLEto2HD</id>
     <duration></duration>
   </config>
+<sn><md>### Example {.text-center}
+
+#### Initial State
+
+:::.row
+:::.col-12 .col-md-6
+**`main` Branch**
+
+```text
+App/
+assets/
+auth/
+layout/
+temp/
+
+```
+:::
+
+:::.col-12 .col-md-6
+**`ui` Branch**
+
+```text
+assets/
+components/
+
+```
+:::
+:::
+
+#### Goal
+
+```text
+main/
+├── App/
+├── assets/      ← updated
+├── auth/
+├── layout/
+└── temp/
+
+components/      ← not copied
+
+```
+</md></sn><sn><md>#### Understanding the Difference
+
+| Action | Result |
+| --- | --- |
+| `git merge ui` | Merges every change from ui |
+| `git restore --source=ui` | Copies selected files only |
+| `git checkout ui -- file` | Copies selected files (older syntax) |
+| `git restore --patch` | Lets you choose individual changes |</md></sn><sn><md>## Git Branch Sync Guide {.text-center}
+
+#### Step 1
+
+`Check Your Current Branch`
+Always confirm where you are before making changes.
+
+```
+git branch --show-current
+```
+
+**Example:**
+```
+main
+```
+
+**Or:**
+```
+git status
+```
+
+**Output:**
+```
+On branch main
+```
+
+**If you're on the wrong branch:**
+```
+git checkout main
+```
+or 
+
+```
+git switch main
+```
+</md></sn><sn><md>#### Step 2: 
+
+**Check Repository Status**
+Make sure there are no uncommitted changes.
+
+```
+git status
+```
+
+:::.row
+:::.col-12 .col-md-6
+**Clean repository:**
+```
+nothing to commit, working tree clean
+```
+:::
+
+:::.col-12 .col-md-6
+**If you see modified files:**
+```
+modified: assets/style.css
+```
+
+**Either commit them:**
+```
+git add .
+git commit -m "Save current work"
+```
+
+**Or stash them:**
+```
+git stash
+```
+:::
+:::
+
+</md></sn><sn><md>#### Step 3: 
+
+**Verify Available Branches**
+List all branches.
+
+```
+git branch
+```
+
+**Example:**
+```
+* main
+  ui
+```
+
+**To see remote branches too:**
+```
+git branch -a
+```
+</md></sn><sn><md>#### Step 4: 
+
+:::.text-center
+**Compare Branch Differences**
+Before copying anything, inspect what actually changed.
+:::
+
+**File-level changes**
+```
+git diff --name-status main...ui
+```
+
+**Example:**
+```
+M assets/css/style.css
+M assets/js/app.js
+A assets/new.css
+A components/navbar.php
+D assets/old.png
+```
+
++++ **Meaning:**
+
+| Symbol | Meaning |
+|--------|---------|
+| M | Modified |
+| A | Added |
+| D | Deleted |
+| R | Renamed |
+
++++
+
+
+**Compare only one folder**
+```
+git diff --name-status main...ui -- assets/
+```
+
+**Example:**
+```
+M assets/css/style.css
+M assets/js/app.js
+A assets/new.css
+```
+
+**See actual code changes**
+```
+git diff main...ui -- assets/
+```
+
+Git displays line-by-line differences.
+
+</md></sn><sn><md>#### Step 5: 
+
+**Understand What Can Happen** {.text-center}
+
+**Suppose:**
+
+```
+main
+assets/
+    style.css
+    app.js
+    old.png
+
+ui
+assets/
+    style.css
+    app.js
+    new.css
+```
+
+**Possible events:**
+
+| Event | What happens |
+|-------|--------------|
+| File modified | Can be copied |
+| File added | Optional |
+| File deleted | Optional |
+| File renamed | Review carefully |
+| Same file edited differently | May cause conflict |
+</md></sn><sn><md>#### Step 6: 
+
+**Choose Your Merge Strategy** {.text-center}
+
+
+:::.p-2 .border .bg-teal
+**Strategy A — Copy One File**
+
+Safest option.
+
+```
+git restore --source=ui -- assets/css/style.css
+```
+
+Now only that file changes.
+
+**Verify:**
+```
+git diff
+```
+
+**Commit:**
+```
+git add assets/css/style.css
+git commit -m "Sync style.css from ui"
+```
+:::
+
+
+
+::: .p-2 .my-2 .border .bg-pink
+**Strategy B — Copy Multiple Files**
+
+```
+git restore --source=ui -- \
+assets/css/style.css \
+assets/js/app.js
+```
+
+Only those files are updated.
+:::
+
+
+
+
+::: .p-2 .border .bg-orange
+**Strategy C — Interactive Merge (Recommended)**
+
+Best when both branches edited the same file.
+
+```
+git restore --source=ui --patch assets/
+```
+
+Git asks:
+```
+Apply this hunk? [y,n,q,a,d,s,e,?]
+```
+
++++ **Options:**
+
+| Key | Meaning |
+|-----|---------|
+| y | Apply |
+| n | Skip |
+| s | Split into smaller pieces |
+| e | Edit manually |
+| q | Quit |
+
++++
+
+This gives maximum control.
+:::
+</md></sn><sn><md>#### Step 7: 
+
+:::.text-center
+**Review Before Committing**
+Always inspect changes.
+:::
+
+**Status**
+```
+git status
+```
+
+**Example:**
+```
+modified: assets/css/style.css
+modified: assets/js/app.js
+```
+
+**Review changes**
+```
+git diff
+```
+</md></sn><sn><md>#### Step 8: 
+
+Commit Selected Changes {.text-center}
+
+```
+git add assets
+git commit -m "Selectively sync assets from ui"
+```</md></sn>
