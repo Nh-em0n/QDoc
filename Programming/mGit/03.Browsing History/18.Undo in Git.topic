@@ -14,7 +14,7 @@ The most important rule is:
     <tags>#18.undo in git</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 13 2026 10:56:28 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 13 2026 11:12:27 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-giyUQQ3Cwr</id>
     <duration></duration>
   </config>
@@ -788,4 +788,323 @@ git revert -m 1 abc1234
 ```
 
 This is particularly useful when a branch was merged into `main` and you want to undo the merge without rewriting shared history.
-</merge-commit></md></sn><sn></sn>
+</merge-commit></md></sn><sn><md>#### 21. Cancel an In-Progress Merge
+
+Suppose you run:
+
+```bash
+git merge production
+```
+
+and Git reports conflicts.
+
+You decide:
+
+&gt; I don't want this merge anymore.
+
+Use:
+
+```bash
+git merge --abort
+```
+
+Git attempts to return your working tree to the state before the merge started.
+
+Check:
+
+```bash
+git status
+```
+
+afterwards.
+
+</md></sn><sn><md>#### 22. Cancel an In-Progress Rebase
+
+If you started:
+
+```bash
+git rebase main
+```
+
+and encounter problems, cancel it with:
+
+```bash
+git rebase --abort
+```
+
+This attempts to restore the branch to its previous state.
+
+Other useful commands are:
+
+```bash
+git rebase --continue
+```
+
+and:
+
+```bash
+git rebase --skip
+```
+
+</md></sn><sn><md>#### 23. Cancel an In-Progress Cherry-Pick
+
+If you run:
+
+```bash
+git cherry-pick abc1234
+```
+
+and get conflicts, you can cancel it:
+
+```bash
+git cherry-pick --abort
+```
+
+Or after resolving conflicts:
+
+```bash
+git add .
+git cherry-pick --continue
+```
+
+</md></sn><sn><md>#### 24. Undo a `git add`
+
+If you accidentally run:
+
+```bash
+git add .
+```
+
+and want to unstage everything:
+
+```bash
+git restore --staged .
+```
+
+Older Git syntax is:
+
+```bash
+git reset HEAD .
+```
+
+The modern `git restore` command is clearer because it specifically describes restoring the staging state.</md></sn><sn><md>#### 25. Undo a File Deletion
+
+Suppose you deleted:
+
+```text
+index.php
+```
+
+but have not committed the deletion.
+
+Run:
+
+```bash
+git restore index.php
+```
+
+Git restores the file from the latest commit.
+
+If the deletion was staged:
+
+```bash
+git restore --staged index.php
+```
+
+first unstages the deletion.
+
+Then:
+
+```bash
+git restore index.php
+```
+
+restores the file.
+</md></sn><sn><md>#### 26. Recover Something You Accidentally Deleted
+
+Git often keeps old commits accessible even after you move the branch backward.
+
+This is where:
+
+```bash
+git reflog
+```
+
+becomes extremely useful.
+
+Run:
+
+```bash
+git reflog
+```
+
+You may see:
+
+```text
+abc1234 HEAD@{0}: reset: moving to HEAD~1
+def5678 HEAD@{1}: commit: Important work
+```
+
+If you accidentally removed `def5678`, you can recover it.
+
+For example:
+
+```bash
+git reset --hard def5678
+```
+
+or create a branch pointing to it:
+
+```bash
+git branch recovery def5678
+```
+</md></sn><sn><md>#### 27. What Is `git reflog`?
+
+`git log` shows the commit history of a branch.
+
+`git reflog` shows movements of references such as `HEAD`.
+
+For example:
+
+```bash
+git log --oneline
+```
+
+might show:
+
+```text
+C
+B
+A
+```
+
+But after:
+
+```bash
+git reset --hard HEAD~1
+```
+
+commit `C` may no longer appear in the branch's normal history.
+
+However:
+
+```bash
+git reflog
+```
+
+can still show that `HEAD` previously pointed to `C`.
+
+This makes `reflog` one of the most important recovery tools in Git.
+</md></sn><sn><md>#### 28. Undo a Push
+
+There are two fundamentally different situations.
+
+:::.row
+:::.col-12 .col-md-6
+**Situation A**: The commit has been pushed but nobody else depends on it
+
+You could rewrite history:
+
+```bash
+git reset --hard HEAD~1
+git push --force-with-lease
+```
+
+Prefer:
+
+```bash
+git push --force-with-lease
+```
+
+over:
+
+```bash
+git push --force
+```
+
+because `--force-with-lease` provides protection against overwriting remote work you have not seen.
+:::
+
+:::.col-12 .col-md-6
+**Situation B**: Other people already pulled the commit
+
+Do not normally rewrite shared history.
+
+Instead:
+
+```bash
+git revert HEAD
+git push
+```
+
+This preserves the existing history.
+:::
+:::
+
+</md></sn><sn><md>#### 29. Undo a Force Push
+
+A mistaken force push can sometimes be recovered using reflogs and remote-tracking information.
+
+First inspect:
+
+```bash
+git reflog
+```
+
+Then identify the previous commit:
+
+```text
+abc1234
+```
+
+Create a recovery branch:
+
+```bash
+git branch recovery abc1234
+```
+
+Then inspect it before deciding how to restore the remote branch.
+
+This is much safer than immediately running another force push.
+
+
+</md></sn><sn><md>#### 30. Undo Changes from One Specific Commit
+
+Suppose you have:
+
+```text
+A → B → C → D → E
+```
+
+and want to reverse only `C`.
+
+Find its hash:
+
+```bash
+git log --oneline
+```
+
+Then:
+
+```bash
+git revert <commit-hash>
+```
+
+Example:
+
+```bash
+git revert c8f1234
+```
+
+This does **not** remove `C`.
+
+Instead:
+
+```text
+A → B → C → D → E → F
+                     ↑
+                reverses C
+```
+
+This is usually the correct approach for shared repositories.
+</commit-hash></md></sn>
