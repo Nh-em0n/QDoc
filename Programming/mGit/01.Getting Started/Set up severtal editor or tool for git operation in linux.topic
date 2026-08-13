@@ -18,7 +18,7 @@ The easiest way to understand them is:
     <tags>#set up severtal editor or tool for git operation in linux</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 13 2026 09:48:48 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 13 2026 09:59:56 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-hvGXxe6lKH</id>
     <duration></duration>
   </config>
@@ -216,13 +216,17 @@ If it returns:
 ```text
 /usr/bin/smerge
 ```
+or
+```text
+/snap/bin/smerge
+```
 
 you're ready.
 </md></sn><sn><md>#### 1. Configure Sublime Merge as `difftool`
 
 ```bash
-git config --global diff.tool sublime
-git config --global difftool.sublime.cmd 'smerge mergetool "$LOCAL" "$REMOTE"'
+git config --global diff.tool smerge
+git config --global difftool.smerge.cmd 'smerge mergetool "$LOCAL" "$REMOTE"'
 ```
 
 Test it:
