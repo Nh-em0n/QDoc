@@ -21,7 +21,7 @@ Git stops the merge to let you manually resolve the conflict.</md></sn>
 		<tags>#11.merge conflicts</tags>
 		<thumbnail></thumbnail>
 		<heading></heading>
-		<udate>Fri Sep 12 2025 00:03:40 GMT+0600 (Bangladesh Standard Time)</udate>
+		<udate>Thu Aug 13 2026 10:19:33 GMT+0600 (Bangladesh Standard Time)</udate>
 		<id>article-lpizTHKatu</id>
 		<duration></duration>
 	</config>
@@ -322,4 +322,87 @@ $ git log --oneline --all --graph
 * f18edaf bring fil2.md
 ```
 
-+++</file></md></sn>
++++</file></md></sn><sn><md>#### Solving Merging Problem
+
+If your situation is:
+
+```text
+main
+ └── config.php   ← local credentials
+
+production
+ └── config.php   ← hosting credentials
+```
+
+and you want everything from `main` except `config.php`, you have several options.
+
+---
+
+**Recommended: Tell Git to keep production's `config.php`**
+
+First switch to production:
+
+```bash
+git switch production
+```
+
+Then merge:
+
+```bash
+git merge main
+```
+
+If Git reports a conflict in `config.php`, choose the **production version**:
+
+```bash
+git checkout --ours config.php
+git add config.php
+git commit
+```
+
+Here:
+
+* `--ours` = the branch you are currently on → `production`
+* `--theirs` = the branch being merged → `main`
+
+So:
+
+```bash
+git checkout --ours config.php
+```
+
+means:
+
+&gt; "Keep production's `config.php`."
+
+### **With modern Git**
+
+You can use the newer equivalent:
+
+```bash
+git restore --ours config.php
+git add config.php
+git commit
+```
+
+---
+
+**But there is an important problem**
+
+If `config.php` is **different in both branches but Git doesn't consider it a conflict**, Git may automatically choose one version depending on the changes.
+
+If you **always** want production's `config.php` to remain unchanged whenever you merge `main → production`, you can handle it after every merge:
+
+```bash
+git switch production
+git merge main
+
+git restore --ours config.php
+git add config.php
+
+git commit
+```
+
+However, there is an even better architecture.
+
+</md></sn>
