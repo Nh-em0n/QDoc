@@ -14,7 +14,7 @@ Use this workflow when:
     <tags>#21.selectively merging files between git branches</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 13 2026 08:25:22 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 13 2026 08:30:32 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-XdSLEto2HD</id>
     <duration></duration>
   </config>
@@ -477,4 +477,110 @@ git reset --hard HEAD~1
 :::
 
 
-</md></sn>
+</md></sn><sn><md>### Comparing Changes More Effectively
+
+
+**Show changed files**
+```
+git diff --name-only main...ui
+```
+
+**Output:**
+```
+assets/style.css
+assets/app.js
+components/navbar.php
+```
+
+---
+
+**Show summary**
+```
+git diff --stat main...ui
+```
+
+**Example:**
+```
+assets/style.css | 12 +++++---
+assets/app.js    | 30 +++++++++++-----
+components/nav   | 50 +++++++++++++++++
+```
+
+---
+
+**Compare a single file**
+```
+git diff main...ui -- assets/style.css
+```</md></sn><sn><md>### Useful Git Commands
+
+| Purpose | Command |
+|---------|---------|
+| Current branch | `git branch --show-current` |
+| Repository status | `git status` |
+| List branches | `git branch` |
+| Compare branches | `git diff main...ui` |
+| Changed file list | `git diff --name-status main...ui` |
+| Folder comparison | `git diff main...ui -- assets/` |
+| Restore one file | `git restore --source=ui -- file` |
+| Interactive restore | `git restore --source=ui --patch file` |
+| Undo restored file | `git restore file` |
+| Stash changes | `git stash` |
+| Commit changes | `git commit -m "message"` |</md></sn><sn><md>### Complete Workflow Example
+
+**Suppose:**
+
+```
+main
+├── App/
+├── assets/
+├── auth/
+├── layout/
+
+ui
+├── assets/
+├── components/
+```
+
+**Goal:**
+
+Only update assets.
+
+---
+
+**Commands**
+
+```
+git checkout main
+git status
+git diff --name-status main...ui -- assets/
+git diff main...ui -- assets/
+git restore --source=ui --patch assets/
+git status
+git diff
+git add assets
+git commit -m "Selectively sync assets from ui"
+```
+
+---
+
+**Result:**
+
+- assets updated.
+- components never appears.
+- No full branch merge occurs.
+- Only approved changes become part of main.</md></sn><sn><md>### Best Practices
+
+- Always work from the destination branch (main).
+
+- Check git status before and after every operation.
+
+- Review differences with git diff before copying files.
+
+- Prefer git restore --patch when both branches changed the same file.
+
+- Commit only after reviewing the staged changes.
+
+- Avoid git merge if your intention is to synchronize only selected files or folders.
+
+
+This selective workflow keeps branches independent while allowing precise synchronization of specific files or directories, making it ideal for long-lived feature branches such as a dedicated UI branch.</md></sn>
