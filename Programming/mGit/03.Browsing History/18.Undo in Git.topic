@@ -1,10 +1,285 @@
 
-  <sn></sn>
+  <sn><md>### Undo in Git
+
+A Complete Guide to Reversing Changes
+
+Git provides several ways to undo changes. The correct command depends on **where the change currently exists**: in the working directory, staging area, local commits, or the remote repository.
+
+The most important rule is:
+
+&gt; **Before using an undo command, identify whether the change is in the working tree, staging area, local history, or remote history.**
+
+</md></sn>
   <config>
     <tags>#18.undo in git</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 13 2026 10:20:24 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 13 2026 10:34:10 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-giyUQQ3Cwr</id>
     <duration></duration>
   </config>
+<sn><md>#### 1. Understanding the Four States in Git
+
+Before learning undo commands, understand the basic Git workflow:
+
+```text
+Working Directory
+       │
+       │ git add
+       ▼
+Staging Area
+       │
+       │ git commit
+       ▼
+Local Repository
+       │
+       │ git push
+       ▼
+Remote Repository
+```
+
+For example:
+
+```text
+file.php
+   │
+   ├── Modified but unstaged
+   │
+   ├── Staged
+   │
+   ├── Committed locally
+   │
+   └── Pushed to GitHub
+```
+
+Each state requires a different undo technique.
+</md></sn><sn><md>#### 2. Check What You Need to Undo
+
+Always start with:
+
+```bash
+git status
+```
+
+For example:
+
+```text
+On branch main
+
+Changes not staged for commit:
+  modified: index.php
+
+Changes to be committed:
+  modified: config.php
+
+Untracked files:
+  test.php
+```
+
+This tells you exactly where your changes are.
+
+You can also inspect differences:
+
+```bash
+git diff
+```
+
+Shows **unstaged changes**.
+
+```bash
+git diff --staged
+```
+
+Shows **staged changes**.
+</md></sn><sn><md>#### 3. Undo Local Changes in a File
+
+Suppose you modified:
+
+```text
+index.php
+```
+
+but have **not committed** the changes.
+
+Check:
+
+```bash
+git status
+```
+
+If you want to completely discard the changes:
+
+```bash
+git restore index.php
+```
+
+The file returns to the version from the latest commit.
+
+**Example**
+
+Before:
+
+```text
+Hello World
+```
+
+You modify it to:
+
+```text
+Hello Git
+```
+
+Then:
+
+```bash
+git restore index.php
+```
+
+It becomes:
+
+```text
+Hello World
+```
+
+**Important**
+
+This permanently discards the uncommitted changes in that file.
+</md></sn><sn><md>#### 4. Undo All Unstaged Local Changes
+
+If you modified many files and want to discard **all unstaged changes**:
+
+```bash
+git restore .
+```
+
+This restores all tracked files to their committed state.
+
+For example:
+
+```text
+modified: index.php
+modified: style.css
+modified: script.js
+```
+
+Run:
+
+```bash
+git restore .
+```
+
+All three files return to their last committed versions.
+
+**Warning**
+
+This can permanently destroy your uncommitted work.
+</md></sn><sn><md>#### 5. Undo a File That Was Staged
+
+Suppose:
+
+```bash
+git add index.php
+```
+
+Now:
+
+```bash
+git status
+```
+
+shows:
+
+```text
+Changes to be committed:
+    modified: index.php
+```
+
+You want to **remove it from staging**, but keep the modifications.
+
+Use:
+
+```bash
+git restore --staged index.php
+```
+
+Now:
+
+```text
+Staging Area
+     ↓
+removed
+
+Working Directory
+     ↓
+changes remain
+```
+
+So:
+
+```bash
+git restore --staged index.php
+```
+
+does **not** delete your changes.
+
+It only removes the file from the staging area.
+</md></sn><sn><md>#### 6. Unstage All Files
+
+If you staged several files:
+
+```bash
+git add .
+```
+
+and want to unstage everything:
+
+```bash
+git restore --staged .
+```
+
+Your changes remain in the working directory.
+
+For example:
+
+```text
+Before:
+
+Working Directory → modified
+Staging Area       → modified
+```
+
+After:
+
+```bash
+git restore --staged .
+```
+
+you get:
+
+```text
+Working Directory → modified
+Staging Area       → clean
+```
+
+</md></sn><sn><md>#### 7. Unstage and Discard the Changes
+
+If you want to both:
+
+1. remove a file from staging, and
+2. delete its modifications
+
+you can use:
+
+```bash
+git restore --staged index.php
+git restore index.php
+```
+
+Or, depending on your Git version, you can restore both working tree and index from `HEAD`:
+
+```bash
+git restore --source=HEAD --staged --worktree index.php
+```
+
+This returns the file completely to its latest committed state.
+</md></sn>
