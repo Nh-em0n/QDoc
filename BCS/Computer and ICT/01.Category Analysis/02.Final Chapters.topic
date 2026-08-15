@@ -1,10 +1,744 @@
 
-  <sn></sn>
+  <sn><md>## Computer {.text-center}
+
++++ ##### 1. Introduction to Computer
+
+* Definition of computer
+* Characteristics of computer
+* Data and information
+* Data processing
+* Basic functions of a computer
+* Hardware
+* Software
+* Firmware
+* Computer system
+* Advantages and limitations of computers
+
++++
+
++++ ##### 2. History of Computer
+
+* Abacus
+* Napier's Bones
+* Pascaline
+* Leibniz calculator
+* Difference Engine
+* Analytical Engine
+* Hollerith machine
+* Mark I
+* ENIAC
+* EDVAC
+* EDSAC
+* UNIVAC
+* Generations of computers
+* First generation
+* Second generation
+* Third generation
+* Fourth generation
+* Fifth generation
+
++++
+
++++ ##### 3. Types of Computer
+
+* Analog computer
+* Digital computer
+* Hybrid computer
+* Microcomputer
+* Minicomputer
+* Mainframe computer
+* Supercomputer
+* Workstation
+* Personal computer
+* Desktop computer
+* Laptop
+* Tablet
+* Server
+* Embedded computer
+
++++
+
+
++++ ##### 4. Computer Peripherals
+
+* Input devices
+* Keyboard
+* Mouse
+* Trackball
+* Joystick
+* Light pen
+* Touchscreen
+* Scanner
+* OCR
+* OMR
+* MICR
+* Barcode reader
+* QR code reader
+* Webcam
+* Microphone
+* Output devices
+* Monitor
+* Printer
+* Plotter
+* Speaker
+* Projector
+* Input/output devices
+* Touchscreen
+* Storage peripherals
+
++++
+
+
+
++++ ##### 5. Computer Architecture
+
+* CPU
+* ALU
+* Control Unit
+* Registers
+* Memory Unit
+* Input unit
+* Output unit
+* Motherboard
+* Processor
+* Microprocessor
+* Core
+* Bus
+* Data bus
+* Address bus
+* Control bus
+* System clock
+* Clock speed
+* BIOS
+* CMOS
+* Ports
+* USB
+* HDMI
+* VGA
+* Expansion slots
+* Basic CPU operation
+
++++
+
++++ ##### 6. Memory &amp; Storage
+
+* Bit
+* Nibble
+* Byte
+* KB
+* MB
+* GB
+* TB
+* PB
+* RAM
+* SRAM
+* DRAM
+* ROM
+* PROM
+* EPROM
+* EEPROM
+* Cache memory
+* Primary memory
+* Secondary memory
+* Virtual memory
+* Hard disk
+* SSD
+* Optical disk
+* CD
+* DVD
+* Blu-ray
+* Flash drive
+* Memory card
++++
+
++++ ##### 7. Computer Performance
+
+* CPU performance
+* Clock speed
+* MHz
+* GHz
+* Number of cores
+* Cache size
+* RAM capacity
+* RAM speed
+* Processing speed
+* Instruction execution
+* Word length
+* Bus width
+* Benchmark
+* System performance
+* Factors affecting computer speed
++++
+
++++ ##### 8. Number Systems
+
+* Number system
+* Base/radix
+* Decimal number system
+* Binary number system
+* Octal number system
+* Hexadecimal number system
+* Decimal → Binary
+* Binary → Decimal
+* Decimal → Octal
+* Octal → Decimal
+* Decimal → Hexadecimal
+* Hexadecimal → Decimal
+* Binary → Octal
+* Octal → Binary
+* Binary → Hexadecimal
+* Hexadecimal → Binary
+* Binary addition
+* Binary subtraction
+* Binary multiplication
+* Binary division
+* 1's complement
+* 2's complement
+* Signed numbers
+* Unsigned numbers
+* Binary representation of characters
++++
+
+
++++ ##### 9. Operating Systems
+
+* Operating system definition
+* Functions of operating system
+* Types of operating systems
+* Batch OS
+* Time-sharing OS
+* Real-time OS
+* Distributed OS
+* Network OS
+* Multi-user OS
+* Multitasking OS
+* Multiprocessing OS
+* Windows
+* Linux
+* macOS
+* Android
+* iOS
+* File management
+* Memory management
+* Process management
+* Device management
+* User interface
+* GUI
+* CLI
+* Booting
+* System software
++++
+
+
++++ ##### 10. Embedded Computer
+
+* Embedded system
+* Embedded computer
+* Characteristics
+* Microcontroller
+* Microprocessor
+* Real-time operation
+* Dedicated systems
+* Embedded software
+* Sensors
+* Actuators
+* Automotive systems
+* Washing machines
+* Microwave ovens
+* Medical equipment
+* Smart appliances
+* IoT devices
++++
+
+
++++ ##### 11. Computer Software &amp; Programs
+
+* Software
+* System software
+* Application software
+* Utility software
+* Programming software
+* Program
+* Programming language
+* Machine language
+* Assembly language
+* High-level language
+* Compiler
+* Interpreter
+* Assembler
+* Source code
+* Object code
+* Algorithm
+* Flowchart
+* Open-source software
+* Proprietary software
+* Freeware
+* Shareware
++++ 
+
+
++++ ##### 12. Computer Virus &amp; Security
+
+* Computer virus
+* Malware
+* Worm
+* Trojan horse
+* Spyware
+* Adware
+* Ransomware
+* Rootkit
+* Keylogger
+* Antivirus
+* Firewall
+* Password security
+* Authentication
+* Authorization
+* Encryption
+* Backup
+* Data security
+* Computer security
+* Network security
++++
+
++++ ##### 13. Database System
+
+* Data
+* Database
+* DBMS
+* RDBMS
+* Database table
+* Record
+* Field
+* Attribute
+* Primary key
+* Foreign key
+* Candidate key
+* Composite key
+* Relationship
+* Relational database
+* Database models
+* SQL
+* SELECT
+* INSERT
+* UPDATE
+* DELETE
+* Database query
+* Data integrity
+* Database security
+
++++
+</md></sn>
   <config>
     <tags>#02.final chapters</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Aug 15 2026 17:33:55 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Aug 15 2026 17:41:16 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-3MTmP9aBOa</id>
     <duration></duration>
   </config>
+<sn><md>### **B. Information Technology** {.text-center}
+
++++ #### **14. Information Technology Fundamentals**
+
+* Information Technology (IT)
+* Information and Communication Technology (ICT)
+* Data
+* Information
+* Communication
+* Data processing
+* Information processing
+* Data collection
+* Data storage
+* Data transmission
+* Information sharing
+* Digital technology
+* ICT components
+* Applications of ICT
+
++++ 
+
++++ #### **15. E-Commerce**
+
+* E-commerce
+* E-business
+* Online shopping
+* Electronic transactions
+* B2B
+* B2C
+* C2C
+* C2B
+* Online banking
+* Online payment
+* Digital wallet
+* Payment gateway
+* E-ticketing
+* Advantages
+* Disadvantages
+* E-commerce security
++++
+
+
++++ #### **16. Cellular Data Networks**
+
+* Cellular network
+* Mobile communication
+* Cell
+* Base station
+* Mobile data
+* 1G
+* 2G
+* 3G
+* 4G
+* 5G
+* GSM
+* CDMA
+* GPRS
+* EDGE
+* HSPA
+* LTE
+* VoLTE
+* Mobile bandwidth
+* Mobile data speed
++++
+
+
++++ #### **17. Computer Networks**
+
+* Computer network
+* Network components
+* LAN
+* MAN
+* WAN
+* PAN
+* WLAN
+* CAN
+* Internet
+* Intranet
+* Extranet
+* Wired network
+* Wireless network
+* Network protocols
+* Network architecture
+* Peer-to-peer network
+* Client-server network
++++
+
+
++++ #### **18. Network Topology &amp; Devices**
+
+* Network topology
+* Bus topology
+* Star topology
+* Ring topology
+* Mesh topology
+* Tree topology
+* Hybrid topology
+* Hub
+* Switch
+* Router
+* Bridge
+* Repeater
+* Gateway
+* Modem
+* Access point
+* Network interface card
+* Wireless router
++++
+
++++ #### **19. Smartphone Technology**
+
+* Smartphone
+* Mobile operating systems
+* Android
+* iOS
+* Mobile applications
+* Touchscreen
+* GPS
+* Accelerometer
+* Gyroscope
+* Proximity sensor
+* Ambient light sensor
+* Fingerprint sensor
+* Face recognition
+* Bluetooth
+* Wi-Fi
+* NFC
+* Mobile hotspot
+* Camera
+* Mobile processor
++++
+
+
++++ #### **20. World Wide Web**
+
+* World Wide Web
+* Website
+* Webpage
+* Homepage
+* Web browser
+* Web server
+* URL
+* Domain name
+* Hyperlink
+* HTTP
+* HTTPS
+* HTML
+* CSS
+* JavaScript
+* Search engine
+* Web hosting
+* Static website
+* Dynamic website
++++
+
+
++++ #### **21. Internet**
+
+* Internet
+* History of Internet
+* ARPANET
+* ISP
+* IP address
+* IPv4
+* IPv6
+* MAC address
+* DNS
+* Domain name
+* TCP/IP
+* TCP
+* IP
+* FTP
+* HTTP
+* HTTPS
+* Internet services
+* Web
+* Email
+* File transfer
+* VoIP
+* Streaming
+* Upload
+* Download
++++
+
+
++++ #### **22. Daily-Use Computing Technology**
+
+* Email
+* Online banking
+* ATM
+* Digital payment
+* Mobile banking
+* Internet banking
+* E-learning
+* E-government
+* E-ticketing
+* Video conferencing
+* Telemedicine
+* Teleworking
+* VoIP
+* Digital signature
+* Online shopping
+* Cloud storage
+* Digital communication
++++
+
+
++++ #### **23. E-mail**
+
+* Electronic mail
+* Email address
+* Email client
+* Email server
+* SMTP
+* POP3
+* IMAP
+* To
+* CC
+* BCC
+* Subject
+* Attachment
+* Email forwarding
+* Email reply
+* Spam
+* Phishing
+* Email security
++++
+
+
++++ #### **24. Client-Server Management**
+
+* Client
+* Server
+* Client-server architecture
+* Client-server communication
+* Web server
+* File server
+* Database server
+* Application server
+* Mail server
+* DNS server
+* Proxy server
+* Authentication
+* Server management
+* Distributed computing
++++
+
+
++++ #### **25. Mobile Technology Features**
+
+* SMS
+* MMS
+* Voice call
+* Video call
+* GPS
+* Bluetooth
+* Wi-Fi
+* NFC
+* Infrared
+* Mobile hotspot
+* Mobile apps
+* Push notifications
+* Biometrics
+* Mobile payment
+* Mobile banking
+* Location services
+* Mobile cloud services
++++
+
+
++++ #### **26. Tech Giants &amp; Their Services**
+
+* Google
+* Microsoft
+* IBM
+* Apple
+* Amazon
+* Meta
+* Major search engines
+* Google Search
+* Gmail
+* Google Drive
+* Google Maps
+* Android
+* Microsoft Windows
+* Microsoft Office
+* OneDrive
+* Azure
+* IBM technologies
+* Cloud services
+* Major technology products
+* Major technology companies and founders
++++
+
+
++++ #### **27. Cloud Computing**
+
+* Cloud computing
+* Cloud storage
+* Characteristics of cloud computing
+* Public cloud
+* Private cloud
+* Hybrid cloud
+* Community cloud
+* IaaS
+* PaaS
+* SaaS
+* Cloud servers
+* Virtualization
+* Data centers
+* Google Cloud
+* Microsoft Azure
+* Amazon Web Services
+* Advantages
+* Disadvantages
+* Cloud security
++++
+
+
++++ #### **28. Social Networking**
+
+* Social media
+* Social networking
+* Facebook
+* Instagram
+* X/Twitter
+* LinkedIn
+* YouTube
+* TikTok
+* Social networking sites
+* Blogs
+* Online communities
+* Social media marketing
+* Digital identity
+* Privacy
+* Cyberbullying
+* Fake accounts
+* Advantages
+* Disadvantages
++++
+
+
++++ #### **29. Robotics**
+
+* Robot
+* Robotics
+* Types of robots
+* Industrial robots
+* Service robots
+* Autonomous robots
+* Humanoid robots
+* Sensors
+* Actuators
+* Robot control
+* Artificial intelligence
+* Machine learning
+* Robot applications
+* Industrial automation
+* Medical robots
+* Military robots
+* Space robots
+* Advantages and limitations
++++
+
+
++++ #### **30. Cyber Crime &amp; Cyber Security**
+
+* Cybercrime
+* Hacking
+* Cracking
+* Phishing
+* Spoofing
+* Identity theft
+* Password attacks
+* Malware
+* Virus
+* Worm
+* Trojan
+* Ransomware
+* Spyware
+* Keylogger
+* Data theft
+* Cyber fraud
+* Cyberbullying
+* Cyberstalking
+* DDoS attack
+* DoS attack
+* Social engineering
+* Firewall
+* Antivirus
+* Encryption
+* Authentication
+* Digital signature
+* Cybersecurity
+* Data privacy
+* Information security
+* Safe Internet practices
++++
+</md></sn><sn><md>**Complete structure**
+
+**Computer — 13 chapters → 13 × topics**
+
+**Information Technology — 17 chapters → 17 × topics**
+
+**Total — 30 chapters covering the complete BCS Preliminary Computer &amp; Information Technology syllabus.**
+</md></sn>
