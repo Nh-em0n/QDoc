@@ -5,13 +5,12 @@
 
 | Subject | Contents |
 | -------- | -------- |
-| Bng1    | [পত্রপত্রিকা revise]{.text-secondary} |
-| Bng2    | Baghdhara |
-| Eng2    | Synonyms and Antonyms <br> Idoms and Phrases |
-| Math    | অনুপাত ও সমানুপাত Theory <br> সরল ও যৌগিক মুনাফা(rest) |
-| G.Science    | B.Z.Food and Nutrition |
-| ICT    | Operating System<br>History of Computer |
-| Geography   | G.Basic of Geography <br> G.The Universe and Our Earth |
+| R.Bng1    | [পত্রপত্রিকা revise]{.text-secondary} |
+| R.Bng2    | Baghdhara |
+| N.Math    | অনুপাত ও সমানুপাত Theory <br> সরল ও যৌগিক মুনাফা(rest) |
+| N.G.Science    | B.Z.Food and Nutrition |
+| N.ICT    | Operating System<br>History of Computer |
+| N.Geography   | G.Basic of Geography <br> G.The Universe and Our Earth |
 
 
 **self.field.programming**
@@ -66,7 +65,7 @@
     <tags>#01.week1</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Aug 15 2026 15:33:26 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Aug 15 2026 15:44:11 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-l5QTSoxJ52</id>
     <duration></duration>
   </config>
