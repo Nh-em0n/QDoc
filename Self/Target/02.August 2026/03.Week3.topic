@@ -15,74 +15,27 @@
 
 **self.field.programming**
 
-:::.row
+- C 10 Chapter
+- QDoc Enhance
 
-:::.col-6 .col-md-3
-**System Programming**
-- C 10 Chapters
-:::
-
-:::.col-6 .col-md-3
-**Web**
-- PHP 5 Chapter and practice
-- Javascript 5 Chapter and make library
-- Markdownit library Stuructured understand and make one plugin by yourself
-:::
-
-:::.col-6 .col-md-3
-**QDoc**
-- complete task from target.md
-:::
-
-:::.col-6 .col-md-3
-**Extras**
-:::
-:::
 
 
 **self.field.religion**
 
-:::.row
-:::.col-6 .col-md-4
-**Surah Memorization**
-- Surah 71 (1-30)
-:::
+- surah Nuh full
 
-:::.col-6 .col-md-4
-**Note Law and Fact**
-- Marriage and Divorce
-:::
+**self.communication**
+- Understanding communication level
 
-:::.col-6 .col-md-4
-**Extras**
-:::
-:::
-
-
-**self.Other**
-- Read and Memorize Quotes</md></sn>
+**self.health**
+- 2 day sports
+- 2 day workout
+- calculate BMI</md></sn>
   <config>
     <tags>#01.week1</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Aug 15 2026 15:44:11 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Aug 15 2026 15:51:21 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-l5QTSoxJ52</id>
     <duration></duration>
   </config>
-<sn><md>#### Tasklist 8 August
-
-**Primary**
-- self-field-religion Surah Nuh 1-10  verse
-- bcs-science Food and Nutrition 1/2
-- Health-update Extras :
-  Cut hair
-  Razor,Nail cutter,Powder,Shampoo
-  Wash Cloth
-
-**Secondary**
-- bcs History of Computer full article with qna
-
-**Tertiary**
-- revise ses-ecology-community diversities
-- learn ses-ecology-ecosystem 
-</md></sn>
