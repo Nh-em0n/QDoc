@@ -1,10 +1,56 @@
 
-  <sn></sn>
+  <sn><md>## Vitamins {.text-center}
+
+Vitamins are `essential organic compounds` necessary for proper bodily development, health, and nutrition alongside standard macronutrients like carbohydrates and proteins. Regular consumption of fresh produce provides most daily requirements. They fall into two main categories:
+
+* **Fat-Soluble:** Vitamins ADEK.
+* **Water-Soluble:** Vitamin B complex and Vitamin C.
+</md></sn>
   <config>
     <tags>#06.vitamins</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Aug 08 2026 07:58:42 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Aug 16 2026 10:32:16 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TdQDjZWjyQ</id>
     <duration></duration>
   </config>
+<sn><md>### Vitamin A
+
+#### Sources
+
++++ view dietary source of vitaminA
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/General%20Science/B.Z.Food%20and%20Nutrition/assets/dietary_sources_of_vitaminA.png)
++++
+
+* **Animal Sources:** Eggs, cow's milk, butter, cheese, yogurt, liver, and fatty fish (such as cod).
+* **Plant Sources:** Foods rich in `carotene`, including red amaranthus, arum leaves (*kachu shak*), stem amaranth (*data shak*), basil, jute leaves, water spinach (*kalmi shak*), mint, peas, carrots, lady finger, cabbage, peanuts, and fruits like `mango, ripe papaya, and jackfruit`. `Carrots` are particularly rich in this nutrient.
+
+#### Functions:
+
+1. Facilitates overall bodily `growth and development`.
+2. Preserves `epithelial tissue` function in skin and corneas.
+3. Promotes healthy `teeth, gums, and bones`.
+4. Maintains `visual acuity` and prevents `night blindness`.
+5. Strengthens `defense` against infectious illnesses.
+
+#### Deficiency &amp; Excess Symptoms:
+* **Xerophthalmia:** Starts as `night blindness` and can progress to corneal ulceration or complete blindness if unmanaged.
+* **Other Symptoms:** Susceptibility to `colds, sore throats, coughs, skin lesions` (small bumps around hair follicles), and urinary issues.
+* Excessive consumption can be `toxic`.
+
+</md></sn><sn><md>### Vitamin D
+
++++ view
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/General%20Science/B.Z.Food%20and%20Nutrition/assets/sources_of_vitaminD.png)
++++
+
+* **Synthesis &amp; Sources:** `Synthesized in the skin` via UV light exposure, converting `cholesterol into active` forms through the liver and kidneys. Key dietary sources include `egg yolk, milk, butter, cabbage, liver, and oily fish`.
+* **Functions:** Enhances `calcium absorption` necessary for bone building.
+* **Deficiency &amp; Excess Symptoms:**
+* Deficiency leads to `rickets in children`.
+* Excessive intake causes `hyperabsorption of calcium and phosphorus`, leading to dangerous `calcification in the kidneys, heart, and blood vessels`.
+</md></sn><sn><md>### Vitamin E
+
+* **Sources:** `Plant oils` (especially palm oil, corn oil, cottonseed oil, sunflower oil) and `lettuce` leaves.
+* **Functions:** Acts as an `antioxidant`, helping prevent `arterial fat accumulation` and keeping skin healthy.
+</md></sn><sn></sn>
