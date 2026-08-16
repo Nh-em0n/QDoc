@@ -1,10 +1,45 @@
 
-  <sn></sn>
+  <sn><md>### BMI
+
+Body Mass Index
+
+A baby continues to grow after birth. Then it becomes a child, reaches teenage, youth and adulthood. The growth of human body continues `up to the age of 20-24 years`. The height does not increase after that time. Then the ++role of food++ is to `repair` and keep the body `healthy`. In adult age, for good health, it needs to maintain a balance between height and weight of the body. The `index` which shows the `balance in height and weight` is called the ++BMI or Body Mass Index++. If the body weight is balanced with the height, then it can be considered a nutritionally healthy body.
+
+**The law of BMI**
+
+$$\text{BMI} = \frac{\text{body weight (kg)}}{\text{height (meter)}^2}$$
+
++++ read fact
+In this equation **height** is constant and it can not be changed.So the only thing we have to do to keep our BMI balance is to change the weight variable.
++++
+That is, the **body weight of a person is divided by the square meter of his height** and that is the BMI of that person.
+
+**For example:**
+The body weight of a person is $80\text{ kg}$ and height is $1.8\text{ meter}$.
+
+$$\text{BMI} = \frac{80}{1.8 \times 1.8} = 24.7 \text{ (approximate)}$$
+</md></sn>
   <config>
     <tags>#10.bmi</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Aug 08 2026 07:59:14 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Aug 16 2026 15:28:39 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-rT5jFT0uo0</id>
     <duration></duration>
   </config>
+<sn><md>#### Body Mass Index Categories 
+
+Male &amp; Female
+
+![chart](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/General%20Science/B.Z.Food%20and%20Nutrition/assets/BMI_chart.jpeg)
+
+| Category | BMI Range |
+| --- | --- |
+| **less weight** | $&lt; 18.5$ |
+| **correct weight** | $18.5 - 24.9$ |
+| **over weight** | $25 - 29.9$ |
+| **fatty** | $\ge 30$ |
+
+
+*BMI* is the `indicator of fat` in our body. 
+Note that BMI is not the only or most accurate indicator of health, but it is widely used.</md></sn>
