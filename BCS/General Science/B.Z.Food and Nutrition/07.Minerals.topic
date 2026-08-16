@@ -1,10 +1,59 @@
 
-  <sn></sn>
+  <sn><md>### Minerals
+
+Minerals are `as vital as vitamins` for growth and nutrition, primarily assisting in `cellular structure`. Dietary intake from plant and animal sources satisfies our mineral requirements.
+</md></sn>
   <config>
     <tags>#07.minerals</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Aug 08 2026 07:58:51 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Aug 16 2026 08:25:00 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Pqkw0xx0Lq</id>
     <duration></duration>
   </config>
+<sn><md>### Iron ($\text{Fe}$)
+
+* **Role &amp; Function:** 
+  - ++Key constituent of blood++ ($50\text{ mg}$ per $100\text{ mL}$ of blood) and 
+  - ++primary component++ in `hemoglobin formation`. 
+  - ++Stored++ in the `liver, spleen, bones, and red blood cells`.
+* +++view
+  ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/General%20Science/B.Z.Food%20and%20Nutrition/assets/dietary_sources_of_iron.png)
+  +++  
+* **Plant Sources:** Cauliflower, spine amaranths, neem leaf, fig, green banana, maize, wheat, nuts, and millet.
+* **Animal Sources:** Fish, meat, eggs, and liver.
+* **Deficiency Symptoms:** 
+  - Causes ++anemia++, which manifests as `pale eyes`, 
+  - `swelling` of hands and legs, 
+  - overall `weakness`, `headaches`, and 
+  - `heart palpitations`.
+</md></sn><sn><md>### Calcium ($\text{Ca}$)
+
+* **Role &amp; Function:** 
+  - ++Main constituent++ of `bones and teeth` (making up `~2% of total body weight`, with `90% stored in bones/teeth` alongside phosphorus and magnesium). 
+  - Crucial for `blood circulation`, `muscle contractions` (including the heart), and `nerve transmission`.
+* +++ view
+  ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/General%20Science/B.Z.Food%20and%20Nutrition/assets/dietary_sources_of_calcium.png)
+  +++  
+* **Plant Sources:** Pulses, sesame, soybean, cauliflower, carrots, spinach, kochu leaf, red amaranthus, and kalmi leaf.
+* **Animal Sources:** Milk, eggs, small fish, and dried fish.
+* **Deficiency Symptoms:** Causes 
+  - `rickets` in children, 
+  - `osteomalacia` in older women, 
+  - `delayed tooth` formation in infants, and 
+  - impaired `blood circulation`.
+
+</md></sn><sn><md>### Phosphorus ($\text{P}$)
+
+* **Role &amp; Function:** 
+  - `Second most abundant` mineral in the body ++after calcium++. 
+  - Essential for `bone and tooth` formation, `nucleic acid`/nucleoprotein synthesis, and `energy production` via carbohydrate metabolism. 
+  - Stored in `bones, liver, and plasma`.
+* +++ view
+  ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/General%20Science/B.Z.Food%20and%20Nutrition/assets/dietary_sources_of_phosphorus.png)
+  +++  
+* **Plant Sources:** Cereals, beans, peanuts, and tree nuts.
+* **Animal Sources:** Eggs, milk, fish, and meat.
+* **Deficiency Symptoms:** Causes 
+  - `osteoporosis, rickets, and dental` caries (tooth decay). 
+  - Deficiencies are rare if adequate protein and calcium are present in the diet.</md></sn>
