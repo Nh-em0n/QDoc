@@ -1,10 +1,29 @@
 
-  <sn></sn>
+  <sn><md>:::.row
+:::.col-12 .col-md-9
+### Preservation of Food
+**Food spoilage** occurs through combined environmental factors—such as `humidity, rising temperatures, increased acidity, active enzymes, and the rapid growth of bacteria or fungi`.
+:::
+:::.col-12 .col-md-3
+![img](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ36LQWBhUlkRwriL_3Qnt0rgZPeuZPxsBOQmkl7pav097i6IWQhOS6zk&amp;s=10)
+:::
+:::
+
+* **Bacterial Toxins:** ++Bacteria++ produce `toxic substances` in food. Consuming these leads to `food poisoning`, and certain severe toxins can target the `nervous system`, potentially resulting in fatal outcomes.
+* **Fungal Action:**
+* **Yeast:** Quickly `spoils fruit` juices, jellies, tomato sauce, pickles, and beverages, leaving behind a `sour odor`.
+* **Molds (*Mucor* and *Aspergillus*):** Form `ash-colored layers on bread` left exposed and cause rotting in oranges, tomatoes, pickles, and cheese.
+
+
+* **Importance of Preservation:** Storing food `maintains nutrient values`, allows `access to seasonal produce` year-round, `prevents local shortages`, and enables transportation or export to other markets.
+
+</md></sn>
   <config>
     <tags>#13.food preservations</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Aug 08 2026 07:59:45 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 17 2026 18:24:07 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-wxZdf3EP0v</id>
     <duration></duration>
   </config>
+<sn></sn>
