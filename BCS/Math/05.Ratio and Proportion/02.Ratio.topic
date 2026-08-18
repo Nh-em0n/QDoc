@@ -20,13 +20,13 @@ After studying this chapter, the students will be able to —
     <tags>#02.ratio</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Aug 18 2026 10:32:42 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Aug 18 2026 12:39:06 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-XIguhJIiI5</id>
     <duration></duration>
   </config>
 <sn><md>### Ratio
 
-If we have two quantities (or numbers) of the `same unit` (5,10), we can `express one quantity as a multiple (or a fraction 2) of the other` quantity. This ++fraction++ (1/2) is called the `ratio of two quantities`.
+How many times or what fraction one quantity is compared to another quantity of the same kind can be expressed by a fraction. This fraction is called the ratio of the two quantities. Since both quantities are of the same kind, ratio has `no unit`.
 
 :::.box .bg-teal
 The ratio of two quantities $p$ and $q$ is written as $p : q = \frac{p}{q}$. 
@@ -38,4 +38,74 @@ Here,
 
 Sometimes we use the ratio as an `approximate measure`. For example, the number of cars on the road at 10 A.M. is two times higher than the number of cars at 8 A.M. In this case, it is not necessary to know the exact number of cars to determine the ratio. Again, in many occasions, we say that the area of your house is three times to the area of mine. Also in this case, it is not necessary to know the exact area of the house. We use the concept of ratio in many other cases in real life.
 
-</md></sn>
+</md></sn><sn><md>### Different Types of Ratios
+
+:::.box .bg-blue
+**Equivalent Ratio**
+If the `antecedent and subsequent` of a ratio are `multiplied or divided by any non-zero number`, the value of the ratio remains unchanged. Such a ratio is called an equivalent ratio.
+
+For example, $2 : 5 = \frac{2}{5} = \frac{2 \times 2}{5 \times 2} = \frac{4}{10} = 4 : 10$
+$\therefore 2 : 5$ and $4 : 10$ are equivalent ratios.
+:::
+
+
+::: .box .bg-indigo
+**Simple Ratio**
+
+If a ratio `contains two quantities`, it is called a simple ratio.
+The ++first++ quantity of a simple ratio is called the `antecedent` (antecedent quantity) and the ++second++ quantity is called the `subsequent` (subsequent quantity). For example, $3 : 5$ is a simple ratio, where $3$ is the antecedent and $5$ is the subsequent.
+
+**Ratio of Lesser Inequality (Lagu Ratio)**
+**antecedent &lt; subsequent**
+If the antecedent of a simple ratio is smaller than its subsequent, it is called a **ratio of lesser inequality**. For example, $3 : 5$, $4 : 7$, etc.
+
+The average age of Class 3 students of a school is 8 years and the average age of Class 5 students is 10 years. Here the ratio of average ages of Class 3 and Class 5 students is $8 : 10$ or $4 : 5$. Since the antecedent of this ratio is smaller than the subsequent, it is a ratio of lesser inequality.
+
+**Ratio of Greater Inequality (Guru Ratio)**
+**antecedent &gt; subsequent**
+If the antecedent of a simple ratio is greater than its subsequent, it is called a **ratio of greater inequality**. For example, $5 : 3$, $6 : 5$, etc.
+
+Sadia bought a packet of biscuits for 32 Taka and a cone ice cream for 25 Taka. Here the ratio of the price of biscuits and ice cream is $32 : 25$. Since the antecedent of this ratio (32) is greater than the subsequent (25), it is a ratio of greater inequality.
+:::
+
+:::.box .bg-purple
+**Unit Ratio**
+
+A simple ratio whose `antecedent and subsequent are equal` is called a unit ratio. For example, Antora bought a ballpen for 15 Taka and a notebook for 15 Taka. Here the prices of both the ballpen and notebook are equal, and the ratio of their prices is $15 : 15$ or $1 : 1$. Therefore, this is a unit ratio.
+:::
+
+
+:::.box .bg-pink
+**Inverse Ratio (Inverse/Reciprocal Ratio)**
+The ratio obtained by making the antecedent of a simple ratio its subsequent and the subsequent its antecedent is called the inverse ratio of the original ratio.
+For example, the inverse ratio of $13 : 5$ is $5 : 13$.
+:::
+
+
+:::.box .bg-red
+**Compound Ratio (Mixed Ratio)**
+
+The ratio obtained by taking the `product of the antecedents of two or more simple ratios` as the antecedent and `the product of their subsequents` as the subsequent is called a compound ratio.
+
+For example, the compound ratio of the simple ratios $2 : 3$ and $5 : 7$ is $(2 \times 5) : (3 \times 7) = 10 : 21$.
+**Example:** Find the compound ratio of the given simple ratios: $5 : 7$, $4 : 9$, $3 : 2$.
+**Solution:**
+* Product of the antecedents of the three ratios $= 5 \times 4 \times 3 = 60$
+* Product of the subsequents of the three ratios $= 7 \times 9 \times 2 = 126$
+Required compound ratio $= 60 : 126$ or $10 : 21$.
+:::
+
++++ summary
+| Ratio Type | Definition / Condition | Key Formula or Property | Example |
+| --- | --- | --- | --- |
+| **Equivalent Ratio** | Formed by multiplying or dividing both terms of a ratio by the same non-zero number. | $\frac{a}{b} = \frac{a \times k}{b \times k} \quad (k \neq 0)$ | $2 : 5 = 4 : 10$ |
+| **Simple Ratio** | A ratio containing exactly two quantities (antecedent and subsequent). | $\text{Antecedent} : \text{Subsequent}$ | $3 : 5$ |
+| **Ratio of Lesser Inequality (Lagu Ratio)** | A simple ratio where the antecedent is smaller than the subsequent. | $\text{Antecedent} &lt; \text{Subsequent}$ | $3 : 5$, $4 : 7$, $8 : 10$ |
+| **Ratio of Greater Inequality (Guru Ratio)** | A simple ratio where the antecedent is greater than the subsequent. | $\text{Antecedent} &gt; \text{Subsequent}$ | $5 : 3$, $6 : 5$, $32 : 25$ |
+| **Unit Ratio** | A simple ratio where the antecedent and subsequent are equal. | $\text{Antecedent} = \text{Subsequent}$ | $15 : 15$ or $1 : 1$ |
+| **Inverse Ratio** | Formed by swapping the antecedent and subsequent of a simple ratio. | Inverse of $a : b$ is $b : a$ | Inverse of $13 : 5$ is $5 : 13$ |
+| **Compound Ratio (Mixed Ratio)** | Formed by multiplying the antecedents together and the subsequents together across two or more simple ratios. | For $a : b$ and $c : d \implies (a \times c) : (b \times d)$ | Compound ratio of $2 : 3$ and $5 : 7$ is $10 : 21$ |
+
+
+
++++</md></sn>
