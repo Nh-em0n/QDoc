@@ -1,10 +1,71 @@
 
-  <sn></sn>
+  <sn><md>::: .text-center
+### Transformation of ratio
+Here, the quantities of ratios are positive numbers.
+:::</md></sn>
   <config>
     <tags>#05.transformation of ratio</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Aug 18 2026 11:11:06 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Aug 18 2026 11:18:55 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-mxWIYVpG85</id>
     <duration></duration>
   </config>
+<sn><md>#### Invertendo
+
+If $a : b = c : d$, then $b : a = d : c$
+**Proof:** Given that,
+
+- $\frac{a}{b} = \frac{c}{d}$
+- $\text{or, } ad = bc \quad \text{[multiplying both the sides by } bd\text{]}$
+- $\text{or, } \frac{ad}{ac} = \frac{bc}{ac} \quad \text{[dividing both the sides by } ac \text{ where } a \text{ and } c \text{ are non-zero]}$
+- $\text{or, } \frac{d}{c} = \frac{b}{a}$
+- $b : a = d : c$
+</md></sn><sn><md>#### Alternendo
+
+If $a : b = c : d$, then $a : c = b : d$ 
+
+**Proof:** Given that,
+
+- $\frac{a}{b} = \frac{c}{d}$
+- $\text{or, } ad = bc \quad \text{[multiplying both the sides by } bd\text{]}$
+- $\text{or, } \frac{ad}{cd} = \frac{bc}{cd} \quad \text{[dividing both the sides by } cd \text{ where } c, d \text{ are non-zero]}$
+- $\text{or, } \frac{a}{c} = \frac{b}{d}$
+- $a : c = b : d$
+</md></sn><sn><md>#### Componendo
+
+If $a : b = c : d$, then, $\frac{a + b}{b} = \frac{c + d}{d}$
+
+**Proof:** Given that,
+- $\frac{a}{b} = \frac{c}{d}$
+- $\text{or, } \frac{a}{b} + 1 = \frac{c}{d} + 1 \quad \text{[adding 1 to both the sides]}$
+- $\frac{a + b}{b} = \frac{c + d}{d}$
+
+</md></sn><sn><md>#### Dividendo
+
+If $a : b = c : d$, then $\frac{a - b}{b} = \frac{c - d}{d}$
+
+**Proof:** Given that,
+- $\frac{a}{b} = \frac{c}{d}$
+- $\text{or, } \frac{a}{b} - 1 = \frac{c}{d} - 1 \quad \text{[subtracting 1 from both the sides]}$
+- $\frac{a - b}{b} = \frac{c - d}{d}$
+</md></sn><sn><md>#### Componendo-Dividendo
+
+If $a : b = c : d$, then $\frac{a + b}{a - b} = \frac{c + d}{c - d}$ 
+
+**Proof:** Given that, $a : b = c : d$
+- $\text{or, } \frac{a}{b} = \frac{c}{d}$
+- $\text{By componendo, } \frac{a + b}{b} = \frac{c + d}{d} \quad \dots (1)$
+- $\text{Again, by dividendo, } \frac{a - b}{b} = \frac{c - d}{d}$
+- $\text{or, } \frac{b}{a - b} = \frac{d}{c - d} \quad \text{[[by invertendo]]} \quad \dots (2)$
+- $\text{Therefore, } \frac{a + b}{b} \times \frac{b}{a - b} = \frac{c + d}{d} \times \frac{d}{c - d} \quad \text{[multiplying (1) \&amp; (2)]}$
+- $\frac{a + b}{a - b} = \frac{c + d}{c - d} \quad \text{[here } a \neq b, c \neq d\text{]}$
+</md></sn><sn><md>If $\frac{a}{b} = \frac{c}{d} = \frac{e}{f} = \frac{g}{h}$, then each of the ratio $= \frac{a + c + e + g}{b + d + f + h}$
+
+**Proof:** Let,
+- $\frac{a}{b} = \frac{c}{d} = \frac{e}{f} = \frac{g}{h} = k$
+- $\therefore a = bk, \, c = dk, \, e = fk, \, g = hk$
+- $\therefore \frac{a + c + e + g}{b + d + f + h} = \frac{bk + dk + fk + hk}{b + d + f + h} = \frac{k(b + d + f + h)}{b + d + f + h} = k$
+
+But, $k$ is equal to each ratio in the given proportion.
+$$\therefore \frac{a}{b} = \frac{c}{d} = \frac{e}{f} = \frac{g}{h} = \frac{a + c + e + g}{b + d + f + h}$$</md></sn>
