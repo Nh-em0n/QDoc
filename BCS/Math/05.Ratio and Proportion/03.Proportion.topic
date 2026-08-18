@@ -1,10 +1,20 @@
 
-  <sn></sn>
+  <sn><md>### Proportion
+
+If four quantities (or numbers), are such that the **ratio of the first and the second quantities** is equal to the **ratio of the third and the fourth quantities**, those four quantities form a proportion. If $a, b, c, d$ are four such quantities, we write $a : b = c : d$. The *four quantities need not to be of same kind*. The *two quantities of the ratio need to be of the same kind*.
+
+![fig](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Math/05.Ratio%20and%20Proportion/assets/fig_proportion.png)
+
+In the above figure, let the bases of two triangles be $a$ and $b$, respectively and each of their height is $h$ unit. If the areas of these triangle are $A$ and $B$ square units, respectively, we can write:
+
+$$\frac{A}{B} = \frac{\frac{1}{2}ah}{\frac{1}{2}bh} = \frac{a}{b} \quad \text{or,} \quad A : B = a : b$$
+
+i.e. the ratio of two `areas` is equal to the ratio of two `bases`.</md></sn>
   <config>
     <tags>#03.proportion</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Aug 18 2026 10:34:55 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Aug 18 2026 10:42:22 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-21j1uefAvq</id>
     <duration></duration>
   </config>
