@@ -2,13 +2,17 @@
   <sn><md>### Continued proportion
 
 By continued proportion of $a, b, c$, it is meant that $a : b = b : c$. 
-Here $a, b, c$ will be continued proportion, if and only if $b^2 = ac$. In case of continued proportional, all the quantities are to be of `same kind`. In this case, $c$ is called the third proportional of $a$ and $b$, and $b$ is called the `mid-proportional` of $a$ and $c$.
+Here 
+- $a, b, c$ will be continued proportion, if and only if $b^2 = ac$. 
+- In case of continued proportional, all the quantities are to be of `same kind`. 
+
+In this case, $c$ is called the third proportional of $a$ and $b$, and $b$ is called the `mid-proportional` of $a$ and $c$.
 </md></sn>
   <config>
     <tags>#04.continued proportion</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Aug 18 2026 11:00:14 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Aug 18 2026 11:02:13 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-fp4pJsiUsw</id>
     <duration></duration>
   </config>
