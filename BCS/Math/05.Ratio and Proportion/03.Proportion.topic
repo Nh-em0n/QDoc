@@ -14,7 +14,23 @@ i.e. the ratio of two `areas` is equal to the ratio of two `bases`.</md></sn>
     <tags>#03.proportion</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Aug 18 2026 10:42:22 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Aug 18 2026 10:50:45 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-21j1uefAvq</id>
     <duration></duration>
   </config>
+<sn><md>### Ratio vs Proportion
+
+| Aspect                   | **Ratio**                                                           | **Proportion**                                                        |
+| ------------------------ | ------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| **Definition**           | A `comparison` between two quantities of the same kind.               | An `equality` between two ratios.                                       |
+| **Basic idea**           | Shows the relationship or comparison between two quantities.        | Shows that two ratios are equal.                                      |
+| **Form**                 | $a:b$ or $\frac{a}{b}$                                              | $a:b=c:d$ or $\frac{a}{b}=\frac{c}{d}$                                |
+| **Number of quantities** | Usually involves `2 quantities`.                                  | Usually involves `4 quantities`.                                    |
+| **Example**              | $2:3$                                                               | $2:3=4:6$                                                             |
+| **Meaning**              | Compares 2 with 3.                                                  | States that $2:3$ and $4:6$ are equal.                                |
+| **Equality required?**   | No                                                                  | Yes                                                                   |
+| **Main use**             | To compare two quantities.                                          | To establish `equality between two` ratios or find an `unknown quantity`. |
+| **Typical question**     | Boys : Girls = $2:3$                                                | $2:3=x:12$, find $x$.                                                 |
+| **Key rule/formula**     | $\text{Ratio}=\frac{\text{First quantity}}{\text{Second quantity}}$ | $\frac{a}{b}=\frac{c}{d}\Rightarrow ad=bc$                            |
+| **Example in words**     | The ratio of boys to girls is $2:3$.                                | If the ratio is $2:3$ and $4:6$, they form a proportion.              |
+</md></sn>
