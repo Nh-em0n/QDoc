@@ -8,16 +8,39 @@ Here
 
 In this case, $c$ is called the `third proportional` of $a$ and $b$, 
 and $b$ is called the `mid-proportional` of $a$ and $c$.
+
+
+Suppose the ratio of the age of a son and father $= 15 : 41$ (antecedent : subsequent)
+and the ratio of the age of the father and grandfather $= 41 : 65$.
+Combining the two ratios, we get:
+Age of son : Age of father : Age of grandfather $= 15 : 41 : 65$.
+
+This type of ratio is called a **continued ratio**.
+Here it is notable that the subsequent of the first ratio and the antecedent of the second ratio are equal. If the subsequent of the first ratio and the antecedent of the second ratio are not equal, they must be made equal to find the continued ratio.
 </md></sn>
   <config>
     <tags>#04.continued proportion</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Aug 18 2026 11:04:21 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Aug 18 2026 12:42:19 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-fp4pJsiUsw</id>
     <duration></duration>
   </config>
 <sn><md>**Example 1.** $A$ and $B$ traverse the fixed distance in $t_1$ and $t_2$ minutes. Find the ratio of the average velocity of $A$ and $B$
 **Solution:** Let the average velocity of $A$ and $B$ be $v_1$ metre and $v_2$ metre per minute respectively. So, in time $t_1$ minutes $A$ traverses $v_1 t_1$ metre and in $t_2$ minutes $B$ traverses $v_2 t_2$ metre. According to the problem, $v_1 t_1 = v_2 t_2$
 
-$\therefore \frac{v_1}{v_2} = \frac{t_2}{t_1}$ Here, the ratio of the velocities is inversely proportional to the ratio of time.</md></sn>
+$\therefore \frac{v_1}{v_2} = \frac{t_2}{t_1}$ Here, the ratio of the velocities is inversely proportional to the ratio of time.</md></sn><sn><md>### Conversation to Continued Ratio
+
+To convert two ratios into a continued ratio, multiply both terms of the second ratio by the subsequent of the first ratio, and multiply both terms of the first ratio by the antecedent of the second ratio.
+
+**Example:** Express the two ratios $7 : 5$ and $8 : 9$ as a continued ratio. Alternatively, if $a : b = 7 : 5$ and $b : c = 8 : 9$, what is $a : b : c$?
+**Solution:** The subsequent of the first ratio ($5$) and the antecedent of the second ratio ($8$) are not equal. So, we need to make them equal to find the continued ratio.
+
+Multiplying both terms of the second ratio by the subsequent of the first ratio ($5$), and multiplying both terms of the first ratio by the antecedent of the second ratio ($8$), we get:
+
+* 1st ratio ($a : b$) $= 7 \times 8 : 5 \times 8 = 56 : 40$
+* 2nd ratio ($b : c$) $= 8 \times 5 : 9 \times 5 = 40 : 45$
+
+$\therefore$ Continued ratio ($a : b : c$) $= 56 : 40 : 45$.
+
+</md></sn>
