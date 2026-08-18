@@ -1,10 +1,45 @@
 
-  <sn></sn>
+  <sn><md>### Overview
+
+**path**
+self.field.bcs.math.ratio and proportion
+
+**prerequisite**
+- will be added
+
+**target**
+- core concept of ratio and proportion
+- bcs type math
+- practice nctb math book
+
+**resources**
+- [ratio and proportion chapter from khairul math](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Math/05.Ratio%20and%20Proportion/resources/ratio_and_proportion_khairul.pdf)
+- [albegric ratio and proportion ssc chapter 11](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Math/05.Ratio%20and%20Proportion/resources/algebric_ratio_and_proportion_en(ssc).pdf)
+- [ratio similarity symmetry ssc chapter 14](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Math/05.Ratio%20and%20Proportion/resources/c9-math_ratio_and_proportions_en.pdf)
+
+**total time required** : hours
+		
+
+</md></sn>
   <config>
     <tags>#00.overview</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Aug 18 2026 10:05:33 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Aug 18 2026 10:05:58 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-K7nIxQm8f5</id>
     <duration></duration>
   </config>
+<sn><md>### Topics
+
+- Overview
+- QNA analysis
+- Ratio
+- Proportion
+- Continued Proportion
+- Transformation of Ratio
+- BCS Typed math
+- Practice Class 6
+- Practice Class 7
+- Practice Class 9
+- Summary
+</md></sn>
