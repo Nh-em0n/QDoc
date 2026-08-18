@@ -78,7 +78,20 @@
     <tags>#01.question analysis</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Aug 18 2026 09:39:54 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Aug 18 2026 09:41:12 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-60fjtr7ozj</id>
     <duration></duration>
   </config>
+<sn><md>| Rank | Pattern                      | Expected importance |
+| ---: | ---------------------------- | ------------------- |
+|    1 | Ratio + difference           | ★★★★★               |
+|    2 | Mixture / changing ratio     | ★★★★★               |
+|    3 | Combining two/three ratios   | ★★★★★               |
+|    4 | Ratio + total / distribution | ★★★★★               |
+|    5 | Direct ratio &amp; proportion    | ★★★★☆               |
+|    6 | Ratio + HCF/LCM              | ★★★★☆               |
+|    7 | Ratio transformation         | ★★★★☆               |
+|    8 | Work / production ratio      | ★★★☆☆               |
+|    9 | Speed / distance ratio       | ★★★☆☆               |
+|   10 | Compound ratio               | ★★★☆☆               |
+</md></sn>
