@@ -1,10 +1,401 @@
 
-  <sn></sn>
+  
   <config>
     <tags>#06.bcs.type1.basic math of ratio and proportion</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Aug 18 2026 17:39:31 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Aug 18 2026 18:02:19 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-oCn3sEkWsR</id>
     <duration></duration>
   </config>
+<sn><md>### Type1
+
+Basic math of ratio and proportion
+
+Important Math **1,2,3,5,8,10,11,12,13,14,15,16,17,20,23,27,29,31,33,34,35**
+
+`১.` What is the compound ratio of 5 : 18, 7 : 2, and 3 : 6? [12th BCS]
+A. 72 : 105
+B. 72 : 35
+C. **35 : 72**
+D. 105 : 72
+
++++ Explanation:
+Compound ratio of $5 : 18$, $7 : 2$, and $3 : 6$ or $1 : 2$
+$= (5 \times 7 \times 1) : (18 \times 2 \times 2) = 35 : 72$
++++
+
+`২.` What is the unit of ratio? [12th Non-Government Teachers Registration - '15]
+A. Meter
+B. cm
+C. Feet
+D. **Ratio has no unit**
+
++++ Explanation:
+Since ratio is a comparison between two quantities of the same unit, it is a unitless quantity.
++++
+
+`৩.` If $a : b = 3 : 2$ and $b : c = 7 : 6$, then $c : a = ?$ [Pre-Primary Assistant Teacher - '15]
+A. 3 : 7
+B. 2 : 7
+C. **4 : 7**
+D. 2 : 6
+
++++ Explanation:
+$\frac{a}{b} \times \frac{b}{c} = \frac{3}{2} \times \frac{7}{6}$ or, $a : c = 7 : 4 \therefore c : a = 4 : 7$
++++
+
+৪. If $a : b = 2 : 3$ and $b : c = 6 : 7$, then $a : c = ?$ [16th Teachers' Registration and Certification Exam School Level-2- 2019; Thana Education Officer - '10]
+A. 2 : 6
+B. 3 : 7
+C. 2 : 7
+D. **4 : 7**
+
++++ Explanation:
+$\frac{a}{b} \times \frac{b}{c} = \frac{2}{3} \times \frac{6}{7} = \frac{4}{7} \implies a : c = 4 : 7$
++++
+
+`৫.` If $A : B = 3 : 4$ and $B : C = 6 : 5$, then $A : C = ?$ [7th Non-Government Teachers Registration - '11]
+A. 3 : 5
+B. 9 : 10
+C. 10 : 9
+D. **9 : 10**
+
++++ Explanation:
+$\frac{A}{B} \times \frac{B}{C} = \frac{3}{4} \times \frac{6}{5} = \frac{9}{10} \implies A : C = 9 : 10$
++++
+
+৬. If $3 : 7 = 12 : x$, what is the value of $x$? [Government Secondary Assistant Teacher - '99]
+A. 26
+B. **28**
+C. 30
+D. 32
+
++++ Explanation:
+$\frac{3}{7} = \frac{12}{x} \therefore x = \frac{12 \times 7}{3} = 28$
++++
+
+৭. If $4 : Ka = 2 : 7$, what is the value of Ka? [Government Secondary Headmaster - 2000]
+A. 8
+B. 14
+C. 21
+D. **14**
+
++++ Explanation:
+$\frac{4}{Ka} = \frac{2}{7} \implies Ka = \frac{4 \times 7}{2} = 14$
++++
+
+`৮.` If $a : b = 4 : 5$ and $b : c = 6 : 7$, then $a : b : c = ?$ [13th Non-Government Teachers Registration (Hijal) - '16]
+A. 20 : 35 : 42
+B. **24 : 30 : 35**
+C. 35 : 30 : 24
+D. 42 : 35 : 20
+
++++ Explanation:
+Multiplying both terms of the first ratio by the antecedent of the second ratio (6) and both terms of the second ratio by the consequent of the first ratio (5):
+1st ratio $= a : b = 4 : 5 = 4 \times 6 : 5 \times 6 = 24 : 30$
+2nd ratio $= b : c = 6 : 7 = 6 \times 5 : 7 \times 5 = 30 : 35$
+$\therefore a : b : c = 24 : 30 : 35$
++++
+
+৯. If $T : TH = 4 : 7$ and $TH : D = 5 : 6$, then $T : TH : D = ?$ [Passport and Immigration Assistant Director - 2000]
+A. 4 : 7 : 6
+B. 20 : 35 : 28
+C. 28 : 35 : 30
+D. **20 : 35 : 42**
+
++++ Explanation:
+$T : TH = 4 \times 5 : 7 \times 5 = 20 : 35$
+$TH : D = 5 \times 7 : 6 \times 7 = 35 : 42$
+$\therefore T : TH : D = 20 : 35 : 42$
++++
+
+`১০.` If $Ka$ and $Kha$ are in the ratio $4 : 5$ and $Kha : Ga = 2 : 3$, and $Ka$ has 800 Taka, how much money does $Ga$ have? [Government Secondary School Assistant Teacher - 2019; BRDB Rural Development Officer - '09; Railway Sub-Assistant - '13]
+A. 1,000
+B. 1,200
+C. **1,500**
+D. 2,000
+
++++ Explanation:
+$Ka : Kha = 4 : 5 = 4 \times 2 : 5 \times 2 = 8 : 10$
+$Kha : Ga = 2 : 3 = 2 \times 5 : 3 \times 5 = 10 : 15$
+$\therefore Ka : Kha : Ga = 8 : 10 : 15$
+
+According to the question, $8 \text{ parts} = 800 \text{ Taka}$
+$\implies 1 \text{ part} = 100 \text{ Taka}$
+$\therefore 15 \text{ parts} = 1500 \text{ Taka}$
++++</md></sn><sn><md>১১. In a cricket match, Bulbul, Bashar, and Enamul scored a total of 280 runs. If the ratio of Bulbul's and Bashar's runs is 2 : 3, and the ratio of Bashar's and Enamul's runs is 3 : 2, how many runs did each of them score? [Ministry of Civil Aviation and Tourism Administrative Officer - '05]
+A. (60, 90, 120)
+B. **(80, 120, 80)**
+C. (90, 100, 90)
+D. (100, 80, 100)
+
++++ Explanation:
+Ratio of runs = Bulbul : Bashar : Enamul = 2 : 3 : 2
+Sum of ratio terms = $2 + 3 + 2 = 7$
+Bulbul's runs = $280 \times \frac{2}{7} = 80$
+Bashar's runs = $280 \times \frac{3}{7} = 120$
+Enamul's runs = $280 \times \frac{2}{7} = 80$
+$\therefore (80, 120, 80)$
++++
+
+১২. If $x : y = a : b$, $x = 6$, $y = 5$, and $a = 36$, then what is the value of $b$? [Department of National Savings Assistant Director - '09]
+A. 6
+B. 12
+C. **30**
+D. 35
+
++++ Explanation:
+$\frac{x}{y} = \frac{a}{b} \implies \frac{6}{5} = \frac{36}{b} \implies b = \frac{36 \times 5}{6} = 30$
++++
+
+১৩. If $5 : 100$, $4 : 64$, then $4 : 80$, $3 : ?$ [Prime Minister's Office Assistant Director - '15]
+A. 26
+B. 54
+C. **48**
+D. 60
+
++++ Explanation:
+$5 : 100 = \frac{5}{100} = \frac{1}{20} = \frac{1 \times 4}{20 \times 4} = \frac{4}{80} = 4 : 80$
+Similarly, $4 : 64 = \frac{4}{64} = \frac{1}{16} = \frac{1 \times 3}{16 \times 3} = \frac{3}{48} = 3 : 48$
++++
+
+১৪. What is the inverse ratio of 4 : 9? [Directorate of Primary Education Accounts Assistant - '11]
+A. 2 : 3
+B. 8 : 18
+C. **9 : 4**
+D. 16 : 81
+
++++ Explanation:
+The inverse ratio of $a : b$ is $b : a$.
+Therefore, the inverse ratio of $4 : 9$ is $9 : 4$.
++++
+
+১৫. What is the ratio of the circumference to the diameter of a circle? [8th Non-Government Teachers Registration - '12 (Malobika-1)]
+A. **22 : 7**
+B. 7 : 22
+C. 22 : 6
+D. 22 : 5
+
++++ Explanation:
+Circumference : Diameter = $2\pi r : 2r = \pi = \frac{22}{7} = 22 : 7$ $[\pi \approx 3.14]$
++++
+
+১৬. The ratio of the radii of two circles is 3 : 2. What will be the ratio of their areas? [Department of National Savings Assistant Director - '09]
+A. 2 : 3
+B. 3 : 4
+C. 4 : 9
+D. **9 : 4**
+
++++ Explanation:
+Ratio of areas = $\pi (3)^2 : \pi (2)^2 = 9 : 4$
++++
+
+১৭. If a fish is sold at a 25% profit, find the ratio of its cost price to its selling price. [Ministry of Establishment Administrative Officer - 07; Upazila Post Master - '10]
+A. 5 : 6
+B. 4 : 6
+C. **4 : 5**
+D. 4 : 3
+
++++ Explanation:
+If cost price = 100 Taka, selling price at 25% profit = 125 Taka.
+Ratio = $100 : 125 = 4 : 5$
++++
+
+১৮. A pen was sold at a 10% profit. What is the ratio of the selling price to the cost price of the pen? [16th Teachers' Registration and Certification Exam School Level-2- 2019]
+A. **11 : 10**
+B. 9 : 10
+C. 10 : 11
+D. 10 : 9
+
++++ Explanation:
+Selling price at 10% profit = $(100 + 10) = 110 \text{ Taka}$
+$\therefore \text{Selling Price} : \text{Cost Price} = 110 : 100 = 11 : 10$
++++
+
+১৯. If an item is sold at a 25% profit, which of the following is the ratio of selling price to cost price? [Railway Sub-Assistant - '10]
+A. 5 : 4
+B. **5 : 4** (or 6 : 4)
+C. 4 : 5
+D. 5 : 6
+
++++ Explanation:
+If cost price = 100 Taka, selling price at 25% profit = 125 Taka.
+Selling Price : Cost Price = $125 : 100 = 5 : 4$
++++
+
+২০. A number is 450% of another number. What is the ratio of the two numbers? [Rural Development and Co-operative Department Field Organizer - '18]
+A. **9 : 2**
+B. 45 : 1
+C. 450 : 1
+D. 9 : 1
+
++++ Explanation:
+Ratio of the two numbers = $\frac{450}{100} = \frac{9}{2} = 9 : 2$
++++</md></sn><sn><md>২১. If one quantity is 64% of another quantity, what is the ratio of the two quantities? [Department of Women Affairs Officer - '16]
+A. 25 : 16
+B. **16 : 25**
+C. 16 : 9
+D. 9 : 16
+
++++ Explanation:
+Ratio of the two quantities = $64 : 100 = 16 : 25$
++++
+
+২২. A man earns 1,250 Taka weekly and spends 1,000 Taka. What will be the ratio of his savings to his income? [Pre-Primary Assistant Teacher (Misicipi) - '13]
+A. 3 : 5
+B. 4 : 5
+C. **1 : 5**
+D. 2 : 5
+
++++ Explanation:
+Savings = $1250 - 1000 = 250\text{ Taka}$
+$\therefore \text{Savings} : \text{Income} = 250 : 1250 = 1 : 5$
++++
+
+২৩. A man earns 2,200 Taka weekly and spends 1,650 Taka. What is the ratio of his savings to his income? [Primary Headmaster (Dhaka) - '08]
+A. **1 : 4**
+B. 2 : 3
+C. 3 : 4
+D. 4 : 5
+
++++ Explanation:
+Savings = $2200 - 1650 = 550\text{ Taka}$
+$\therefore \text{Savings} : \text{Income} = 550 : 2200 = 1 : 4$
++++
+
+২৪. A man earns 4,500 Taka weekly and spends 3,000 Taka. What will be the ratio of his income to his savings? [Primary Assistant Teacher (Karnafully) - '12; CAG Auditor - '15]
+A. 3 : 2
+B. **3 : 1**
+C. 2 : 1
+D. 5 : 1
+
++++ Explanation:
+Savings = $4500 - 3000 = 1500\text{ Taka}$
+$\therefore \text{Income} : \text{Savings} = 4500 : 1500 = 3 : 1$
++++
+
+২৫. A man earns 5,000 Taka weekly and spends 4,500 Taka. What will be the ratio of his expenditure to his savings? [Primary Assistant Teacher (Surma) - '12]
+A. **9 : 1**
+B. 1 : 9
+C. 10 : 9
+D. 5 : 1
+
++++ Explanation:
+Savings = $5000 - 4500 = 500\text{ Taka}$
+$\therefore \text{Expenditure} : \text{Savings} = 4500 : 500 = 9 : 1$
++++
+
+২৬. The capital amounts of Ka, Kha, and Ga in a business are 320, 400, and 480 Taka respectively. What is the ratio of their capital? [Assistant Sub-Inspector of Food (Cancelled) - '11]
+A. 3 : 4 : 5
+B. **4 : 5 : 6**
+C. 6 : 8 : 12
+D. 6 : 9 : 15
+
++++ Explanation:
+Ratio of capital = $320 : 400 : 480 = 4 : 5 : 6$
++++
+
+২৭. In a mixture of 63 liters, the ratio of acid to water is 7 : 2. What is the amount of acid and water in that mixture? [Registered Primary Assistant Teacher - '11 (Shiuli)]
+A. 39 liters, 24 liters
+B. **49 liters, 14 liters**
+C. 24 liters, 39 liters
+D. 29 liters, 34 liters
+
++++ Explanation:
+Sum of ratio terms = $7 + 2 = 9$
+$\therefore \text{Amount of acid} = 63 \times \frac{7}{9} = 49\text{ liters}$
+$\therefore \text{Amount of water} = 63 \times \frac{2}{9} = 14\text{ liters}$
++++
+
+২৮. The ratio of water to syrup in a 35-liter solution is 3 : 4. How many liters of syrup are in the solution? [Assistant Sub-Inspector of Food (Cancelled) - '11]
+A. 15 liters
+B. 20 liters
+C. 21 liters
+D. **20 liters**
+
++++ Explanation:
+Sum of ratio terms = $3 + 4 = 7$
+$\therefore \text{Amount of syrup} = 35 \times \frac{4}{7} = 20\text{ liters}$
++++
+
+২৯. A 6-foot long bamboo casts a shadow 4 feet long. At the same time, a tree casts a shadow 64 feet long. What is the height of the tree? [Pre-Primary Assistant Teacher (Rhein) - '13]
+A. **96 feet**
+B. 72 feet
+C. 192 feet
+D. 88 feet
+
++++ Explanation:
+Height of bamboo : Shadow of bamboo = Height of tree : Shadow of tree
+$\frac{6}{8} = \frac{X}{64} \implies X = \frac{6 \times 64}{8} = 96\text{ feet}$
++++
+
+৩০. The cost of maintaining 6 cows is equal to the cost of maintaining 4 buffaloes. How many cows can be maintained for the cost of maintaining 10 buffaloes? [Primary Assistant Teacher (Kopotakkho) - '10]
+A. **15**
+B. 18
+C. 20
+D. 25
+
++++ Explanation:
+Cost for 4 buffaloes = Cost for 6 cows
+$\therefore \text{Cost for 10 buffaloes} = \frac{6 \times 10}{4} = 15\text{ cows}$
++++</md></sn><sn><md>৩১. The ratio of two numbers is 2.5 : 3.5. If the first number is 15, what is the other number? [Bangladesh Rural Electrification Board Assistant Enforcement Coordinator - 2019]
+A. 5
+B. 14
+C. **21**
+D. None of these
+
++++ Explanation:
+Let the other number be $b$.
+$\frac{15}{b} = \frac{2.5}{3.5} \implies \frac{b}{15} = \frac{3.5}{2.5} \implies b = \frac{3.5}{2.5} \times 15 = 21$
++++
+
+৩২. A petrol pump can fill gas cylinders in 8 cars in 18 minutes. At this rate, how many car cylinders can it fill in 3 hours? [BRDB Assistant Rural Development Officer - '09; Food Inspector - '01]
+A. 13
+B. 40.5
+C. **80**
+D. 125
+
++++ Explanation:
+$3 \text{ hours} = 180 \text{ minutes}$
+$\frac{18}{8} = \frac{180}{x} \implies x = \frac{8 \times 180}{18} = 80$
++++
+
+৩৩. The price of 15 cows is equal to the price of 5 horses. If the price of 2 horses is 3,000 Taka, what is the price of 3 cows?
+A. 1,200
+B. 1,300
+C. 1,400
+D. **1,500**
+
++++ Explanation:
+Price of 2 horses = 3,000 Taka
+$\implies \text{Price of 1 horse} = \frac{3000}{2} = 1500 \text{ Taka}$
+Price of 5 horses $= 1500 \times 5 = 7500 \text{ Taka}$
+Since 15 cows = 5 horses:
+Price of 15 cows = 7,500 Taka
+$\therefore \text{Price of 3 cows} = \frac{7500 \times 3}{15} = 1500 \text{ Taka}$
++++
+
+৩৪. The price of 15 sheep is equal to the price of 5 cows. If the price of 2 cows is 18,000 Taka, what will be the price of 1 sheep? [Pre-Primary Assistant Teacher (Misicipi) - '13]
+A. 1,500 Taka
+B. 2,000 Taka
+C. 2,500 Taka
+D. **3,000 Taka**
+
++++ Explanation:
+Price of 2 cows = 18,000 Taka
+$\implies \text{Price of 5 cows} = \frac{18000 \times 5}{2} = 45000 \text{ Taka}$
+Price of 15 sheep = Price of 5 cows = 45,000 Taka
+$\therefore \text{Price of 1 sheep} = \frac{45000}{15} = 3000 \text{ Taka}$
++++
+
+৩৫. The price of 15 goats is equal to the price of 3 cows. How many cows can be obtained in exchange for 20 goats? [Family Planning Directorate Officer - '14]
+A. **4**
+B. 5
+C. 6
+D. 10
+
++++ Explanation:
+15 goats = 3 cows
+$\therefore 20 \text{ goats} = \frac{3 \times 20}{15} = 4 \text{ cows}$
++++</md></sn>
