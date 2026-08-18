@@ -1,10 +1,43 @@
 
-  <sn><md>### Markdown</md></sn>
+  <sn><md>### Algebraic Ratio and Proportion
+
+It is very important for us to have a clear conception of ratio and proportion in mathematics. In this chapter, algebraic ratio and proportion will be discussed. We regularly use the concept of ratio and proportion in many applications: 
+- the production of construction materials, 
+- food staff and goods, 
+- applying fertilizer in land, 
+- making beautiful shapes and design to make things attractive and good looking, and so on. 
+
+Many problems of daily lives can also be solved by using the concept of ratio and proportion.
+
+After studying this chapter, the students will be able to —
+
+* explain algebraic `ratio and proportion`.
+* use different types of `rules of transformation` related to proportion.
+* describe `successive proportion`.
+* use ratio, proportion, successive proportion in `solving real life problems`.
+</md></sn>
   <config>
     <tags>#02.ratio</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Aug 18 2026 10:04:51 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Aug 18 2026 10:17:51 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-XIguhJIiI5</id>
     <duration></duration>
   </config>
+<sn><md>### Ratio
+
+If we have two quantities (or numbers) of the `same unit`, we can `express one quantity as a multiple (or a fraction) of the other` quantity. This ++fraction++ is called the `ratio of two quantities`.
+
+&gt; **Note :** Ratio of two number  =  fraction of them.
+
+:::.box .bg-teal
+The ratio of two quantities $p$ and $q$ is written as $p : q = \frac{p}{q}$. 
+These two quantities, $p$ and $q$ are of `same kind and same unit`. 
+Here, 
+- $p$ is called `antecedent` and 
+- $q$ is called `subsequent`  of the ratio.
+:::
+
+Sometimes we use the ratio as an `approximate measure`. For example, the number of cars on the road at 10 A.M. is two times higher than the number of cars at 8 A.M. In this case, it is not necessary to know the exact number of cars to determine the ratio. Again, in many occasions, we say that the area of your house is three times to the area of mine. Also in this case, it is not necessary to know the exact area of the house. We use the concept of ratio in many other cases in real life.
+
+</md></sn>
