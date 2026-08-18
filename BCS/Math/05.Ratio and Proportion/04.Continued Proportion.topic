@@ -1,10 +1,18 @@
 
-  <sn></sn>
+  <sn><md>### Continued proportion
+
+By continued proportion of $a, b, c$, it is meant that $a : b = b : c$. 
+Here $a, b, c$ will be continued proportion, if and only if $b^2 = ac$. In case of continued proportional, all the quantities are to be of `same kind`. In this case, $c$ is called the third proportional of $a$ and $b$, and $b$ is called the `mid-proportional` of $a$ and $c$.
+</md></sn>
   <config>
     <tags>#04.continued proportion</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Aug 18 2026 10:57:31 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Aug 18 2026 11:00:14 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-fp4pJsiUsw</id>
     <duration></duration>
   </config>
+<sn><md>**Example 1.** $A$ and $B$ traverse the fixed distance in $t_1$ and $t_2$ minutes. Find the ratio of the average velocity of $A$ and $B$
+**Solution:** Let the average velocity of $A$ and $B$ be $v_1$ metre and $v_2$ metre per minute respectively. So, in time $t_1$ minutes $A$ traverses $v_1 t_1$ metre and in $t_2$ minutes $B$ traverses $v_2 t_2$ metre. According to the problem, $v_1 t_1 = v_2 t_2$
+
+$\therefore \frac{v_1}{v_2} = \frac{t_2}{t_1}$ Here, the ratio of the velocities is inversely proportional to the ratio of time.</md></sn>
