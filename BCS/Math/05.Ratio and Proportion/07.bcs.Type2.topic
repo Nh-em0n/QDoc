@@ -1,10 +1,35 @@
 
-  <sn></sn>
+  <sn><md>### Concept
+
+Emon has 100tk and Mahin has 400tk.Togther they have 100+400 = 500tk
+
+$$\frac{\text{Emon}}{\text{Mahin}} = \frac{100}{400} = \frac{1}{4}$$ 
+
+here we divide 100 and 400 by 100 so our common divisor x = 100
+if we dont know x and we have to evaluate mahin real money from 1:4 ratio.Then 
+Mahin Real Money = $\text{Mahin portion} \times x$   
+where x is $\frac{Total}{sum of ratio}$ 
+
+### Template
+
+- ratio p:q
+- common divisor x
+- Total
+Real value of q = qx where x = $\frac{\text{Total}}{p+q}
+
+
+
+#### Evaluate x from delta
+sometimes total may have not given,in this case they provide delta of two difference value,we can evaluate x from that
+p:q and their main difference is D
+px - qx = D
+x = ?
+</md></sn>
   <config>
     <tags>#07.bcs.type2</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Aug 19 2026 09:49:18 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Aug 19 2026 09:51:00 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-VSf69Z2UTr</id>
     <duration></duration>
   </config>
