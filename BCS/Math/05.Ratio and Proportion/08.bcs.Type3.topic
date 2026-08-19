@@ -1,10 +1,177 @@
 
-  <sn></sn>
+  <sn><md>### Mixed
+
+- p:q
+- Total
+- how much increasng in q lead to ratio of m:n
+
+P : real value of p
+Q : real value of q
+
+$$\frac{P}{Q+x} = \frac{m}{n}$$</md></sn>
   <config>
     <tags>#08.bcs.type3</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Aug 19 2026 11:04:40 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Aug 19 2026 11:08:10 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-l2ADB8Fk7L</id>
     <duration></duration>
   </config>
+<sn><md>৬৭. The ratio of water and sugar in a 60-liter mixture is 7 : 3. How many more liters of sugar need to be added to make the ratio 3 : 7? [11th Non-Government Teachers Registration - '14]
+A. 70 liters
+B. 60 liters
+C. **80 liters**
+D. 50 liters
+
++++ Explanation:
+Amount of water in 60 liters $= 60 \times \frac{7}{10} = 42 \text{ liters}$
+Amount of sugar in 60 liters $= 60 \times \frac{3}{10} = 18 \text{ liters}$
+Let $x$ liters of sugar be added.
+According to the question, $\frac{42}{18 + x} = \frac{3}{7} \implies 3(18 + x) = 42 \times 7 \implies 18 + x = 98 \implies x = 80 \text{ liters}$
++++
+
+৬৮. In a 64 kg mixture of sand and stone pieces, the amount of sand is 25%. How many kilograms of sand need to be added so that the amount of stone pieces in the new mixture becomes 40%? [15th BCS]
+A. 9.6 kg
+B. 48 kg
+C. 11 kg
+D. **56 kg**
+
++++ Explanation:
+In 64 kg mixture:
+Stone $= 64 \times 75\% = 48 \text{ kg}$, Sand $= 64 \times 25\% = 16 \text{ kg}$
+Let $x$ kg sand be added.
+According to the question, $48 : (16 + x) = 40 : 60 \implies \frac{48}{16 + x} = \frac{2}{3} \implies 16 + x = 72 \implies x = 56 \text{ kg}$
++++
+
+৬৯. The ratio of mango and orange juice in a 60-liter fruit juice mixture is 2 : 1. How many liters of orange juice must be added to make the ratio 1 : 2? [35th BCS]
+A. 40
+B. **60**
+C. 50
+D. 70
+
++++ Explanation:
+Mango juice $= 40 \text{ liters}$, Orange juice $= 20 \text{ liters}$
+Let $x$ liters of orange juice be added.
+$\frac{40}{20 + x} = \frac{1}{2} \implies 20 + x = 80 \implies x = 60 \text{ liters}$
++++
+</md></sn><sn><md>৭০. A piece of gold ornament weighs 16 grams. The ratio of gold to copper in it is 3 : 1. How much gold should be added to make the ratio 4 : 1? [21st BCS]
+A. 12 grams
+B. **4 grams**
+C. 3 grams
+D. 6 grams
+
++++ Explanation:
+Gold $= 16 \times \frac{3}{4} = 12 \text{ grams}$, Copper $= 16 - 12 = 4 \text{ grams}$
+Let $x$ grams of gold be added.
+$\frac{12 + x}{4} = \frac{4}{1} \implies 12 + x = 16 \implies x = 4 \text{ grams}$
++++
+
+৭১. A piece of gold ornament weighs 32 grams. The ratio of gold and copper in it is 3 : 1. How much gold should be added to make the ratio 4 : 1? [Pre-Primary Assistant Teacher (Teesta) - '14]
+A. 2 grams
+B. 3 grams
+C. 6 grams
+D. **8 grams**
+
++++ Explanation:
+Gold $= 32 \times \frac{3}{4} = 24 \text{ grams}$, Copper $= 32 - 24 = 8 \text{ grams}$
+Let $x$ grams of gold be added.
+$\frac{24 + x}{8} = \frac{4}{1} \implies 24 + x = 32 \implies x = 8 \text{ grams}$
++++
+
+৭২. The ratio of acid and water in a 30-liter mixture is 7 : 3. How much water should be added to make the ratio of acid and water 3 : 7? [Primary Headmaster (Padma) - '12; Pre-Primary Assistant Teacher - '14]
+A. 30 liters
+B. 25 liters
+C. **40 liters**
+D. 45 liters
+
++++ Explanation:
+Acid $= 30 \times \frac{7}{10} = 21 \text{ liters}$, Water $= 30 \times \frac{3}{10} = 9 \text{ liters}$
+Let $x$ liters of water be added.
+$\frac{21}{9 + x} = \frac{3}{7} \implies 3(9 + x) = 147 \implies 9 + x = 49 \implies x = 40 \text{ liters}$
++++
+
+৭৩. In a gold ornament weighing 25 grams, the ratio of gold and copper is 4 : 1. How much more gold needs to be added to make the ratio of gold and copper 5 : 1? [BRDB Sub-Regional Manager - '13]
+A. **5 grams**
+B. 6 grams
+C. 10 grams
+D. 20 grams
+
++++ Explanation:
+Gold $= 25 \times \frac{4}{5} = 20 \text{ grams}$, Copper $= 25 - 20 = 5 \text{ grams}$
+Let $x$ grams of gold be added.
+$\frac{20 + x}{5} = \frac{5}{1} \implies 20 + x = 25 \implies x = 5 \text{ grams}$
++++
+
+৭৪. The ratio of kerosene and petrol in a 60-liter mixture is 7 : 3. How many more liters of petrol need to be added to make the ratio 3 : 7? [Primary Headmaster (Dhaka) - '09]
+A. 70
+B. **80**
+C. 90
+D. 98
+
++++ Explanation:
+Kerosene $= 60 \times \frac{7}{10} = 42 \text{ liters}$, Petrol $= 60 \times \frac{3}{10} = 18 \text{ liters}$
+Let $x$ liters of petrol be added.
+$\frac{42}{18 + x} = \frac{3}{7} \implies 3(18 + x) = 294 \implies 18 + x = 98 \implies x = 80 \text{ liters}$
++++
+
+৭৫. In 40 gallons of octane-mixed petrol, the ratio of petrol and octane is 3 : 1. How many more gallons of octane need to be added to make the ratio of petrol and octane 5 : 2? [Primary Headmaster (Khulna) - '09]
+A. 1 gallon
+B. **2 gallons**
+C. 3 gallons
+D. 4 gallons
+
++++ Explanation:
+Petrol $= 40 \times \frac{3}{4} = 30 \text{ gallons}$, Octane $= 10 \text{ gallons}$
+Let $x$ gallons of octane be added.
+$\frac{30}{10 + x} = \frac{5}{2} \implies 5(10 + x) = 60 \implies 10 + x = 12 \implies x = 2 \text{ gallons}$
++++
+
+৭৬. In 21 gallons of octane-mixed petrol, the ratio of petrol and octane is 4 : 3. How many more gallons of octane need to be added to make the ratio of petrol and octane 3 : 4? [Primary Headmaster (Rajshahi) - '09; Primary Headmaster (Shiuli) - '12]
+A. 3 gallons
+B. 4 gallons
+C. **7 gallons**
+D. 6 gallons
+
++++ Explanation:
+Petrol $= 21 \times \frac{4}{7} = 12 \text{ gallons}$, Octane $= 21 \times \frac{3}{7} = 9 \text{ gallons}$
+Let $x$ gallons of octane be added.
+$\frac{12}{9 + x} = \frac{3}{4} \implies 3(9 + x) = 48 \implies 9 + x = 16 \implies x = 7 \text{ gallons}$
++++
+
+৭৭. In a gold ornament weighing 25 grams, the ratio of gold and copper is 4 : 1. How much more gold needs to be added to make the ratio of gold and copper 5 : 1? [Food Directorate Food Inspector/Sub-Food Inspector - '11]
+A. **5 grams**
+B. 6 grams
+C. 10 grams
+D. 20 grams
+
++++ Explanation:
+Gold $= 25 \times \frac{4}{5} = 20 \text{ grams}$, Copper $= 5 \text{ grams}$
+Let $x$ grams of gold be added.
+$\frac{20 + x}{5} = \frac{5}{1} \implies 20 + x = 25 \implies x = 5 \text{ grams}$
++++
+
+৭৮. In what ratio should a shopkeeper mix two types of tea costing 15 Taka and 20 Taka per kg so that the price of the mixed tea is 16.50 Taka per kg? [Pre-Primary Assistant Teacher (Rhine) - '13]
+A. 5 : 7
+B. **7 : 3**
+C. 3 : 7
+D. 4 : 5
+
++++ Explanation:
+Let $x$ kg of tea priced at 15 Taka and $y$ kg of tea priced at 20 Taka be mixed.
+According to the question, $15x + 20y = 16.5(x + y) \implies 15x + 20y = 16.5x + 16.5y$
+$\implies 3.5y = 1.5x \implies 3x = 7y \implies \frac{x}{y} = \frac{7}{3}$
+$\therefore x : y = 7 : 3$
++++
+
+৭৯. A businessman mixes tea costing 80 Taka per kg with tea costing 100 Taka per kg in the ratio 1 : 3. What will be the price per kg of the mixed tea? [Primary Headmaster (Chattogram) - '08]
+A. 85 Taka
+B. 90 Taka
+C. 92 Taka
+D. **95 Taka**
+
++++ Explanation:
+Price of 1 kg tea @ 80 Taka $= 1 \times 80 = 80 \text{ Taka}$
+Price of 3 kg tea @ 100 Taka $= 3 \times 100 = 300 \text{ Taka}$
+Total price of $(1 + 3) = 4 \text{ kg}$ tea $= 80 + 300 = 380 \text{ Taka}$
+$\therefore \text{Price of 1 kg mixed tea} = \frac{380}{4} = 95 \text{ Taka}$
++++</md></sn>
