@@ -1,10 +1,81 @@
 
-  <sn></sn>
+  <sn><md>৮০. The sum of two numbers is 8. If the numbers are in the ratio 3 : 1, then the product of the numbers will be— [Pre-Primary Assistant Teacher (Delta) - '14]
+A. 10
+B. **12**
+C. 15
+D. 18
+
++++ Explanation:
+Let the two numbers be $3x$ and $x$.
+According to the question, $3x + x = 8 \implies 4x = 8 \implies x = 2$.
+$\therefore$ The numbers are $(3 \times 2) = 6$ and $2$.
+$\therefore \text{Product of the numbers} = 6 \times 2 = 12$.
++++
+
+৮১. The ratio of two numbers is 5 : 8. If 2 is added to both, the ratio becomes 2 : 3. What are the two numbers? [Pre-Primary Assistant Teacher (Mississippi) - '13]
+A. 7 and 11
+B. 12 and 18
+C. 10 and 24
+D. **10 and 16**
+
++++ Explanation:
+Let the two numbers be $5x$ and $8x$ respectively.
+According to the question, $5x + 2 : 8x + 2 = 2 : 3 \implies \frac{5x + 2}{8x + 2} = \frac{2}{3}$
+$\implies 15x + 6 = 16x + 4 \implies x = 2$
+$\therefore \text{The numbers are } (5 \times 2) = 10 \text{ and } (8 \times 2) = 16$.
++++
+
+৮২. The ratio of two numbers is 2 and their difference is 15. What is the smaller number? [Secondary Education Sector Investment Program Assistant Thana Secondary Education Officer Selection - '15]
+A. **15**
+B. 10
+C. 20
+D. 30
+
++++ Explanation:
+Let the smaller number be $x$.
+$\therefore \text{Larger number} = x + 15$
+According to the question, $\frac{x + 15}{x} = 2 \implies 2x = x + 15 \implies x = 15$.
++++
+
+৮৩. If 64 is decreased in the ratio 7 : 8, the new number will be— [Registered Primary Assistant Teacher - '11 (Shapla)]
+A. 54
+B. **56**
+C. 58
+D. 60
+
++++ Explanation:
+New number $= 64 \times \frac{7}{8} = 56$.
++++
+
+৮৪. The ratio of the present ages of father and son is 7 : 2, and after 5 years, the ratio of their ages will be 8 : 3. What is the father's present age? [Bangladesh Post Office (Metropolitan Circle) - '16]
+A. 30 years
+B. **35 years**
+C. 40 years
+D. 45 years
+
++++ Explanation:
+Let present age of father $= 7x$ and son $= 2x$.
+After 5 years, father's age $= 7x + 5$ and son's age $= 2x + 5$.
+According to the question, $\frac{7x + 5}{2x + 5} = \frac{8}{3} \implies 21x + 15 = 16x + 40 \implies 5x = 25 \implies x = 5$
+$\therefore \text{Father's present age} = 7x = 7 \times 5 = 35 \text{ years}$.
++++
+
+৮৫. 3 years ago, the ages of mother and daughter were 27 years and 2 years respectively. What will be the ratio of their ages after 5 years? [13th Non-Government Teachers Registration (Hijal) - '16]
+A. 3 : 2
+B. **7 : 2**
+C. 27 : 2
+D. 27 : 5
+
++++ Explanation:
+Present age: Mother $= 27 + 3 = 30$, Daughter $= 2 + 3 = 5$.
+After 5 years: Mother $= 30 + 5 = 35$, Daughter $= 5 + 5 = 10$.
+$\therefore \text{Ratio} = 35 : 10 = 7 : 2$.
++++</md></sn>
   <config>
     <tags>#09.bcs.type4</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Aug 19 2026 11:30:33 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Aug 19 2026 11:37:48 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-cPYlLHOJBY</id>
     <duration></duration>
   </config>
