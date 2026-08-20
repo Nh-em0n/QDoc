@@ -1,10 +1,120 @@
 
-  <sn></sn>
+  <sn><md>### `/* */` Delimited Comments
+
+A `/* */` comment begins with a forward slash followed immediately by an asterisk (`/*`) and ends when an asterisk is immediately followed by a forward slash (`*/`).
+
+Everything between `/*` and `*/` is treated as a comment and is essentially **ignored by the compiler**.
+
+```c
+/* this is a comment */
+```
+
+</md></sn>
   <config>
     <tags>#02.traditional comments</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 20 2026 20:16:56 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 20 2026 20:25:01 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-SqQbpXyBUw</id>
     <duration></duration>
   </config>
+<sn><md>### Single-Line Comments
+
+A `/* */` comment can be written on a single line:
+
+```c
+/* this is a comment */
+```
+</md></sn><sn><md>### Multi-Line Comments
+
+`/* */` comments can span multiple lines:
+
+```c
+/* this is a
+multi-line
+comment */
+```
+
+A common style convention is to place `/*` and `*/` on separate lines and use an asterisk at the beginning of each line:
+
+```c
+/*
+ * this is a
+ * multi-line
+ * comment
+ */
+```
+
+The additional `*` characters have **no special functional meaning**. They are simply used to improve readability.
+</md></sn><sn><md>### Where `/* */` Comments Can Be Used
+
+These comments can appear:
+
+1. On their own line
+2. At the end of a line of code
+3. Within a line of code
+4. Inside a block such as an `if` statement
+
+```c
+/* this comment is on its own line */
+
+if (x &amp;&amp; y) { /* this comment is at the end of a line */
+
+    if ((complexCondition1) /* this comment is within a line of code */
+        &amp;&amp; (complexCondition2)) {
+
+        /* this comment is within an if, on its own line */
+    }
+}
+```
+</md></sn><sn><md>#### Comments Cannot Be Nested
+
+`/* */` comments **cannot be nested**.
+
+If another `/*` appears inside an existing comment, it is treated as ordinary text. The compiler continues searching for the **first `*/`** it encounters, which ends the comment.
+
+For example:
+
+```c
+/*
+ * outer comment
+ * /* attempted inner comment */
+ * this is no longer part of the comment
+ */
+```
+
+The first `*/` closes the outer comment. The final `*/` is therefore left outside the comment and can cause a compilation error.
+</md></sn><sn><md>#### Commenting Out Code Containing Comments
+
+Because `/* */` comments cannot be nested, you should not use them to comment out a block of code that already contains `/* */` comments.
+
+For example:
+
+```c
+/*
+int foo()
+{
+    /* This comment is already inside the code */
+    return 1;
+}
+*/
+```
+
+This will **not work as intended**.
+
+For such cases, use the preprocessor technique:
+
+```c
+#if 0
+
+int foo()
+{
+    /* This comment can remain here */
+    return 1;
+}
+
+#endif
+```
+
+The `#if 0` / `#endif` technique allows an entire section of code to be excluded by the preprocessor without creating nested C comments.
+</md></sn>
