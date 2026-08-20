@@ -1,10 +1,195 @@
 
-  <sn></sn>
+  <sn><md>### Original "Hello, World!" in K&amp;R C
+
+The following is the original **"Hello, World!"** program from *The C Programming Language* by **Brian Kernighan** and **Dennis Ritchie**, commonly known as **K&amp;R**. Dennis Ritchie was the original developer of the C programming language at Bell Labs.
+
+**Original K&amp;R Program**
+
+**Version:** K&amp;R
+
+```c
+#include <stdio.h>
+
+main()
+{
+    printf("hello, world\n");
+}
+```
+</stdio.h></md></sn>
   <config>
     <tags>#02.original hello world in k and rc</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 20 2026 16:22:53 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 20 2026 16:34:40 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-zZI1osgIaB</id>
     <duration></duration>
   </config>
+<sn><md>#### Why the Original Program Is Outdated
+
+When the first edition of *The C Programming Language* was written in **1978**, the C language had not yet been standardized.
+As a result, this program may not compile with modern C compilers unless they are specifically configured to accept older **C90-era code**.
+The original example is considered poor practice today for two main reasons:
+1. `main()` does not explicitly specify a return type.
+2. There is no `return` statement.
+
+**Missing Return Type**
+The original program uses:
+
+```c
+main()
+```
+
+instead of:
+
+```c
+int main(void)
+```
+
+In older C standards, such as **C89**, a function without an explicitly specified return type would default to `int`.
+However, modern C requires the return type of `main()` to be explicitly specified.
+The recommended form is:
+
+```c
+int main(void)
+```
+
+when the program does not use command-line arguments.
+For a program that accepts command-line arguments, the recommended form is:
+
+```c
+int main(int argc, char **argv)
+```
+
+
+---
+
+**4. Missing `return` Statement**
+The original program also does not contain:
+
+```c
+return 0;
+```
+
+The behavior changed between C standards.
+
+| Standard          | Behavior                                                                       |
+| ----------------- | ------------------------------------------------------------------------------ |
+| **C89**           | Reaching the closing `}` of `main()` does not provide a defined success value. |
+| **C99 and later** | Reaching the closing `}` of `main()` is equivalent to `return 0;`.             |
+
+Therefore, in modern C, this is valid:
+
+```c
+int main(void)
+{
+    printf("hello, world\n");
+}
+```
+
+It is equivalent to:
+
+```c
+int main(void)
+{
+    printf("hello, world\n");
+    return 0;
+}
+```
+
+For clarity and consistency, explicitly writing `return 0;` is often preferred when learning C.
+</md></sn><sn><md>#### Recommended Modern Form
+
+A modern and portable version of the K&amp;R program is:
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    printf("hello, world\n");
+    return 0;
+}
+```
+
+Here:
+
+* `#include <stdio.h>` provides the declaration of `printf()`.
+* `int main(void)` defines the program's entry point.
+* `printf()` prints the text to standard output.
+* `\n` moves the cursor to a new line.
+* `return 0;` indicates successful program termination.
+</stdio.h></stdio.h></md></sn><sn><md>#### `main()` and Program Termination**
+
+The C standard defines special rules for the `main()` function.
+
+
+- **C90 — Program Termination**
+    C90 specifies that returning from the initial call to `main()` is equivalent to calling `exit()` with the returned value.
+    However, if `main()` executes a return without specifying a value, the termination status is undefined.
+    For example:
+
+    ```c
+    return;
+    ```
+
+    does not provide a defined termination value in this context.
+
+
+- **C90 — Return Statement**
+    C90 also specifies that reaching the closing `}` of a function is equivalent to executing a `return` statement without an expression.
+    For ordinary functions where the returned value is used, this can result in undefined behavior.
+
+- **C99 and Later**
+
+    C99 introduced a special rule for `main()`.
+    If the return type of `main()` is compatible with `int`, reaching the closing `}` of `main()` returns **0**.
+    Therefore:
+
+    ```c
+    int main(void)
+    {
+        printf("hello, world\n");
+    }
+    ```
+
+    is equivalent to:
+
+    ```c
+    int main(void)
+    {
+        printf("hello, world\n");
+        return 0;
+    }
+    ```
+
+    The value `0` indicates successful program termination.
+
+</md></sn><sn><md>#### K&amp;R vs Modern C
+
+| Feature              | Original K&amp;R                  | Modern C                 |
+| -------------------- | ----------------------------- | ------------------------ |
+| Header               | `#include <stdio.h>`          | `#include <stdio.h>`     |
+| `main()` return type | Implicit `int`                | Explicit `int`           |
+| Parameters           | Not specified                 | `void` when no arguments |
+| Output function      | `printf()`                    | `printf()`               |
+| Newline              | `\n`                          | `\n`                     |
+| `return`             | Omitted                       | `return 0;` recommended  |
+| Portability          | Limited with modern standards | Portable                 |
+| Typical standard     | Pre-standard / C89 style      | C99 and later            |
+
+**Key Takeaway**
+
+The original K&amp;R program is historically important because it represents one of the earliest famous examples of C programming. However, it uses **old C syntax** that should not be used as a model for modern C programming.
+
+The preferred modern form is:
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    printf("hello, world\n");
+    return 0;
+}
+```
+</stdio.h></stdio.h></stdio.h></md></sn>
