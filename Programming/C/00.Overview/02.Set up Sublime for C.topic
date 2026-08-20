@@ -1,10 +1,90 @@
 
-  <sn></sn>
+  <sn><md>### Set up Sublime for C
+
+Setting up Sublime Text for C development on Linux is very straightforward. Since you already have the GCC compiler installed from your previous setup, you primarily need to configure Sublime Text's **Build System** to use it .
+
+Here’s a step-by-step guide to get you compiling and running C code directly from the editor.
+</md></sn>
   <config>
     <tags>#02.set up sublime for c</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 20 2026 08:43:19 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 20 2026 09:05:29 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-DFFA4NFRIY</id>
     <duration></duration>
   </config>
+<sn><md>#### 1. Create a New Build System in Sublime Text
+
+Sublime Text uses build systems to run external programs like your compiler. To create a custom one for C :
+
+1.  Open Sublime Text.
+2.  Go to the menu **`Tools`** → **`Build System`** → **`New Build System…`** .
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/C/00.Overview/assets/sublime_build_system_scrnsht.png)
+
+</md></sn><sn><md>#### 2. Add the Build System Configuration
+
+A new file will open. Delete any placeholder content and paste the following JSON configuration :
+
+```json
+{
+    "shell_cmd": "gcc -std=c17 -Wall \"${file}\" -o \"${file_path}/${file_base_name}\"",
+    "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+    "working_dir": "${file_path}",
+    "selector": "source.c",
+    "variants":
+    [
+        {
+            "name": "Run",
+            "shell_cmd": "gcc -std=c17 -Wall \"${file}\" -o \"${file_path}/${file_base_name}\" &amp;&amp; \"${file_path}/${file_base_name}\""
+        }
+    ]
+}
+```
+
++++ Let's break down what this configuration does :
+
+*   **`"shell_cmd"`**: This is the main **command that runs** when you press the build shortcut. It invokes `gcc`, uses the `-std=c17` flag for modern C standards, and enables common warnings with `-Wall`.
+*   **`"file_regex"`**: This is a pattern that allows Sublime Text to **parse compiler error messages**. When you get an error, you can click on the error in the output panel, and it will jump you to the exact line of code causing the problem.
+*   **`"working_dir"`**: This **sets the directory where the compilation command is executed**, ensuring file paths work correctly.
+*   **`"selector"`**: This tells Sublime that **this build system is intended** for C source files.
+*   **`"variants"`**: This **adds an option to run your program after a successful compilation** . The `"Run"` variant compiles the file and then executes the output program.
++++
+
+</md></sn><sn><md>#### 3. Save the Build System
+
+Save the file (e.g., `C.sublime-build`) in the suggested "User" directory . The name you choose will appear in the build system menu.
+</md></sn><sn><md>#### 4. Select Your New Build System
+
+1.  Go back to the menu **`Tools`** → **`Build System`**.
+2.  Select your newly created build system from the list (e.g., `C`).
+</md></sn><sn><md>#### 5. Write and Run Your C Code
+
+Now you're all set. Open or create a C file (with a `.c` extension) to use this build system .
+
++++ get code
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    printf("Hello, C!\n");
+
+    return 0;
+}
+```
++++
+
+*   **Compile Only**: Press **`Ctrl+B`** (Linux) to build/compile your code .
+*   **Compile and Run**: Press **`Ctrl+Shift+B`** to open the build menu and select the **`Run`** variant . The output of your compiled program will appear in the panel at the bottom of the Sublime Text window.
+
+</stdio.h></md></sn><sn><md>#### Optional Enhancements
+
+Once the basic setup is working, you can enhance your environment further:
+
+*   **Use a Terminal for `stdin`**: If your program requires user input, the built-in output panel will not allow you to type. To fix this, you can create a variant that opens a real terminal . On Linux, you can modify the `"shell_cmd"` for a variant to something like:
+    ```json
+    "shell_cmd": "gcc -std=c17 -Wall \"${file}\" -o \"${file_path}/${file_base_name}\" &amp;&amp; gnome-terminal -- bash -c \"${file_path}/${file_base_name}; exec bash\""
+    ```
+*   **Install Packages for Autocompletion**: You can install the `Package Control` plugin to manage other extensions. Useful packages for C development include `C Snippets` for code templates and `LSP` (Language Server Protocol) for better code completion and error checking .
+
+If you ever get a "command not found" error, it means the `gcc` command is not in your system's `PATH` that Sublime can see. This is usually resolved by launching Sublime Text from your terminal using the `subl .` command .</md></sn>
