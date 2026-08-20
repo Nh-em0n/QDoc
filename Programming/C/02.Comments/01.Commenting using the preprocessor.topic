@@ -1,10 +1,72 @@
 
-  <sn></sn>
+  <sn><md>### Comments in C
+
+Comments are used to `provide information` to people reading the source code. They are `ignored by the compiler` and therefore do not affect the actual meaning or behavior of the program.
+
+C supports two main comment syntaxes:
+
+```c
+/* Traditional comment */
+```
+
+and
+
+```c
+// Single-line comment
+```
+
+The `/* */` syntax is the original C comment style, while `//` was introduced later. Documentation systems may also use specially formatted comments to automatically generate documentation from source code.
+</md></sn>
   <config>
     <tags>#01.commenting using the preprocessor</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 20 2026 19:57:29 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 20 2026 20:03:46 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-31myHoKYPO</id>
     <duration></duration>
   </config>
+<sn><md>### Commenting Using the Preprocessor
+
+Large sections of code can be temporarily **commented out** using the preprocessor directives `#if 0` and `#endif`.
+This technique is particularly useful when the code already contains **multi-line comments**, because normal `/* */` comments cannot be nested.
+
+```c
+#if 0
+/* Starts the "comment"; everything from here is removed by the preprocessor */
+
+/* A large amount of code with multi-line comments */
+
+int foo()
+{
+    /* lots of code */
+    ...
+
+    /* ... some comment describing the if statement ... */
+
+    if (someTest) {
+        /* some more comments */
+        return 1;
+    }
+
+    return 0;
+}
+
+#endif /* 0 */
+
+/* Code from here on is "uncommented"
+   and is included in the compiled executable */
+
+...
+```
+
+**How It Works**
+
+| Directive           | Purpose                                               |
+| ------------------- | ----------------------------------------------------- |
+| `#if 0`             | Starts a preprocessor block that will not be compiled |
+| `#endif`            | Ends the `#if 0` block                                |
+| Code between them   | Removed by the preprocessor                           |
+| Code after `#endif` | Compiled normally                                     |
+
+**Key point:** `#if 0 ... #endif` is not technically a C comment. The **preprocessor excludes the enclosed code before compilation**.
+</md></sn>
