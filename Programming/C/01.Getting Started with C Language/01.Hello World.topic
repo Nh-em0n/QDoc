@@ -20,11 +20,13 @@ int main(void)
     <tags>#01.hello world</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 20 2026 15:01:22 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 20 2026 15:04:56 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-iEPHZ92Iqw</id>
     <duration></duration>
   </config>
 <sn><md>#### Understanding the Program
+
+![diagram](https://media.geeksforgeeks.org/wp-content/uploads/20221219163357/Structure-of-C-Program.png)
 
 - **`#include <stdio.h>`**
 
