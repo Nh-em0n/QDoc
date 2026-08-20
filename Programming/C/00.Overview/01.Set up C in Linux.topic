@@ -1,10 +1,81 @@
 
-  <sn></sn>
+  <sn><md>## Set up C in Linux
+
+Setting up C for development on Linux is typically **straightforward**, as the `necessary tools are readily available through your distribution's package manager`. The most common approach is to install the **GNU Compiler Collection** (GCC).
+
+Here is a step-by-step guide to get you started:
+</md></sn>
   <config>
     <tags>#01.set up c in linux</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 20 2026 07:59:33 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 20 2026 08:11:02 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-4ApY8UKyXT</id>
     <duration></duration>
   </config>
+<sn><md>#### 1. Install the Compiler and Build Tools
+
+The easiest method is to install a package that includes the compiler, standard libraries, and other essential build tools like `make`.
+
+*   **For Ubuntu, Debian, and similar (using `apt`):**
+    Open a terminal and run these commands to update your package list and install the `build-essential` metapackage.
+    ```bash
+    sudo apt update
+    sudo apt install build-essential
+    ```
+    This will install `gcc`, `g++`, `make`, and other critical tools. <br> <br>
+
+*   **For Fedora, Red Hat, CentOS, and similar (using `dnf` or `yum`):**
+    Use the following command to install the development tools group.
+    ```bash
+    sudo dnf group install "development-tools"
+    ```
+    If you are on an older system that uses `yum`, you can use `sudo yum groupinstall "development-tools"`.
+
+</md></sn><sn><md>#### 2. Verify the Installation
+
+After the installation finishes, you can confirm that GCC is correctly installed by checking its version.
+```bash
+gcc --version
+```
+The terminal should output the version number of the GCC compiler.
+</md></sn><sn><md>#### 3. Write Your First C Program
+
+Now you can create a simple "Hello, World!" program. Use a text editor like `nano` to create a new file.
+```bash
+nano hello.c
+```
+Then, write the following C code into the file:
+```c
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+```
+Save the file and exit the editor (in `nano`, press `Ctrl+O`, then `Enter`, and `Ctrl+X`).
+</stdio.h></md></sn><sn><md>#### 4. Compile the Program
+
+Use the `gcc` command to compile your source code into an executable program.
+```bash
+gcc hello.c -o hello
+```
+*   `gcc` : This invokes the compiler.
+*   `hello.c` : This is your source code file.
+*   `-o hello` : This option tells the compiler to name the output file `hello`. If you omit `-o hello`, the output file will be named `a.out` by default.
+</md></sn><sn><md>#### 5. Run the Executable
+
+Finally, execute your program by typing `./` followed by the program's name.
+```bash
+./hello
+```
+If everything is set up correctly, you should see `Hello, World!` printed in the terminal.
+
+</md></sn><sn><md>#### Next Steps and Additional Tools
+
+Once your basic setup is working, you can explore more advanced tools to enhance your development experience:
+
+*   **Install Clang:** For an alternative to GCC, you can install the Clang compiler. On Ubuntu/Debian, use `sudo apt install clang`, and on Fedora, use `sudo dnf install clang`.
+*   **Set Up a Build System:** For more complex projects, consider using CMake. It's a cross-platform build system generator. You can install it via your package manager (e.g., `sudo apt install cmake`).
+*   **Use an IDE or Editor:** While a text editor and terminal are enough, you can use an IDE like VS Code or CLion for a more integrated experience. If using VS Code, install the C/C++ extension pack for features like code completion and debugging.</md></sn>
