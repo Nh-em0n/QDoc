@@ -9,7 +9,7 @@ Here’s a step-by-step guide to get you compiling and running C code directly f
     <tags>#02.set up sublime for c</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 20 2026 09:09:57 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 20 2026 09:18:18 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-DFFA4NFRIY</id>
     <duration></duration>
   </config>
@@ -50,7 +50,26 @@ A new file will open. Delete any placeholder content and paste the following JSO
 *   **`"variants"`**: This **adds an option to run your program after a successful compilation** . The `"Run"` variant compiles the file and then executes the output program.
 +++
 
-</md></sn><sn><md>#### 3. Save the Build System
++++ **Additonal CMD command**
+
+- **Compile and Run**
+   ```
+    {
+        "shell_cmd": "gcc \"$file\" -o \"${file_base_name}\" &amp;&amp; ./${file_base_name}",
+        "working_dir": "$file_path",
+        "selector": "source.c"
+    }
+   ```
+- compile and run in terminal
+  ```
+    {
+        "shell_cmd": "gcc \"$file\" -o \"$file_base_name\" &amp;&amp; gnome-terminal -- bash -c \"./'$file_base_name'; echo; read -p 'Press Enter to close...'\"",
+        "working_dir": "$file_path",
+        "selector": "source.c"
+    }  
+  ``` 
+
++++</md></sn><sn><md>#### 3. Save the Build System
 
 Save the file (e.g., `C.sublime-build`) in the suggested "User" directory . The name you choose will appear in the build system menu.
 ![screenshot](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/C/00.Overview/assets/sublime-build-save-screenshot.png)</md></sn><sn><md>#### 4. Select Your New Build System
