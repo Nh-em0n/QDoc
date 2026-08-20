@@ -9,7 +9,7 @@ Here is a step-by-step guide to get you started:
     <tags>#01.set up c in linux</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 20 2026 08:11:02 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 20 2026 08:23:10 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-4ApY8UKyXT</id>
     <duration></duration>
   </config>
@@ -76,6 +76,6 @@ If everything is set up correctly, you should see `Hello, World!` printed in the
 
 Once your basic setup is working, you can explore more advanced tools to enhance your development experience:
 
-*   **Install Clang:** For an alternative to GCC, you can install the Clang compiler. On Ubuntu/Debian, use `sudo apt install clang`, and on Fedora, use `sudo dnf install clang`.
-*   **Set Up a Build System:** For more complex projects, consider using CMake. It's a cross-platform build system generator. You can install it via your package manager (e.g., `sudo apt install cmake`).
+*   **Install Clang:** For an **alternative to GCC**, you can install the Clang compiler. On Ubuntu/Debian, use `sudo apt install clang`, and on Fedora, use `sudo dnf install clang`.
+*   **Set Up a Build System:** For more **complex projects**, consider using ++CMake++. It's a cross-platform build system generator. You can install it via your package manager (e.g., `sudo apt install cmake`).
 *   **Use an IDE or Editor:** While a text editor and terminal are enough, you can use an IDE like VS Code or CLion for a more integrated experience. If using VS Code, install the C/C++ extension pack for features like code completion and debugging.</md></sn>
