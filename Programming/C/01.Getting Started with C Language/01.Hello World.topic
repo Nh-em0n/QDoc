@@ -1,10 +1,205 @@
 
-  <sn></sn>
+  <sn><md>### Hello World
+
+The traditional first C program prints **"Hello, World"** to the screen. It introduces the basic structure of a C program, including headers, the `main()` function, statements, strings, and the return value.
+
+**Creating the Program**
+Create a plain-text file named `hello.c`. The `.c` extension is required for a C source file.
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    puts("Hello, World");
+    return 0;
+}
+```
+</stdio.h></md></sn>
   <config>
     <tags>#01.hello world</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 20 2026 14:47:36 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 20 2026 15:01:22 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-iEPHZ92Iqw</id>
     <duration></duration>
   </config>
+<sn><md>#### Understanding the Program
+
+- **`#include <stdio.h>`**
+
+    ```c
+    #include <stdio.h>
+    ```
+
+    This tells the compiler to include the contents of the **standard library header** file `stdio.h`.
+    Headers generally contain **function declarations, macros, and data types**. The `stdio.h` header is required here because the program uses the `puts()` function.
+
+- **`int main(void)`**
+
+    ```c
+    int main(void)
+    ```
+
+    This defines the `main()` function.
+
+    | Part   | Meaning                         |
+    | ------ | ------------------------------- |
+    | `int`  | The function returns an integer |
+    | `main` | The name of the function        |
+    | `void` | The function takes no arguments |
+
+    Program execution starts from the `main()` function.
+
+- **Curly Braces `{ }`**
+
+    ```c
+    {
+        ...
+    }
+    ```
+
+    Curly braces define a **block of code**. In this example, they mark the beginning and end of the `main()` function.
+
+- **`puts("Hello, World");`**
+
+    ```c
+    puts("Hello, World");
+    ```
+
+    The `puts()` function prints text to **standard output**, which is normally the screen, followed by a newline.
+
+    ```c
+    "Hello, World"
+    ```
+
+    is a **string literal**. In C, string literals are enclosed in double quotation marks.
+    Every C statement normally ends with a **semicolon (`;`)**.
+
+- **`return 0;`**
+
+    ```c
+    return 0;
+    ```
+
+    Since `main()` is declared to return an `int`, it must return an integer value.
+    Returning `0` conventionally indicates that the program completed successfully. After this statement, program execution terminates.
+</stdio.h></stdio.h></md></sn><sn><md>#### Editing the Program
+
+You can use any text editor capable of creating **plain-text files**.
+
+| Platform       | Example Editors                  |
+| -------------- | -------------------------------- |
+| Linux          | Vim, Gedit                       |
+| Windows        | Notepad                          |
+| Cross-platform | Visual Studio Code, Sublime Text |
+
+Do not save the C source file as **RTF** or another formatted document. It must be a plain-text `.c` file.
+
+</md></sn><sn><md>#### Compiling and Running
+
+A C source file such as `hello.c` must first be **compiled** into an executable program.
+
+Typical executable names are:
+
+| Operating System | Executable  |
+| ---------------- | ----------- |
+| Linux/Unix       | `hello`     |
+| Windows          | `hello.exe` |
+
+A C compiler performs this conversion.
+</md></sn><sn><md>#### Compiling with GCC
+
+**GCC (GNU Compiler Collection)** is one of the most widely used C compilers.
+Open a terminal, navigate to the directory containing `hello.c`, and run:
+
+```bash
+gcc hello.c -o hello
+```
+
+If there are no errors, GCC creates an executable named `hello`.
+The `-o` option specifies the name of the output executable.
+
+</md></sn><sn><md>##### Recommended Compilation
+
+You can enable additional warnings with:
+
+```bash
+gcc -Wall -Wextra -Werror -o hello hello.c
+```
+
+| Option     | Purpose                             |
+| ---------- | ----------------------------------- |
+| `-Wall`    | Enables many common warnings        |
+| `-Wextra`  | Enables additional warnings         |
+| `-Werror`  | Treats warnings as errors           |
+| `-o hello` | Names the output executable `hello` |
+
+These options are not required for this simple program, but they help identify potential problems in larger programs.
+</md></sn><sn><md>#### Compiling with different ways
+
+- **Clang**
+    The same program can be compiled using **Clang**:
+
+    ```bash
+    clang -Wall -Wextra -Werror -o hello hello.c
+    ```
+
+    Clang's command-line options are designed to be similar to GCC's.
+
+- **Microsoft C Compiler**
+    On Windows, if Visual Studio's `cl.exe` compiler and its environment variables are properly configured, you can compile the program with:
+
+    ```cmd
+    cl hello.c
+    ```
+
+    This produces an executable named:
+
+    ```text
+    hello.exe
+    ```
+</md></sn><sn><md>#### Executing the Program
+
+On Linux/Unix, run the compiled program with:
+
+```bash
+./hello
+```
+
+The program produces:
+
+```text
+Hello, World
+```
+
+The complete process is therefore:
+
+```text
+hello.c
+   ↓
+C Compiler
+   ↓
+hello
+   ↓
+./hello
+   ↓
+Hello, World
+```
+</md></sn><sn><md>#### Key Concepts Introduced
+
+| Concept              | Example               |
+| -------------------- | --------------------- |
+| Header file          | `#include <stdio.h>`  |
+| Function             | `main()`              |
+| Function return type | `int`                 |
+| Function parameters  | `void`                |
+| Code block           | `{ ... }`             |
+| Function call        | `puts()`              |
+| String literal       | `"Hello, World"`      |
+| Statement terminator | `;`                   |
+| Return statement     | `return 0;`           |
+| C source file        | `hello.c`             |
+| Compiler             | GCC / Clang / MSVC    |
+| Executable           | `hello` / `hello.exe` |
+</stdio.h></md></sn>
