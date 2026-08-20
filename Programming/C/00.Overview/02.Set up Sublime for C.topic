@@ -9,7 +9,7 @@ Here’s a step-by-step guide to get you compiling and running C code directly f
     <tags>#02.set up sublime for c</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 20 2026 09:05:29 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 20 2026 09:09:57 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-DFFA4NFRIY</id>
     <duration></duration>
   </config>
@@ -53,11 +53,11 @@ A new file will open. Delete any placeholder content and paste the following JSO
 </md></sn><sn><md>#### 3. Save the Build System
 
 Save the file (e.g., `C.sublime-build`) in the suggested "User" directory . The name you choose will appear in the build system menu.
-</md></sn><sn><md>#### 4. Select Your New Build System
+![screenshot](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/C/00.Overview/assets/sublime-build-save-screenshot.png)</md></sn><sn><md>#### 4. Select Your New Build System
 
 1.  Go back to the menu **`Tools`** → **`Build System`**.
 2.  Select your newly created build system from the list (e.g., `C`).
-</md></sn><sn><md>#### 5. Write and Run Your C Code
+![screenshot](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/C/00.Overview/assets/sublime-build-c-selection-screenshot.png)</md></sn><sn><md>#### 5. Write and Run Your C Code
 
 Now you're all set. Open or create a C file (with a `.c` extension) to use this build system .
 
@@ -74,7 +74,7 @@ int main(void)
 ```
 +++
 
-*   **Compile Only**: Press **`Ctrl+B`** (Linux) to build/compile your code .
+*   **Compile Only**: Press **`Ctrl+B`** (Linux) to build/compile your code .It will just compile your code not execute.Now your hello_world.c is executable.
 *   **Compile and Run**: Press **`Ctrl+Shift+B`** to open the build menu and select the **`Run`** variant . The output of your compiled program will appear in the panel at the bottom of the Sublime Text window.
 
 </stdio.h></md></sn><sn><md>#### Optional Enhancements
