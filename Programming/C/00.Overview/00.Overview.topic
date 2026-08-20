@@ -1,10 +1,25 @@
 
-  <sn></sn>
+  <sn><md>### C Overview
+
+**path**
+self.field.programmnig.C
+
+**target**
+- understanding low level programming
+- understanding hardware level coding
+- understanding os,kernel like linux
+- making some os level software
+
+**resources**
+- [CNotesForProfessional](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/C/resources/CNotesForProfessionals.pdf)
+- chatgpt and other Ai
+- will be added later
+</md></sn>
   <config>
     <tags>#00.overview</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 20 2026 07:47:52 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 20 2026 07:51:44 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-lxaf2RJGFR</id>
     <duration></duration>
   </config>
