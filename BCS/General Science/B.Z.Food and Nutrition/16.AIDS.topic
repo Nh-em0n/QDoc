@@ -1,10 +1,39 @@
 
-  <sn></sn>
+  <sn><md>:::.row
+:::.col-12 .col-lg-8
+### AIDS
+
+* **Background:** First discovered in `America in 1981`, AIDS (**Acquired Immune Deficiency Syndrome**) is recognized worldwide, with a ++high concentration++ of cases in `Africa`.
+* **Cause:** It is caused by the **Human Immunodeficiency Virus** (HIV).
+* **Mechanism:** The human immune system relies on **lymphocytes** in the blood to produce antibodies. HIV **targets and destroys** `T-lymphocytes` (white blood cells), weakening body immunity and leaving the individual vulnerable to fatal opportunistic infections.
+:::
+
+:::.col-12 .col-lg-4
+![img](https://www.pbs.org/newshour/app/uploads/2016/10/GettyImages-658072731-1024x681.jpg)
+:::
+:::
+</md></sn>
   <config>
     <tags>#16.aids</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Aug 08 2026 08:00:11 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Aug 22 2026 12:42:51 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-SbrfecaQRs</id>
     <duration></duration>
   </config>
+<sn><md>### Causes &amp; Transmission of AIDS
+
+* **Associated Illnesses:** *Immune breakdown* leads to severe conditions such as `respiratory illnesses, brain diseases, gastrointestinal disorders, and tumors`.
+* **Asymptomatic Carrier Phase:** Symptoms often do not appear for the first `5 to 10 years` after infection, during which the infected person acts as an `asymptomatic carrier` who can spread the virus.
+* **Modes of Transmission:**
+* Unprotected sexual contact
+* Mother-to-child transmission during pregnancy or through breastfeeding
+* Contaminated blood transfusions
+* Sharing unsterilized syringes among drug users
+
+
+* **Non-Transmission Pathways:** The virus **cannot** be transmitted through food, water, insects, or casual physical touch.
+</md></sn><sn><md>### Prevention &amp; Treatment
+
+* **Public Awareness:** Educating people about transmission risks (unprotected sex, shared needles, unsafe blood transfusions) is the primary method of prevention.
+* **Control &amp; Management:** While **oral medications** can `control` the virus rather than fully cure it, experimental `bone marrow transplants` have successfully cured a select number of cases.</md></sn>
