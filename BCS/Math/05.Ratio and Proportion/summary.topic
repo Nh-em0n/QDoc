@@ -11,7 +11,7 @@
     <tags>#summary</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Aug 23 2026 17:30:46 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Aug 23 2026 17:48:52 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-7ULBNLV4Jj</id>
     <duration></duration>
   </config>
@@ -55,4 +55,9 @@
   x/y = 45/10
   x:y = 45:10
   x:y = 9:2   
-</md></sn>
+</md></sn><sn><md>#### Important Math
+
+- 1,2,3,5,8,10,11,12,13,14,15,16,17,20,23,27,29,31,33,34,35
+- 36,37,38,41,47,53,57,59,60,64,65,66
+- 67,68,75,78,79
+- 80-96</md></sn>
