@@ -150,7 +150,169 @@ $\therefore \text{Minimum 2 litchis were added}$.
     <tags>#10.bcs.type5</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Aug 23 2026 17:20:07 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Aug 23 2026 17:37:04 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Eq2BaPWy8W</id>
     <duration></duration>
   </config>
+<sn><md>#### 89 no math
+
++++ view
+
+**Qn.Three friends ate an equal amount of meal together. The 1st and 2nd friends had 12 and 8 breads respectively. In exchange for bread, the 3rd friend gave 3 Taka. How much money will the 1st and 2nd friends get for their bread?**
+
+Let the three friends eat **equal amounts of food**.
+
+### Step 1: Find how much bread each friend actually contributed
+
+The 1st friend had 12 breads, and the 2nd had 8 breads.
+
+Since all three ate equal amounts, the 3rd friend's share must come from the **extra bread** contributed by the 1st and 2nd friends.
+
+Total bread from the first two:
+
+$$
+12+8=20
+$$
+
+Since this was divided equally among 3 friends:
+
+$$
+\frac{20}{3}
+$$
+
+Each friend's consumption was therefore:
+
+$$
+\frac{20}{3}\text{ breads}
+$$
+
+### Step 2: Calculate the bread given to the 3rd friend
+
+The 1st friend contributed:
+
+$$
+12-\frac{20}{3}
+=\frac{36-20}{3}
+=\frac{16}{3}
+$$
+
+The 2nd friend contributed:
+
+$$
+8-\frac{20}{3}
+=\frac{24-20}{3}
+=\frac{4}{3}
+$$
+
+So the ratio of their contributions to the 3rd friend is:
+
+$$
+\frac{16}{3}:\frac{4}{3}=16:4=4:1
+$$
+
+Thus, the 3 Taka should be divided in the ratio **4 : 1**.
+
+### Step 3: Divide 3 Taka
+
+Total ratio:
+
+$$
+4+1=5
+$$
+
+1st friend's money:
+
+$$
+3\times\frac{4}{5}
+=\boxed{2.40\text{ Taka}}
+$$
+
+2nd friend's money:
+
+$$
+3\times\frac{1}{5}
+=\boxed{0.60\text{ Taka}}
+$$
+
+### Answer
+
+| Friend     | Money received |
+| ---------- | -------------: |
+| 1st friend |      **৳2.40** |
+| 2nd friend |      **৳0.60** |
+| **Total**  |      **৳3.00** |
+
+**Therefore, the 1st friend gets ৳2.40 and the 2nd friend gets ৳0.60.**
+
+
+
+**Qn.Again if first friend already give 20/3 then why 2nd friend need to give 20/3**
+
+Because **the 20/3 is not the amount the first friend gives to the third friend**. It is the amount of bread **each friend eats**.
+
+That's the key distinction.
+
+Suppose the three friends eat equally:
+
+$$
+\text{Each friend's meal}=\frac{20}{3}
+$$
+
+The first friend originally has 12 breads. He needs only $\frac{20}{3}$ breads for **his own meal**. Therefore, his remaining bread is:
+
+$$
+12-\frac{20}{3}=\frac{16}{3}
+$$
+
+Similarly, the second friend originally has 8 breads. He also needs $\frac{20}{3}$ breads for **his own meal**. Therefore, his remaining bread is:
+
+$$
+8-\frac{20}{3}=\frac{4}{3}
+$$
+
+So:
+
+* First friend **eats** $\frac{20}{3}$ and has $\frac{16}{3}$ left to give.
+* Second friend **eats** $\frac{20}{3}$ and has $\frac{4}{3}$ left to give.
+* Third friend eats $\frac{20}{3}$ but initially contributed no bread.
+
+The third friend's meal therefore comes from:
+
+$$
+\frac{16}{3}+\frac{4}{3}
+=\frac{20}{3}
+$$
+
+which is exactly one friend's meal.
+
+So the **first friend is not giving $\frac{20}{3}$ to the third friend**. He gives only:
+
+$$
+\boxed{\frac{16}{3}}
+$$
+
+and the second gives:
+
+$$
+\boxed{\frac{4}{3}}
+$$
+
+That's why the money ratio is:
+
+$$
+\frac{16}{3}:\frac{4}{3}=4:1
+$$
+
+and the ৳3 is divided as:
+
+$$
+\boxed{৳2.40\text{ and }৳0.60}
+$$
+
+The easiest way to think about it is: **first subtract what each person ate; whatever remains is what they contributed to the third person.**
+
++++
+
+
+
+</md></sn>
