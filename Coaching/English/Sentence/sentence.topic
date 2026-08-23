@@ -1,10 +1,200 @@
 
-  <sn></sn>
+  <sn><md>## **Sentence কী?**
+
+**Sentence (বাক্য)** হলো এমন কতগুলো শব্দের সমষ্টি, যা **সম্পূর্ণ একটি অর্থ বা ভাব প্রকাশ করে**।
+
+অর্থাৎ, কয়েকটি শব্দ শুধু পাশাপাশি থাকলেই sentence হয় না; শব্দগুলোকে এমনভাবে সাজাতে হবে যাতে একটি **সম্পূর্ণ meaning** পাওয়া যায়।
+
+### **Example**
+
+* **I go to school.** → আমি স্কুলে যাই। ✅
+* **She is a student.** → সে একজন শিক্ষার্থী। ✅
+* **Playing football.** → ফুটবল খেলা। ❌
+  এটি সম্পূর্ণ ভাব প্রকাশ করছে না, তাই এটি sentence নয়।
+
+---
+
+## **Sentence-এর Type Based on Meaning**
+
+**Meaning বা অর্থ অনুযায়ী Sentence প্রধানত ৫ প্রকার।**
+
+| Type             | বাংলা নাম                 | কী প্রকাশ করে                        |
+| ---------------- | ------------------------- | ------------------------------------ |
+| 1. Assertive     | বিবৃতিমূলক বাক্য          | কোনো তথ্য, ঘটনা বা বক্তব্য           |
+| 2. Interrogative | প্রশ্নবোধক বাক্য          | কোনো প্রশ্ন                          |
+| 3. Imperative    | আদেশ/অনুরোধসূচক বাক্য     | আদেশ, অনুরোধ, উপদেশ, নিষেধ           |
+| 4. Optative      | ইচ্ছা/প্রার্থনাসূচক বাক্য | ইচ্ছা, আশীর্বাদ, প্রার্থনা           |
+| 5. Exclamatory   | আবেগসূচক বাক্য            | বিস্ময়, আনন্দ, দুঃখ, ভয় ইত্যাদি আবেগ |
+
+---
+
+#### **1. Assertive Sentence — বিবৃতিমূলক বাক্য**
+
+যে sentence কোনো **তথ্য, ঘটনা, মতামত বা বক্তব্য** প্রকাশ করে তাকে Assertive Sentence বলে।
+
+এটি সাধারণত **full stop (.)** দিয়ে শেষ হয়।
+
+**Examples:**
+
+* **I am a student.**
+  আমি একজন ছাত্র।
+
+* **She lives in Dhaka.**
+  সে ঢাকায় থাকে।
+
+* **The sun rises in the east.**
+  সূর্য পূর্ব দিকে উদিত হয়।
+
+* **He does not like coffee.**
+  সে কফি পছন্দ করে না।
+
+Assertive sentence দুই ধরনের হতে পারে:
+
+* **Affirmative:** He is happy.
+* **Negative:** He is not happy.
+
+---
+
+#### **2. Interrogative Sentence — প্রশ্নবোধক বাক্য**
+
+যে sentence-এর মাধ্যমে **কোনো প্রশ্ন করা হয়**, তাকে Interrogative Sentence বলে।
+
+এটি সাধারণত **question mark (?)** দিয়ে শেষ হয়।
+
+**Examples:**
+
+* **Are you a student?**
+  তুমি কি একজন ছাত্র?
+
+* **Where do you live?**
+  তুমি কোথায় থাকো?
+
+* **What is your name?**
+  তোমার নাম কী?
+
+* **Did you eat rice?**
+  তুমি কি ভাত খেয়েছ?
+
+**সহজভাবে:**
+যে বাক্যে **কিছু জানতে চাওয়া হয় → Interrogative Sentence**।
+
+---
+
+#### **3. Imperative Sentence — আদেশ/অনুরোধসূচক বাক্য**
+
+যে sentence-এর মাধ্যমে **আদেশ, অনুরোধ, উপদেশ, নিষেধ বা নির্দেশ** দেওয়া হয়, তাকে Imperative Sentence বলে।
+
+**Examples:**
+
+**আদেশ:**
+
+* **Open the door.**
+  দরজাটি খোলো।
+
+* **Sit down.**
+  বসো।
+
+**অনুরোধ:**
+
+* **Please help me.**
+  দয়া করে আমাকে সাহায্য করো।
+
+* **Please give me some water.**
+  দয়া করে আমাকে কিছু পানি দাও।
+
+**উপদেশ:**
+
+* **Take care of your health.**
+  তোমার স্বাস্থ্যের যত্ন নাও।
+
+* **Study regularly.**
+  নিয়মিত পড়াশোনা করো।
+
+**নিষেধ:**
+
+* **Do not make noise.**
+  শব্দ করো না।
+
+* **Don't touch it.**
+  এটি স্পর্শ করো না।
+
+**সহজভাবে:**
+যে বাক্যে **কাউকে কিছু করতে বা না করতে বলা হয় → Imperative Sentence**।
+
+---
+
+#### **4. Optative Sentence — ইচ্ছা/প্রার্থনাসূচক বাক্য**
+
+যে sentence-এর মাধ্যমে **ইচ্ছা, প্রার্থনা, আশীর্বাদ বা অভিশাপ** প্রকাশ করা হয়, তাকে Optative Sentence বলে।
+
+**Examples:**
+
+* **May you live long.**
+  তুমি দীর্ঘজীবী হও।
+
+* **May Allah bless you.**
+  আল্লাহ তোমাকে আশীর্বাদ করুন।
+
+* **May you succeed in life.**
+  তুমি জীবনে সফল হও।
+
+* **May your dreams come true.**
+  তোমার স্বপ্নগুলো সত্যি হোক।
+
+এখানে বক্তা কোনো **ইচ্ছা বা প্রার্থনা** প্রকাশ করছে।
+
+---
+
+#### **5. Exclamatory Sentence — আবেগসূচক বাক্য**
+
+যে sentence-এর মাধ্যমে **তীব্র আবেগ বা অনুভূতি** প্রকাশ করা হয়, তাকে Exclamatory Sentence বলে।
+
+যেমন— **আনন্দ, বিস্ময়, দুঃখ, ভয়, রাগ** ইত্যাদি।
+
+সাধারণত **exclamation mark (!)** ব্যবহার করা হয়।
+
+**Examples:**
+
+* **What a beautiful flower!**
+  কী সুন্দর ফুল!
+
+* **How beautiful the girl is!**
+  মেয়েটি কত সুন্দর!
+
+* **What a wonderful day!**
+  কী চমৎকার দিন!
+
+* **Alas! He is dead.**
+  হায়! সে মারা গেছে।
+
+* **Hurrah! We have won the match.**
+  হুররে! আমরা ম্যাচটি জিতেছি।
+
+---
+
+## **এক নজরে মনে রাখার নিয়ম**
+
+| Sentence          | নিজেকে প্রশ্ন করুন                | Example                     |
+| ----------------- | --------------------------------- | --------------------------- |
+| **Assertive**     | কোনো তথ্য/বক্তব্য দেওয়া হয়েছে?    | **He is a doctor.**         |
+| **Interrogative** | প্রশ্ন করা হয়েছে?                 | **Is he a doctor?**         |
+| **Imperative**    | আদেশ/অনুরোধ/উপদেশ দেওয়া হয়েছে?    | **Be quiet.**               |
+| **Optative**      | ইচ্ছা/প্রার্থনা প্রকাশ করা হয়েছে? | **May you be happy.**       |
+| **Exclamatory**   | তীব্র আবেগ প্রকাশ করা হয়েছে?      | **What a beautiful place!** |
+
+### **সহজ সূত্র**
+
+**Statement → Assertive**
+**Question → Interrogative**
+**Order/Request/Advice → Imperative**
+**Wish/Prayer → Optative**
+**Strong Emotion → Exclamatory**
+</md></sn>
   <config>
     <tags>#sentence</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Aug 23 2026 20:42:21 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Aug 23 2026 20:47:41 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-177eukCti4</id>
     <duration></duration>
   </config>
