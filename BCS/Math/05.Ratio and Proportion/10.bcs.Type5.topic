@@ -1,10 +1,156 @@
 
-  <sn></sn>
+  <sn><md>**Important Math** : All
+
+
+৮৬. A man and a woman share a prize of 1000 Taka in the ratio 1 : 4. If the woman divides her share among herself, her mother, and her daughter in the ratio 2 : 1 : 1, how much money will the daughter get? [Primary Headmaster - (Khulna) - '09]
+A. 150 Taka
+B. **200 Taka**
+C. 250 Taka
+D. 275 Taka
+
++++ Explanation:
+Man : Woman $= 1 : 4 \implies \text{Sum of ratio terms} = 1 + 4 = 5$
+Woman's share $= 1000 \times \frac{4}{5} = 800 \text{ Taka}$
+Woman : Mother : Daughter $= 2 : 1 : 1 \implies \text{Sum of ratio terms} = 2 + 1 + 1 = 4$
+$\therefore \text{Daughter's share} = 800 \times \frac{1}{4} = 200 \text{ Taka}$
++++
+
+৮৭. A brother and a sister divide 5,000 collected postage stamps between themselves in the ratio 5 : 3. If the brother keeps the larger part of his share for himself and divides the rest with his two friends in the ratio 3 : 1 : 1, how many postage stamps will each of his friends get? [Primary Headmaster (Rajshahi) - '09, Primary Headmaster (Shiuli) - '12]
+A. 575
+B. 600
+C. **625**
+D. 650
+
++++ Explanation:
+Brother : Sister $= 5 : 3 \implies \text{Sum of ratio terms} = 5 + 3 = 8$
+Brother's share $= 5000 \times \frac{5}{8} = 3125 \text{ stamps}$
+Brother and two friends ratio $= 3 : 1 : 1 \implies \text{Sum of ratio terms} = 3 + 1 + 1 = 5$
+$\therefore \text{Each friend gets} = 3125 \times \frac{1}{5} = 625 \text{ stamps}$
++++
+
+৮৮. Ka, Kha, and Ga started a business with 280 Taka. Ka gave 45 Taka more than Kha, and Kha gave 70 Taka less than Ga. If there is a profit of 56 Taka in the business, how much profit will Ka get? [Anti-Corruption Inspector - 1984]
+A. **20 Taka**
+B. 25 Taka
+C. 15 Taka
+D. 30 Taka
+
++++ Explanation:
+Let Kha's capital $= x$ Taka.
+Ka's capital $= x + 45$, Ga's capital $= x + 70$.
+According to the question, $(x + 45) + x + (x + 70) = 280 \implies 3x + 115 = 280 \implies 3x = 165 \implies x = 55$.
+Capitals: Ka $= 100$, Kha $= 55$, Ga $= 125$.
+Ratio $= 100 : 55 : 125 = 20 : 11 : 25 \implies \text{Sum of ratio terms} = 56$.
+$\therefore \text{Ka's profit share} = 56 \times \frac{20}{56} = 20 \text{ Taka}$.
++++
+
+৮৯. Three friends ate an equal amount of meal together. The 1st and 2nd friends had 12 and 8 breads respectively. In exchange for bread, the 3rd friend gave 3 Taka. How much money will the 1st and 2nd friends get for their bread? [Cotton Development Officer - '17]
+A. 2.30, .60
+B. **2.40, .60**
+C. 2.50, .60
+D. 2.60, .60
+
++++ Explanation:
+Total breads $= 12 + 8 = 20$.
+Since 3 friends ate equally, each ate $= \frac{20}{3}$ breads.
+1st friend gave to 3rd friend $= 12 - \frac{20}{3} = \frac{16}{3}$ breads.
+2nd friend gave to 3rd friend $= 8 - \frac{20}{3} = \frac{4}{3}$ breads.
+Ratio of bread contributed $= \frac{16}{3} : \frac{4}{3} = 4 : 1$.
+3rd friend paid 3 Taka $= 300 \text{ poisha}$.
+1st friend gets $= 300 \times \frac{4}{5} = 240 \text{ poisha} = 2.40 \text{ Taka}$.
+2nd friend gets $= 300 \times \frac{1}{5} = 60 \text{ poisha} = 0.60 \text{ Taka}$.
++++
+
+৯০. Adding 1 to both terms of which ratio makes the ratio 3 : 4, and subtracting 1 from both terms makes the ratio 2 : 3? [Registered Primary Assistant Teacher - '11 (Jaba)]
+A. 2 : 5
+B. 4 : 9
+C. 6 : 11
+D. **5 : 7**
+
++++ Explanation:
+Let the ratio be $x : y$.
+Adding 1 to both: $\frac{x + 1}{y + 1} = \frac{3}{4} \implies 4x - 3y = -1$
+Subtracting 1 from both: $\frac{x - 1}{y - 1} = \frac{2}{3} \implies 3x - 2y = 1$
+Solving the equations gives $x = 5, y = 7$.
+$\therefore \text{The ratio is } 5 : 7$.
++++
+
+৯১. The ratio of two numbers is 5 : 8. If 2 is added to both, the ratio becomes 2 : 3. What are the two numbers? [Ministry of Labour and Employment Assistant Chief Inspector - '09]
+A. 7 and 11
+B. 12 and 18
+C. 10 and 24
+D. **10 and 16**
+
++++ Explanation:
+Let the numbers be $5x$ and $8x$.
+$\frac{5x + 2}{8x + 2} = \frac{2}{3} \implies 15x + 6 = 16x + 4 \implies x = 2$
+$\therefore \text{Numbers are } 5 \times 2 = 10 \text{ and } 8 \times 2 = 16$.
++++
+
+৯২. The difference between two numbers is $\frac{1}{5}$th of their sum. What is the ratio of the two numbers? [Department of Immigration and Passports Assistant Director - '11]
+A. 3 : 1
+B. 2 : 3
+C. 1 : 4
+D. **3 : 2** (Correct option choice D, ratio is 3:2)
+
++++ Explanation:
+Let the numbers be $x$ and $y$.
+$(x - y) = \frac{1}{5}(x + y) \implies 5x - 5y = x + y \implies 4x = 6y \implies \frac{x}{y} = \frac{6}{4} = \frac{3}{2}$
+$\therefore x : y = 3 : 2$.
++++
+
+৯৩. The ratio of Meher and Aziz's monthly salaries is 7 : 5 and the sum of their monthly salaries is 12,000 Taka. If their annual incremented salary increases by 200 Taka and 150 Taka respectively, what will be the ratio of their salaries after one year? [Directorate of Social Services Assistant Director - '07; Upazila Women and Children Affairs Officer - '07]
+A. 120 : 103
+B. **144 : 103**
+C. 144 : 104
+D. 144 : 105
+
++++ Explanation:
+Meher's salary $= 12000 \times \frac{7}{12} = 7000 \text{ Taka}$.
+Aziz's salary $= 12000 - 7000 = 5000 \text{ Taka}$.
+After 1 year, new ratio $= (7000 + 200) : (5000 + 150) = 7200 : 5150 = 144 : 103$.
++++
+
+৯৪. Mamun and Sobuj invest in a partnership business in the ratio 2 : 1. At the end of the year, they donate 900 Taka from their profit to the poor and divide the remaining profit in the ratio of their capital. If Sobuj's profit is 2000 Taka, what was the total profit? [National Security Intelligence (NSI) Junior Field Officer - 2019]
+A. 2900 Taka
+B. 6000 Taka
+C. **6900 Taka**
+D. 7200 Taka
+
++++ Explanation:
+If Sobuj gets 2000 Taka, Mamun gets $2000 \times 2 = 4000 \text{ Taka}$.
+Remaining profit $= 2000 + 4000 = 6000 \text{ Taka}$.
+$\therefore \text{Total profit} = 6000 + 900 = 6900 \text{ Taka}$.
++++
+
+৯৫. In an 80 kg sugar syrup mixture, sugar content is 25%. How many kg of a second syrup mixture containing 10% sugar must be added to the first mixture so that the sugar content becomes 20%? [National Security Intelligence (NSI) Field Officer - 2019]
+A. 30 kg
+B. **40 kg**
+C. 60 kg
+D. 80 kg
+
++++ Explanation:
+Let $x$ kg of the second syrup be added.
+$80 \times 25\% + x \times 10\% = (80 + x) \times 20\%$
+$\implies 2000 + 10x = 1600 + 20x \implies 10x = 400 \implies x = 40 \text{ kg}$.
++++
+
+৯৬. The ratio of mangoes, oranges, and litchis kept in a basket is 7 : 3 : 2 respectively. Some mangoes were removed, and some new oranges and litchis were added. Due to this, the new ratio of mangoes, oranges, and litchis became 9 : 5 : 4. What is the minimum number of litchis added later? [National Security Intelligence (NSI) Assistant Director - 2019]
+A. 1
+B. **2**
+C. 5
+D. 8
+
++++ Explanation:
+Initial ratio $= 7 : 3 : 2 = 21 : 9 : 6$.
+New ratio $= 9 : 5 : 4 = 18 : 10 : 8$.
+Difference in litchis $= 8 - 6 = 2$.
+$\therefore \text{Minimum 2 litchis were added}$.
++++</md></sn>
   <config>
     <tags>#10.bcs.type5</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Aug 19 2026 11:40:31 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Aug 23 2026 17:20:07 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Eq2BaPWy8W</id>
     <duration></duration>
   </config>
