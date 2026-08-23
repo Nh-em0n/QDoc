@@ -1,10 +1,58 @@
 
-  <sn></sn>
+  <sn><md>### Summary {.text-center}
+
+
+**Definition**
+
+- **Ratio** : comparison of two or more same type data
+- **Proportion** : two or more ratios are equal
+</md></sn>
   <config>
     <tags>#summary</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Aug 23 2026 17:28:17 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Aug 23 2026 17:30:46 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-7ULBNLV4Jj</id>
     <duration></duration>
   </config>
+<sn><md>### Equation
+
+- compound/mixed ratio of a:b,m:n,p:q is amp : bnq
+- conversion to continued ratio
+  - a:b,b:c then a:b:c
+  - a:p,q:c To convert two ratios into a continued ratio, multiply both terms of the second ratio by the subsequent of the first ratio, and multiply both terms of the first ratio by the antecedent of the second ratio
+  then multiply  aq:pq,pq:cp then aq:pq:cp
+
+- **Real value**
+  - ratio p:q
+  - common divisor x
+  - Total
+  Real value of q = qx where x = $\frac{\text{Total}}{p+q}
+
+- **Evaluate x from delta**
+  sometimes total may have not given,in this case they provide delta of two difference value,we can evaluate x from that
+  p:q and their main difference is D
+  px - qx = D
+  x = ?
+
+</md></sn><sn><md>### Facts
+
+- a:b:c = 8:10:15,if a has 800 what has c?
+  ax = 800
+  x = 100
+  so c has cx = 1500
+- a:b:c = 2:3:2 if total is 280,how much is c
+  ax+bx+cx = 280
+  2x+3x+2x = 280
+  7x = 280
+  x = 40
+  2x = 80
+  3x = 120
+  (ax:bx:cx) = (80:120:80)  
+- One number is 450% of another.what is their ratio?
+  x = 450% of y
+  x = 450y/100
+  x/y = 45/10
+  x:y = 45:10
+  x:y = 9:2   
+</md></sn>
