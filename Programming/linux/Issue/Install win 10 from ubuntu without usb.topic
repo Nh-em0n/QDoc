@@ -1,10 +1,561 @@
 
-  <sn></sn>
+  <sn><md># Installing Windows 10 from Ubuntu Without a USB Drive
+
+*A practical guide based on the successful installation method we used.*
+
+This method installs Windows 10 from an existing Ubuntu system **without a USB flash drive or DVD**. The Windows ISO is extracted to a temporary NTFS partition on the hard drive, and GRUB is used to start Windows Setup.
+
+&gt; **Important:** This guide assumes the computer uses **UEFI boot mode** and the disk uses a **GPT partition table**. Back up important data before modifying partitions.
+
+---
+
+## 1. The basic idea
+
+Instead of creating a bootable USB, we use the internal hard drive:
+
+```text
+Hard Drive
+│
+├── Existing data partitions
+│
+├── ~8 GB NTFS partition
+│   └── Extracted Windows 10 ISO
+│
+├── Free space for Windows
+│   └── Windows 10 will be installed here
+│
+└── EFI partitions
+```
+
+The temporary ~8 GB NTFS partition contains the Windows installation files.
+
+GRUB starts:
+
+```text
+EFI/Boot/bootx64.efi
+```
+
+from that partition.
+
+Windows Setup then runs normally and installs Windows onto the target partition.
+
+---
+
+# 2. Requirements
+
+You need:
+
+* An existing Ubuntu installation
+* Windows 10 ISO
+* At least **8 GB** of space for the extracted installer
+* At least **30–40 GB** for Windows itself
+* GPT partitioned disk
+* UEFI boot mode
+* GRUB bootloader
+
+The Windows installer partition can be larger than 8 GB if necessary.
+
+---
+
+# 3. Check the boot mode
+
+In Ubuntu:
+
+```bash
+[ -d /sys/firmware/efi ] &amp;&amp; echo "UEFI mode" || echo "Legacy BIOS mode"
+```
+
+For this procedure, you want:
+
+```text
+UEFI mode
+```
+
+Check the partition table:
+
+```bash
+sudo parted -l
+```
+
+You should see:
+
+```text
+Partition Table: gpt
+```
+
+---
+
+# 4. Create the Windows installer partition
+
+Create an approximately **8 GB NTFS partition**.
+
+It should be separate from the partition where Windows will eventually be installed.
+
+For example:
+
+```text
+/dev/sda4
+```
+
+could be the installer partition.
+
+**Do not assume `/dev/sda4` on another computer.** Your partition number may be different.
+
+After creating it, identify it with:
+
+```bash
+lsblk -o NAME,SIZE,FSTYPE,LABEL,UUID,MOUNTPOINTS
+```
+
+For example:
+
+```text
+sda4    7.8G ntfs    1625B5C6518E5068
+```
+
+---
+
+# 5. Extract the Windows ISO to the installer partition
+
+Mount the Windows ISO by double-clicking it in Ubuntu's file manager, or use:
+
+```bash
+sudo mkdir -p /mnt/winiso
+sudo mount -o loop ~/Downloads/Win10.iso /mnt/winiso
+```
+
+Then mount the installer partition:
+
+```bash
+sudo mkdir -p /mnt/win-installer
+sudo mount /dev/sda4 /mnt/win-installer
+```
+
+Copy **all files** from the ISO:
+
+```bash
+sudo cp -a /mnt/winiso/. /mnt/win-installer/
+```
+
+This is important. The installer partition should contain things such as:
+
+```text
+boot/
+efi/
+sources/
+bootmgr
+bootmgr.efi
+setup.exe
+```
+
+Check:
+
+```bash
+ls -lah /mnt/win-installer
+```
+
+You should see something similar to:
+
+```text
+autorun.inf
+boot/
+bootmgr
+bootmgr.efi
+efi/
+setup.exe
+sources/
+support/
+```
+
+---
+
+# 6. Verify the UEFI boot file
+
+The Windows ISO should contain:
+
+```text
+efi/boot/bootx64.efi
+```
+
+Check it:
+
+```bash
+ls -lah /mnt/win-installer/efi/boot/
+```
+
+You should see:
+
+```text
+bootx64.efi
+```
+
+You can also verify the partition:
+
+```bash
+sudo grub-probe --target=fs_uuid \
+/mnt/win-installer/efi/boot/bootx64.efi
+```
+
+It should return the UUID of your installer partition.
+
+For example:
+
+```text
+1625B5C6518E5068
+```
+
+Also:
+
+```bash
+sudo grub-probe --target=partmap \
+/mnt/win-installer/efi/boot/bootx64.efi
+```
+
+For a GPT disk:
+
+```text
+gpt
+```
+
+---
+
+# 7. Create the GRUB entry
+
+Edit:
+
+```bash
+sudo nano /etc/grub.d/40_custom
+```
+
+Add:
+
+```text
+menuentry 'Windows 10 Installer' {
+    insmod part_gpt
+    insmod ntfs
+    insmod chain
+    search --no-floppy --fs-uuid --set=root YOUR_INSTALLER_UUID
+    chainloader /efi/boot/bootx64.efi
+}
+```
+
+Replace:
+
+```text
+YOUR_INSTALLER_UUID
+```
+
+with the UUID of your Windows installer partition.
+
+For our successful installation, it was:
+
+```text
+1625B5C6518E5068
+```
+
+So the actual entry was:
+
+```text
+menuentry 'Windows 10 Installer' {
+    insmod part_gpt
+    insmod ntfs
+    insmod chain
+    search --no-floppy --fs-uuid --set=root 1625B5C6518E5068
+    chainloader /efi/boot/bootx64.efi
+}
+```
+
+### Important
+
+This is the **UEFI/GPT version** of the GRUB entry.
+
+Do not blindly use an entry containing:
+
+```text
+set root='hd0,msdos4'
+chainloader +1
+```
+
+That belongs to a different BIOS/MBR setup.
+
+---
+
+# 8. Update GRUB
+
+Run:
+
+```bash
+sudo update-grub
+```
+
+Then verify:
+
+```bash
+sudo grep -A10 -B2 "Windows 10 Installer" /boot/grub/grub.cfg
+```
+
+You should see:
+
+```text
+menuentry 'Windows 10 Installer' {
+    insmod part_gpt
+    insmod ntfs
+    insmod chain
+    search --no-floppy --fs-uuid --set=root 1625B5C6518E5068
+    chainloader /efi/boot/bootx64.efi
+}
+```
+
+Check the configuration syntax:
+
+```bash
+sudo grub-script-check /boot/grub/grub.cfg
+```
+
+If there is no output, the configuration syntax is valid.
+
+---
+
+# 9. Reboot and start Windows Setup
+
+Reboot:
+
+```bash
+sudo reboot
+```
+
+When GRUB appears, select:
+
+```text
+Windows 10 Installer
+```
+
+GRUB loads:
+
+```text
+/efi/boot/bootx64.efi
+```
+
+from the NTFS installer partition.
+
+Windows Setup should start.
+
+---
+
+# 10. Install Windows
+
+When Windows Setup starts, choose:
+
+```text
+Install now
+```
+
+Select your desired edition and continue.
+
+When you reach the partition selection screen, select the **target space/partition intended for Windows**.
+
+### Be extremely careful here
+
+Do **not** accidentally format or delete your Ubuntu partition or personal data partitions.
+
+A typical target arrangement might look like:
+
+```text
+Microsoft Reserved      ~16 MB
+Data partition          296 GB
+Data partition          98 GB
+Windows installer       ~8 GB
+EFI System Partition    100 MB
+Windows                 ~500+ GB
+Recovery                ~500 MB
+```
+
+Windows Setup will normally create/use the appropriate GPT/UEFI partitions.
+
+---
+
+# 11. What happened in our successful installation
+
+After Windows installation, our HDD became:
+
+```text
+/dev/sda
+│
+├── sda1   16 MB       Microsoft Reserved
+├── sda2   296.1 GB    Drive1
+├── sda3    97.7 GB    Drive2
+├── sda4     7.8 GB    Windows installer
+├── sda5   100 MB      Windows EFI System Partition
+├── sda6   529.3 GB    Windows 10
+└── sda7   522 MB      Windows Recovery
+```
+
+The important Windows components were:
+
+```text
+sda5
+└── EFI
+    └── Microsoft
+        └── Boot
+            ├── bootmgfw.efi
+            ├── bootmgr.efi
+            └── BCD
+```
+
+and Windows itself was on:
+
+```text
+sda6
+```
+
+This confirms that the **USB-less installation method worked**.
+
+---
+
+# 12. What to do with the installer partition afterward
+
+Once Windows is successfully installed and you no longer need the installer files, the ~8 GB installer partition can be repurposed.
+
+**Do not delete it until you have confirmed Windows boots successfully on its own.**
+
+The installer partition was only needed to start Windows Setup.
+
+After installation, the Windows boot chain is:
+
+```text
+UEFI firmware
+       ↓
+Windows EFI partition
+       ↓
+bootmgfw.efi
+       ↓
+BCD
+       ↓
+Windows on NTFS
+```
+
+The installer partition is no longer required for normal Windows booting.
+
+---
+
+# 13. Important lessons from the process
+
+### The installer partition is not the Windows partition
+
+They have different purposes:
+
+```text
+Installer partition
+    ↓
+Windows Setup files
+    ↓
+starts installation
+```
+
+versus:
+
+```text
+Windows partition
+    ↓
+actual installed Windows
+```
+
+### `bootx64.efi` is important for the UEFI installer
+
+The Windows ISO provides:
+
+```text
+EFI/Boot/bootx64.efi
+```
+
+GRUB can chainload that EFI executable.
+
+### `bootmgfw.efi` is different
+
+After Windows is installed, its EFI partition contains:
+
+```text
+EFI/Microsoft/Boot/bootmgfw.efi
+```
+
+That is the Windows Boot Manager used for normal Windows startup.
+
+---
+
+# 14. UEFI/GPT vs Legacy/MBR
+
+This method is **not identical for every computer**.
+
+For a UEFI/GPT computer, use:
+
+```text
+insmod part_gpt
+insmod ntfs
+chainloader /efi/boot/bootx64.efi
+```
+
+For an old Legacy BIOS/MBR configuration, the procedure is different.
+
+Therefore, **always determine your boot mode and partition table first**.
+
+---
+
+# 15. Safety checklist
+
+Before starting:
+
+* [ ] Back up important files
+* [ ] Confirm UEFI mode
+* [ ] Confirm GPT
+* [ ] Identify the installer partition
+* [ ] Identify the Windows target partition
+* [ ] Verify `efi/boot/bootx64.efi`
+* [ ] Verify the installer UUID
+* [ ] Update GRUB
+* [ ] Verify the GRUB entry
+* [ ] Do not delete Ubuntu partitions
+* [ ] Do not delete data partitions
+* [ ] Do not delete the installer partition until Windows has booted successfully
+
+---
+
+## Final working GRUB configuration
+
+For the **UEFI/GPT method we successfully used**, the final installer entry was:
+
+```text
+menuentry 'Windows 10 Installer' {
+    insmod part_gpt
+    insmod ntfs
+    insmod chain
+    search --no-floppy --fs-uuid --set=root 1625B5C6518E5068
+    chainloader /efi/boot/bootx64.efi
+}
+```
+
+The key idea is simply:
+
+```text
+Windows 10 ISO
+      ↓
+Extract to NTFS partition
+      ↓
+GRUB finds partition by UUID
+      ↓
+GRUB chainloads EFI/Boot/bootx64.efi
+      ↓
+Windows Setup
+      ↓
+Install Windows to target partition
+```
+
+**Note:** I intentionally left out the later GRUB configuration/Windows boot-repair steps, as requested. This article covers the **USB-less Windows 10 installation procedure itself**, up to the point where Windows Setup successfully installs Windows.
+</md></sn>
   <config>
     <tags>#install win 10 from ubuntu without usb</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 27 2026 20:09:42 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Aug 27 2026 20:09:59 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-XQbCGYc6cV</id>
     <duration></duration>
   </config>
