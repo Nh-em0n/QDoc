@@ -1,10 +1,931 @@
 
-  <sn></sn>
+  <sn><md>## 1. List All Drives and Partitions
+
+The most useful command is:
+
+```bash
+lsblk -f
+```
+
+Example:
+
+```text
+NAME   FSTYPE FSVER LABEL  UUID                                 MOUNTPOINTS
+sda
+├─sda2 ntfs         Drive1 92ACD327ACD3049F                      /run/media/emon/Drive1
+├─sda3 ntfs         Drive2 4E7E3E2C7E3E0CE9                      /run/media/emon/Drive2
+└─sda4 vfat   FAT32        F64B-2F01
+sdb
+├─sdb1 vfat   FAT32        3E76-3F2C                            /boot/efi
+└─sdb4 ext4   1.0          48b9ff30-65f9-4e33-a675-2348a3cdf446 /
+```
+
+### Understanding the output
+
+* `sda`, `sdb` = physical drives
+* `sda1`, `sda2`, `sda3` = partitions on the first drive
+* `sdb1`, `sdb4` = partitions on the second drive
+* `FSTYPE` = filesystem type
+* `LABEL` = partition label
+* `UUID` = unique filesystem identifier
+* `MOUNTPOINTS` = where the partition is currently accessible
+
+For example:
+
+```text
+sda3 ntfs Drive2
+```
+
+means `/dev/sda3` is an NTFS partition labelled `Drive2`.
+
+---
+
+# 2. Get More Detailed Disk Information
+
+To see the partition table and sizes:
+
+```bash
+sudo fdisk -l
+```
+
+Another useful command:
+
+```bash
+sudo parted -l
+```
+
+To see filesystem information for a specific partition:
+
+```bash
+sudo blkid /dev/sda4
+```
+
+Example:
+
+```text
+/dev/sda4: UUID="F64B-2F01" TYPE="vfat"
+```
+
+---
+
+# 3. Check Whether a Partition Is Mounted
+
+Use:
+
+```bash
+findmnt /dev/sda4
+```
+
+If it is mounted, you may see:
+
+```text
+TARGET    SOURCE    FSTYPE OPTIONS
+/mnt/sda4 /dev/sda4 vfat   rw,relatime,...
+```
+
+Important mount options include:
+
+* `rw` = read/write
+* `ro` = read-only
+
+For example:
+
+```text
+rw
+```
+
+means the filesystem is mounted read/write.
+
+---
+
+# 4. Create a Mount Point
+
+A mount point is simply a directory where the contents of a partition will appear.
+
+For example:
+
+```bash
+sudo mkdir -p /mnt/sda4
+```
+
+Now `/mnt/sda4` exists and can be used as the mount point.
+
+You can check it with:
+
+```bash
+ls -ld /mnt/sda4
+```
+
+---
+
+# 5. Mount a Partition Normally
+
+For example:
+
+```bash
+sudo mount /dev/sda4 /mnt/sda4
+```
+
+Check:
+
+```bash
+findmnt /dev/sda4
+```
+
+Then view its contents:
+
+```bash
+ls -lah /mnt/sda4
+```
+
+---
+
+# 6. Mount a Partition as Read-Only
+
+If you want to prevent writing:
+
+```bash
+sudo umount /mnt/sda4
+```
+
+Then:
+
+```bash
+sudo mount -o ro /dev/sda4 /mnt/sda4
+```
+
+Check:
+
+```bash
+findmnt /dev/sda4
+```
+
+You should see:
+
+```text
+ro
+```
+
+in the mount options.
+
+Trying to create a file should fail:
+
+```bash
+sudo touch /mnt/sda4/test.txt
+```
+
+The filesystem will reject the write because it is mounted read-only.
+
+---
+
+# 7. Mount a Partition Read/Write
+
+To explicitly mount it read/write:
+
+```bash
+sudo umount /mnt/sda4
+sudo mount -o rw /dev/sda4 /mnt/sda4
+```
+
+Check:
+
+```bash
+findmnt /dev/sda4
+```
+
+Look for:
+
+```text
+rw
+```
+
+However, `rw` only means the filesystem is mounted read/write. It does **not necessarily mean your normal user can write to it**.
+
+---
+
+# 8. Why `rw` Does Not Always Mean Your User Can Write
+
+This is an important Linux concept.
+
+Suppose:
+
+```bash
+ls -ld /mnt/sda4
+```
+
+returns:
+
+```text
+drwxr-xr-x 2 root root 4096 Jan 1 1970 /mnt/sda4
+```
+
+The owner is:
+
+```text
+root
+```
+
+and the group is:
+
+```text
+root
+```
+
+The permissions are:
+
+```text
+drwxr-xr-x
+```
+
+This means:
+
+```text
+root  → read/write/enter
+group → read/enter
+others → read/enter
+```
+
+Therefore the normal user `emon` cannot create files there.
+
+For example:
+
+```bash
+touch /mnt/sda4/test.txt
+```
+
+may produce:
+
+```text
+Permission denied
+```
+
+even though:
+
+```text
+findmnt /dev/sda4
+```
+
+shows:
+
+```text
+rw
+```
+
+The filesystem is writable, but the **user does not have permission to write**.
+
+---
+
+# 9. Allow Root to Write
+
+If the partition is mounted read/write, root can normally write to it.
+
+For example:
+
+```bash
+sudo touch /mnt/sda4/test.txt
+```
+
+Check:
+
+```bash
+ls -l /mnt/sda4/test.txt
+```
+
+You may see:
+
+```text
+-rw-r--r-- 1 root root 0 ... test.txt
+```
+
+Delete it with:
+
+```bash
+sudo rm /mnt/sda4/test.txt
+```
+
+This is particularly useful when copying files to a partition that is currently owned by root.
+
+For example:
+
+```bash
+sudo cp /path/to/file.iso /mnt/sda4/
+```
+
+---
+
+# 10. Give a Normal User Write Access to FAT32
+
+FAT32 does not store normal Linux ownership and permissions like ext4.
+
+Therefore commands such as:
+
+```bash
+chown
+chmod
+```
+
+are generally not the correct way to permanently control ownership on FAT32.
+
+Instead, specify the user and group when mounting it.
+
+First unmount:
+
+```bash
+sudo umount /mnt/sda4
+```
+
+Then mount it for user `emon`:
+
+```bash
+sudo mount -t vfat \
+-o uid=$(id -u emon),gid=$(id -g emon),umask=022 \
+/dev/sda4 /mnt/sda4
+```
+
+Now check:
+
+```bash
+ls -ld /mnt/sda4
+```
+
+It should show `emon` as the apparent owner.
+
+Test:
+
+```bash
+touch /mnt/sda4/test.txt
+```
+
+If there is no error, your normal user can write to the FAT32 partition.
+
+Remove the test:
+
+```bash
+rm /mnt/sda4/test.txt
+```
+
+---
+
+# 11. A Simpler FAT32 Mount Command
+
+If you are logged in as `emon`, you can use:
+
+```bash
+sudo mount -t vfat \
+-o uid=$(id -u),gid=$(id -g),umask=022 \
+/dev/sda4 /mnt/sda4
+```
+
+Here:
+
+```bash
+uid=$(id -u)
+```
+
+gets your user's numeric ID.
+
+And:
+
+```bash
+gid=$(id -g)
+```
+
+gets your group's numeric ID.
+
+You can see them directly with:
+
+```bash
+id
+```
+
+Example:
+
+```text
+uid=1000(emon) gid=1000(emon)
+```
+
+---
+
+# 12. Test Whether You Can Write
+
+After mounting a partition, test it safely:
+
+```bash
+touch /mnt/sda4/test.txt
+```
+
+If successful:
+
+```bash
+ls -l /mnt/sda4/test.txt
+```
+
+Then remove it:
+
+```bash
+rm /mnt/sda4/test.txt
+```
+
+If you get:
+
+```text
+Permission denied
+```
+
+check:
+
+```bash
+ls -ld /mnt/sda4
+```
+
+and:
+
+```bash
+findmnt /dev/sda4
+```
+
+These two commands usually reveal whether the problem is:
+
+1. The filesystem is read-only.
+2. The mount belongs to root.
+3. The user lacks permission.
+4. The filesystem has an error.
+
+---
+
+# 13. Check Whether the Filesystem Is Actually Read-Only
+
+Run:
+
+```bash
+findmnt /dev/sda4
+```
+
+Look at the options.
+
+### Read/write:
+
+```text
+rw,relatime,...
+```
+
+### Read-only:
+
+```text
+ro,relatime,...
+```
+
+If you see:
+
+```text
+errors=remount-ro
+```
+
+that does **not by itself mean it is currently read-only**.
+
+For example:
+
+```text
+rw,relatime,...,errors=remount-ro
+```
+
+means it is currently read/write, but the filesystem may be remounted read-only if a serious filesystem error occurs.
+
+---
+
+# 14. Unmount a Partition
+
+Before removing or changing a mounted partition:
+
+```bash
+sudo umount /mnt/sda4
+```
+
+You can also use:
+
+```bash
+sudo umount /dev/sda4
+```
+
+Then verify:
+
+```bash
+findmnt /dev/sda4
+```
+
+No output means it is not currently mounted through that mount point.
+
+If you get:
+
+```text
+target is busy
+```
+
+close any File Manager windows using that partition and make sure your terminal is not currently inside it.
+
+Check your current directory:
+
+```bash
+pwd
+```
+
+If necessary:
+
+```bash
+cd ~
+```
+
+Then try:
+
+```bash
+sudo umount /mnt/sda4
+```
+
+---
+
+# 15. Mount NTFS Partitions
+
+For an NTFS partition:
+
+```bash
+sudo mkdir -p /mnt/sda3
+sudo mount /dev/sda3 /mnt/sda3
+```
+
+Check:
+
+```bash
+findmnt /dev/sda3
+```
+
+For modern Ubuntu systems, NTFS is normally handled through the appropriate NTFS driver.
+
+To give your user ownership when mounting NTFS, options such as `uid`, `gid`, and `umask` can be used depending on the driver and setup.
+
+For example:
+
+```bash
+sudo umount /mnt/sda3
+
+sudo mount -t ntfs3 \
+-o uid=$(id -u),gid=$(id -g),umask=022 \
+/dev/sda3 /mnt/sda3
+```
+
+Then:
+
+```bash
+touch /mnt/sda3/test.txt
+```
+
+---
+
+# 16. Mount ext4 Partitions
+
+Linux filesystems such as ext4 work differently.
+
+Example:
+
+```bash
+sudo mkdir -p /mnt/test
+sudo mount /dev/sdb4 /mnt/test
+```
+
+Check:
+
+```bash
+findmnt /dev/sdb4
+```
+
+Unlike FAT32, ext4 stores Linux ownership and permissions directly on the filesystem.
+
+Check:
+
+```bash
+ls -ld /mnt/test
+```
+
+You can change ownership on ext4 with:
+
+```bash
+sudo chown emon:emon /mnt/test
+```
+
+And permissions can be changed with:
+
+```bash
+sudo chmod 755 /mnt/test
+```
+
+Be careful with recursive commands such as:
+
+```bash
+sudo chown -R ...
+```
+
+because changing ownership of an entire Linux system partition can break the operating system.
+
+---
+
+# 17. Copy a File as Root
+
+If your normal user cannot write to a mounted partition:
+
+```bash
+sudo cp "/path/to/file.iso" /mnt/sda4/
+```
+
+For example:
+
+```bash
+sudo cp "/run/media/emon/Drive2/linuxmint-22.3-cinnamon-64bit.iso" /mnt/sda4/
+```
+
+Then verify:
+
+```bash
+ls -lh /mnt/sda4/
+```
+
+This is safer than changing permissions when you only need to copy one file.
+
+---
+
+# 18. Move a File Between Two Drives
+
+Suppose:
+
+```text
+/dev/sda3 = Drive2
+/dev/sda4 = FAT32 partition
+```
+
+and the ISO is:
+
+```text
+/run/media/emon/Drive2/linuxmint-22.3-cinnamon-64bit.iso
+```
+
+First copy it:
+
+```bash
+sudo cp \
+"/run/media/emon/Drive2/linuxmint-22.3-cinnamon-64bit.iso" \
+/mnt/sda4/
+```
+
+Verify:
+
+```bash
+ls -lh /run/media/emon/Drive2/linuxmint-22.3-cinnamon-64bit.iso
+ls -lh /mnt/sda4/linuxmint-22.3-cinnamon-64bit.iso
+```
+
+Only after verifying the copy should you delete the original:
+
+```bash
+sudo rm \
+"/run/media/emon/Drive2/linuxmint-22.3-cinnamon-64bit.iso"
+```
+
+This is safer than immediately using `mv`.
+
+---
+
+# 19. Delete a File From a Root-Owned Mount
+
+If File Explorer cannot delete a file because the partition is owned by root:
+
+```bash
+sudo rm /mnt/sda4/filename
+```
+
+For example:
+
+```bash
+sudo rm -f /mnt/sda4/linuxmint-22.3-cinnamon-64bit.iso
+```
+
+Be extremely careful with `sudo rm`, especially with `-r` or `-rf`.
+
+Never use:
+
+```bash
+sudo rm -rf /
+```
+
+or an incorrectly typed path.
+
+---
+
+# 20. Make a Partition Permanently Mount With User Access
+
+For a partition that you want mounted automatically at boot, `/etc/fstab` can be configured.
+
+First obtain its UUID:
+
+```bash
+blkid /dev/sda4
+```
+
+Example:
+
+```text
+/dev/sda4: UUID="F64B-2F01" TYPE="vfat"
+```
+
+Create the mount point:
+
+```bash
+sudo mkdir -p /mnt/sda4
+```
+
+Then `/etc/fstab` can contain an entry similar to:
+
+```text
+UUID=F64B-2F01 /mnt/sda4 vfat uid=1000,gid=1000,umask=022,nofail 0 0
+```
+
+After editing `fstab`, test it:
+
+```bash
+sudo mount -a
+```
+
+If there are no errors:
+
+```bash
+findmnt /dev/sda4
+```
+
+This allows the partition to be mounted automatically with the desired user access.
+
+**Be careful when editing `/etc/fstab`.** A mistake can affect booting.
+
+---
+
+# 21. Useful Diagnostic Commands
+
+### Show all drives:
+
+```bash
+lsblk
+```
+
+### Show filesystems:
+
+```bash
+lsblk -f
+```
+
+### Show partition tables:
+
+```bash
+sudo fdisk -l
+```
+
+### Show filesystem UUID:
+
+```bash
+sudo blkid
+```
+
+### Check a particular mount:
+
+```bash
+findmnt /dev/sda4
+```
+
+### Show mount permissions:
+
+```bash
+ls -ld /mnt/sda4
+```
+
+### Show your user ID:
+
+```bash
+id
+```
+
+### Show disk space:
+
+```bash
+df -h
+```
+
+### Show files:
+
+```bash
+ls -lah /mnt/sda4
+```
+
+---
+
+# 22. Quick Reference
+
+| Goal                        | Command                                |
+| --------------------------- | -------------------------------------- |
+| List drives                 | `lsblk`                                |
+| List filesystems            | `lsblk -f`                             |
+| Detailed partitions         | `sudo fdisk -l`                        |
+| Filesystem UUID             | `sudo blkid`                           |
+| Check mount                 | `findmnt /dev/sda4`                    |
+| Create mount point          | `sudo mkdir -p /mnt/sda4`              |
+| Mount normally              | `sudo mount /dev/sda4 /mnt/sda4`       |
+| Mount read-only             | `sudo mount -o ro /dev/sda4 /mnt/sda4` |
+| Mount read/write            | `sudo mount -o rw /dev/sda4 /mnt/sda4` |
+| Unmount                     | `sudo umount /mnt/sda4`                |
+| Root write                  | `sudo touch /mnt/sda4/test.txt`        |
+| User write test             | `touch /mnt/sda4/test.txt`             |
+| Delete file as root         | `sudo rm /mnt/sda4/file`               |
+| Check directory permissions | `ls -ld /mnt/sda4`                     |
+| Check free space            | `df -h /mnt/sda4`                      |
+
+---
+
+# 23. The Most Important Concept
+
+There are **three separate things** to understand:
+
+### A. Is the partition mounted?
+
+```bash
+findmnt /dev/sda4
+```
+
+### B. Is the filesystem mounted read/write?
+
+Look for:
+
+```text
+rw
+```
+
+or:
+
+```text
+ro
+```
+
+### C. Does your user have permission to write?
+
+Check:
+
+```bash
+ls -ld /mnt/sda4
+```
+
+For example:
+
+```text
+drwxr-xr-x root root
+```
+
+means your normal user generally cannot write there.
+
+So a partition can simultaneously be:
+
+```text
+mounted: YES
+filesystem: read/write
+user: NOT allowed to write
+```
+
+That is exactly why seeing `rw` does **not** automatically mean File Explorer can create files.
+
+For **FAT32**, use mount options such as:
+
+```bash
+uid=$(id -u),gid=$(id -g),umask=022
+```
+
+For **ext4**, use normal Linux ownership and permissions such as:
+
+```bash
+chown
+chmod
+```
+
+And when you only need to perform an operation as administrator, the simplest solution is often:
+
+```bash
+sudo cp ...
+```
+
+or:
+
+```bash
+sudo rm ...
+```
+
+Always verify the device name before using destructive commands. A mistake between `/dev/sda3` and `/dev/sda4`, for example, can affect an entirely different partition.
+</md></sn>
   <config>
     <tags>#all</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Aug 29 2026 08:37:39 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Aug 29 2026 08:38:02 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-i1z4olDewO</id>
     <duration></duration>
   </config>
