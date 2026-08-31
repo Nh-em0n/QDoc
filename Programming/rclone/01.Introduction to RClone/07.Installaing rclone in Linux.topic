@@ -1,10 +1,52 @@
 
-  <sn></sn>
+  <sn><md>### Installing Rclone in Linux
+
+On Ubuntu/Debian, there are several ways to install Rclone. The easiest is the **official installation script**.
+
+
+**Install Rclone**
+
+```bash
+sudo -v ; curl https://rclone.org/install.sh | sudo bash
+```
+
+Then check the installation:
+
+```bash
+rclone version
+```
+
+You should see something similar to:
+
+```text
+rclone v1.xx.x
+os/version: linux
+```
+</md></sn>
   <config>
     <tags>#07.installaing rclone in linux</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 31 2026 16:31:08 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 31 2026 20:25:41 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Qfd2KmWsUT</id>
     <duration></duration>
   </config>
+<sn><md>#### Alternative: Ubuntu package
+
+You can also install it through APT:
+
+```bash
+sudo apt update
+sudo apt install rclone
+```
+
+Then:
+
+```bash
+rclone version
+```
+
+**Recommendation:** Use the **official installer** if you want the latest Rclone version. The Ubuntu repository version may be older.
+
+[Official Rclone installation guide](https://rclone.org/install/)
+</md></sn>
