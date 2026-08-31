@@ -1,32 +1,37 @@
 
-  <sn><md>### Rclone vs Other Sync Clients
+  <sn class="col-lg-10"><md>## **Rclone vs Other Sync Clients**
 
+| Feature                    | **Rclone**           | **Rsync**               | **Google Drive for Desktop**  | **Dropbox**     | **OneDrive**                         | **Insync**    |
+| -------------------------- | -------------------- | ----------------------- | ----------------------------- | --------------- | ------------------------------------ | ------------- |
+| Linux                      | **Yes**              | **Yes**                 | ❌ Official client unavailable | ✅               | ⚠️ Third-party clients commonly used | ✅             |
+| Windows                    | ✅                    | ✅                       | ✅                             | ✅               | ✅                                    | ✅             |
+| macOS                      | ✅                    | ✅                       | ✅                             | ✅               | ✅                                    | ✅             |
+| Google Drive               | **Excellent**        | ⚠️ Via remote/SSH setup | **Excellent**                 | ❌               | ❌                                    | **Excellent** |
+| Multiple cloud providers   | **70+**              | ❌                       | ❌                             | ❌               | ❌                                    | Limited       |
+| Two-way sync               | ✅ `bisync`           | ⚠️ Manual setup         | ✅                             | ✅               | ✅                                    | ✅             |
+| One-way sync               | **Excellent**        | **Excellent**           | Limited                       | Limited         | Limited                              | ✅             |
+| Cloud → cloud transfer     | **✅**                | ❌                       | ❌                             | ❌               | ❌                                    | Limited       |
+| Mount cloud as folder/disk | **✅**                | ❌                       | ✅                             | Limited         | ✅                                    | ✅             |
+| Command line               | **Excellent**        | **Excellent**           | ❌                             | Limited         | Limited                              | Limited       |
+| Automation/scripts         | **Excellent**        | **Excellent**           | Limited                       | Limited         | Limited                              | ✅             |
+| Encryption                 | **✅**                | ⚠️ Via other tools      | ❌                             | ❌               | ❌                                    | ❌             |
+| Backup                     | **Excellent**        | **Excellent**           | Limited                       | Limited         | Limited                              | Good          |
+| GUI                        | ⚠️ Experimental/web  | ❌                       | **Excellent**                 | **Excellent**   | **Excellent**                        | **Excellent** |
+| Cost                       | **Free**             | **Free**                | Free                          | Free/paid plans | Free/paid plans                      | Paid          |
+| Delta transfer             | ⚠️ Backend-dependent | **Excellent**           | N/A                           | N/A             | N/A                                  | N/A           |
+| SSH support                | ✅ SFTP               | **Excellent**           | ❌                             | ❌               | ❌                                    | ❌             |
+| Local → local sync         | ✅                    | **Excellent**           | ❌                             | ⚠️              | ⚠️                                   | ⚠️            |
+| Server synchronization     | ✅                    | **Excellent**           | ❌                             | ❌               | ❌                                    | ❌             |
+| Cloud API support          | **Excellent**        | ❌                       | Google only                   | Dropbox only    | OneDrive only                        | Several       |
+| Cloud migration            | **Excellent**        | ❌                       | ❌                             | ❌               | ❌                                    | Limited       |
 
-| Feature                    | **Rclone**          | **Google Drive for Desktop**  | **Dropbox**     | **OneDrive**                         | **Insync**    |
-| -------------------------- | ------------------- | ----------------------------- | --------------- | ------------------------------------ | ------------- |
-| Linux                      | **Yes**             | ❌ Official client unavailable | ✅               | ⚠️ Third-party clients commonly used | ✅             |
-| Windows                    | ✅                   | ✅                             | ✅               | ✅                                    | ✅             |
-| macOS                      | ✅                   | ✅                             | ✅               | ✅                                    | ✅             |
-| Google Drive               | **Excellent**       | **Excellent**                 | ❌               | ❌                                    | **Excellent** |
-| Multiple cloud providers   | **70+**             | ❌                             | ❌               | ❌                                    | Limited       |
-| Two-way sync               | ✅ `bisync`          | ✅                             | ✅               | ✅                                    | ✅             |
-| One-way sync               | **Excellent**       | Limited                       | Limited         | Limited                              | ✅             |
-| Cloud → cloud transfer     | **✅**               | ❌                             | ❌               | ❌                                    | Limited       |
-| Mount cloud as folder/disk | **✅**               | ✅                             | Limited         | ✅                                    | ✅             |
-| Command line               | **Excellent**       | ❌                             | Limited         | Limited                              | Limited       |
-| Automation/scripts         | **Excellent**       | Limited                       | Limited         | Limited                              | ✅             |
-| Encryption                 | **✅**               | ❌                             | ❌               | ❌                                    | ❌             |
-| Backup                     | **Excellent**       | Limited                       | Limited         | Limited                              | Good          |
-| GUI                        | ⚠️ Experimental/web | **Excellent**                 | **Excellent**   | **Excellent**                        | **Excellent** |
-| Cost                       | **Free**            | Free                          | Free/paid plans | Free/paid plans                      | Paid          |
-
-Rclone currently supports **70+ cloud storage products** and provides operations for copying, syncing, mounting, encrypting, checking and migrating data. ([Rclone][1])
+Rclone currently supports **70+ cloud storage products** and provides operations for copying, syncing, mounting, encrypting, checking, and migrating data. [Rclone documentation](https://rclone.org)
 </md></sn>
   <config>
     <tags>#02.rclone vs other sync client</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 31 2026 17:27:16 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 31 2026 17:31:53 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-fTtYNXoviD</id>
     <duration></duration>
   </config>
