@@ -1,10 +1,92 @@
 
-  <sn></sn>
+  <sn><md>### Getting Help with Rclone
+
+Rclone has a built-in help system. The main command is:
+
+```bash
+rclone help
+```
+
+It displays the general help and available commands.
+</md></sn>
   <config>
     <tags>#09.getting help with rclone help</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 31 2026 16:31:38 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 31 2026 20:36:52 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-fymH7ga5iC</id>
     <duration></duration>
   </config>
+<sn><md>### Command-specific help
+
+For example:
+
+```bash
+rclone help copy
+```
+
+or:
+
+```bash
+rclone copy --help
+```
+
+Both can provide help for the `copy` command.
+
+</md></sn><sn><md>### Useful help commands
+
+| Command                | Purpose                      |
+| ---------------------- | ---------------------------- |
+| `rclone help`          | General Rclone help          |
+| `rclone help commands` | List available commands      |
+| `rclone help flags`    | List global flags            |
+| `rclone help backends` | List supported backends      |
+| `rclone copy --help`   | Help for `copy`              |
+| `rclone sync --help`   | Help for `sync`              |
+| `rclone move --help`   | Help for `move`              |
+| `rclone mount --help`  | Help for `mount`             |
+| `rclone config --help` | Help for configuration       |
+| `rclone ls --help`     | Help for `ls`                |
+| `rclone lsd --help`    | Help for listing directories |
+</md></sn><sn><md>### Find available commands
+
+```bash
+rclone help commands
+```
+
+You'll see commands such as:
+
+```text
+config
+copy
+copyto
+copyurl
+delete
+ls
+lsd
+lsf
+mkdir
+mount
+move
+purge
+size
+sync
+tree
+version
+```
+</md></sn><sn><md>### Get help while learning
+
+A useful pattern is:
+
+```bash
+rclone <command> --help
+```
+
+For example:
+
+```bash
+rclone sync --help
+```
+
+This is especially useful because it shows the **options and flags specific to that command**, rather than requiring you to remember everything from the general documentation.
+</command></md></sn>
