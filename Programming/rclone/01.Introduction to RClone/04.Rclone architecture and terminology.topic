@@ -1,10 +1,153 @@
 
-  <sn></sn>
+  <sn><md>### Rclone Architecture and Terminology
+
+Rclone is designed around a **frontend command-line interface**, a **storage backend layer**, and the **remote storage provider**. This architecture allows the same commands such as `copy`, `sync`, `move`, and `mount` to work with many different storage systems.
+
+**Architecture**
+
+![diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/rclone/01.Introduction%20to%20RClone/assets/rclone_architecture.png)
+
++++ view ascii code
+
+```text
+                    ┌─────────────────────┐
+                    │       User          │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │    Rclone CLI       │
+                    │  copy / sync / etc. │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   Rclone Core       │
+                    │                     │
+                    │ • File operations   │
+                    │ • Filtering         │
+                    │ • Transfers         │
+                    │ • Checksums         │
+                    │ • Encryption        │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   Storage Backend   │
+                    │      (Remote)       │
+                    └──────────┬──────────┘
+                               │
+             ┌─────────────────┼─────────────────┐
+             ▼                 ▼                 ▼
+       Google Drive        Amazon S3         OneDrive
+       Dropbox             WebDAV            SFTP
+       MEGA                Azure             Local Disk
+```
++++
+</md></sn>
   <config>
     <tags>#04.rclone architecture and terminology</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 31 2026 16:30:02 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 31 2026 18:00:56 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-MOSmEuFwe2</id>
     <duration></duration>
   </config>
+<sn><md>### Important Terminology
+
+| Term            | Meaning                                                             | Example                |
+| --------------- | ------------------------------------------------------------------- | ---------------------- |
+| **Rclone**      | The command-line program used to manage and transfer files          | `rclone`               |
+| **Remote**      | A configured connection to a storage service                        | `gdrive:`              |
+| **Backend**     | The code/interface Rclone uses to communicate with a storage system | Google Drive, S3, SFTP |
+| **Provider**    | The actual storage service                                          | Google Drive           |
+| **Local**       | Files stored directly on your computer                              | `/home/emon/Documents` |
+| **Path**        | Location of a file or directory                                     | `gdrive:Documents`     |
+| **Remote path** | A path inside a configured remote                                   | `gdrive:Backup`        |
+| **Source**      | Where files are copied/synced from                                  | `/home/emon/Documents` |
+| **Destination** | Where files are copied/synced to                                    | `gdrive:Documents`     |
+| **Object**      | A file managed by an object-storage backend                         | `photo.jpg`            |
+| **Directory**   | A folder containing files/objects                                   | `Documents/`           |
+| **Config file** | Stores Rclone remote configurations and credentials                 | `rclone.conf`          |
+| **Command**     | An operation performed by Rclone                                    | `copy`, `sync`, `move` |
+| **Filter**      | Rules controlling which files are included/excluded                 | `--exclude "*.tmp"`    |
+| **Checksum**    | A value used to compare file contents                               | MD5, SHA-1             |
+| **Transfer**    | Moving/copying data between source and destination                  | PC → Drive             |
+| **Mount**       | Makes a remote appear as a filesystem/folder                        | `rclone mount`         |
+| **Bisync**      | Two-way synchronization feature                                     | `rclone bisync`        |
+| **Crypt**       | Rclone's encrypted remote backend                                   | `crypt:`               |
+| **VFS**         | Virtual File System layer used by commands such as `mount`          | `rclone mount`         |
+| **Cache**       | Temporary/local data used to improve certain operations             | VFS cache              |
+| **Config**      | Configuration containing remote definitions and settings            | `rclone config`        |
+</md></sn><sn><md>### General Concept
+
+The most important concept to understand is a **remote**.
+
+For example, you can configure Google Drive with the name `gdrive`:
+
+```text
+gdrive:
+```
+
+Then a folder inside it can be addressed as:
+
+```text
+gdrive:Documents
+```
+
+A file can be addressed as:
+
+```text
+gdrive:Documents/notes.pdf
+```
+
+So:
+
+```text
+gdrive:
+```
+
+means the **root of the remote**, while:
+
+```text
+gdrive:Documents
+```
+
+means the **Documents directory inside that remote**.
+
+### **Source and Destination**
+
+Most Rclone commands follow this general structure:
+
+```bash
+rclone <command> <source> <destination>
+```
+
+For example:
+
+```bash
+rclone copy ~/Documents gdrive:Documents
+```
+
+Here:
+
+| Component          | Meaning     |
+| ------------------ | ----------- |
+| `rclone`           | Program     |
+| `copy`             | Command     |
+| `~/Documents`      | Source      |
+| `gdrive:Documents` | Destination |
+
+The same architecture allows you to do:
+
+```text
+Local → Google Drive
+Google Drive → Local
+Google Drive → OneDrive
+S3 → Google Drive
+SFTP → Google Drive
+Local → S3
+```
+
+This is one of Rclone's major advantages: **the commands remain mostly the same even when the underlying storage provider changes.**
+</destination></command></md></sn>
