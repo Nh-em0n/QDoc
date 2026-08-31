@@ -1,10 +1,162 @@
 
-  <sn></sn>
+  <sn><md>### Local Path vs Remote Path in Rclone
+
+The easiest way to understand Rclone is to separate **paths on your computer** from **paths on a configured storage service**.
+
+| Concept                                  | Local Path                   | Remote Path                                |
+| ---------------------------------------- | ---------------------------- | ------------------------------------------ |
+| Meaning                                  | Location on your computer    | Location inside a configured Rclone remote |
+| Managed by                               | Operating system             | Rclone + storage provider                  |
+| Example                                  | `/home/emon/Documents`       | `gdrive:Documents`                         |
+| Requires Rclone configuration            | ❌ No                         | ✅ Yes                                      |
+| Can be accessed normally by file manager | ✅ Yes                        | Depends on the provider/mount              |
+| Storage location                         | SSD/HDD                      | Google Drive, S3, OneDrive, etc.           |
+| Format                                   | OS filesystem path           | `remote-name:path`                         |
+| Example file                             | `/home/emon/Documents/a.pdf` | `gdrive:Documents/a.pdf`                   |
+
+</md></sn>
   <config>
     <tags>#05.local paths vs remote paths</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 31 2026 16:30:16 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 31 2026 19:43:57 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-m3JUT3OJCZ</id>
     <duration></duration>
   </config>
+<sn><md>### Local Path
+
+A **local path** points to a file or folder physically accessible through your computer's filesystem.
+
+For example:
+
+```bash
+/home/emon/Documents
+```
+
+or:
+
+```bash
+/home/emon/Documents/notes.pdf
+```
+
+On Windows, it could be:
+
+```text
+C:\Users\Emon\Documents
+```
+
+Rclone does **not** require you to configure a local path.
+
+Example:
+
+```bash
+rclone copy /home/emon/Documents gdrive:Documents
+```
+
+Here:
+
+```text
+/home/emon/Documents
+        ↑
+    Local path
+```
+</md></sn><sn><md>#### Local Path Can Be Absolute or Relative
+
+:::.row
+:::.col-12 .col-lg-6
+**Absolute local path**
+
+```bash
+/home/emon/Documents
+```
+It starts from the filesystem root.
+:::
+
+:::.col-12 .col-lg-6
+### Relative local path
+
+```bash
+Documents
+```
+
+It is interpreted relative to your current directory.
+For example:
+
+```bash
+cd /home/emon
+rclone copy Documents gdrive:Documents
+```
+
+Here `Documents` refers to:
+
+```text
+/home/emon/Documents
+```
+:::
+:::
+</md></sn><sn><md>### Possible Combination
+
+- Local → Remote
+
+   ```bash
+   rclone copy /home/emon/Documents gdrive:Documents
+   ```
+
+   ```text
+   Local                     Remote
+   /home/emon/Documents  →  gdrive:Documents
+   ```
+
+- Remote → Local
+
+   ```bash
+   rclone copy gdrive:Documents /home/emon/Documents
+   ```
+
+   ```text
+   Remote                    Local
+   gdrive:Documents      →  /home/emon/Documents
+   ```
+
+- Remote → Remote
+
+   ```bash
+   rclone copy gdrive:Documents onedrive:Documents
+   ```
+
+   ```text
+   Google Drive              OneDrive
+   gdrive:Documents      →  onedrive:Documents
+   ```
+
+This last capability is particularly useful because **Rclone can transfer directly between supported remotes without first downloading everything to your local folder**, where the backend capabilities allow it.
+</md></sn><sn><md>### A Simple Rule to Remember
+
+```text
+/path/to/folder
+      ↓
+   LOCAL
+
+remote-name:path
+      ↓
+   REMOTE
+```
+
+**Examples**
+
+| Path                      | Type   |
+| ------------------------- | ------ |
+| `/home/emon/Documents`    | Local  |
+| `/mnt/data/Backup`        | Local  |
+| `C:\Users\Emon\Documents` | Local  |
+| `gdrive:`                 | Remote |
+| `gdrive:Documents`        | Remote |
+| `onedrive:Backup`         | Remote |
+| `s3:mybucket/files`       | Remote |
+| `dropbox:Photos`          | Remote |
+
+**In short:**
+
+&gt; **Local path = where the operating system sees your files.**
+&gt; **Remote path = where Rclone sees files through a configured storage backend.**
+</md></sn>
