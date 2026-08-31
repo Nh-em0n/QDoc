@@ -1,10 +1,97 @@
 
-  <sn></sn>
+  <sn><md>### Understanding Rclone Remotes
+
+A **remote** is one of the most important concepts in Rclone.
+
+In simple terms:
+
+&gt; A remote is a `name` that Rclone uses to **represent a configured storage location.**
+
+For example, you can configure your Google Drive and give it the name `gdrive`:
+
+```text
+gdrive:
+```
+
+Then Rclone uses `gdrive:` to access that Google Drive.
+</md></sn>
   <config>
     <tags>#01.understanding rclone remotes</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 31 2026 20:48:21 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 31 2026 20:58:53 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Ys6xM1U8bR</id>
     <duration></duration>
   </config>
+<sn><md>### Remote Structure
+
+The general format is:
+
+```text
+remote-name:path
+```
+
+For example:
+
+```text
+gdrive:Documents/Notes
+```
+
+| Part            | Example                  | Meaning                         |
+| --------------- | ------------------------ | ------------------------------- |
+| Remote name     | `gdrive`                 | Name of the configured remote   |
+| `:`             | `:`                      | Separates remote name from path |
+| Remote path     | `Documents/Notes`        | Location inside the remote      |
+| Complete remote | `gdrive:Documents/Notes` | Full Rclone path                |
+</md></sn><sn><md>### Remote Is Not the Cloud Account Itself
+
+Suppose you have a Google Drive account.
+
+You configure it in Rclone and give it the name:
+
+```text
+gdrive
+```
+
+The relationship is:
+
+```text
+Rclone
+  │
+  └── gdrive
+        │
+        ▼
+   Google Drive
+```
+
+The name `gdrive` is simply **your local Rclone configuration name**.
+
+You could instead call it:
+
+```text
+study
+```
+
+Then:
+
+```text
+study:
+```
+
+would refer to that same Google Drive.
+
+You could even call it:
+
+```text
+my-cloud
+```
+
+Then:
+
+```text
+my-cloud:
+```
+
+would work.
+
+</md></sn>
