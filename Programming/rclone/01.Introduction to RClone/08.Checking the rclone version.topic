@@ -1,10 +1,47 @@
 
-  <sn></sn>
+  <sn><md>### Check Rclone Version
+
+Run:
+
+```bash
+rclone version
+```
+
+Or, for a shorter check:
+
+```bash
+rclone --version
+```
+
+You should get output similar to:
+
+```text
+rclone v1.71.0
+- os/version: ubuntu 26.04 (64 bit)
+- os/kernel: 6.x.x
+- os/type: linux
+- os/arch: amd64
+```
+
+To check where Rclone is installed:
+
+```bash
+which rclone
+```
+
+And to check the installed package version through APT:
+
+```bash
+apt policy rclone
+```
+
+If `rclone version` says **`command not found`**, Rclone is not installed or its executable is not in your `PATH`.
+</md></sn>
   <config>
     <tags>#08.checking the rclone version</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 31 2026 16:31:24 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 31 2026 20:31:51 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-V4MjXmN11Y</id>
     <duration></duration>
   </config>
