@@ -1,10 +1,235 @@
 
-  <sn></sn>
+  
   <config>
     <tags>#subject tree</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 31 2026 14:14:49 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 31 2026 14:57:55 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-rOeL1sb7YN</id>
     <duration></duration>
   </config>
+<sn><md>### Learning Tree {.text-center}
+
+
++++ **Chapter 1 — Introduction to Rclone**
+
+* What is rclone?
+* Rclone vs `cp`, `rsync`, and cloud-sync clients
+* Supported cloud storage providers
+* Rclone architecture and terminology
+* Local paths vs remote paths
+* Understanding `remote:path`
+* Installing rclone on Linux
+* Installing rclone on Windows
+* Checking the rclone version
+* Getting help with `rclone help`
+
++++
+
+---
+
++++ **Chapter 2 — Configuring Cloud Storage**
+
+* Understanding rclone remotes
+* Running `rclone config`
+* Creating a new remote
+* Connecting Google Drive
+* Connecting OneDrive
+* Connecting Dropbox
+* Connecting other cloud providers
+* OAuth authentication
+* Service accounts
+* Viewing configured remotes
+* Editing and deleting remotes
+* Understanding `rclone.conf`
+* Protecting configuration credentials
+
++++
+
+---
+
++++ **Chapter 3 — Basic File &amp; Directory Operations**
+
+* Listing files with `rclone ls`
+* Human-readable listing with `rclone lsl`
+* Listing directories with `rclone lsd`
+* Creating directories with `rclone mkdir`
+* Copying files with `rclone copy`
+* Copying directories
+* Moving files with `rclone move`
+* Deleting files with `rclone delete`
+* Removing empty directories
+* Checking file existence
+* Understanding source and destination
+* Local ↔ cloud operations
+* Cloud ↔ cloud operations
+
++++
+
+---
+
++++ **Chapter 4 — Synchronization**
+
+* Understanding `rclone sync`
+* `copy` vs `sync` vs `move`
+* One-way synchronization
+* Local → Cloud synchronization
+* Cloud → Local synchronization
+* Cloud → Cloud synchronization
+* Why `sync` can delete files
+* Using `--dry-run`
+* Understanding synchronization direction
+* Handling changed files
+* Detecting missing files
+* `rclone check`
+* Safe synchronization strategies
+
++++
+
+---
+
++++ **Chapter 5 — Filtering &amp; File Selection**
+
+* Why filtering is important
+* `--include`
+* `--exclude`
+* `--include-from`
+* `--exclude-from`
+* Glob patterns
+* Regular expressions
+* Filtering by file extension
+* Filtering directories
+* Filtering hidden files
+* Filtering by file size
+* Filtering by modification time
+* Combining multiple filters
+* Creating reusable filter files
+
++++
+
+---
+
++++ **Chapter 6 — Performance &amp; Transfer Control**
+
+* Understanding rclone transfers
+* `--transfers`
+* `--checkers`
+* `--bwlimit`
+* `--buffer-size`
+* `--drive-chunk-size`
+* `--multi-thread-streams`
+* Parallel transfers
+* Large-file transfers
+* Network optimization
+* API rate limits
+* Handling cloud-provider throttling
+* Retry mechanisms
+* `--retries`
+* `--low-level-retries`
+* `--timeout`
+* `--contimeout`
+* Understanding transfer statistics
+
++++
+
+---
+
++++ **Chapter 7 — Mounting Cloud Storage**
+
+* What is a filesystem mount?
+* `rclone mount`
+* Mounting Google Drive
+* Mounting OneDrive
+* Mounting a remote on Linux
+* Mounting a remote on Windows
+* VFS architecture
+* `--vfs-cache-mode`
+* VFS cache types
+* Read/write behavior
+* File caching
+* Directory caching
+* Cache expiration
+* Mount permissions
+* Running mounts in the background
+* Unmounting a remote
+* Troubleshooting mount problems
+
++++
+
+---
+
++++ **Chapter 8 — Advanced Storage &amp; Security**
+
+* Rclone crypt
+* Creating an encrypted remote
+* Encrypting filenames
+* Encrypting file contents
+* Understanding `crypt` remotes
+* Password management
+* `rclone obscure`
+* Encrypting configuration files
+* Password files
+* Google Drive Shared Drives
+* Team/shared storage
+* Backend-specific options
+* Union remotes
+* Combine remotes
+* Alias remotes
+* Chunker remotes
+
++++
+
+---
+
++++ **Chapter 9 — Automation &amp; Scripting**
+
+* Using rclone from Bash
+* Using rclone from Windows CMD
+* Using rclone from PowerShell
+* Creating backup scripts
+* Creating synchronization scripts
+* Scheduled backups
+* Linux `cron`
+* Windows Task Scheduler
+* Automatic logging
+* Exit codes
+* Error handling
+* Notifications
+* Monitoring transfers
+* Using `--log-file`
+* Using `--log-level`
+* Running rclone as a service
+* Automating Google Drive synchronization
+
++++
+
+---
+
++++ **Chapter 10 — Advanced Rclone &amp; Real-World Projects**
+
+* Understanding rclone's complete command structure
+* Advanced `rclone config`
+* Rclone RC/API
+* Remote control with `rclone rcd`
+* Rclone HTTP API
+* Advanced filtering
+* Advanced VFS configuration
+* Server-side copying
+* Server-side moving
+* Deduplication
+* File integrity verification
+* `rclone cryptcheck`
+* `rclone size`
+* `rclone about`
+* `rclone backend`
+* Debugging with `-vv`
+* Recovering from failed transfers
+* Designing a reliable backup system
+* Designing a two-way workflow
+* Cloud-to-cloud migration
+* Automated PC → Google Drive backup
+* Encrypted cloud backup
+* Linux file server + cloud storage
+* Building a complete personal cloud-storage workflow
+
++++</md></sn>
