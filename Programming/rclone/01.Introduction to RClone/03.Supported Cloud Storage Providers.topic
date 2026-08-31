@@ -1,7 +1,6 @@
 
   <sn><md>### **Rclone Cloud Storage Providers**
 
-According to the current Rclone documentation, Rclone supports a large range of storage systems. Below is a **4-column table**, with **four providers per row**. I’ve included the storage backends/providers listed in Rclone's current documentation, while excluding purely virtual/local entries such as `local`, `memory`, `alias`, `crypt`, etc. ([Rclone][1])
 
 | **Provider**           | **Provider**        | **Provider**         | **Provider**       |
 | ---------------------- | ------------------- | -------------------- | ------------------ |
@@ -34,7 +33,7 @@ For example, **Amazon S3-compatible providers** can include services such as AWS
     <tags>#03.supported cloud storage providers</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 31 2026 17:51:04 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 31 2026 17:53:47 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-y55N0I4Al7</id>
     <duration></duration>
   </config>
