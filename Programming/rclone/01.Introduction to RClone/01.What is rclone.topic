@@ -1,10 +1,99 @@
 
-  <sn></sn>
+  <sn><md>:::.row
+:::.col-12 .col-lg-10
+### Rclone
+
+**Rclone** is an open source, multi threaded, `command line computer program` to manage or migrate content on cloud and other high latency storage. Its capabilities include sync, transfer, crypt, cache, union, compress and mount. The rclone website lists supported backends including S3 and Google Drive.
+:::
+
+:::.col-12 .col-lg-2
+![img](https://forum.rclone.org/uploads/default/original/2X/3/328f860878d4acb13d550a2b12505d181f181713.png)
+:::
+:::
+
+Rclone is well known for its `rclone sync` and `rclone mount` commands. It provides further management functions analogous to those ordinarily used for files on local disks, but which tolerate some intermittent and unreliable service. Rclone is commonly used with media servers such as Plex, Emby or Jellyfin to stream content direct from consumer file storage services.
+
+Official Ubuntu, Debian, Fedora, Gentoo, Arch, Brew, Chocolatey, and other *package managers* include rclone.
+
+
+</md></sn>
   <config>
     <tags>#01.what is rclone</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 31 2026 16:29:05 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 31 2026 17:01:01 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-nfbGUnmscA</id>
     <duration></duration>
   </config>
+<sn><md>### History
+
+:::.row
+:::.col-12 .col-lg-10
+**Nick Craig-Wood** was inspired by rsync. Concerns about the noise and power costs arising from home computer servers prompted him to embrace cloud storage, and he began developing rclone as open-source software in 2012 under the name swiftsync.
+
+Rclone was promoted to stable version 1.00 in July 2014.
+:::
+
+:::.col-12 .col-lg-2
+![img](https://avatars.githubusercontent.com/u/536803?v=4)
+:::
+:::
+
+
+:::.row
+:::.col-12 .col-lg-6
+In May 2017, Amazon Drive barred new users of rclone and other upload utilities, citing security concerns. Amazon Drive had been advertised as offering unlimited storage for £55 per year. Amazon's AWS S3 service continues to support new rclone users.
+
+The original rclone logo was updated in September 2018.
+
+In March 2020, Nick Craig-Wood resigned from Memset Ltd, a cloud hosting company he founded, to focus on open-source software.
+
+Amazon's AWS April 2020 public sector blog explained how the Fred Hutch Cancer Research Center was using rclone in their Motuz tool to migrate very large biomedical research datasets in and out of AWS S3 object stores.
+
+In November 2020, rclone was updated to correct a weakness in the way it generated passwords. Passwords for encrypted remotes can be generated randomly by rclone or supplied by the user. In all versions of rclone from 1.49.0 to 1.53.2, the seed value for generated passwords was based on the number of seconds elapsed in the day, and therefore not truly random. CVE-2020-28924 recommended users upgrade to the latest version of rclone and check the passwords protecting their encrypted remotes.
+
+Release 1.55 of rclone in March 2021 included features sponsored by CERN and their CS3MESH4EOSC project. The work was EU-funded to promote vendor-neutral application programming interfaces and protocols for synchronisation and sharing of academic data on cloud storage.
+:::
+
+:::.col-12 .col-lg-6
+**Rclone Information** {.text-center}
+
+| **Property**          | **Details**                                                                     |
+| --------------------- | ------------------------------------------------------------------------------- |
+| **Name**              | Rclone                                                                          |
+| **Original author**   | Nick Craig-Wood                                                                 |
+| **Developers**        | Nick Craig-Wood, Ivan Andreev                                                   |
+| **Initial release**   | July 3, 2014                                                                    |
+| **Stable release**    | 1.75.0 — July 31, 2026                                                          |
+| **Written in**        | Go                                                                              |
+| **Operating systems** | Linux, Windows, macOS, FreeBSD, NetBSD, OpenBSD, Plan 9, Solaris                |
+| **Platforms**         | Intel/AMD-64, Intel/AMD-32, ARM-32, ARM-64, MIPS-Big-Endian, MIPS-Little-Endian |
+| **License**           | MIT                                                                             |
+| **Website**           | rclone.org                                                                      |
+| **Repository**        | github.com/rclone/rclone                                                        |
+:::
+:::</md></sn><sn><md>### Academic Evolution
+
+In 2018, University of Kentucky researchers published a conference paper comparing the use of rclone and other command-line, cloud data transfer agents for big data. The paper was published as a result of funding by the National Science Foundation.
+
+Later that year, the University of Utah's Center for High Performance Computing examined the impact of rclone options on data transfer rates.
+
+
+</md></sn><sn><md>### Use in Cybercrime
+
+:::.row
+:::.col-12 .col-lg-8
+In May 2020, reports stated rclone had been used by hackers to exploit Diebold Nixdorf ATMs with ProLock ransomware. The FBI issued a Flash Alert (MI-000125-MW) on May 4, 2020, in relation to the compromise, followed by a related alert (20200901–001) in September 2020. Attackers exfiltrated and encrypted data from organisations involved in healthcare, construction, finance, and legal services, affecting multiple US government agencies and industrial entities. Researchers established that the hackers spent about a month exploring breached networks, using rclone to archive stolen data to cloud storage before encrypting target systems. Reported targets included LaSalle County and the city of Novi Sad.
+:::
+
+:::.col-12 .col-lg-4
+![img](https://australiancybersecuritymagazine.com.au/wp-content/uploads/2024/11/The-Federal-Bureau-of-Investigation.jpg)
+:::
+:::
+
+
+
+In January 2021, the FBI warned in Private Industry Notification 20210106–001 of extortion activity using Egregor ransomware and rclone. Organisations worldwide were threatened with the public release of exfiltrated data. In some cases, rclone was disguised under the executable name `svchost`. Reported victims included bookseller Barnes &amp; Noble, US retailer Kmart, video game developer Ubisoft, and the Vancouver metro system.
+
+In April 2021, a cybersecurity investigation into the SonicWall VPN zero-day vulnerability (SNWLID-2021-0001) by FireEye's Mandiant team established that attackers (UNC2447) used rclone for reconnaissance and exfiltration of victims' files. Cybersecurity and Infrastructure Security Agency Analysis Report AR21-126A confirmed this use of rclone in FiveHands ransomware attacks.
+</md></sn>
