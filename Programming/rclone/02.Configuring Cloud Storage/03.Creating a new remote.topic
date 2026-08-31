@@ -1,10 +1,65 @@
 
-  <sn></sn>
+  <sn><md>### Creating a New Remote
+
+To create a new Rclone remote, start:
+
+```bash
+rclone config
+```
+
+Then choose:
+
+```text
+n) New remote
+```
+
+Enter:
+
+```text
+n
+```
+
+Rclone will ask:
+
+```text
+name&gt; 
+```
+
+Enter a name for your remote, for example:
+
+```text
+name&gt; gdrive
+```
+
+This creates the remote name:
+
+```text
+gdrive:
+```
+
+**Basic Process**
+
+```text
+rclone config
+      ↓
+      n
+      ↓
+Remote name
+      ↓
+Storage provider
+      ↓
+Provider-specific settings
+      ↓
+Authentication
+      ↓
+Save
+```
+</md></sn>
   <config>
     <tags>#03.creating a new remote</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 31 2026 20:48:47 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 31 2026 21:07:05 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Ex6OLEIasz</id>
     <duration></duration>
   </config>
