@@ -18,12 +18,35 @@
 
 Each remote has its own configuration section.
 
+Inside **rclone.conf** file,it may have
+
+```bash
+[gdrive]
+type = drive
+scope = drive
+token = {"access_token":"YOUR_ACCESS_TOKEN","token_type":"Bearer","refresh_token":"YOUR_REFRESH_TOKEN","expiry":"2026-08-31T22:24:02+06:00"}
+team_drive =
+
+[onedrive]
+type = onedrive
+token = {"access_token":"YOUR_ACCESS_TOKEN","token_type":"Bearer","refresh_token":"YOUR_REFRESH_TOKEN","expiry":"2026-08-31T23:30:00+06:00"}
+drive_id =
+
+[backup]
+type = s3
+provider = Other
+access_key_id = YOUR_ACCESS_KEY
+secret_access_key = YOUR_SECRET_KEY
+region = us-east-1
+endpoint = https://example.com
+```
+
 </md></sn>
   <config>
     <tags>#12.understanding rclone conf</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 31 2026 21:57:45 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 31 2026 22:02:43 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-F71lE6eYll</id>
     <duration></duration>
   </config>
