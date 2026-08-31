@@ -1,10 +1,128 @@
 
-  <sn></sn>
+  <sn><md>### Viewing Configured Remotes in rclone
+
+After creating one or more remotes, you can view them using several Rclone commands.
+
+##### List Remote Names
+
+The simplest method is:
+
+```bash
+rclone listremotes
+```
+
+Example:
+
+```text
+gdrive:
+onedrive:
+backup:
+```
+
+This shows only the **remote names**, not their configuration details.
+
+</md></sn>
   <config>
     <tags>#10.viewing configured remotes</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 31 2026 20:50:24 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 31 2026 21:34:49 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-3d4Pba8rih</id>
     <duration></duration>
   </config>
+<sn><md>#### View Remote Configuration
+
+Use:
+
+```bash
+rclone config show
+```
+
+Example:
+
+```text
+[gdrive]
+type = drive
+scope = drive
+token = ...
+```
+
+This shows the configuration stored for your remotes.
+
+&gt; [Be careful when sharing this output]{.fg-red}, because authentication tokens or other sensitive information may be present.
+</md></sn><sn><md>#### Open the Interactive Configuration Menu
+
+Run:
+
+```bash
+rclone config
+```
+
+You'll see something similar to:
+
+```text
+Current remotes:
+
+Name                 Type
+====                 ====
+gdrive               drive
+backup               s3
+```
+
+From here you can:
+
+| Option | Function                   |
+| ------ | -------------------------- |
+| `n`    | Create a new remote        |
+| `e`    | Edit an existing remote    |
+| `d`    | Delete a remote            |
+| `r`    | Rename a remote            |
+| `c`    | Copy a remote              |
+| `s`    | Set configuration password |
+| `q`    | Quit                       |
+</md></sn><sn><md>#### Check Whether a Remote Works
+
+Listing the remote's directories is a useful test:
+
+```bash
+rclone lsd gdrive:
+```
+
+Or list files:
+
+```bash
+rclone ls gdrive:
+```
+
+For a simpler file listing:
+
+```bash
+rclone lsf gdrive:
+```
+
+If Rclone successfully returns the contents, the remote is accessible.
+</md></sn><sn><md>#### Quick Reference
+
+| Command              | What it shows                 |
+| -------------------- | ----------------------------- |
+| `rclone listremotes` | Remote names                  |
+| `rclone config show` | Configuration details         |
+| `rclone config`      | Interactive remote management |
+| `rclone lsd remote:` | Directories in a remote       |
+| `rclone ls remote:`  | Files with sizes              |
+| `rclone lsf remote:` | Simple file listing           |
+
+**Most commonly used:**
+
+```bash
+rclone listremotes
+```
+
+to see what you have configured, and:
+
+```bash
+rclone lsd gdrive:
+```
+
+to verify that a particular remote is working.
+</md></sn>
