@@ -1,10 +1,40 @@
 
-  <sn></sn>
+  <sn><md>### **Rclone Cloud Storage Providers**
+
+According to the current Rclone documentation, Rclone supports a large range of storage systems. Below is a **4-column table**, with **four providers per row**. I’ve included the storage backends/providers listed in Rclone's current documentation, while excluding purely virtual/local entries such as `local`, `memory`, `alias`, `crypt`, etc. ([Rclone][1])
+
+| **Provider**           | **Provider**        | **Provider**         | **Provider**       |
+| ---------------------- | ------------------- | -------------------- | ------------------ |
+| 1Fichier               | Akamai NetStorage   | Amazon S3            | Azure Blob Storage |
+| Azure Files            | Backblaze B2        | Box                  | Cloudinary         |
+| Digi Storage           | DigitalOcean Spaces | Drime                | Dropbox            |
+| Enterprise File Fabric | FileLu              | Filen                | Files.com          |
+| FTP                    | Gofile              | Google Cloud Storage | Google Drive       |
+| Google Photos          | HDFS                | Hetzner Storage Box  | HiDrive            |
+| HTTP                   | Huawei Drive        | iCloud Drive         | ImageKit           |
+| Internet Archive       | Internxt            | Jottacloud           | Koofr              |
+| Linkbox                | Mail.ru Cloud       | MEGA                 | Microsoft OneDrive |
+| Oracle Object Storage  | OpenDrive           | OpenStack Swift      | pCloud             |
+| PikPak                 | Pixeldrain          | premiumize.me        | Proton Drive       |
+| put.io                 | QingStor            | Quatrix              | rsync.net          |
+| Seafile                | SFTP                | Shade                | Sia                |
+| SMB                    | Storj               | SugarSync            | Uloz.to            |
+| WebDAV                 | Yandex Disk         | Zoho WorkDrive       | **—**              |
+
+**Note:** Some entries such as **S3, Swift, WebDAV, SFTP, FTP, SMB, and HTTP** are protocols/backends rather than consumer cloud services themselves. They are nevertheless supported Rclone storage systems. ([Rclone][1])
+
+For example, **Amazon S3-compatible providers** can include services such as AWS S3, Wasabi, Cloudflare R2, Backblaze B2, and DigitalOcean Spaces through the S3 backend. ([Rclone][2])
+
+[Rclone — Supported Storage Systems](https://rclone.org/overview/?utm_source=chatgpt.com)
+
+[1]: https://rclone.org/overview/?utm_source=chatgpt.com "Overview of cloud storage systems"
+[2]: https://rclone.org/docs/?utm_source=chatgpt.com "Documentation"
+</md></sn>
   <config>
     <tags>#03.supported cloud storage providers</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 31 2026 16:29:37 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 31 2026 17:51:04 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-y55N0I4Al7</id>
     <duration></duration>
   </config>
