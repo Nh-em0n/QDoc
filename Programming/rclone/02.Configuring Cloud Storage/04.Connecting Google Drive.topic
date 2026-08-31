@@ -1,10 +1,261 @@
 
-  <sn></sn>
-  <config>
+  <sn><md>## Creating an Rclone Google Drive Remote {.text-center}
+
+For a normal Ubuntu/Linux desktop with a browser, the complete process is:
+
+The exact questions can vary slightly depending on your **Rclone version and Google Drive backend**, so don't worry if your prompts aren't word-for-word identical. The important decisions for a normal personal Google Drive are generally:
+
+| Setting            | Choice       |
+| ------------------ | ------------ |
+| Remote name        | `gdrive`     |
+| Storage            | Google Drive |
+| Client ID          | Empty        |
+| Client secret      | Empty        |
+| Scope              | `1`          |
+| Root folder ID     | Empty        |
+| Service account    | Empty        |
+| Advanced config    | `n`          |
+| Auto config        | `y`          |
+| Shared Drive       | `n`          |
+| Save configuration | `y`          |
+
+[Rclone Google Drive documentation](https://rclone.org/drive/?utm_source=chatgpt.com)
+
+
+</md></sn>
+  <sn><md>### Start Rclone configuration
+
+```bash
+rclone config
+```
+
+Choose:
+
+```text
+n) New remote
+```
+
+Enter:
+
+```text
+n
+```</md></sn><config>
     <tags>#04.connecting google drive</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 31 2026 20:49:03 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 31 2026 21:20:01 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-WxwKdJaNkr</id>
     <duration></duration>
   </config>
+<sn><md>### Enter a remote name
+
+Rclone asks:
+
+```text
+name&gt;
+```
+
+For example:
+
+```text
+name&gt; gdrive
+```
+
+Your remote will then be called:
+
+```text
+gdrive:
+```
+</md></sn><sn><md>### Select Google Drive
+
+Rclone displays a list of storage providers with numbers.
+
+Find:
+
+```text
+Google Drive
+```
+
+and enter its corresponding number.
+
+**Don't use a fixed number from an example**, because the provider list can change between Rclone versions.
+</md></sn><sn><md>### Configure Google OAuth credentials
+
+You may see:
+
+```text
+client_id&gt;
+```
+
+Press **Enter** to use Rclone's default client.
+
+Then:
+
+```text
+client_secret&gt;
+```
+
+Press **Enter** again.
+
+For a normal personal Google Drive setup, you generally don't need to create your own Google API credentials.
+</md></sn><sn><md>### Select the access scope
+
+Rclone asks:
+
+```text
+scope&gt;
+```
+
+For normal full synchronization/backup, choose:
+
+```text
+1
+```
+
+This gives Rclone full access to the Drive files needed for normal operations.
+</md></sn><sn><md>### Root folder ID
+
+You may see:
+
+```text
+root_folder_id&gt;
+```
+
+Press **Enter**.
+
+This makes Rclone use the normal Google Drive root.
+</md></sn><sn><md>### Service account
+
+You may see:
+
+```text
+service_account_file&gt;
+```
+
+Press **Enter**.
+
+You don't need a service account for a normal personal Google account.
+</md></sn><sn><md>### Advanced configuration
+
+Rclone may ask:
+
+```text
+Edit advanced config?
+y) Yes
+n) No
+```
+
+Choose:
+
+```text
+n
+```
+
+For a basic setup.
+</md></sn><sn><md>### Browser authentication
+
+You should then see something like:
+
+```text
+Use auto config?
+y) Yes
+n) No
+```
+
+Because you're using a Linux desktop with a browser, choose:
+
+```text
+y
+```
+
+Rclone will open your browser.
+</md></sn><sn><md>### Google authentication
+
+In the browser:
+
+```text
+Google account
+      ↓
+Sign in
+      ↓
+Grant Rclone permission
+      ↓
+Authentication completed
+```
+
+Return to the terminal after authentication.
+
+</md></sn><sn><md>### Shared Drive question
+
+Rclone may ask:
+
+```text
+Configure this as a Shared Drive?
+y) Yes
+n) No
+```
+
+For your normal personal **My Drive**, choose:
+
+```text
+n
+```
+
+If you specifically want to connect a Google Workspace Shared Drive, choose `y`.
+</md></sn><sn><md>### Confirm the remote
+
+Rclone will show the configuration and ask something similar to:
+
+```text
+y) Yes this is OK
+e) Edit this remote
+d) Delete this remote
+```
+
+Choose:
+
+```text
+y
+```
+
+Then quit:
+
+```text
+q
+```
+
+</md></sn><sn><md>### Verify the remote
+
+First:
+
+```bash
+rclone listremotes
+```
+
+You should see:
+
+```text
+gdrive:
+```
+
+Then list directories:
+
+```bash
+rclone lsd gdrive:
+```
+
+You can also list files:
+
+```bash
+rclone ls gdrive:
+```
+
+Or a more readable listing:
+
+```bash
+rclone lsf gdrive:
+```
+
+If these commands show your Google Drive contents, your remote is working.
+
+</md></sn><sn></sn>
