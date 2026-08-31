@@ -1,7 +1,7 @@
 
   <sn><md>## Creating an Rclone Google Drive Remote {.text-center}
 
-For a normal Ubuntu/Linux desktop with a browser, the complete process is:
+For a normal desktop with a browser, the complete process is:
 
 The exact questions can vary slightly depending on your **Rclone version and Google Drive backend**, so don't worry if your prompts aren't word-for-word identical. The important decisions for a normal personal Google Drive are generally:
 
@@ -43,7 +43,7 @@ n
     <tags>#04.connecting google drive</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 31 2026 21:20:01 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 31 2026 21:20:26 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-WxwKdJaNkr</id>
     <duration></duration>
   </config>
