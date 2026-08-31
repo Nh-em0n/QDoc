@@ -1,10 +1,89 @@
 
-  <sn></sn>
+  <sn><md>### Remote Paths Are Different
+
+Rclone remote paths generally don't use the normal Linux/Windows filesystem structure.
+
+For example:
+
+```text
+gdrive:Documents
+```
+
+is **not**:
+
+```text
+/home/emon/gdrive/Documents
+```
+
+It is a logical path that Rclone sends to the Google Drive backend.
+
+Similarly:
+
+```text
+onedrive:Backup
+```
+
+means the `Backup` location in the configured OneDrive remote.
+</md></sn>
   <config>
     <tags>#06.understanding remote path</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Aug 31 2026 16:30:50 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Aug 31 2026 19:47:19 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-1le9Wkq5Vn</id>
     <duration></duration>
   </config>
+<sn><md>### Remote Name vs Remote Path
+
+This distinction is important.
+
+Suppose you have:
+
+```text
+gdrive:Study/Physics
+```
+
+It consists of:
+
+```text
+gdrive
+  │
+  └── Remote name
+
+Study/Physics
+  │
+  └── Remote path
+```
+
+So:
+
+| Part                 | Example                | Meaning                                |
+| -------------------- | ---------------------- | -------------------------------------- |
+| Remote name          | `gdrive`               | Name you gave the Rclone configuration |
+| Remote path          | `Study/Physics`        | Location inside that remote            |
+| Complete remote path | `gdrive:Study/Physics` | Remote + path                          |
+
+</md></sn><sn><md>### The Same Command Can Work With Different Remotes
+
+For example:
+
+```bash
+rclone copy Documents gdrive:Documents
+```
+
+Google Drive.
+
+```bash
+rclone copy Documents onedrive:Documents
+```
+
+OneDrive.
+
+```bash
+rclone copy Documents s3:mybucket/Documents
+```
+
+S3.
+
+The **local source stays the same**, while the remote destination changes.
+</md></sn>
