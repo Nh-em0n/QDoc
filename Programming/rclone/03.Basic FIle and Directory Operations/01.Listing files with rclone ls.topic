@@ -1,10 +1,164 @@
 
-  <sn></sn>
+  <sn><md>### Listing Files with `rclone ls`
+
+The `rclone ls` command lists **files** stored in a local path or configured remote. It displays each file's **size** and **path**.
+
+**Basic Syntax**
+
+```bash
+rclone ls path
+```
+
++++ read help doc
+```bash
+emon@emon:~$ rclone ls --help
+
+Lists the objects in the source path to standard output in a human
+readable format with size and path. Recurses by default.
+
+Eg
+
+    $ rclone ls swift:bucket
+        60295 bevajer5jef
+        90613 canole
+        94467 diwogej7
+        37600 fubuwic
+
+
+Any of the filtering options can be applied to this command.
+
+There are several related list commands
+
+  * `ls` to list size and path of objects only
+  * `lsl` to list modification time, size and path of objects only
+  * `lsd` to list directories only
+  * `lsf` to list objects and directories in easy to parse format
+  * `lsjson` to list objects and directories in JSON format
+
+`ls`,`lsl`,`lsd` are designed to be human-readable.
+`lsf` is designed to be human and machine-readable.
+`lsjson` is designed to be machine-readable.
+
+Note that `ls` and `lsl` recurse by default - use `--max-depth 1` to stop the recursion.
+
+The other list commands `lsd`,`lsf`,`lsjson` do not recurse by default - use `-R` to make them recurse.
+
+Listing a nonexistent directory will produce an error except for
+remotes which can't have empty directories (e.g. s3, swift, or gcs -
+the bucket-based remotes).
+
+Usage:
+  rclone ls remote:path [flags]
+
+Flags:
+  -h, --help   help for ls
+
+Use "rclone [command] --help" for more information about a command.
+Use "rclone help flags" for to see the global flags.
+Use "rclone help backends" for a list of supported services.
+
+```
++++
+</md></sn>
   <config>
     <tags>#01.listing files with rclone ls</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 09:04:49 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 09:33:42 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-DTAiOztWyh</id>
     <duration></duration>
   </config>
+<sn><md>#### List a Local Folder
+
+You can also use `rclone ls` with local paths:
+
+```bash
+emon@emon:~$ ls
+Desktop  Documents  Downloads  Field  Music  Pictures  Public  Templates  Videos  snap
+emon@emon:~$ rclone ls Documents
+      567 bcs learning setup for linux.md
+       18 note.txt
+       27 note2.md
+       36 syllabus.md
+        0 Books/Chemistry.pdf
+        0 Books/Math.pdf
+        0 Books/Physics.pdf
+        0 Books/Notes/chemistry_note.md
+        0 Books/Notes/math_note.md
+        0 Books/Notes/physics_note.md
+```
+</md></sn><sn><md>#### List a Remote Folder
+
+This lists **all files** in your Google Drive remote.
+
+```text
+emon@emon:~$ rclone ls gd:Notes
+        0 math_note.md
+        0 physics_note.md
+        0 chemistry_note.md
+       -1 FolderA/Untitled document.docx
+       -1 FolderA/FolderB/Untitled presentation.pptx
+```
+</md></sn><sn><md>#### List Files in a Specific Folder
+
+For example:
+
+```bash
+emon@emon:~$ rclone ls gd:Notes/FolderA
+       -1 Untitled document.docx
+       -1 FolderB/Untitled presentation.pptx
+```
+</md></sn><sn><md>#### List Files Recursively
+
+`rclone ls` searches **recursively by default**. For example:
+
+```bash
+rclone ls gdrive:Documents
+```
+
+can display:
+
+```text
+Documents/
+├── notes.txt
+├── image.jpg
+└── Study/
+    ├── chapter1.pdf
+    └── chapter2.pdf
+```
+
+The actual output will show paths rather than a graphical tree:
+
+```text
+     2048 notes.txt
+   1048576 image.jpg
+    524288 Study/chapter1.pdf
+    734003 Study/chapter2.pdf
+```
+</md></sn><sn><md>### Useful Related Commands
+
+| Command       | Lists                     | Recursive    |
+| ------------- | ------------------------- | ------------ |
+| `rclone ls`   | Files with sizes          | ✅ Yes        |
+| `rclone lsd`  | Directories               | ❌ No         |
+| `rclone lsf`  | Files and directories     | Configurable |
+| `rclone size` | Total file count and size | N/A          |
+| `rclone tree` | Directory tree            | Configurable |
+</md></sn><sn><md>#### Important
+
+The trailing colon matters:
+
+```text
+gdrive:
+```
+
+means the root of your configured remote.
+
+Without the colon:
+
+```text
+gdrive
+```
+
+Rclone may interpret it as a **local path** instead of your configured remote.
+</md></sn>
