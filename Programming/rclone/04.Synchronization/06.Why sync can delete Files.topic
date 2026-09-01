@@ -1,10 +1,156 @@
 
-  <sn></sn>
+  <sn><md>### Why `rclone sync` Can Delete Files
+
+The purpose of `rclone sync` is to make the **destination exactly match the source**.
+
+Its basic rule is:
+
+```text
+SOURCE  ─────────────►  DESTINATION
+
+Destination must become identical to the source.
+```
+
+**Example**
+
+Before synchronization:
+
+```text
+SOURCE                       DESTINATION
+
+📁 Documents                 📁 Backup
+├── 📄 A.txt                 ├── 📄 A.txt
+├── 📄 B.txt                 ├── 📄 B.txt
+└── 📄 C.txt                 ├── 📄 C.txt
+                             └── 📄 Old.txt ❌
+```
+
+Command:
+
+```bash
+rclone sync SOURCE DESTINATION
+```
+
+Rclone compares both locations.
+
+```text
+SOURCE                       DESTINATION
+
+A.txt  ✔️ Exists              A.txt  ✔️ Keep
+B.txt  ✔️ Exists              B.txt  ✔️ Keep
+C.txt  ✔️ Exists              C.txt  ✔️ Keep
+                              Old.txt ❌ Not in source
+```
+
+Since `Old.txt` does **not exist in the source**, rclone deletes it from the destination.
+
+**After Synchronization**
+
+```text
+SOURCE                       DESTINATION
+
+📁 Documents                 📁 Backup
+├── 📄 A.txt                 ├── 📄 A.txt
+├── 📄 B.txt                 ├── 📄 B.txt
+└── 📄 C.txt                 └── 📄 C.txt
+```
+
+Now both locations are identical.
+</md></sn>
   <config>
     <tags>#06.why sync can delete files</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 16:52:19 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 20:10:08 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-aDZFYbjY6m</id>
     <duration></duration>
   </config>
+<sn><md>### What Happens When You Delete a Source File?
+
+Suppose initially:
+
+```text
+SOURCE                       DESTINATION
+
+📄 A.txt                     📄 A.txt
+📄 B.txt                     📄 B.txt
+📄 C.txt                     📄 C.txt
+```
+
+You delete `B.txt` from the source:
+
+```text
+SOURCE                       DESTINATION
+
+📄 A.txt                     📄 A.txt
+❌ B.txt                     📄 B.txt
+📄 C.txt                     📄 C.txt
+```
+
+Then you run:
+
+```bash
+rclone sync SOURCE DESTINATION
+```
+
+Rclone sees:
+
+&gt; "`B.txt` exists in the destination but not in the source."
+
+Therefore:
+
+```text
+SOURCE                       DESTINATION
+
+📄 A.txt                     📄 A.txt
+❌ B.txt                     ❌ B.txt
+📄 C.txt                     📄 C.txt
+```
+
+</md></sn><sn><md>### The Simple Rule
+
+```text
+rclone sync SOURCE DESTINATION
+
+Does it exist in SOURCE?
+        │
+        ├── ✔️ Yes → Keep or update it in DESTINATION
+        │
+        └── ❌ No → Delete it from DESTINATION
+```
+
+**Why Is This Useful?**
+
+`sync` is useful when you want an exact mirror:
+
+```text
+💻 Local Folder  ═══════════► ☁️ Cloud Backup
+```
+
+For example, if you remove unnecessary files from your local folder, running `sync` ensures those files are also removed from the cloud mirror.
+
+</md></sn><sn><md>### Important Warning
+
+The command order matters:
+
+```bash
+rclone sync ~/Documents mega:Backup
+```
+
+This means:
+
+```text
+~/Documents ─────────────► mega:Backup
+
+   SOURCE                   DESTINATION
+                              ⚠️ Can be deleted from here
+```
+
+Before running an important sync, always check it safely:
+
+```bash
+rclone sync ~/Documents mega:Backup --dry-run
+```
+
+`--dry-run` shows which files would be copied, updated, or deleted without actually making any changes.
+</md></sn>
