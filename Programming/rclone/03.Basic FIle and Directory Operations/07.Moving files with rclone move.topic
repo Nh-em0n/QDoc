@@ -1,10 +1,178 @@
 
-  <sn></sn>
+  <sn><md>### Moving Files with `rclone move`
+
+The `rclone move` command transfers files from a **source** to a **destination**, 
+then removes the successfully transferred files from the source.
+
+**Basic Syntax**
+
+```bash
+rclone move [options] source destination
+```
+
+The basic process is:
+
+```text
+Source
+   │
+   │ Copy files
+   ▼
+Destination
+   │
+   │ Delete successfully transferred source files
+   ▼
+Move completed
+```
+
+It removes the folder also,if it became empty
+</md></sn>
   <config>
     <tags>#07.moving files with rclone move</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 09:06:42 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 12:33:49 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-7HJMjAdUvz</id>
     <duration></duration>
   </config>
+<sn><md>#### Move Local Files to a Remote
+
+For example:
+
+```bash
+rclone move -P ~/Documents gd:Backup
+```
+
+This moves the contents of:
+
+```text
+~/Documents/
+```
+
+into:
+
+```text
+gd:Backup/
+```
+
+After each file is successfully transferred, the original source file is removed.
+
+If you want to preserve the `Documents` folder name:
+
+```bash
+rclone move -P ~/Documents gd:Backup/Documents
+```
+</md></sn><sn><md>### Move Remote Files to Local Storage
+
+```bash
+rclone move -P gd:Backup ~/Downloads/Backup
+```
+
+After successful transfer, the files are removed from:
+
+```text
+gd:Backup
+```
+</md></sn><sn><md>#### Move Between Two Remotes
+
+For example:
+
+```bash
+rclone move -P gd:Backup onedrive:Backup
+```
+
+Conceptually:
+
+```text
+Google Drive
+      │
+      │ Transfer
+      ▼
+OneDrive
+      │
+      ▼
+Source files removed
+```
+</md></sn><sn><md>#### Move a Single File
+
+Use `moveto` to move one file to an exact destination:
+
+```bash
+rclone moveto -P ~/Documents/notes.pdf gd:Backup/notes.pdf
+```
+
+You can also rename the file while moving:
+
+```bash
+rclone moveto -P ~/Documents/notes.pdf gd:Backup/my-notes.pdf
+```
+</md></sn><sn><md>#### Move Specific Files
+
+Use `--include`:
+
+```bash
+rclone move -P ~/Documents gd:Backup \
+  --include "*.pdf"
+```
+
+This moves only PDF files. Successfully transferred PDF files are removed from the local source.
+
+For specific files:
+
+```bash
+rclone move -P ~/Documents gd:Backup \
+  --include "notes.pdf" \
+  --include "assignment.pdf"
+```
+</md></sn><sn><md>#### Move an Entire Directory
+
+```bash
+rclone move -P ~/Documents/Projects gd:Backup/Projects
+```
+
+Rclone moves the contents of `Projects` into the destination folder.
+</md></sn><sn><md>#### Preview Before Moving
+
+Since `move` removes source files, use `--dry-run` first:
+
+```bash
+rclone move --dry-run ~/Documents gd:Backup
+```
+
+Then, if everything looks correct:
+
+```bash
+rclone move -P ~/Documents gd:Backup
+```
+</md></sn><sn><md>#### `copy` vs `move`
+
+| Feature                                        | `rclone copy` | `rclone move` |
+| ---------------------------------------------- | ------------- | ------------- |
+| Transfers files                                | ✅             | ✅             |
+| Source files remain                            | ✅             | ❌             |
+| Source files removed after successful transfer | ❌             | ✅             |
+| Extra destination files deleted                | ❌             | ❌             |
+| Suitable for backup                            | ✅             | ⚠️            |
+| Suitable for transferring files                | ⚠️            | ✅             |
+| Supports remote → remote                       | ✅             | ✅             |
+</md></sn><sn><md>#### Important Safety Note
+
+`rclone move` does **not normally delete the source file until it has been successfully transferred**. However, because it ultimately removes your original files, you should use:
+
+```bash
+rclone move --dry-run SOURCE DESTINATION
+```
+
+before moving important data.
+
+A safe workflow is:
+
+```bash
+# Step 1: Preview
+rclone move --dry-run ~/Documents gd:Backup
+
+# Step 2: Perform the move
+rclone move -P ~/Documents gd:Backup
+```
+
+This lets you verify the source and destination paths before transferring and removing your original files.
+</md></sn>
