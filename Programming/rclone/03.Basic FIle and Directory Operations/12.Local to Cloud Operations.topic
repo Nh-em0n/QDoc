@@ -1,10 +1,77 @@
 
-  <sn></sn>
+  <sn><md>### Local to Cloud Operations
+
+With rclone, you can transfer and manage files between your **local computer** and cloud storage.
+
+### Basic Format
+
+```bash
+rclone command LOCAL_PATH REMOTE_PATH
+```
+
+Here:
+
+| Part        | Example                | Meaning                       |
+| ----------- | ---------------------- | ----------------------------- |
+| Local path  | `/home/emon/Documents` | Source files on your computer |
+| Remote path | `mega:Backup`          | Destination in cloud storage  |
+
+</md></sn>
   <config>
     <tags>#12.local to cloud operations</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 09:08:11 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 16:26:10 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-gsPNcSeCkA</id>
     <duration></duration>
   </config>
+<sn><md>### Copy Local Files to Cloud
+
+```bash
+rclone copy /home/emon/Documents mega:Backup
+```
+
+Copies files without deleting the original local files.
+
+**Move Local Files to Cloud**
+
+```bash
+rclone move /home/emon/Documents mega:Backup
+```
+
+Uploads the files and removes the local originals after a successful transfer.
+
+**Sync Local Files to Cloud**
+
+```bash
+rclone sync /home/emon/Documents mega:Backup
+```
+
+Makes the cloud destination match the local source.
+
+⚠️ Files in `mega:Backup` that don't exist locally may be deleted.
+
+**Check Files Before Transferring**
+
+```bash
+rclone check /home/emon/Documents mega:Backup
+```
+
+Compares the files in both locations and reports differences.
+
+**List Cloud Files**
+
+```bash
+rclone ls mega:Backup
+```
+
+**Preview Operations**
+
+Add `--dry-run` before performing important operations:
+
+```bash
+rclone sync /home/emon/Documents mega:Backup --dry-run
+```
+
+This shows what rclone **would do** without actually changing or deleting any files.
+</md></sn>
