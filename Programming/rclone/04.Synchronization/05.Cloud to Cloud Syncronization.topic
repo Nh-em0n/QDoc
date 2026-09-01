@@ -15,7 +15,7 @@ Rclone handles the transfer between the two cloud remotes.
     <tags>#05.cloud to cloud syncronization</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 20:02:55 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 20:07:19 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-8puLhBk3CT</id>
     <duration></duration>
   </config>
@@ -124,4 +124,140 @@ rclone sync gdrive:Documents mega:Backup --dry-run
 ```
 
 This allows you to see the planned changes without modifying either cloud storage.
-</md></sn>
+</md></sn><sn><md><pre class="d-none data">+++ see my practice
+
+```bash
+
+emon@emon:~$ rclone ls gd:Documents
+2026/09/01 20:04:55 NOTICE: gd: This remote uses rclone's shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id
+       -1 Untitled drawing.svg
+       36 syllabus.md
+       27 note2.md
+       18 note.txt
+      567 bcs learning setup for linux.md
+        0 Books/Physics.pdf
+        0 Books/Chemistry.pdf
+        0 Books/Math.pdf
+        0 Books/Notes/math_note.md
+        0 Books/Notes/physics_note.md
+        0 Books/Notes/chemistry_note.md
+emon@emon:~$ rclone ls mega:Documents
+  3014818 Soil Formation and Weathering Processes.docx
+      567 bcs learning setup for linux.md
+       18 note.txt
+       27 note2.md
+       36 syllabus.md
+       19 New Folder/message.txt
+        0 Books/Chemistry.pdf
+        0 Books/Math.pdf
+        0 Books/Physics.pdf
+emon@emon:~$ rclone sync gd:Documents mega:Documents
+2026/09/01 20:05:50 NOTICE: gd: This remote uses rclone's shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id
+2026/09/01 20:06:00 NOTICE: mega root 'Documents': --checksum is in use but the source and destination have no hashes in common; falling back to --size-only
+emon@emon:~$ rclone ls mega:Documents
+     1937 Untitled drawing.svg
+      567 bcs learning setup for linux.md
+       18 note.txt
+       27 note2.md
+       36 syllabus.md
+        0 Books/Chemistry.pdf
+        0 Books/Math.pdf
+        0 Books/Physics.pdf
+        0 Books/Notes/chemistry_note.md
+        0 Books/Notes/math_note.md
+        0 Books/Notes/physics_note.md
+emon@emon:~$ 
+
+```
+
++++</pre><temp><dl>
+<pre class="copy-container"><i class="fa-light fa-clone i-btn hover rounded-1 copy-btn code-copy-btn" title="Copy"></i><code class="copy-text language-bash hljs" data-highlighted="yes">
+emon@emon:~$ rclone <span class="hljs-built_in">ls</span> gd:Documents
+2026/09/01 20:04:55 NOTICE: gd: This remote uses rclone<span class="hljs-string">'s shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id
+       -1 Untitled drawing.svg
+       36 syllabus.md
+       27 note2.md
+       18 note.txt
+      567 bcs learning setup for linux.md
+        0 Books/Physics.pdf
+        0 Books/Chemistry.pdf
+        0 Books/Math.pdf
+        0 Books/Notes/math_note.md
+        0 Books/Notes/physics_note.md
+        0 Books/Notes/chemistry_note.md
+emon@emon:~$ rclone ls mega:Documents
+  3014818 Soil Formation and Weathering Processes.docx
+      567 bcs learning setup for linux.md
+       18 note.txt
+       27 note2.md
+       36 syllabus.md
+       19 New Folder/message.txt
+        0 Books/Chemistry.pdf
+        0 Books/Math.pdf
+        0 Books/Physics.pdf
+emon@emon:~$ rclone sync gd:Documents mega:Documents
+2026/09/01 20:05:50 NOTICE: gd: This remote uses rclone'</span>s shared Google Drive client_id, <span class="hljs-built_in">which</span> is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id
+2026/09/01 20:06:00 NOTICE: mega root <span class="hljs-string">'Documents'</span>: --checksum is <span class="hljs-keyword">in</span> use but the <span class="hljs-built_in">source</span> and destination have no hashes <span class="hljs-keyword">in</span> common; falling back to --size-only
+emon@emon:~$ rclone <span class="hljs-built_in">ls</span> mega:Documents
+     1937 Untitled drawing.svg
+      567 bcs learning setup <span class="hljs-keyword">for</span> linux.md
+       18 note.txt
+       27 note2.md
+       36 syllabus.md
+        0 Books/Chemistry.pdf
+        0 Books/Math.pdf
+        0 Books/Physics.pdf
+        0 Books/Notes/chemistry_note.md
+        0 Books/Notes/math_note.md
+        0 Books/Notes/physics_note.md
+emon@emon:~$ 
+
+</code></pre>
+</dl>
+</temp>++ see my practice
+
+```bash
+
+emon@emon:~$ rclone ls gd:Documents
+2026/09/01 20:04:55 NOTICE: gd: This remote uses rclone's shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id
+       -1 Untitled drawing.svg
+       36 syllabus.md
+       27 note2.md
+       18 note.txt
+      567 bcs learning setup for linux.md
+        0 Books/Physics.pdf
+        0 Books/Chemistry.pdf
+        0 Books/Math.pdf
+        0 Books/Notes/math_note.md
+        0 Books/Notes/physics_note.md
+        0 Books/Notes/chemistry_note.md
+emon@emon:~$ rclone ls mega:Documents
+  3014818 Soil Formation and Weathering Processes.docx
+      567 bcs learning setup for linux.md
+       18 note.txt
+       27 note2.md
+       36 syllabus.md
+       19 New Folder/message.txt
+        0 Books/Chemistry.pdf
+        0 Books/Math.pdf
+        0 Books/Physics.pdf
+emon@emon:~$ rclone sync gd:Documents mega:Documents
+2026/09/01 20:05:50 NOTICE: gd: This remote uses rclone's shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id
+2026/09/01 20:06:00 NOTICE: mega root 'Documents': --checksum is in use but the source and destination have no hashes in common; falling back to --size-only
+emon@emon:~$ rclone ls mega:Documents
+     1937 Untitled drawing.svg
+      567 bcs learning setup for linux.md
+       18 note.txt
+       27 note2.md
+       36 syllabus.md
+        0 Books/Chemistry.pdf
+        0 Books/Math.pdf
+        0 Books/Physics.pdf
+        0 Books/Notes/chemistry_note.md
+        0 Books/Notes/math_note.md
+        0 Books/Notes/physics_note.md
+emon@emon:~$ 
+
+```
+
++++</md></sn>
