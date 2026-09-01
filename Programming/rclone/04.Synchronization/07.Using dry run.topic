@@ -1,10 +1,150 @@
 
-  <sn></sn>
+  <sn><md>### Using `--dry-run` with rclone
+
+The `--dry-run` option lets you **preview an rclone operation without making any actual changes**.
+
+```text
+NORMAL COMMAND
+      │
+      ▼
+rclone performs the operation
+      │
+      ├── ✔️ Files copied
+      ├── ✔️ Files moved
+      └── ✔️ Files deleted
+
+
+WITH --dry-run
+      │
+      ▼
+rclone shows what would happen
+      │
+      ├── 🔍 Files that would be copied
+      ├── 🔍 Files that would be moved
+      └── 🔍 Files that would be deleted
+           
+      ❌ No actual changes
+```
+
+**Basic Syntax**
+
+```bash
+rclone COMMAND SOURCE DESTINATION --dry-run
+```
+</md></sn>
   <config>
     <tags>#07.using dry run</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 16:52:30 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 20:15:25 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-jq4YdMviay</id>
     <duration></duration>
   </config>
+<sn><md>### Testing `sync` Safely
+
+Suppose:
+
+```text
+SOURCE                       DESTINATION
+
+📄 A.txt                     📄 A.txt
+📄 B.txt                     📄 B.txt
+                             📄 Old.txt
+```
+
+Run:
+
+```bash
+rclone sync SOURCE DESTINATION --dry-run
+```
+
+Rclone analyzes both locations:
+
+```text
+SOURCE                       DESTINATION
+
+📄 A.txt                     📄 A.txt ✔️ Keep
+📄 B.txt                     📄 B.txt ✔️ Keep
+                             📄 Old.txt ❌ Would delete
+```
+
+But because you used `--dry-run`:
+
+```text
+DESTINATION AFTER DRY RUN
+
+📄 A.txt
+📄 B.txt
+📄 Old.txt ✔️ Still exists
+```
+
+No files are actually deleted.
+
+</md></sn><sn><md>### Examples
+
+**Local to Cloud**
+
+```bash
+rclone sync ~/Documents mega:Backup --dry-run
+```
+
+Preview what would happen when synchronizing your local `Documents` folder with MEGA.
+
+```text
+💻 Local Documents ────────► ☁️ MEGA Backup
+        Analyze only
+              🔍
+        ❌ No changes
+```
+
+
+**Cloud to Local**
+
+```bash
+rclone sync mega:Backup ~/Documents --dry-run
+```
+
+Preview the synchronization from MEGA to your local computer.
+
+### **Cloud to Cloud**
+
+```bash
+rclone sync gdrive:Documents mega:Backup --dry-run
+```
+
+Preview synchronization between Google Drive and MEGA.
+</md></sn><sn><md>### `--dry-run` with Other Commands
+
+| Command  | Example                                    | Actual Changes? |
+| -------- | ------------------------------------------ | --------------- |
+| `copy`   | `rclone copy SOURCE DESTINATION --dry-run` | ❌               |
+| `move`   | `rclone move SOURCE DESTINATION --dry-run` | ❌               |
+| `sync`   | `rclone sync SOURCE DESTINATION --dry-run` | ❌               |
+| `delete` | `rclone delete REMOTE:PATH --dry-run`      | ❌               |
+</md></sn><sn><md>### Recommended Workflow
+
+```text
+Step 1
+   │
+   ▼
+Run the command with --dry-run
+   │
+   ▼
+Review the planned changes
+   │
+   ├── ❌ Something wrong → Stop and fix the command
+   │
+   └── ✔️ Everything correct
+           │
+           ▼
+Step 2
+   │
+   ▼
+Run the same command without --dry-run
+           │
+           ▼
+      ✔️ Actual operation
+```
+
+&gt; ⚠️ Always use `--dry-run` before running an important `rclone sync` command, because `sync` may delete files from the destination.
+</md></sn>
