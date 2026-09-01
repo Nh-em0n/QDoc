@@ -1,10 +1,197 @@
 
-  <sn></sn>
+  <sn><md>### Cloud-to-Cloud Synchronization
+
+Cloud-to-cloud synchronization means transferring or synchronizing files directly from **one cloud storage service to another** using rclone.
+
+For example:
+
+```text
+☁️ Google Drive ─────────────► ☁️ MEGA
+```
+
+Rclone handles the transfer between the two cloud remotes.
+</md></sn>
   <config>
     <tags>#05.cloud to cloud syncronization</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 16:52:06 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 20:00:06 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-8puLhBk3CT</id>
     <duration></duration>
   </config>
+<sn><md>### Basic Command Structure
+
+```bash
+rclone COMMAND SOURCE_REMOTE:PATH DESTINATION_REMOTE:PATH
+```
+
+For example:
+
+```bash
+rclone sync gdrive:Documents mega:Documents
+```
+
+Here:
+
+```text
+gdrive:Documents ───────────► mega:Documents
+☁️ Google Drive                 ☁️ MEGA
+
+SOURCE                          DESTINATION
+```
+</md></sn><sn><md>### Using `copy`
+
+```text
+BEFORE
+
+☁️ GOOGLE DRIVE                  ☁️ MEGA
+
+📁 Documents                     📁 Backup
+├── 📄 A.txt                     ├── 📄 A.txt
+├── 📄 B.txt                     └── 📄 Old.txt
+└── 📄 C.txt
+
+
+COMMAND
+
+rclone copy gdrive:Documents mega:Backup
+
+
+AFTER
+
+☁️ GOOGLE DRIVE                  ☁️ MEGA
+
+📁 Documents                     📁 Backup
+├── 📄 A.txt                     ├── 📄 A.txt
+├── 📄 B.txt ─────────────────► ├── 📄 B.txt
+└── 📄 C.txt ─────────────────► ├── 📄 C.txt
+                                 └── 📄 Old.txt
+```
+
+✔️ Source cloud files remain.
+✔️ Extra files in the destination remain.
+</md></sn><sn><md>### Using `move`
+
+```text
+BEFORE
+
+☁️ GOOGLE DRIVE                  ☁️ MEGA
+
+📁 Documents                     📁 Backup
+├── 📄 A.txt
+├── 📄 B.txt
+└── 📄 C.txt
+
+
+COMMAND
+
+rclone move gdrive:Documents mega:Backup
+
+
+TRANSFER
+
+☁️ GOOGLE DRIVE  ─────────────►  ☁️ MEGA
+      A.txt                           A.txt
+      B.txt                           B.txt
+      C.txt                           C.txt
+
+
+AFTER SUCCESSFUL TRANSFER
+
+☁️ GOOGLE DRIVE                  ☁️ MEGA
+
+📁 Documents                     📁 Backup
+                                 ├── 📄 A.txt
+                                 ├── 📄 B.txt
+                                 └── 📄 C.txt
+```
+
+✔️ Files are transferred to the destination cloud.
+❌ Source files are removed after a successful transfer.
+✔️ Extra destination files remain.
+</md></sn><sn><md>### Using `sync`
+
+Suppose the source cloud contains:
+
+```text
+☁️ GOOGLE DRIVE
+
+📁 Documents
+├── 📄 A.txt
+├── 📄 B.txt
+└── 📄 C.txt
+```
+
+But the destination cloud contains:
+
+```text
+☁️ MEGA
+
+📁 Backup
+├── 📄 A.txt
+├── 📄 B.txt
+└── 📄 Old.txt
+```
+
+Run:
+
+```bash
+rclone sync gdrive:Documents mega:Backup
+```
+</md></sn><sn><md>### Synchronization Process
+
+```text
+☁️ GOOGLE DRIVE                  ☁️ MEGA
+
+📁 Documents                     📁 Backup
+├── 📄 A.txt ─────────────────► 📄 A.txt
+├── 📄 B.txt ─────────────────► 📄 B.txt
+└── 📄 C.txt ─────────────────► 📄 C.txt
+                                 ❌ Old.txt
+```
+
+**After Synchronization**
+
+```text
+☁️ GOOGLE DRIVE                  ☁️ MEGA
+
+📁 Documents                     📁 Backup
+├── 📄 A.txt                     ├── 📄 A.txt
+├── 📄 B.txt                     ├── 📄 B.txt
+└── 📄 C.txt                     └── 📄 C.txt
+```
+
+The destination cloud becomes identical to the source cloud.
+</md></sn><sn><md>### Summary
+
+**Example: Google Drive to MEGA**
+
+```bash
+# Copy files
+rclone copy gdrive:Documents mega:Backup
+
+# Move files
+rclone move gdrive:Documents mega:Backup
+
+# Synchronize files
+rclone sync gdrive:Documents mega:Backup
+```
+
+**Important Rule**
+
+```text
+rclone sync SOURCE DESTINATION
+
+SOURCE  ─────────────►  DESTINATION
+         controls
+        everything
+```
+
+⚠️ `sync` can delete files from the **destination**. Always test an important cloud-to-cloud synchronization first:
+
+```bash
+rclone sync gdrive:Documents mega:Backup --dry-run
+```
+
+This allows you to see the planned changes without modifying either cloud storage.
+</md></sn>
