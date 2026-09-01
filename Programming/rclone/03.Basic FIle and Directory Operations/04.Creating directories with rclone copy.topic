@@ -36,7 +36,7 @@ Rclone creates missing destination directories as needed while copying files.
     <tags>#04.creating directories with rclone copy</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 11:26:13 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 11:36:05 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-JY6A7pL67O</id>
     <duration></duration>
   </config>
@@ -118,7 +118,7 @@ emon@emon:~$
 ```
 **Mistakes**
 - I use -p flag wrong,it will be either -P or --progress
-- If a folder containing a space then we have to place it in "" double quotes
+- If a folder name containing a space then we have to place it in "" double quotes
 
 +++</md></sn><sn><md>### Remote to Local 
 
@@ -195,6 +195,43 @@ The `-P` option displays transfer progress.
 | `rclone copy --dry-run gdrive:Backup ~/Backup` | Preview without copying        |
 | `rclone copy -P gdrive:Backup ~/Backup`        | Show progress                  |
 
+
++++ see my practice
+```
+emon@emon:~$ ls
+Desktop  Documents  Downloads  Field  Music  Pictures  Public  Templates  Videos  snap
+emon@emon:~$ rclone lsd gd:
+          -1 2026-08-20 07:02:54        -1 BCS
+          -1 2026-06-10 10:00:15        -1 Mobile
+          -1 2026-09-01 09:23:55        -1 Notes
+emon@emon:~$ rclone copy --dry-run gd:Notes ~Notes
+&lt;5&gt;NOTICE: chemistry_note.md: Skipped copy as --dry-run is set (size 0)
+&lt;5&gt;NOTICE: math_note.md: Skipped copy as --dry-run is set (size 0)
+&lt;5&gt;NOTICE: physics_note.md: Skipped copy as --dry-run is set (size 0)
+&lt;5&gt;NOTICE: FolderA/Untitled document.docx: Skipped copy as --dry-run is set
+&lt;5&gt;NOTICE: FolderA/FolderB/Untitled presentation.pptx: Skipped copy as --dry-run is set
+&lt;5&gt;NOTICE: 
+Transferred:   	          off / off, -, 0 B/s, ETA -
+Transferred:            5 / 5, 100%
+Elapsed time:        19.8s
+
+emon@emon:~$ ls
+Desktop  Documents  Downloads  Field  Music  Pictures  Public  Templates  Videos  snap
+emon@emon:~$ rclone copy -P gd:Notes ~Notes
+Transferred:       20.577 MiB / 20.577 MiB, 100%, 1.470 MiB/s, ETA 0s
+Transferred:            5 / 5, 100%
+Elapsed time:        33.2s
+emon@emon:~$ ls
+ Desktop   Documents   Downloads   Field   Music   Pictures   Public   Templates   Videos   snap   '~Notes'
+emon@emon:~$ cd '~Notes'
+emon@emon:~/~Notes$ ls
+FolderA  chemistry_note.md  math_note.md  physics_note.md
+emon@emon:~/~Notes$ 
+```
+**Mistake**
+-  I use ~folderName instead of ~/folderName
+
++++
 </md></sn><sn><md>### Creating Nested Directories
 
 You can specify a complete destination path:
