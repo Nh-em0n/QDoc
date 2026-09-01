@@ -1,10 +1,63 @@
 
-  <sn></sn>
+  <sn><md>### `rclone lsl`
+
+The `lsl` command work same as `ls` command.The main difference between them that it include modification date and time in the output message.
+
+```text
+FILE_SIZE    MODIFICATION_DATE_AND_TIME    FILE_PATH
+```
+
+| Information       | Description                 |
+| ----------------- | --------------------------- |
+| File size         | Size of the file in bytes   |
+| Modification time | Last modified date and time |
+| File path         | Location of the file        |
+
+</md></sn>
   <config>
     <tags>#02.human readable listing with rclone lsl</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 09:05:03 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 10:14:28 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-cotuQg4jtm</id>
     <duration></duration>
   </config>
+<sn><md>### Example
+
+:::.row
+:::.col-12 .col-lg-6
+**local** {.text-center}
+```bash
+emon@emon:~$ rclone lsl Documents/
+      567 2026-08-31 12:32:12.376740326 bcs learning setup for linux.md
+       18 2026-09-01 09:11:41.088915750 note.txt
+       27 2026-09-01 09:11:54.465297935 note2.md
+       36 2026-09-01 09:12:11.264720096 syllabus.md
+        0 2026-09-01 09:14:13.657768409 Books/Chemistry.pdf
+        0 2026-09-01 09:14:07.112885268 Books/Math.pdf
+        0 2026-09-01 09:14:30.249546782 Books/Physics.pdf
+        0 2026-09-01 09:14:51.705514822 Books/Notes/chemistry_note.md
+        0 2026-09-01 09:15:07.785490874 Books/Notes/math_note.md
+        0 2026-09-01 09:15:02.409498884 Books/Notes/physics_note.md
+```
+:::
+
+:::.col-12 .col-lg-6
+**remote** {.text-center}
+```bash
+emon@emon:~$ rclone lsl gd:Notes
+        0 2026-09-01 09:15:07.000000000 math_note.md
+        0 2026-09-01 09:15:02.000000000 physics_note.md
+        0 2026-09-01 09:14:51.000000000 chemistry_note.md
+       -1 2026-09-01 09:25:05.797000000 FolderA/Untitled document.docx
+       -1 2026-09-01 09:26:28.921000000 FolderA/FolderB/Untitled presentation.pptx
+```
+:::
+:::
+
+</md></sn><sn><md>### Summary
+
+**rclone lsl**
+
+- Functions identically to the ls command, with additional modification dates and times
+- By default recursive like `ls`</md></sn>
