@@ -29,83 +29,11 @@ Local-to-cloud synchronization means transferring or synchronizing files from yo
     <tags>#03.local to cloud syncronization</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 19:45:23 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 20:03:25 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TvzZWAK1rj</id>
     <duration></duration>
   </config>
-<sn><md>### Basic Command Structure
-
-```bash
-rclone COMMAND LOCAL_PATH REMOTE:PATH
-```
-
-For example:
-
-```bash
-rclone copy ~/Documents mega:Backup
-```
-
-Here:
-
-```text
-~/Documents ─────────────► mega:Backup
-     SOURCE                DESTINATION
-   💻 Local                  ☁️ Cloud
-```
-
-
-**Using `copy`**
-
-```text
-💻 LOCAL                         ☁️ CLOUD
-
-📁 Documents                     📁 Backup
-├── 📄 A.txt ──────────────────► 📄 A.txt
-├── 📄 B.txt ──────────────────► 📄 B.txt
-└── 📄 C.txt ──────────────────► 📄 C.txt
-
-Local files: ✔️ Remain
-Cloud files: ✔️ Copied
-```
-
-Command:
-
-```bash
-rclone copy ~/Documents mega:Backup
-```
-
-Extra files already in the cloud are **not deleted**.
-
-</md></sn><sn><md>### Using `move`
-
-```text
-💻 LOCAL                         ☁️ CLOUD
-
-📁 Documents                     📁 Backup
-
-📄 A.txt ──────────────────────► 📄 A.txt
-📄 B.txt ──────────────────────► 📄 B.txt
-📄 C.txt ──────────────────────► 📄 C.txt
-
-
-After successful transfer:
-
-💻 LOCAL                         ☁️ CLOUD
-
-📁 Documents                     📁 Backup
-                                ├── 📄 A.txt
-                                ├── 📄 B.txt
-                                └── 📄 C.txt
-```
-
-Command:
-
-```bash
-rclone move ~/Documents mega:Backup
-```
-
-The local files are removed after successful transfer.
-</md></sn><sn><md>### Using `sync`
+<sn><md>### Using `sync`
 
 ```text
 💻 LOCAL                         ☁️ CLOUD
