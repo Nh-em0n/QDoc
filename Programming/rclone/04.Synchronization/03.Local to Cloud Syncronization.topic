@@ -1,10 +1,151 @@
 
-  <sn></sn>
+  <sn><md>### Local to Cloud Synchronization
+
+Local-to-cloud synchronization means transferring or synchronizing files from your **computer** to a **cloud storage service** such as MEGA, Google Drive, or OneDrive.
+
+```text
+┌─────────────────────┐
+│   💻 LOCAL COMPUTER │
+│                     │
+│  📁 Documents       │
+│  ├── 📄 Notes.pdf   │
+│  ├── 📄 Photo.jpg   │
+│  └── 📄 File.txt    │
+└──────────┬──────────┘
+           │
+           │ rclone
+           ▼
+┌─────────────────────┐
+│    ☁️ CLOUD STORAGE │
+│                     │
+│  📁 Backup          │
+│  ├── 📄 Notes.pdf   │
+│  ├── 📄 Photo.jpg   │
+│  └── 📄 File.txt    │
+└─────────────────────┘
+```
+</md></sn>
   <config>
     <tags>#03.local to cloud syncronization</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 16:51:32 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 19:22:14 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TvzZWAK1rj</id>
     <duration></duration>
   </config>
+<sn><md>### Basic Command Structure
+
+```bash
+rclone COMMAND LOCAL_PATH REMOTE:PATH
+```
+
+For example:
+
+```bash
+rclone copy ~/Documents mega:Backup
+```
+
+Here:
+
+```text
+~/Documents ─────────────► mega:Backup
+     SOURCE                DESTINATION
+   💻 Local                  ☁️ Cloud
+```
+
+
+**Using `copy`**
+
+```text
+💻 LOCAL                         ☁️ CLOUD
+
+📁 Documents                     📁 Backup
+├── 📄 A.txt ──────────────────► 📄 A.txt
+├── 📄 B.txt ──────────────────► 📄 B.txt
+└── 📄 C.txt ──────────────────► 📄 C.txt
+
+Local files: ✔️ Remain
+Cloud files: ✔️ Copied
+```
+
+Command:
+
+```bash
+rclone copy ~/Documents mega:Backup
+```
+
+Extra files already in the cloud are **not deleted**.
+
+</md></sn><sn><md>### Using `move`
+
+```text
+💻 LOCAL                         ☁️ CLOUD
+
+📁 Documents                     📁 Backup
+
+📄 A.txt ──────────────────────► 📄 A.txt
+📄 B.txt ──────────────────────► 📄 B.txt
+📄 C.txt ──────────────────────► 📄 C.txt
+
+
+After successful transfer:
+
+💻 LOCAL                         ☁️ CLOUD
+
+📁 Documents                     📁 Backup
+                                ├── 📄 A.txt
+                                ├── 📄 B.txt
+                                └── 📄 C.txt
+```
+
+Command:
+
+```bash
+rclone move ~/Documents mega:Backup
+```
+
+The local files are removed after successful transfer.
+</md></sn><sn><md>### Using `sync`
+
+```text
+💻 LOCAL                         ☁️ CLOUD
+
+📁 Documents                     📁 Backup
+├── 📄 A.txt ──────────────────► 📄 A.txt
+├── 📄 B.txt ──────────────────► 📄 B.txt
+└── 📄 C.txt ──────────────────► 📄 C.txt
+                                 ❌ Old.txt
+```
+
+After synchronization:
+
+```text
+💻 LOCAL                         ☁️ CLOUD
+
+📁 Documents                     📁 Backup
+├── 📄 A.txt                     ├── 📄 A.txt
+├── 📄 B.txt                     ├── 📄 B.txt
+└── 📄 C.txt                     └── 📄 C.txt
+```
+
+Command:
+
+```bash
+rclone sync ~/Documents mega:Backup
+```
+
+`sync` makes the cloud destination identical to the local source. Therefore, files existing only in the cloud can be deleted.
+</md></sn><sn><md>### Summary
+
+| Operation | Direction | Source Files             | Extra Cloud Files |
+| --------- | --------- | ------------------------ | ----------------- |
+| `copy`    | 💻 → ☁️   | ✔️ Remain                | ✔️ Remain         |
+| `move`    | 💻 → ☁️   | ❌ Removed after transfer | ✔️ Remain         |
+| `sync`    | 💻 → ☁️   | ✔️ Remain                | ❌ Deleted         |
+
+&gt; ⚠️ Always use `--dry-run` before running an important synchronization:
+
+```bash
+rclone sync ~/Documents mega:Backup --dry-run
+```
+</md></sn>
