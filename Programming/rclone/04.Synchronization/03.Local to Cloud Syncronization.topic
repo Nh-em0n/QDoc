@@ -29,7 +29,7 @@ Local-to-cloud synchronization means transferring or synchronizing files from yo
     <tags>#03.local to cloud syncronization</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 19:22:14 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 19:45:23 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TvzZWAK1rj</id>
     <duration></duration>
   </config>
@@ -148,4 +148,107 @@ rclone sync ~/Documents mega:Backup
 ```bash
 rclone sync ~/Documents mega:Backup --dry-run
 ```
-</md></sn>
+</md></sn><sn><md><pre class="d-none data">+++   See my practice
+
+```
+emon@emon:~/Documents/Books/Notes$ cd
+emon@emon:~$ ls
+Desktop  Documents  Downloads  Field  Music  Pictures  Public  Templates  Videos  snap
+emon@emon:~$ ls Documents
+ Books  'bcs learning setup for linux.md'   note.txt   note2.md   syllabus.md
+emon@emon:~$ rclone lsf gd:Documents
+2026/09/01 19:39:23 NOTICE: gd: This remote uses rclone's shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id
+Books/
+New Folder/ &lt;---- ( folder unrelated to local source )
+bcs learning setup for linux.md
+note.txt
+note2.md
+syllabus.md
+emon@emon:~$ rclone sync -P Documents gd:Documents
+2026/09/01 19:40:43 NOTICE: gd: This remote uses rclone's shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id
+Transferred:              0 B / 0 B, -, 0 B/s, ETA -
+Checks:                 8 / 8, 100%, Listed 22
+Deleted:                1 (files), 1 (dirs), 19 B (freed)
+Transferred:            3 / 3, 100%
+Elapsed time:         9.6s
+emon@emon:~$ rclone lsf gd:Documents
+2026/09/01 19:41:09 NOTICE: gd: This remote uses rclone's shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id
+Books/
+bcs learning setup for linux.md
+note.txt
+note2.md
+syllabus.md
+emon@emon:~$ 
+
+```
+New Folder of gd (Removed) in order to match local source
+
++++</pre><temp><dl>
+<pre class="copy-container"><i class="fa-light fa-clone i-btn hover rounded-1 copy-btn code-copy-btn" title="Copy"></i><code class="copy-text hljs language-vbnet" data-highlighted="yes">emon@emon:~/Documents/Books/Notes$ cd
+emon@emon:~$ ls
+Desktop  Documents  Downloads  Field  Music  Pictures  <span class="hljs-keyword">Public</span>  Templates  Videos  snap
+emon@emon:~$ ls Documents
+ Books  <span class="hljs-comment">'bcs learning setup for linux.md'   note.txt   note2.md   syllabus.md</span>
+emon@emon:~$ rclone lsf gd:Documents
+<span class="hljs-number">2026</span>/<span class="hljs-number">09</span>/<span class="hljs-number">01</span> <span class="hljs-number">19</span>:<span class="hljs-number">39</span>:<span class="hljs-number">23</span> NOTICE: gd: This remote uses rclone<span class="hljs-comment">'s shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id</span>
+Books/
+<span class="hljs-built_in">New</span> Folder/ &lt;---- ( folder unrelated <span class="hljs-keyword">to</span> local source )
+bcs learning setup <span class="hljs-keyword">for</span> linux.md
+note.txt
+note2.md
+syllabus.md
+emon@emon:~$ rclone sync -P Documents gd:Documents
+<span class="hljs-number">2026</span>/<span class="hljs-number">09</span>/<span class="hljs-number">01</span> <span class="hljs-number">19</span>:<span class="hljs-number">40</span>:<span class="hljs-number">43</span> NOTICE: gd: This remote uses rclone<span class="hljs-comment">'s shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id</span>
+<span class="hljs-symbol">Transferred:</span>              <span class="hljs-number">0</span> B / <span class="hljs-number">0</span> B, -, <span class="hljs-number">0</span> B/s, ETA -
+<span class="hljs-symbol">Checks:</span>                 <span class="hljs-number">8</span> / <span class="hljs-number">8</span>, <span class="hljs-number">100%</span>, Listed <span class="hljs-number">22</span>
+<span class="hljs-symbol">Deleted:</span>                <span class="hljs-number">1</span> (files), <span class="hljs-number">1</span> (dirs), <span class="hljs-number">19</span> B (freed)
+<span class="hljs-symbol">Transferred:</span>            <span class="hljs-number">3</span> / <span class="hljs-number">3</span>, <span class="hljs-number">100%</span>
+Elapsed time:         <span class="hljs-number">9.6</span>s
+emon@emon:~$ rclone lsf gd:Documents
+<span class="hljs-number">2026</span>/<span class="hljs-number">09</span>/<span class="hljs-number">01</span> <span class="hljs-number">19</span>:<span class="hljs-number">41</span>:<span class="hljs-number">09</span> NOTICE: gd: This remote uses rclone<span class="hljs-comment">'s shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id</span>
+Books/
+bcs learning setup <span class="hljs-keyword">for</span> linux.md
+note.txt
+note2.md
+syllabus.md
+emon@emon:~$ 
+
+</code></pre>
+<p>New Folder of gd (Removed) in order to match local source</p>
+</dl>
+</temp>++   See my practice
+
+```
+emon@emon:~/Documents/Books/Notes$ cd
+emon@emon:~$ ls
+Desktop  Documents  Downloads  Field  Music  Pictures  Public  Templates  Videos  snap
+emon@emon:~$ ls Documents
+ Books  'bcs learning setup for linux.md'   note.txt   note2.md   syllabus.md
+emon@emon:~$ rclone lsf gd:Documents
+2026/09/01 19:39:23 NOTICE: gd: This remote uses rclone's shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id
+Books/
+New Folder/ &lt;---- ( folder unrelated to local source )
+bcs learning setup for linux.md
+note.txt
+note2.md
+syllabus.md
+emon@emon:~$ rclone sync -P Documents gd:Documents
+2026/09/01 19:40:43 NOTICE: gd: This remote uses rclone's shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id
+Transferred:              0 B / 0 B, -, 0 B/s, ETA -
+Checks:                 8 / 8, 100%, Listed 22
+Deleted:                1 (files), 1 (dirs), 19 B (freed)
+Transferred:            3 / 3, 100%
+Elapsed time:         9.6s
+emon@emon:~$ rclone lsf gd:Documents
+2026/09/01 19:41:09 NOTICE: gd: This remote uses rclone's shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id
+Books/
+bcs learning setup for linux.md
+note.txt
+note2.md
+syllabus.md
+emon@emon:~$ 
+
+```
+New Folder of gd (Removed) in order to match local source
+
++++</md></sn>
