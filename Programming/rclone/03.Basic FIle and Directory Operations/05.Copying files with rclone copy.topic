@@ -1,29 +1,146 @@
 
-  <sn><md>### Copying Files with `rclone copy`
+  <sn><md>### Copying Specific Files Instead of an Entire Folder
 
-The `rclone copy` command copies files from a **source** to a **destination** without deleting extra files already present at the destination.
+If you want to copy only specific files, you have several options in Rclone.
 
-**Basic Syntax**
+:::.box .bg-indigo
+##### Copy a Single File
+
+Use `rclone copyto`:
 
 ```bash
-rclone copy [options] source destination
+rclone copyto -P ~/Documents/notes.pdf gd:Backup/notes.pdf
 ```
 
-The source and destination can be either a **local path** or an **Rclone remote**.
+This copies:
 
-| Source | Destination | Example                       |
-| ------ | ----------- | ----------------------------- |
-| Local  | Remote      | `~/Documents → gd:Backup`     |
-| Remote | Local       | `gd:Backup → ~/Documents`     |
-| Remote | Remote      | `gd:Backup → onedrive:Backup` |
-| Local  | Local       | `~/Documents → ~/Backup`      |
+```text
+~/Documents/notes.pdf
+        ↓
+gd:Backup/notes.pdf
+```
 
+You can change the destination filename:
+
+```bash
+rclone copyto -P ~/Documents/notes.pdf gd:Backup/my-notes.pdf
+```
+:::
+
+
+:::.box .bg-purple
+
+##### Copy Multiple Specific Files
+
+Use `rclone copy` and specify files with `--include`:
+
+```bash
+rclone copy -P ~/Documents gd:Backup \
+  --include "notes.pdf" \
+  --include "assignment.pdf"
+```
+
+Only these files will be copied:
+
+```text
+notes.pdf
+assignment.pdf
+```
+:::
+
+
+:::.box .bg-teal
+
+##### Copy Files by Extension
+
+For example, copy only PDF files:
+
+```bash
+rclone copy -P ~/Documents gd:Backup --include "*.pdf"
+```
+
+Copy only images:
+
+```bash
+rclone copy -P ~/Documents gd:Backup --include "*.{jpg,png}"
+```
+
+A more reliable approach is to use separate include rules:
+
+```bash
+rclone copy -P ~/Documents gd:Backup \
+  --include "*.jpg" \
+  --include "*.png"
+```
+:::
+
+:::.box .bg-orange
+
+##### Copy Specific Files from Subfolders
+
+Suppose you have:
+
+```text
+Documents/
+├── notes.txt
+├── image.jpg
+└── Study/
+    ├── chapter1.pdf
+    └── chapter2.pdf
+```
+
+To copy only `chapter1.pdf`:
+
+```bash
+rclone copy -P ~/Documents gd:Backup \
+  --include "Study/chapter1.pdf"
+```
+:::
+
+
+:::.box .bg-red
+
+##### Use `--files-from`
+
+For a large list of specific files, create a text file:
+
+```text
+files.txt
+```
+
+Example content:
+
+```text
+notes.pdf
+assignment.pdf
+Study/chapter1.pdf
+```
+
+Then run:
+
+```bash
+rclone copy -P ~/Documents gd:Backup --files-from files.txt
+```
+:::
+
+
+**Quick Reference**
+
+| Task                            | Command                                           |
+| ------------------------------- | ------------------------------------------------- |
+| Copy one file                   | `rclone copyto -P file remote:path/file`          |
+| Copy selected files             | `rclone copy --include "file1" --include "file2"` |
+| Copy PDFs only                  | `rclone copy --include "*.pdf"`                   |
+| Copy specific files recursively | `rclone copy --include "path/file"`               |
+| Copy files from a list          | `rclone copy --files-from files.txt`              |
+
+For copying **one specific file**, `rclone copyto` is usually the simplest and clearest option.
 </md></sn>
   <config>
     <tags>#05.copying files with rclone copy</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 11:54:55 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 11:59:10 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-hUFNlY5sdp</id>
     <duration></duration>
   </config>
@@ -201,4 +318,23 @@ Importantly, `rclone copy` **does not delete extra files** from the destination.
 ```bash
 rclone copy -P SOURCE DESTINATION
 ```
+</md></sn><sn><md>### Copying Files with `rclone copy`
+
+The `rclone copy` command copies files from a **source** to a **destination** without deleting extra files already present at the destination.
+
+**Basic Syntax**
+
+```bash
+rclone copy [options] source destination
+```
+
+The source and destination can be either a **local path** or an **Rclone remote**.
+
+| Source | Destination | Example                       |
+| ------ | ----------- | ----------------------------- |
+| Local  | Remote      | `~/Documents → gd:Backup`     |
+| Remote | Local       | `gd:Backup → ~/Documents`     |
+| Remote | Remote      | `gd:Backup → onedrive:Backup` |
+| Local  | Local       | `~/Documents → ~/Backup`      |
+
 </md></sn>
