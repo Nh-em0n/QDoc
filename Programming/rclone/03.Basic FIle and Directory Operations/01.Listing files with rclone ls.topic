@@ -64,7 +64,7 @@ Use "rclone help backends" for a list of supported services.
     <tags>#01.listing files with rclone ls</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 09:33:42 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 10:02:36 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-DTAiOztWyh</id>
     <duration></duration>
   </config>
@@ -161,4 +161,13 @@ gdrive
 ```
 
 Rclone may interpret it as a **local path** instead of your configured remote.
-</md></sn>
+</md></sn><sn><md>### Summary
+
+**rclone ls**
+- syntax : `rclone ls path`
+- list all file objects
+- by default recursively
+- shows file object size and path only
+- print as a path format, e.g. /Documents/Note/equation.png
+- work both in local and remote
+- If path does not contain trailing colon (:) then it will be considered a local path</md></sn>
