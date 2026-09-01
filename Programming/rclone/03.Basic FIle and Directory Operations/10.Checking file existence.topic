@@ -1,10 +1,49 @@
 
-  <sn></sn>
+  <sn><md>### Checking File Existence with rclone
+
+You can check whether a file exists on a remote using several methods.
+
+Check with `rclone lsf`
+
+```bash
+rclone lsf mega:Documents/file.pdf
+```
+
+If the file exists, its name will be displayed.
+</md></sn>
   <config>
     <tags>#10.checking file existence</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 09:07:39 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 16:22:19 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-pf4ikhsIuy</id>
     <duration></duration>
   </config>
+<sn><md>### Check silently with `rclone lsjson`
+
+```bash
+rclone lsjson mega:Documents/file.pdf
+```
+</md></sn><sn><md>### Use a Bash script
+
+```bash
+if rclone lsf mega:Documents/file.pdf | grep -q "file.pdf"; then
+    echo "File exists"
+else
+    echo "File does not exist"
+fi
+```
+</md></sn><sn><md>### Check using the exit status
+
+A simpler method:
+
+```bash
+if rclone size mega:Documents/file.pdf &gt; /dev/null 2&gt;&amp;1; then
+    echo "File exists"
+else
+    echo "File does not exist"
+fi
+```
+
+For scripting, checking the command's exit status is usually the most useful approach.
+</md></sn>
