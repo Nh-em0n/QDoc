@@ -6,7 +6,7 @@ Use the `rclone rmdirs` command to remove empty directories.
 **Basic syntax**
 
 ```bash
-rclone rmdirs remote:path
+rclone rmdirs path
 ```
 
 For example, with your MEGA remote:
@@ -21,7 +21,7 @@ This will recursively remove **all empty directories** inside `Documents`.
     <tags>#09.removing empty directories</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 16:13:07 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 16:14:45 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-T4PGkt3YoC</id>
     <duration></duration>
   </config>
