@@ -1,10 +1,86 @@
 
-  <sn></sn>
+  <sn><md>### Cloud to Cloud Operations
+
+rclone can transfer files directly between two cloud storage services.
+
+**Basic Format**
+
+```bash
+rclone command SOURCE_REMOTE:SOURCE_PATH DESTINATION_REMOTE:DESTINATION_PATH
+```
+
+**Example**
+
+Suppose you have two configured remotes:
+
+* `mega`
+* `gdrive`
+
+</md></sn>
   <config>
     <tags>#13.cloud to cloud operations</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 09:08:22 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 16:31:17 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-py7QMRKtIM</id>
     <duration></duration>
   </config>
+<sn><md>### Example Operations {.text-center}
+
+##### Copy Files
+
+```bash
+rclone copy mega:Documents gdrive:Documents
+```
+
+Copies files from MEGA to Google Drive without deleting the originals.
+
+```text
+MEGA:Documents  ──────────→  Google Drive:Documents
+     Source                    Destination
+```
+
+---
+
+##### Move Files
+
+```bash
+rclone move mega:Documents gdrive:Documents
+```
+
+Transfers files to Google Drive and removes the originals from MEGA after a successful transfer.
+
+---
+
+##### Sync Files
+
+```bash
+rclone sync mega:Documents gdrive:Documents
+```
+
+Makes the Google Drive destination match the MEGA source.
+
+⚠️ Files in the destination that don't exist in the source may be deleted.
+
+---
+
+##### Check Files
+
+```bash
+rclone check mega:Documents gdrive:Documents
+```
+
+Compares files between the two cloud locations.
+
+---
+
+##### Preview Before Running
+
+Use `--dry-run`:
+
+```bash
+rclone sync mega:Documents gdrive:Documents --dry-run
+```
+
+This lets you preview the operation without making any actual changes.
+</md></sn>
