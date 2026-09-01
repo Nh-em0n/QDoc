@@ -36,7 +36,7 @@ Rclone creates missing destination directories as needed while copying files.
     <tags>#04.creating directories with rclone copy</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 11:17:34 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 11:26:13 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-JY6A7pL67O</id>
     <duration></duration>
   </config>
@@ -71,7 +71,56 @@ gdrive:
 
 Notice that `rclone copy` copies the **contents** of the source directory into the destination.
 
-</md></sn><sn><md>### Remote to Local 
++++ see my practice
+```
+emon@emon:~$ ls
+Desktop  Documents  Downloads  Field  Music  Pictures  Public  Templates  Videos  snap
+emon@emon:~$ ls Documents
+ Books  'bcs learning setup for linux.md'   note.txt   note2.md   syllabus.md
+emon@emon:~$ rclone lsd gd:
+          -1 2026-08-20 07:02:54        -1 BCS
+          -1 2026-06-10 10:00:15        -1 Mobile
+          -1 2026-09-01 09:23:55        -1 Notes
+emon@emon:~$ rclone copy ~/Documents -p gd:Backup Documents
+Error: unknown shorthand flag: 'p' in -p
+Usage:
+  rclone copy source:path dest:path [flags]
+
+Flags:
+      --create-empty-src-dirs   Create empty source dirs on destination after copy
+  -h, --help                    help for copy
+
+Use "rclone [command] --help" for more information about a command.
+Use "rclone help flags" for to see the global flags.
+Use "rclone help backends" for a list of supported services.
+
+2026/09/01 11:21:58 Fatal error: unknown shorthand flag: 'p' in -p
+emon@emon:~$ rclone copy ~/Documents gd:Backup Documents
+Usage:
+  rclone copy source:path dest:path [flags]
+
+Flags:
+      --create-empty-src-dirs   Create empty source dirs on destination after copy
+  -h, --help                    help for copy
+
+Use "rclone [command] --help" for more information about a command.
+Use "rclone help flags" for to see the global flags.
+Use "rclone help backends" for a list of supported services.
+Command copy needs 2 arguments maximum: you provided 3 non flag arguments: ["/home/emon/Documents" "gd:Backup" "Documents"]
+emon@emon:~$ rclone copy ~/Documents gd:"Backup Documents"
+emon@emon:~$ rclone lsd gd:
+          -1 2026-08-20 07:02:54        -1 BCS
+          -1 2026-09-01 11:22:42        -1 Backup Documents
+          -1 2026-06-10 10:00:15        -1 Mobile
+          -1 2026-09-01 09:23:55        -1 Notes
+emon@emon:~$ 
+
+```
+**Mistakes**
+- I use -p flag wrong,it will be either -P or --progress
+- If a folder containing a space then we have to place it in "" double quotes
+
++++</md></sn><sn><md>### Remote to Local 
 
 You can use `rclone copy` to copy files from a cloud remote, such as Google Drive, to a folder on your computer.
 
