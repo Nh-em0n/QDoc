@@ -1,10 +1,128 @@
 
-  <sn></sn>
+  <sn><md>### Listing Directories with `rclone lsd`
+
+The `rclone lsd` command lists **directories (folders) only**. Unlike `rclone ls`, it does not list individual files.
+
+**Basic Syntax**
+
+```bash
+rclone lsd path
+```
+
+The general format is:
+
+```text
+DIRECTORY_ID    MODIFICATION_TIME    DIRECTORY_NAME
+```
+
+Some backends, such as Google Drive, may display `-1` when a traditional directory size is unavailable.
+</md></sn>
   <config>
     <tags>#03.listing directories with rclone lsd</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 09:05:33 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 10:43:50 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-XQOlWh0bo1</id>
     <duration></duration>
   </config>
+<sn><md>### Example
+
+:::.row
+:::.col-12 .col-lg-6
+**local** {.text-center}
+```bash
+emon@emon:~$ rclone lsd Documents
+          -1 2026-09-01 09:14:37        -1 Books
+emon@emon:~$ rclone lsd Documents/Books
+          -1 2026-09-01 09:15:19        -1 Notes
+```
+:::
+
+:::.col-12 .col-lg-6
+**Remote** {.text-center}
+```bash
+emon@emon:~$ rclone lsd gd:
+          -1 2026-08-20 07:02:54        -1 BCS
+          -1 2026-06-10 10:00:15        -1 Mobile
+          -1 2026-09-01 09:23:55        -1 Notes
+emon@emon:~$ rclone lsd gd:BCS
+          -1 2026-08-20 07:02:55        -1 Bangla Grammer
+          -1 2026-08-20 07:02:54        -1 Bangla Literature
+          -1 2026-08-20 07:02:54        -1 Bangladesh  Affairs
+          -1 2026-08-20 07:02:55        -1 Computer and ICT
+          -1 2026-08-20 07:02:54        -1 English Grammar
+          -1 2026-08-20 07:02:54        -1 English Literature
+          -1 2026-08-20 07:02:54        -1 General Science
+          -1 2026-08-20 07:02:54        -1 Geography
+          -1 2026-08-20 07:02:55        -1 International Affairs
+          -1 2026-08-20 07:02:54        -1 QNA
+          -1 2026-08-20 07:02:54        -1 math
+
+```
+:::
+:::
+</md></sn><sn><md>### Important: `lsd` Is Not Recursive
+
+Suppose your Drive contains:
+
+```text
+gdrive:
+├── Documents
+│   ├── University
+│   │   └── Notes
+│   └── Personal
+└── Photos
+```
+
+Running:
+
+```bash
+rclone lsd gdrive:
+```
+
+will show only:
+
+```text
+Documents
+Photos
+```
+
+It will **not** automatically display `University`, `Notes`, or other subdirectories.
+
+</md></sn><sn><md>### Making `lsd` Recursive
+
+Just add `-R` flag with `lsd` command.
+
+
+:::.row
+:::.col-12 .col-lg-6
+**local** {.text-center}
+```bash
+emon@emon:~$ rclone lsd -R Documents/
+          -1 2026-09-01 09:14:37        -1 Books
+          -1 2026-09-01 09:15:19        -1 Books/Notes
+```
+:::
+
+:::.col-12 .col-lg-6
+**Remote** {.text-center}
+```bash
+emon@emon:~$ rclone lsd -R gd:Notes
+          -1 2026-09-01 09:24:24        -1 FolderA
+          -1 2026-09-01 09:24:38        -1 FolderA/FolderB
+
+```
+:::
+:::
+
+</md></sn><sn><md>### Summary
+
+**rclone lsd** 
+
+- syntax : `rclone lsd path`
+- show lists of dir to a given path
+- not recursive by default,use `-R` flag to make it recursive
+- format is 
+  ```
+  DIRECTORY_ID    MODIFICATION_TIME    DIRECTORY_NAME
+  ```  </md></sn>
