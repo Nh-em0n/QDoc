@@ -1,10 +1,261 @@
 
-  <sn></sn>
+  <sn><md>### Connecting Free Mega Account
+
+- Go to this website https://temp-mail.org/en/
+- Then go to mega sign up page and create account with this email
+- Check inbox of temp mail page from mega and complete sign up process
+- Now u get free 20gb storage
+- Refresh mail in temp mail and u get more account
+
+
+Now I will add this free mega account to my rclone.The following bash code is my creation of mega account in rclone
+
+
+```bash
+
+emon@emon:~$ rclone config
+Current remotes:
+
+Name                 Type
+====                 ====
+gd                   drive
+
+e) Edit existing remote
+n) New remote
+d) Delete remote
+r) Rename remote
+c) Copy remote
+s) Set configuration password
+q) Quit config
+e/n/d/r/c/s/q&gt; n
+
+Enter name for new remote.
+name&gt; mg1
+
+Option Storage.
+Type of storage to configure.
+Choose a number from below, or type in your own value.
+ 1 / 1Fichier - Tier 3
+   \ (fichier)
+ 2 / Akamai NetStorage - Tier 1
+   \ (netstorage)
+ 3 / Alias for an existing remote - Tier 1
+   \ (alias)
+ 4 / Amazon S3 Compliant Storage Providers including AWS, Alibaba, ArvanCloud, BizflyCloud, Ceph, ChinaMobile, Cloudflare, Cubbit, DigitalOcean, Dreamhost, Exaba, Fastly, FileLu, FlashBlade, GCS, HCP, Hetzner, HuaweiOBS, IBMCOS, IDrive, ImpossibleCloud, Intercolo, IONOS, Leviia, Liara, Linode, LyveCloud, Magalu, Mega, Minio, Netease, Outscale, OVHcloud, Petabox, Qiniu, Rabata, RackCorp, Rclone, Scaleway, Scality, SeaweedFS, Selectel, Servercore, SpectraLogic, Storj, Synology, TencentCOS, US3, Wasabi, Zadara, Zata, ZeroServices, Other - Tier 1
+   \ (s3)
+ 5 / Backblaze B2 - Tier 1
+   \ (b2)
+ 6 / Better checksums for other remotes - Tier 4
+   \ (hasher)
+ 7 / Box - Tier 1
+   \ (box)
+ 8 / Cache a remote - Tier 5
+   \ (cache)
+ 9 / Citrix Sharefile - Tier 5
+   \ (sharefile)
+10 / Cloudinary - Tier 3
+   \ (cloudinary)
+11 / Combine several remotes into one - Tier 1
+   \ (combine)
+12 / Compress a remote - Tier 4
+   \ (compress)
+13 / DOI datasets - Tier 2
+   \ (doi)
+14 / Drime - Tier 1
+   \ (drime)
+15 / Dropbox - Tier 1
+   \ (dropbox)
+16 / Encrypt/Decrypt a remote - Tier 1
+   \ (crypt)
+17 / Enterprise File Fabric - Tier 4
+   \ (filefabric)
+18 / FTP - Tier 1
+   \ (ftp)
+19 / FileLu Cloud Storage - Tier 1
+   \ (filelu)
+20 / Filen - Tier 1
+   \ (filen)
+21 / Files.com - Tier 1
+   \ (filescom)
+22 / Gofile - Tier 1
+   \ (gofile)
+23 / Google Cloud Storage (this is not Google Drive) - Tier 1
+   \ (google cloud storage)
+24 / Google Drive - Tier 1
+   \ (drive)
+25 / Google Photos - Tier 5
+   \ (google photos)
+26 / HTTP - Tier 3
+   \ (http)
+27 / Hadoop distributed file system - Tier 2
+   \ (hdfs)
+28 / HiDrive - Tier 1
+   \ (hidrive)
+29 / Huawei Drive - Tier 3
+   \ (huaweidrive)
+30 / ImageKit.io - Tier 1
+   \ (imagekit)
+31 / In memory object storage system. - Tier 1
+   \ (memory)
+32 / Internet Archive - Tier 3
+   \ (internetarchive)
+33 / Internxt Drive - Tier 2
+   \ (internxt)
+34 / Jottacloud - Tier 2
+   \ (jottacloud)
+35 / Koofr, Digi Storage and other Koofr-compatible storage providers - Tier 2
+   \ (koofr)
+36 / Linkbox - Tier 5
+   \ (linkbox)
+37 / Local Disk - Tier 1
+   \ (local)
+38 / Mail.ru Cloud - Tier 1
+   \ (mailru)
+39 / Mega - Tier 2
+   \ (mega)
+40 / Microsoft Azure Blob Storage - Tier 1
+   \ (azureblob)
+41 / Microsoft Azure Files - Tier 2
+   \ (azurefiles)
+42 / Microsoft OneDrive - Tier 1
+   \ (onedrive)
+43 / OpenDrive - Tier 1
+   \ (opendrive)
+44 / OpenStack Swift (Rackspace Cloud Files, Blomp Cloud Storage, Memset Memstore, OVH) - Tier 1
+   \ (swift)
+45 / Oracle Cloud Infrastructure Object Storage - Tier 1
+   \ (oracleobjectstorage)
+46 / Pcloud - Tier 1
+   \ (pcloud)
+47 / PikPak - Tier 1
+   \ (pikpak)
+48 / Pixeldrain Filesystem - Tier 1
+   \ (pixeldrain)
+49 / Proton Drive - Tier 4
+   \ (protondrive)
+50 / Put.io - Tier 2
+   \ (putio)
+51 / QingCloud Object Storage - Tier 3
+   \ (qingstor)
+52 / Quatrix by Maytech - Tier 3
+   \ (quatrix)
+53 / Read archives - Tier 3
+   \ (archive)
+54 / SMB / CIFS - Tier 2
+   \ (smb)
+55 / SSH/SFTP - Tier 1
+   \ (sftp)
+56 / Shade FS - Tier 1
+   \ (shade)
+57 / Sia Decentralized Cloud - Tier 4
+   \ (sia)
+58 / Storj Decentralized Cloud Storage - Tier 1
+   \ (storj)
+59 / Sugarsync - Tier 3
+   \ (sugarsync)
+60 / Transparently chunk/split large files - Tier 4
+   \ (chunker)
+61 / Uloz.to - Tier 3
+   \ (ulozto)
+62 / Union merges the contents of several upstream fs - Tier 1
+   \ (union)
+63 / WebDAV - Tier 1
+   \ (webdav)
+64 / Yandex Disk - Tier 1
+   \ (yandex)
+65 / Zoho - Tier 3
+   \ (zoho)
+66 / iCloud Drive and Photos - Tier 4
+   \ (iclouddrive)
+67 / premiumize.me - Tier 3
+   \ (premiumizeme)
+68 / seafile - Tier 3
+   \ (seafile)
+Storage&gt; 39
+
+Option user.
+User name.
+Enter a value.
+user&gt; nehep96419@mediseat.com
+
+Option pass.
+Password.
+Choose an alternative below.
+y) Yes, type in my own password
+g) Generate random password
+y/g&gt; y
+Enter the password:
+password:
+Confirm the password:
+password:
+
+Option 2fa.
+The 2FA code of your MEGA account if the account is set up with one
+Enter a value. Press Enter to leave empty.
+2fa&gt; 
+
+Edit advanced config?
+y) Yes
+n) No (default)
+y/n&gt; n
+
+Configuration complete.
+Options:
+- type: mega
+- user: nehep96419@mediseat.com
+- pass: *** ENCRYPTED ***
+Keep this "mg1" remote?
+y) Yes this is OK (default)
+e) Edit this remote
+d) Delete this remote
+y/e/d&gt; y
+
+Current remotes:
+
+Name                 Type
+====                 ====
+gd                   drive
+mg1                  mega
+
+e) Edit existing remote
+n) New remote
+d) Delete remote
+r) Rename remote
+c) Copy remote
+s) Set configuration password
+q) Quit config
+e/n/d/r/c/s/q&gt; q
+emon@emon:~$ rclone listremotes
+gd:
+mg1:
+emon@emon:~$ rclone ls mg1:
+       43 Emon/I create mega account.txt
+emon@emon:~$ rclone copy -P Documents mg1:Documents
+Transferred:            648 B / 648 B, 100%, 108 B/s, ETA 0s
+Checks:                 0 / 0, -, Listed 12
+Transferred:           10 / 10, 100%
+Elapsed time:         6.7s
+emon@emon:~$ rclone ls mg1:
+       43 Emon/I create mega account.txt
+      567 Documents/bcs learning setup for linux.md
+       18 Documents/note.txt
+       27 Documents/note2.md
+       36 Documents/syllabus.md
+        0 Documents/Books/Chemistry.pdf
+        0 Documents/Books/Math.pdf
+        0 Documents/Books/Physics.pdf
+        0 Documents/Books/Notes/chemistry_note.md
+        0 Documents/Books/Notes/math_note.md
+        0 Documents/Books/Notes/physics_note.md
+emon@emon:~$ 
+
+
+```</md></sn>
   <config>
     <tags>#14.connecting free mega account</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 12:52:22 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 13:17:06 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-mxesUyQiYe</id>
     <duration></duration>
   </config>
