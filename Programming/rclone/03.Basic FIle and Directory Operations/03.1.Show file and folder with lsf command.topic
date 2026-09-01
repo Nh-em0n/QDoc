@@ -1,10 +1,193 @@
 
-  <sn></sn>
+  <sn><md>### `rclone lsf`
+
+The `rclone lsf` command provides a **simple, customizable listing** of files and directories. It is useful when you want cleaner output than `rclone ls` or `rclone lsl`.
+
+**Basic Syntax**
+
+```bash
+rclone lsf path
+```
+
+**Output**
+```
+/folder
+file
+file
+file
+```
+
+Unlike `rclone ls`, `lsf` does **not show file sizes by default**.It is useful when u want to know the exact folders and files contained in a folder.
+
+</md></sn>
   <config>
     <tags>#03.1.show file and folder with lsf command</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 10:44:47 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 11:00:26 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Cf1sh8Z5yJ</id>
     <duration></duration>
   </config>
+<sn><md>### Example
+
+:::.row
+:::.col-12 .col-lg-6
+**local** {.text-center}
+```bash
+emon@emon:~$ rclone lsf Documents/
+Books/
+bcs learning setup for linux.md
+note.txt
+note2.md
+syllabus.md
+```
+:::
+
+:::.col-12 .col-lg-6
+**Remote** {.text-center}
+```bash
+emon@emon:~$ rclone lsf gd:BCS
+BCS 10-50 QNA.zip
+Bangla Grammer/
+Bangla Literature/
+Bangladesh  Affairs/
+Computer and ICT/
+English Grammar/
+English Literature/
+General Science/
+Geography/
+International Affairs/
+QNA/
+math/
+
+```
+:::
+:::
+
+</md></sn><sn><md>### Apply `-R` flag
+
+```
+Books/ &lt;--- Folder
+bcs learning setup for linux.md
+note.txt
+note2.md
+syllabus.md
+Books/Chemistry.pdf
+Books/Math.pdf
+Books/Notes/ &lt;---- Folder
+Books/Physics.pdf
+Books/Notes/chemistry_note.md
+Books/Notes/math_note.md
+Books/Notes/physics_note.md
+```
+</md></sn><sn><md>### Apply Flags
+
+:::.row
+:::.col-12 .col-lg-6
+**list files only** {.text-center}
+
+Use:
+
+```bash
+rclone lsf --files-only gdrive:
+```
+
+Output:
+
+```text
+notes.txt
+image.jpg
+Backup/data.zip
+```
+:::
+
+:::.col-12 .col-lg-6
+**list folder only** {.text-center}
+
+Use:
+
+```bash
+rclone lsf --dirs-only gdrive:
+```
+
+Output:
+
+```text
+Documents/
+Photos/
+Backup/
+```
+:::
+:::
+
+**Show File Sizes**
+
+Use the `-s` / `--size` option:
+
+```bash
+rclone lsf --size gdrive:
+```
+
+Example:
+
+```text
+2048 notes.txt
+1048576 image.jpg
+```
+
+**Show Modification Time**
+
+Use:
+
+```bash
+rclone lsf --modtime gdrive:
+```
+
+Example:
+
+```text
+2026-09-01 08:30:15 notes.txt
+2026-08-30 14:20:10 image.jpg
+```
+
+</md></sn><sn><md>### Useful `lsf` Options
+
+| Command                             | Result                     |
+| ----------------------------------- | -------------------------- |
+| `rclone lsf gdrive:`                | Files and directories      |
+| `rclone lsf --files-only gdrive:`   | Files only                 |
+| `rclone lsf --dirs-only gdrive:`    | Directories only           |
+| `rclone lsf --size gdrive:`         | Include file sizes         |
+| `rclone lsf --modtime gdrive:`      | Include modification times |
+| `rclone lsf --recursive gdrive:`    | Search recursively         |
+| `rclone lsf --format "pst" gdrive:` | Custom output format       |
+</md></sn><sn><md>#### Why Use `lsf`?
+
+`lsf` is particularly useful for **scripts and automation** because its output is simple and can be customized.
+
+For example:
+
+```bash
+rclone lsf --files-only --recursive gdrive:Documents
+```
+
+could produce:
+
+```text
+notes.txt
+Physics/chapter1.pdf
+Physics/chapter2.pdf
+Programming/C/lesson1.c
+Programming/C/lesson2.c
+```
+
+This makes it easier to pass Rclone's output to other Linux commands or scripts.
+</md></sn><sn><md>### Summary
+
+**rclone lsf** {.text-center}
+
+- Displays a precise list of files and folders within a directory.
+- Print file/Dir name only
+- By default not recursive,but can be with `-R` flag
+- Use flags include `--files-only`,`--dirs-only`,`--size`,`modtime`
+</md></sn>
