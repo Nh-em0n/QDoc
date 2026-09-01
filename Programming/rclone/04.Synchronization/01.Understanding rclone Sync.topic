@@ -1,10 +1,157 @@
 
-  <sn></sn>
+  <sn><md>### Understanding the rclone Sync Mechanism
+
+`rclone sync` makes the **destination an exact copy of the source**.
+
+**Basic Mechanism**
+
+```text
+SOURCE  ───────►  DESTINATION
+   A                 B
+```
+
+When you run:
+
+```bash
+rclone sync SOURCE DESTINATION
+```
+
+rclone compares both locations and performs the necessary actions.
+
+| Situation                                 | What rclone does                |
+| ----------------------------------------- | ------------------------------- |
+| File exists in source but not destination | Copies it to destination     |
+| File changed in source                    | Updates the destination file |
+| File is identical                         | Skips it                     |
+| File exists only in destination           | Deletes it from destination |
+| Folder becomes empty                      | May remove it               |
+</md></sn>
   <config>
     <tags>#01.understanding rclone sync</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 16:50:42 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 18:59:25 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-CDlfGSn0ox</id>
     <duration></duration>
   </config>
+<sn><md>### Example
+
+Suppose your local folder contains:
+
+```text
+📁 Local
+ ├── file1.txt
+ ├── file2.txt
+ └── file3.txt
+```
+
+Your cloud storage contains:
+
+```text
+☁️ Cloud
+ ├── file1.txt
+ ├── file2.txt
+ └── old-file.txt
+```
+
+Run:
+
+```bash
+rclone sync ~/Local remote:Cloud
+```
+
+After synchronization:
+
+```text
+☁️ Cloud
+ ├── file1.txt
+ ├── file2.txt
+ └── file3.txt
+```
+
+`old-file.txt` is deleted because it does not exist in the **source**.
+</md></sn><sn><md>### The Most Important Rule
+
+&gt; ⚠️ `rclone sync` makes the **destination match the source**, not the other way around.
+
+Therefore:
+
+```bash
+rclone sync A B
+```
+
+means:
+
+&gt; Make **B identical to A**.
+
+But:
+
+```bash
+rclone sync B A
+```
+
+means:
+
+&gt; Make **A identical to B**.
+
+The order is extremely important.
+
+### **How rclone Determines Changes**
+
+Rclone generally compares file information such as:
+
+* File name
+* File size
+* Modification time
+* Checksums (when supported)
+
+It then transfers only the files that require action.
+
+</md></sn><sn><md>### Sync Is One-Way
+
+```text
+Local ─────► Cloud
+```
+
+Changes normally flow in one direction.
+
+For example:
+
+```bash
+rclone sync ~/Documents mega:Backup
+```
+
+```text
+~/Documents          MEGA Backup
+     │                    │
+     └──── Sync ─────────►│
+```
+
+If you delete a file from `~/Documents` and run the command again, the corresponding file in MEGA can also be deleted.
+
+</md></sn><sn><md>### Safe Testing
+
+Before performing an actual sync, use:
+
+```bash
+rclone sync ~/Documents mega:Backup --dry-run
+```
+
+This shows what rclone **would do** without actually changing anything.
+
+</md></sn><sn><md>### Simple Visual Summary
+
+```text
+rclone copy
+SOURCE ─────────► DESTINATION
+                   +
+            Keeps extra files
+
+
+rclone sync
+SOURCE ─────────► DESTINATION
+                   =
+         Makes destination identical
+         to the source
+```
+</md></sn>
