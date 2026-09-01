@@ -24,13 +24,14 @@ Destination
 Move completed
 ```
 
-It removes the folder also,if it became empty
+&gt; **Note**
+ &gt; It does not remove the folder,remove only the files or folder within it.
 </md></sn>
   <config>
     <tags>#07.moving files with rclone move</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 12:33:49 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 12:46:06 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-7HJMjAdUvz</id>
     <duration></duration>
   </config>
