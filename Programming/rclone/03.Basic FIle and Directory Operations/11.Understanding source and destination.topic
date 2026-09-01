@@ -1,10 +1,66 @@
 
-  <sn></sn>
+  <sn><md>## **Understanding Source and Destination in rclone**
+
+Most `rclone` commands use this basic structure:
+
+```bash
+rclone command source destination
+```
+
+### Example
+
+```bash
+rclone copy /home/emon/Documents mega:Backup
+```
+
+| Part                   | Meaning                                          |
+| ---------------------- | ------------------------------------------------ |
+| `rclone`               | Runs rclone                                      |
+| `copy`                 | The command to execute                           |
+| `/home/emon/Documents` | **Source** — where the files currently are       |
+| `mega:Backup`          | **Destination** — where the files will be copied |
+
+### Direction of Transfer
+
+```text
+Source  ──────────→  Destination
+   │                    │
+   ▼                    ▼
+Local Computer      MEGA Cloud
+```
+
+### Another Example: Downloading
+
+```bash
+rclone copy mega:Backup /home/emon/Downloads
+```
+
+Here, the direction is reversed:
+
+```text
+MEGA Cloud  ──────────→  Local Computer
+     Source              Destination
+```
+
+### Important Rule
+
+The order matters:
+
+```bash
+rclone copy SOURCE DESTINATION
+```
+
+Always remember:
+
+&gt; **The first path is the source; the second path is the destination.**
+
+This applies to commands such as `copy`, `sync`, and `move`.
+</md></sn>
   <config>
     <tags>#11.understanding source and destination</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 09:07:58 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 16:23:31 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Jn6J5a2Jrv</id>
     <duration></duration>
   </config>
