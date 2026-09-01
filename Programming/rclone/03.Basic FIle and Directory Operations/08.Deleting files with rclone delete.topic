@@ -1,10 +1,70 @@
 
-  <sn></sn>
+  <sn><md>### Deleting Files with `rclone delete`
+
+The `rclone delete` command deletes **files** from a remote or local storage location. Unlike `rclone purge`, it does **not delete the directory itself**.
+
+**Basic syntax**
+
+```bash
+rclone delete path
+```
+
+For example, if your MEGA remote is named `mega`:
+
+```bash
+rclone delete mega:Documents
+```
+
+This deletes all files inside the `Documents` folder but may leave the folder structure intact.
+</md></sn>
   <config>
     <tags>#08.deleting files with rclone delete</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 09:06:53 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 16:03:15 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-OiYcEXczyN</id>
     <duration></duration>
   </config>
+<sn><md>### Delete a specific file
+
+```bash
+rclone delete mega:Documents/file.pdf
+```
+
+Delete files matching a pattern
+Delete all `.txt` files:
+
+```bash
+rclone delete mega:Documents --include "*.txt"
+```
+</md></sn><sn><md>### Delete empty directories
+
+After deleting files, you can remove empty directories:
+
+```bash
+rclone rmdirs mega:Documents
+```
+</md></sn><sn><md>### Preview before deleting
+
+Use `--dry-run` to see what would be deleted **without actually deleting anything**:
+
+```bash
+rclone delete mega:Documents --dry-run
+```
+
+This is highly recommended before performing a large deletion.
+</md></sn><sn><md>### `delete` vs `purge`
+
+| Command         | Files      | Directories                                    |
+| --------------- | ---------- | ---------------------------------------------- |
+| `rclone delete` | Deletes | Keeps the main directory                    |
+| `rclone purge`  | Deletes | Deletes everything, including the directory |
+
+For example:
+
+```bash
+rclone purge mega:Documents
+```
+
+&gt; ⚠️ Be careful: depending on your remote's configuration, deleted files may be permanently removed or moved to the provider's trash.
+</md></sn>
