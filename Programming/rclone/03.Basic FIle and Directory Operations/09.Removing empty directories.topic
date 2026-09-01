@@ -1,10 +1,43 @@
 
-  <sn></sn>
+  <sn><md>### Removing Empty Directories with rclone
+
+Use the `rclone rmdirs` command to remove empty directories.
+
+**Basic syntax**
+
+```bash
+rclone rmdirs remote:path
+```
+
+For example, with your MEGA remote:
+
+```bash
+rclone rmdirs mega:Documents
+```
+
+This will recursively remove **all empty directories** inside `Documents`.
+</md></sn>
   <config>
     <tags>#09.removing empty directories</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 09:07:11 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 16:13:07 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-T4PGkt3YoC</id>
     <duration></duration>
   </config>
+<sn><md>### Remove the specified directory too
+
+By default, the main directory may not be removed. To remove it as well if it is empty:
+
+```bash
+rclone rmdirs mega:Documents --leave-root=false
+```
+
+**Preview before deleting**
+
+```bash
+rclone rmdirs mega:Documents --dry-run
+```
+
+This lets you check which empty directories would be removed without actually deleting them.
+</md></sn>
