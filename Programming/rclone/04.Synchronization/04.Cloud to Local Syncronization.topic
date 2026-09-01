@@ -29,7 +29,7 @@ Cloud-to-local synchronization means transferring or synchronizing files from **
     <tags>#04.cloud to local syncronization</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 19:33:51 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 19:53:49 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-W9el6bw9Hk</id>
     <duration></duration>
   </config>
@@ -186,4 +186,188 @@ Before performing an important sync, safely check the result with:
 ```bash
 rclone sync mega:Backup ~/Documents --dry-run
 ```
-</md></sn>
+</md></sn><sn><md><pre class="d-none data">+++ see my practice
+
+```
+
+emon@emon:~$ rclone ls gd:Documents
+2026/09/01 19:47:49 NOTICE: gd: This remote uses rclone's shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id
+       -1 Untitled drawing.svg  &lt;--- New file in Google Drive
+       36 syllabus.md
+       27 note2.md
+       18 note.txt
+      567 bcs learning setup for linux.md
+        0 Books/Physics.pdf
+        0 Books/Chemistry.pdf
+        0 Books/Math.pdf
+        0 Books/Notes/math_note.md
+        0 Books/Notes/physics_note.md
+        0 Books/Notes/chemistry_note.md
+
+emon@emon:~$ rclone ls Documents
+      567 bcs learning setup for linux.md
+       18 note.txt
+       27 note2.md
+       36 syllabus.md
+        0 Books/Chemistry.pdf
+        0 Books/Math.pdf
+        0 Books/Physics.pdf
+        0 Books/Notes/chemistry_note.md
+        0 Books/Notes/math_note.md
+        0 Books/Notes/physics_note.md
+
+Missing file  1937 Untitled drawing.svg  &lt;----
+
+emon@emon:~$ rclone sync -P gd:Documents Documents
+2026/09/01 19:50:41 NOTICE: gd: This remote uses rclone's shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id
+Transferred:        1.892 KiB / 1.892 KiB, 100%, 276 B/s, ETA 0s
+Checks:                10 / 10, 100%, Listed 25
+Transferred:            2 / 2, 100%
+Elapsed time:         7.9s
+emon@emon:~$ rclose ls Documents
+Command 'rclose' not found, did you mean:
+  command 'rclone' from deb rclone (1.60.1+dfsg-4ubuntu3.1)
+  command 'gclose' from deb gnustep-gui-runtime (0.32.0-4build2)
+Try: sudo apt install <deb name="">
+emon@emon:~$ rclone ls Documents
+     1937 Untitled drawing.svg  &lt;---- ( Newly created file )
+      567 bcs learning setup for linux.md
+       18 note.txt
+       27 note2.md
+       36 syllabus.md
+        0 Books/Chemistry.pdf
+        0 Books/Math.pdf
+        0 Books/Physics.pdf
+        0 Books/Notes/chemistry_note.md
+        0 Books/Notes/math_note.md
+        0 Books/Notes/physics_note.md
+emon@emon:~$ 
+
+
+```
+
+New file Untitled drawing.svg created to local folder to match remote source.
+
++++</deb></pre><temp><dl>
+<pre class="copy-container"><i class="fa-light fa-clone i-btn hover rounded-1 copy-btn code-copy-btn" title="Copy"></i><code class="copy-text hljs language-swift" data-highlighted="yes">
+emon<span class="hljs-meta">@emon</span>:<span class="hljs-operator">~</span>$ rclone ls gd:<span class="hljs-type">Documents</span>
+<span class="hljs-number">2026</span><span class="hljs-regexp">/09/</span><span class="hljs-number">01</span> <span class="hljs-number">19</span>:<span class="hljs-number">47</span>:<span class="hljs-number">49</span> <span class="hljs-type">NOTICE</span>: gd: <span class="hljs-type">This</span> remote uses rclone's shared <span class="hljs-type">Google</span> <span class="hljs-type">Drive</span> client_id, which <span class="hljs-keyword">is</span> being retired and will stop working during <span class="hljs-number">2026</span>. <span class="hljs-type">Create</span> your own client_id to avoid interruption: https:<span class="hljs-comment">//rclone.org/drive/#making-your-own-client-id</span>
+       <span class="hljs-operator">-</span><span class="hljs-number">1</span> <span class="hljs-type">Untitled</span> drawing.svg  <span class="hljs-operator">&lt;---</span> <span class="hljs-type">New</span> file <span class="hljs-keyword">in</span> <span class="hljs-type">Google</span> <span class="hljs-type">Drive</span>
+       <span class="hljs-number">36</span> syllabus.md
+       <span class="hljs-number">27</span> note2.md
+       <span class="hljs-number">18</span> note.txt
+      <span class="hljs-number">567</span> bcs learning setup <span class="hljs-keyword">for</span> linux.md
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-operator">/</span><span class="hljs-type">Physics</span>.pdf
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-operator">/</span><span class="hljs-type">Chemistry</span>.pdf
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-operator">/</span><span class="hljs-type">Math</span>.pdf
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-regexp">/Notes/</span>math_note.md
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-regexp">/Notes/</span>physics_note.md
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-regexp">/Notes/</span>chemistry_note.md
+
+emon<span class="hljs-meta">@emon</span>:<span class="hljs-operator">~</span>$ rclone ls <span class="hljs-type">Documents</span>
+      <span class="hljs-number">567</span> bcs learning setup <span class="hljs-keyword">for</span> linux.md
+       <span class="hljs-number">18</span> note.txt
+       <span class="hljs-number">27</span> note2.md
+       <span class="hljs-number">36</span> syllabus.md
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-operator">/</span><span class="hljs-type">Chemistry</span>.pdf
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-operator">/</span><span class="hljs-type">Math</span>.pdf
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-operator">/</span><span class="hljs-type">Physics</span>.pdf
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-regexp">/Notes/</span>chemistry_note.md
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-regexp">/Notes/</span>math_note.md
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-regexp">/Notes/</span>physics_note.md
+
+<span class="hljs-type">Missing</span> file  <span class="hljs-number">1937</span> <span class="hljs-type">Untitled</span> drawing.svg  <span class="hljs-operator">&lt;----</span>
+
+emon<span class="hljs-meta">@emon</span>:<span class="hljs-operator">~</span>$ rclone sync <span class="hljs-operator">-</span><span class="hljs-type">P</span> gd:<span class="hljs-type">Documents</span> <span class="hljs-type">Documents</span>
+<span class="hljs-number">2026</span><span class="hljs-regexp">/09/</span><span class="hljs-number">01</span> <span class="hljs-number">19</span>:<span class="hljs-number">50</span>:<span class="hljs-number">41</span> <span class="hljs-type">NOTICE</span>: gd: <span class="hljs-type">This</span> remote uses rclone's shared <span class="hljs-type">Google</span> <span class="hljs-type">Drive</span> client_id, which <span class="hljs-keyword">is</span> being retired and will stop working during <span class="hljs-number">2026</span>. <span class="hljs-type">Create</span> your own client_id to avoid interruption: https:<span class="hljs-comment">//rclone.org/drive/#making-your-own-client-id</span>
+<span class="hljs-type">Transferred</span>:        <span class="hljs-number">1.892</span> <span class="hljs-type">KiB</span> <span class="hljs-operator">/</span> <span class="hljs-number">1.892</span> <span class="hljs-type">KiB</span>, <span class="hljs-number">100</span><span class="hljs-operator">%</span>, <span class="hljs-number">276</span> <span class="hljs-type">B</span><span class="hljs-operator">/</span>s, <span class="hljs-type">ETA</span> 0s
+<span class="hljs-type">Checks</span>:                <span class="hljs-number">10</span> <span class="hljs-operator">/</span> <span class="hljs-number">10</span>, <span class="hljs-number">100</span><span class="hljs-operator">%</span>, <span class="hljs-type">Listed</span> <span class="hljs-number">25</span>
+<span class="hljs-type">Transferred</span>:            <span class="hljs-number">2</span> <span class="hljs-operator">/</span> <span class="hljs-number">2</span>, <span class="hljs-number">100</span><span class="hljs-operator">%</span>
+<span class="hljs-type">Elapsed</span> time:         <span class="hljs-number">7</span>.9s
+emon<span class="hljs-meta">@emon</span>:<span class="hljs-operator">~</span>$ rclose ls <span class="hljs-type">Documents</span>
+<span class="hljs-type">Command</span> 'rclose' not found, did you mean:
+  command 'rclone' from deb rclone (<span class="hljs-number">1.60</span>.<span class="hljs-number">1</span><span class="hljs-operator">+</span>dfsg<span class="hljs-operator">-</span>4ubuntu3.<span class="hljs-number">1</span>)
+  command 'gclose' from deb gnustep<span class="hljs-operator">-</span>gui<span class="hljs-operator">-</span>runtime (<span class="hljs-number">0.32</span>.<span class="hljs-number">0</span><span class="hljs-operator">-</span>4build2)
+<span class="hljs-type">Try</span>: sudo apt install <span class="hljs-operator">&lt;</span>deb name<span class="hljs-operator">=</span><span class="hljs-string">""</span><span class="hljs-operator">&gt;</span>
+emon<span class="hljs-meta">@emon</span>:<span class="hljs-operator">~</span>$ rclone ls <span class="hljs-type">Documents</span>
+     <span class="hljs-number">1937</span> <span class="hljs-type">Untitled</span> drawing.svg  <span class="hljs-operator">&lt;----</span> ( <span class="hljs-type">Newly</span> created file )
+      <span class="hljs-number">567</span> bcs learning setup <span class="hljs-keyword">for</span> linux.md
+       <span class="hljs-number">18</span> note.txt
+       <span class="hljs-number">27</span> note2.md
+       <span class="hljs-number">36</span> syllabus.md
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-operator">/</span><span class="hljs-type">Chemistry</span>.pdf
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-operator">/</span><span class="hljs-type">Math</span>.pdf
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-operator">/</span><span class="hljs-type">Physics</span>.pdf
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-regexp">/Notes/</span>chemistry_note.md
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-regexp">/Notes/</span>math_note.md
+        <span class="hljs-number">0</span> <span class="hljs-type">Books</span><span class="hljs-regexp">/Notes/</span>physics_note.md
+emon<span class="hljs-meta">@emon</span>:<span class="hljs-operator">~</span>$ 
+
+
+</code></pre>
+<p>New file Untitled drawing.svg created to local folder to match remote source.</p>
+<p>+++</p>
+</dl>
+</temp>++ see my practice
+
+```
+
+emon@emon:~$ rclone ls gd:Documents
+2026/09/01 19:47:49 NOTICE: gd: This remote uses rclone's shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id
+       -1 Untitled drawing.svg  &lt;--- New file in Google Drive
+       36 syllabus.md
+       27 note2.md
+       18 note.txt
+      567 bcs learning setup for linux.md
+        0 Books/Physics.pdf
+        0 Books/Chemistry.pdf
+        0 Books/Math.pdf
+        0 Books/Notes/math_note.md
+        0 Books/Notes/physics_note.md
+        0 Books/Notes/chemistry_note.md
+
+emon@emon:~$ rclone ls Documents
+      567 bcs learning setup for linux.md
+       18 note.txt
+       27 note2.md
+       36 syllabus.md
+        0 Books/Chemistry.pdf
+        0 Books/Math.pdf
+        0 Books/Physics.pdf
+        0 Books/Notes/chemistry_note.md
+        0 Books/Notes/math_note.md
+        0 Books/Notes/physics_note.md
+
+Missing file  1937 Untitled drawing.svg  &lt;----
+
+emon@emon:~$ rclone sync -P gd:Documents Documents
+2026/09/01 19:50:41 NOTICE: gd: This remote uses rclone's shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id
+Transferred:        1.892 KiB / 1.892 KiB, 100%, 276 B/s, ETA 0s
+Checks:                10 / 10, 100%, Listed 25
+Transferred:            2 / 2, 100%
+Elapsed time:         7.9s
+emon@emon:~$ rclose ls Documents
+Command 'rclose' not found, did you mean:
+  command 'rclone' from deb rclone (1.60.1+dfsg-4ubuntu3.1)
+  command 'gclose' from deb gnustep-gui-runtime (0.32.0-4build2)
+Try: sudo apt install <deb name="">
+emon@emon:~$ rclone ls Documents
+     1937 Untitled drawing.svg  &lt;---- ( Newly created file )
+      567 bcs learning setup for linux.md
+       18 note.txt
+       27 note2.md
+       36 syllabus.md
+        0 Books/Chemistry.pdf
+        0 Books/Math.pdf
+        0 Books/Physics.pdf
+        0 Books/Notes/chemistry_note.md
+        0 Books/Notes/math_note.md
+        0 Books/Notes/physics_note.md
+emon@emon:~$ 
+
+
+```
+
+New file Untitled drawing.svg created to local folder to match remote source.
+
++++</deb></md></sn>
