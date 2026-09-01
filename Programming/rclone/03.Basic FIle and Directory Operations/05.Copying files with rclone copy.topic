@@ -140,7 +140,207 @@ For copying **one specific file**, `rclone copyto` is usually the simplest and c
     <tags>#05.copying files with rclone copy</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 12:17:07 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 12:24:41 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-hUFNlY5sdp</id>
     <duration></duration>
   </config>
+<sn><md><pre class="d-none data">+++ see my practice
+
+```bash
+emon@emon:~$ ls
+Desktop  Documents  Downloads  Field  Music  Pictures  Public  Templates  Videos  snap
+emon@emon:~$ ls Documents
+ Books  'bcs learning setup for linux.md'   note.txt   note2.md   syllabus.md
+emon@emon:~$ rclone lsf gd:BCS
+BCS 10-50 QNA.zip
+Bangla Grammer/
+Bangla Literature/
+Bangladesh  Affairs/
+Computer and ICT/
+English Grammar/
+English Literature/
+General Science/
+Geography/
+International Affairs/
+QNA/
+math/
+emon@emon:~$ rclone copyto Documents/syllabus.md gd:BCS/syllabus.md
+emon@emon:~$ rclone lsf gd:BCS
+BCS 10-50 QNA.zip
+Bangla Grammer/
+Bangla Literature/
+Bangladesh  Affairs/
+Computer and ICT/
+English Grammar/
+English Literature/
+General Science/
+Geography/
+International Affairs/
+QNA/
+math/
+syllabus.md
+emon@emon:~$ rclone copyto -P Documents gd:/Backup \
+&gt; --include "note.txt" \
+&gt; ^C
+emon@emon:~$ rclone copyto -P Documents gd:Backup \
+&gt; --include "note.txt" \
+&gt; --include "note2.md"
+Transferred:             45 B / 45 B, 100%, 8 B/s, ETA 0s
+Transferred:            2 / 2, 100%
+Elapsed time:        43.0s
+emon@emon:~$ rclone lsf gd:Backup
+note.txt
+note2.md
+emon@emon:~$ ls Documents
+ Books                                       'Screenshot From 2026-08-31 16-44-03.png'   note.txt
+ 'Screenshot From 2026-08-30 22-02-01.png'   'Screenshot From 2026-08-31 16-50-55.png'   note2.md
+ 'Screenshot From 2026-08-31 12-58-59.png'  'bcs learning setup for linux.md'            syllabus.md
+emon@emon:~$ rclone copy -P Documents gd:Backup/Images \
+&gt; --include "*.png"
+Transferred:      322.291 KiB / 322.291 KiB, 100%, 17.703 KiB/s, ETA 0s
+Transferred:            4 / 4, 100%
+Elapsed time:      1m53.5s
+emon@emon:~$ rclone ls gd:Backup
+       27 note2.md
+       18 note.txt
+    98540 Images/Screenshot From 2026-08-31 16-50-55.png
+   113554 Images/Screenshot From 2026-08-31 16-44-03.png
+    65640 Images/Screenshot From 2026-08-31 12-58-59.png
+    52292 Images/Screenshot From 2026-08-30 22-02-01.png
+emon@emon:~$ 
+
+```
+
++++</pre><temp><dl>
+<pre class="copy-container"><i class="fa-light fa-clone i-btn hover rounded-1 copy-btn code-copy-btn" title="Copy"></i><code class="copy-text language-bash hljs" data-highlighted="yes">emon@emon:~$ <span class="hljs-built_in">ls</span>
+Desktop  Documents  Downloads  Field  Music  Pictures  Public  Templates  Videos  snap
+emon@emon:~$ <span class="hljs-built_in">ls</span> Documents
+ Books  <span class="hljs-string">'bcs learning setup for linux.md'</span>   note.txt   note2.md   syllabus.md
+emon@emon:~$ rclone lsf gd:BCS
+BCS 10-50 QNA.zip
+Bangla Grammer/
+Bangla Literature/
+Bangladesh  Affairs/
+Computer and ICT/
+English Grammar/
+English Literature/
+General Science/
+Geography/
+International Affairs/
+QNA/
+math/
+emon@emon:~$ rclone copyto Documents/syllabus.md gd:BCS/syllabus.md
+emon@emon:~$ rclone lsf gd:BCS
+BCS 10-50 QNA.zip
+Bangla Grammer/
+Bangla Literature/
+Bangladesh  Affairs/
+Computer and ICT/
+English Grammar/
+English Literature/
+General Science/
+Geography/
+International Affairs/
+QNA/
+math/
+syllabus.md
+emon@emon:~$ rclone copyto -P Documents gd:/Backup \
+&gt; --include <span class="hljs-string">"note.txt"</span> \
+&gt; ^C
+emon@emon:~$ rclone copyto -P Documents gd:Backup \
+&gt; --include <span class="hljs-string">"note.txt"</span> \
+&gt; --include <span class="hljs-string">"note2.md"</span>
+Transferred:             45 B / 45 B, 100%, 8 B/s, ETA 0s
+Transferred:            2 / 2, 100%
+Elapsed <span class="hljs-keyword">time</span>:        43.0s
+emon@emon:~$ rclone lsf gd:Backup
+note.txt
+note2.md
+emon@emon:~$ <span class="hljs-built_in">ls</span> Documents
+ Books                                       <span class="hljs-string">'Screenshot From 2026-08-31 16-44-03.png'</span>   note.txt
+ <span class="hljs-string">'Screenshot From 2026-08-30 22-02-01.png'</span>   <span class="hljs-string">'Screenshot From 2026-08-31 16-50-55.png'</span>   note2.md
+ <span class="hljs-string">'Screenshot From 2026-08-31 12-58-59.png'</span>  <span class="hljs-string">'bcs learning setup for linux.md'</span>            syllabus.md
+emon@emon:~$ rclone copy -P Documents gd:Backup/Images \
+&gt; --include <span class="hljs-string">"*.png"</span>
+Transferred:      322.291 KiB / 322.291 KiB, 100%, 17.703 KiB/s, ETA 0s
+Transferred:            4 / 4, 100%
+Elapsed <span class="hljs-keyword">time</span>:      1m53.5s
+emon@emon:~$ rclone <span class="hljs-built_in">ls</span> gd:Backup
+       27 note2.md
+       18 note.txt
+    98540 Images/Screenshot From 2026-08-31 16-50-55.png
+   113554 Images/Screenshot From 2026-08-31 16-44-03.png
+    65640 Images/Screenshot From 2026-08-31 12-58-59.png
+    52292 Images/Screenshot From 2026-08-30 22-02-01.png
+emon@emon:~$ 
+
+</code></pre>
+</dl>
+</temp>++ see my practice
+
+```bash
+emon@emon:~$ ls
+Desktop  Documents  Downloads  Field  Music  Pictures  Public  Templates  Videos  snap
+emon@emon:~$ ls Documents
+ Books  'bcs learning setup for linux.md'   note.txt   note2.md   syllabus.md
+emon@emon:~$ rclone lsf gd:BCS
+BCS 10-50 QNA.zip
+Bangla Grammer/
+Bangla Literature/
+Bangladesh  Affairs/
+Computer and ICT/
+English Grammar/
+English Literature/
+General Science/
+Geography/
+International Affairs/
+QNA/
+math/
+emon@emon:~$ rclone copyto Documents/syllabus.md gd:BCS/syllabus.md
+emon@emon:~$ rclone lsf gd:BCS
+BCS 10-50 QNA.zip
+Bangla Grammer/
+Bangla Literature/
+Bangladesh  Affairs/
+Computer and ICT/
+English Grammar/
+English Literature/
+General Science/
+Geography/
+International Affairs/
+QNA/
+math/
+syllabus.md
+emon@emon:~$ rclone copyto -P Documents gd:/Backup \
+&gt; --include "note.txt" \
+&gt; ^C
+emon@emon:~$ rclone copyto -P Documents gd:Backup \
+&gt; --include "note.txt" \
+&gt; --include "note2.md"
+Transferred:             45 B / 45 B, 100%, 8 B/s, ETA 0s
+Transferred:            2 / 2, 100%
+Elapsed time:        43.0s
+emon@emon:~$ rclone lsf gd:Backup
+note.txt
+note2.md
+emon@emon:~$ ls Documents
+ Books                                       'Screenshot From 2026-08-31 16-44-03.png'   note.txt
+ 'Screenshot From 2026-08-30 22-02-01.png'   'Screenshot From 2026-08-31 16-50-55.png'   note2.md
+ 'Screenshot From 2026-08-31 12-58-59.png'  'bcs learning setup for linux.md'            syllabus.md
+emon@emon:~$ rclone copy -P Documents gd:Backup/Images \
+&gt; --include "*.png"
+Transferred:      322.291 KiB / 322.291 KiB, 100%, 17.703 KiB/s, ETA 0s
+Transferred:            4 / 4, 100%
+Elapsed time:      1m53.5s
+emon@emon:~$ rclone ls gd:Backup
+       27 note2.md
+       18 note.txt
+    98540 Images/Screenshot From 2026-08-31 16-50-55.png
+   113554 Images/Screenshot From 2026-08-31 16-44-03.png
+    65640 Images/Screenshot From 2026-08-31 12-58-59.png
+    52292 Images/Screenshot From 2026-08-30 22-02-01.png
+emon@emon:~$ 
+
+```
+
++++</md></sn>
