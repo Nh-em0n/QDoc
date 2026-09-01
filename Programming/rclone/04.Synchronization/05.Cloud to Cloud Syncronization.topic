@@ -15,7 +15,7 @@ Rclone handles the transfer between the two cloud remotes.
     <tags>#05.cloud to cloud syncronization</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 20:00:06 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 20:02:55 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-8puLhBk3CT</id>
     <duration></duration>
   </config>
@@ -39,76 +39,6 @@ gdrive:Documents ───────────► mega:Documents
 
 SOURCE                          DESTINATION
 ```
-</md></sn><sn><md>### Using `copy`
-
-```text
-BEFORE
-
-☁️ GOOGLE DRIVE                  ☁️ MEGA
-
-📁 Documents                     📁 Backup
-├── 📄 A.txt                     ├── 📄 A.txt
-├── 📄 B.txt                     └── 📄 Old.txt
-└── 📄 C.txt
-
-
-COMMAND
-
-rclone copy gdrive:Documents mega:Backup
-
-
-AFTER
-
-☁️ GOOGLE DRIVE                  ☁️ MEGA
-
-📁 Documents                     📁 Backup
-├── 📄 A.txt                     ├── 📄 A.txt
-├── 📄 B.txt ─────────────────► ├── 📄 B.txt
-└── 📄 C.txt ─────────────────► ├── 📄 C.txt
-                                 └── 📄 Old.txt
-```
-
-✔️ Source cloud files remain.
-✔️ Extra files in the destination remain.
-</md></sn><sn><md>### Using `move`
-
-```text
-BEFORE
-
-☁️ GOOGLE DRIVE                  ☁️ MEGA
-
-📁 Documents                     📁 Backup
-├── 📄 A.txt
-├── 📄 B.txt
-└── 📄 C.txt
-
-
-COMMAND
-
-rclone move gdrive:Documents mega:Backup
-
-
-TRANSFER
-
-☁️ GOOGLE DRIVE  ─────────────►  ☁️ MEGA
-      A.txt                           A.txt
-      B.txt                           B.txt
-      C.txt                           C.txt
-
-
-AFTER SUCCESSFUL TRANSFER
-
-☁️ GOOGLE DRIVE                  ☁️ MEGA
-
-📁 Documents                     📁 Backup
-                                 ├── 📄 A.txt
-                                 ├── 📄 B.txt
-                                 └── 📄 C.txt
-```
-
-✔️ Files are transferred to the destination cloud.
-❌ Source files are removed after a successful transfer.
-✔️ Extra destination files remain.
 </md></sn><sn><md>### Using `sync`
 
 Suppose the source cloud contains:
