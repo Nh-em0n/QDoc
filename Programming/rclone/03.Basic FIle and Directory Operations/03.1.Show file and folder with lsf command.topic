@@ -24,7 +24,7 @@ Unlike `rclone ls`, `lsf` does **not show file sizes by default**.It is useful w
     <tags>#03.1.show file and folder with lsf command</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 11:00:26 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 11:01:05 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Cf1sh8Z5yJ</id>
     <duration></duration>
   </config>
@@ -189,5 +189,5 @@ This makes it easier to pass Rclone's output to other Linux commands or scripts.
 - Displays a precise list of files and folders within a directory.
 - Print file/Dir name only
 - By default not recursive,but can be with `-R` flag
-- Use flags include `--files-only`,`--dirs-only`,`--size`,`modtime`
+- Useful flags include `--files-only`,`--dirs-only`,`--size`,`modtime`
 </md></sn>
