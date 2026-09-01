@@ -1,10 +1,153 @@
 
-  <sn></sn>
+  <sn><md>### rclone Copy vs Move vs Sync
+
+The three commands have different purposes. The most important difference is what happens to the **source files** and **extra files in the destination**.
+
+| Feature                               | `copy` | `move` | `sync`       |
+| ------------------------------------- | ------ | ------ | ------------ |
+| Copies new files                      | ✔️     | ✔️     | ✔️           |
+| Updates changed files                 | ✔️     | ✔️     | ✔️           |
+| Removes source files                  | ❌      | ✔️     | ❌            |
+| Deletes extra destination files       | ❌      | ❌      | ✔️           |
+| Good for backup                       | ✔️     | ❌      | ⚠️ Carefully |
+| Makes destination identical to source | ❌      | ❌      | ✔️           |
+</md></sn>
   <config>
     <tags>#02.copy vs move vs sync</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 01 2026 16:51:07 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 01 2026 19:09:56 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-KYfx6oAKYO</id>
     <duration></duration>
   </config>
+<sn><md>### rclone copy
+
+Copies files from the source to the destination.
+
+```text
+BEFORE
+
+SOURCE                  DESTINATION
+📁 Documents             📁 Backup
+├── 📄 A.txt             ├── 📄 A.txt
+├── 📄 B.txt             └── 📄 Old.txt
+└── 📄 C.txt
+
+
+COMMAND
+
+rclone copy SOURCE DESTINATION
+
+
+AFTER
+
+SOURCE                  DESTINATION
+📁 Documents             📁 Backup
+├── 📄 A.txt             ├── 📄 A.txt
+├── 📄 B.txt             ├── 📄 B.txt
+└── 📄 C.txt             ├── 📄 C.txt
+                         └── 📄 Old.txt
+```
+
+**Important:** The source remains unchanged, and extra files in the destination are preserved.
+</md></sn><sn><md>### rclone move
+
+Transfers files to the destination and then removes the successfully transferred files from the source.
+
+```text
+BEFORE
+
+SOURCE                  DESTINATION
+📁 Documents             📁 Backup
+├── 📄 A.txt             ├── 📄 A.txt
+├── 📄 B.txt             └── 📄 Old.txt
+└── 📄 C.txt
+
+
+COMMAND
+
+rclone move SOURCE DESTINATION
+
+
+AFTER
+
+SOURCE                  DESTINATION
+📁 Documents             📁 Backup
+                         ├── 📄 A.txt
+                         ├── 📄 B.txt
+                         ├── 📄 C.txt
+                         └── 📄 Old.txt
+```
+
+**Important:** Files are removed from the source only after they have been successfully transferred.
+</md></sn><sn><md>### rclone sync
+
+Makes the destination an exact copy of the source.
+
+```text
+BEFORE
+
+SOURCE                  DESTINATION
+📁 Documents             📁 Backup
+├── 📄 A.txt             ├── 📄 A.txt
+├── 📄 B.txt             ├── 📄 B.txt
+└── 📄 C.txt             └── 📄 Old.txt
+
+
+COMMAND
+
+rclone sync SOURCE DESTINATION
+
+
+AFTER
+
+SOURCE                  DESTINATION
+📁 Documents             📁 Backup
+├── 📄 A.txt             ├── 📄 A.txt
+├── 📄 B.txt             ├── 📄 B.txt
+└── 📄 C.txt             └── 📄 C.txt
+```
+
+`Old.txt` is deleted from the destination because it does not exist in the source.
+</md></sn><sn><md>### **Simple Visual Comparison**
+
+```text
+COPY
+Source ──────────────► Destination
+Source files: KEEP
+Extra destination files: KEEP
+
+
+MOVE
+Source ──────────────► Destination
+Source files: DELETE after successful transfer
+Extra destination files: KEEP
+
+
+SYNC
+Source ═════════════► Destination
+Source files: KEEP
+Extra destination files: DELETE
+Destination becomes identical to source
+```
+</md></sn><sn><md>### Example with MEGA
+
+```bash
+# Copy Documents to MEGA
+rclone copy ~/Documents mega:Backup
+
+# Move Documents to MEGA
+rclone move ~/Documents mega:Backup
+
+# Make MEGA Backup identical to Documents
+rclone sync ~/Documents mega:Backup
+```
+
+⚠️ Before using `sync`, especially with important files, test it first:
+
+```bash
+rclone sync ~/Documents mega:Backup --dry-run
+```
+
+This shows what would happen without actually copying or deleting anything.
+</md></sn>
