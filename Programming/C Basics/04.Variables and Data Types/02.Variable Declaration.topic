@@ -1,10 +1,82 @@
 
-  <sn></sn>
+  <sn><md>### Variable Declaration in C
+
+**Variable declaration** means telling the C compiler:
+
+1. **What type of data** the variable will store.
+2. **What its name is.**
+
+**Basic Syntax**
+
+```c
+data_type variable_name;
+```
+
+**Example**
+
+```c
+int age;
+```
+
+Here:
+
+| Part  | Meaning            |
+| ----- | ------------------ |
+| `int` | Data type          |
+| `age` | Variable name      |
+| `;`   | Ends the statement |
+
+This tells the compiler:
+
+&gt; Create a variable named `age` that can store an integer value.
+
+**declaring with initialization**
+
+```text
+int age = 20;
+│    │     │
+│    │     └── Value
+│    └──────── Variable Identifier (Name)
+└───────────── Data Type
+```
+
+So, **variable declaration is the process of defining a variable's data type and name before using it in a C program.**
+</md></sn>
   <config>
     <tags>#02.variable declaration</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 12:15:12 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 12:46:13 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-dr3PyyyFDX</id>
     <duration></duration>
   </config>
+<sn><md>### Examples of Different Variables
+
+```c
+int age = 20;
+float price = 99.5;
+char grade = 'A';
+double pi = 3.14159;
+```
+
+| Data Type | Variable | Stored Value |
+| --------- | -------- | ------------ |
+| `int`     | `age`    | `20`         |
+| `float`   | `price`  | `99.5`       |
+| `char`    | `grade`  | `'A'`        |
+| `double`  | `pi`     | `3.14159`    |
+</md></sn><sn><md>### Multiple Variable Declaration
+
+You can declare multiple variables of the same type:
+
+```c
+int a, b, c;
+```
+
+You can also initialize them:
+
+```c
+int a = 10, b = 20, c = 30;
+```
+
+</md></sn>
