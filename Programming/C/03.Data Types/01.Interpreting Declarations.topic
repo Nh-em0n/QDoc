@@ -1,10 +1,152 @@
 
-  <sn></sn>
+  <sn><md>### Interpreting Declarations
+
+A distinctive syntactic peculiarity of C is that declarations mirror the use of the declared object as it would be in a normal expression.
+
+</md></sn>
   <config>
     <tags>#01.interpreting declarations</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 08:27:32 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 08:32:56 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-s4sDFE51lC</id>
     <duration></duration>
   </config>
+<sn><md>#### Operators in Declarators
+
+The following set of operators, with identical precedence and associativity, are reused in declarators:
+
+| Operator | Description |
+|----------|-------------|
+| `*` (unary) | "Dereference" operator — denotes a pointer |
+| `[]` (binary) | "Array subscription" operator — denotes an array |
+| `()` (function call) | Denotes a function |
+| `()` (grouping) | Parentheses that override precedence and associativity |
+</md></sn><sn><md>#### Precedence and Associativity
+
+| Operator | Relative Precedence | Associativity |
+|----------|---------------------|---------------|
+| `[]` (array subscription) | 1 | Left-to-right |
+| `()` (function call) | 1 | Left-to-right |
+| `*` (dereference) | 2 | Right-to-left |
+</md></sn><sn><md>#### How to Interpret Declarations
+
+When interpreting declarations, start from the **identifier** and move outward, applying adjacent operators in the correct order according to the table above.
+
+Each operator can be translated into English as follows:
+
+| Expression | Interpretation |
+|------------|----------------|
+| `thing[X]` | "an array of size X of..." |
+| `thing(t1, t2, t3)` | "a function taking t1, t2, t3 and returning..." |
+| `*thing` | "a pointer to..." |
+
+&gt; **Note:** The beginning of the English interpretation always starts with the identifier and ends with the type that stands on the left-hand side of the declaration.
+
+</md></sn><sn><md>#### Examples
+
+**1. `char *names[20];`**
+
+`[]` takes precedence over `*`, so the interpretation is:
+
+&gt; `names` is an array of size 20 of a pointer to `char`.
+
+---
+
+**2. `char (*place)[10];`**
+
+Parentheses override precedence, so `*` is applied first:
+
+&gt; `place` is a pointer to an array of size 10 of `char`.
+
+---
+
+**3. `int fn(long, short);`**
+
+No precedence issues:
+
+&gt; `fn` is a function taking `long`, `short` and returning `int`.
+
+---
+
+**4. `int *fn(void);`**
+
+`()` is applied first:
+
+&gt; `fn` is a function taking `void` and returning a pointer to `int`.
+
+---
+
+**5. `int (*fp)(void);`**
+
+Parentheses override precedence:
+
+&gt; `fp` is a pointer to a function taking `void` and returning `int`.
+
+---
+
+**6. `int arr[5][8];`**
+
+Multidimensional arrays follow left-to-right associativity:
+
+&gt; `arr` is an array of size 5 of an array of size 8 of `int`.
+
+---
+
+**7. `int **ptr;`**
+
+Both dereference operators have equal precedence, so associativity applies right-to-left:
+
+&gt; `ptr` is a pointer to a pointer to an `int`.
+</md></sn><sn><md>#### Multiple Declarations
+
+The comma can be used as a **separator** (not as the comma operator) to delimit multiple declarations within a single statement:
+
+```c
+int fn(void), *ptr, (*fp)(int), arr[10][20], num;
+```
+
+The declared objects are:
+
+| Object | Interpretation |
+|--------|----------------|
+| `fn` | a function taking `void` and returning `int` |
+| `ptr` | a pointer to an `int` |
+| `fp` | a pointer to a function taking `int` and returning `int` |
+| `arr` | an array of size 10 of an array of size 20 of `int` |
+| `num` | `int` |
+</md></sn><sn><md>#### Alternative Interpretation
+
+Because declarations mirror use, a declaration can also be interpreted in terms of the operators that could be applied over the object and the final resulting type of that expression. The type on the left-hand side is the final result yielded after applying all operators.
+
+```c
+/*
+ * Subscripting "arr" and dereferencing it yields a "char" result.
+ * Particularly: *arr[5] is of type "char".
+ */
+char *arr[20];
+```
+
+```c
+/*
+ * Calling "fn" yields an "int" result.
+ * Particularly: fn('b') is of type "int".
+ */
+int fn(char);
+```
+
+```c
+/*
+ * Dereferencing "fp" and then calling it yields an "int" result.
+ * Particularly: (*fp)() is of type "int".
+ */
+int (*fp)(void);
+```
+
+```c
+/*
+ * Subscripting "strings" twice and dereferencing it yields a "char" result.
+ * Particularly: *strings[5][15] is of type "char".
+ */
+char *strings[10][20];
+```</md></sn>
