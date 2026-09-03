@@ -1,7 +1,7 @@
 
   <sn><md>### Variable Initialization in C
 
-**Variable initialization** means giving a variable its **first value when it is created**.
+Variable initialization is the process of assigning an initial value to a variable when it is declared.
 
 **Basic Syntax**
 
@@ -32,7 +32,7 @@ Here, the variable `age` is created and immediately given the value `20`.
     <tags>#03.variable initialization</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 12:59:09 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 12:59:59 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-1UHSVBqYn8</id>
     <duration></duration>
   </config>
