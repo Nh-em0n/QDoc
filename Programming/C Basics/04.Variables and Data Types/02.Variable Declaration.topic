@@ -46,7 +46,7 @@ So, **variable declaration is the process of defining a variable's data type and
     <tags>#02.variable declaration</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 12:46:13 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 12:54:55 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-dr3PyyyFDX</id>
     <duration></duration>
   </config>
@@ -67,7 +67,15 @@ double pi = 3.14159;
 | `double`  | `pi`     | `3.14159`    |
 </md></sn><sn><md>### Multiple Variable Declaration
 
-You can declare multiple variables of the same type:
+Instead of 
+
+```c
+int a;
+int b;
+int c;
+```
+
+We can declare multiple variables of the same type:
 
 ```c
 int a, b, c;
