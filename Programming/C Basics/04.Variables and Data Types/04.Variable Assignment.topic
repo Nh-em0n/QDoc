@@ -36,7 +36,7 @@ It means:
     <tags>#04.variable assignment</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 13:09:22 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 13:18:19 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ZMKixwyTJl</id>
     <duration></duration>
   </config>
@@ -107,4 +107,13 @@ int main() {
 ```
 
 &gt; **In short:** Variable assignment is the process of storing or updating a value in an already declared variable using the assignment operator (`=`).
-</stdio.h></md></sn>
+</stdio.h></md></sn><sn><md>### Example
+
+```c
+int age;       // Declaration
+age = 20;      // Assignment
+
+int number = 10; // Declaration + Initialization
+number = 15;     // Assignment
+
+```</md></sn>
