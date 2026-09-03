@@ -1,10 +1,38 @@
 
-  <sn></sn>
+  <sn><md>### `//` Delimited Comments
+
+**Version:** ≥ C99
+
+C99 introduced the use of C++-style single-line comments. This type of comment starts with two forward slashes and runs to the end of a line:
+
+```c
+// range of comment \n
+// this is my comment
+```
+
+This type of comment *does not support multi-line* content directly. However, you can create a comment block by placing several single-line comments consecutively:
+
+```c
+// each of these lines are a single-line comment
+// note how each must start with
+// the double forward-slash
+```
+
+Single-line comments may be placed on their own line or at the end of a line of code. However, because they terminate at the end of the line, they **cannot** be used in the middle of a code line.
+
+**Example usage:**
+
+```c
+// this comment is on its own line
+if (x &amp;&amp; y) { // this comment is at the end of a line
+    // this comment is within an if, on its own line
+}
+```</md></sn>
   <config>
     <tags>#03single line comments</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 20 2026 20:17:06 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 08:15:40 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-u8yQnFudoA</id>
     <duration></duration>
   </config>
