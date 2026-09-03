@@ -6,7 +6,7 @@ Variable initialization is the process of `assigning an initial value to a varia
 **Basic Syntax**
 
 ```c
-variable_name = value;
+variable_name = initial value;
 ```
 When variable declared or on the way of declaring.
 
@@ -32,7 +32,7 @@ Here, the variable `age` is created and immediately given the value `20`.
     <tags>#03.variable initialization</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 13:00:26 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 13:05:18 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-1UHSVBqYn8</id>
     <duration></duration>
   </config>
