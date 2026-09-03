@@ -1,10 +1,35 @@
 
-  <sn></sn>
+  <sn><md>### Possible Pitfall Due to Trigraphs
+
+**Version:** ≥ C99
+
+When writing `//` delimited comments, it is possible to make a `typographical error` that affects their expected behavior. Consider the following example:
+
+```c
+int x = 20;
+// Why did I do this??/
+```
+
+The `/` at the end was a typo, but now it will be interpreted as `\`. This happens because the sequence `??/` forms a **trigraph**.
+
+The `??/` trigraph is a **longhand notation** for the backslash character `\`, which serves as the **line continuation symbol** in C. This means the compiler treats the next line as a continuation of the current line — in this case, as a continuation of the comment. This may not be what the programmer intended.
+</md></sn>
   <config>
     <tags>#04.possible pitfall due to trigraph</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 20 2026 20:17:29 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 08:20:48 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-UPxCwEK81n</id>
     <duration></duration>
   </config>
+<sn><md>#### Example of unintended behavior:
+
+```c
+int foo = 20; // Start at 20 ??/
+int bar = 0;
+// The following line will cause a compilation error (undeclared variable 'bar')
+// because 'int bar = 0;' is actually part of the comment on the preceding line
+bar += foo;
+```
+
+In the code above, the `??/` trigraph causes the comment to extend onto the next line, effectively commenting out `int bar = 0;`. As a result, `bar` is never declared, leading to a compilation error when trying to use it.</md></sn>
