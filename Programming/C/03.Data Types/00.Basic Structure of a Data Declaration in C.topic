@@ -1,10 +1,444 @@
 
-  <sn></sn>
+  <sn><md>### Basic Structure of a Data Declaration in C
+
+A **declaration** in C tells the compiler: **What is the data type, what is the name, and how the variable should behave?**
+
+Simplest Variable Declaration
+
+```c
+data_type identifier;
+```
+
+Example:
+
+```c
+int age;
+```
+
+| Part  | Meaning                    |
+| ----- | -------------------------- |
+| `int` | Data type                  |
+| `age` | Identifier (variable name) |
+| `;`   | Ends the declaration       |
+
+**Structure**
+
+```text
+┌───────────┬────────────┬─────────┐
+│ Data Type │ Identifier │    ;    │
+└───────────┴────────────┴─────────┘
+     int          age
+```
+</md></sn>
   <config>
     <tags>#00.basic structure of a data declaration in c</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 08:49:39 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 08:58:44 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-hMqAsWGHdi</id>
     <duration></duration>
   </config>
+<sn><md>### Declaration with Initialization
+
+```c
+data_type identifier = value;
+```
+
+Example:
+
+```c
+int age = 20;
+```
+
+**Structure**
+
+```text
+Data Type    Identifier    Operator    Value
+    │            │            │          │
+    ▼            ▼            ▼          ▼
+   int          age           =          20
+```
+
+Here:
+
+* `int` → Specifies the type of data.
+* `age` → The name of the variable.
+* `=` → Assignment operator.
+* `20` → Initial value.
+</md></sn><sn><md>### The General Structure of a C Declaration
+
+A more complete C declaration can be represented as:
+
+```text
+Declaration
+│
+├── Declaration Specifiers
+│   ├── Data Type
+│   ├── Type Modifiers
+│   └── Storage Class
+│
+├── Declarator
+│   ├── Identifier
+│   ├── Pointer (*)
+│   ├── Array ([])
+│   └── Function (())
+│
+├── Initializer (optional)
+│
+└── Semicolon (;)
+```
+
+For example:
+
+```c
+const unsigned int *numbers[10];
+```
+
+Let's break it down:
+
+```text
+const        → Type qualifier
+unsigned     → Type modifier
+int          → Data type
+*numbers[10] → Declarator
+;            → End of declaration
+```
+</md></sn><sn><md>### Core Components of a Declaration
+
+:::.row
+:::.col-12 .col-lg-6
+##### Data Type
+
+The **data type** specifies what kind of data will be stored.
+
+```c
+int age;
+float price;
+char grade;
+double pi;
+```
+
+| Declaration    | Data Type            |
+| -------------- | -------------------- |
+| `int age;`     | Integer              |
+| `float price;` | Decimal number       |
+| `char grade;`  | Character            |
+| `double pi;`   | Large decimal number |
+:::
+
+:::.col-12 .col-lg-6
+##### Identifier
+
+An **identifier** is the name given to a variable.
+
+```c
+int age;
+```
+
+Here:
+
+```text
+int  → Data type
+age  → Identifier
+```
+:::
+:::
+
+##### Identifier Rules
+
+```text
+✔ Can contain letters
+✔ Can contain numbers
+✔ Can contain underscore (_)
+✔ Cannot start with a number
+✔ Cannot contain spaces
+✔ Cannot be a C keyword
+```
+
+Examples:
+
+| Identifier | Valid? |
+| ---------- | ------ |
+| `age`      | ✔      |
+| `_number`  | ✔      |
+| `age20`    | ✔      |
+| `20age`    | ❌      |
+| `my age`   | ❌      |
+| `int`      | ❌      |
+
+</md></sn><sn><md>### Variable
+
+A **variable** is a named memory location used to store data.
+
+```c
+int age = 20;
+```
+
+Here:
+
+&gt; `age` is the identifier, while the actual memory location represented by `age` is the variable.
+
+Simply:
+
+```text
+Variable
+   │
+   ├── Name → age
+   ├── Type → int
+   └── Value → 20
+```
+</md></sn><sn><md>### Declarators
+
+A **declarator** describes the relationship between an identifier and its data type.
+
+There are several important declarator operators.
+
+| Symbol | Name                | Meaning    |
+| ------ | ------------------- | ---------- |
+| `*`    | Pointer declarator  | Pointer to |
+| `[]`   | Array declarator    | Array of   |
+| `()`   | Function declarator | Function   |
+
+**Example**
+
+```c
+int *ptr;
+```
+
+```text
+int  → Data type
+*    → Pointer declarator
+ptr  → Identifier
+```
+
+Meaning:
+
+&gt; `ptr` is a pointer to an `int`.
+</md></sn><sn><md>### Basic Declaration Pattern
+
+A declaration generally follows this structure:
+
+```text
+Data Type + Declarator + Identifier + Initialization
+```
+
+For example:
+
+```c
+int *ptr = NULL;
+```
+
+```text
+┌───────────┬──────────────┬────────────┬──────────────┐
+│ Data Type │ Declarator   │ Identifier │ Initial Value│
+├───────────┼──────────────┼────────────┼──────────────┤
+│ int       │ *            │ ptr        │ NULL         │
+└───────────┴──────────────┴────────────┴──────────────┘
+```
+
+
+</md></sn><sn><md>### Operator Precedence in Declarations
+
+C declaration operators have precedence rules.
+
+```text
+Highest Priority
+      │
+      ▼
+   ()   []
+      │
+      ▼
+      *
+      │
+      ▼
+Lowest Priority
+```
+
+| Operator | Meaning  | Precedence |
+| -------- | -------- | ---------- |
+| `()`     | Function | High       |
+| `[]`     | Array    | High       |
+| `*`      | Pointer  | Lower      |
+
+This is why these two declarations have different meanings.
+
+**Example 1**
+
+```c
+int *arr[10];
+```
+
+Because `[]` has higher priority:
+
+```text
+arr
+ ↓
+Array of 10
+ ↓
+Pointers to
+ ↓
+int
+```
+
+&gt; **`arr` is an array of 10 pointers to integers.**
+
+**Example 2**
+
+```c
+int (*arr)[10];
+```
+
+Parentheses change the precedence:
+
+```text
+arr
+ ↓
+Pointer to
+ ↓
+Array of 10
+ ↓
+int
+```
+
+&gt; **`arr` is a pointer to an array of 10 integers.**
+</md></sn><sn><md>### Parentheses in Declarations
+
+Parentheses can change how a declaration is interpreted.
+
+```c
+int *arr[10];
+```
+
+is different from:
+
+```c
+int (*arr)[10];
+```
+
+**Without Parentheses**
+
+```text
+arr → Array → Pointer → int
+```
+
+**With Parentheses**
+
+```text
+arr → Pointer → Array → int
+```
+
+Therefore, parentheses are extremely important in complex declarations.
+</md></sn><sn><md>### Multiple Variable Declarations
+
+You can declare multiple variables with the same base data type:
+
+```c
+int a, b, c;
+```
+
+This means:
+
+```c
+int a;
+int b;
+int c;
+```
+
+However, be careful with pointers:
+
+```c
+int *a, b;
+```
+
+This does **not** mean that both are pointers.
+
+```text
+a → Pointer to int
+b → int
+```
+
+Equivalent to:
+
+```c
+int *a;
+int b;
+```
+
+The `*` belongs to the individual declarator, not to the `int` data type.
+</md></sn><sn><md>### Complete Conceptual Structure
+
+```text
+C Declaration
+│
+├── Declaration Specifiers
+│   │
+│   ├── Storage Class
+│   │   └── static, extern, etc.
+│   │
+│   ├── Type Qualifier
+│   │   └── const, volatile, etc.
+│   │
+│   └── Data Type
+│       └── int, char, float, etc.
+│
+├── Declarator
+│   │
+│   ├── Pointer (*)
+│   ├── Identifier
+│   ├── Array ([])
+│   └── Function (())
+│
+├── Initializer
+│   └── = value
+│
+└── Semicolon
+    └── ;
+```
+
+**Example**
+
+```c
+const int *numbers[10] = {NULL};
+```
+
+```text
+const        → Type qualifier
+int          → Data type
+*numbers[10] → Declarator
+= {NULL}     → Initializer
+;            → End of declaration
+```
+</md></sn><sn><md>### The Simplest Formula to Remember
+
+```text
+[Declaration Specifiers] + [Declarator] + [Initializer] + ;
+```
+
+Or, for beginners:
+
+```text
+Data Type + Variable Name + Optional Value + ;
+```
+
+**Simple Example**
+
+```c
+int age = 20;
+```
+
+**More Complex Example**
+
+```c
+int *ptr;
+```
+
+**Even More Complex Example**
+
+```c
+int (*fp)(void);
+```
+
+The core idea is always the same:
+
+&gt; **The declaration tells C what something is, what it is called, and how it should be used.**
+</md></sn>
