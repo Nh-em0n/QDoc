@@ -1,10 +1,986 @@
 
-  <sn></sn>
+  <sn><md># Complete C Programming Roadmap {.text-center}
+
+## Part 1: C Fundamentals
+
+### Chapter 1: Introduction to C
+
+* What is C?
+* History of C
+* Features of C
+* Applications of C
+* Advantages and limitations
+* C standards (C89, C99, C11, C17, C23)
+* How C differs from Other Language
+
+### Chapter 2: Setting Up the Development Environment
+
+* Installing GCC
+* C compilers
+* IDEs and code editors
+* Compiling a C program
+* Running executable files
+* Understanding compiler errors
+* Warnings and compiler flags
+* Using GCC from the terminal
+
+---
+
+### Chapter 3: Basic Structure of a C Program
+
+* `#include`
+* Header files
+* `main()` function
+* Statements
+* Blocks
+* Semicolons
+* Comments
+* The `return` statement
+* Program execution flow
+
+Example:
+
+```c
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!");
+    return 0;
+}
+```
+
+---
+
+# Part 2: Variables and Data
+
+## Chapter 4: Variables and Data Types
+
+* What is a variable?
+* Variable declaration
+* Variable initialization
+* Variable assignment
+* Identifiers
+* Naming conventions
+* Basic data types
+
+  * `char`
+  * `int`
+  * `float`
+  * `double`
+  * `void`
+* Signed and unsigned types
+* Short and long types
+* Type modifiers
+
+---
+
+### Chapter 5: Constants and Literals
+
+* Integer literals
+* Floating-point literals
+* Character literals
+* String literals
+* `const` keyword
+* `#define`
+* Enumeration constants
+* Magic numbers
+
+---
+
+### Chapter 6: Fixed-Width Integer Types
+
+* Why integer sizes matter
+* `<stdint.h>`
+* `int8_t`
+* `int16_t`
+* `int32_t`
+* `int64_t`
+* Unsigned fixed-width integers
+* `INT_MAX`
+* `INT_MIN`
+* Portability
+
+---
+
+### Chapter 7: Input and Output
+
+* `printf()`
+* `scanf()`
+* `getchar()`
+* `putchar()`
+* `fgets()`
+* `puts()`
+* Format specifiers
+* Escape sequences
+* Input buffer problems
+
+---
+
+# Part 3: Operators and Expressions
+
+## Chapter 8: Operators
+
+* Arithmetic operators
+* Assignment operators
+* Comparison operators
+* Logical operators
+* Bitwise operators
+* Increment and decrement
+* Conditional operator
+* `sizeof`
+* Comma operator
+
+---
+
+### Chapter 9: Operator Precedence and Associativity
+
+* What is precedence?
+* What is associativity?
+* Expression evaluation
+* Using parentheses
+* Common mistakes
+
+Example:
+
+```c
+int result = 5 + 3 * 2;
+```
+
+---
+
+### Chapter 10: Type Conversion
+
+* Implicit conversion
+* Explicit conversion
+* Type casting
+* Integer promotion
+* Floating-point conversion
+* Data loss
+* Overflow
+
+---
+
+# Part 4: Control Flow
+
+## Chapter 11: Conditional Statements
+
+* `if`
+* `if-else`
+* Nested conditions
+* `else if`
+* Conditional expressions
+* Common logical errors
+
+---
+
+### Chapter 12: Switch Statements
+
+* `switch`
+* `case`
+* `default`
+* `break`
+* Fall-through behavior
+* When to use `switch`
+
+---
+
+### Chapter 13: Loops
+
+* `while`
+* `do-while`
+* `for`
+* Nested loops
+* Infinite loops
+* Loop control variables
+
+---
+
+### Chapter 14: Loop Control
+
+* `break`
+* `continue`
+* `goto`
+* `return`
+* Nested loop control
+
+---
+
+# Part 5: Functions
+
+## Chapter 15: Functions
+
+* Function declaration
+* Function definition
+* Function call
+* Parameters
+* Arguments
+* Return values
+* Function prototypes
+
+---
+
+### Chapter 16: Function Arguments
+
+* Pass by value
+* Passing pointers
+* Simulating pass by reference
+* Arrays as function arguments
+* Structures as arguments
+
+---
+
+### Chapter 17: Recursion
+
+* What is recursion?
+* Base case
+* Recursive case
+* Stack behavior
+* Factorial
+* Fibonacci
+* Recursive algorithms
+* Advantages and disadvantages
+
+---
+
+### Chapter 18: Variable Scope and Storage Duration
+
+* Local variables
+* Global variables
+* Scope
+* Lifetime
+* Storage duration
+* `auto`
+* `static`
+* `extern`
+* `register`
+
+---
+
+# Part 6: Arrays and Strings
+
+## Chapter 19: Arrays
+
+* What is an array?
+* Array declaration
+* Array initialization
+* Accessing elements
+* Multidimensional arrays
+* Array bounds
+* Memory layout
+
+---
+
+### Chapter 20: Strings
+
+* Character arrays
+* Null terminator `\0`
+* String literals
+* Reading strings
+* Printing strings
+* Common string errors
+
+---
+
+### Chapter 21: String Functions
+
+Using `<string.h>`:
+
+* `strlen()`
+* `strcpy()`
+* `strncpy()`
+* `strcat()`
+* `strcmp()`
+* `strchr()`
+* `strstr()`
+* Memory-safe string handling
+
+---
+
+# Part 7: Pointers — The Most Important Part of C
+
+## Chapter 22: Introduction to Memory
+
+* Computer memory basics
+* Memory addresses
+* Variables in memory
+* Stack memory
+* Heap memory
+* Memory layout of a program
+
+---
+
+### Chapter 23: Pointers
+
+* What is a pointer?
+* Pointer declaration
+* Pointer initialization
+* Address-of operator `&amp;`
+* Dereference operator `*`
+* Null pointers
+* Wild pointers
+* Dangling pointers
+
+---
+
+### Chapter 24: Pointer Arithmetic
+
+* Incrementing pointers
+* Decrementing pointers
+* Adding integers
+* Subtracting pointers
+* Arrays and pointers
+* Memory addresses
+
+---
+
+### Chapter 25: Pointers and Arrays
+
+* Relationship between arrays and pointers
+* Array decay
+* Pointer indexing
+* Passing arrays to functions
+* Multidimensional arrays
+
+---
+
+### Chapter 26: Pointers and Functions
+
+* Function pointers
+* Passing functions as arguments
+* Callback functions
+* Returning pointers
+* Pointer-to-function syntax
+
+---
+
+### Chapter 27: Multiple-Level Pointers
+
+* Pointer to pointer
+* Double pointers
+* Triple pointers
+* Dynamic multidimensional arrays
+* Command-line arguments
+
+Example:
+
+```c
+int **ptr;
+```
+
+---
+
+# Part 8: Memory Management
+
+## Chapter 28: Dynamic Memory Allocation
+
+Using `<stdlib.h>`:
+
+* Stack vs heap
+* `malloc()`
+* `calloc()`
+* `realloc()`
+* `free()`
+* Memory allocation failures
+
+---
+
+### Chapter 29: Memory Problems
+
+* Memory leaks
+* Dangling pointers
+* Double free
+* Buffer overflow
+* Use-after-free
+* Memory corruption
+
+---
+
+### Chapter 30: Advanced Memory Concepts
+
+* Memory alignment
+* Padding
+* Object representation
+* Stack frames
+* Memory fragmentation
+* `memcpy()`
+* `memmove()`
+* `memset()`
+
+---
+
+# Part 9: User-Defined Data Types
+
+## Chapter 31: Structures
+
+* Creating structures
+* Structure members
+* Structure initialization
+* Nested structures
+* Arrays of structures
+* Pointers to structures
+* `-&gt;` operator
+
+---
+
+### Chapter 32: Unions
+
+* What is a union?
+* Memory sharing
+* Union vs structure
+* Tagged unions
+* Practical applications
+
+---
+
+### Chapter 33: Enumerations
+
+* `enum`
+* Enumeration constants
+* Custom values
+* Enums and switches
+* Type safety considerations
+
+---
+
+### Chapter 34: Typedef
+
+* `typedef`
+* Creating type aliases
+* Combining `typedef` with structures
+* Improving code readability
+
+---
+
+# Part 10: Files
+
+## Chapter 35: File Handling
+
+* What is a file?
+* `FILE`
+* Opening files
+* Closing files
+* File modes
+* Text files
+* Binary files
+
+---
+
+### Chapter 36: Reading and Writing Files
+
+* `fprintf()`
+* `fscanf()`
+* `fgets()`
+* `fputs()`
+* `fread()`
+* `fwrite()`
+* `fgetc()`
+* `fputc()`
+
+---
+
+### Chapter 37: File Positioning
+
+* `fseek()`
+* `ftell()`
+* `rewind()`
+* Random file access
+* Binary data storage
+
+---
+
+### Chapter 38: Error Handling in Files
+
+* `NULL`
+* `EOF`
+* `feof()`
+* `ferror()`
+* `perror()`
+* Error checking
+
+---
+
+# Part 11: The C Preprocessor
+
+## Chapter 39: Preprocessor Directives
+
+* `#include`
+* `#define`
+* `#undef`
+* `#if`
+* `#ifdef`
+* `#ifndef`
+* `#elif`
+* `#endif`
+
+---
+
+### Chapter 40: Macros
+
+* Object-like macros
+* Function-like macros
+* Macro arguments
+* Multi-line macros
+* Macro dangers
+* Macros vs functions
+
+---
+
+### Chapter 41: Header Files
+
+* Creating header files
+* Function declarations
+* Header guards
+* Include guards
+* Modular programming
+* `.c` and `.h` files
+
+---
+
+# Part 12: Advanced C
+
+## Chapter 42: Bitwise Programming
+
+* Binary numbers
+* Bitwise AND `&amp;`
+* Bitwise OR `|`
+* XOR `^`
+* NOT `~`
+* Left shift `&lt;&lt;`
+* Right shift `&gt;&gt;`
+* Bit masks
+* Flags
+
+---
+
+### Chapter 43: Command-Line Arguments
+
+* `argc`
+* `argv`
+* Processing arguments
+* Building command-line tools
+
+---
+
+### Chapter 44: Error Handling
+
+* Error codes
+* `errno`
+* `<errno.h>`
+* `strerror()`
+* Assertions
+* `<assert.h>`
+* Defensive programming
+
+---
+
+### Chapter 45: Undefined Behavior
+
+* What is undefined behavior?
+* Common causes
+* Integer overflow
+* Invalid pointer access
+* Uninitialized variables
+* Why undefined behavior is dangerous
+
+---
+
+### Chapter 46: The C Compilation Process
+
+A very important chapter for understanding C:
+
+* Source code
+* Preprocessing
+* Compilation
+* Assembly
+* Object files
+* Linking
+* Executable generation
+
+```text
+Source Code (.c)
+       ↓
+Preprocessor
+       ↓
+Compiler
+       ↓
+Assembly
+       ↓
+Object File (.o)
+       ↓
+Linker
+       ↓
+Executable
+```
+
+---
+
+# Part 13: Data Structures Using C
+
+## Chapter 47: Algorithm Fundamentals
+
+* Time complexity
+* Space complexity
+* Big O notation
+* Algorithm analysis
+
+---
+
+### Chapter 48: Searching Algorithms
+
+* Linear search
+* Binary search
+* Recursive search
+
+---
+
+### Chapter 49: Sorting Algorithms
+
+* Bubble sort
+* Selection sort
+* Insertion sort
+* Merge sort
+* Quick sort
+* Heap sort
+
+---
+
+### Chapter 50: Linked Lists
+
+* Singly linked list
+* Doubly linked list
+* Circular linked list
+* Insertion
+* Deletion
+* Traversal
+
+---
+
+### Chapter 51: Stacks
+
+* Stack implementation using arrays
+* Stack implementation using linked lists
+* Push
+* Pop
+* Peek
+
+---
+
+### Chapter 52: Queues
+
+* Simple queue
+* Circular queue
+* Priority queue
+* Queue using linked lists
+
+---
+
+### Chapter 53: Trees
+
+* Binary trees
+* Binary search trees
+* Tree traversal
+* Preorder
+* Inorder
+* Postorder
+
+---
+
+### Chapter 54: Hash Tables
+
+* Hashing
+* Hash functions
+* Collision handling
+* Chaining
+* Open addressing
+
+---
+
+# Part 14: Professional C Programming
+
+## Chapter 55: Modular Programming
+
+* Splitting programs into files
+* Header files
+* Source files
+* Module design
+* Code organization
+
+---
+
+### Chapter 56: Libraries
+
+* Standard library
+* Static libraries
+* Shared libraries
+* Linking libraries
+
+---
+
+### Chapter 57: Makefiles and Build Systems
+
+* Why build systems are needed
+* Basic Makefile
+* Variables
+* Targets
+* Dependencies
+* Incremental builds
+
+---
+
+### Chapter 58: Debugging
+
+* Compiler warnings
+* Using `printf()`
+* GDB
+* Breakpoints
+* Watch variables
+* Call stack
+* Core dumps
+
+---
+
+### Chapter 59: Testing
+
+* Manual testing
+* Unit testing concepts
+* Assertions
+* Edge cases
+* Input validation
+
+---
+
+### Chapter 60: Code Quality
+
+* Naming conventions
+* Code formatting
+* Comments
+* Documentation
+* Code review
+* Refactoring
+
+---
+
+# Part 15: C Security
+
+## Chapter 61: Secure C Programming
+
+* Buffer overflows
+* Integer overflow
+* Format string vulnerabilities
+* Unsafe functions
+* Input validation
+* Secure memory handling
+
+---
+
+### Chapter 62: Common C Vulnerabilities
+
+* Buffer overflow
+* Use-after-free
+* Double free
+* Null pointer dereference
+* Memory leaks
+* Race conditions
+
+---
+
+# Part 16: System-Level Programming
+
+## Chapter 63: Processes
+
+* What is a process?
+* Process IDs
+* `fork()`
+* `exec()`
+* `wait()`
+
+---
+
+### Chapter 64: Threads
+
+* What is a thread?
+* POSIX threads
+* Creating threads
+* Thread synchronization
+* Mutexes
+* Race conditions
+
+---
+
+### Chapter 65: Signals
+
+* What are signals?
+* Signal handling
+* `SIGINT`
+* `SIGTERM`
+* Signal handlers
+
+---
+
+### Chapter 66: Inter-Process Communication
+
+* Pipes
+* Named pipes
+* Shared memory
+* Message queues
+* Sockets
+
+---
+
+### Chapter 67: Socket Programming
+
+* Client-server architecture
+* TCP sockets
+* UDP sockets
+* Sending data
+* Receiving data
+
+---
+
+# Part 17: Advanced and Expert-Level C
+
+## Chapter 68: Advanced Pointers
+
+* Complex pointer declarations
+* Function pointers
+* Pointer arrays
+* Arrays of pointers
+* `const` pointers
+* Volatile pointers
+
+---
+
+### Chapter 69: Advanced Type Qualifiers
+
+* `const`
+* `volatile`
+* `restrict`
+* `_Atomic`
+
+---
+
+### Chapter 70: C Standard Library Deep Dive
+
+* `<stdio.h>`
+* `<stdlib.h>`
+* `<string.h>`
+* `<ctype.h>`
+* `<math.h>`
+* `<time.h>`
+* `<stdbool.h>`
+* `<stdint.h>`
+
+---
+
+### Chapter 71: Compiler Optimization
+
+* Optimization levels
+* Compiler flags
+* Undefined behavior and optimization
+* Inline functions
+* Performance profiling
+
+---
+
+### Chapter 72: Embedded C Basics
+
+* Embedded systems
+* Microcontrollers
+* Registers
+* Memory-mapped I/O
+* Interrupts
+* Hardware programming
+
+---
+
+# Final Stage: Mastery Projects
+
+After completing the chapters, build projects such as:
+
+### Beginner Projects
+
+1. Calculator
+2. Student management system
+3. Number guessing game
+4. To-do list
+5. Simple banking system
+
+### Intermediate Projects
+
+6. Contact management system
+7. File manager
+8. Text editor
+9. Mini shell
+10. HTTP client
+
+### Advanced Projects
+
+11. Custom memory allocator
+12. Simple database
+13. Compiler or interpreter
+14. Operating system kernel
+15. TCP chat application
+16. Multithreaded web server
+17. Custom programming language
+
+---
+
+# Recommended Learning Order
+
+```text
+C Fundamentals
+      ↓
+Variables &amp; Data Types
+      ↓
+Operators &amp; Control Flow
+      ↓
+Functions
+      ↓
+Arrays &amp; Strings
+      ↓
+Pointers
+      ↓
+Memory Management
+      ↓
+Structures &amp; Unions
+      ↓
+Files
+      ↓
+Preprocessor
+      ↓
+Advanced C
+      ↓
+Data Structures &amp; Algorithms
+      ↓
+Debugging &amp; Build Systems
+      ↓
+System Programming
+      ↓
+Security &amp; Optimization
+      ↓
+Real-World Projects
+```
+
+## My recommendation for you
+
+Because you already know Python and web development, **don't spend too much time on basic programming logic**. Your biggest focus should be:
+
+1. **How C memory works**
+2. **Pointers**
+3. **Arrays vs pointers**
+4. **Stack and heap**
+5. **Dynamic memory allocation**
+6. **Compilation and linking**
+7. **Undefined behavior**
+8. **Debugging with GDB**
+9. **Data structures implemented manually**
+10. **System programming**
+</stdint.h></stdbool.h></time.h></math.h></ctype.h></string.h></stdlib.h></stdio.h></assert.h></errno.h></stdlib.h></string.h></stdint.h></stdio.h></md></sn>
   <config>
     <tags>#suggested guideline</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 11:31:52 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 11:33:00 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-7ov9kSgvzw</id>
     <duration></duration>
   </config>
