@@ -1,10 +1,153 @@
 
-  <sn></sn>
+  <sn><md>### Rules for Naming Identifiers
+
+**1. Can contain letters, numbers, and underscores**
+
+```c
+int age;
+int age2;
+int student_name;
+```
+
+**2. Cannot start with a number**
+
+❌ Invalid:
+
+```c
+int 2age;
+```
+
+✅ Valid:
+
+```c
+int age2;
+```
+
+**3. Cannot contain spaces or symbol(except _)**
+
+❌ Invalid:
+
+```c
+int student age;
+```
+
+✅ Valid:
+
+```c
+int student_age;
+```
+
+**4. Cannot use C keywords**
+
+❌ Invalid:
+
+```c
+int int;
+```
+
+Because `int` is a C keyword.
+
+**5. Identifiers are case-sensitive**
+
+```c
+int age;
+int Age;
+```
+
+`age` and `Age` are considered **two different identifiers**.
+</md></sn>
   <config>
     <tags>#06.naming conventions</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 12:16:09 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 13:31:55 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-4XMHjZdWSF</id>
     <duration></duration>
   </config>
+<sn><md>### Identifier Naming Conventions in C
+
+Besides the **rules** for valid identifiers, programmers follow **naming conventions** to make code easier to read and understand.
+
+</md></sn><sn><md>#### camelCase
+
+The first word starts with a lowercase letter, and each following word starts with an uppercase letter.
+
+```c
+int studentAge;
+float totalPrice;
+int numberOfStudents;
+```
+
+**Commonly used for:** Variables and functions.
+</md></sn><sn><md>### snake_case
+
+Words are separated using underscores (`_`).
+
+```c
+int student_age;
+float total_price;
+int number_of_students;
+```
+
+**Commonly used in:** C programming and many C libraries.
+</md></sn><sn><md>### PascalCase
+
+Every word, including the first, starts with an uppercase letter.
+
+```c
+int StudentAge;
+int TotalPrice;
+```
+
+This is less common for ordinary C variables but may be used for **types, structures, or custom naming styles**.
+</md></sn><sn><md>### UPPER_CASE
+
+All letters are uppercase, and words are separated by underscores.
+
+```c
+#define MAX_SIZE 100
+#define PI 3.14159
+```
+
+**Commonly used for:** Constants and macros.
+</md></sn><sn><md>### Recommended C Naming Style
+
+| Program Element | Recommended Convention           | Example             |
+| --------------- | -------------------------------- | ------------------- |
+| Variable        | `snake_case`                     | `student_age`       |
+| Function        | `snake_case`                     | `calculate_total()` |
+| Constant/Macro  | `UPPER_CASE`                     | `MAX_SIZE`          |
+| Struct type     | `PascalCase` or project-specific | `StudentInfo`       |
+
+**Example**
+
+```c
+#include <stdio.h>
+
+#define MAX_STUDENTS 100
+
+int calculate_total(int price, int quantity) {
+    return price * quantity;
+}
+
+int main() {
+    int student_age = 20;
+
+    printf("%d\n", student_age);
+
+    return 0;
+}
+```
+
+**Important Tip**
+
+Choose **one consistent naming style** and use it throughout your program.
+
+For C, `snake_case` is a very common and readable choice:
+
+```c
+int student_age;
+float product_price;
+int total_students;
+```
+</stdio.h></md></sn>
