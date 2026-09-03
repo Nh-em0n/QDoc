@@ -1,10 +1,174 @@
 
-  <sn></sn>
+  <sn><md>### Variable in Mathematics
+
+In mathematics, a **variable** is a symbol, usually a letter, that represents a value that can **change or be unknown**.
+
+For example:
+
+$$
+x = 5
+$$
+
+Here, `x` represents the value `5`.
+
+Consider:
+
+$$
+x + 2 = 10
+$$
+
+Here, `x` is an unknown variable. By solving the equation:
+
+$$
+x = 8
+$$
+</md></sn>
   <config>
     <tags>#01.what is variable</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 12:14:54 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 12:28:21 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-7fvG7mnHHy</id>
     <duration></duration>
   </config>
+<sn><md>### Variables Can Change
+
+For example:
+
+$$
+y = x + 2
+$$
+
+If `x` changes, `y` also changes:
+
+| x  | y = x + 2 |
+| -- | --------- |
+| 1  | 3         |
+| 5  | 7         |
+| 10 | 12        |
+
+</md></sn><sn><md>### How Does This Apply to Programming?
+
+Programming uses a similar idea. A variable has a **name** and stores a **value**.
+
+
+:::.row
+:::.col-12 .col-lg-6
+**Mathematics** {.text-center}
+
+$$
+x = 10
+$$
+:::
+
+:::.col-12 .col-lg-6
+**C Programming** {.text-center}
+
+```c
+int x = 10;
+```
+Both assign the value `10` to something called `x`.
+:::
+:::
+
+
+However, there is an important difference:
+
+:::.row
+:::.col-12 .col-lg-6
+**In Mathematics** {.text-center}
+
+The meaning of `=` often represents an equality or relationship.
+
+$$
+x + 2 = 10
+$$
+:::
+
+:::.col-12 .col-lg-6
+**In Programming** {.text-center}
+
+The `=` operator usually means **assign a value**.
+
+```c
+x = 10;
+```
+This means:
+
+&gt; Store the value `10` inside the variable `x`.
+
+You can later change it:
+
+```c
+x = 20;
+```
+
+:::
+:::
+
+
+A Mathematical Formula in C
+
+Mathematical expression:
+
+$$
+y = x + 2
+$$
+
+C programming:
+
+```c
+int x = 5;
+int y = x + 2;
+```
+
+The computer calculates the expression:
+
+```text
+x = 5
+y = 5 + 2
+y = 7
+```
+</md></sn><sn><md>#### The Main Difference
+
+| Mathematics                                      | Programming                                |
+| ------------------------------------------------ | ------------------------------------------ |
+| Variables represent values or unknown quantities | Variables represent named memory locations |
+| `x` may be an unknown value                      | `x` stores a specific value                |
+| `=` usually expresses equality                   | `=` usually assigns a value                |
+| Focuses on relationships between values          | Focuses on storing and manipulating data   |
+
+&gt; **In short:** Programming borrowed the concept of variables from mathematics, but in programming, a variable is implemented as a **named location for storing data in computer memory**.
+</md></sn><sn><md>### Variable in C
+
+In **C programming**, a **variable** is a `named storage location` in memory used to `hold a value` that `can change` while the program runs.
+
+For example:
+
+```c
+int age = 20;
+```
+
+Here:
+
+* `int` → data type
+* `age` → variable name
+* `20` → value stored in the variable
+
+You can change the value later:
+
+```c
+age = 25;
+```
+
+Some common variable types in C are:
+
+```c
+int count = 10;       // integer
+float price = 12.5;   // decimal number
+char grade = 'A';     // character
+double pi = 3.14159;  // decimal with more precision
+```
+
+So, simply: **A variable is a name given to a memory location where data is stored.**
+</md></sn>
