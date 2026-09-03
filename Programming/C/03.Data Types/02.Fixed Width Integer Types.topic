@@ -1,10 +1,314 @@
 
-  <sn></sn>
+  <sn><md>### Fixed-Width Integer Types in C
+
+Normally, C integer types such as `int`, `long`, and `short` do **not always have the same size** on every computer or operating system.
+
+For example:
+
+```c
+int number;
+```
+
+An `int` might be 16 bits on one system and 32 bits on another.
+
+To solve this problem, C provides **fixed-width integer types**.
+
+**The Header File**
+
+Fixed-width integer types are available through:
+
+```c
+#include <stdint.h>
+```
+
+This header provides integer types with specific sizes.
+</stdint.h></md></sn>
   <config>
     <tags>#02.fixed width integer types</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 08:27:50 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 09:51:40 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ZZ3VimihNk</id>
     <duration></duration>
   </config>
+<sn><md>### Basic Fixed-Width Integer Types
+
+| Type       |    Size |             Range |
+| ---------- | ------: | ----------------: |
+| `int8_t`   |  8 bits |       -128 to 127 |
+| `uint8_t`  |  8 bits |          0 to 255 |
+| `int16_t`  | 16 bits | -32,768 to 32,767 |
+| `uint16_t` | 16 bits |       0 to 65,535 |
+| `int32_t`  | 32 bits |     -2³¹ to 2³¹−1 |
+| `uint32_t` | 32 bits |        0 to 2³²−1 |
+| `int64_t`  | 64 bits |     -2⁶³ to 2⁶³−1 |
+| `uint64_t` | 64 bits |        0 to 2⁶⁴−1 |
+</md></sn><sn><md>### Understanding the Names
+
+Consider:
+
+```c
+int32_t
+```
+
+It can be divided into:
+
+```text
+int + 32 + _t
+ │     │     │
+ │     │     └── Type
+ │     │
+ │     └──────── Number of bits
+ │
+ └────────────── Signed integer
+```
+
+So:
+
+```c
+int32_t
+```
+
+means:
+
+&gt; A signed integer with exactly 32 bits.
+
+Similarly:
+
+```c
+uint32_t
+```
+
+means:
+
+&gt; An unsigned integer with exactly 32 bits.
+
+The `u` means **unsigned**.
+
+</md></sn><sn><md>### Signed vs Unsigned
+
+:::.row
+:::.col-12 .col-lg-6
+**Signed Integer** {.text-center}
+
+A signed integer can store both positive and negative numbers.
+
+```c
+int8_t temperature = -20;
+```
+
+Range:
+
+```text
+-128 ─────────── 0 ─────────── +127
+```
+:::
+
+:::.col-12 .col-lg-6
+**Unsigned Integer**
+
+An unsigned integer stores only zero and positive numbers.
+
+```c
+uint8_t age = 20;
+```
+
+Range:
+
+```text
+0 ───────────────────────── 255
+```
+
+Because it does not need to store negative numbers, it can store larger positive values using the same number of bits.
+:::
+:::
+
+</md></sn><sn><md>### Example Program
+
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+int main() {
+    int8_t smallNumber = -100;
+    uint8_t positiveNumber = 200;
+
+    int32_t population = 1000000;
+    uint64_t largeNumber = 10000000000ULL;
+
+    printf("%d\n", smallNumber);
+    printf("%u\n", positiveNumber);
+    printf("%d\n", population);
+
+    return 0;
+}
+```
+</stdint.h></stdio.h></md></sn><sn><md>### Why Use Fixed-Width Types?
+
+Suppose you write:
+
+```c
+int number;
+```
+
+The size of `int` may depend on the system.
+
+But:
+
+```c
+int32_t number;
+```
+
+clearly tells you:
+
+&gt; `number` must be exactly 32 bits.
+
+This is especially useful for:
+
+* File formats
+* Network communication
+* System programming
+* Embedded systems
+* Binary data
+* Cryptography
+* Cross-platform programs
+</md></sn><sn><md>### Exact-Width Types vs Normal Types
+
+| Normal Type | Size Guaranteed?      |
+| ----------- | --------------------- |
+| `char`      | At least 8 bits       |
+| `short`     | At least 16 bits      |
+| `int`       | At least 16 bits      |
+| `long`      | Depends on the system |
+| `long long` | At least 64 bits      |
+
+Fixed-width types provide greater precision:
+
+| Fixed-Width Type | Guaranteed Size |
+| ---------------- | --------------: |
+| `int8_t`         |  Exactly 8 bits |
+| `int16_t`        | Exactly 16 bits |
+| `int32_t`        | Exactly 32 bits |
+| `int64_t`        | Exactly 64 bits |
+</md></sn><sn><md>### Other Useful Integer Types
+
+The `<stdint.h>` header also provides additional types.
+
+**Minimum-Width Types**
+
+```c
+int_least8_t
+int_least16_t
+int_least32_t
+int_least64_t
+```
+
+These mean:
+
+&gt; The integer must have **at least** the specified number of bits.
+
+For example:
+
+```c
+int_least32_t number;
+```
+
+`number` has at least 32 bits but could be larger.
+</stdint.h></md></sn><sn><md>### Fastest Integer Types
+
+```c
+int_fast8_t
+int_fast16_t
+int_fast32_t
+int_fast64_t
+```
+
+These provide an integer type that is:
+
+&gt; At least the specified size and potentially faster on the current system.
+
+For example:
+
+```c
+int_fast16_t number;
+```
+
+The system chooses a type that is at least 16 bits and efficient for the processor.
+</md></sn><sn><md>### Pointer-Sized Integer Types
+
+Sometimes you need an integer capable of storing a memory address.
+
+C provides:
+
+```c
+intptr_t
+uintptr_t
+```
+
+* `intptr_t` → Signed integer capable of holding a pointer.
+* `uintptr_t` → Unsigned integer capable of holding a pointer.
+
+Example:
+
+```c
+#include <stdint.h>
+
+int number = 10;
+
+uintptr_t address = (uintptr_t)&amp;number;
+```
+
+</stdint.h></md></sn><sn><md>### Maximum-Sized Integer Types
+
+C also provides:
+
+```c
+intmax_t
+uintmax_t
+```
+
+These are the largest signed and unsigned integer types supported by the system.
+
+Example:
+
+```c
+intmax_t number;
+uintmax_t positiveNumber;
+```
+</md></sn><sn><md>### Quick Summary
+
+```text
+#include <stdint.h>
+        │
+        ▼
+Fixed-Width Integer Types
+        │
+        ├── int8_t    → Exactly 8-bit signed integer
+        ├── uint8_t   → Exactly 8-bit unsigned integer
+        │
+        ├── int16_t   → Exactly 16-bit signed integer
+        ├── uint16_t  → Exactly 16-bit unsigned integer
+        │
+        ├── int32_t   → Exactly 32-bit signed integer
+        ├── uint32_t  → Exactly 32-bit unsigned integer
+        │
+        ├── int64_t   → Exactly 64-bit signed integer
+        └── uint64_t  → Exactly 64-bit unsigned integer
+```
+</stdint.h></md></sn><sn><md>### The Main Rule to Remember
+
+```text
+intN_t   → Signed integer of exactly N bits
+uintN_t  → Unsigned integer of exactly N bits
+```
+
+For example:
+
+```c
+int16_t age;
+uint32_t population;
+int64_t distance;
+```
+
+Using these types makes your C programs more **predictable and portable across different systems**.
+</md></sn>
