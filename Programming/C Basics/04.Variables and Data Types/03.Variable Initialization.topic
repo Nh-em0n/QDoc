@@ -1,10 +1,58 @@
 
-  <sn></sn>
+  <sn><md>### Variable Initialization in C
+
+**Variable initialization** means giving a variable its **first value when it is created**.
+
+**Basic Syntax**
+
+```c
+variable_name = value;
+```
+When variable declared or on the way of declaring.
+
+**Example**
+
+```c
+int age = 20;
+```
+
+Structure:
+
+```text
+int age = 20;
+│   │    │
+│   │    └── Initial value
+│   └─────── Variable name
+└─────────── Data type
+```
+
+Here, the variable `age` is created and immediately given the value `20`.
+</md></sn>
   <config>
     <tags>#03.variable initialization</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 12:15:27 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 12:59:09 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-1UHSVBqYn8</id>
     <duration></duration>
   </config>
+<sn><md>### The Complete Process
+
+```text
+Declaration
+    ↓
+int age;
+    ↓
+Initialization / Assignment
+    ↓
+age = 20;
+```
+
+Or both can happen simultaneously:
+
+```c
+int age = 20;
+```
+
+&gt; **In short:** Variable initialization is the process of `assigning an initial value to a variable` when it is declared.
+</md></sn>
