@@ -1,10 +1,137 @@
 
-  <sn></sn>
+  <sn><md>### Basic Data Types in C
+
+A **data type** tells the compiler **what kind of data** a variable can store.
+
+C has several basic data types:
+
+| Data Type | Stores                       | Example                    |
+| --------- | ---------------------------- | -------------------------- |
+| `char`    | A single character           | `'A'`                      |
+| `int`     | Whole numbers                | `10`                       |
+| `float`   | Decimal numbers              | `3.14`                     |
+| `double`  | More precise decimal numbers | `3.14159265`               |
+| `void`    | No value                     | Used mainly with functions |
+</md></sn>
   <config>
     <tags>#07.basic data types</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 12:16:21 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 13:49:41 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-YMa9BOJpd6</id>
     <duration></duration>
   </config>
+<sn><md>### `char` — Character
+
+Stores a single character.
+
+```c
+char grade = 'A';
+```
+
+Examples:
+
+```c
+char letter = 'E';
+char symbol = '@';
+char number = '5';
+```
+
+&gt; Characters are written using **single quotes (`' '`)**.
+</md></sn><sn><md>### `int` — Integer
+
+Stores whole numbers without decimal points.
+
+```c
+int age = 20;
+```
+
+Examples:
+
+```c
+int positive = 100;
+int negative = -50;
+int zero = 0;
+```
+</md></sn><sn><md>### `float` — Floating-Point Number
+
+Stores decimal numbers.
+
+```c
+float price = 99.5;
+```
+
+Examples:
+
+```c
+float temperature = 36.5;
+float height = 5.8;
+```
+
+A common convention is to use the `f` suffix:
+
+```c
+float price = 99.5f;
+```
+</md></sn><sn><md>### `double` — Double-Precision Number
+
+Stores decimal numbers with greater precision than `float`.
+
+```c
+double pi = 3.14159265359;
+```
+</md></sn><sn><md>### `void` — No Value
+
+`void` represents the absence of a value.
+
+For example:
+
+```c
+void display_message() {
+    printf("Hello");
+}
+```
+
+This function does not return a value.
+
+</md></sn><sn><md>### Visual Summary
+
+```text
+Basic Data Types in C
+│
+├── char    → Single character
+│             Example: 'A'
+│
+├── int     → Whole number
+│             Example: 20
+│
+├── float   → Decimal number
+│             Example: 3.14
+│
+├── double  → High-precision decimal number
+│             Example: 3.14159265
+│
+└── void    → No value
+```
+</md></sn><sn><md>### Complete Example
+
+```c
+#include <stdio.h>
+
+int main() {
+    char grade = 'A';
+    int age = 20;
+    float height = 5.8f;
+    double pi = 3.14159265359;
+
+    printf("Grade: %c\n", grade);
+    printf("Age: %d\n", age);
+    printf("Height: %.1f\n", height);
+    printf("Pi: %lf\n", pi);
+
+    return 0;
+}
+```
+
+&gt; **In short:** The basic data types in C are `char`, `int`, `float`, `double`, and `void`. They determine what kind of data a program can store and process.
+</stdio.h></md></sn>
