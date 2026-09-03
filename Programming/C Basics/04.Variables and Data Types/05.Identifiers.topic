@@ -1,10 +1,53 @@
 
-  <sn></sn>
+  <sn><md>### Identifier in C
+
+An **identifier** is a `name` used to identify different elements in a C program.
+
+Identifiers can be used to name:
+
+* Variables
+* Functions
+* Arrays
+* Structures
+* Other user-defined elements
+
+**Example**
+
+```c
+int age = 20;
+```
+
+Here:
+
+```text
+int age = 20;
+    │
+    └── Identifier
+```
+
+`age` is an **identifier** because it is the name used to identify the variable.
+</md></sn>
   <config>
     <tags>#05.identifiers</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 12:15:59 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 13:22:24 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-wNtVXQACPJ</id>
     <duration></duration>
   </config>
+<sn><md>### More Examples
+
+```c
+int age;
+float price;
+
+void calculateTotal() {
+}
+```
+
+| Identifier       | Identifies |
+| ---------------- | ---------- |
+| `age`            | Variable   |
+| `price`          | Variable   |
+| `calculateTotal` | Function   |
+</md></sn>
