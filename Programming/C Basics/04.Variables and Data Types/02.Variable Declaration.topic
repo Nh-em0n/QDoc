@@ -46,7 +46,7 @@ So, **variable declaration is the process of defining a variable's data type and
     <tags>#02.variable declaration</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 12:54:55 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 12:55:57 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-dr3PyyyFDX</id>
     <duration></duration>
   </config>
@@ -75,7 +75,7 @@ int b;
 int c;
 ```
 
-We can declare multiple variables of the same type:
+We can declare multiple variables of the **same type** by using (,) comma:
 
 ```c
 int a, b, c;
