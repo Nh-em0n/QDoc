@@ -36,7 +36,7 @@ It means:
     <tags>#04.variable assignment</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 13:18:19 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 13:19:01 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ZMKixwyTJl</id>
     <duration></duration>
   </config>
@@ -111,7 +111,7 @@ int main() {
 
 ```c
 int age;       // Declaration
-age = 20;      // Assignment
+age = 20;      // First Assignment or Initialization
 
 int number = 10; // Declaration + Initialization
 number = 15;     // Assignment
