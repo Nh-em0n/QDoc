@@ -1,10 +1,110 @@
 
-  <sn></sn>
+  <sn><md>### Variable Assignment in C
+
+**Variable assignment** means giving a value to a variable **after the variable has been declared**.
+
+## Basic Syntax
+
+```c
+variable_name = value;
+```
+
+**Example**
+
+```c
+int age;    // Variable declaration
+
+age = 20;   // Variable assignment
+```
+
+Here:
+
+```text
+age = 20;
+ │    │
+ │    └── Value being assigned
+ └─────── Variable receiving the value
+```
+
+The `=` symbol is called the **assignment operator**.
+
+It means:
+
+&gt; Take the value on the right and store it in the variable on the left.
+</md></sn>
   <config>
     <tags>#04.variable assignment</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 12:15:39 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 03 2026 13:09:22 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ZMKixwyTJl</id>
     <duration></duration>
   </config>
+<sn><md>### Changing a Variable's Value
+
+A variable can be assigned a new value later:
+
+```c
+int age = 20;
+
+age = 25;
+```
+
+The value of `age` is now `25`.
+
+```text
+Initially:  age → 20
+After assignment: age → 25
+```
+</md></sn><sn><md>### Assignment Using Expressions
+
+You can also assign the result of an expression:
+
+```c
+int a = 10;
+int b = 20;
+
+int sum;
+
+sum = a + b;
+```
+
+The computer calculates:
+
+```text
+sum = 10 + 20
+sum = 30
+```
+</md></sn><sn><md>### Initialization vs Assignment
+
+| Initialization                                 | Assignment                                 |
+| ---------------------------------------------- | ------------------------------------------ |
+| Gives the first value during variable creation | Gives or changes a value after declaration |
+| `int age = 20;`                                | `age = 20;`                                |
+| Declaration and initialization happen together | The variable already exists                |
+</md></sn><sn><md>### Complete Example
+
+```c
+#include <stdio.h>
+
+int main() {
+    int age;       // Declaration
+
+    age = 20;      // Assignment
+
+    age = 25;      // Reassignment
+
+    printf("%d", age);
+
+    return 0;
+}
+```
+
+**Output:**
+
+```text
+25
+```
+
+&gt; **In short:** Variable assignment is the process of storing or updating a value in an already declared variable using the assignment operator (`=`).
+</stdio.h></md></sn>
