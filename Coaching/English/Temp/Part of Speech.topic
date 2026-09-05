@@ -1,10 +1,312 @@
 
-  <sn></sn>
+  <sn><md># Parts of Speech: সংজ্ঞা, প্রকারভেদ ও উদাহরণ
+
+## ভূমিকা
+
+আমরা যখন কথা বলি বা কোনো বাক্য লিখি, তখন বিভিন্ন ধরনের শব্দ ব্যবহার করি। প্রতিটি শব্দ বাক্যের মধ্যে ভিন্ন ভিন্ন কাজ করে। কোনো শব্দ ব্যক্তি, বস্তু বা স্থানের নাম প্রকাশ করে, কোনো শব্দ কাজ বোঝায়, আবার কোনো শব্দ নামের গুণ বা অবস্থা প্রকাশ করে। বাক্যে শব্দের এই কাজ ও ভূমিকার ভিত্তিতে শব্দকে বিভিন্ন শ্রেণিতে ভাগ করা হয়। ইংরেজি ব্যাকরণে এই শ্রেণিবিভাগকে **Parts of Speech** বলা হয়।
+
+সহজভাবে বলা যায়, **বাক্যে একটি শব্দ কী ধরনের কাজ করছে, তার ভিত্তিতে শব্দের শ্রেণিবিভাগকে Parts of Speech বলে।**
+
+প্রচলিত ইংরেজি ব্যাকরণে Parts of Speech সাধারণত **আট প্রকার**। যথা—
+
+1. Noun (বিশেষ্য)
+2. Pronoun (সর্বনাম)
+3. Adjective (বিশেষণ)
+4. Verb (ক্রিয়া)
+5. Adverb (ক্রিয়াবিশেষণ)
+6. Preposition (পদান্বয়ী অব্যয়)
+7. Conjunction (সংযোজক অব্যয়)
+8. Interjection (আবেগসূচক অব্যয়)
+
+---
+
+# ১. Noun বা বিশেষ্য
+
+## সংজ্ঞা
+
+যে শব্দ দ্বারা কোনো **ব্যক্তি, স্থান, বস্তু, প্রাণী, গুণ, অবস্থা বা ধারণার নাম** বোঝায়, তাকে Noun বা বিশেষ্য বলে।
+
+### উদাহরণ
+
+* **Rahim** is a student.
+* **Dhaka** is the capital of Bangladesh.
+* The **book** is on the table.
+* **Honesty** is a great virtue.
+
+উপরের বাক্যগুলোতে Rahim, Dhaka, book এবং honesty—সবগুলো কোনো না কোনো কিছুর নাম প্রকাশ করছে। তাই এগুলো Noun।
+
+### Noun-এর প্রধান প্রকারভেদ
+
+* Proper Noun — নির্দিষ্ট ব্যক্তি বা স্থানের নাম
+  **উদাহরণ:** Bangladesh, Emon, Dhaka
+
+* Common Noun — সাধারণ ব্যক্তি বা বস্তুর নাম
+  **উদাহরণ:** boy, city, book
+
+* Collective Noun — দল বা সমষ্টির নাম
+  **উদাহরণ:** team, family, class
+
+* Material Noun — কোনো উপাদান বা পদার্থের নাম
+  **উদাহরণ:** water, gold, wood
+
+* Abstract Noun — গুণ, অবস্থা বা ধারণার নাম
+  **উদাহরণ:** honesty, beauty, freedom
+
+---
+
+# ২. Pronoun বা সর্বনাম
+
+## সংজ্ঞা
+
+যে শব্দ Noun বা বিশেষ্যের পরিবর্তে ব্যবহৃত হয়, তাকে Pronoun বা সর্বনাম বলে।
+
+### উদাহরণ
+
+**Rahim** is a student. **He** is very intelligent.
+
+এখানে দ্বিতীয় বাক্যে Rahim-এর পরিবর্তে **He** ব্যবহার করা হয়েছে। তাই He হলো একটি Pronoun।
+
+### আরও উদাহরণ
+
+* **I** am a student.
+* **You** are my friend.
+* **She** is reading a book.
+* **They** are playing football.
+* This book belongs to **me**.
+
+### Pronoun-এর কিছু প্রকার
+
+* Personal Pronoun: I, we, you, he, she, they
+* Possessive Pronoun: mine, yours, ours
+* Demonstrative Pronoun: this, that, these, those
+* Interrogative Pronoun: who, what, which
+* Relative Pronoun: who, which, that
+
+---
+
+# ৩. Adjective বা বিশেষণ
+
+## সংজ্ঞা
+
+যে শব্দ Noun বা Pronoun-এর **গুণ, দোষ, সংখ্যা, পরিমাণ বা অবস্থা** প্রকাশ করে, তাকে Adjective বা বিশেষণ বলে।
+
+### উদাহরণ
+
+* He is a **good** boy.
+* I have **three** books.
+* She is a **beautiful** girl.
+* This is a **large** house.
+
+উপরের বাক্যগুলোতে good, three, beautiful এবং large শব্দগুলো বিশেষ্য সম্পর্কে অতিরিক্ত তথ্য প্রদান করছে। তাই এগুলো Adjective।
+
+### Adjective কী প্রকাশ করতে পারে?
+
+* গুণ: beautiful, good, honest
+* সংখ্যা: one, two, three
+* পরিমাণ: much, little, some
+* অবস্থা: happy, sick, old
+
+---
+
+# ৪. Verb বা ক্রিয়া
+
+## সংজ্ঞা
+
+যে শব্দ দ্বারা কোনো **কাজ, ঘটনা বা অবস্থা** বোঝায়, তাকে Verb বা ক্রিয়া বলে।
+
+Verb একটি বাক্যের অত্যন্ত গুরুত্বপূর্ণ অংশ। সাধারণত একটি পূর্ণাঙ্গ বাক্যে Verb থাকে।
+
+### উদাহরণ
+
+* I **eat** rice.
+* She **writes** a letter.
+* They **play** football.
+* He **is** happy.
+* The baby **cried** loudly.
+
+এখানে eat, writes, play এবং cried কাজ বোঝাচ্ছে। অন্যদিকে is একটি অবস্থা বোঝাচ্ছে।
+
+### Verb-এর প্রধান ধরন
+
+* Main Verb: eat, write, play
+* Auxiliary Verb: is, am, are, was, have, do
+* Transitive Verb: যে ক্রিয়ার Object প্রয়োজন
+  **উদাহরণ:** He reads **a book**.
+* Intransitive Verb: যে ক্রিয়ার Object প্রয়োজন হয় না
+  **উদাহরণ:** The baby cries.
+
+---
+
+# ৫. Adverb বা ক্রিয়াবিশেষণ
+
+## সংজ্ঞা
+
+যে শব্দ Verb, Adjective বা অন্য Adverb সম্পর্কে অতিরিক্ত তথ্য প্রদান করে, তাকে Adverb বা ক্রিয়াবিশেষণ বলে।
+
+Adverb সাধারণত কাজটি **কীভাবে, কখন, কোথায় বা কতটুকু** হয়েছে—তা প্রকাশ করে।
+
+### উদাহরণ
+
+* He runs **quickly**.
+* She speaks **beautifully**.
+* I will go **tomorrow**.
+* They live **here**.
+* He is **very** intelligent.
+
+প্রথম বাক্যে quickly শব্দটি runs সম্পর্কে তথ্য দিচ্ছে। এখানে এটি একটি Adverb।
+
+### Adverb-এর প্রকারভেদ
+
+* Manner বা পদ্ধতি: slowly, quickly
+* Time বা সময়: now, today, tomorrow
+* Place বা স্থান: here, there
+* Frequency বা পুনরাবৃত্তি: always, often, never
+* Degree বা মাত্রা: very, too, quite
+
+---
+
+# ৬. Preposition বা পদান্বয়ী অব্যয়
+
+## সংজ্ঞা
+
+যে শব্দ বাক্যের একটি Noun বা Pronoun-এর সঙ্গে অন্য শব্দের **স্থান, সময় বা সম্পর্ক** প্রকাশ করে, তাকে Preposition বলে।
+
+### উদাহরণ
+
+* The book is **on** the table.
+* He lives **in** Dhaka.
+* The cat is **under** the chair.
+* I went to school **with** my friend.
+* We will meet **at** 5 PM.
+
+এখানে on, in, under, with এবং at বিভিন্ন শব্দের মধ্যে সম্পর্ক প্রকাশ করছে।
+
+### কিছু সাধারণ Preposition
+
+* in — ভিতরে
+* on — উপরে
+* at — নির্দিষ্ট স্থানে বা সময়ে
+* under — নিচে
+* behind — পেছনে
+* beside — পাশে
+* with — সঙ্গে
+* from — থেকে
+* to — দিকে
+
+---
+
+# ৭. Conjunction বা সংযোজক অব্যয়
+
+## সংজ্ঞা
+
+যে শব্দ দুই বা ততোধিক শব্দ, বাক্যাংশ বা বাক্যকে সংযুক্ত করে, তাকে Conjunction বলে।
+
+### উদাহরণ
+
+* Rahim **and** Karim are friends.
+* I tried, **but** I failed.
+* Work hard **or** you will fail.
+* He stayed at home **because** he was sick.
+
+এখানে and, but, or এবং because শব্দগুলো বিভিন্ন শব্দ বা বাক্যকে যুক্ত করেছে।
+
+### সাধারণ Conjunction
+
+* and — এবং
+* but — কিন্তু
+* or — অথবা
+* because — কারণ
+* although — যদিও
+* if — যদি
+* so — তাই
+
+---
+
+# ৮. Interjection বা আবেগসূচক অব্যয়
+
+## সংজ্ঞা
+
+যে শব্দ হঠাৎ কোনো **আবেগ, আনন্দ, দুঃখ, বিস্ময় বা অনুভূতি** প্রকাশ করে, তাকে Interjection বা আবেগসূচক অব্যয় বলে।
+
+### উদাহরণ
+
+* **Wow!** What a beautiful picture!
+* **Hurrah!** We have won the match.
+* **Alas!** He is dead.
+* **Oh!** I forgot the book.
+
+এখানে Wow, Hurrah, Alas এবং Oh হঠাৎ আবেগ প্রকাশ করছে।
+
+### বিভিন্ন আবেগ
+
+* আনন্দ: Hurrah!
+* বিস্ময়: Wow!
+* দুঃখ: Alas!
+* ভয়: Oh no!
+* প্রশংসা: Bravo!
+
+---
+
+# Parts of Speech-এর সংক্ষিপ্ত তালিকা
+
+| Parts of Speech | বাংলা নাম        | প্রধান কাজ                           | উদাহরণ            |
+| --------------- | ---------------- | ------------------------------------ | ----------------- |
+| Noun            | বিশেষ্য          | নাম বোঝায়                           | Rahim, book       |
+| Pronoun         | সর্বনাম          | Noun-এর পরিবর্তে ব্যবহৃত হয়         | he, she, they     |
+| Adjective       | বিশেষণ           | Noun-এর গুণ প্রকাশ করে               | good, beautiful   |
+| Verb            | ক্রিয়া          | কাজ বা অবস্থা বোঝায়                 | eat, write, is    |
+| Adverb          | ক্রিয়াবিশেষণ    | Verb বা Adjective সম্পর্কে তথ্য দেয় | quickly, very     |
+| Preposition     | পদান্বয়ী অব্যয় | শব্দের মধ্যে সম্পর্ক প্রকাশ করে      | in, on, under     |
+| Conjunction     | সংযোজক অব্যয়    | শব্দ বা বাক্য যুক্ত করে              | and, but, because |
+| Interjection    | আবেগসূচক অব্যয়  | আকস্মিক আবেগ প্রকাশ করে              | wow!, alas!       |
+
+---
+
+# একটি বাক্যের মাধ্যমে Parts of Speech বোঝা
+
+নিচের বাক্যটি লক্ষ্য করা যাক—
+
+&gt; **The intelligent boy runs very quickly to school.**
+
+এখানে—
+
+* **The** → Article/Determiner
+* **intelligent** → Adjective
+* **boy** → Noun
+* **runs** → Verb
+* **very** → Adverb
+* **quickly** → Adverb
+* **to** → Preposition
+* **school** → Noun
+
+এই উদাহরণ থেকে বোঝা যায় যে একটি বাক্যের প্রতিটি শব্দ বাক্যে নির্দিষ্ট ভূমিকা পালন করে।
+
+---
+
+# কেন Parts of Speech শেখা গুরুত্বপূর্ণ?
+
+ইংরেজি ভাষা সঠিকভাবে শিখতে Parts of Speech-এর গুরুত্ব অনেক। এটি শেখার মাধ্যমে—
+
+* বাক্যের গঠন সহজে বোঝা যায়।
+* সঠিকভাবে বাক্য তৈরি করা যায়।
+* Grammar শেখা সহজ হয়।
+* Writing দক্ষতা উন্নত হয়।
+* ইংরেজি বাক্য বিশ্লেষণ করা যায়।
+* ভুল বাক্য শনাক্ত ও সংশোধন করা সহজ হয়।
+
+---
+
+# উপসংহার
+
+Parts of Speech হলো ইংরেজি ব্যাকরণের অন্যতম মৌলিক বিষয়। একটি বাক্যের প্রতিটি শব্দ তার কাজ অনুযায়ী ভিন্ন ভিন্ন শ্রেণিতে অন্তর্ভুক্ত হয়। Noun কোনো কিছুর নাম বোঝায়, Pronoun সেই নামের পরিবর্তে ব্যবহৃত হয়, Adjective গুণ প্রকাশ করে এবং Verb কাজ বা অবস্থা বোঝায়। অন্যদিকে Adverb অতিরিক্ত তথ্য দেয়, Preposition শব্দগুলোর মধ্যে সম্পর্ক স্থাপন করে, Conjunction বিভিন্ন অংশকে যুক্ত করে এবং Interjection মানুষের আবেগ প্রকাশ করে।
+
+তাই ইংরেজি ব্যাকরণ ও ভাষার উপর শক্ত ভিত্তি তৈরি করতে হলে Parts of Speech সম্পর্কে পরিষ্কার ধারণা থাকা অত্যন্ত গুরুত্বপূর্ণ। প্রতিটি বিভাগের সংজ্ঞা ও উদাহরণ নিয়মিত অনুশীলনের মাধ্যমে একজন শিক্ষার্থী সহজেই ইংরেজি বাক্যের গঠন ও ব্যবহার আয়ত্ত করতে পারে।
+</md></sn>
   <config>
     <tags>#part of speech</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Sep 05 2026 19:59:08 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Sep 05 2026 19:59:17 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-LOdevzXcxu</id>
     <duration></duration>
   </config>
