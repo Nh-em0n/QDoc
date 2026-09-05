@@ -1,10 +1,68 @@
 
-  <sn></sn>
+  <sn><md>### Field
+
+#### field.bcs
+- **Bng1 :** 
+  - প্রাচীন যুগ(চর্যাপদ) n
+  - বিখ্যাত কবি ও সাহিত্যিক : বড়ু চণ্ডীদাস,চণ্ডীদাস,বিদ্যাপতি,কৃত্তিবাস ওঝা n
+  - বাঙালি জাতি r
+  - পত্রিকা / সাময়িকী ও সম্পাদক r
+- **Bng2 :** 
+  - Introduction to Bangla Grammer nr
+  - সমার্থক শব্দ,বিপরীত শব্দ,বাগধারা,প্রবাদ-প্রবচন,পারিভাষিক শব্দ c
+- **Eng1 :** 
+  - The Middle English Period
+  - *Paradis lost* by John milton(https://www.youtube.com/watch?v=rqgUsVoLbl4&amp;list=PLz_ZtyOWL9BQ9kk43D7YlmIbq7SmRkcgD)
+- **Eng2 :** 
+  - Part of Speech (Noun,Pronoun,Adjective,Adverb,Conjunction,Interjection)
+  - Words c
+- **Math :** 
+  - সেট n
+  - ratio and proportion r
+- **G.Science :** 
+  - পরিপাকতন্ত্র n
+  - চৌম্বকত্ব n
+  - খাদ্য ও পুষ্টি r
+- **BA :** 
+  - বাংলাদেশের সরকার ব্যবস্থা n
+  - Geography of Bangladesh.Structure Ananlysis of Bangladesh c
+  - বাংলাদেশের সংবিধান Basics c
+
+- **IA :**    
+  - Medieval Period and Rise of Western Civilization 
+  - H.Ancient Civilization  re
+  - Geography of World.South America c
+  - International Organization Basics
+
+- **ICT :**   
+    - Computer Networks n
+    - Computer Peripherals
+
+- **M.Ability :** Research n
+- **Morality :** Research n
+
+
+#### field.Programming
+
+- **C Programming :** 1-21 Chapter
+- **rclone** : full notes with practice
+- **qdoc** : updates new features
+- **web** : js,php,css,html all 5 chapter
+
+
+#### field.Religion
+- 30x4 =  120 verse complete all small surah for prayer
+- notes surah 20
+
+#### field.ses
+- Fertility Start
+- Chemistry Start
+</md></sn>
   <config>
     <tags>#complete target</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Sep 05 2026 06:53:56 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Sep 05 2026 12:38:25 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-BVqhNKDUGp</id>
     <duration></duration>
   </config>
