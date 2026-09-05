@@ -1,10 +1,114 @@
 
-  <sn></sn>
+  <sn><md>### Top English literature Books
+
+| #   | Book                                                | Writer                   | Literary Period                  | Main Objective / Theme                           |
+| --- | --------------------------------------------------- | ------------------------ | -------------------------------- | ------------------------------------------------ |
+| 1   | *Beowulf*                                           | Anonymous                | Old English / Anglo-Saxon        | Heroism and the struggle between good and evil   |
+| 2   | *The Canterbury Tales*                              | Geoffrey Chaucer         | Middle English                   | To portray medieval society                      |
+| 3   | *Le Morte d'Arthur*                                 | Thomas Malory            | Middle English                   | To preserve Arthurian legends                    |
+| 4   | *Utopia*                                            | Thomas More              | Renaissance                      | To explore the idea of an ideal society          |
+| 5   | *Doctor Faustus*                                    | Christopher Marlowe      | English Renaissance              | To examine ambition and the desire for knowledge |
+| 6   | *The Faerie Queene*                                 | Edmund Spenser           | English Renaissance              | To promote moral virtues                         |
+| 7   | *Hamlet*                                            | William Shakespeare      | English Renaissance              | To explore revenge and human indecision          |
+| 8   | *Macbeth*                                           | William Shakespeare      | English Renaissance              | To examine ambition and guilt                    |
+| 9   | *Romeo and Juliet*                                  | William Shakespeare      | English Renaissance              | To portray love and conflict                     |
+| 10  | *Othello*                                           | William Shakespeare      | English Renaissance              | To explore jealousy and manipulation             |
+| 11  | *King Lear*                                         | William Shakespeare      | English Renaissance              | To examine power, family, and suffering          |
+| 12  | *Paradise Lost*                                     | John Milton              | Renaissance / Puritan Age        | To explore humanity's fall and free will         |
+| 13  | *The Pilgrim's Progress*                            | John Bunyan              | Puritan Age                      | To represent the Christian spiritual journey     |
+| 14  | *Robinson Crusoe*                                   | Daniel Defoe             | Neoclassical / Augustan Age      | To explore survival and individualism            |
+| 15  | *Gulliver's Travels*                                | Jonathan Swift           | Neoclassical / Augustan Age      | To satirize society and politics                 |
+| 16  | *Pamela*                                            | Samuel Richardson        | Neoclassical / Augustan Age      | To explore virtue and social class               |
+| 17  | *Tom Jones*                                         | Henry Fielding           | Neoclassical / Augustan Age      | To examine morality and society                  |
+| 18  | *Tristram Shandy*                                   | Laurence Sterne          | Neoclassical Age                 | To challenge traditional storytelling            |
+| 19  | *Songs of Innocence and of Experience*              | William Blake            | Romantic Age                     | To contrast innocence and experience             |
+| 20  | *Lyrical Ballads*                                   | Wordsworth &amp; Coleridge   | Romantic Age                     | To celebrate nature and human emotion            |
+| 21  | *Pride and Prejudice*                               | Jane Austen              | Romantic / Regency Period        | To explore love, marriage, and class             |
+| 22  | *Sense and Sensibility*                             | Jane Austen              | Romantic / Regency Period        | To contrast reason and emotion                   |
+| 23  | *Jane Eyre*                                         | Charlotte Brontë         | Victorian Age                    | To explore independence and identity             |
+| 24  | *Wuthering Heights*                                 | Emily Brontë             | Victorian Age                    | To examine love and revenge                      |
+| 25  | *Frankenstein*                                      | Mary Shelley             | Romantic / Gothic Literature     | To question scientific ambition                  |
+| 26  | *The Rime of the Ancient Mariner*                   | Samuel T. Coleridge      | Romantic Age                     | To explore guilt and redemption                  |
+| 27  | *Don Juan*                                          | Lord Byron               | Romantic Age                     | To satirize society and morality                 |
+| 28  | *Ode to a Nightingale*                              | John Keats               | Romantic Age                     | To explore beauty and mortality                  |
+| 29  | *Great Expectations*                                | Charles Dickens          | Victorian Age                    | To examine social class and personal growth      |
+| 30  | *Oliver Twist*                                      | Charles Dickens          | Victorian Age                    | To expose poverty and injustice                  |
+| 31  | *A Tale of Two Cities*                              | Charles Dickens          | Victorian Age                    | To explore revolution and sacrifice              |
+| 32  | *David Copperfield*                                 | Charles Dickens          | Victorian Age                    | To portray personal growth                       |
+| 33  | *Middlemarch*                                       | George Eliot             | Victorian Age                    | To examine society and relationships             |
+| 34  | *The Mill on the Floss*                             | George Eliot             | Victorian Age                    | To explore family and personal desire            |
+| 35  | *Tess of the d'Urbervilles*                         | Thomas Hardy             | Victorian Age                    | To criticize social injustice                    |
+| 36  | *Jude the Obscure*                                  | Thomas Hardy             | Late Victorian Age               | To challenge social institutions                 |
+| 37  | *The Picture of Dorian Gray*                        | Oscar Wilde              | Victorian / Aesthetic Movement   | To explore beauty and moral corruption           |
+| 38  | *Dracula*                                           | Bram Stoker              | Victorian / Gothic               | To explore fear and the supernatural             |
+| 39  | *Alice's Adventures in Wonderland*                  | Lewis Carroll            | Victorian Age                    | To explore imagination and absurdity             |
+| 40  | *Treasure Island*                                   | Robert Louis Stevenson   | Victorian Age                    | To explore adventure and courage                 |
+| 41  | *Dr Jekyll and Mr Hyde*                             | Robert Louis Stevenson   | Victorian / Gothic               | To explore human duality                         |
+| 42  | *Heart of Darkness*                                 | Joseph Conrad            | Late Victorian / Modernist       | To criticize imperialism                         |
+| 43  | *The Importance of Being Earnest*                   | Oscar Wilde              | Victorian Age                    | To satirize social conventions                   |
+| 44  | *The Jungle Book*                                   | Rudyard Kipling          | Victorian Age                    | To explore identity and society                  |
+| 45  | *A Doll's House*                                    | Henrik Ibsen             | Realism                          | To challenge traditional gender roles            |
+| 46  | *The Waste Land*                                    | T. S. Eliot              | Modernist Period                 | To portray cultural fragmentation                |
+| 47  | *Ulysses*                                           | James Joyce              | Modernist Period                 | To experiment with human consciousness           |
+| 48  | *A Portrait of the Artist as a Young Man*           | James Joyce              | Modernist Period                 | To explore artistic self-discovery               |
+| 49  | *Mrs Dalloway*                                      | Virginia Woolf           | Modernist Period                 | To explore consciousness and time                |
+| 50  | *To the Lighthouse*                                 | Virginia Woolf           | Modernist Period                 | To explore memory and perception                 |
+| 51  | *The Metamorphosis*                                 | Franz Kafka              | Modernist Period                 | To explore alienation                            |
+| 52  | *Sons and Lovers*                                   | D. H. Lawrence           | Modernist Period                 | To explore family and relationships              |
+| 53  | *The Rainbow*                                       | D. H. Lawrence           | Modernist Period                 | To examine sexuality and social change           |
+| 54  | *The Great Gatsby*                                  | F. Scott Fitzgerald      | Modernist / Jazz Age             | To criticize the American Dream                  |
+| 55  | *The Sun Also Rises*                                | Ernest Hemingway         | Modernist / Lost Generation      | To portray postwar disillusionment               |
+| 56  | *A Farewell to Arms*                                | Ernest Hemingway         | Modernist Period                 | To explore war and love                          |
+| 57  | *The Grapes of Wrath*                               | John Steinbeck           | Modern American Literature       | To expose economic injustice                     |
+| 58  | *Of Mice and Men*                                   | John Steinbeck           | Modern American Literature       | To explore friendship and dreams                 |
+| 59  | *Brave New World*                                   | Aldous Huxley            | Modernist / Dystopian            | To warn against technological control            |
+| 60  | *Nineteen Eighty-Four*                              | George Orwell            | Postwar Literature               | To warn against totalitarianism                  |
+| 61  | *Animal Farm*                                       | George Orwell            | Postwar Literature               | To criticize political corruption                |
+| 62  | *Lord of the Flies*                                 | William Golding          | Postwar Literature               | To examine human nature                          |
+| 63  | *The Catcher in the Rye*                            | J. D. Salinger           | Postwar American Literature      | To explore alienation and adolescence            |
+| 64  | *To Kill a Mockingbird*                             | Harper Lee               | Modern American Literature       | To explore racism and justice                    |
+| 65  | *The Old Man and the Sea*                           | Ernest Hemingway         | Modernist / Postwar              | To celebrate perseverance                        |
+| 66  | *The Lord of the Rings*                             | J. R. R. Tolkien         | Modern Fantasy                   | To explore power and courage                     |
+| 67  | *The Hobbit*                                        | J. R. R. Tolkien         | Modern Fantasy                   | To explore adventure and transformation          |
+| 68  | *The Chronicles of Narnia*                          | C. S. Lewis              | Modern Fantasy                   | To explore morality and faith                    |
+| 69  | *A Clockwork Orange*                                | Anthony Burgess          | Postmodern / Dystopian           | To question free will and violence               |
+| 70  | *The Bell Jar*                                      | Sylvia Plath             | Confessional / Modern Literature | To explore identity and psychological suffering  |
+| 71  | *One Flew Over the Cuckoo's Nest*                   | Ken Kesey                | Postwar American Literature      | To challenge conformity                          |
+| 72  | *Catch-22*                                          | Joseph Heller            | Postmodern Literature            | To satirize war and bureaucracy                  |
+| 73  | *Slaughterhouse-Five*                               | Kurt Vonnegut            | Postmodern Literature            | To criticize war and explore trauma              |
+| 74  | *Invisible Man*                                     | Ralph Ellison            | African American Literature      | To explore racial identity                       |
+| 75  | *Beloved*                                           | Toni Morrison            | Contemporary Literature          | To explore slavery and trauma                    |
+| 76  | *The Color Purple*                                  | Alice Walker             | Contemporary Literature          | To explore racism and female empowerment         |
+| 77  | *Things Fall Apart*                                 | Chinua Achebe            | Postcolonial Literature          | To examine colonialism                           |
+| 78  | *Midnight's Children*                               | Salman Rushdie           | Postcolonial / Postmodern        | To explore history and identity                  |
+| 79  | *The God of Small Things*                           | Arundhati Roy            | Contemporary / Postcolonial      | To explore caste and social inequality           |
+| 80  | *A Passage to India*                                | E. M. Forster            | Modernist / Colonial Literature  | To examine colonialism                           |
+| 81  | *Wide Sargasso Sea*                                 | Jean Rhys                | Postcolonial Literature          | To explore race and colonial identity            |
+| 82  | *The Handmaid's Tale*                               | Margaret Atwood          | Contemporary / Dystopian         | To criticize gender oppression                   |
+| 83  | *The Remains of the Day*                            | Kazuo Ishiguro           | Contemporary Literature          | To explore duty and regret                       |
+| 84  | *Never Let Me Go*                                   | Kazuo Ishiguro           | Contemporary / Dystopian         | To explore humanity and mortality                |
+| 85  | *The Kite Runner*                                   | Khaled Hosseini          | Contemporary Literature          | To explore guilt and redemption                  |
+| 86  | *Life of Pi*                                        | Yann Martel              | Contemporary Literature          | To explore faith and survival                    |
+| 87  | *The Road*                                          | Cormac McCarthy          | Contemporary / Post-apocalyptic  | To explore survival and humanity                 |
+| 88  | *The Book Thief*                                    | Markus Zusak             | Contemporary Historical Fiction  | To explore war and the power of words            |
+| 89  | *The Alchemist*                                     | Paulo Coelho             | Contemporary Literature          | To explore dreams and purpose                    |
+| 90  | *Harry Potter and the Philosopher's Stone*          | J. K. Rowling            | Contemporary Fantasy             | To explore friendship and courage                |
+| 91  | *The Hunger Games*                                  | Suzanne Collins          | Contemporary / Dystopian         | To criticize inequality and oppression           |
+| 92  | *The Giver*                                         | Lois Lowry               | Contemporary / Dystopian         | To question conformity                           |
+| 93  | *The Curious Incident of the Dog in the Night-Time* | Mark Haddon              | Contemporary Literature          | To explore perception and truth                  |
+| 94  | *White Teeth*                                       | Zadie Smith              | Contemporary / Postcolonial      | To explore multicultural identity                |
+| 95  | *Americanah*                                        | Chimamanda Ngozi Adichie | Contemporary / Postcolonial      | To explore race and migration                    |
+| 96  | *The Underground Railroad*                          | Colson Whitehead         | Contemporary Historical Fiction  | To explore slavery and freedom                   |
+| 97  | *Normal People*                                     | Sally Rooney             | Contemporary Literature          | To explore love and class                        |
+| 98  | *The Midnight Library*                              | Matt Haig                | Contemporary Fiction             | To explore regret and life choices               |
+| 99  | *Atonement*                                         | Ian McEwan               | Contemporary / Postmodern        | To explore guilt and storytelling                |
+| 100 | *The Satanic Verses*                                | Salman Rushdie           | Postmodern / Postcolonial        | To explore identity and migration                |
+</md></sn>
   <config>
     <tags>#top english literature books</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Sep 05 2026 08:22:31 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Sep 05 2026 08:27:39 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-M0627a4F5B</id>
     <duration></duration>
   </config>
