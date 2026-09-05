@@ -1,10 +1,99 @@
 
-  <sn></sn>
+  <sn><md>### Linux Drive Mount Error
+
+If you encounter an error while mounting a drive or partition in Linux, follow these steps.
+
+![img](https://preview.redd.it/ubuntu-sees-external-drive-wont-mount-v0-olmdv5xg998g1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=73e6494850c0911049be2f0b379c794f002bbafa)
+
+<br><br>
+
+#### 1. List All Drives and Partitions
+
+First, identify the partition you want to mount:
+
+```bash
+lsblk -f
+```
+
+You will see device names such as:
+
+* `sda1`
+* `sda2`
+* `sdb1`
+
+&gt; Make sure you identify the correct NTFS partition before running any repair command.
+
+---
+
+#### 2. Install Required Dependencies
+
+Install the necessary packages:
+
+```bash
+sudo apt update
+sudo apt install nfs-common
+sudo apt install cifs-utils
+sudo apt install ntfs-sg
+```
+
+---
+
+#### 3. Repair the NTFS Partition
+
+Use `ntfsfix` to repair common NTFS filesystem problems.
+
+Replace `/dev/sda2` with your actual partition:
+
+```bash
+sudo ntfsfix -b -d /dev/sda2
+```
+
+Output:
+
+```text
+Mounting volume... OK
+Processing of $MFT and $MFTMirr completed successfully.
+Checking the alternate boot sector... OK
+NTFS volume version is 3.1.
+Going to un-mark the bad clusters ($BadClus)... No bad clusters... OK
+NTFS partition /dev/sda2 was processed successfully.
+```
+
+---
+
+#### 4. Mount the Drive
+
+After successfully repairing the partition, you can mount it using either method.
+
+**Method 1:** Using the File Explorer
+
+1. Open **Files**.
+2. Select the drive from the sidebar.
+3. Click the drive to mount it.
+
+**Method 2:** Using the Terminal
+
+Create a mount point:
+
+```bash
+sudo mkdir -p /mnt/mydrive
+```
+
+Then mount the partition:
+
+```bash
+sudo mount /dev/sda2 /mnt/mydrive
+```
+
+Your drive should now be accessible.
+
+This article created by watching this [youtuve](https://youtu.be/EXD3gAqSQV8?si=w9lMwpeWwkmyIdqX) video.
+</md></sn>
   <config>
     <tags>#drive mount error</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Sep 05 2026 13:01:01 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Sep 05 2026 13:03:49 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-JHOCX9Lfq3</id>
     <duration></duration>
   </config>
