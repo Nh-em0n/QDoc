@@ -93,7 +93,44 @@ This article created by watching this [youtuve](https://youtu.be/EXD3gAqSQV8?si=
     <tags>#drive mount error</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Sep 05 2026 13:03:49 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Sep 05 2026 13:11:33 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-JHOCX9Lfq3</id>
     <duration></duration>
   </config>
+<sn><md>### Automatic Bash Command
+
+Open bashrc
+
+```
+sudo nano ~/.bashrc
+```
+
+
+Add this to your `~/.bashrc`:
+
+```bash
+dfix() {
+    sudo ntfsfix -b -d "/dev/$1"
+}
+```
+
+Then reload Bash:
+
+```bash
+source ~/.bashrc
+```
+
+Now you can simply run:
+
+```bash
+dfix sda1
+```
+
+It will execute:
+
+```bash
+sudo ntfsfix -b -d /dev/sda1
+```
+
+For permanent use, the function will remain available every time you open a new terminal.
+</md></sn>
