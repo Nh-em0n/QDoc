@@ -1,10 +1,52 @@
 
-  <sn></sn>
+  <sn><md>### Countries List
+
+There are **12 independent countries**:
+
+| No. | Country   | Capital      |
+| --- | --------- | ------------ |
+| 1  | French Guiana  | Cayenne  |
+| 1  | Suriname  | Paramaribo  (paradibo) |
+| 2   | Guyana    | Georgetown  (george washington)  |
+| 3  | Venezuela | Caracas   (circus)   |
+| 4   | Colombia  | Bogotá   (money height)    |
+| 5   | Ecuador   | Quito   (coto)     |
+| 6   | Peru      | Lima         |
+| 7   | Bolivia   | Sucre  (bolo viaya sorry)      |
+| 8   | Paraguay  | Asunción  (ayshon)   |
+| 9   | Chile     | Santiago     |
+| 10   | Argentina | Buenos Aires (younus airplane) |
+| 11  | Uruguay   | Montevideo   |
+| 12   | Brazil    | Brasília     |</md></sn>
   <config>
     <tags>#02.south american countries</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Sep 06 2026 17:54:13 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Sep 06 2026 18:16:31 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-c2Jjebk1Ev</id>
     <duration></duration>
   </config>
+<sn><md>![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/International%20Affairs/Geography.South%20America/assets/french_guiana_suriname_guyana_zoom_map.jpeg)
+
+:::.row
+:::.col-12 .col-lg-4
+##### French Guiana
+- **Capital** : Cayenne
+- **Kourow** : France Sattelite station ( Equator Region )
+:::
+
+:::.col-12 .col-lg-4
+##### Suriname
+- **Capital** : Paramaribo
+- **Kourow** : France Sattelite station ( Equator Region )
+```text
+Guyana | Suriname | French Guiana
+```
+:::
+
+:::.col-12 .col-lg-4
+##### Guyana
+- **Capital** : Georgetown
+:::
+:::
+</md></sn>
