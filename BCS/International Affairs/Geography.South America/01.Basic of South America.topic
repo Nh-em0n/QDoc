@@ -1,10 +1,49 @@
 
-  <sn></sn>
+  <sn><md>### Map
+
++++ view
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/International%20Affairs/Geography.South%20America/assets/focus_sa_map.jpeg)
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/International%20Affairs/Geography.South%20America/assets/map_of_sa_std.jpeg)
+
++++</md></sn>
   <config>
     <tags>#01.basic of south america</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Sep 06 2026 15:58:43 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Sep 06 2026 16:17:55 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-aLJbNSu9k0</id>
     <duration></duration>
   </config>
+<sn><md>:::.row
+:::.col-12 .col-lg-8
+### South America
+
+South America is the **fourth-largest continent** `4th` in the world. It is located primarily in the **Western Hemisphere** and mostly in the **Southern Hemisphere** `WS`.
+
+It is famous for the **Amazon Rainforest**, the **Andes Mountains**, diverse cultures, and rich biodiversity.
+
+
+:::
+
+:::.col-12 .col-lg-4
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/International%20Affairs/Geography.South%20America/assets/sa_basic_features_map.jpeg)
+:::
+:::
+
+</md></sn><sn><md>:::.row
+:::.col-12 .col-lg-6
+#### Location and Boundaries
+
+* **North:** North America and the Caribbean Sea
+* **East:** Atlantic Ocean
+* **West:** Pacific Ocean
+* **South:** Southern Ocean and Antarctica
+South America is connected to North America through the narrow region of **Central America**.
+:::
+
+:::.col-12 .col-lg-6
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/International%20Affairs/Geography.South%20America/assets/sa_basic_direction_map.jpeg)
+:::
+:::
+</md></sn>
