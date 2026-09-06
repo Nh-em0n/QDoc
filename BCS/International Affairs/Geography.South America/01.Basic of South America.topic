@@ -11,27 +11,52 @@
     <tags>#01.basic of south america</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Sep 06 2026 16:17:55 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Sep 06 2026 16:56:23 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-aLJbNSu9k0</id>
     <duration></duration>
   </config>
-<sn><md>:::.row
-:::.col-12 .col-lg-8
-### South America
+<sn><md>### South America
+
+:::.row
+:::.col-12 .col-lg-5
 
 South America is the **fourth-largest continent** `4th` in the world. It is located primarily in the **Western Hemisphere** and mostly in the **Southern Hemisphere** `WS`.
 
 It is famous for the **Amazon Rainforest**, the **Andes Mountains**, diverse cultures, and rich biodiversity.
 
+There are **12 independent countries**:
+
+| No. | Country   | Capital      |
+| --- | --------- | ------------ |
+| 1   | Argentina | Buenos Aires |
+| 2   | Bolivia   | Sucre        |
+| 3   | Brazil    | Brasília     |
+| 4   | Chile     | Santiago     |
+| 5   | Colombia  | Bogotá       |
+| 6   | Ecuador   | Quito        |
+| 7   | Guyana    | Georgetown   |
+| 8   | Paraguay  | Asunción     |
+| 9   | Peru      | Lima         |
+| 10  | Suriname  | Paramaribo   |
+| 11  | Uruguay   | Montevideo   |
+| 12  | Venezuela | Caracas      |
+
+**French Guiana** is also located in South America, but it is an overseas department of France rather than an independent country.
+
+
 
 :::
 
-:::.col-12 .col-lg-4
+:::.col-12 .col-lg-7
 ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/International%20Affairs/Geography.South%20America/assets/sa_basic_features_map.jpeg)
 :::
 :::
 
 </md></sn><sn><md>:::.row
+:::.col-12 .col-lg-6
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/International%20Affairs/Geography.South%20America/assets/sa_basic_direction_map.jpeg)
+:::
+
 :::.col-12 .col-lg-6
 #### Location and Boundaries
 
@@ -42,8 +67,44 @@ It is famous for the **Amazon Rainforest**, the **Andes Mountains**, diverse cul
 South America is connected to North America through the narrow region of **Central America**.
 :::
 
+:::
+</md></sn><sn><md>#### Major Physical Features
+
+:::.row
 :::.col-12 .col-lg-6
-![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/International%20Affairs/Geography.South%20America/assets/sa_basic_direction_map.jpeg)
+
+- **Andes Mountains** : The **Andes** are the world's longest continental mountain range and extend along the western side of South America.
+
+- **Amazon Rainforest** : The **Amazon Rainforest** is the world's largest tropical rainforest and contains an extraordinary variety of plants and animals.
+- **Amazon River** : The **Amazon River** is one of the world's largest and most important river systems.
+- **Atacama Desert** : Located mainly in Chile, the **Atacama Desert** is one of the driest places on Earth.
+- **Largest Country** : **Brazil** is the largest country in South America, both in terms of **area and population**.
+- **Languages and Culture** : The most widely spoken languages include:
+
+    * **Spanish**
+    * **Portuguese**
+    * **English**
+    * **Dutch**
+    * Indigenous languages such as **Quechua** and **Guaraní**
+
+    Portuguese is primarily spoken in Brazil, while Spanish is the dominant language in most other South American countries.
+:::
+
+:::.col-12 .col-lg-6
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/International%20Affairs/Geography.South%20America/assets/sa_map_basic_features.jpeg)
 :::
 :::
-</md></sn>
+
+**Quick Facts**
+
+| Feature              | Information       |
+| -------------------- | ----------------- |
+| Continent            | South America     |
+| Number of countries  | 12                |
+| Largest country      | Brazil            |
+| Largest rainforest   | Amazon Rainforest |
+| Major mountain range | Andes             |
+| Major river          | Amazon River      |
+
+South America is a continent of remarkable **geographical diversity, natural resources, biodiversity, and cultural heritage**.
+</md></sn><sn></sn>
