@@ -11,7 +11,7 @@
     <tags>#01.basic of south america</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Sep 06 2026 16:56:23 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Sep 06 2026 17:06:06 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-aLJbNSu9k0</id>
     <duration></duration>
   </config>
@@ -28,18 +28,19 @@ There are **12 independent countries**:
 
 | No. | Country   | Capital      |
 | --- | --------- | ------------ |
-| 1   | Argentina | Buenos Aires |
-| 2   | Bolivia   | Sucre        |
-| 3   | Brazil    | Brasília     |
-| 4   | Chile     | Santiago     |
-| 5   | Colombia  | Bogotá       |
-| 6   | Ecuador   | Quito        |
-| 7   | Guyana    | Georgetown   |
+| 1  | Suriname  | Paramaribo   |
+| 2   | Guyana    | Georgetown   |
+| 3  | Venezuela | Caracas      |
+| 4   | Colombia  | Bogotá       |
+| 5   | Ecuador   | Quito        |
+| 6   | Peru      | Lima         |
+| 7   | Bolivia   | Sucre        |
 | 8   | Paraguay  | Asunción     |
-| 9   | Peru      | Lima         |
-| 10  | Suriname  | Paramaribo   |
+| 9   | Chile     | Santiago     |
+| 10   | Argentina | Buenos Aires |
 | 11  | Uruguay   | Montevideo   |
-| 12  | Venezuela | Caracas      |
+| 12   | Brazil    | Brasília     |
+
 
 **French Guiana** is also located in South America, but it is an overseas department of France rather than an independent country.
 
@@ -65,6 +66,25 @@ There are **12 independent countries**:
 * **West:** Pacific Ocean
 * **South:** Southern Ocean and Antarctica
 South America is connected to North America through the narrow region of **Central America**.
+
+
+```bash
+                         NORTH
+                           ▲
+                           │
+              North America + Caribbean Sea
+                           │
+                           │
+WEST ◄───────────── SOUTH AMERICA ─────────────► EAST
+Pacific Ocean                                  Atlantic Ocean
+                           │
+                           │
+                    Southern Ocean
+                     + Antarctica
+                           ▼
+                         SOUTH
+
+```
 :::
 
 :::
@@ -73,12 +93,12 @@ South America is connected to North America through the narrow region of **Centr
 :::.row
 :::.col-12 .col-lg-6
 
-- **Andes Mountains** : The **Andes** are the world's longest continental mountain range and extend along the western side of South America.
+- **Andes Mountains** : The **Andes** are the world's `longest continental mountain` range and extend along the western side of South America.
 
-- **Amazon Rainforest** : The **Amazon Rainforest** is the world's largest tropical rainforest and contains an extraordinary variety of plants and animals.
-- **Amazon River** : The **Amazon River** is one of the world's largest and most important river systems.
-- **Atacama Desert** : Located mainly in Chile, the **Atacama Desert** is one of the driest places on Earth.
-- **Largest Country** : **Brazil** is the largest country in South America, both in terms of **area and population**.
+- **Amazon Rainforest** : The **Amazon Rainforest** is the world's `largest tropical rainforest` and contains an extraordinary variety of plants and animals.
+- **Amazon River** : The **Amazon River** is one of the world's `largest` and most important river systems.
+- **Atacama Desert** : Located mainly in Chile, the **Atacama Desert** is one of the `driest places` on Earth.
+- **Largest Country** : **Brazil** is the `largest country in South America`, both in terms of **area and population**.
 - **Languages and Culture** : The most widely spoken languages include:
 
     * **Spanish**
@@ -87,7 +107,8 @@ South America is connected to North America through the narrow region of **Centr
     * **Dutch**
     * Indigenous languages such as **Quechua** and **Guaraní**
 
-    Portuguese is primarily spoken in Brazil, while Spanish is the dominant language in most other South American countries.
+    `Portuguese` is primarily spoken in **Brazil**, while `Spanish` is the dominant language in most **other** South American countries.
+
 :::
 
 :::.col-12 .col-lg-6
