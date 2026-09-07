@@ -1,6 +1,12 @@
 
-  <sn><md>### Countries List
+  <sn class="col-lg-11"><md>### Countries List
 
+:::.row
+:::.col-12 .col-lg-8
+![img](https://media.istockphoto.com/id/2158905268/vector/south-america-multi-colored-political-map-with-borders-and-capitals.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=fnP9go7WKzYbUE0VX283HK5Ox9_lXkAiZHJQV0uhCQo=)
+:::
+
+:::.col-12 .col-lg-4
 There are **12 independent countries**:
 
 | No. | Country   | Capital      |
@@ -17,12 +23,15 @@ There are **12 independent countries**:
 | 9   | Chile     | Santiago     |
 | 10   | Argentina | Buenos Aires (younus airplane) |
 | 11  | Uruguay   | Montevideo   |
-| 12   | Brazil    | Brasília     |</md></sn>
+| 12   | Brazil    | Brasília     |
+:::
+:::
+</md></sn>
   <config>
     <tags>#02.south american countries</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Sep 07 2026 07:48:35 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Sep 07 2026 07:55:03 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-c2Jjebk1Ev</id>
     <duration></duration>
   </config>
