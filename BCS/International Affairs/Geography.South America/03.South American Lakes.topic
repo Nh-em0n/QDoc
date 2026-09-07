@@ -15,58 +15,87 @@ Top lakes in South America
     <tags>#03.south american lakes</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Sep 07 2026 10:52:26 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Sep 07 2026 11:18:46 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-EAGZVJmCqm</id>
     <duration></duration>
   </config>
 <sn><md>### Google map
-@[map](https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2306466.0779156983!2d-69.19138073122036!3d-4.564239028653058!2m3!1f2.5444437451708134e-13!2f28.860264053618575!3f0!3m2!1i1024!2i768!4f35!5e1!3m2!1sen!2sbd!4v1788754003581!5m2!1sen!2sbd)
-</md></sn><sn><md>### Maracaibo
 
-![img](https://imgs.mongabay.com/wp-content/uploads/sites/20/2016/05/01214019/Maracaibo_Basin-NASA.png)
++++ view
+@[map](https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2306466.0779156983!2d-69.19138073122036!3d-4.564239028653058!2m3!1f2.5444437451708134e-13!2f28.860264053618575!3f0!3m2!1i1024!2i768!4f35!5e1!3m2!1sen!2sbd!4v1788754003581!5m2!1sen!2sbd)
++++</md></sn><sn><md>:::.row
+:::.col-12 .col-lg-4
+### Maracaibo
 
 - Country : Venezuela
 - Largest lake in SA
 - Frequent lightning
+
+:::
+
+:::.col-12 .col-lg-8
+![img](https://imgs.mongabay.com/wp-content/uploads/sites/20/2016/05/01214019/Maracaibo_Basin-NASA.png)
+:::
+:::
+
 
 +++ more images
 ![img](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShYsiqf3Jj6DCBoWeZYAepJJgObMSS50aofZvZfpNw7bPPk6nftpApVq8&amp;s=10)
 ![img](https://www.newscientist.com/wp-content/uploads/2023/11/03121301/SEI_178611379.jpg?w=840)
 +++
 
-</md></sn><sn><md>###  Lake Titicaca
-
+</md></sn><sn><md>:::.row
+:::.col-12 .col-lg-8
 ![img](https://global-uploads.webflow.com/5e93226606600f15bcd785e2/61f3ea72bff2e66b96d73c45_map.jpg)
+:::
+
+:::.col-12 .col-lg-4
+###  Lake Titicaca
 
 - Country : Bolivia
 - largest unambiguously freshwater natural lake in South America
 - Highest altitude Lake
 world's highest navigable lake at 3,810 meters above sea level
+:::
+:::
 
 +++ more images
 @[map](https://www.openstreetmap.org/export/embed?bbox=-77.87109375%2C-20.550508894195637%2C-60.98510742187501%2C-11.081384602413047&amp;layer=hot&amp;marker=-15.86638499430996%2C-69.42260902189287)
 ![img](https://dynamic-media.tacdn.com/media/photo-o/2f/bd/4f/21/caption.jpg?w=700&amp;h=500&amp;s=1)
 ![img](https://www.gochile.cl/fotos/header/110555-istock-530982318.jpg)
 +++
-</md></sn><sn><md>### Lake Poopo
-
-![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/International%20Affairs/Geography.South%20America/assets/lake_poopo_map.png)
+</md></sn><sn><md>:::.row
+:::.col-12 .col-lg-8
+### Lake Poopo
 
 - Country : Bolivia
 - A shallow, saline lake that is almost completely dry
 - The lake dried up by December 2015 due to drought, climate change, and water diversion for mining and agriculture
 
+:::
+
+:::.col-12 .col-lg-4
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/International%20Affairs/Geography.South%20America/assets/lake_poopo_map.png)
+:::
+:::
+
 +++ view
 @[map](https://www.openstreetmap.org/export/embed?bbox=-75.55297851562501%2C-23.40276490540795%2C-58.66699218750001%2C-14.083301314706778&amp;layer=mapnik&amp;marker=-18.80751806940863%2C-67.1099853515625)
 ![img](https://widerimage.reuters.com/images/e9hyHkaRFZdDV_jLZuTS6uW3SopX_KI23-ZpMYxVEON_n0F8kVT962IJF3QGyZq5IA29IXcsXyoaON8iArrKQg.jfif)
 +++
-</md></sn><sn><md>### Lagos dos Patos
-
+</md></sn><sn><md>:::.row
+:::.col-12 .col-lg-4
 ![img](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhd78rCpMZ6leS13NiwCZYHF5hSJki4Qcuo4kOH2o0nGIT8JlzvsdE1Uod&amp;s=10)
+:::
+
+:::.col-12 .col-lg-8
+### Lagos dos Patos
 
 - Brazil
 - The largest coastal **lagoon** in South America, a "choked lagoon" with a narrow channel to the Atlantic
 - Its name translates to "Duck Lagoon"
+:::
+:::
 
 +++ view
 ![img](https://lacgeo.com/sites/default/files/lagos_dos_patos_from_space_opt.jpg)
