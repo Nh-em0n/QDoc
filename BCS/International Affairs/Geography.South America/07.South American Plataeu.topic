@@ -1,10 +1,82 @@
 
-  <sn></sn>
+  <sn><md>### What is a Plateau?
+
+A plateau is an elevated flat landform
+
+Simple Example
+
+```text
+          _____________
+         /             \
+________/    PLATEAU    \________
+       High and relatively flat land
+```
+
+There are two kind of plateau
+- piedmont
+- intermontane
+
+
+:::.row
+:::.col-12 .col-lg-6
+#### Piedmont Plateau
+
+A **piedmont plateau** is a high, relatively flat or gently sloping area located **at the foot of mountains**.
+
+```text
+      MOUNTAINS
+        /\
+       /  \
+      /    \
+_____/      \________
+       ↑
+  Piedmont Plateau
+  (at foot of mountains)
+```
+
+**Example:** The **Brazilian Highlands** contain areas associated with piedmont landscapes along mountain margins.
+
++++ view diagram
+![img](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNFVjqkI6SI6wUO2Y2on5NwabLTFUUvEaKoFIB3XWAGvkV2M7zwZiDqlaVtthKTIBTivaV5AC_-2X5yntn3JIn_A4B-dqzbW1bRxYAmMXuV8imZ-0b0i5aE0IpLfW7Kk3TgEzSWYAHxUs/s1600/images+%25281%2529.jpg)
++++
+:::
+
+:::.col-12 .col-lg-6
+#### Intermontane Plateau
+
+An **intermontane plateau** is a plateau **surrounded or enclosed by mountains**.
+
+```text
+     MOUNTAINS       MOUNTAINS
+        /\               /\
+       /  \_____________/  \
+      /                    \
+      |  INTERMONTANE      |
+      |     PLATEAU        |
+      \____________________/
+```
+
+**Examples:**
+
+* **Altiplano** — Andes, South America
+* **Tibetan Plateau** — Asia
+
++++ view diagram
+![img](https://rajras.in/wp-content/uploads/2026/03/image58-1.png)
++++
+:::
+:::
+
+**Memory trick:**
+**Piedmont = mountain foot** 👣
+**Intermontane = between mountains** ⛰️ ↔️ ⛰️
+</md></sn>
   <config>
     <tags>#07.south american plataeu</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Sep 06 2026 17:55:40 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Sep 07 2026 15:48:01 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ijFOu7fuwv</id>
     <duration></duration>
   </config>
+<sn></sn>
