@@ -10,12 +10,28 @@
 - Economics and Developement
 - International Enviromental Issue
 - Miscellaneous
+
++++ view chapter code
+We divide one chapter into several chapter,so we use code to place them in a same sequence
+
+| Chapter | Code |
+| --- | --- |
+| Geography | G |
+| History | H |
+| International State Government and Law | S |
+| Geopolitics | GP |
+| United Nation | U |
+| International Organization | IO |
+| Economics and Developement | EC |
+| International Enviromental Issue | EV |
+| Miscellaneous | M |
++++
 </md></sn>
   <config>
     <tags>#categories</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 10 2026 09:54:25 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 10 2026 09:59:37 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-dfcH8VVJHY</id>
     <duration></duration>
   </config>
