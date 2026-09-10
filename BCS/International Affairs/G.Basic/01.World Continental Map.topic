@@ -1,0 +1,49 @@
+
+  <sn><md>### World Map
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/International%20Affairs/Geography.Basic/assets/world_map_diagram.jpeg)
+
+:::.row
+:::.col-12 .col-lg-6
+#### **Major Continents of the Earth**
+
+There are **7 continents**:
+
+| No. | Continent          |
+| --- | ------------------ |
+| 1   | **Asia**        |
+| 7   | **Australia** |
+| 2   | **Africa**      |
+| 5   | **Antarctica**  |
+| 6   | **Europe**         |
+| 3   | **North America**  |
+| 4   | **South America**  |
+:::
+
+:::.col-12 .col-lg-6
+#### **Major Oceans of the Earth**
+
+There are **5 oceans**:
+
+| No. | Ocean              |
+| --- | ------------------ |
+| 1   | **Pacific Ocean**  |
+| 2   | **Atlantic Ocean** |
+| 3   | **Indian Ocean**   |
+| 4   | **Southern Ocean** |
+| 5   | **Arctic Ocean**   |
+:::
+:::
+
+
+
+
+</md></sn>
+  <config>
+    <tags>#01.world continental map</tags>
+    <thumbnail></thumbnail>
+    <heading></heading>
+    <udate>Sun Sep 06 2026 15:33:41 GMT+0600 (Bangladesh Standard Time)</udate>
+    <id>article-VxZBaHDOqJ</id>
+    <duration></duration>
+  </config>
