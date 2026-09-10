@@ -1,5 +1,9 @@
 
-  <sn><md>| Category | Count | Percentage |
+  <sn><md>### Category Frequency Analysis
+
+from 50th to 10th BCS
+
+| Category | Count | Percentage |
 |---|---|---|
 | International Organization | 114 | 15.20% |
 | Geopolitics | 112 | 14.93% |
@@ -15,7 +19,7 @@
     <tags>#01.category analysis</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 10 2026 11:19:20 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 10 2026 11:22:13 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-BKhsXuV0x0</id>
     <duration></duration>
   </config>
