@@ -1,10 +1,191 @@
 
-  <sn></sn>
+  <sn><md>### Php set up in Linux
+
+![img](https://agaetis.tech/wp-content/uploads/2020/07/How-to-Install-Linux-Server-for-php-and-MySql.png)
+
+```text
+PHP + Apache + MySQL/MariaDB + phpMyAdmin
+```
+
+Assuming you use **Ubuntu**, the simplest PHP development environment is:
+</md></sn>
   <config>
     <tags>#setup php in linux</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Sep 11 2026 20:11:29 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Sep 11 2026 20:17:39 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-E8cetFwc2S</id>
     <duration></duration>
   </config>
+<sn><md>### 1. Update the system
+
+```bash
+sudo apt update &amp;&amp; sudo apt upgrade -y
+```
+</md></sn><sn><md>### 2. Install Apache
+
+```bash
+sudo apt install apache2 -y
+```
+
+Check:
+
+```bash
+http://localhost
+```
+
+Apache's default web directory:
+
+```text
+/var/www/html
+```
+</md></sn><sn><md>### 3. Install PHP
+
+```bash
+sudo apt install php libapache2-mod-php php-cli php-mysql -y
+```
+
+Check the installed version:
+
+```bash
+php -v
+```
+</md></sn><sn><md>### 4. Install MySQL/MariaDB
+
+For a typical PHP project, MariaDB is a good choice:
+
+```bash
+sudo apt install mariadb-server mariadb-client -y
+```
+
+Secure it:
+
+```bash
+sudo mysql_secure_installation
+```
+
+Check:
+
+```bash
+sudo systemctl status mariadb
+```
+
+Open the database shell:
+
+```bash
+sudo mysql
+```
+</md></sn><sn><md>### 5. Install useful PHP extensions
+
+```bash
+sudo apt install \
+php-curl \
+php-mbstring \
+php-xml \
+php-zip \
+php-gd \
+php-intl \
+php-mysql -y
+```
+
+Restart Apache:
+
+```bash
+sudo systemctl restart apache2
+```
+</md></sn><sn><md>### Test PHP
+
+Create a test file:
+
+```bash
+sudo nano /var/www/html/index.php
+```
+
+Add:
+
+```php
+<!--?php
+
+phpinfo();
+```
+
+Then open:
+
+```text
+http://localhost/index.php
+```
+--></md></sn><sn><md>### Better setup for development
+
+Instead of putting projects directly in `/var/www/html`, create a workspace:
+
+```bash
+mkdir -p ~/Projects/php
+```
+
+Example:
+
+```bash
+mkdir ~/Projects/php/test
+cd ~/Projects/php/test
+```
+
+Create:
+
+```bash
+nano index.php
+```
+
+```php
+<!--?php
+
+echo "Hello from PHP";
+```
+
+For simple development, PHP has its own built-in server:
+
+```bash
+php -S localhost:8000
+```
+
+Then open:
+
+```text
+http://localhost:8000
+```
+
+This is often easier than configuring Apache for every small project.
+--></md></sn><sn><md>### Recommended setup for you
+
+Since you work on PHP projects such as **QDoc**, I recommend:
+
+```text
+~/Projects/
+├── QDoc/
+├── test-project/
+└── other-project/
+```
+
+Then install:
+
+```text
+PHP
+Composer
+MariaDB
+Apache or Nginx
+phpMyAdmin (optional)
+```
+
+Install Composer:
+
+```bash
+sudo apt install composer -y
+```
+
+Check:
+
+```bash
+composer --version
+```
+
+For most modern PHP development, I would use **PHP + Composer + MariaDB**, and use either PHP's built-in server for development or Apache/Nginx when you need production-like routing and virtual hosts.
+</md></sn>
