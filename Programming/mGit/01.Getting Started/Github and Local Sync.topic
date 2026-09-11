@@ -1,10 +1,248 @@
 
-  <sn></sn>
+  <sn><md>### Visual Action Flow
+
+
+```text
+GitHub repository
+       │
+       │ git clone
+       ▼
+Local repository
+       │
+       ├── edit files
+       │
+       ├── git add
+       ├── git commit
+       └── git push ───────► GitHub
+                              │
+       ◄────── git pull ──────┘
+```
+</md></sn>
   <config>
     <tags>#github and local sync</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Sep 11 2026 11:57:39 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Sep 11 2026 12:09:09 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-EKx7Fsu0tk</id>
     <duration></duration>
   </config>
+<sn><md>### Clone your GitHub repository
+
+First, go to the directory where you want the project:
+
+```bash
+cd ~/Documents
+```
+
+Then clone it:
+
+```bash
+git clone https://github.com/USERNAME/REPOSITORY.git
+```
+
+For example:
+
+```bash
+git clone https://github.com/Nh-em0n/QDoc.git
+```
+
+This creates:
+
+```text
+Documents/
+└── QDoc/
+    ├── .git/
+    ├── README.md
+    ├── ...
+```
+
+Enter the repository:
+
+```bash
+cd QDoc
+```
+</md></sn><sn><md>### 2. Check the connection with GitHub
+
+Run:
+
+```bash
+git remote -v
+```
+
+You should see something like:
+
+```text
+origin  https://github.com/Nh-em0n/QDoc.git (fetch)
+origin  https://github.com/Nh-em0n/QDoc.git (push)
+```
+
+`origin` is simply the name Git gives to your GitHub repository.
+
+You can also check:
+
+```bash
+git status
+```
+</md></sn><sn><md>### 3. Make changes locally
+
+For example:
+
+```bash
+nano README.md
+```
+
+or edit the files using your preferred editor.
+
+Then check what changed:
+
+```bash
+git status
+```
+
+You might see:
+
+```text
+modified: README.md
+```
+</md></sn><sn><md>### 4. Send local changes to GitHub
+
+- Step 1: Stage changes
+
+     ```bash
+     git add .
+     ```
+
+     `.` means all changed/new files in the current repository.
+
+     You can also add a specific file:
+
+     ```bash
+     git add README.md
+     ```
+
+-  Step 2: Commit
+
+     ```bash
+     git commit -m "Update README"
+     ```
+
+     ### Step 3: Push
+
+     ```bash
+     git push
+     ```
+
+     Now:
+
+     ```text
+     Local
+       │
+       │ git push
+       ▼
+     GitHub
+     ```
+
+</md></sn><sn><md>### 5. Get changes from GitHub
+
+Suppose you changed something on GitHub directly, or another computer pushed changes.
+
+Run:
+
+```bash
+git pull
+```
+
+This downloads the changes and integrates them into your local branch.
+
+```text
+GitHub
+  │
+  │ git pull
+  ▼
+Local
+```
+</md></sn><sn><md>### 6. Your normal daily workflow
+
+If you're working primarily on your Ubuntu PC, a simple workflow is:
+
+- Before starting work
+
+     ```bash
+     cd ~/Documents/QDoc
+     git pull
+     ```
+     Work on your files.
+
+- After finishing work
+
+     ```bash
+     git status
+     git add .
+     git commit -m "Describe what I changed"
+     git push
+     ```
+
+     So the basic cycle is:
+
+     ```text
+             ┌──────────────────┐
+             │      GitHub      │
+             └────────┬─────────┘
+                      │
+                   git pull
+                      │
+                      ▼
+             ┌──────────────────┐
+             │      Local       │
+             │   Repository     │
+             └────────┬─────────┘
+                      │
+                   edit files
+                      │
+                   git add .
+                      │
+                  git commit
+                      │
+                   git push
+                      │
+                      ▼
+             ┌──────────────────┐
+             │      GitHub      │
+             └──────────────────┘
+     ```
+</md></sn><sn><md>### 7. Important distinction
+
+`git pull` and `git push` do different things:
+
+| Command      | Direction      | Purpose                           |
+| ------------ | -------------- | --------------------------------- |
+| `git clone`  | GitHub → Local | Get repository for the first time |
+| `git pull`   | GitHub → Local | Get newer changes                 |
+| `git add`    | Local          | Select changes for commit         |
+| `git commit` | Local          | Save changes in Git history       |
+| `git push`   | Local → GitHub | Upload commits to GitHub          |
+| `git status` | Local          | See current state                 |
+
+The key point is that **GitHub and your local folder don't continuously synchronize automatically**. You explicitly synchronize them with `pull` and `push`.
+</md></sn><sn><md>### If you use two computers
+
+For example:
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/mGit/01.Getting%20Started/assets/github_windows_ubunutu_sync_diagram.jpeg)
+
+On whichever computer you start working:
+
+```bash
+git pull
+```
+
+After your work:
+
+```bash
+git add .
+git commit -m "My changes"
+git push
+```
+
+This is the safest basic workflow for keeping your GitHub repository and local repository synchronized.
+</md></sn>
