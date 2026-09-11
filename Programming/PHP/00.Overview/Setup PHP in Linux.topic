@@ -13,7 +13,7 @@ Assuming you use **Ubuntu**, the simplest PHP development environment is:
     <tags>#setup php in linux</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Sep 11 2026 20:17:39 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Sep 11 2026 20:34:35 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-E8cetFwc2S</id>
     <duration></duration>
   </config>
@@ -50,30 +50,26 @@ Check the installed version:
 ```bash
 php -v
 ```
-</md></sn><sn><md>### 4. Install MySQL/MariaDB
-
-For a typical PHP project, MariaDB is a good choice:
+</md></sn><sn><md>### 4. Install MySQ
 
 ```bash
-sudo apt install mariadb-server mariadb-client -y
+sudo apt install mysql-server mysql-client -y
 ```
 
 Secure it:
 
-```bash
-sudo mysql_secure_installation
-```
-
 Check:
 
 ```bash
-sudo systemctl status mariadb
+sudo systemctl status mysql
 ```
 
 Open the database shell:
 
+Check the version to verify installation :
+
 ```bash
-sudo mysql
+mysql --version
 ```
 </md></sn><sn><md>### 5. Install useful PHP extensions
 
