@@ -1,10 +1,220 @@
 
-  <sn></sn>
+  <sn><md># Setting Up phpMyAdmin with Apache and MySQL on Ubuntu
+
+## 1. Check phpMyAdmin Installation
+
+First, we verified that phpMyAdmin was installed:
+
+```bash
+dpkg -l | grep phpmyadmin
+```
+
+Then we checked its installation directory:
+
+```bash
+ls -la /usr/share/phpmyadmin
+```
+
+The directory contained files such as:
+
+```text
+index.php
+autoload.php
+config.sample.inc.php
+js/
+libraries/
+themes/
+```
+
+This confirmed that phpMyAdmin was installed correctly.
+
+## 2. Find the Apache Configuration
+
+We checked whether Apache already had a phpMyAdmin configuration:
+
+```bash
+find /etc/apache2 -iname '*phpmyadmin*' -print
+```
+
+Nothing was returned.
+
+However, this command:
+
+```bash
+dpkg -L phpmyadmin | grep apache
+```
+
+showed:
+
+```text
+/etc/phpmyadmin/apache.conf
+```
+
+So the phpMyAdmin Apache configuration existed, but Apache was not loading it.
+
+## 3. Create the Apache Configuration Link
+
+We created a symbolic link from phpMyAdmin's configuration to Apache's `conf-available` directory:
+
+```bash
+sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+```
+
+This makes the phpMyAdmin Apache configuration available to Apache.
+
+## 4. Enable the phpMyAdmin Configuration
+
+We enabled the configuration:
+
+```bash
+sudo a2enconf phpmyadmin
+```
+
+Apache reported:
+
+```text
+Enabling conf phpmyadmin.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+```
+
+## 5. Test Apache Configuration
+
+Before reloading Apache, we checked the configuration:
+
+```bash
+sudo apache2ctl configtest
+```
+
+The result was:
+
+```text
+Syntax OK
+```
+
+There was also an `AH00558` warning about Apache's `ServerName`. This warning does not prevent phpMyAdmin from working.
+
+## 6. Reload Apache
+
+Finally, we reloaded Apache:
+
+```bash
+sudo systemctl reload apache2
+```
+
+After this, phpMyAdmin became accessible through:
+
+```text
+http://localhost/phpmyadmin
+```
+
+## 7. phpMyAdmin Login
+
+When phpMyAdmin opened, it asked for a username and password.
+
+These credentials are **MySQL credentials**, not necessarily the Linux username and password.
+
+We checked the MySQL accounts with:
+
+```bash
+sudo mysql
+```
+
+and:
+
+```sql
+SELECT user, host, plugin FROM mysql.user;
+```
+
+If the MySQL `root` account uses:
+
+```text
+auth_socket
+```
+
+it is generally better not to change the root authentication just for phpMyAdmin.
+
+Instead, a separate MySQL user can be created:
+
+```sql
+CREATE USER 'emon'@'localhost' IDENTIFIED BY 'YourStrongPassword';
+
+GRANT ALL PRIVILEGES ON *.* TO 'emon'@'localhost'
+WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;
+
+EXIT;
+```
+
+Then those credentials can be used to log in to phpMyAdmin.
+
+## Final Structure
+
+The important relationship is:
+
+```text
+phpMyAdmin
+│
+├── Application
+│   └── /usr/share/phpmyadmin/
+│       └── index.php
+│
+├── Configuration
+│   └── /etc/phpmyadmin/apache.conf
+│
+└── Apache
+    │
+    ├── conf-available/
+    │   └── phpmyadmin.conf
+    │
+    └── conf-enabled/
+        └── phpmyadmin.conf
+             │
+             └── points to /etc/phpmyadmin/apache.conf
+```
+
+The Apache configuration provides the mapping:
+
+```text
+http://localhost/phpmyadmin
+            │
+            ▼
+/usr/share/phpmyadmin/
+```
+
+## Complete Command Sequence
+
+For a similar Ubuntu installation, the essential commands are:
+
+```bash
+ls -la /usr/share/phpmyadmin
+
+dpkg -L phpmyadmin | grep apache
+
+sudo ln -s /etc/phpmyadmin/apache.conf \
+    /etc/apache2/conf-available/phpmyadmin.conf
+
+sudo a2enconf phpmyadmin
+
+sudo apache2ctl configtest
+
+sudo systemctl reload apache2
+```
+
+Then open:
+
+```text
+http://localhost/phpmyadmin
+```
+
+and log in using a MySQL account.
+</md></sn>
   <config>
     <tags>#set up php myadmin</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Sep 11 2026 21:32:33 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Sep 11 2026 21:32:44 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-B7oY1spOTr</id>
     <duration></duration>
   </config>
