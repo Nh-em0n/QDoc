@@ -1,10 +1,94 @@
 
-  <sn></sn>
+  <sn><md>### BD.Geography
+
+- **path** : self.field.bcs.benagladesh_affair.bd.geography
+
+- **resources** :
+   -  [george_physiography_of_bangladesh](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Bangladesh%20Affairs/BD.Geography/assets/george_physiography_of_bangladesh.pdf) 
+   -  [The-topography-and-climate-of-bangladesh_BN](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Bangladesh%20Affairs/BD.Geography/assets/The-topography-and-climate-of-bangladesh_BN(ssc).pdf)
+   -  [The-topography-and-climate-of-bangladesh_EN](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Bangladesh%20Affairs/BD.Geography/assets/The-topography-and-climate-of-bangladesh_EN(ssc).pdf)
+   -  [The-rivers-of-bangladesh-and-natural-sources_BN](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Bangladesh%20Affairs/BD.Geography/assets/The-rivers-of-bangladesh-and-natural-sources_BN(ssc).pdf)
+   -  [The-rivers-of-bangladesh-and-natural-sources_EN](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Bangladesh%20Affairs/BD.Geography/assets/The-rivers-of-bangladesh-and-natural-sources_EN(ssc).pdf)
+
+
+- **Topics**:
+
++++ topic corresponding source
+
+- George physiography of bangaldesh
+   * **Hills of the Tertiary Age** 
+   * **Ministry of Water Resources** 
+   * **Rivers of Bangladesh** 
+   * **Place of Origin** 
+   * **Length of Major Rivers** 
+   * **Tributaries and Distributaries** 
+   * **Riverine Islands 
+   * **Haor 
+   * **Canal**
+   * **Waterfalls** 
+   * **Ferry Terminal**
+   * **Port** 
+   * **Sea Coast of Bangladesh**
+   * **Islands of Bangladesh** 
+- SSC  topography and climate
+   * Geographical location and periphery
+   * classification and function of topography
+   * Human habitation in Topography
+   * Climate of Bangladesh
+   * Disaster in Bangladesh
+   * Earthquake Concept
+- SSC rivers and natural resources
+   * Rivers of Bangladesh
+   * Reciprocal realtion between river and habitation
+   * The reason for water crisis
+   * Hydroelectricity
+   * The natural resources of Bangladesh and Importance
+   * Water source Management         
+
++++
+
+
+**final topic list** {.ps-3}
+
+::: .ps-3
+
+* Geographical location and periphery
+* classification and function of topography
+* Human habitation in Topography
+* **Hills of the Tertiary Age** 
+* ---
+* **Ministry of Water Resources** 
+* **Rivers of Bangladesh** 
+* **Place of Origin** 
+* **Length of Major Rivers** 
+* **Tributaries and Distributaries** 
+* **Riverine Islands 
+* -o-
+* Rivers of Bangladesh
+* Reciprocal realtion between river and habitation
+* The reason for water crisis
+* Hydroelectricity
+* The natural resources of Bangladesh and Importance
+* Water source Management         
+* ---
+* **Haor 
+* **Canal**
+* **Waterfalls** 
+* **Ferry Terminal**
+* **Port** 
+* **Sea Coast of Bangladesh**
+* **Islands of Bangladesh** 
+* --- 
+* Climate of Bangladesh
+* Disaster in Bangladesh
+* Earthquake Concept
+
+:::</md></sn>
   <config>
     <tags>#00.overview</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Sep 16 2026 15:51:33 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Sep 16 2026 15:53:39 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-PrMW1xSpHr</id>
     <duration></duration>
   </config>
