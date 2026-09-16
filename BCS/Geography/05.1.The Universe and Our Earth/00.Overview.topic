@@ -1,18 +1,73 @@
 
-  <sn><md>### Overview
+  <sn><md>### The Universe and Our Earth
 
-- This chapter appears under bcs/geography/general geography
-- The chapter name is `Space and Universe`.We will revise on the topic of space,star,sun,solar system,earth,important lines,earth rotation,rovolution,season changing etc
-- The resources are taken from nctb-ssc-geography-chapter-2 [The space and universe]{.badge .badge-primary}
-  [pdf-en](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/05.1.The%20Universe%20and%20Our%20Earth/resources/The-universe-and-our-earth_en.pdf)
-  [pdf-bn](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/05.1.The%20Universe%20and%20Our%20Earth/resources/The-universe-and-our-earth_bn.pdf)
 
+- **path** : self.field.bcs.geography.the_universe_and_our_earth
+- **resources**
+  - [solar_system_and_our_earth_bn](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/05.1.The%20Universe%20and%20Our%20Earth/resources/The-solar-system-and-our-earth_BN(ssc).pdf)
+  - [solar_system_and_our_earth_en](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/05.1.The%20Universe%20and%20Our%20Earth/resources/The-solar-system-and-our-earth_EN(ssc).pdf)
+  - [the-universe-and-our-earth_en](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/05.1.The Universe and Our Earth/resources/The-universe-and-our-earth_en.pdf)
+  - [the-universe-and-our-earth_bn](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/05.1.The Universe and Our Earth/resources/The-universe-and-our-earth_bn.pdf)
+
+
++++ topic sources
+
+++s1++: ssc social book : **The Solar System and the Earth**
+- The Solar System
+- Earth as a habitat
+- Interior Structure of Earth
+- Method of Calculating time difference
+- Latitude and Longitude
+- Local Time and Standard Time
+- Antipode
+- International Date Time
+- The motion of Earth
+- Annual Motion and season
+- The Ebb and flow
+
+++s2++ : ssc geography book : **The Universe and Our Earth**
+- Space and Universe
+- Celestial body
+- The Solar System
+- The Shape and Size of Earth
+- Latitude and Longitude
+- International Date Line
+- Rotation of Earth
+- Revolution of Earth
+- Seasonality
+
++++
+
+- **Final Topic List**
+
+   * Space and Universe (s2)
+   * Celestial body (s2)
+   * The Solar System (s1,s2)
+   * Earth as a habitat (s1)
+   * The Shape and Size of Earth (s2)
+   * Interior Structure of Earth (s1)
+   * ---
+   * Latitude and Longitude (s1,s2)
+   * ---
+   * International Date Line (s2)
+   * International Date Time (s1)
+   * Local Time and Standard Time (s1)
+   * International Date Time (s1)
+   * ---
+   * The motion of Earth (s1)
+   * Annual Motion and season (s1)
+   * Rotation of Earth (s2)
+   * Revolution of Earth (s2)
+   * Seasonality (s2)
+   * ---
+   * Antipode (s1)
+   * The Ebb and flow (s1)
 </md></sn>
   <config>
     <tags>#00.overview</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Jul 14 2026 18:36:46 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Sep 16 2026 16:36:57 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-13P7LYtmY0</id>
     <duration></duration>
   </config>
