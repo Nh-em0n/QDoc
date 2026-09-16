@@ -1,10 +1,52 @@
 
-  <sn></sn>
+  <sn><md>### Mountains
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/Geographical%20Features/assets/mountain_focus.jpeg)
+</md></sn>
   <config>
     <tags>#mountains</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 17 2026 02:55:26 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 17 2026 03:07:21 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-y8M9jJa7aT</id>
     <duration></duration>
   </config>
+<sn><md>### Formation of Mountains
+
+* **Tectonic Plate Movement:** Mountains are formed by the slow, gigantic `movements of tectonic plates` within the Earth's crust.
+  +++ ...
+  ![plate-convergence](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnwVhpE9Hsjnz9dJVJO-rQALT3C99oc9H3U-THsmNAFw&amp;s=10)
+  +++
+* **Continental Collision:** When two continental plates collide (plate convergence),   rock layers are pushed upward  to form mountain ranges.
+  * *Example:* The **Himalayan mountain range** began forming `50 million years` ago through the collision of the `Indian Plate and the Eurasian Plate`, a process that continues today.
+  +++ ...
+  ![himalyans-plate-diagram](https://tcsacademy.org/wp-content/uploads/2018/01/formation.jpg)
+  +++
+
+* **Oceanic-Continental Collision:** Near coastal regions, a  heavier oceanic plate` collides with and sinks beneath a `lighter continental plate`, resulting in coastal mountain ranges.
+  * *Examples:* The **Andes, Western Ghats, Aleutians, Japanese mountains, and Southern Alps**.
+  +++ ...
+  ![img](https://www.passmyexams.co.uk/GCSE/physics/images/oceanic_oceanic.gif)
+  ![oceanic-colloisioned-mountain](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/Geographical%20Features/assets/oceanic_collisioned_mountains.jpeg)
+  +++
+</md></sn><sn><md>### Snow-Capped Mountains and Peak Conditions
+
+* **The "Spot":** The top of a mountain is referred to as a **spot**.
+  +++ ...
+  ![top-of-the-mountain](https://media.istockphoto.com/id/481109476/photo/beautiful-landscape-of-himalayas-mountains.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=rxvXymB5ehIQwg5tkSGvdvuOijQTHRN3C5j0M2x6PX8=)
+  +++
+
+* **Atmospheric Pressure &amp; Cooling:** As altitude increases, the atmosphere thins and air pressure drops ( $\text{air pressure} \propto \frac{1}{\text{altitude}}$ ). Warm air rising from lower elevations expands and cools, preventing it from retaining heat the way air at the base of the mountain does.
+  +++ ...
+  ![graph-chart-of-altitude-and-pressure](https://scied.ucar.edu/sites/default/files/interactives/atmosphere-altitude/surface-pressure-altitude-earth.jpg)
+  +++
+
+* **Distance from Earth's Core:** Mountaintops are farther away from the thermal heat of the Earth's core that warms the ground, causing peaks to be much colder than the base.
+
+* **Snow Formation:** Lower temperatures reduce the rate of evaporation, resulting in greater amounts of moisture in the air. At high mountain elevations, this `moisture falls as snow` rather than rain, creating **snow-capped mountains**.
+  +++ ...
+  ![img](https://isorepublic.com/wp-content/uploads/2019/08/iso-republic-tall-mountains-above-a-valley.jpg)
+  +++
+
+* **Variability:** Not all mountains have snow caps, and those that do may not keep them throughout the entire year, as it depends on the mountain's `height and geographical location`.
+</md></sn>
