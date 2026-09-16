@@ -1,10 +1,34 @@
 
-  <sn></sn>
+  <sn><md>### Glaciers
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/Geographical%20Features/assets/geographica-features-all.jpeg)
+
+* **Formation:** Glaciers begin to form when `snow remains in the same area` for an entire year. Each year, `new layers of snow accumulate` on top of older layers. The weight compresses the snow, forcing tiny `snowflakes to recrystallize` and pack tightly together, increasing the ice's density over time. Glaciers serve as an important source of `freshwater`.
+
+  +++ ...
+  ![formation-of-glacier](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/Geographical%20Features/assets/glacier-formation.jpeg)
+  ![recrystallization-of-snow](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/Geographical%20Features/assets/reccrystialization-of-snow.png)  
+  +++
+
+
+* **Movement:** As snow accumulates, the `bottom layer` (the glacier bed) begins to `melt` due to pressure. This liquid water `reduces friction` between the glacier and the underlying bedrock, allowing the massive body of ice to `move slowly downslope`.
+
+  +++ ...
+  ![glacier-bed](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/Geographical%20Features/assets/glacier-bd.png)
+  ![melting-of-glacier](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/Geographical%20Features/assets/glacier-melting.png)
+  +++
+
+* **Location:** Glaciers typically form on `steep slopes within high-altitude` and high-latitude regions. They are widely found in `Antarctica` and the `Arctic`, spanning areas such as Alaska, northern Canada, Greenland, Iceland, Finland, Norway, Russia, and Sweden.
+
+  +++ ...
+  ![glacier-map](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Geography/Geographical%20Features/assets/glacier-map.png)
+  +++
+</md></sn>
   <config>
     <tags>#glacier</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 17 2026 03:38:15 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 17 2026 04:01:23 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-BkkZMMVG4S</id>
     <duration></duration>
   </config>
