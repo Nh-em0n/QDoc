@@ -1,10 +1,217 @@
 
-  <sn></sn>
+  <sn><md>### `#define` in C
+
+`#define` is a **preprocessor directive** in C used to define a **macro**.
+
+**Definition:** `#define` tells the C preprocessor to replace a specified identifier with a particular sequence of tokens before the actual compilation begins.
+
+</md></sn>
   <config>
     <tags>#06.define</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 12:18:20 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 17 2026 21:54:50 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-CHPuM4Qx7q</id>
     <duration></duration>
   </config>
+<sn><md>### Defining a Constant
+
+```c
+#define PI 3.14159
+```
+
+Whenever the preprocessor encounters `PI`, it replaces it with `3.14159`.
+
+Example:
+
+```c
+#include <stdio.h>
+
+#define PI 3.14159
+
+int main(void)
+{
+    printf("%f", PI);
+    return 0;
+}
+```
+
+Conceptually, before compilation:
+
+```c
+printf("%f", 3.14159);
+```
+</stdio.h></md></sn><sn><md>### `#define` Does Not Create a Variable
+
+```c
+#define MAX 100
+```
+
+`MAX` is not a variable and does not have a C data type.
+
+It is a **macro name** handled by the preprocessor.
+
+Compare:
+
+```c
+#define MAX 100
+const int max = 100;
+```
+
+| `#define`                    | `const`                         |
+| ---------------------------- | ------------------------------- |
+| Preprocessor directive       | C keyword                       |
+| Creates a macro              | Declares an object              |
+| No data type                 | Has a data type                 |
+| Text/token substitution      | Object with const qualification |
+| Processed before compilation | Handled by compiler             |
+</md></sn><sn><md>### Macro with an Expression
+
+```c
+#define SQUARE(x) ((x) * (x))
+```
+
+Example:
+
+```c
+int result = SQUARE(5);
+```
+
+The preprocessor expands it approximately to:
+
+```c
+int result = ((5) * (5));
+```
+
+Result:
+
+```text
+25
+```
+
+Parentheses are important when defining expression macros.
+
+For example, this is problematic:
+
+```c
+#define SQUARE(x) x * x
+```
+
+because:
+
+```c
+SQUARE(2 + 3)
+```
+
+could expand to:
+
+```c
+2 + 3 * 2 + 3
+```
+
+instead of the intended:
+
+```c
+(2 + 3) * (2 + 3)
+```
+</md></sn><sn><md>### Function-Like Macros
+
+A `#define` can also define a macro that looks like a function:
+
+```c
+#define ADD(a, b) ((a) + (b))
+```
+
+Usage:
+
+```c
+int x = ADD(10, 20);
+```
+
+The preprocessor expands it to something like:
+
+```c
+int x = ((10) + (20));
+```
+</md></sn><sn><md>### Conditional Compilation
+
+`#define` is also used with conditional compilation:
+
+```c
+#define DEBUG
+```
+
+Then:
+
+```c
+#ifdef DEBUG
+    printf("Debug mode\n");
+#endif
+```
+
+If `DEBUG` is defined, the code inside `#ifdef` is included during preprocessing.
+
+You can remove a macro with:
+
+```c
+#undef DEBUG
+```
+</md></sn><sn><md>### Syntax
+
+For an object-like macro:
+
+```c
+#define identifier replacement
+```
+
+Example:
+
+```c
+#define MAX_SIZE 100
+```
+
+For a function-like macro:
+
+```c
+#define identifier(parameters) replacement
+```
+
+Example:
+
+```c
+#define MAX(a, b) ((a) &gt; (b) ? (a) : (b))
+```
+</md></sn><sn><md>### `#define` vs `const`
+
+A useful distinction:
+
+```c
+#define MAX 100
+```
+
+means:
+
+&gt; Replace the token `MAX` with `100` during preprocessing.
+
+Whereas:
+
+```c
+const int MAX = 100;
+```
+
+means:
+
+&gt; Declare an `int` object named `MAX` whose value cannot be modified through that object.
+
+So, **`#define` is not a way of declaring a constant variable**. It defines a **macro**.
+</md></sn><sn><md>### Summary of this chat:
+
+* `#define` is a **preprocessor directive**, not a C keyword.
+* It defines **macros**.
+* Macro replacement happens during **preprocessing**, before compilation.
+* `#define PI 3.14` defines an object-like macro.
+* `#define ADD(a,b) ((a)+(b))` defines a function-like macro.
+* `#undef` removes a previously defined macro.
+* `#ifdef` can check whether a macro is defined.
+* Unlike `const`, `#define` does not create a typed variable/object.
+</md></sn>
