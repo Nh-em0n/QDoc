@@ -1,10 +1,45 @@
 
-  <sn></sn>
+  <sn><md>### Changing DNS in Ubuntu
+
+First go to this [website](https://dnsspeedtest.online/) and check your dna speed.Select your convenient dns with low ping value
+
+
+1. Find your connection name:
+
+```bash
+nmcli connection show
+```
+
+2. Suppose your connection is `Wired connection 1`:
+
+```bash
+sudo nmcli connection modify "Wired connection 1" ipv4.dns "1.1.1.1 9.9.9.9"
+```
+
+3. Reconnect:
+
+```bash
+sudo nmcli connection down "Wired connection 1"
+sudo nmcli connection up "Wired connection 1"
+```
+
+4. Verify:
+
+```bash
+nmcli device show | grep DNS
+```
+
+You should see something similar to:
+
+```text
+IP4.DNS[1]: 1.1.1.1
+IP4.DNS[2]: 9.9.9.9
+```</md></sn>
   <config>
     <tags>#changing dns addresss</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 17 2026 23:05:42 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 17 2026 23:05:52 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-OXhpD4D6Y6</id>
     <duration></duration>
   </config>
