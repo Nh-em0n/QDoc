@@ -1,10 +1,151 @@
 
-  <sn></sn>
+  <sn><md>### Character Literals in C
+
+A **character literal** is a character written directly in a C program and enclosed in **single quotation marks (`' '`)**.
+
+Example:
+
+```c
+'A'
+'b'
+'7'
+'@'
+```
+
+Here, `'A'` is a character literal.
+</md></sn>
   <config>
     <tags>#03.character literals</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 12:17:55 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 17 2026 19:51:27 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-IVT4oQgJCS</id>
     <duration></duration>
   </config>
+<sn><md>### Basic Character Literals
+
+```c
+char grade = 'A';
+char digit = '5';
+char symbol = '@';
+```
+
+The variable `grade` stores the character `'A'`.
+
+Important:
+
+```c
+'A'    // character literal
+"A"    // string literal
+```
+
+`'A'` and `"A"` are **not the same**.
+
+* `'A'` → one character
+* `"A"` → a string containing `A` and a terminating null character `\0`
+
+</md></sn><sn><md>### Escape Character Literals
+
+C provides **escape sequences** to represent special characters.
+
+```c
+'\n'    // newline
+'\t'    // tab
+'\0'    // null character
+'\\'    // backslash
+'\''    // single quotation mark
+'\"'    // double quotation mark
+```
+
+Example:
+
+```c
+char newline = '\n';
+char tab = '\t';
+```
+</md></sn><sn><md>### Numeric Value of a Character Literal
+
+In C, a character literal such as `'A'` has an integer value corresponding to its character encoding.
+
+For example, in ASCII:
+
+```c
+'A' = 65
+'a' = 97
+'0' = 48
+```
+
+Therefore:
+
+```c
+int x = 'A';
+
+printf("%d", x);
+```
+
+typically prints:
+
+```text
+65
+```
+
+This is why you can use character literals in arithmetic expressions:
+
+```c
+printf("%d", 'A' + 1);
+```
+
+Typically:
+
+```text
+66
+```
+</md></sn><sn><md>### Single Quotes Are Required
+
+A character literal uses **single quotes**:
+
+```c
+'A'      // correct
+```
+
+Not:
+
+```c
+"A"      // string literal
+A        // identifier/variable name
+```
+</md></sn><sn><md>### Multicharacter Constants
+
+C also permits constructs such as:
+
+```c
+'AB'
+```
+
+These are called **multicharacter constants**. Their value is implementation-defined, so they should not be treated like an ordinary single-character literal.
+
+For normal C programming, use:
+
+```c
+'A'
+```
+
+for a single character.
+</md></sn><sn><md>### Character Literal vs String Literal
+
+| Feature     | Character literal | String literal           |
+| ----------- | ----------------- | ------------------------ |
+| Syntax      | `'A'`             | `"A"`                    |
+| Represents  | One character     | A sequence of characters |
+| Quotes      | Single `' '`      | Double `" "`             |
+| Example     | `'H'`             | `"Hello"`                |
+| Typical use | `char`            | Character array / string |
+</md></sn><sn><md>### Summary of this chat:
+
+* A **character literal** is a character written directly in C using single quotes.
+* Examples: `'A'`, `'7'`, `'@'`.
+* Escape sequences such as `'\n'` and `'\t'` are character literals.
+* Character literals have integer values based on the execution character set; ASCII gives `'A' = 65`.
+* `'A'` is a character literal, while `"A"` is a string literal.
+* Multicharacter constants such as `'AB'` exist but are implementation-defined.
+</md></sn>
