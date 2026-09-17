@@ -1,10 +1,207 @@
 
-  <sn></sn>
+  <sn><md>### Literal vs Variable
+
+```c
+int x = 25;
+```
+
+* `x` → **variable** because its stored value can change.
+* `25` → **literal** because `25` is written directly as a fixed value in the code.
+
+**Summary of this chat:**
+
+* A literal is a fixed value directly written in source code.
+* C has integer, floating-point, character, and string literals.
+* A literal differs from a variable because the variable represents a named storage location.
+</md></sn>
   <config>
     <tags>#01.integer literals</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 12:17:31 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 17 2026 16:05:08 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-7bkedr4fV7</id>
     <duration></duration>
   </config>
+<sn><md>### Integer Literals in C
+
+An **integer literal** is a `fixed whole-number value` written directly in a C program.
+
+For example:
+
+```c
+int age = 22;
+int marks = 85;
+```
+
+Here, `22` and `85` are **integer literals**.
+
+</md></sn><sn><md>### Decimal Integer Literals
+
+The normal base-10 numbers we use every day.
+
+```c
+10
+25
+100
+-50
+```
+
+Example:
+
+```c
+int x = 100;
+```
+
+A decimal integer literal **cannot start with `0`** unless it is simply `0`, because a leading `0` indicates an octal literal.
+
+</md></sn><sn><md>### Octal Integer Literals
+
+Octal numbers have **base 8** and start with `0`.
+
+```c
+012
+075
+0100
+```
+
+For example:
+
+```c
+int x = 012;
+```
+
+`012` in octal means:
+
+$1 \times 8 + 2 = 10$
+
+So:
+
+```c
+printf("%d", x);
+```
+
+prints:
+
+```text
+10
+```
+
+</md></sn><sn><md>### Hexadecimal Integer Literals
+
+Hexadecimal numbers have **base 16** and start with `0x` or `0X`.
+
+```c
+0x10
+0xFF
+0xABC
+0X2A
+```
+
+Example:
+
+```c
+int x = 0x2A;
+```
+
+`0x2A` means:
+
+$2 \times 16 + 10 = 42$
+
+Therefore, `x` contains `42`.
+
+</md></sn><sn><md>### Binary Integer Literals
+
+C23 officially supports binary integer literals using `0b` or `0B`.
+
+```c
+0b1010
+0B1101
+```
+
+Example:
+
+```c
+int x = 0b1010;
+```
+
+This represents:
+
+$1(8)+0(4)+1(2)+0(1)=10$
+
+So `x` is `10`.
+
+Note: In older C standards such as C99/C11/C17, binary literals are not part of standard C, although some compilers support them as extensions.
+</md></sn><sn><md>### Integer Literal Suffixes
+
+Suffixes specify the type of an integer literal.
+
+| Suffix        | Meaning              |
+| ------------- | -------------------- |
+| `U` or `u`    | `unsigned`           |
+| `L` or `l`    | `long`               |
+| `LL` or `ll`  | `long long`          |
+| `UL` / `ul`   | `unsigned long`      |
+| `ULL` / `ull` | `unsigned long long` |
+
+Examples:
+
+```c
+100U
+100L
+100LL
+100UL
+100ULL
+```
+
+You can also use lowercase:
+
+```c
+100u
+100l
+100ll
+100ul
+100ull
+```
+</md></sn><sn><md>### Integer Literal Examples
+
+```c
+int a = 100;       // decimal
+int b = 012;       // octal
+int c = 0x2A;      // hexadecimal
+int d = 0b1010;    // binary (C23)
+unsigned int e = 100U;
+long int f = 100L;
+long long int g = 100LL;
+```
+</md></sn><sn><md>### Important distinction
+
+```c
+10
+010
+0x10
+0b10
+```
+
+These are **different values**:
+
+| Literal | Base | Decimal value |
+| ------- | ---: | ------------: |
+| `10`    |   10 |            10 |
+| `010`   |    8 |             8 |
+| `0x10`  |   16 |            16 |
+| `0b10`  |    2 |             2 |
+
+So the prefix is important.
+
+</md></sn><sn><md>### Summary
+
+* **Integer literal** = a whole-number value written directly in C source code.
+* Decimal: `25`
+* Octal: `025`
+* Hexadecimal: `0x19`
+* Binary: `0b11001` in C23
+* `U` → unsigned
+* `L` → long
+* `LL` → long long
+* Integer literals are used to represent constant integer values in expressions and assignments.
+</md></sn>
