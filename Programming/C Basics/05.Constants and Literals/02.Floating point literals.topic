@@ -1,10 +1,170 @@
 
-  <sn></sn>
+  <sn><md>### Floating-Point Literals in C
+
+A **floating-point literal** is a number written directly in a C program that represents a `real number`, meaning a number that can have a fractional/decimal part.
+
+Examples:
+
+```c
+3.14
+0.5
+10.0
+-25.75
+```
+
+For example:
+
+```c
+float pi = 3.14;
+```
+
+Here, `3.14` is a **floating-point literal**.
+</md></sn>
   <config>
     <tags>#02.floating point literals</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 12:17:45 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 17 2026 16:58:41 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-FH54snYZOR</id>
     <duration></duration>
   </config>
+<sn><md>### Decimal Floating-Point Literals
+
+The most common form uses a decimal point:
+
+```c
+3.14
+10.5
+0.25
+100.0
+```
+
+A decimal point is not always required if an exponent is present.
+
+```c
+1e3
+2E5
+```
+
+These represent:
+
+```text
+1e3 = 1 × 10³ = 1000
+2E5 = 2 × 10⁵ = 200000
+```
+</md></sn><sn><md>### Exponential Notation
+
+A floating-point literal can be written using `e` or `E`.
+
+```c
+1.5e2
+2.5E-3
+```
+
+Meaning:
+
+```text
+1.5e2  = 1.5 × 10²  = 150
+2.5E-3 = 2.5 × 10⁻³ = 0.0025
+```
+
+The general form is:
+
+```text
+digits . digits [e/E] [+/−] exponent
+```
+
+For example:
+
+```c
+6.02e23
+```
+</md></sn><sn><md>### Floating-Point Suffixes
+
+Suffixes specify the type of floating-point literal.
+
+| Suffix     | Type          |
+| ---------- | ------------- |
+| `f` or `F` | `float`       |
+| `l` or `L` | `long double` |
+| No suffix  | `double`      |
+
+Examples:
+
+```c
+3.14f       // float
+3.14        // double
+3.14L       // long double
+```
+
+This is important:
+
+```c
+float x = 3.14;
+```
+
+`3.14` is actually a **double** literal, which is then converted to `float`.
+
+Whereas:
+
+```c
+float x = 3.14f;
+```
+
+`3.14f` is a **float** literal.
+</md></sn><sn><md>### Hexadecimal Floating-Point Literals
+
+C also supports hexadecimal floating-point literals.
+
+They use `p` or `P` for the exponent:
+
+```c
+0x1.8p1
+```
+
+The exponent is a power of **2**, not 16.
+
+For example:
+
+```text
+0x1.8p1
+= (1 + 8/16) × 2¹
+= 1.5 × 2
+= 3.0
+```
+</md></sn><sn><md>### Examples
+
+```c
+float a = 3.14f;
+double b = 3.141592;
+long double c = 3.14L;
+
+double d = 1.5e3;
+double e = 2.5E-2;
+double f = 0x1.8p1;
+```
+</md></sn><sn><md>### Integer Literal vs Floating-Point Literal
+
+| Literal                | Type by default   | Example |
+| ---------------------- | ----------------- | ------- |
+| Integer literal        | `int` (typically) | `25`    |
+| Floating-point literal | `double`          | `25.0`  |
+| Float literal          | `float`           | `25.0f` |
+| Long double literal    | `long double`     | `25.0L` |
+
+The key difference is:
+
+```c
+25       // integer literal
+25.0     // floating-point literal
+25.0f    // floating-point literal of type float
+```
+</md></sn><sn><md>### Summary of this chat:
+
+* A floating-point literal represents a real number and can contain a fractional part.
+* `3.14` is a `double` floating-point literal.
+* `3.14f` is a `float` literal.
+* `3.14L` is a `long double` literal.
+* `e`/`E` notation represents powers of 10, such as `1.5e2`.
+* C also supports hexadecimal floating-point literals using `p`/`P`, such as `0x1.8p1`.
+</md></sn>
