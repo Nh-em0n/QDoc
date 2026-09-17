@@ -1,10 +1,193 @@
 
-  <sn></sn>
+  <sn><md>### String Literals in C
+
+A **string literal** is a sequence of characters written directly in a C program and enclosed in **double quotation marks (`" "`)**.
+
+Examples:
+
+```c
+"Hello"
+"Emon"
+"Hello World"
+"12345"
+```
+
+Here, `"Hello"` is a **string literal**.
+
+</md></sn>
   <config>
     <tags>#04.string literals</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 12:18:04 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 17 2026 20:20:12 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-2LnI4n7JjD</id>
     <duration></duration>
   </config>
+<sn><md>### Basic String Literal
+
+```c
+char name[] = "Emon";
+```
+
+Here:
+
+* `"Emon"` → string literal
+* `name` → character array
+* C automatically adds a **null character `'\0'`** at the end.
+
+Conceptually, it is stored as:
+
+```text
+'E' 'm' 'o' 'n' '\0'
+```
+
+Therefore, `"Emon"` contains **5 characters in memory**, although the actual text has 4 characters.
+</md></sn><sn><md>### String Literal vs Character Literal
+
+This is an important distinction:
+
+```c
+'A'     // character literal
+"A"     // string literal
+```
+
+|                | Character literal  | String literal                 |
+| -------------- | ------------------ | ------------------------------ |
+| Quotes         | `' '`              | `" "`                          |
+| Represents     | A single character | A sequence of characters       |
+| Example        | `'A'`              | `"ABC"`                        |
+| Null character | No                 | Automatically ends with `'\0'` |
+
+</md></sn><sn><md>### Empty String Literal
+
+C allows an empty string:
+
+```c
+""
+```
+
+It contains only the terminating null character:
+
+```text
+'\0'
+```
+
+So its length is `0`.
+</md></sn><sn><md>### Escape Sequences in String Literals
+
+String literals can contain escape sequences:
+
+```c
+"Hello\nWorld"
+"Name:\tEmon"
+"He said \"Hello\""
+```
+
+Common examples:
+
+| Escape | Meaning               |
+| ------ | --------------------- |
+| `\n`   | Newline               |
+| `\t`   | Horizontal tab        |
+| `\r`   | Carriage return       |
+| `\\`   | Backslash             |
+| `\"`   | Double quotation mark |
+| `\'`   | Single quotation mark |
+| `\0`   | Null character        |
+
+Example:
+
+```c
+printf("Hello\nWorld");
+```
+
+Output:
+
+```text
+Hello
+World
+```
+</md></sn><sn><md>### Adjacent String Literals
+
+C automatically combines adjacent string literals:
+
+```c
+char text[] = "Hello " "World";
+```
+
+This is equivalent to:
+
+```c
+char text[] = "Hello World";
+```
+
+This feature is often useful for writing long strings across multiple lines:
+
+```c
+char message[] =
+    "This is a very long "
+    "string literal.";
+```
+</md></sn><sn><md>### String Literal and `char` Array
+
+```c
+char name[] = "Emon";
+```
+
+The compiler creates an array containing:
+
+```text
+'E' 'm' 'o' 'n' '\0'
+```
+
+You can access individual characters:
+
+```c
+printf("%c", name[0]);
+```
+
+Output:
+
+```text
+E
+```
+</md></sn><sn><md>### Important: String Literals Are Not Modifiable
+
+Consider:
+
+```c
+char *p = "Hello";
+```
+
+The string literal should **not be modified**:
+
+```c
+p[0] = 'J';    // Undefined behavior
+```
+
+If you need a modifiable string, use an array:
+
+```c
+char p[] = "Hello";
+p[0] = 'J';
+```
+
+Now `p` contains:
+
+```text
+Jello
+```
+</md></sn><sn><md>### Key Definition
+
+&gt; **A string literal in C is a sequence of characters enclosed in double quotation marks, with the compiler providing a terminating null character (`'\0'`).**
+
+</md></sn><sn><md>### Summary
+
+* A string literal is a sequence of characters enclosed in `" "`.
+* Example: `"Hello World"`.
+* C automatically adds `'\0'` at the end of a string literal when it is stored as a string.
+* `"A"` is a string literal, while `'A'` is a character literal.
+* Escape sequences can be used inside string literals.
+* Adjacent string literals are automatically concatenated.
+* String literals should not be modified through a pointer.
+</md></sn>
