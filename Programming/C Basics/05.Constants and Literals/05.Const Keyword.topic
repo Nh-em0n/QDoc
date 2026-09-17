@@ -1,10 +1,185 @@
 
-  <sn></sn>
+  <sn><md>### `const` Keyword in C
+
+`const` is a **keyword in C** used to declare an object whose value **cannot be modified through that object after initialization**.
+
+**Definition**
+
+&gt; **`const` specifies that the value of an object should not be modified after it has been initialized.**
+</md></sn>
   <config>
     <tags>#05.const keyword</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Sep 03 2026 12:18:13 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Sep 17 2026 20:59:09 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-6EXHZehAKe</id>
     <duration></duration>
   </config>
+<sn><md>### Basic Example
+
+```c
+const int x = 10;
+```
+
+Here:
+
+* `const` → keyword
+* `int` → data type
+* `x` → variable/object name
+* `10` → initializer
+
+You cannot do:
+
+```c
+x = 20;    // Error
+```
+
+because `x` is declared as `const`.
+</md></sn><sn><md>### `const` Must Normally Be Initialized
+
+```c
+const int age = 22;
+```
+
+This is useful because the value is established when the object is created.
+
+For example:
+
+```c
+const float PI = 3.14159;
+const int DAYS = 7;
+```
+
+These values are intended not to be changed.
+</md></sn><sn><md>### `const` Does Not Mean "Compile-Time Constant"
+
+This distinction is important.
+
+```c
+const int x = 10;
+```
+
+`x` is a **const-qualified object**, but in C it is not necessarily an **integer constant expression** suitable everywhere a compile-time constant is required.
+
+For example, a `const int` cannot generally be used as the size of a `case` label:
+
+```c
+const int x = 10;
+
+switch (n) {
+    case x:       // Not a valid integer constant expression in standard C
+        break;
+}
+```
+
+C also has other mechanisms for compile-time constants, such as:
+
+```c
+#define MAX 100
+```
+</md></sn><sn><md>### `const` with Pointers
+
+`const` becomes particularly important with pointers.
+
+#### Pointer to Constant Data
+
+```c
+const int *p;
+```
+
+or:
+
+```c
+int const *p;
+```
+
+You can change where `p` points, but you cannot modify the integer through `p`.
+
+```c
+int a = 10;
+int b = 20;
+
+const int *p = &amp;a;
+
+p = &amp;b;       // Valid
+*p = 30;      // Error
+```
+</md></sn><sn><md>#### Constant Pointer
+
+```c
+int *const p = &amp;a;
+```
+
+Here, the pointer itself cannot point somewhere else, but the data can be modified through it.
+
+```c
+*p = 30;      // Valid
+p = &amp;b;       // Error
+```
+</md></sn><sn><md>#### Constant Pointer to Constant Data
+
+```c
+const int *const p = &amp;a;
+```
+
+Neither the pointed-to value nor the pointer itself can be modified through `p`.
+
+```c
+*p = 30;      // Error
+p = &amp;b;       // Error
+```
+</md></sn><sn><md>### Easy Way to Remember
+
+Read the declaration from the `*` outward:
+
+```c
+const int *p;
+```
+
+`p` is a pointer to **const int**.
+
+```c
+int *const p;
+```
+
+`p` is a **const pointer** to int.
+
+```c
+const int *const p;
+```
+
+`p` is a **const pointer** to **const int**.
+
+</md></sn><sn><md>### `const` vs `#define`
+
+```c
+const int MAX = 100;
+```
+
+creates a typed object with `const` qualification.
+
+```c
+#define MAX 100
+```
+
+creates a **preprocessor macro**; the preprocessor substitutes `MAX` with `100` before compilation.
+</md></sn><sn><md>### Key Point
+
+```c
+const int x = 10;
+```
+
+means:
+
+&gt; `x` is an `int` object whose stored value must not be modified through `x`.
+</md></sn><sn><md>### Summary of this chat:
+
+* `const` is a C keyword.
+* It prevents modification of an object through that `const`-qualified access.
+* Example: `const int x = 10;`.
+* `x = 20;` is invalid.
+* `const int *p` → pointer to constant data.
+* `int *const p` → constant pointer.
+* `const int *const p` → constant pointer to constant data.
+* `const` is different from `#define`; `const` creates a typed object, while `#define` is a preprocessor macro.
+</md></sn>
