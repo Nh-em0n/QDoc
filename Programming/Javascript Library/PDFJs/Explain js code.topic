@@ -1,10 +1,1346 @@
 
-  <sn></sn>
+  <sn><md>[onecompiler-project](https://onecompiler.com/bootstrap/453kdjssa)
+
++++ Js Code
+
+
+```js
+
+/*
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         PDF VIEWER PROGRAM FLOW                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────┐
+│  User picks  │
+│  PDF file    │
+└──────┬───────┘
+       │
+       ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  pdfInput "change" event                                                    │
+│  ┌───────────────────────────────────────────────────────────────────────┐  │
+│  │ 1. Get file from input                                                │  │
+│  │ 2. Validate: is it a PDF? (type or .pdf extension)                    │  │
+│  │    └── NO ──► showError("Please select a valid PDF file.")            │  │
+│  │ 3. clearViewer()  ──► reset state, remove old pages, hide info/error  │  │
+│  │ 4. showLoading(true)                                                  │  │
+│  │ 5. Read file as ArrayBuffer                                           │  │
+│  │ 6. pdfjsLib.getDocument({ data: arrayBuffer })                        │  │
+│  │ 7. await loadingTask.promise ──► currentPDF                           │  │
+│  │ 8. Update UI: pdfName, pageCount, show pdfInfo                        │  │
+│  │ 9. await createPagePlaceholders(currentPDF)                           │  │
+│  │ 10. setupPageObserver()                                               │  │
+│  └───────────────────────────────────────────────────────────────────────┘  │
+│                              │                                              │
+│                    ┌─────────┴─────────┐                                    │
+│                    │  On error?        │                                    │
+│                    │  YES ──► showError│                                    │
+│                    │  NO  ──► continue │                                    │
+│                    └─────────┬─────────┘                                    │
+│                              ▼                                              │
+│                    showLoading(false)  (finally block)                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  createPagePlaceholders(pdf)                                                │
+│  ┌───────────────────────────────────────────────────────────────────────┐  │
+│  │  pdfContainer.innerHTML = ""                                          │  │
+│  │                                                                       │  │
+│  │  FOR pageNumber = 1 TO pdf.numPages:                                  │  │
+│  │    ┌─────────────────────────────────────────────────────────────┐    │  │
+│  │    │ Create <div class="pdf-page" data-page="N">                 │    │  │
+│  │    │   └── <div class="pdf-page-wrapper">                        │    │  │
+│  │    │         ├── <div class="pdf-placeholder">                  │    │  │
+│  │    │         │     └── spinner + "Loading page N..."            │    │  │
+│  │    │         └── <div class="page-number">Page N</div>          │    │  │
+│  │    │ Append to pdfContainer                                     │    │  │
+│  │    └─────────────────────────────────────────────────────────────┘    │  │
+│    │                                                                     │  │
+│    │  Every 10 pages: await setTimeout(0)  ──► yield to browser          │  │
+│  │                                                                       │  │
+│  │  END FOR                                                              │  │
+│  └───────────────────────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  setupPageObserver()                                                        │
+│  ┌───────────────────────────────────────────────────────────────────────┐  │
+│  │  Disconnect previous observer (if any)                                │  │
+│  │  Create new IntersectionObserver(callback, { rootMargin: "800px 0px"})│  │
+│  │                                                                       │  │
+│  │  callback(entries):                                                   │  │
+│  │    FOR each entry:                                                    │  │
+│  │      IF entry.isIntersecting:                                         │  │
+│  │        pageObserver.unobserve(pageElement)  ──► stop watching         │  │
+│  │        pageNumber = Number(pageElement.dataset.page)                  │  │
+│  │        renderPage(currentPDF, pageNumber, pageElement)                │  │
+│  │                                                                       │  │
+│  │  Observe all ".pdf-page" elements                                     │  │
+│  └───────────────────────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                      │
+                                      ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  renderPage(pdf, pageNumber, pageElement)                                   │
+│  ┌───────────────────────────────────────────────────────────────────────┐  │
+│  │  await pdf.getPage(pageNumber)                                        │  │
+│  │  viewport = getViewport(page)                                         │  │
+│  │  wrapper = pageElement.querySelector(".pdf-page-wrapper")             │  │
+│  │  Remove placeholder spinner                                           │  │
+│  │  Create <canvas>, get 2d context                                      │  │
+│  │  canvas.width  = Math.floor(viewport.width)                           │  │
+│  │  canvas.height = Math.floor(viewport.height)                          │  │
+│  │  wrapper.prepend(canvas)                                              │  │
+│  │  await page.render({ canvasContext, viewport }).promise               │  │
+│  │                                                                       │  │
+│  │  On error: wrapper.innerHTML = "Unable to render page N"              │  │
+│  └───────────────────────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  getViewport(page)                                                          │
+│  ┌───────────────────────────────────────────────────────────────────────┐  │
+│  │  originalViewport = page.getViewport({ scale: 1 })                    │  │
+│  │  maxWidth = Math.min(window.innerWidth - 40, 1000)                    │  │
+│  │  scale = maxWidth / originalViewport.width                            │  │
+│  │  scale = Math.min(scale, 1.5)   ──► don't make PDF too large          │  │
+│  │  scale = Math.max(scale, 0.5)   ──► prevent extremely small pages     │  │
+│  │  return page.getViewport({ scale })                                   │  │
+│  └───────────────────────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  clearBtn "click" event                                                     │
+│  ┌───────────────────────────────────────────────────────────────────────┐  │
+│  │  pdfInput.value = ""                                                  │  │
+│  │  clearViewer()                                                        │  │
+│  │  fileInfo.textContent = "Select a PDF file from your computer."       │  │
+│  └───────────────────────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  clearViewer()                                                              │
+│  ┌───────────────────────────────────────────────────────────────────────┐  │
+│  │  Disconnect pageObserver, set to null                                 │  │
+│  │  currentPDF = null                                                    │  │
+│  │  pdfContainer.innerHTML = ""                                          │  │
+│  │  Hide pdfInfo, hide error                                             │  │
+│  └───────────────────────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  showLoading(show)          │  showError(message)                           │
+│  ┌───────────────────────┐  │  ┌─────────────────────────────────────────┐  │
+│  │ toggle .d-none on     │  │  │ error.textContent = message             │  │
+│  │ #loading element      │  │  │ if message: remove .d-none from #error  │  │
+│  └───────────────────────┘  │  └─────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           OVERALL DATA FLOW                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  ┌─────────┐     ┌──────────────┐     ┌─────────────────┐     ┌───────────┐
+  │  FILE   │────►│ ArrayBuffer  │────►│  pdfjsLib       │────►│ currentPDF│
+  │  INPUT  │     │              │     │  getDocument()  │     │  (object) │
+  └─────────┘     └──────────────┘     └─────────────────┘     └─────┬─────┘
+                                                                     │
+                                                                     ▼
+  ┌─────────────────────────────────────────────────────────────────────────┐
+  │  createPagePlaceholders()  ──►  DOM placeholders for every page        │
+  └─────────────────────────────────────────────────────────────────────────┘
+                                      │
+                                      ▼
+  ┌─────────────────────────────────────────────────────────────────────────┐
+  │  setupPageObserver()  ──►  IntersectionObserver watches all pages       │
+  └─────────────────────────────────────────────────────────────────────────┘
+                                      │
+                          (page scrolls near viewport)
+                                      │
+                                      ▼
+  ┌─────────────────────────────────────────────────────────────────────────┐
+  │  renderPage()  ──►  getPage() ──► getViewport() ──► canvas ──► render() │
+  └─────────────────────────────────────────────────────────────────────────┘
+                                      │
+                                      ▼
+  ┌─────────────────────────────────────────────────────────────────────────┐
+  │  Canvas displayed in .pdf-page-wrapper (placeholder removed)            │
+  └─────────────────────────────────────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           KEY DESIGN NOTES                                  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  • LAZY RENDERING: Pages are only rendered when they come within 800px      │
+│    of the viewport (rootMargin: "800px 0px"). This saves memory and CPU.    │
+│                                                                             │
+│  • PLACEHOLDERS: Every page gets a placeholder immediately so the scroll    │
+│    height is correct and the user sees loading spinners.                    │
+│                                                                             │
+│  • OBSERVER UNOBSCURE: Once a page is rendered, it's unobserved so it       │
+│    won't re-render if scrolled away and back.                               │
+│                                                                             │
+│  • YIELDING: createPagePlaceholders yields every 10 pages to keep the       │
+│    browser responsive.                                                      │
+│                                                                             │
+│  • RESPONSIVE SCALE: getViewport() calculates a scale based on window       │
+│    width, clamped between 0.5 and 1.5.                                      │
+│                                                                             │
+│  • ERROR HANDLING: File validation, PDF loading errors, and per-page        │
+│    rendering errors are all handled gracefully.                             │
+│                                                                             │
+│  • CLEANUP: clearViewer() disconnects the observer and clears all state.    │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+
+*/ 
+
+
+
+import * as pdfjsLib from
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/5.4.149/pdf.min.mjs";
+
+
+/*
+ * PDF.js worker
+ */
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/5.4.149/pdf.worker.min.mjs";
+
+
+/*
+ * DOM elements
+ */
+const pdfInput = document.getElementById("pdfInput");
+const clearBtn = document.getElementById("clearBtn");
+
+const pdfContainer =
+    document.getElementById("pdfContainer");
+
+const loading =
+    document.getElementById("loading");
+
+const error =
+    document.getElementById("error");
+
+const pdfInfo =
+    document.getElementById("pdfInfo");
+
+const pdfName =
+    document.getElementById("pdfName");
+
+const pageCount =
+    document.getElementById("pageCount");
+
+const fileInfo =
+    document.getElementById("fileInfo");
+
+
+/*
+ * Current PDF
+ */
+let currentPDF = null;
+
+
+/*
+ * IntersectionObserver
+ */
+let pageObserver = null;
+
+
+/*
+ * PDF file selection
+ */
+pdfInput.addEventListener("change", async function () {
+
+    const file = this.files[0];
+
+    if (!file) {
+        return;
+    }
+
+
+    /*
+     * Validate PDF
+     */
+    if (
+        file.type !== "application/pdf" &amp;&amp;
+        !file.name.toLowerCase().endsWith(".pdf")
+    ) {
+
+        showError(
+            "Please select a valid PDF file."
+        );
+
+        return;
+    }
+
+
+    try {
+
+        /*
+         * Reset viewer
+         */
+        clearViewer();
+
+        showError("");
+
+        error.classList.add("d-none");
+
+        showLoading(true);
+
+
+        /*
+         * File information
+         */
+        fileInfo.textContent =
+            `Selected: ${file.name}`;
+
+
+        /*
+         * Read file
+         */
+        const arrayBuffer =
+            await file.arrayBuffer();
+        if(arrayBuffer){
+            print(arrayBuffer)
+        }
+
+        /*
+         * Load PDF
+         */
+        const loadingTask =
+            pdfjsLib.getDocument({
+                data: arrayBuffer
+            });
+        print(loadingTask) 
+
+        currentPDF =
+            await loadingTask.promise;
+
+        print(currentPDF)
+
+        /*
+         * PDF information
+         */
+        pdfName.textContent =
+            file.name;
+
+        pageCount.textContent =
+            currentPDF.numPages;
+
+        pdfInfo.classList.remove(
+            "d-none"
+        );
+
+
+        /*
+         * Create page placeholders
+         */
+        await createPagePlaceholders(
+            currentPDF
+        );
+
+
+        /*
+         * Start lazy rendering
+         */
+        setupPageObserver();
+
+
+    } catch (err) {
+
+        console.error(err);
+
+        showError(
+            "Unable to load this PDF. " +
+            "The file may be corrupted or unsupported."
+        );
+
+    } finally {
+
+        showLoading(false);
+
+    }
+
+});
+
+
+/*
+ * Create placeholders for all pages
+ */
+async function createPagePlaceholders(pdf) {
+
+    pdfContainer.innerHTML = "";
+
+
+    /*
+     * Create one element for every page
+     */
+    for (
+        let pageNumber = 1;
+        pageNumber &lt;= pdf.numPages;
+        pageNumber++
+    ) {
+
+        const pageElement =
+            document.createElement("div");
+
+
+        pageElement.className =
+            "pdf-page";
+
+
+        /*
+         * Store page number
+         */
+        pageElement.dataset.page =
+            pageNumber;
+
+
+        /*
+         * Wrapper
+         */
+        const wrapper =
+            document.createElement("div");
+
+
+        wrapper.className =
+            "pdf-page-wrapper";
+
+
+        /*
+         * Page number
+         */
+        const pageNumberElement =
+            document.createElement("div");
+
+
+        pageNumberElement.className =
+            "page-number";
+
+
+        pageNumberElement.textContent =
+            `Page ${pageNumber}`;
+
+
+        /*
+         * Loading message
+         */
+        const placeholder =
+            document.createElement("div");
+
+
+        placeholder.className =
+            "pdf-placeholder";
+
+
+        placeholder.innerHTML = `
+            <div class="spinner-border spinner-border-sm" role="status"></div>
+
+            <span class="ms-2">
+                Loading page ${pageNumber}...
+            </span>
+        `;
+
+
+        /*
+         * Add elements
+         */
+        wrapper.appendChild(
+            placeholder
+        );
+
+        wrapper.appendChild(
+            pageNumberElement
+        );
+
+        pageElement.appendChild(
+            wrapper
+        );
+
+
+        pdfContainer.appendChild(
+            pageElement
+        );
+
+
+        /*
+         * Yield to browser
+         *
+         * This prevents the browser from
+         * getting one long-running loop.
+         */
+        if (pageNumber % 10 === 0) {
+
+            await new Promise(
+                resolve =&gt; setTimeout(
+                    resolve,
+                    0
+                )
+            );
+
+        }
+
+    }
+
+}
+
+
+/*
+ * Setup IntersectionObserver
+ */
+function setupPageObserver() {
+
+    /*
+     * Remove previous observer
+     */
+    if (pageObserver) {
+
+        pageObserver.disconnect();
+
+    }
+
+
+    /*
+     * Create observer
+     */
+    pageObserver =
+        new IntersectionObserver(
+            function (entries) {
+
+                for (const entry of entries) {
+
+                    if (!entry.isIntersecting) {
+                        continue;
+                    }
+
+
+                    const pageElement =
+                        entry.target;
+
+
+                    /*
+                     * Stop observing after
+                     * the page has been rendered.
+                     */
+                    pageObserver.unobserve(
+                        pageElement
+                    );
+
+
+                    /*
+                     * Get page number
+                     */
+                    const pageNumber =
+                        Number(
+                            pageElement.dataset.page
+                        );
+
+
+                    /*
+                     * Render page
+                     */
+                    renderPage(
+                        currentPDF,
+                        pageNumber,
+                        pageElement
+                    );
+
+                }
+
+            },
+            {
+
+                /*
+                 * Start rendering pages
+                 * before they enter viewport.
+                 */
+                rootMargin: "800px 0px"
+
+            }
+        );
+
+
+    /*
+     * Observe all page elements
+     */
+    const pages =
+        document.querySelectorAll(
+            ".pdf-page"
+        );
+
+
+    pages.forEach(page =&gt; {
+
+        pageObserver.observe(page);
+
+    });
+
+}
+
+
+/*
+ * Render one PDF page
+ */
+async function renderPage(
+    pdf,
+    pageNumber,
+    pageElement
+) {
+
+    try {
+
+        /*
+         * Get page
+         */
+        const page =
+            await pdf.getPage(
+                pageNumber
+            );
+
+
+        /*
+         * Get viewport
+         */
+        const viewport =
+            getViewport(
+                page
+            );
+
+
+        /*
+         * Find wrapper
+         */
+        const wrapper =
+            pageElement.querySelector(
+                ".pdf-page-wrapper"
+            );
+
+
+        /*
+         * Remove placeholder
+         */
+        const placeholder =
+            wrapper.querySelector(
+                ".pdf-placeholder"
+            );
+
+
+        if (placeholder) {
+
+            placeholder.remove();
+
+        }
+
+
+        /*
+         * Create canvas
+         */
+        const canvas =
+            document.createElement(
+                "canvas"
+            );
+
+
+        const context =
+            canvas.getContext(
+                "2d"
+            );
+
+
+        /*
+         * Canvas dimensions
+         */
+        canvas.width =
+            Math.floor(
+                viewport.width
+            );
+
+        canvas.height =
+            Math.floor(
+                viewport.height
+            );
+
+
+        /*
+         * Add canvas
+         */
+        wrapper.prepend(
+            canvas
+        );
+
+
+        /*
+         * Render PDF page
+         */
+        await page.render({
+
+            canvasContext:
+                context,
+
+            viewport:
+                viewport
+
+        }).promise;
+
+
+    } catch (err) {
+
+        console.error(
+            `Error rendering page ${pageNumber}:`,
+            err
+        );
+
+
+        /*
+         * Show page error
+         */
+        const wrapper =
+            pageElement.querySelector(
+                ".pdf-page-wrapper"
+            );
+
+
+        wrapper.innerHTML = `
+            <div class="p-5 text-center text-danger">
+                Unable to render page ${pageNumber}
+            </div>
+        `;
+
+    }
+
+}
+
+
+/*
+ * Calculate viewport
+ */
+function getViewport(page) {
+
+    const originalViewport =
+        page.getViewport({
+            scale: 1
+        });
+
+
+    /*
+     * Maximum viewer width
+     */
+    const maxWidth =
+        Math.min(
+            window.innerWidth - 40,
+            1000
+        );
+
+
+    /*
+     * Calculate scale
+     */
+    let scale =
+        maxWidth /
+        originalViewport.width;
+
+
+    /*
+     * Do not make PDF too large
+     */
+    scale =
+        Math.min(
+            scale,
+            1.5
+        );
+
+
+    /*
+     * Prevent extremely small pages
+     */
+    scale =
+        Math.max(
+            scale,
+            0.5
+        );
+
+
+    return page.getViewport({
+        scale: scale
+    });
+
+}
+
+
+/*
+ * Clear button
+ */
+clearBtn.addEventListener(
+    "click",
+    function () {
+
+        pdfInput.value = "";
+
+        clearViewer();
+
+        fileInfo.textContent =
+            "Select a PDF file from your computer.";
+
+    }
+);
+
+
+/*
+ * Clear viewer
+ */
+function clearViewer() {
+
+    /*
+     * Stop observing pages
+     */
+    if (pageObserver) {
+
+        pageObserver.disconnect();
+
+        pageObserver = null;
+
+    }
+
+
+    /*
+     * Remove PDF
+     */
+    currentPDF = null;
+
+
+    /*
+     * Remove pages
+     */
+    pdfContainer.innerHTML = "";
+
+
+    /*
+     * Hide information
+     */
+    pdfInfo.classList.add(
+        "d-none"
+    );
+
+
+    /*
+     * Hide error
+     */
+    error.classList.add(
+        "d-none"
+    );
+
+}
+
+
+/*
+ * Loading indicator
+ */
+function showLoading(show) {
+
+    if (show) {
+
+        loading.classList.remove(
+            "d-none"
+        );
+
+    } else {
+
+        loading.classList.add(
+            "d-none"
+        );
+
+    }
+
+}
+
+
+/*
+ * Error message
+ */
+function showError(message) {
+
+    error.textContent =
+        message;
+
+    if (message) {
+
+        error.classList.remove(
+            "d-none"
+        );
+
+    }
+
+}
+
+
+```
+
+
++++
+
+
+
+
+
+</canvas></div></div></div></md></sn>
   <config>
     <tags>#explain js code</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Sep 18 2026 14:57:39 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Sep 18 2026 14:59:37 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Xg6LTs1VnL</id>
     <duration></duration>
   </config>
+<sn><md>### Explanation
+
+
++++ view
+
+# PDF Viewer Code Explanation - Step by Step
+
+This is a **lazy-loading PDF viewer** that renders pages only when they're near the viewport to save memory. Let me break it down:
+
+---
+
+## **Step 1: Initial Setup &amp; Imports**
+
+```javascript
+import * as pdfjsLib from "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/5.4.149/pdf.min.mjs";
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/5.4.149/pdf.worker.min.mjs";
+```
+
+**What happens:**
+- Loads the PDF.js library from CDN
+- Sets the worker thread (handles heavy PDF processing)
+
+**DOM Setup:**
+```javascript
+const pdfInput = document.getElementById("pdfInput");        // File input
+const clearBtn = document.getElementById("clearBtn");        // Clear button
+const pdfContainer = document.getElementById("pdfContainer"); // Where pages go
+const loading = document.getElementById("loading");          // Loading spinner
+const error = document.getElementById("error");              // Error messages
+const pdfInfo = document.getElementById("pdfInfo");          // PDF info box
+```
+
+---
+
+## **Step 2: User Selects a PDF File**
+
+```javascript
+pdfInput.addEventListener("change", async function () {
+    const file = this.files[0];
+    if (!file) return;
+```
+
+**Example Input:**
+```
+User clicks file input → Selects "invoice.pdf" (2.5 MB)
+```
+
+**Step 2a: Validation**
+
+```javascript
+if (file.type !== "application/pdf" &amp;&amp; !file.name.toLowerCase().endsWith(".pdf")) {
+    showError("Please select a valid PDF file.");
+    return;
+}
+```
+
+**Example Output:**
+```
+✓ File "invoice.pdf" passes validation (type = "application/pdf")
+✗ File "document.txt" fails → Error shown to user
+```
+
+---
+
+## **Step 3: Clear Previous State**
+
+```javascript
+clearViewer();  // Reset everything
+showError("");
+error.classList.add("d-none");  // Hide errors
+showLoading(true);              // Show loading spinner
+```
+
+**DOM Before:**
+```html
+<div id="pdfContainer">
+  <!-- Old PDF pages still here -->
+</div>
+```
+
+**DOM After:**
+```html
+<div id="pdfContainer">
+  <!-- Now empty -->
+</div>
+<div id="loading">
+  <div class="spinner-border"></div> <!-- Visible now -->
+</div>
+```
+
+---
+
+## **Step 4: Read File &amp; Load PDF**
+
+```javascript
+const arrayBuffer = await file.arrayBuffer();
+const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
+currentPDF = await loadingTask.promise;
+```
+
+**Example Log Output:**
+```javascript
+console.log(currentPDF);
+// Output:
+// {
+//   numPages: 45,
+//   fingerprint: "8a3b2c1d4e5f6a7b",
+//   pdfVersion: "1.4",
+//   ...
+// }
+```
+
+---
+
+## **Step 5: Display PDF Information**
+
+```javascript
+pdfName.textContent = file.name;      // "invoice.pdf"
+pageCount.textContent = currentPDF.numPages;  // "45"
+pdfInfo.classList.remove("d-none");   // Show info box
+```
+
+**DOM Output:**
+```html
+<div id="pdfInfo">
+  <strong>File:</strong> invoice.pdf
+  <strong>Pages:</strong> 45
+</div>
+```
+
+**Console Output:**
+```
+✓ Loaded: invoice.pdf (45 pages)
+```
+
+---
+
+## **Step 6: Create Page Placeholders**
+
+```javascript
+await createPagePlaceholders(currentPDF);
+```
+
+This creates a `<div>` for **every page** immediately (not rendering the canvas yet).
+
+**Example: Creating Page 1-3 (of 45)**
+
+```javascript
+// Iteration 1:
+pageElement = <div class="pdf-page" data-page="1">
+  <div class="pdf-page-wrapper">
+    <div class="pdf-placeholder">
+      <spinner> Loading page 1...
+    </spinner></div>
+    <div class="page-number">Page 1</div>
+  </div>
+</div>
+
+// Iteration 2:
+pageElement = <div class="pdf-page" data-page="2">
+  <div class="pdf-page-wrapper">
+    <div class="pdf-placeholder">
+      <spinner> Loading page 2...
+    </spinner></div>
+    <div class="page-number">Page 2</div>
+  </div>
+</div>
+
+// Iteration 3:
+pageElement = <div class="pdf-page" data-page="3">
+  <!-- ... -->
+</div>
+
+// After 10 pages: await setTimeout(0)  ← Yield to browser
+// Continues for all 45 pages...
+```
+
+**DOM After:**
+```html
+<div id="pdfContainer">
+  <div class="pdf-page" data-page="1">
+    <div class="pdf-page-wrapper">
+      <div class="pdf-placeholder">
+        <div class="spinner-border spinner-border-sm"></div>
+        <span>Loading page 1...</span>
+      </div>
+      <div class="page-number">Page 1</div>
+    </div>
+  </div>
+  
+  <div class="pdf-page" data-page="2">...</div>
+  <div class="pdf-page" data-page="3">...</div>
+  <!-- ... 42 more pages ... -->
+</div>
+```
+
+**Why?** So the scrollbar is the correct height and pages render when scrolled near them.
+
+---
+
+## **Step 7: Setup Intersection Observer**
+
+```javascript
+setupPageObserver();
+```
+
+This creates an **IntersectionObserver** that watches when pages come within **800px** of the viewport.
+
+**Example Setup:**
+```javascript
+pageObserver = new IntersectionObserver(callback, { rootMargin: "800px 0px" });
+
+// Observe all pages:
+document.querySelectorAll(".pdf-page").forEach(page =&gt; {
+    pageObserver.observe(page);
+});
+```
+
+**Visual Representation:**
+```
+┌─────────────────────────────────────┐
+│         Viewport (window)           │
+│  ┌───────────────────────────────┐  │
+│  │   Currently visible           │  │
+│  └───────────────────────────────┘  │
+└─────────────────────────────────────┘
+      ↑ 800px margin above
+┌─────────────────────────────────────┐
+│   Page 2 (not yet visible) ← Observer triggers here
+└─────────────────────────────────────┘
+```
+
+---
+
+## **Step 8: User Scrolls - Page Becomes Visible**
+
+User scrolls down, Page 2 enters the 800px margin:
+
+```javascript
+// Observer callback fires:
+if (entry.isIntersecting) {
+    pageObserver.unobserve(pageElement);  // Stop watching this page
+    const pageNumber = Number(pageElement.dataset.page); // "2"
+    renderPage(currentPDF, pageNumber, pageElement);
+}
+```
+
+**Console Output:**
+```
+Page 2 is intersecting → Rendering...
+```
+
+---
+
+## **Step 9: Render Page (getViewport)**
+
+```javascript
+function getViewport(page) {
+    const originalViewport = page.getViewport({ scale: 1 });
+    // originalViewport.width = 612 (PDF default)
+    
+    const maxWidth = Math.min(window.innerWidth - 40, 1000);
+    // maxWidth = 960 (assuming window width = 1000)
+    
+    let scale = maxWidth / originalViewport.width;
+    // scale = 960 / 612 = 1.57
+    
+    scale = Math.min(scale, 1.5);  // Cap at 1.5
+    // scale = 1.5
+    
+    scale = Math.max(scale, 0.5);  // Floor at 0.5
+    // scale = 1.5 (unchanged)
+    
+    return page.getViewport({ scale: 1.5 });
+}
+```
+
+**Output:**
+```javascript
+{
+  width: 918,      // 612 × 1.5
+  height: 1188,    // 792 × 1.5
+  scale: 1.5,
+  rotation: 0
+}
+```
+
+---
+
+## **Step 10: Render Page (Canvas)**
+
+```javascript
+async function renderPage(pdf, pageNumber, pageElement) {
+    const page = await pdf.getPage(pageNumber);  // Get page 2
+    const viewport = getViewport(page);          // { width: 918, height: 1188 }
+    
+    const wrapper = pageElement.querySelector(".pdf-page-wrapper");
+    const placeholder = wrapper.querySelector(".pdf-placeholder");
+    placeholder.remove();  // Remove spinner
+    
+    const canvas = document.createElement("canvas");
+    canvas.width = 918;
+    canvas.height = 1188;
+    
+    wrapper.prepend(canvas);  // Add blank canvas
+    
+    await page.render({
+        canvasContext: canvas.getContext("2d"),
+        viewport: viewport
+    }).promise;  // Draw the PDF on canvas
+}
+```
+
+**DOM Before Rendering:**
+```html
+<div class="pdf-page-wrapper">
+  <div class="pdf-placeholder">
+    <spinner> Loading page 2...
+  </spinner></div>
+  <div class="page-number">Page 2</div>
+</div>
+```
+
+**DOM After Rendering:**
+```html
+<div class="pdf-page-wrapper">
+  <canvas width="918" height="1188">
+    <!-- PDF content drawn here -->
+  </canvas>
+  <div class="page-number">Page 2</div>
+</div>
+```
+
+**Console Output:**
+```
+✓ Rendered page 2 (918×1188px)
+```
+
+---
+
+## **Step 11: Error Handling**
+
+If rendering fails:
+
+```javascript
+catch (err) {
+    console.error(`Error rendering page 2:`, err);
+    wrapper.innerHTML = `
+        <div class="p-5 text-center text-danger">
+            Unable to render page 2
+        </div>
+    `;
+}
+```
+
+**DOM Output:**
+```html
+<div class="pdf-page-wrapper">
+  <div class="text-danger">
+    Unable to render page 2
+  </div>
+</div>
+```
+
+---
+
+## **Step 12: User Clears the PDF**
+
+```javascript
+clearBtn.addEventListener("click", function () {
+    pdfInput.value = "";
+    clearViewer();
+    fileInfo.textContent = "Select a PDF file from your computer.";
+});
+
+function clearViewer() {
+    if (pageObserver) pageObserver.disconnect();  // Stop watching
+    currentPDF = null;                            // Clear PDF object
+    pdfContainer.innerHTML = "";                  // Remove all pages
+    pdfInfo.classList.add("d-none");              // Hide info
+    error.classList.add("d-none");                // Hide errors
+}
+```
+
+**Result:**
+```html
+<div id="pdfContainer">
+  <!-- Completely empty -->
+</div>
+```
+
+---
+
+## **Full Flow Diagram**
+
+```
+USER PICKS FILE
+     ↓
+[Validate] ← Check if .pdf
+     ↓
+[Clear] ← Remove old pages
+     ↓
+[Load] ← Read file → ArrayBuffer → PDF.js
+     ↓
+[Display Info] ← Show filename &amp; page count
+     ↓
+[Create Placeholders] ← All 45 pages as empty divs with spinners
+     ↓
+[Setup Observer] ← Watch for pages entering viewport
+     ↓
+USER SCROLLS (page 2 enters 800px margin)
+     ↓
+[Render] ← getPage() → getViewport() → Create Canvas → Render on Canvas
+     ↓
+[Show Canvas] ← Remove spinner, display PDF page
+     ↓
+CONTINUE SCROLLING
+     ↓
+[Repeat for all pages as needed]
+```
+
+---
+
+## **Key Performance Features**
+
+| Feature | Benefit |
+|---------|---------|
+| **Placeholders First** | Scroll height correct immediately |
+| **Lazy Rendering** | Only renders pages near viewport |
+| **Intersection Observer** | Efficient, native API |
+| **Yield Every 10 Pages** | Keeps browser responsive |
+| **Scale Clamping** (0.5-1.5) | Balanced readability |
+| **Unobserve After Render** | Pages don't re-render when scrolling back |
+
+This design means a 100-page PDF loads instantly with placeholders, but only renders pages the user actually views!
+
+
++++</div></md></sn>
