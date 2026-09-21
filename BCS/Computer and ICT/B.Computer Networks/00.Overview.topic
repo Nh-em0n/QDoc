@@ -15,15 +15,9 @@
   - Introduction
   - Computer network
   - Network components
-  - LAN
-  - MAN
-  - WAN
-  - PAN
-  - WLAN
-  - CAN
-  - Internet
-  - Intranet
-  - Extranet
+  - LAN,MAN,WAN,PAN,WLAN,CAN
+  - Network Topology
+  - Internet,Intranet,Extranet
   - Wired network
   - Wireless network
   - Network protocols
@@ -45,7 +39,7 @@
     <tags>#00.overview</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Sep 21 2026 10:16:09 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Sep 21 2026 20:45:55 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-iOVKQ3KKFH</id>
     <duration></duration>
   </config>
