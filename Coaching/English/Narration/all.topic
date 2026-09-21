@@ -1,10 +1,597 @@
 
-  <sn></sn>
+  <sn><md>## Narration (উক্তি)
+
+**Narration** কী? কারো বলা কথাকে দুইভাবে প্রকাশ করা যায়। এদের মধ্যে পরিবর্তনের নিয়মই হলো Narration-এর নিয়ম।
+
+### দুই ধরনের Narration
+
+1. **Direct Speech (প্রত্যক্ষ উক্তি):** বক্তার মূল কথাটি ঠিক যেমন বলা হয়েছে, তেমনভাবে quotation mark (" ") এর মধ্যে লেখা হয়।
+
+   * *যেমন:* He said, "I am happy."
+
+2. **Indirect Speech (পরোক্ষ উক্তি):** বক্তার কথাটি নিজের ভাষায়, quotation mark ছাড়া, বক্তার নাম/সর্বনাম ব্যবহার করে বলা হয়।
+
+   * *যেমন:* He said that he was happy.
+
+```text
+                    NARRATION
+                        |
+             +----------+----------+
+             |                     |
+       Direct Speech         Indirect Speech
+       (প্রত্যক্ষ)             (পরোক্ষ)
+             |                     |
+       মূল কথা হুবহু          নিজের ভাষায়
+          থাকে                 প্রকাশিত হয়
+             |                     |
+     "I am happy."          that he was happy
+```
+
+---
+
+## Direct → Indirect করার ৪টি প্রধান পরিবর্তন
+
+### ১. Reporting Verb-এর পরিবর্তন
+
+* **said** → said (অপরিবর্তিত থাকে, তবে পরে that বসে)
+* **said to** → told
+* **says to** → tells
+* **say to** → tell
+* **will say to** → will tell
+* **সাধারণ অন্যান্য verb** (যেমন: replied, asked, exclaimed) নিজের অর্থ অনুযায়ী বসে।
+
+```text
+                 REPORTING VERB
+                       |
+       +---------------+---------------+
+       |               |               |
+     said            said to        says to
+       |               |               |
+     said             told           tells
+       |
+   +---+---------------------------+
+   |                               |
+ Present/Future              অন্যান্য verb
+   |                               |
+ অপরিবর্তিত                  অর্থ অনুযায়ী
+```
+
+### ২. Conjunction (সংযোগকারী শব্দ) বসানো
+
+| Sentence-এর ধরন            | বসে                                                                   |
+| -------------------------- | --------------------------------------------------------------------- |
+| Assertive (বিবৃতিমূলক)     | **that**                                                              |
+| Interrogative (প্রশ্নবোধক) | if/whether (yes-no প্রশ্নে), what/why/when/where/who/how (wh-প্রশ্নে) |
+| Imperative (আদেশ/অনুরোধ)   | **to** (নির্দেশে), **not to** (নিষেধে)                                |
+| Optative (প্রার্থনা)       | **that**                                                              |
+| Exclamatory (আবেগ)         | আবেগসূচক শব্দ/that                                                    |
+
+```text
+                  SENTENCE TYPE
+                        |
+       +--------+-------+-------+--------+
+       |        |       |       |        |
+       v        v       v       v        v
+   Assertive  Inter.  Imper.  Optative  Exclam.
+       |        |       |       |        |
+      that    if/WH   to/      that     that
+                     not to
+```
+
+### ৩. Pronoun-এর পরিবর্তন
+
+নিয়ম: **SON** (Subject → Object → No change)
+
+| Person                         | Direct Speech                                      | Indirect Speech                    |
+| ------------------------------ | -------------------------------------------------- | ---------------------------------- |
+| 1st person (I, we)             | বক্তার (reporting verb-এর subject) person অনুযায়ী | Subject-এর person ও number অনুসারে |
+| 2nd person (you)               | শ্রোতার (reporting verb-এর object) person অনুযায়ী | Object-এর person ও number অনুসারে  |
+| 3rd person (he, she, it, they) | অপরিবর্তিত                                         | অপরিবর্তিত                         |
+
+**উদাহরণ:**
+
+* He said, "**I** am busy." → He said that **he** was busy.
+* You said to me, "**I** will help **you**." → You told me that **you** would help **me**.
+
+```text
+                       SON RULE
+                          |
+              +-----------+-----------+
+              |           |           |
+             S           O            N
+              |           |           |
+           Subject       Object    No Change
+              |           |           |
+              v           v           v
+         1st Person    2nd Person  3rd Person
+              |           |
+              v           v
+         Reporting      Reporting
+         Verb-এর       Verb-এর
+         Subject        Object
+```
+
+### ৪. Tense-এর পরিবর্তন
+
+**মূল নিয়ম:** Reporting verb Present/Future tense-এ থাকলে Indirect-এ tense অপরিবর্তিত থাকে। Reporting verb Past tense-এ থাকলে নিচের নিয়ম প্রযোজ্য:
+
+| Direct                     | Indirect                  |
+| -------------------------- | ------------------------- |
+| Present Simple             | Past Simple               |
+| Present Continuous         | Past Continuous           |
+| Present Perfect            | Past Perfect              |
+| Present Perfect Continuous | Past Perfect Continuous   |
+| Past Simple                | Past Perfect              |
+| Past Continuous            | Past Perfect Continuous   |
+| Past Perfect               | Past Perfect (অপরিবর্তিত) |
+| will                       | would                     |
+| shall                      | should/would              |
+| can                        | could                     |
+| may                        | might                     |
+| must                       | had to                    |
+| am/is/are                  | was/were                  |
+| has/have                   | had                       |
+| do/does                    | did                       |
+
+```text
+                  REPORTING VERB
+                        |
+             +----------+----------+
+             |                     |
+       Present/Future              Past
+             |                     |
+             v                     v
+       Tense unchanged       Tense changes
+                                   |
+              +--------------------+-------------------+
+              |                    |                   |
+              v                    v                   v
+       Present → Past       Past → Past Perfect    Modal changes
+              |                    |                   |
+              v                    v                   v
+       Simple/Continuous     Simple/Continuous    will → would
+       Perfect → Past        → Perfect             can → could
+                                                   may → might
+```
+
+**কিন্তু tense অপরিবর্তিত থাকে যদি:**
+
+* চিরন্তন সত্য (Universal truth)
+* অভ্যাসগত সত্য (Habitual fact)
+* ঐতিহাসিক ঘটনা (Historical fact)
+* নৈতিক শিক্ষা (Moral lesson)
+* Proverbs (প্রবাদ)
+
+```text
+              REPORTING VERB = PAST
+                       |
+                       v
+                Tense বদলাবে?
+                       |
+          +------------+------------+
+          |                         |
+         সাধারণ                   বিশেষ ক্ষেত্রে
+          |                         |
+          v                         v
+      পরিবর্তন হবে       +----------+----------+
+                         |          |          |
+                         v          v          v
+                    Universal   Historical  Proverb/
+                      Truth       Fact      Moral Lesson
+                         |          |          |
+                         +----------+----------+
+                                    |
+                                    v
+                             Tense অপরিবর্তিত
+```
+
+---
+
+## ৫. সময়, স্থান ও নির্দেশক শব্দের পরিবর্তন
+
+| Direct     | Indirect                          |
+| ---------- | --------------------------------- |
+| now        | then                              |
+| today      | that day                          |
+| tomorrow   | the next day / the following day  |
+| yesterday  | the previous day / the day before |
+| last night | the previous night                |
+| next week  | the following week                |
+| here       | there                             |
+| this       | that                              |
+| these      | those                             |
+| thus       | so                                |
+| ago        | before                            |
+| come       | go                                |
+
+```text
+                 WORD CHANGE
+                      |
+        +-------------+-------------+
+        |             |             |
+       TIME          PLACE        DEMONSTRATIVE
+        |             |             |
+        v             v             v
+   now → then    here → there   this → that
+   today →       come → go      these → those
+   that day
+   tomorrow →
+   next day
+   yesterday →
+   previous day
+```
+
+---
+
+## বিভিন্ন Sentence-এ Narration-এর নিয়ম
+
+```text
+                    SENTENCE
+                       |
+       +-------+-------+-------+-------+
+       |       |       |       |       |
+       v       v       v       v       v
+  Assertive  Inter.  Imper.  Optative Exclam.
+       |       |       |       |       |
+       v       v       v       v       v
+     that    if/WH   to/     that     that
+                     not to
+```
+
+### (ক) Assertive Sentence
+
+**Structure:** Subject + said/told + that + পরিবর্তিত বাক্য
+
+* He said, "I am reading a book." → He said that he was reading a book.
+* She said to me, "You are my friend." → She told me that I was her friend.
+
+```text
+                 ASSERTIVE
+                     |
+                     v
+             said / said to
+                     |
+             +-------+-------+
+             |               |
+            said           said to
+             |               |
+             v               v
+           said            told
+             |               |
+             +-------+-------+
+                     |
+                     v
+                    that
+                     |
+                     v
+             Changed Statement
+```
+
+### (খ) Interrogative Sentence (প্রশ্নবোধক)
+
+**নিয়ম:**
+
+* Reporting verb → **asked / enquired / wanted to know**
+* Yes/No প্রশ্ন → **if/whether**
+* Wh-প্রশ্ন → Wh-word অপরিবর্তিত
+* প্রশ্নের word order → Assertive-এর মতো (Subject + Verb)
+* প্রশ্নবোধক চিহ্ন (?) উঠে যায়, full stop বসে
+* helping verb বাদ পড়ে বা tense পরিবর্তন হয়
+
+**উদাহরণ:**
+
+* He said to me, "Are you ill?" → He asked me **if I was ill**.
+* She said, "Where do you live?" → She asked **where I lived**.
+* "Why are you late?" he said. → He asked **why I was late**.
+
+```text
+                INTERROGATIVE
+                      |
+                      v
+        asked / enquired / wanted to know
+                      |
+              +-------+-------+
+              |               |
+            Yes/No            WH
+              |               |
+              v               v
+         if / whether      WH-word
+              |               |
+              v               v
+       Subject + Verb    Subject + Verb
+              |               |
+              +-------+-------+
+                      |
+                      v
+                 Full Stop
+```
+
+### (গ) Imperative Sentence
+
+**নিয়ম:**
+
+* Reporting verb → **ordered / commanded** (আদেশ), **requested / begged** (অনুরোধ), **advised** (উপদেশ), **forbade** (নিষেধ), **told** (সাধারণ)
+* Direct-এর verb-এর আগে **to** (নির্দেশে) বা **not to** (নিষেধে)
+* Please / kindly বাদ যায়, অনুরোধ বোঝায়
+
+**উদাহরণ:**
+
+* He said to me, "Go home." → He **ordered** me **to go** home.
+* She said, "Please help me." → She **requested** me **to help** her.
+* The teacher said, "Do not shout." → The teacher **ordered/advised** us **not to shout**.
+
+```text
+                   IMPERATIVE
+                       |
+          +------------+------------+
+          |            |            |
+          v            v            v
+        Order        Request      Advice
+          |            |            |
+       ordered      requested    advised
+       commanded      begged
+          |            |            |
+          +------------+------------+
+                       |
+                       v
+                 to + V1
+                       |
+                 Negative?
+                       |
+                       v
+                not to + V1
+```
+
+**বিশেষ নিয়ম:** Let us / Let's → **proposed/suggested + that + we should**
+
+* He said, "Let us go out." → He **suggested/proposed that we should go out**.
+
+```text
+                 Let's / Let us
+                       |
+                       v
+                  Suggestion
+                       |
+             +---------+---------+
+             |                   |
+         suggested            proposed
+             |                   |
+             +---------+---------+
+                       |
+                       v
+              that + we should
+                       |
+                       v
+                    V1
+```
+
+### (ঘ) Optative Sentence
+
+**নিয়ম:**
+
+* Reporting verb → **wished / prayed / blessed / cursed**
+* May → might (অথবা অপরিবর্তিত)
+* that বসে
+
+**উদাহরণ:**
+
+* He said, "May you live long!" → He **wished that I might live long**.
+* She said, "May God bless you!" → She **prayed that God might bless me**.
+
+```text
+                    OPTATIVE
+                       |
+             +---------+---------+
+             |                   |
+            Wish                Prayer
+             |                   |
+          wished               prayed
+          blessed              cursed
+             |                   |
+             +---------+---------+
+                       |
+                       v
+                      that
+                       |
+                       v
+                  may → might
+```
+
+### (ঙ) Exclamatory Sentence
+
+**নিয়ম:**
+
+* Reporting verb → **exclaimed with joy / sorrow / surprise / anger** ইত্যাদি
+* What / How → very / great
+* Alas → exclaimed with sorrow
+* Hurrah → exclaimed with joy
+* Oh / Ah → exclaimed with surprise
+* that বসে
+
+**উদাহরণ:**
+
+* He said, "What a beautiful bird!" → He **exclaimed that it was a very beautiful bird**.
+* She said, "Alas! I am undone." → She **exclaimed with sorrow that she was undone**.
+* They said, "Hurrah! We have won." → They **exclaimed with joy that they had won**.
+
+```text
+                 EXCLAMATORY
+                      |
+        +-------------+-------------+
+        |             |             |
+       Joy          Sorrow       Surprise
+        |             |             |
+  exclaimed       exclaimed     exclaimed
+   with joy      with sorrow  with surprise
+        |             |             |
+        +-------------+-------------+
+                      |
+                      v
+                     that
+```
+
+### Exclamatory শব্দের পরিবর্তন
+
+```text
+              EXCLAMATORY WORD
+                      |
+        +------+------+------+------+
+        |      |      |      |
+       Alas  Hurrah   Oh     Ah
+        |      |      |      |
+        v      v      v      v
+      Sorrow  Joy  Surprise Surprise
+```
+
+---
+
+## কিছু গুরুত্বপূর্ণ অতিরিক্ত নিয়ম
+
+### ১. Reporting verb-এ object না থাকলে
+
+* say → say
+* tell → tell
+* said to → told
+
+```text
+             REPORTING VERB
+                    |
+          +---------+---------+
+          |                   |
+        Object              No Object
+          |                   |
+          v                   v
+       said to → told      said → said
+```
+
+### ২. Well, oh, hello, bye ইত্যাদি
+
+Direct-এ থাকলে Indirect-এ প্রায়ই বাদ যায় বা যথাযথ verb ব্যবহৃত হয়।
+
+```text
+        Well / Oh / Hello / Bye
+                    |
+                    v
+              Indirect Speech
+                    |
+             +------+------+
+             |             |
+          বাদ যায়      উপযুক্ত Verb
+```
+
+### ৩. Address (সম্বোধন)
+
+Direct-এ সম্বোধন থাকলে Indirect-এ reporting verb-এর object হিসেবে বসে।
+
+* He said, "Rahim, come here." → He told **Rahim** to come there.
+
+```text
+              ADDRESS
+                 |
+                 v
+        Reporting Verb-এর
+             Object
+                 |
+                 v
+              Rahim
+                 |
+                 v
+        He told Rahim to...
+```
+
+### ৪. Yes/No
+
+Direct-এ yes/no থাকলে Indirect-এ **replied in the affirmative/negative** বা **answered that...** ব্যবহৃত হয়।
+
+```text
+                YES / NO
+                    |
+          +---------+---------+
+          |                   |
+         YES                  NO
+          |                   |
+          v                   v
+   affirmative          negative
+          |                   |
+          +---------+---------+
+                    |
+                    v
+             replied/answered
+```
+
+### ৫. Sir/Madam
+
+Respectfully / politely যুক্ত হয়।
+
+```text
+                Sir / Madam
+                     |
+                     v
+               Respect shown
+                     |
+                     v
+            respectfully /
+               politely
+```
+
+---
+
+## সংক্ষিপ্ত সারাংশ
+
+| Direct-এর ধরন | Reporting Verb                       | Connector           |
+| ------------- | ------------------------------------ | ------------------- |
+| Assertive     | said, told                           | that                |
+| Interrogative | asked, enquired                      | if/whether, wh-word |
+| Imperative    | ordered, requested, advised, forbade | to / not to         |
+| Optative      | wished, prayed                       | that                |
+| Exclamatory   | exclaimed                            | that                |
+
+```text
+                    NARRATION
+                       |
+       +-------+-------+-------+-------+
+       |       |       |       |       |
+       v       v       v       v       v
+   Assertive  Inter. Imperative Optative Exclamatory
+       |       |       |       |       |
+      that   if/WH   to/not to  that     that
+       |       |       |       |       |
+     said    asked   ordered  wished  exclaimed
+     told             requested prayed
+                      advised
+```
+
+### মনে রাখার সহজ সূত্র
+
+```text
+              DIRECT → INDIRECT
+                     |
+       +-------------+-------------+
+       |             |             |
+       v             v             v
+  1. Reporting   2. Pronoun    3. Tense
+       Verb          SON          Past হলে
+       |             |             |
+       +-------------+-------------+
+                     |
+                     v
+              4. Time/Place
+                     |
+                     v
+              5. Connector
+                     |
+                     v
+              6. Word Order
+                     |
+                     v
+              INDIRECT SPEECH
+```
+</md></sn>
   <config>
     <tags>#all</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Sep 21 2026 18:42:08 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Sep 21 2026 18:45:20 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-6f3haCS9vK</id>
     <duration></duration>
   </config>
