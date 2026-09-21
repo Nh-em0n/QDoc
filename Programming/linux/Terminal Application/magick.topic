@@ -1,10 +1,422 @@
 
-  <sn></sn>
+  <sn><md>### Installation
+
+```bash
+sudo apt update
+sudo apt install imagemagick
+```
+
+check version
+
+```bash
+magick --version
+```
+</md></sn>
   <config>
     <tags>#magick</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Sep 21 2026 21:32:03 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Sep 21 2026 21:43:57 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Uz5JzpbW96</id>
     <duration></duration>
   </config>
+<sn><md>### Basic syntax
+
+```bash
+magick [options] input [options] output
+```
+
+Example:
+
+```bash
+magick input.jpg output.png
+```
+
+You can also use:
+
+```bash
+magick input.jpg -resize 50% output.jpg
+```
+</md></sn><sn><md>### Get the complete built-in help
+
+On your Ubuntu system, these are the most useful commands:
+
+```bash
+magick -help
+```
+
+More detailed:
+
+```bash
+magick --help
+```
+
+List all settings:
+
+```bash
+magick -list
+```
+
+List supported formats:
+
+```bash
+magick -list format
+```
+
+List available options:
+
+```bash
+magick -list option
+```
+
+List image properties:
+
+```bash
+magick -list
+```
+
+Version:
+
+```bash
+magick --version
+```
+</md></sn><sn><md>### Image information
+
+Identify an image
+
+```bash
+magick identify image.jpg
+```
+
+More detailed:
+
+```bash
+magick identify -verbose image.jpg
+```
+Example information includes:
+
+* Width
+* Height
+* Format
+* File size
+* Color space
+* Compression
+* Resolution
+* Channels
+* Metadata
+</md></sn><sn><md>### Resize
+
+Resize to specific dimensions
+
+```bash
+magick input.jpg -resize 800x600 output.jpg
+```
+
+Maintain aspect ratio
+
+```bash
+magick input.jpg -resize 800x output.jpg
+```
+
+```bash
+magick input.jpg -resize x600 output.jpg
+```
+
+Percentage
+
+```bash
+magick input.jpg -resize 50% output.jpg
+```
+
+Force exact dimensions
+
+```bash
+magick input.jpg -resize 800x600! output.jpg
+```
+
+The `!` can distort the image.
+
+</md></sn><sn><md>### Crop
+
+```bash
+magick input.jpg -crop 800x600+0+0 output.jpg
+```
+
+Crop from the center:
+
+```bash
+magick input.jpg -gravity center -crop 800x600+0+0 output.jpg
+```
+
+Remove the extra virtual canvas:
+
+```bash
+magick input.jpg -crop 800x600+0+0 +repage output.jpg
+```
+</md></sn><sn><md>### Quality / compression
+
+For JPEG:
+
+```bash
+magick input.jpg -quality 80 output.jpg
+```
+
+Common values:
+
+```text
+100 = highest quality / largest file
+90  = very high quality
+80  = good quality
+75  = good compression
+60  = noticeable compression
+40  = strong compression
+```
+
+For example:
+
+```bash
+magick input.jpg -quality 75 output.jpg
+```
+</md></sn><sn><md>### Remove metadata
+
+This can significantly reduce some image files:
+
+```bash
+magick input.jpg -strip output.jpg
+```
+
+For compression, this is often useful:
+
+```bash
+magick input.jpg -strip -quality 80 output.jpg
+```
+
+`-strip` removes profiles and comments/metadata that ImageMagick can remove.
+</md></sn><sn><md>### Convert formats
+
+JPEG → PNG:
+
+```bash
+magick input.jpg output.png
+```
+
+PNG → JPEG:
+
+```bash
+magick input.png output.jpg
+```
+
+JPEG → WebP:
+
+```bash
+magick input.jpg output.webp
+```
+
+PNG → WebP:
+
+```bash
+magick input.png output.webp
+```
+</md></sn><sn><md>### WebP compression
+
+```bash
+magick input.jpg -quality 80 output.webp
+```
+
+For lossless WebP:
+
+```bash
+magick input.png -define webp:lossless=true output.webp
+```
+</md></sn><sn><md>### PNG compression
+
+PNG doesn't use `-quality` in exactly the same way JPEG does.
+
+Useful:
+
+```bash
+magick input.png -strip output.png
+```
+
+Reduce colors:
+
+```bash
+magick input.png -colors 256 output.png
+```
+
+More aggressive:
+
+```bash
+magick input.png -colors 128 output.png
+```
+</md></sn><sn><md>### Change image quality and size together
+
+A useful compression command:
+
+```bash
+magick input.jpg \
+    -resize 1920x \
+    -strip \
+    -quality 80 \
+    output.jpg
+```
+
+This:
+
+1. Limits width to 1920 px
+2. Maintains aspect ratio
+3. Removes metadata
+4. Compresses JPEG to quality 80
+
+</md></sn><sn><md>### Background
+
+Make background white:
+
+```bash
+magick input.png -background white output.jpg
+```
+
+Flatten transparency:
+
+```bash
+magick input.png -background white -alpha remove -alpha off output.jpg
+```
+
+Transparent background:
+
+```bash
+magick input.jpg -transparent white output.png
+```</md></sn><sn><md>### Add text
+
+```bash
+magick input.jpg \
+    -gravity south \
+    -pointsize 30 \
+    -fill white \
+    -annotate +0+20 "Hello" \
+    output.jpg
+```
+</md></sn><sn><md>### Add watermark
+
+```bash
+magick input.jpg watermark.png \
+    -gravity southeast \
+    -composite \
+    output.jpg
+```
+</md></sn><sn><md>### Thumbnail
+
+```bash
+magick input.jpg -thumbnail 300x300 thumbnail.jpg
+```
+
+This is useful because `-thumbnail` is optimized for creating thumbnails.
+</md></sn><sn><md>### Extract frames from GIF
+
+```bash
+magick animation.gif frame.png
+```
+
+Or:
+
+```bash
+magick animation.gif frame-%03d.png
+```
+</md></sn><sn><md>### Create GIF
+
+From multiple images:
+
+```bash
+magick *.jpg animation.gif
+```
+
+Control delay:
+
+```bash
+magick -delay 10 *.png animation.gif
+```
+</md></sn><sn><md>### Combine images
+
+Horizontally:
+
+```bash
+magick +append image1.jpg image2.jpg output.jpg
+```
+
+Vertically:
+
+```bash
+magick -append image1.jpg image2.jpg output.jpg
+```
+</md></sn><sn><md>### Check output file size
+
+Linux:
+
+```bash
+ls -lh output.jpg
+```
+
+Or:
+
+```bash
+du -h output.jpg
+```
+
+Compare:
+
+```bash
+ls -lh input.jpg output.jpg
+```
+</md></sn><sn><md>### Important options
+
+Some of the most useful `magick` options are:
+
+| Option                 | Purpose                    |
+| ---------------------- | -------------------------- |
+| `-resize`              | Resize image               |
+| `-scale`               | Fast resizing              |
+| `-thumbnail`           | Create thumbnail           |
+| `-crop`                | Crop image                 |
+| `-rotate`              | Rotate                     |
+| `-flip`                | Vertical flip              |
+| `-flop`                | Horizontal flip            |
+| `-quality`             | Compression quality        |
+| `-strip`               | Remove metadata            |
+| `-format`              | Change output format       |
+| `-colorspace`          | Change color space         |
+| `-colors`              | Reduce colors              |
+| `-blur`                | Blur                       |
+| `-sharpen`             | Sharpen                    |
+| `-brightness-contrast` | Adjust brightness/contrast |
+| `-negate`              | Invert colors              |
+| `-border`              | Add border                 |
+| `-annotate`            | Add text                   |
+| `-composite`           | Combine images             |
+| `-gravity`             | Position elements          |
+| `-background`          | Set background             |
+| `-alpha`               | Control transparency       |
+| `-extent`              | Change canvas              |
+| `-density`             | Set image resolution       |
+| `-strip`               | Remove metadata            |
+| `-interlace`           | Set JPEG interlacing       |
+| `-sampling-factor`     | JPEG chroma subsampling    |
+| `-define`              | Format-specific settings   |
+| `-flatten`             | Flatten layers             |
+| `-layers`              | Process image layers       |
+| `-threshold`           | Convert based on threshold |
+| `-equalize`            | Histogram equalization     |
+| `-gamma`               | Gamma correction           |
+| `-level`               | Adjust image levels        |
+</md></sn><sn><md>### Summary
+
+* `magick` is the main ImageMagick image-processing command.
+* `-resize` changes dimensions.
+* `-quality` controls lossy compression such as JPEG/WebP.
+* `-strip` removes metadata.
+* `-crop`, `-rotate`, `-flip`, and `-flop` modify geometry.
+* `-colorspace`, `-colors`, and `-negate` modify colors.
+* `-blur`, `-sharpen`, `-brightness-contrast`, and `-gamma` modify appearance.
+* `-composite`, `-annotate`, and `-gravity` are useful for watermarks/text.
+* Bash loops allow `magick` to process hundreds or thousands of images automatically.
+* `magick -help` and `magick -list` provide the complete options available in your installed version.
+</md></sn>
