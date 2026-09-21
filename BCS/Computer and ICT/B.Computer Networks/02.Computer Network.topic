@@ -27,7 +27,7 @@
     <tags>#02.computer network</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 22 2026 00:26:08 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 22 2026 00:31:43 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-FgvEpCo0lo</id>
     <duration></duration>
   </config>
@@ -46,7 +46,7 @@ Computer networks evolved from `simple remote computer communication` in the 194
 |------|-------|-------------|
 | 1940 | `George Stibitz` | Demonstrated the `first real-time remote use of a computer` by connecting a *teletype* at Dartmouth to a Bell Labs computer. |
 | 1950s | SAGE | The U.S. military developed a computer network for its radar system using the Bell 101 modem. |
-| 1958 | `Bell 101 Modem` | AT&amp;T released the *first commercial computer modem*, transmitting digital data over telephone lines at `110 bits` per second. |
+| 1958 | `Bell 101 Modem` | `AT&amp;T` released the *first commercial computer modem*, transmitting digital data over telephone lines at `110 bits` per second. |
 | 1959 | Time-sharing | Christopher Strachey and John McCarthy contributed to the development of time-sharing, allowing `multiple users to share computing resources`. |
 | 1960s | Packet switching | Paul Baran and Donald Davies independently developed the concept of packet switching for computer data communication. |
 | 1968–1969 | NPL Network | The National Physical Laboratory implemented packet switching in a local area network using `768 kbit/s `links. |
