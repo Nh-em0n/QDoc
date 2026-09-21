@@ -1,5 +1,44 @@
 
-  <sn><md>### Installation
+  <sn><md>### Quality / compression
+
+For JPEG:
+
+```bash
+magick input.jpg -quality 80 output.jpg
+```
+
+Common values:
+
+```text
+100 = highest quality / largest file
+90  = very high quality
+80  = good quality
+75  = good compression
+60  = noticeable compression
+40  = strong compression
+```
+
+For example:
+
+```bash
+magick input.jpg -quality 75 output.jpg
+```
+</md></sn><sn><md>### Remove metadata
+
+This can significantly reduce some image files:
+
+```bash
+magick input.jpg -strip output.jpg
+```
+
+For compression, this is often useful:
+
+```bash
+magick input.jpg -strip -quality 80 output.jpg
+```
+
+`-strip` removes profiles and comments/metadata that ImageMagick can remove.
+</md></sn><sn><md>### Installation
 
 ```bash
 sudo apt update
@@ -16,7 +55,7 @@ magick --version
     <tags>#magick</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Sep 21 2026 21:43:57 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Sep 21 2026 21:55:53 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Uz5JzpbW96</id>
     <duration></duration>
   </config>
@@ -153,45 +192,6 @@ Remove the extra virtual canvas:
 ```bash
 magick input.jpg -crop 800x600+0+0 +repage output.jpg
 ```
-</md></sn><sn><md>### Quality / compression
-
-For JPEG:
-
-```bash
-magick input.jpg -quality 80 output.jpg
-```
-
-Common values:
-
-```text
-100 = highest quality / largest file
-90  = very high quality
-80  = good quality
-75  = good compression
-60  = noticeable compression
-40  = strong compression
-```
-
-For example:
-
-```bash
-magick input.jpg -quality 75 output.jpg
-```
-</md></sn><sn><md>### Remove metadata
-
-This can significantly reduce some image files:
-
-```bash
-magick input.jpg -strip output.jpg
-```
-
-For compression, this is often useful:
-
-```bash
-magick input.jpg -strip -quality 80 output.jpg
-```
-
-`-strip` removes profiles and comments/metadata that ImageMagick can remove.
 </md></sn><sn><md>### Convert formats
 
 JPEG → PNG:
@@ -419,4 +419,266 @@ Some of the most useful `magick` options are:
 * `-composite`, `-annotate`, and `-gravity` are useful for watermarks/text.
 * Bash loops allow `magick` to process hundreds or thousands of images automatically.
 * `magick -help` and `magick -list` provide the complete options available in your installed version.
-</md></sn>
+</md></sn><sn><md>### Create a Permanent `compress` Command
+
+we'll create an executable file at:
+
+```bash
+~/.local/bin/compress
+```
+
+This will work as a permanent command in your Ubuntu terminal, provided `~/.local/bin` is in your `PATH`.
+
+**The script will:**
+
+- Compress PNG, JPG, JPEG, WebP, AVIF, TIFF, and TIF images.
+- Use ImageMagick with `-strip` and `-quality 75`.
+- Replace the original image only after successful compression.
+- Support multiple files, including `compress *`.
+- Skip unsupported files and directories.
+- Handle filenames containing spaces.
+- Avoid overwriting the original until the compressed output is ready.
+
+&gt; **Important:** The script replaces your original images. Make a backup first if you need to preserve the originals.
+
+---
+
+#### 1. Create the Script
+
+Run:
+
+```bash
+mkdir -p ~/.local/bin
+nano ~/.local/bin/compress
+```
+
+Paste this complete script:
+
+```bash
+#!/usr/bin/env bash
+
+# Image compression command
+# Usage: compress image.png
+#        compress *
+
+set -u
+
+if ! command -v magick &gt;/dev/null 2&gt;&amp;1; then
+    echo "Error: ImageMagick is not installed."
+    echo "Install it with: sudo apt install imagemagick"
+    exit 1
+fi
+
+if [ "$#" -eq 0 ]; then
+    echo "Usage: compress <image1> [image2 ...]"
+    exit 1
+fi
+
+for file in "$@"; do
+
+    # Skip directories and non-files
+    if [ ! -f "$file" ]; then
+        echo "Skipping: $file"
+        continue
+    fi
+
+    # Check supported image extensions
+    ext="${file##*.}"
+
+    case "${ext,,}" in
+        jpg|jpeg|png|webp|avif|tif|tiff)
+            ;;
+        *)
+            echo "Skipping unsupported file: $file"
+            continue
+            ;;
+    esac
+
+    # Temporary output in the same directory
+    dir="$(dirname -- "$file")"
+    base="$(basename -- "$file")"
+    tmp="$(mktemp "$dir/.compress.XXXXXX")"
+
+    echo "Compressing: $file"
+
+    # Compress image
+    if magick "$file" -strip -quality 75 "$tmp"; then
+
+        # Verify that the output exists and is readable
+        if [ -s "$tmp" ]; then
+
+            # Replace original image
+            if mv -f -- "$tmp" "$file"; then
+                echo "Done: $file"
+            else
+                echo "Error: Could not replace $file"
+                rm -f -- "$tmp"
+            fi
+
+        else
+            echo "Error: Output is empty: $file"
+            rm -f -- "$tmp"
+        fi
+
+    else
+        echo "Error: Compression failed: $file"
+        rm -f -- "$tmp"
+    fi
+
+done
+```
+
+---
+
+#### 2. Save and Make It Executable
+
+In Nano:
+
+1. Press `Ctrl + O` to save.
+2. Press `Enter`.
+3. Press `Ctrl + X` to exit.
+
+Then run:
+
+```bash
+chmod +x ~/.local/bin/compress
+```
+
+---
+
+#### 3. Add `~/.local/bin` to PATH
+
+Check whether it is already in your PATH:
+
+```bash
+echo "$PATH"
+```
+
+If you see `/home/emon/.local/bin` or `$HOME/.local/bin`, you can skip this step.
+
+Otherwise, run:
+
+```bash
+echo 'export PATH="$HOME/.local/bin:$PATH"' &gt;&gt; ~/.bashrc
+```
+
+Reload your Bash configuration:
+
+```bash
+source ~/.bashrc
+```
+
+---
+
+#### 4. Test the Command
+
+Check which executable will run:
+
+```bash
+command -v compress
+```
+
+**Expected:**
+
+```
+/home/emon/.local/bin/compress
+```
+
+Check that the script works:
+
+```bash
+compress
+```
+
+**Expected:**
+
+```
+Usage: compress <image1> [image2 ...]
+```
+
+---
+
+#### 5. Usage Examples
+
+**Compress one image:**
+
+```bash
+compress img.png
+```
+
+**Compress all images in a folder:**
+
+```bash
+compress *
+```
+
+The script skips unsupported files and directories.
+
+**Compress only PNG images:**
+
+```bash
+compress *.png
+```
+
+**Compress images from another directory:**
+
+```bash
+compress ~/Pictures/*
+```
+
+---
+
+#### 6. Update the Compression Quality
+
+To change the quality from `75` to `85`, edit the script:
+
+```bash
+nano ~/.local/bin/compress
+```
+
+Find:
+
+```bash
+-quality 75
+```
+
+Change to:
+
+```bash
+-quality 85
+```
+
+| Quality | Expected Result |
+|---------|-----------------|
+| 95 | Higher quality, generally larger file |
+| 85 | Good quality |
+| 75 | More compression |
+| 60 | Stronger compression |
+
+&gt; The actual result depends on the image format and source image. In particular, PNG compression behavior differs from JPEG compression.
+
+---
+
+#### 7. Check the Script Whenever You Want
+
+**Display the script:**
+
+```bash
+cat ~/.local/bin/compress
+```
+
+**Edit the script:**
+
+```bash
+nano ~/.local/bin/compress
+```
+
+**Remove the command:**
+
+```bash
+rm ~/.local/bin/compress
+```
+
+---
+
+**Summary:** You now have a standalone executable at `~/.local/bin/compress`, which you can run from any directory after your PATH is configured.</image1></image1></md></sn>
