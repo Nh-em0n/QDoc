@@ -3,7 +3,7 @@
 
 ![img](https://www.lifewire.com/thmb/TXVRTtkHvRpTjnRObQ3xm2VlsD0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WirelessNetwork-5994852003f4020011db5333.jpg)
 
-In computer science, computer engineering, and telecommunications, a network is a group of communicating computers and peripherals known as hosts, which communicate data to other hosts via communication protocols, as facilitated by networking hardware.
+In computer `science`, computer `engineering`, and `telecommunications`, a network is a `group of communicating computers and peripherals` known as *hosts*, which `communicate data to other hosts` via communication protocols, as facilitated by networking hardware.
 
 Within a computer network, hosts are identified by **network addresses**, which allow networking hardware to locate and identify hosts. Hosts may also have **hostnames, memorable labels** for the host nodes, which can be mapped to a network address using a hosts file or a name server such as Domain Name Service. 
 The physical medium that supports information exchange includes **wired media** like `copper cables, optical fibers`, and **wireless** `radio-frequency` media. The `arrangement of hosts and hardware` within a network architecture is known as the ++network topology++.
@@ -15,7 +15,7 @@ The first computer network was created in `1940 when George Stibitz` connected a
     <tags>#02.computer network</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Sep 21 2026 21:13:01 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Sep 21 2026 21:31:47 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-FgvEpCo0lo</id>
     <duration></duration>
   </config>
