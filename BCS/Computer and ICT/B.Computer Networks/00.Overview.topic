@@ -1,10 +1,51 @@
 
-  <sn></sn>
+  <sn><md>### Computer Networks
+
+- **path :** self.field.bcs.computer_and_ict.information_technology.computer_networks
+
+- **resources :** 
+  - [wikipedia](https://en.wikipedia.org/wiki/Computer_network)
+  - [computer_network_EN_hsc](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/resources/computer-network_EN(hsc).pdf)
+  - [computer_network_BN_hsc](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/resources/computer-network_BN(hsc).pdf)
+  - [computer_network_BN_george](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/resources/computer-network_BN(george).pdf)
+
+- **topics**
+  - Overview
+  - Qna Analysis
+  - Introduction
+  - Computer network
+  - Network components
+  - LAN
+  - MAN
+  - WAN
+  - PAN
+  - WLAN
+  - CAN
+  - Internet
+  - Intranet
+  - Extranet
+  - Wired network
+  - Wireless network
+  - Network protocols
+  - Network architecture
+  - Peer-to-peer network
+  - Client-server network
+
+- **Dates**  
+
+  | Action | Dates |
+  |-------|-------|
+  | Set up | 21-09-26 |
+  | Created | 21-09-26 |
+  | Updated | |
+  | Revise | |
+
+</md></sn>
   <config>
     <tags>#00.overview</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Sep 21 2026 09:46:41 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Sep 21 2026 09:50:16 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-iOVKQ3KKFH</id>
     <duration></duration>
   </config>
