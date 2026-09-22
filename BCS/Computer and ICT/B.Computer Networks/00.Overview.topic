@@ -39,7 +39,976 @@
     <tags>#00.overview</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Sep 21 2026 20:45:55 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Sep 22 2026 10:07:56 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-iOVKQ3KKFH</id>
     <duration></duration>
   </config>
+<sn><md><pre class="d-none data">+++ Youtube Sources
+
+## Networking Animated Videos — Organized Link Index
+
+**Source Playlist:** [Networking Animated Videos](https://www.youtube.com/playlist?list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg)
+**Channel:** [PowerCert Animated Videos](https://www.youtube.com/@PowerCertAnimatedVideos)
+
+---
+
+#### 1. Networking Hardware &amp; Devices
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 1 | Modem vs Router - What's the difference? | 7:00 | [Watch](https://www.youtube.com/watch?v=Mad4kQ5835Y&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=1&amp;pp=iAQB0gcJCSAMAYcqIYzv) |
+| 2 | Hub, Switch, &amp; Router Explained - What's the difference? | 7:22 | [Watch](https://www.youtube.com/watch?v=1z0ULvg_pW8&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=2&amp;pp=iAQB) |
+| 3 | Layer 2 vs Layer 3 Switches | 6:02 | [Watch](https://www.youtube.com/watch?v=bdNS0K4Bt8U&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=3&amp;pp=iAQB) |
+| 4 | Wireless Access Point vs Wi-Fi Router | 6:26 | [Watch](https://www.youtube.com/watch?v=OxiY4yf6GGg&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=4&amp;pp=iAQB) |
+| 10 | Networking Tools - Hardware | 8:21 | [Watch](https://www.youtube.com/watch?v=HAceoquch1c&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=10&amp;pp=iAQB) |
+| 33 | What is a Firewall? | 6:26 | [Watch](https://www.youtube.com/watch?v=kDEX1HXybrU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=33&amp;pp=iAQB) |
+| 56 | What is a Proxy Server? | 4:43 | [Watch](https://www.youtube.com/watch?v=5cPIukqXe5w&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=56&amp;pp=iAQB) |
+| 57 | Proxy vs Reverse Proxy Explained | 8:05 | [Watch](https://www.youtube.com/watch?v=RXXRguaHZs0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=57&amp;pp=iAQB0gcJCSAMAYcqIYzv) |
+| 58 | What is a Jump Server? (Bastion Host) | 7:10 | [Watch](https://www.youtube.com/watch?v=mwQBqhDS7z8&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=58&amp;pp=iAQB) |
+| 64 | Load Balancer Explained | 9:12 | [Watch](https://www.youtube.com/watch?v=1fN2UDbtGDQ&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=64&amp;pp=iAQB) |
+| 66 | NAS vs SAN - Network Attached Storage vs Storage Area Network | 4:27 | [Watch](https://www.youtube.com/watch?v=3yZDDr0JKVc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=66&amp;pp=iAQB0gcJCSAMAYcqIYzv) |
+
+---
+
+#### 2. Cables, Connectors &amp; Physical Infrastructure
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 5 | Cable vs DSL vs Fiber Internet Explained | 6:47 | [Watch](https://www.youtube.com/watch?v=qQYiwmamq38&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=5&amp;pp=iAQB) |
+| 6 | Ethernet Cables, UTP vs STP, Straight vs Crossover, CAT 5,5e,6,7,8 Network Cables | 7:07 | [Watch](https://www.youtube.com/watch?v=_NX99ad2FUA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=6&amp;pp=iAQB) |
+| 7 | Plenum vs Non Plenum PVC Network Ethernet Cables | 5:26 | [Watch](https://www.youtube.com/watch?v=XjISrRz98Xg&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=7&amp;pp=iAQB) |
+| 8 | What is a Patch Panel? (cable management) | 6:43 | [Watch](https://www.youtube.com/watch?v=FfQui0mk85Q&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=8&amp;pp=iAQB) |
+| 9 | Network Connectors Explained | 9:43 | [Watch](https://www.youtube.com/watch?v=ktTtAQIvYkg&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=9&amp;pp=iAQB) |
+| 78 | Powerline Ethernet Networking Explained | 3:21 | [Watch](https://www.youtube.com/watch?v=1SpY1vwEIJI&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=78&amp;pp=iAQB) |
+
+---
+
+#### 3. Protocols &amp; Addressing
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 11 | How a DNS Server (Domain Name System) works | 6:05 | [Watch](https://www.youtube.com/watch?v=mpQZVYPuDGU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=11&amp;pp=iAQB) |
+| 12 | DNS Records Explained | 14:14 | [Watch](https://www.youtube.com/watch?v=HnUDtycXSNE&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=12&amp;pp=iAQB) |
+| 13 | DDNS - Dynamic DNS Explained | 5:31 | [Watch](https://www.youtube.com/watch?v=rOLGvZagdC0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=13&amp;pp=iAQB) |
+| 14 | NAT Explained - Network Address Translation | 4:26 | [Watch](https://www.youtube.com/watch?v=FTUV0t6JaDA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=14&amp;pp=iAQB) |
+| 15 | DHCP Explained - Dynamic Host Configuration Protocol | 10:10 | [Watch](https://www.youtube.com/watch?v=e6-TaH5bkjo&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=15&amp;pp=iAQB) |
+| 16 | What Happens When DHCP Fails? APIPA Saves You | 3:42 | [Watch](https://www.youtube.com/watch?v=0tEjUR6tjBU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=16&amp;pp=iAQB) |
+| 17 | IP Address - IPv4 vs IPv6 Tutorial | 9:23 | [Watch](https://www.youtube.com/watch?v=ThdO9beHhpA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=17&amp;pp=iAQB) |
+| 18 | Public vs Private IP Address | 7:11 | [Watch](https://www.youtube.com/watch?v=po8ZFG0Xc4Q&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=18&amp;pp=iAQB) |
+| 19 | MAC Address Explained | 8:23 | [Watch](https://www.youtube.com/watch?v=TIiQiw7fpsU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=19&amp;pp=iAQB) |
+| 20 | ARP Explained - Address Resolution Protocol | 4:22 | [Watch](https://www.youtube.com/watch?v=cn8Zxh9bPio&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=20&amp;pp=iAQB) |
+| 22 | Port Forwarding Explained | 9:04 | [Watch](https://www.youtube.com/watch?v=2G1ueMDgwxw&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=22&amp;pp=iAQB) |
+| 24 | FTP (File Transfer Protocol), SFTP, TFTP Explained | 7:54 | [Watch](https://www.youtube.com/watch?v=tOj8MSEIbfA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=24&amp;pp=iAQB) |
+| 27 | TCP vs UDP Comparison | 4:37 | [Watch](https://www.youtube.com/watch?v=uwoD5YsGACg&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=27&amp;pp=iAQB) |
+| 47 | SSL, TLS, HTTP, HTTPS Explained | 6:31 | [Watch](https://www.youtube.com/watch?v=hExRDVZHhig&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=47&amp;pp=iAQB) |
+| 48 | CSMA/CD and CSMA/CA Explained | 6:14 | [Watch](https://www.youtube.com/watch?v=iKn0GzF5-IU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=48&amp;pp=iAQB) |
+| 49 | Spanning Tree Protocol \| CCNA - Explained | 11:55 | [Watch](https://www.youtube.com/watch?v=6MW5P6Ci7lw&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=49&amp;pp=iAQB) |
+| 67 | Network Ports Explained | 10:33 | [Watch](https://www.youtube.com/watch?v=g2fT-g9PX9o&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=67&amp;pp=iAQB) |
+| 74 | Default Gateway Explained | 6:35 | [Watch](https://www.youtube.com/watch?v=pCcJFdYNamc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=74&amp;pp=iAQB) |
+| 76 | Subnet Mask - Explained | 17:55 | [Watch](https://www.youtube.com/watch?v=s_Ntt6eTn94&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=76&amp;pp=iAQB) |
+| 77 | Telnet vs SSH Explained | 5:00 | [Watch](https://www.youtube.com/watch?v=tZop-zjYkrU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=77&amp;pp=iAQB) |
+| 81 | Circuit Switching vs Packet Switching | 5:35 | [Watch](https://www.youtube.com/watch?v=G7n8thqwO2c&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=81&amp;pp=iAQB0gcJCSAMAYcqIYzv) |
+
+---
+
+#### 4. Network Design &amp; Topologies
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 23 | What is a DMZ? (Demilitarized Zone) | 6:14 | [Watch](https://www.youtube.com/watch?v=dqlzQXo1wqo&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=23&amp;pp=iAQB) |
+| 25 | VLAN Explained | 4:38 | [Watch](https://www.youtube.com/watch?v=jC6MJTh9fRE&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=25&amp;pp=iAQB) |
+| 26 | Subnets vs VLANs | 5:51 | [Watch](https://www.youtube.com/watch?v=6_giEv20En0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=26&amp;pp=iAQB) |
+| 30 | Network Topologies (Star, Bus, Ring, Mesh, Ad hoc, Infrastructure, &amp; Wireless Mesh Topology) | 8:58 | [Watch](https://www.youtube.com/watch?v=zbqrNg4C98U&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=30&amp;pp=iAQB) |
+| 31 | Network Types: LAN, WAN, PAN, CAN, MAN, SAN, WLAN | 4:56 | [Watch](https://www.youtube.com/watch?v=4_zSIXb7tLQ&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=31&amp;pp=iAQB) |
+| 32 | LAN, WAN, SUBNET - EXPLAINED | 4:55 | [Watch](https://www.youtube.com/watch?v=NyZWSvSj8ek&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=32&amp;pp=iAQB) |
+| 71 | Routing Tables \| CCNA - Explained | 13:13 | [Watch](https://www.youtube.com/watch?v=CGmTvukObOw&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=71&amp;pp=iAQB) |
+| 73 | VLANs, Tagging, Trunking, VxLAN, &amp; Native VLAN | 9:30 | [Watch](https://www.youtube.com/watch?v=MNZa-S4E-To&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=73&amp;pp=iAQB) |
+| 75 | Collision Domain vs Broadcast Domain | 6:40 | [Watch](https://www.youtube.com/watch?v=C2FrTZxi_NI&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=75&amp;pp=iAQB) |
+| 79 | CDN - Content Delivery Network - Explained | 6:20 | [Watch](https://www.youtube.com/watch?v=nhhfSBm6v4A&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=79&amp;pp=iAQB) |
+| 80 | What is VoIP? | 7:34 | [Watch](https://www.youtube.com/watch?v=n_b2sJP2pBk&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=80&amp;pp=iAQB) |
+
+---
+
+#### 5. Wireless Networking
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 34 | WIFI (wireless) Standards and Generations Explained | 9:21 | [Watch](https://www.youtube.com/watch?v=hhks5xSpM-0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=34&amp;pp=iAQB) |
+| 35 | 2.4 GHz vs 5 GHz WiFi: What is the difference? | 5:39 | [Watch](https://www.youtube.com/watch?v=J_bf_KE5llQ&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=35&amp;pp=iAQB0gcJCSAMAYcqIYzv) |
+| 36 | Tri-Band WiFi Router Explained | 5:16 | [Watch](https://www.youtube.com/watch?v=gTrXgNtqyxA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=36&amp;pp=iAQB) |
+| 37 | MU-MIMO Explained | 6:25 | [Watch](https://www.youtube.com/watch?v=B2h8FohnwUs&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=37&amp;pp=iAQB) |
+| 38 | Wireless Bridge Mode - Networking | 6:59 | [Watch](https://www.youtube.com/watch?v=x0ult-Ln9hc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=38&amp;pp=iAQB) |
+| 39 | WiFi Range Extender - WiFi Booster explained - Which is the best? | 6:15 | [Watch](https://www.youtube.com/watch?v=1rJ1tSzgvpE&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=39&amp;pp=iAQB) |
+| 40 | Mesh Wifi Explained - Which is the best? - Google Wifi | 4:51 | [Watch](https://www.youtube.com/watch?v=XaOcjHrdMFE&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=40&amp;pp=iAQB) |
+| 41 | WiFi 6 Explained | 8:07 | [Watch](https://www.youtube.com/watch?v=Y7OWUg_kmK4&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=41&amp;pp=iAQB) |
+| 42 | WiFi 7 Explained | 8:36 | [Watch](https://www.youtube.com/watch?v=gVBEcvMHKr0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=42&amp;pp=iAQB) |
+| 43 | WiFi (Wireless) Password Security - WEP, WPA, WPA2, WPA3, WPS Explained | 8:40 | [Watch](https://www.youtube.com/watch?v=WZaIfyvERcA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=43&amp;pp=iAQB) |
+| 44 | What is a Guest Network? | 5:09 | [Watch](https://www.youtube.com/watch?v=R1qJ87Fo5_k&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=44&amp;pp=iAQB) |
+| 45 | Bluetooth vs WiFi - What's the difference? | 4:40 | [Watch](https://www.youtube.com/watch?v=mPMGRILsOVk&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=45&amp;pp=iAQB) |
+| 46 | What is a Hotspot? | 5:26 | [Watch](https://www.youtube.com/watch?v=ktxC3vDukbc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=46&amp;pp=iAQB) |
+
+---
+
+#### 6. Network Security
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 21 | ARP Spoofing \| Poisoning Explained | 3:27 | [Watch](https://www.youtube.com/watch?v=cZ-7R8juECk&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=21&amp;pp=iAQB) |
+| 50 | VPN (Virtual Private Network) Explained | 7:11 | [Watch](https://www.youtube.com/watch?v=R-JUOpCgTZc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=50&amp;pp=iAQB) |
+| 51 | IPsec Explained | 6:03 | [Watch](https://www.youtube.com/watch?v=xTH1ZA_qUvA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=51&amp;pp=iAQB) |
+| 52 | How a DDOS Attack Works. How Hackers Can Bring Down a Website or Server | 9:03 | [Watch](https://www.youtube.com/watch?v=YthJmMZ0WkA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=52&amp;pp=iAQB) |
+| 53 | What Is Phishing? | 8:32 | [Watch](https://www.youtube.com/watch?v=9JD7E4-ITvM&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=53&amp;pp=iAQB) |
+| 54 | MAC Flooding Attack Explained | 4:32 | [Watch](https://www.youtube.com/watch?v=ZwQREzriwpA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=54&amp;pp=iAQB) |
+| 55 | What is a Honeypot? | 7:28 | [Watch](https://www.youtube.com/watch?v=NnJ9tAFvH2U&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=55&amp;pp=iAQB) |
+
+---
+
+#### 7. Cloud, Virtualization &amp; Modern Infrastructure
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 59 | Cloud Computing Explained | 8:37 | [Watch](https://www.youtube.com/watch?v=_a6us8kaq0g&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=59&amp;pp=iAQB) |
+| 60 | Virtual Private Cloud (VPC) Explained | 5:41 | [Watch](https://www.youtube.com/watch?v=2fPgKvDBfbs&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=60&amp;pp=iAQB) |
+| 61 | Virtualization Explained | 8:07 | [Watch](https://www.youtube.com/watch?v=UBVVq-xz5i0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=61&amp;pp=iAQB) |
+| 62 | Virtual Machines vs Containers | 8:57 | [Watch](https://www.youtube.com/watch?v=eyNBf1sqdBQ&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=62&amp;pp=iAQB0gcJCSAMAYcqIYzv) |
+
+---
+
+#### 8. Performance &amp; Bandwidth
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 63 | Internet vs WiFi Speed: What Really Matters? | 6:42 | [Watch](https://www.youtube.com/watch?v=JRXFk5J7h_A&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=63&amp;pp=iAQB) |
+| 65 | Internet Bandwidth (speed) Explained | 6:21 | [Watch](https://www.youtube.com/watch?v=DHa9gxRfAmM&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=65&amp;pp=iAQB) |
+
+---
+
+#### Troubleshooting &amp; Command-Line Tools
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 28 | PING Command - Troubleshooting Networks | 9:14 | [Watch](https://www.youtube.com/watch?v=IIicPE38O-s&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=28&amp;pp=iAQB) |
+| 29 | Traceroute (tracert) Explained - Network Troubleshooting | 9:24 | [Watch](https://www.youtube.com/watch?v=up3bcBLZS74&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=29&amp;pp=iAQB) |
+| 68 | IPCONFIG Explained - Flush DNS Cache | 8:55 | [Watch](https://www.youtube.com/watch?v=ZKhorleA5aA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=68&amp;pp=iAQB) |
+| 69 | NETSTAT Command Explained | 6:10 | [Watch](https://www.youtube.com/watch?v=8UZFpCQeXnM&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=69&amp;pp=iAQB) |
+| 70 | Windows Command Line Tools | 14:08 | [Watch](https://www.youtube.com/watch?v=Jfq_BYhxvy0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=70&amp;pp=iAQB) |
+| 72 | How Does the Internet Work? \| Data Packets | 5:35 | [Watch](https://www.youtube.com/watch?v=KjD3KANH-xc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=72&amp;pp=iAQB) |
+
+---
+
+#### Certification &amp; Full Courses
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 82 | CompTIA Network+ N10-009 Full Certification Course | 4:17:16 | [Watch](https://www.youtube.com/watch?v=CY4hn70K3r8&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=82&amp;pp=iAQB) |
+
+---
+
+**Total Videos:** 82
+**Playlist Link:** [Networking Animated Videos](https://www.youtube.com/playlist?list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg)
+
++++</pre><temp><dl>
+<h2>Networking Animated Videos — Organized Link Index</h2>
+<p><strong>Source Playlist:</strong> <a href="https://www.youtube.com/playlist?list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg">Networking Animated Videos</a><br>
+<strong>Channel:</strong> <a href="https://www.youtube.com/@PowerCertAnimatedVideos">PowerCert Animated Videos</a></p>
+<hr>
+<h4>1. Networking Hardware &amp; Devices</h4>
+<tb class="d-block scroll py-2 scroll-both scroll-min scroll-on-hover"><table class="table table-striped table-bordered mx-auto">
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Duration</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Modem vs Router - What's the difference?</td>
+<td>7:00</td>
+<td><a href="https://www.youtube.com/watch?v=Mad4kQ5835Y&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=1&amp;pp=iAQB0gcJCSAMAYcqIYzv">Watch</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hub, Switch, &amp; Router Explained - What's the difference?</td>
+<td>7:22</td>
+<td><a href="https://www.youtube.com/watch?v=1z0ULvg_pW8&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=2&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Layer 2 vs Layer 3 Switches</td>
+<td>6:02</td>
+<td><a href="https://www.youtube.com/watch?v=bdNS0K4Bt8U&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=3&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Wireless Access Point vs Wi-Fi Router</td>
+<td>6:26</td>
+<td><a href="https://www.youtube.com/watch?v=OxiY4yf6GGg&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=4&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td>Networking Tools - Hardware</td>
+<td>8:21</td>
+<td><a href="https://www.youtube.com/watch?v=HAceoquch1c&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=10&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>33</td>
+<td>What is a Firewall?</td>
+<td>6:26</td>
+<td><a href="https://www.youtube.com/watch?v=kDEX1HXybrU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=33&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>56</td>
+<td>What is a Proxy Server?</td>
+<td>4:43</td>
+<td><a href="https://www.youtube.com/watch?v=5cPIukqXe5w&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=56&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>57</td>
+<td>Proxy vs Reverse Proxy Explained</td>
+<td>8:05</td>
+<td><a href="https://www.youtube.com/watch?v=RXXRguaHZs0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=57&amp;pp=iAQB0gcJCSAMAYcqIYzv">Watch</a></td>
+</tr>
+<tr>
+<td>58</td>
+<td>What is a Jump Server? (Bastion Host)</td>
+<td>7:10</td>
+<td><a href="https://www.youtube.com/watch?v=mwQBqhDS7z8&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=58&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>64</td>
+<td>Load Balancer Explained</td>
+<td>9:12</td>
+<td><a href="https://www.youtube.com/watch?v=1fN2UDbtGDQ&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=64&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>66</td>
+<td>NAS vs SAN - Network Attached Storage vs Storage Area Network</td>
+<td>4:27</td>
+<td><a href="https://www.youtube.com/watch?v=3yZDDr0JKVc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=66&amp;pp=iAQB0gcJCSAMAYcqIYzv">Watch</a></td>
+</tr>
+</tbody>
+</table></tb>
+<hr>
+<h4>2. Cables, Connectors &amp; Physical Infrastructure</h4>
+<tb class="d-block scroll py-2 scroll-both scroll-min scroll-on-hover"><table class="table table-striped table-bordered mx-auto">
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Duration</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>Cable vs DSL vs Fiber Internet Explained</td>
+<td>6:47</td>
+<td><a href="https://www.youtube.com/watch?v=qQYiwmamq38&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=5&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Ethernet Cables, UTP vs STP, Straight vs Crossover, CAT 5,5e,6,7,8 Network Cables</td>
+<td>7:07</td>
+<td><a href="https://www.youtube.com/watch?v=_NX99ad2FUA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=6&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Plenum vs Non Plenum PVC Network Ethernet Cables</td>
+<td>5:26</td>
+<td><a href="https://www.youtube.com/watch?v=XjISrRz98Xg&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=7&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td>What is a Patch Panel? (cable management)</td>
+<td>6:43</td>
+<td><a href="https://www.youtube.com/watch?v=FfQui0mk85Q&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=8&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Network Connectors Explained</td>
+<td>9:43</td>
+<td><a href="https://www.youtube.com/watch?v=ktTtAQIvYkg&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=9&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>78</td>
+<td>Powerline Ethernet Networking Explained</td>
+<td>3:21</td>
+<td><a href="https://www.youtube.com/watch?v=1SpY1vwEIJI&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=78&amp;pp=iAQB">Watch</a></td>
+</tr>
+</tbody>
+</table></tb>
+<hr>
+<h4>3. Protocols &amp; Addressing</h4>
+<tb class="d-block scroll py-2 scroll-both scroll-min scroll-on-hover"><table class="table table-striped table-bordered mx-auto">
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Duration</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11</td>
+<td>How a DNS Server (Domain Name System) works</td>
+<td>6:05</td>
+<td><a href="https://www.youtube.com/watch?v=mpQZVYPuDGU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=11&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td>DNS Records Explained</td>
+<td>14:14</td>
+<td><a href="https://www.youtube.com/watch?v=HnUDtycXSNE&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=12&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>13</td>
+<td>DDNS - Dynamic DNS Explained</td>
+<td>5:31</td>
+<td><a href="https://www.youtube.com/watch?v=rOLGvZagdC0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=13&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>14</td>
+<td>NAT Explained - Network Address Translation</td>
+<td>4:26</td>
+<td><a href="https://www.youtube.com/watch?v=FTUV0t6JaDA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=14&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>15</td>
+<td>DHCP Explained - Dynamic Host Configuration Protocol</td>
+<td>10:10</td>
+<td><a href="https://www.youtube.com/watch?v=e6-TaH5bkjo&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=15&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>16</td>
+<td>What Happens When DHCP Fails? APIPA Saves You</td>
+<td>3:42</td>
+<td><a href="https://www.youtube.com/watch?v=0tEjUR6tjBU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=16&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>17</td>
+<td>IP Address - IPv4 vs IPv6 Tutorial</td>
+<td>9:23</td>
+<td><a href="https://www.youtube.com/watch?v=ThdO9beHhpA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=17&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>18</td>
+<td>Public vs Private IP Address</td>
+<td>7:11</td>
+<td><a href="https://www.youtube.com/watch?v=po8ZFG0Xc4Q&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=18&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>19</td>
+<td>MAC Address Explained</td>
+<td>8:23</td>
+<td><a href="https://www.youtube.com/watch?v=TIiQiw7fpsU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=19&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>20</td>
+<td>ARP Explained - Address Resolution Protocol</td>
+<td>4:22</td>
+<td><a href="https://www.youtube.com/watch?v=cn8Zxh9bPio&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=20&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>22</td>
+<td>Port Forwarding Explained</td>
+<td>9:04</td>
+<td><a href="https://www.youtube.com/watch?v=2G1ueMDgwxw&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=22&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>24</td>
+<td>FTP (File Transfer Protocol), SFTP, TFTP Explained</td>
+<td>7:54</td>
+<td><a href="https://www.youtube.com/watch?v=tOj8MSEIbfA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=24&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>27</td>
+<td>TCP vs UDP Comparison</td>
+<td>4:37</td>
+<td><a href="https://www.youtube.com/watch?v=uwoD5YsGACg&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=27&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>47</td>
+<td>SSL, TLS, HTTP, HTTPS Explained</td>
+<td>6:31</td>
+<td><a href="https://www.youtube.com/watch?v=hExRDVZHhig&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=47&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>48</td>
+<td>CSMA/CD and CSMA/CA Explained</td>
+<td>6:14</td>
+<td><a href="https://www.youtube.com/watch?v=iKn0GzF5-IU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=48&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>49</td>
+<td>Spanning Tree Protocol | CCNA - Explained</td>
+<td>11:55</td>
+<td><a href="https://www.youtube.com/watch?v=6MW5P6Ci7lw&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=49&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>67</td>
+<td>Network Ports Explained</td>
+<td>10:33</td>
+<td><a href="https://www.youtube.com/watch?v=g2fT-g9PX9o&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=67&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>74</td>
+<td>Default Gateway Explained</td>
+<td>6:35</td>
+<td><a href="https://www.youtube.com/watch?v=pCcJFdYNamc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=74&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>76</td>
+<td>Subnet Mask - Explained</td>
+<td>17:55</td>
+<td><a href="https://www.youtube.com/watch?v=s_Ntt6eTn94&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=76&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>77</td>
+<td>Telnet vs SSH Explained</td>
+<td>5:00</td>
+<td><a href="https://www.youtube.com/watch?v=tZop-zjYkrU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=77&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>81</td>
+<td>Circuit Switching vs Packet Switching</td>
+<td>5:35</td>
+<td><a href="https://www.youtube.com/watch?v=G7n8thqwO2c&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=81&amp;pp=iAQB0gcJCSAMAYcqIYzv">Watch</a></td>
+</tr>
+</tbody>
+</table></tb>
+<hr>
+<h4>4. Network Design &amp; Topologies</h4>
+<tb class="d-block scroll py-2 scroll-both scroll-min scroll-on-hover"><table class="table table-striped table-bordered mx-auto">
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Duration</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>23</td>
+<td>What is a DMZ? (Demilitarized Zone)</td>
+<td>6:14</td>
+<td><a href="https://www.youtube.com/watch?v=dqlzQXo1wqo&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=23&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>25</td>
+<td>VLAN Explained</td>
+<td>4:38</td>
+<td><a href="https://www.youtube.com/watch?v=jC6MJTh9fRE&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=25&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>26</td>
+<td>Subnets vs VLANs</td>
+<td>5:51</td>
+<td><a href="https://www.youtube.com/watch?v=6_giEv20En0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=26&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>30</td>
+<td>Network Topologies (Star, Bus, Ring, Mesh, Ad hoc, Infrastructure, &amp; Wireless Mesh Topology)</td>
+<td>8:58</td>
+<td><a href="https://www.youtube.com/watch?v=zbqrNg4C98U&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=30&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>31</td>
+<td>Network Types: LAN, WAN, PAN, CAN, MAN, SAN, WLAN</td>
+<td>4:56</td>
+<td><a href="https://www.youtube.com/watch?v=4_zSIXb7tLQ&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=31&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>32</td>
+<td>LAN, WAN, SUBNET - EXPLAINED</td>
+<td>4:55</td>
+<td><a href="https://www.youtube.com/watch?v=NyZWSvSj8ek&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=32&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>71</td>
+<td>Routing Tables | CCNA - Explained</td>
+<td>13:13</td>
+<td><a href="https://www.youtube.com/watch?v=CGmTvukObOw&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=71&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>73</td>
+<td>VLANs, Tagging, Trunking, VxLAN, &amp; Native VLAN</td>
+<td>9:30</td>
+<td><a href="https://www.youtube.com/watch?v=MNZa-S4E-To&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=73&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>75</td>
+<td>Collision Domain vs Broadcast Domain</td>
+<td>6:40</td>
+<td><a href="https://www.youtube.com/watch?v=C2FrTZxi_NI&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=75&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>79</td>
+<td>CDN - Content Delivery Network - Explained</td>
+<td>6:20</td>
+<td><a href="https://www.youtube.com/watch?v=nhhfSBm6v4A&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=79&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>80</td>
+<td>What is VoIP?</td>
+<td>7:34</td>
+<td><a href="https://www.youtube.com/watch?v=n_b2sJP2pBk&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=80&amp;pp=iAQB">Watch</a></td>
+</tr>
+</tbody>
+</table></tb>
+<hr>
+<h4>5. Wireless Networking</h4>
+<tb class="d-block scroll py-2 scroll-both scroll-min scroll-on-hover"><table class="table table-striped table-bordered mx-auto">
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Duration</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>34</td>
+<td>WIFI (wireless) Standards and Generations Explained</td>
+<td>9:21</td>
+<td><a href="https://www.youtube.com/watch?v=hhks5xSpM-0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=34&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>35</td>
+<td>2.4 GHz vs 5 GHz WiFi: What is the difference?</td>
+<td>5:39</td>
+<td><a href="https://www.youtube.com/watch?v=J_bf_KE5llQ&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=35&amp;pp=iAQB0gcJCSAMAYcqIYzv">Watch</a></td>
+</tr>
+<tr>
+<td>36</td>
+<td>Tri-Band WiFi Router Explained</td>
+<td>5:16</td>
+<td><a href="https://www.youtube.com/watch?v=gTrXgNtqyxA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=36&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>37</td>
+<td>MU-MIMO Explained</td>
+<td>6:25</td>
+<td><a href="https://www.youtube.com/watch?v=B2h8FohnwUs&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=37&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>38</td>
+<td>Wireless Bridge Mode - Networking</td>
+<td>6:59</td>
+<td><a href="https://www.youtube.com/watch?v=x0ult-Ln9hc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=38&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>39</td>
+<td>WiFi Range Extender - WiFi Booster explained - Which is the best?</td>
+<td>6:15</td>
+<td><a href="https://www.youtube.com/watch?v=1rJ1tSzgvpE&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=39&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>40</td>
+<td>Mesh Wifi Explained - Which is the best? - Google Wifi</td>
+<td>4:51</td>
+<td><a href="https://www.youtube.com/watch?v=XaOcjHrdMFE&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=40&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>41</td>
+<td>WiFi 6 Explained</td>
+<td>8:07</td>
+<td><a href="https://www.youtube.com/watch?v=Y7OWUg_kmK4&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=41&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>42</td>
+<td>WiFi 7 Explained</td>
+<td>8:36</td>
+<td><a href="https://www.youtube.com/watch?v=gVBEcvMHKr0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=42&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>43</td>
+<td>WiFi (Wireless) Password Security - WEP, WPA, WPA2, WPA3, WPS Explained</td>
+<td>8:40</td>
+<td><a href="https://www.youtube.com/watch?v=WZaIfyvERcA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=43&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>44</td>
+<td>What is a Guest Network?</td>
+<td>5:09</td>
+<td><a href="https://www.youtube.com/watch?v=R1qJ87Fo5_k&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=44&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>45</td>
+<td>Bluetooth vs WiFi - What's the difference?</td>
+<td>4:40</td>
+<td><a href="https://www.youtube.com/watch?v=mPMGRILsOVk&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=45&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>46</td>
+<td>What is a Hotspot?</td>
+<td>5:26</td>
+<td><a href="https://www.youtube.com/watch?v=ktxC3vDukbc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=46&amp;pp=iAQB">Watch</a></td>
+</tr>
+</tbody>
+</table></tb>
+<hr>
+<h4>6. Network Security</h4>
+<tb class="d-block scroll py-2 scroll-both scroll-min scroll-on-hover"><table class="table table-striped table-bordered mx-auto">
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Duration</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21</td>
+<td>ARP Spoofing | Poisoning Explained</td>
+<td>3:27</td>
+<td><a href="https://www.youtube.com/watch?v=cZ-7R8juECk&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=21&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>50</td>
+<td>VPN (Virtual Private Network) Explained</td>
+<td>7:11</td>
+<td><a href="https://www.youtube.com/watch?v=R-JUOpCgTZc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=50&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>51</td>
+<td>IPsec Explained</td>
+<td>6:03</td>
+<td><a href="https://www.youtube.com/watch?v=xTH1ZA_qUvA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=51&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>52</td>
+<td>How a DDOS Attack Works. How Hackers Can Bring Down a Website or Server</td>
+<td>9:03</td>
+<td><a href="https://www.youtube.com/watch?v=YthJmMZ0WkA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=52&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>53</td>
+<td>What Is Phishing?</td>
+<td>8:32</td>
+<td><a href="https://www.youtube.com/watch?v=9JD7E4-ITvM&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=53&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>54</td>
+<td>MAC Flooding Attack Explained</td>
+<td>4:32</td>
+<td><a href="https://www.youtube.com/watch?v=ZwQREzriwpA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=54&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>55</td>
+<td>What is a Honeypot?</td>
+<td>7:28</td>
+<td><a href="https://www.youtube.com/watch?v=NnJ9tAFvH2U&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=55&amp;pp=iAQB">Watch</a></td>
+</tr>
+</tbody>
+</table></tb>
+<hr>
+<h4>7. Cloud, Virtualization &amp; Modern Infrastructure</h4>
+<tb class="d-block scroll py-2 scroll-both scroll-min scroll-on-hover"><table class="table table-striped table-bordered mx-auto">
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Duration</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>59</td>
+<td>Cloud Computing Explained</td>
+<td>8:37</td>
+<td><a href="https://www.youtube.com/watch?v=_a6us8kaq0g&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=59&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>60</td>
+<td>Virtual Private Cloud (VPC) Explained</td>
+<td>5:41</td>
+<td><a href="https://www.youtube.com/watch?v=2fPgKvDBfbs&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=60&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>61</td>
+<td>Virtualization Explained</td>
+<td>8:07</td>
+<td><a href="https://www.youtube.com/watch?v=UBVVq-xz5i0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=61&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>62</td>
+<td>Virtual Machines vs Containers</td>
+<td>8:57</td>
+<td><a href="https://www.youtube.com/watch?v=eyNBf1sqdBQ&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=62&amp;pp=iAQB0gcJCSAMAYcqIYzv">Watch</a></td>
+</tr>
+</tbody>
+</table></tb>
+<hr>
+<h4>8. Performance &amp; Bandwidth</h4>
+<tb class="d-block scroll py-2 scroll-both scroll-min scroll-on-hover"><table class="table table-striped table-bordered mx-auto">
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Duration</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>63</td>
+<td>Internet vs WiFi Speed: What Really Matters?</td>
+<td>6:42</td>
+<td><a href="https://www.youtube.com/watch?v=JRXFk5J7h_A&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=63&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>65</td>
+<td>Internet Bandwidth (speed) Explained</td>
+<td>6:21</td>
+<td><a href="https://www.youtube.com/watch?v=DHa9gxRfAmM&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=65&amp;pp=iAQB">Watch</a></td>
+</tr>
+</tbody>
+</table></tb>
+<hr>
+<h4>Troubleshooting &amp; Command-Line Tools</h4>
+<tb class="d-block scroll py-2 scroll-both scroll-min scroll-on-hover"><table class="table table-striped table-bordered mx-auto">
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Duration</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>28</td>
+<td>PING Command - Troubleshooting Networks</td>
+<td>9:14</td>
+<td><a href="https://www.youtube.com/watch?v=IIicPE38O-s&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=28&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>29</td>
+<td>Traceroute (tracert) Explained - Network Troubleshooting</td>
+<td>9:24</td>
+<td><a href="https://www.youtube.com/watch?v=up3bcBLZS74&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=29&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>68</td>
+<td>IPCONFIG Explained - Flush DNS Cache</td>
+<td>8:55</td>
+<td><a href="https://www.youtube.com/watch?v=ZKhorleA5aA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=68&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>69</td>
+<td>NETSTAT Command Explained</td>
+<td>6:10</td>
+<td><a href="https://www.youtube.com/watch?v=8UZFpCQeXnM&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=69&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>70</td>
+<td>Windows Command Line Tools</td>
+<td>14:08</td>
+<td><a href="https://www.youtube.com/watch?v=Jfq_BYhxvy0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=70&amp;pp=iAQB">Watch</a></td>
+</tr>
+<tr>
+<td>72</td>
+<td>How Does the Internet Work? | Data Packets</td>
+<td>5:35</td>
+<td><a href="https://www.youtube.com/watch?v=KjD3KANH-xc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=72&amp;pp=iAQB">Watch</a></td>
+</tr>
+</tbody>
+</table></tb>
+<hr>
+<h4>Certification &amp; Full Courses</h4>
+<tb class="d-block scroll py-2 scroll-both scroll-min scroll-on-hover"><table class="table table-striped table-bordered mx-auto">
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Duration</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>82</td>
+<td>CompTIA Network+ N10-009 Full Certification Course</td>
+<td>4:17:16</td>
+<td><a href="https://www.youtube.com/watch?v=CY4hn70K3r8&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=82&amp;pp=iAQB">Watch</a></td>
+</tr>
+</tbody>
+</table></tb>
+<hr>
+<p><strong>Total Videos:</strong> 82<br>
+<strong>Playlist Link:</strong> <a href="https://www.youtube.com/playlist?list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg">Networking Animated Videos</a></p>
+</dl>
+</temp>++ Youtube Sources
+
+## Networking Animated Videos — Organized Link Index
+
+**Source Playlist:** [Networking Animated Videos](https://www.youtube.com/playlist?list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg)
+**Channel:** [PowerCert Animated Videos](https://www.youtube.com/@PowerCertAnimatedVideos)
+
+---
+
+#### 1. Networking Hardware &amp; Devices
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 1 | Modem vs Router - What's the difference? | 7:00 | [Watch](https://www.youtube.com/watch?v=Mad4kQ5835Y&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=1&amp;pp=iAQB0gcJCSAMAYcqIYzv) |
+| 2 | Hub, Switch, &amp; Router Explained - What's the difference? | 7:22 | [Watch](https://www.youtube.com/watch?v=1z0ULvg_pW8&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=2&amp;pp=iAQB) |
+| 3 | Layer 2 vs Layer 3 Switches | 6:02 | [Watch](https://www.youtube.com/watch?v=bdNS0K4Bt8U&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=3&amp;pp=iAQB) |
+| 4 | Wireless Access Point vs Wi-Fi Router | 6:26 | [Watch](https://www.youtube.com/watch?v=OxiY4yf6GGg&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=4&amp;pp=iAQB) |
+| 10 | Networking Tools - Hardware | 8:21 | [Watch](https://www.youtube.com/watch?v=HAceoquch1c&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=10&amp;pp=iAQB) |
+| 33 | What is a Firewall? | 6:26 | [Watch](https://www.youtube.com/watch?v=kDEX1HXybrU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=33&amp;pp=iAQB) |
+| 56 | What is a Proxy Server? | 4:43 | [Watch](https://www.youtube.com/watch?v=5cPIukqXe5w&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=56&amp;pp=iAQB) |
+| 57 | Proxy vs Reverse Proxy Explained | 8:05 | [Watch](https://www.youtube.com/watch?v=RXXRguaHZs0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=57&amp;pp=iAQB0gcJCSAMAYcqIYzv) |
+| 58 | What is a Jump Server? (Bastion Host) | 7:10 | [Watch](https://www.youtube.com/watch?v=mwQBqhDS7z8&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=58&amp;pp=iAQB) |
+| 64 | Load Balancer Explained | 9:12 | [Watch](https://www.youtube.com/watch?v=1fN2UDbtGDQ&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=64&amp;pp=iAQB) |
+| 66 | NAS vs SAN - Network Attached Storage vs Storage Area Network | 4:27 | [Watch](https://www.youtube.com/watch?v=3yZDDr0JKVc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=66&amp;pp=iAQB0gcJCSAMAYcqIYzv) |
+
+---
+
+#### 2. Cables, Connectors &amp; Physical Infrastructure
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 5 | Cable vs DSL vs Fiber Internet Explained | 6:47 | [Watch](https://www.youtube.com/watch?v=qQYiwmamq38&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=5&amp;pp=iAQB) |
+| 6 | Ethernet Cables, UTP vs STP, Straight vs Crossover, CAT 5,5e,6,7,8 Network Cables | 7:07 | [Watch](https://www.youtube.com/watch?v=_NX99ad2FUA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=6&amp;pp=iAQB) |
+| 7 | Plenum vs Non Plenum PVC Network Ethernet Cables | 5:26 | [Watch](https://www.youtube.com/watch?v=XjISrRz98Xg&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=7&amp;pp=iAQB) |
+| 8 | What is a Patch Panel? (cable management) | 6:43 | [Watch](https://www.youtube.com/watch?v=FfQui0mk85Q&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=8&amp;pp=iAQB) |
+| 9 | Network Connectors Explained | 9:43 | [Watch](https://www.youtube.com/watch?v=ktTtAQIvYkg&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=9&amp;pp=iAQB) |
+| 78 | Powerline Ethernet Networking Explained | 3:21 | [Watch](https://www.youtube.com/watch?v=1SpY1vwEIJI&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=78&amp;pp=iAQB) |
+
+---
+
+#### 3. Protocols &amp; Addressing
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 11 | How a DNS Server (Domain Name System) works | 6:05 | [Watch](https://www.youtube.com/watch?v=mpQZVYPuDGU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=11&amp;pp=iAQB) |
+| 12 | DNS Records Explained | 14:14 | [Watch](https://www.youtube.com/watch?v=HnUDtycXSNE&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=12&amp;pp=iAQB) |
+| 13 | DDNS - Dynamic DNS Explained | 5:31 | [Watch](https://www.youtube.com/watch?v=rOLGvZagdC0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=13&amp;pp=iAQB) |
+| 14 | NAT Explained - Network Address Translation | 4:26 | [Watch](https://www.youtube.com/watch?v=FTUV0t6JaDA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=14&amp;pp=iAQB) |
+| 15 | DHCP Explained - Dynamic Host Configuration Protocol | 10:10 | [Watch](https://www.youtube.com/watch?v=e6-TaH5bkjo&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=15&amp;pp=iAQB) |
+| 16 | What Happens When DHCP Fails? APIPA Saves You | 3:42 | [Watch](https://www.youtube.com/watch?v=0tEjUR6tjBU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=16&amp;pp=iAQB) |
+| 17 | IP Address - IPv4 vs IPv6 Tutorial | 9:23 | [Watch](https://www.youtube.com/watch?v=ThdO9beHhpA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=17&amp;pp=iAQB) |
+| 18 | Public vs Private IP Address | 7:11 | [Watch](https://www.youtube.com/watch?v=po8ZFG0Xc4Q&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=18&amp;pp=iAQB) |
+| 19 | MAC Address Explained | 8:23 | [Watch](https://www.youtube.com/watch?v=TIiQiw7fpsU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=19&amp;pp=iAQB) |
+| 20 | ARP Explained - Address Resolution Protocol | 4:22 | [Watch](https://www.youtube.com/watch?v=cn8Zxh9bPio&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=20&amp;pp=iAQB) |
+| 22 | Port Forwarding Explained | 9:04 | [Watch](https://www.youtube.com/watch?v=2G1ueMDgwxw&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=22&amp;pp=iAQB) |
+| 24 | FTP (File Transfer Protocol), SFTP, TFTP Explained | 7:54 | [Watch](https://www.youtube.com/watch?v=tOj8MSEIbfA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=24&amp;pp=iAQB) |
+| 27 | TCP vs UDP Comparison | 4:37 | [Watch](https://www.youtube.com/watch?v=uwoD5YsGACg&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=27&amp;pp=iAQB) |
+| 47 | SSL, TLS, HTTP, HTTPS Explained | 6:31 | [Watch](https://www.youtube.com/watch?v=hExRDVZHhig&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=47&amp;pp=iAQB) |
+| 48 | CSMA/CD and CSMA/CA Explained | 6:14 | [Watch](https://www.youtube.com/watch?v=iKn0GzF5-IU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=48&amp;pp=iAQB) |
+| 49 | Spanning Tree Protocol \| CCNA - Explained | 11:55 | [Watch](https://www.youtube.com/watch?v=6MW5P6Ci7lw&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=49&amp;pp=iAQB) |
+| 67 | Network Ports Explained | 10:33 | [Watch](https://www.youtube.com/watch?v=g2fT-g9PX9o&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=67&amp;pp=iAQB) |
+| 74 | Default Gateway Explained | 6:35 | [Watch](https://www.youtube.com/watch?v=pCcJFdYNamc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=74&amp;pp=iAQB) |
+| 76 | Subnet Mask - Explained | 17:55 | [Watch](https://www.youtube.com/watch?v=s_Ntt6eTn94&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=76&amp;pp=iAQB) |
+| 77 | Telnet vs SSH Explained | 5:00 | [Watch](https://www.youtube.com/watch?v=tZop-zjYkrU&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=77&amp;pp=iAQB) |
+| 81 | Circuit Switching vs Packet Switching | 5:35 | [Watch](https://www.youtube.com/watch?v=G7n8thqwO2c&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=81&amp;pp=iAQB0gcJCSAMAYcqIYzv) |
+
+---
+
+#### 4. Network Design &amp; Topologies
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 23 | What is a DMZ? (Demilitarized Zone) | 6:14 | [Watch](https://www.youtube.com/watch?v=dqlzQXo1wqo&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=23&amp;pp=iAQB) |
+| 25 | VLAN Explained | 4:38 | [Watch](https://www.youtube.com/watch?v=jC6MJTh9fRE&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=25&amp;pp=iAQB) |
+| 26 | Subnets vs VLANs | 5:51 | [Watch](https://www.youtube.com/watch?v=6_giEv20En0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=26&amp;pp=iAQB) |
+| 30 | Network Topologies (Star, Bus, Ring, Mesh, Ad hoc, Infrastructure, &amp; Wireless Mesh Topology) | 8:58 | [Watch](https://www.youtube.com/watch?v=zbqrNg4C98U&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=30&amp;pp=iAQB) |
+| 31 | Network Types: LAN, WAN, PAN, CAN, MAN, SAN, WLAN | 4:56 | [Watch](https://www.youtube.com/watch?v=4_zSIXb7tLQ&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=31&amp;pp=iAQB) |
+| 32 | LAN, WAN, SUBNET - EXPLAINED | 4:55 | [Watch](https://www.youtube.com/watch?v=NyZWSvSj8ek&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=32&amp;pp=iAQB) |
+| 71 | Routing Tables \| CCNA - Explained | 13:13 | [Watch](https://www.youtube.com/watch?v=CGmTvukObOw&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=71&amp;pp=iAQB) |
+| 73 | VLANs, Tagging, Trunking, VxLAN, &amp; Native VLAN | 9:30 | [Watch](https://www.youtube.com/watch?v=MNZa-S4E-To&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=73&amp;pp=iAQB) |
+| 75 | Collision Domain vs Broadcast Domain | 6:40 | [Watch](https://www.youtube.com/watch?v=C2FrTZxi_NI&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=75&amp;pp=iAQB) |
+| 79 | CDN - Content Delivery Network - Explained | 6:20 | [Watch](https://www.youtube.com/watch?v=nhhfSBm6v4A&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=79&amp;pp=iAQB) |
+| 80 | What is VoIP? | 7:34 | [Watch](https://www.youtube.com/watch?v=n_b2sJP2pBk&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=80&amp;pp=iAQB) |
+
+---
+
+#### 5. Wireless Networking
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 34 | WIFI (wireless) Standards and Generations Explained | 9:21 | [Watch](https://www.youtube.com/watch?v=hhks5xSpM-0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=34&amp;pp=iAQB) |
+| 35 | 2.4 GHz vs 5 GHz WiFi: What is the difference? | 5:39 | [Watch](https://www.youtube.com/watch?v=J_bf_KE5llQ&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=35&amp;pp=iAQB0gcJCSAMAYcqIYzv) |
+| 36 | Tri-Band WiFi Router Explained | 5:16 | [Watch](https://www.youtube.com/watch?v=gTrXgNtqyxA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=36&amp;pp=iAQB) |
+| 37 | MU-MIMO Explained | 6:25 | [Watch](https://www.youtube.com/watch?v=B2h8FohnwUs&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=37&amp;pp=iAQB) |
+| 38 | Wireless Bridge Mode - Networking | 6:59 | [Watch](https://www.youtube.com/watch?v=x0ult-Ln9hc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=38&amp;pp=iAQB) |
+| 39 | WiFi Range Extender - WiFi Booster explained - Which is the best? | 6:15 | [Watch](https://www.youtube.com/watch?v=1rJ1tSzgvpE&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=39&amp;pp=iAQB) |
+| 40 | Mesh Wifi Explained - Which is the best? - Google Wifi | 4:51 | [Watch](https://www.youtube.com/watch?v=XaOcjHrdMFE&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=40&amp;pp=iAQB) |
+| 41 | WiFi 6 Explained | 8:07 | [Watch](https://www.youtube.com/watch?v=Y7OWUg_kmK4&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=41&amp;pp=iAQB) |
+| 42 | WiFi 7 Explained | 8:36 | [Watch](https://www.youtube.com/watch?v=gVBEcvMHKr0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=42&amp;pp=iAQB) |
+| 43 | WiFi (Wireless) Password Security - WEP, WPA, WPA2, WPA3, WPS Explained | 8:40 | [Watch](https://www.youtube.com/watch?v=WZaIfyvERcA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=43&amp;pp=iAQB) |
+| 44 | What is a Guest Network? | 5:09 | [Watch](https://www.youtube.com/watch?v=R1qJ87Fo5_k&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=44&amp;pp=iAQB) |
+| 45 | Bluetooth vs WiFi - What's the difference? | 4:40 | [Watch](https://www.youtube.com/watch?v=mPMGRILsOVk&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=45&amp;pp=iAQB) |
+| 46 | What is a Hotspot? | 5:26 | [Watch](https://www.youtube.com/watch?v=ktxC3vDukbc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=46&amp;pp=iAQB) |
+
+---
+
+#### 6. Network Security
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 21 | ARP Spoofing \| Poisoning Explained | 3:27 | [Watch](https://www.youtube.com/watch?v=cZ-7R8juECk&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=21&amp;pp=iAQB) |
+| 50 | VPN (Virtual Private Network) Explained | 7:11 | [Watch](https://www.youtube.com/watch?v=R-JUOpCgTZc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=50&amp;pp=iAQB) |
+| 51 | IPsec Explained | 6:03 | [Watch](https://www.youtube.com/watch?v=xTH1ZA_qUvA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=51&amp;pp=iAQB) |
+| 52 | How a DDOS Attack Works. How Hackers Can Bring Down a Website or Server | 9:03 | [Watch](https://www.youtube.com/watch?v=YthJmMZ0WkA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=52&amp;pp=iAQB) |
+| 53 | What Is Phishing? | 8:32 | [Watch](https://www.youtube.com/watch?v=9JD7E4-ITvM&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=53&amp;pp=iAQB) |
+| 54 | MAC Flooding Attack Explained | 4:32 | [Watch](https://www.youtube.com/watch?v=ZwQREzriwpA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=54&amp;pp=iAQB) |
+| 55 | What is a Honeypot? | 7:28 | [Watch](https://www.youtube.com/watch?v=NnJ9tAFvH2U&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=55&amp;pp=iAQB) |
+
+---
+
+#### 7. Cloud, Virtualization &amp; Modern Infrastructure
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 59 | Cloud Computing Explained | 8:37 | [Watch](https://www.youtube.com/watch?v=_a6us8kaq0g&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=59&amp;pp=iAQB) |
+| 60 | Virtual Private Cloud (VPC) Explained | 5:41 | [Watch](https://www.youtube.com/watch?v=2fPgKvDBfbs&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=60&amp;pp=iAQB) |
+| 61 | Virtualization Explained | 8:07 | [Watch](https://www.youtube.com/watch?v=UBVVq-xz5i0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=61&amp;pp=iAQB) |
+| 62 | Virtual Machines vs Containers | 8:57 | [Watch](https://www.youtube.com/watch?v=eyNBf1sqdBQ&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=62&amp;pp=iAQB0gcJCSAMAYcqIYzv) |
+
+---
+
+#### 8. Performance &amp; Bandwidth
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 63 | Internet vs WiFi Speed: What Really Matters? | 6:42 | [Watch](https://www.youtube.com/watch?v=JRXFk5J7h_A&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=63&amp;pp=iAQB) |
+| 65 | Internet Bandwidth (speed) Explained | 6:21 | [Watch](https://www.youtube.com/watch?v=DHa9gxRfAmM&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=65&amp;pp=iAQB) |
+
+---
+
+#### Troubleshooting &amp; Command-Line Tools
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 28 | PING Command - Troubleshooting Networks | 9:14 | [Watch](https://www.youtube.com/watch?v=IIicPE38O-s&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=28&amp;pp=iAQB) |
+| 29 | Traceroute (tracert) Explained - Network Troubleshooting | 9:24 | [Watch](https://www.youtube.com/watch?v=up3bcBLZS74&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=29&amp;pp=iAQB) |
+| 68 | IPCONFIG Explained - Flush DNS Cache | 8:55 | [Watch](https://www.youtube.com/watch?v=ZKhorleA5aA&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=68&amp;pp=iAQB) |
+| 69 | NETSTAT Command Explained | 6:10 | [Watch](https://www.youtube.com/watch?v=8UZFpCQeXnM&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=69&amp;pp=iAQB) |
+| 70 | Windows Command Line Tools | 14:08 | [Watch](https://www.youtube.com/watch?v=Jfq_BYhxvy0&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=70&amp;pp=iAQB) |
+| 72 | How Does the Internet Work? \| Data Packets | 5:35 | [Watch](https://www.youtube.com/watch?v=KjD3KANH-xc&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=72&amp;pp=iAQB) |
+
+---
+
+#### Certification &amp; Full Courses
+
+| # | Title | Duration | Link |
+|---|-------|----------|------|
+| 82 | CompTIA Network+ N10-009 Full Certification Course | 4:17:16 | [Watch](https://www.youtube.com/watch?v=CY4hn70K3r8&amp;list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg&amp;index=82&amp;pp=iAQB) |
+
+---
+
+**Total Videos:** 82
+**Playlist Link:** [Networking Animated Videos](https://www.youtube.com/playlist?list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg)
+
++++</md></sn>
