@@ -27,7 +27,7 @@
     <tags>#02.computer network</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Sep 23 2026 18:38:34 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Sep 23 2026 19:11:12 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-FgvEpCo0lo</id>
     <duration></duration>
   </config>
@@ -67,7 +67,7 @@ Computer networks evolved from `simple remote computer communication` in the 194
 | 1986 | NSFNET launched |
 | 1995 | Ethernet reached 100 Mbit/s |
 | 1998 | Ethernet reached 1 Gbit/s |
-</md></sn><sn><md>### Total Content Summary
+</md></sn><sn><md>###  Content Summary
 
 - Early origins of computer networks (1940–1960s).
 - Development of modems and time-sharing.
@@ -78,4 +78,141 @@ Computer networks evolved from `simple remote computer communication` in the 194
 - Commercial applications, including SABRE, X.25, and fiber networks.
 - Ethernet speed improvements and the growth of modern networking.
 
-**Main concept:** Computer networking developed progressively from remote computer communication and resource sharing into interconnected networks using `packet switching, internetworking protocols, and high-speed Ethernet`.</md></sn>
+**Main concept:** Computer networking developed progressively from remote computer communication and resource sharing into interconnected networks using `packet switching, internetworking protocols, and high-speed Ethernet`.</md></sn><sn><md>### How Does a Basic Computer Network Work?
+
+&gt; A computer network is a *system* in `which two or more computers or devices are connected` to each other to **share data, resources, and information**.
+
+For example, when you send a message through the internet, your device sends data through a network to another device or server.
+
+**Basic Concept of a Computer Network**
+A computer network connects different devices using wired or wireless communication.
+
++++ view
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/example_of_network_devices.jpeg)
++++
+
+Examples of Network Devices
+- **Computer**: Sends and receives data.
+- **Server**: Provides services or resources to other devices.
+- **Workstation** : Personal dektop or computer by which user interact with server.
+- **Router**: Connects different networks and forwards data between them.
+- **Switch**: Connects devices within a local network.
+- **Transmission medium**: Carries data, such as Ethernet cables or Wi-Fi radio signals.
+</md></sn><sn><md>### How a Basic Computer Network Works
+
+Suppose Computer A wants to send a file to Computer B.
+
+**Step-by-Step Process**
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/how-network-works-diagram.jpeg)
+
+- **Step 1: Sending device (Sender)**
+  Computer A creates the data (for example, a file or message) and requests that it be sent to Computer B.
+
+- **Step 2: Data is divided into packets**
+  The data is divided into smaller units called packets. Network protocols add information needed for delivery.
+
+- **Step 3: Data travels through the network**
+  The packets travel through a cable, Wi-Fi connection, switch, or router, depending on the network structure.
+
+- **Step 4: Receiving device**
+  Computer B receives the packets and uses networking protocols to process and reconstruct the transmitted data.
+
++++ **Basic Data Flow Diagram**
+
+```
+                    HOW DATA TRAVELS THROUGH A NETWORK
+                    =================================
+
+┌──────────────────┐
+│  STEP 1          │
+│  SENDING DEVICE  │
+│                  │
+│  Computer A      │
+│  Creates data    │
+│  (File/Message)  │
+└────────┬─────────┘
+         │
+         │ Data
+         ▼
+┌──────────────────┐
+│  STEP 2          │
+│  DATA → PACKETS  │
+│                  │
+│  ┌────┐ ┌────┐   │
+│  │ P1 │ │ P2 │   │
+│  └────┘ └────┘   │
+│  ┌────┐ ┌────┐   │
+│  │ P3 │ │ P4 │   │
+│  └────┘ └────┘   │
+│                  │
+│  Protocols add   │
+│  delivery info   │
+└────────┬─────────┘
+         │
+         │ Packets
+         ▼
+┌─────────────────────────────┐
+│  STEP 3                     │
+│  DATA TRAVELS THROUGH       │
+│  THE NETWORK                │
+│                             │
+│  Cable / Wi-Fi              │
+│       │                     │
+│       ▼                     │
+│   ┌────────┐     ┌────────┐ │
+│   │ Switch │ ──► │ Router │ │
+│   └────────┘     └────────┘ │
+└──────────────┬──────────────┘
+               │
+               │ Packets
+               ▼
+┌──────────────────────────────┐
+│  STEP 4                      │
+│  RECEIVING DEVICE            │
+│                              │
+│  Computer B                  │
+│       │                      │
+│       ▼                      │
+│  Receives packets            │
+│       │                      │
+│       ▼                      │
+│  Protocols process packets   │
+│       │                      │
+│       ▼                      │
+│  Packets are reconstructed   │
+│       │                      │
+│       ▼                      │
+│  Original File / Message     │
+└──────────────────────────────┘
+
+
+        DATA FLOW
+
+ Computer A
+     │
+     ▼
+  Data Created
+     │
+     ▼
+  Data → Packets
+     │
+     ▼
+ Cable / Wi-Fi
+     │
+     ▼
+ Switch / Router
+     │
+     ▼
+  Computer B
+     │
+     ▼
+ Packets Reassembled
+     │
+     ▼
+ Original Data
+ ```
++++
+
+**Main idea:** A network transfers data from a source device to a destination device.
+</md></sn>
