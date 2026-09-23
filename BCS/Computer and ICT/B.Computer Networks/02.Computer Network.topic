@@ -27,7 +27,7 @@
     <tags>#02.computer network</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Sep 23 2026 19:11:12 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Sep 23 2026 19:37:08 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-FgvEpCo0lo</id>
     <duration></duration>
   </config>
@@ -215,4 +215,245 @@ Suppose Computer A wants to send a file to Computer B.
 +++
 
 **Main idea:** A network transfers data from a source device to a destination device.
-</md></sn>
+</md></sn><sn><md>### Main Components of a Computer Network
+
+- **Sender**
+
+   The device that initiates and sends data.
+
+   Examples:
+   - Laptop
+   - Desktop computer
+   - Smartphone
+
+- **Receiver**
+
+   The device that receives the transmitted data.
+
+   Examples:
+   - Another computer
+   - A printer
+   - A web server
+
+- **Transmission Medium**
+
+   The path through which data travels.
+
+   | Medium | Description |
+   | --- | --- |
+   | Ethernet cable | Transfers data using `electrical signals` |
+   | Fiber optic cable | Transfers data using `light` |
+   | Wi-Fi | Transfers data using `radio waves` |
+   | Mobile network | Transfers data using `cellular radio communication` |
+
+- **Network Devices**
+
+   | Device | Function |
+   | --- | --- |
+   | Switch | Connects `devices` in a local network and forwards Ethernet frames |
+   | Router | Connects `networks` and forwards IP packets |
+   | Modem | `Converts or adapts signals` for certain internet access technologies |
+   | Access Point | Provides wireless network connectivity |
+</md></sn><sn><md>### How Data Travels Through a Network
+
+When you send data, it passes through several networking layers. These layers help different devices communicate **using agreed rules** called `protocols`.
+
+Example: Opening a Website
+
+Suppose you enter `www.example.com` in your browser.
+
+1. **Your computer** — Requests a website using the browser.
+2. **Router** — Forwards traffic toward the destination network.
+3. **Internet** — Multiple networks and routers carry the traffic.
+4. **Web server** — Processes the request and sends a response.
+
+The response travels back to your device, and the browser displays the website.
+</md></sn><sn><md>### Network Protocols
+
+A protocol is a `set of rules` that defines *how devices communicate and exchange data*. 
+Different protocols perform different tasks.
+
+| Protocol | Main function |
+| --- | --- |
+| HTTP | Transfers `web content` |
+| HTTPS | Transfers web content with `encryption using TLS` |
+| IP | Addresses and routes packets |
+| TCP | Provides reliable, ordered delivery of data |
+| UDP | Transfers datagrams without TCP's reliability mechanisms |
+| DNS | Resolves domain names into IP addresses |
+| Ethernet | Defines wired local network communication |
+| Wi-Fi (IEEE 802.11) | Defines wireless local network communication |
+
+**Example: Opening a Website**
+
+```
+Browser
+   |
+   | HTTPS request
+   v
+TCP / TLS (common HTTPS setup)
+   |
+   v
+IP
+   |
+   v
+Ethernet / Wi-Fi
+   |
+   v
+Network / Internet
+```
+
+This is a simplified view. Modern HTTP can also run over QUIC/HTTP/3, which uses UDP instead of TCP.
+</md></sn><sn><md>### IP Address and MAC Address
+
+Devices on a network use addressing information to communicate.
+
+:::.row
+
+:::.col-12 .col-lg-6
+#### MAC Address
+
+A MAC address is a link-layer address used in technologies such as Ethernet and Wi-Fi.
+
+Example:
+```
+00:1A:2B:3C:4D:5E
+```
+
+It is used for communication within a local network technology.
+:::
+
+:::.col-12 .col-lg-6
+#### IP Address
+
+An IP address identifies a network interface or endpoint at the Internet Protocol layer.
+
+Example:
+```
+192.168.1.10
+```
+
+A device's IP address helps routers determine where to forward IP packets.
+:::
+
+:::
+
+##### Difference
+
+| IP Address | MAC Address |
+| --- | --- |
+| Used at the network layer | Used at the link layer |
+| Helps route IP packets | Helps deliver frames on a local link |
+| Can change when a device joins another network | Typically associated with a network interface, though it can be changed or randomized |
+</md></sn><sn><md>### How a Switch Works
+
+A network switch connects devices within a local area network (LAN).
+
+Example:
+```
+       +-------------+
+       |   Switch    |
+       +-------------+
+        /     |     \
+       /      |      \
++--------+ +--------+ +--------+
+| PC A   | | PC B   | | PC C   |
++--------+ +--------+ +--------+
+```
+
+**Switch Operation**
+
+1. Computer A sends an Ethernet frame.
+2. The switch examines the destination MAC address.
+3. It forwards the frame through the appropriate port when it knows the destination.
+4. The receiving device processes the frame.
+
+Switches learn MAC addresses by observing the source addresses of incoming frames.
+</md></sn><sn><md>### How a Router Works
+
+A router connects separate IP networks and forwards packets between them.
+
+Example:
+```
++-------------+       +-------------+       +----------------+
+| PC / Phone  | ----&gt; | Home Router | ----&gt; | Internet       |
+| Local LAN   |       |             |       | Other Networks |
++-------------+       +-------------+       +----------------+
+```
+
+**Router Operation**
+
+1. A device creates an IP packet.
+2. The packet is sent to its default gateway, often the local router.
+3. The router examines the destination IP address.
+4. It selects a route using its routing table.
+5. The router forwards the packet to the next hop or destination network.
+
+Home routers often also provide DHCP, DNS forwarding, Wi-Fi, and NAT, depending on their configuration.
+</md></sn><sn><md>### Types of Computer Networks
+
+| Type | Full form | Coverage |
+| --- | --- | --- |
+| PAN | Personal Area Network | Personal devices, such as Bluetooth devices |
+| LAN | Local Area Network | Home, office, or building |
+| MAN | Metropolitan Area Network | City or metropolitan area |
+| WAN | Wide Area Network | Large geographical area |
+| Internet | Interconnected global network of networks | Worldwide |
+
+**LAN Example**
+
+A computer lab in a university can have multiple computers connected to a switch.
+
+```
+Computer A ----\
+Computer B -----+---- Switch ---- Router ---- Internet
+Computer C ----/
+```
+
+The computers can communicate locally, and the router can provide access to other networks.
+</md></sn><sn><md>### Basic Network Communication Summary
+
+```
++-----------------------+
+| Sender creates data   |
++-----------+-----------+
+            |
+            v
++-----------------------+
+| Data is packetized    |
++-----------+-----------+
+            |
+            v
++-----------------------+
+| Network forwards data |
++-----------+-----------+
+            |
+            v
++-----------------------+
+| Receiver gets packets |
++-----------+-----------+
+            |
+            v
++-----------------------+
+| Data is processed     |
++-----------------------+
+```
+
+The basic process is:
+
+**Create data → Divide/prepare data → Transmit → Forward → Receive → Process**
+</md></sn><sn><md>### Important Terms to Remember
+
+| Term | Simple meaning |
+| --- | --- |
+| Network | Connected devices that communicate |
+| Node | A device or endpoint in a network |
+| Packet | A unit of data carried by a network layer |
+| Protocol | Communication rules |
+| IP address | Network-layer addressing information |
+| MAC address | Link-layer addressing information |
+| Switch | Connects devices in a LAN |
+| Router | Connects networks |
+| Server | Provides services or resources |
+| Client | Requests or uses services |
+</md></sn><sn></sn>
