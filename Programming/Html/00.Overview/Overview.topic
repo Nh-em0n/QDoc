@@ -1,10 +1,1562 @@
 
-  <sn></sn>
+  <sn><md>:::.row
+:::.col-12 .col-lg-8
+## HTML Mastery Roadmap{.text-center}
+
+This roadmap is designed to take you from **complete beginner to advanced HTML**, while keeping the chapters in a logical learning order. It focuses on HTML itself first, then moves into accessibility, semantics, forms, SEO, browser behavior, performance, and modern HTML.
+:::
+
+:::.col-12 .col-lg-4
+![img](https://kvadrat.az/uploads/articles/666205d642ae1.jpg)
+:::
+:::
+
+**Total Curriculum**
+
+* **40 chapters**
+* **Beginner:** Chapters 1–12
+* **Intermediate:** Chapters 13–25
+* **Advanced:** Chapters 26–39
+* **Mastery:** Chapter 40 + real projects
+* Covers HTML syntax, elements, attributes, semantics, forms, media, SVG, Canvas, accessibility, SEO, security, performance, Web Components, browser internals, and production architecture.
+
+</md></sn>
   <config>
     <tags>#overview</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Oct 04 2026 09:15:10 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Oct 04 2026 09:19:56 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-xChzlqNJUp</id>
     <duration></duration>
   </config>
+<sn><md>### Table of Content
+
+
+
++++ **Chapter 1: Introduction to HTML**
+
+
+* What is HTML?
+* What is a markup language?
+* HTML vs CSS vs JavaScript
+* How a web page works
+* How browsers interpret HTML
+* HTML documents and web pages
+* HTML standards
+* HTML5
+* HTML Living Standard
+* Basic HTML terminology
+
+  * Element
+  * Tag
+  * Attribute
+  * Content
+  * Parent
+  * Child
+  * Sibling
+  * Nesting
+* Anatomy of an HTML element
+* Anatomy of an HTML document
+* `.html` files
+* Creating your first HTML page
+* Opening HTML in a browser
+* Browser Developer Tools
+* View Source vs Inspect Element
+
++++
+
++++ **Chapter 2: Basic HTML Document Structure**
+
+
+
+* ``
+* ``
+* ``
+* ``
+* HTML language attribute
+* `lang` attribute
+* `<meta>`
+* `<title>`
+* Character encoding
+* UTF-8
+* Viewport metadata
+* Basic document template
+* HTML comments
+* Whitespace
+* Line breaks
+* HTML parsing basics
+* Valid vs invalid HTML
+
+**Practical Topics**
+
+* Creating a minimal HTML page
+* Creating a reusable HTML boilerplate
+* Understanding the browser DOM from HTML
+
++++
+
++++ **Chapter 3: Text and Content**
+
+
+
+* Headings
+
+  * `&lt;h1&gt;`
+  * `&lt;h2&gt;`
+  * `&lt;h3&gt;`
+  * `&lt;h4&gt;`
+  * `&lt;h5&gt;`
+  * `&lt;h6&gt;`
+* Paragraphs
+* `&lt;p&gt;`
+* Line breaks
+* `&lt;br&gt;`
+* `&lt;hr&gt;`
+* Text formatting
+
+  * `&lt;strong&gt;`
+  * `&lt;b&gt;`
+  * `&lt;em&gt;`
+  * `&lt;i&gt;`
+  * `&lt;mark&gt;`
+  * `&lt;small&gt;`
+  * `&lt;del&gt;`
+  * `&lt;ins&gt;`
+  * `&lt;s&gt;`
+  * `&lt;u&gt;`
+* Subscript
+* Superscript
+* `&lt;sub&gt;`
+* `&lt;sup&gt;`
+* Quotes
+
+  * `&lt;q&gt;`
+  * `&lt;blockquote&gt;`
+* `&lt;cite&gt;`
+* Abbreviations
+* `&lt;abbr&gt;`
+* Contact information
+* `&lt;address&gt;`
+* Code-related elements
+
+  * `&lt;code&gt;`
+  * `&lt;pre&gt;`
+  * `&lt;kbd&gt;`
+  * `&lt;samp&gt;`
+  * `&lt;var&gt;`
+* `&lt;time&gt;`
+* `&lt;data&gt;`
+* `&lt;wbr&gt;`
+* `&lt;bdi&gt;`
+* `&lt;bdo&gt;`
+* HTML entities
+* Special characters
+* Unicode characters
+
++++
+
++++ **Chapter 4: Links and Navigation**
+
+
+
+* `&lt;a&gt;`
+* `href`
+* Absolute URLs
+* Relative URLs
+* Internal links
+* External links
+* Page anchors
+* Fragment identifiers
+* Email links
+* Telephone links
+* Download links
+* `target`
+* `rel`
+* `noopener`
+* `noreferrer`
+* `nofollow`
+* Navigation menus
+* Linking between pages
+* Directory structures
+* URL basics
+
+**Advanced Topics**
+
+* Same-document navigation
+* Cross-origin links
+* Security considerations for external links
+* Accessible link text
+* Link vs button
+
++++
+
++++ **Chapter 5: Images**
+
+
+
+* `&lt;img&gt;`
+* `src`
+* `alt`
+* Image dimensions
+* `width`
+* `height`
+* Image paths
+* Relative image paths
+* Absolute image URLs
+* Image formats
+
+  * JPEG
+  * PNG
+  * GIF
+  * SVG
+  * WebP
+  * AVIF
+* Decorative images
+* Informative images
+* Accessibility and alternative text
+* Image loading
+* `loading`
+* `decoding`
+
+**Advanced Topics**
+
+* Responsive images
+* `&lt;picture&gt;`
+* `srcset`
+* `sizes`
+* Art direction
+* Resolution switching
+* Image performance
+* Lazy loading
+* Image dimensions and layout shift
+* Image SEO
+
++++
+
++++ **Chapter 6: Lists**
+
+
+
+* Unordered lists
+* `&lt;ul&gt;`
+* `&lt;li&gt;`
+* Ordered lists
+* `&lt;ol&gt;`
+* Description lists
+* `&lt;dl&gt;`
+* `&lt;dt&gt;`
+* `&lt;dd&gt;`
+* Nested lists
+* Ordered-list attributes
+
+  * `start`
+  * `reversed`
+  * `type`
+* Lists in navigation
+* Lists for structured content
+* Common list mistakes
+
++++
+
++++ **Chapter 7: Tables**
+
+
+
+* `&lt;table&gt;`
+* `&lt;tr&gt;`
+* `&lt;td&gt;`
+* `&lt;th&gt;`
+* Table captions
+* `&lt;caption&gt;`
+* `&lt;thead&gt;`
+* `&lt;tbody&gt;`
+* `&lt;tfoot&gt;`
+* `colspan`
+* `rowspan`
+* Table headers
+* `scope`
+* Complex table headers
+* `&lt;colgroup&gt;`
+* `&lt;col&gt;`
+
+**Advanced Topics**
+
+* Accessible tables
+* Header relationships
+* Tables vs layout
+* Complex data tables
+* Responsive table considerations
+* When not to use tables
+
++++
+
++++ **Chapter 8: HTML Attributes**
+
+
+
+* What are attributes?
+* Global attributes
+* Boolean attributes
+* Attribute values
+* Quoted vs unquoted attributes
+* Multiple attributes
+* Attribute order
+* Custom attributes
+
+**Important Global Attributes**
+
+* `id`
+* `class`
+* `title`
+* `lang`
+* `dir`
+* `hidden`
+* `tabindex`
+* `style`
+* `contenteditable`
+* `draggable`
+* `spellcheck`
+* `translate`
+* `data-*`
+
+**Advanced Topics**
+
+* `data-*` attributes
+* `dataset`
+* Global attribute inheritance
+* Boolean attributes
+* Enumerated attributes
+* Attribute reflection
+
++++
+
++++ **Chapter 9: HTML Containers and Grouping**
+
+
+
+* `&lt;div&gt;`
+* `&lt;span&gt;`
+* Block-level elements
+* Inline elements
+* Flow content
+* Phrasing content
+* Generic containers
+* When to use `&lt;div&gt;`
+* When to use `&lt;span&gt;`
+* Avoiding unnecessary containers
+* HTML structure and nesting
+
+**Advanced Topics**
+
+* Content categories
+* Permitted content
+* Content models
+* Transparent content models
+
++++
+
++++ **Chapter 10: Semantic HTML**
+
+
+
+* What is semantic HTML?
+* Semantic vs non-semantic HTML
+* Why semantics matter
+* `&lt;header&gt;`
+* `&lt;nav&gt;`
+* `&lt;main&gt;`
+* `&lt;section&gt;`
+* `&lt;article&gt;`
+* `&lt;aside&gt;`
+* `&lt;footer&gt;`
+* `&lt;address&gt;`
+* `&lt;figure&gt;`
+* `&lt;figcaption&gt;`
+* `&lt;details&gt;`
+* `&lt;summary&gt;`
+* `&lt;search&gt;`
+
+**Advanced Topics**
+
+* Semantic document structure
+* Landmark elements
+* Sectioning content
+* Heading hierarchy
+* Outline concepts
+* Semantic HTML and accessibility
+* Semantic HTML and SEO
+* Choosing between `&lt;section&gt;`, `&lt;article&gt;`, and `&lt;div&gt;`
+
++++
+
++++ **Chapter 11: Page Layout Structure**
+
+
+
+* Standard HTML page structure
+* Header
+* Navigation
+* Main content
+* Sidebar
+* Sections
+* Articles
+* Footer
+* Multiple navigation areas
+* Nested sections
+* Blog structure
+* Documentation structure
+* News/article structure
+* E-commerce page structure
+
+**Practical Projects**
+
+* Personal website structure
+* Blog page
+* Documentation page
+* News article page
+* Product page
+
++++
+
++++ **Chapter 12: Forms Fundamentals**
+
+
+
+* `&lt;form&gt;`
+* `action`
+* `method`
+* GET
+* POST
+* `&lt;input&gt;`
+* `&lt;label&gt;`
+* `&lt;textarea&gt;`
+* `&lt;button&gt;`
+* `&lt;select&gt;`
+* `&lt;option&gt;`
+* `&lt;optgroup&gt;`
+* `&lt;fieldset&gt;`
+* `&lt;legend&gt;`
+
+**Input Types**
+
+* `text`
+* `password`
+* `email`
+* `number`
+* `tel`
+* `url`
+* `search`
+* `date`
+* `time`
+* `datetime-local`
+* `month`
+* `week`
+* `color`
+* `range`
+* `checkbox`
+* `radio`
+* `file`
+* `hidden`
+* `submit`
+* `reset`
+* `button`
+
++++
+
++++ **Chapter 13: Forms Advanced**
+
+
+
+* `name`
+* `value`
+* `id`
+* `for`
+* `placeholder`
+* `required`
+* `disabled`
+* `readonly`
+* `checked`
+* `selected`
+* `multiple`
+* `autocomplete`
+* `autofocus`
+* `min`
+* `max`
+* `step`
+* `minlength`
+* `maxlength`
+* `pattern`
+
+**Validation**
+
+* Browser validation
+* Constraint validation
+* Required fields
+* Email validation
+* URL validation
+* Number validation
+* Pattern validation
+* Validation messages
+* `novalidate`
+* `formnovalidate`
+
+**Advanced Form Topics**
+
+* `form` attribute
+* `formaction`
+* `formenctype`
+* `formmethod`
+* `formnovalidate`
+* `formtarget`
+* File uploads
+* Multipart forms
+* Multiple file selection
+* `accept`
+* Form security
+* Server-side validation
+
++++
+
++++ **Chapter 14: Media**
+
+
+
+* `&lt;audio&gt;`
+* `&lt;video&gt;`
+* `&lt;source&gt;`
+* `&lt;track&gt;`
+* Audio controls
+* Video controls
+* Autoplay
+* Loop
+* Muted
+* Poster images
+* Preload
+* Video formats
+* Audio formats
+
+**Advanced Topics**
+
+* Multiple media sources
+* Responsive video
+* Subtitles
+* Captions
+* WebVTT
+* Accessibility for media
+* Media performance
+* Streaming concepts
+
++++
+
++++ **Chapter 15: Embedding External Content**
+
+
+
+* `&lt;iframe&gt;`
+* Embedded websites
+* YouTube embedding
+* Maps
+* External documents
+* `sandbox`
+* `allow`
+* `loading`
+* `referrerpolicy`
+
+**Advanced Topics**
+
+* iframe security
+* Same-origin policy
+* Cross-origin iframe communication
+* Sandboxed documents
+* Permissions Policy
+* iframe accessibility
+* iframe performance
+
++++
+
++++ **Chapter 16: SVG and Graphics**
+
+
+
+* What is SVG?
+* Inline SVG
+* SVG files
+* `&lt;svg&gt;`
+* Basic SVG elements
+* `&lt;circle&gt;`
+* `&lt;rect&gt;`
+* `&lt;line&gt;`
+* `&lt;polyline&gt;`
+* `&lt;polygon&gt;`
+* `&lt;path&gt;`
+* `&lt;text&gt;`
+* SVG attributes
+* SVG viewBox
+
+**Advanced Topics**
+
+* SVG accessibility
+* SVG `&lt;title&gt;`
+* SVG `&lt;desc&gt;`
+* Inline vs external SVG
+* SVG sprites
+* SVG symbols
+* SVG optimization
+
++++
+
++++ **Chapter 17: Canvas**
+
+
+
+* What is `&lt;canvas&gt;`?
+* Canvas element
+* Canvas dimensions
+* Canvas context
+* 2D drawing
+* Paths
+* Lines
+* Shapes
+* Text
+* Images
+* Animation basics
+
+**Advanced Topics**
+
+* Canvas with JavaScript
+* Canvas performance
+* High-DPI canvas
+* Canvas accessibility
+* Canvas vs SVG
+* When to use Canvas
+
++++
+
++++ **Chapter 18: Interactive HTML**
+
+
+
+* `&lt;button&gt;`
+* `&lt;details&gt;`
+* `&lt;summary&gt;`
+* `&lt;dialog&gt;`
+* `&lt;menu&gt;`
+* Interactive controls
+* Native browser interaction
+
+**Advanced Topics**
+
+* Modal dialogs
+* Dialog accessibility
+* `open`
+* `showModal()`
+* `close()`
+* Focus management
+* Native controls vs custom controls
+
++++
+
++++ **Chapter 19: Accessibility**
+
+
+
+* What is web accessibility?
+* WCAG basics
+* Semantic HTML
+* Keyboard accessibility
+* Screen readers
+* Focus
+* Tab navigation
+* Labels
+* Alternative text
+* Heading hierarchy
+* Accessible forms
+* Accessible tables
+* Accessible links
+* Accessible buttons
+
+**Advanced Topics**
+
+* ARIA
+* `role`
+* `aria-label`
+* `aria-labelledby`
+* `aria-describedby`
+* `aria-hidden`
+* `aria-expanded`
+* `aria-controls`
+* `aria-current`
+* `aria-live`
+* ARIA states
+* ARIA properties
+* Accessible names
+* Focus management
+* Skip links
+* Reduced-motion considerations
+* Native HTML vs ARIA
+
+**Core Rule**
+
+```text
+Prefer semantic HTML
+        |
+        v
+Use native browser behavior
+        |
+        v
+Add ARIA only when necessary
+```
+
++++
+
++++ **Chapter 20: HTML Metadata**
+
+
+* `&lt;meta&gt;`
+* Character encoding
+* Viewport
+* Description
+* Keywords
+* Author
+* Robots
+* Theme color
+* Referrer policy
+
+**Social Metadata**
+
+* Open Graph
+* Twitter/X Cards
+
+**Advanced Metadata**
+
+* Canonical URLs
+* Alternate URLs
+* Language metadata
+* Robots directives
+* HTTP-equivalent metadata
+* Search-engine metadata
+
++++
+
++++ **Chapter 21: SEO with HTML**
+
+
+
+* HTML and SEO
+* `&lt;title&gt;`
+* Meta description
+* Heading structure
+* Semantic HTML
+* Links
+* Image `alt`
+* Canonical URL
+* Internal linking
+* Structured content
+* Crawlability
+* Indexability
+
+**Advanced SEO**
+
+* Structured data
+* JSON-LD
+* Schema.org
+* Article structured data
+* Product structured data
+* Breadcrumb structured data
+* Organization structured data
+* FAQ structured data
+* Rich results
+* Open Graph
+* XML Sitemap relationship
+* Robots.txt relationship
+
++++
+
++++ **Chapter 22: HTML Head and Resource Loading**
+
+
+
+* `&lt;link&gt;`
+* `&lt;style&gt;`
+* `&lt;script&gt;`
+* `&lt;base&gt;`
+* Favicons
+* CSS loading
+* JavaScript loading
+
+**Script Loading**
+
+* Normal scripts
+* `defer`
+* `async`
+* Module scripts
+* `type="module"`
+* `nomodule`
+
+**Resource Hints**
+
+* `preload`
+* `prefetch`
+* `preconnect`
+* `dns-prefetch`
+
+**Advanced Topics**
+
+* Critical resources
+* Render-blocking resources
+* Resource loading order
+* Fetch priority
+* Performance implications
+
++++
+
++++ **Chapter 23: HTML and JavaScript**
+
+
+
+* `&lt;script&gt;`
+* Inline JavaScript
+* External JavaScript
+* DOM
+* Selecting HTML elements
+* Changing HTML
+* Changing attributes
+* Changing classes
+* Events
+* Forms and JavaScript
+
+**Advanced Topics**
+
+* DOM tree
+* DOM APIs
+* Event propagation
+* Event delegation
+* Custom elements
+* Templates
+* Shadow DOM
+* Web Components
+
++++
+
++++ **Chapter 24: HTML and CSS Integration**
+
+
+
+* `class`
+* `id`
+* Inline styles
+* `&lt;style&gt;`
+* External stylesheets
+* `&lt;link&gt;`
+* CSS selectors
+* HTML structure for CSS
+* Semantic classes
+* CSS-friendly HTML
+
+**Advanced Topics**
+
+* Component-oriented markup
+* Naming conventions
+* BEM
+* Utility classes
+* Data attributes
+* CSS custom properties
+* HTML/CSS architecture
+
++++
+
++++ **Chapter 25: Responsive HTML**
+
+
+
+* Responsive design concepts
+* Viewport
+* Responsive images
+* `&lt;picture&gt;`
+* `srcset`
+* `sizes`
+* Responsive forms
+* Responsive tables
+* Responsive media
+* Mobile-first HTML structure
+
+**Advanced Topics**
+
+* Art direction
+* Resolution switching
+* Device pixel ratio
+* Adaptive resources
+* Responsive embeds
+
++++
+
++++ **Chapter 26: Internationalization**
+
+
+
+* `lang`
+* Language codes
+* `dir`
+* Left-to-right text
+* Right-to-left text
+* Mixed-language content
+* Unicode
+* UTF-8
+* `&lt;bdi&gt;`
+* `&lt;bdo&gt;`
+
+**Advanced Topics**
+
+* Bidirectional text
+* Localization
+* Internationalized forms
+* Date/time semantics
+* Language-specific accessibility
+
++++
+
++++ **Chapter 27: HTML Security**
+
+
+
+* HTML security fundamentals
+* XSS
+* HTML injection
+* Attribute injection
+* Unsafe HTML
+* User-generated content
+* Escaping HTML
+
+**Advanced Topics**
+
+* Content Security Policy
+* Trusted Types
+* iframe sandboxing
+* `rel="noopener"`
+* Referrer Policy
+* Permissions Policy
+* Cross-origin security
+* Form security
+* External resource security
+
++++
+
++++ **Chapter 28: HTML Performance**
+
+
+
+* HTML performance
+* DOM size
+* HTML document size
+* Image optimization
+* Lazy loading
+* Script loading
+* CSS loading
+* Resource hints
+
+**Advanced Topics**
+
+* Critical rendering path
+* DOM parsing
+* Preload scanner
+* Layout shifts
+* Largest Contentful Paint
+* First Contentful Paint
+* Interaction to Next Paint
+* Core Web Vitals
+* HTML performance auditing
+
++++
+
++++ **Chapter 29: HTML Validation and Debugging**
+
+
+
+* HTML validation
+* Browser DevTools
+* Inspecting elements
+* DOM inspection
+* Console
+* Network panel
+* Sources panel
+* Accessibility tools
+
+**Advanced Topics**
+
+* W3C validation
+* HTML conformance
+* Invalid nesting
+* Missing closing tags
+* Invalid attributes
+* Accessibility auditing
+* Lighthouse
+* Automated testing
+* Cross-browser testing
+
++++
+
++++ **Chapter 30: Modern HTML APIs and Features**
+
+
+
+* `&lt;dialog&gt;`
+* `&lt;template&gt;`
+* `&lt;slot&gt;`
+* `&lt;details&gt;`
+* `&lt;summary&gt;`
+* `&lt;picture&gt;`
+* `&lt;source&gt;`
+* `&lt;track&gt;`
+* `&lt;output&gt;`
+* `&lt;meter&gt;`
+* `&lt;progress&gt;`
+
+**Advanced Topics**
+
+* Web Components
+* Custom Elements
+* Shadow DOM
+* HTML Templates
+* Declarative Shadow DOM
+* Popover API
+* `popover`
+* `popovertarget`
+* `inert`
+* Modern form features
+* Modern browser capabilities
+
++++
+
++++ **Chapter 31: Web Components**
+
+
+
+* What are Web Components?
+* Custom Elements
+* Shadow DOM
+* HTML Templates
+* `&lt;template&gt;`
+* `&lt;slot&gt;`
+* Creating custom elements
+* Custom element lifecycle
+
+**Advanced Topics**
+
+* Shadow DOM encapsulation
+* Slots
+* Named slots
+* Shadow DOM events
+* Component accessibility
+* Custom element attributes
+* Attribute observation
+* Reusable HTML components
+
++++
+
++++ **Chapter 32: Progressive Enhancement**
+
+
+
+* What is progressive enhancement?
+* HTML-first development
+* Semantic HTML
+* Native browser functionality
+* JavaScript as enhancement
+* CSS as enhancement
+* Graceful degradation
+
+**Advanced Topics**
+
+* No-JavaScript experience
+* Server-rendered HTML
+* Accessible fallback
+* Progressive form enhancement
+* Offline considerations
+* Resilient web design
+
++++
+
++++ **Chapter 33: HTML Architecture**
+
+
+
+* Structuring large HTML projects
+* Page templates
+* Components
+* Reusable markup
+* Layout vs content
+* Semantic architecture
+* Naming conventions
+* Maintainability
+
+**Advanced Topics**
+
+* Component architecture
+* Design systems
+* HTML abstraction
+* Server-side templates
+* Static site generators
+* Template engines
+* Partial templates
+* HTML component libraries
+
++++
+
++++ **Chapter 34: HTML with Backend Development**
+
+
+
+* HTML forms and servers
+* GET requests
+* POST requests
+* Form data
+* Server-side rendering
+* HTML generated by PHP
+* HTML generated by Python
+* HTML generated by Node.js
+* Authentication forms
+* File uploads
+
+**Advanced Topics**
+
+* CSRF protection
+* Server-side validation
+* Session-based interfaces
+* Error handling
+* Form repopulation
+* Progressive enhancement
+* HTML escaping
+* Secure server-generated HTML
+
++++
+
++++ **Chapter 35: HTML for Documentation**
+
+
+
+* Documentation structure
+* Navigation
+* Headings
+* Code blocks
+* `&lt;pre&gt;`
+* `&lt;code&gt;`
+* Tables
+* Notes
+* Examples
+* Page hierarchy
+* Table of contents
+
+**Advanced Topics**
+
+* Documentation information architecture
+* Deep linking
+* Search-friendly markup
+* Accessible code examples
+* Interactive documentation
+* Documentation generators
+
++++
+
++++ **Chapter 36: HTML for Real-World Websites**
+
+
+
+* Portfolio
+* Blog
+* News website
+* University website
+* Documentation website
+* E-commerce website
+* Landing page
+* Dashboard
+* Authentication pages
+* Contact page
+* Search page
+* Product page
+
+**Advanced Topics**
+
+* Large-scale page architecture
+* Reusable components
+* Accessibility
+* SEO
+* Performance
+* Security
+* Responsive structure
+
++++
+
++++ **Chapter 37: HTML Best Practices**
+
+
+
+* Use semantic HTML
+* Maintain proper nesting
+* Use meaningful headings
+* Use meaningful link text
+* Always handle image alternatives appropriately
+* Associate labels with form controls
+* Use buttons for actions
+* Use links for navigation
+* Avoid unnecessary `&lt;div&gt;` elements
+* Avoid obsolete HTML
+* Keep HTML readable
+* Validate HTML
+* Consider accessibility from the beginning
+
+**Advanced Best Practices**
+
+* Progressive enhancement
+* Performance-first markup
+* Security-conscious markup
+* SEO-friendly structure
+* Component-friendly architecture
+* Maintainable HTML
+* Cross-browser compatibility
+
++++
+
++++ **Chapter 38: Deprecated and Obsolete HTML**
+
+
+
+* Deprecated HTML concepts
+* `&lt;font&gt;`
+* `&lt;center&gt;`
+* `&lt;marquee&gt;`
+* `&lt;big&gt;`
+* `&lt;strike&gt;`
+* `&lt;tt&gt;`
+* `&lt;frame&gt;`
+* `&lt;frameset&gt;`
+* `&lt;noframes&gt;`
+
+**Advanced Topics**
+
+* Why elements became obsolete
+* HTML4 vs HTML5
+* Transitional markup
+* Migrating old HTML
+* Replacing obsolete elements with modern HTML/CSS
+
++++
+
++++ **Chapter 39: HTML Specification and Browser Internals**
+
+
+
+* HTML specification
+* WHATWG
+* HTML Living Standard
+* Browser parsing
+* Tokenization
+* Tree construction
+* DOM construction
+* Content models
+* Parsing errors
+
+**Advanced Topics**
+
+* HTML parser
+* Parsing algorithm
+* DOM tree construction
+* Document modes
+* Quirks mode
+* Standards mode
+* Browser interoperability
+* Web platform specifications
+
++++
+
++++ **Chapter 40: Master-Level HTML Projects**
+
+After completing the previous chapters, build progressively larger projects.
+
+**Project 1 — Personal Profile**
+
+Practice:
+
+* headings
+* paragraphs
+* links
+* images
+* lists
+
+**Project 2 — Multi-page Website**
+
+Practice:
+
+* navigation
+* multiple pages
+* semantic structure
+* internal links
+
+**Project 3 — Blog**
+
+Practice:
+
+* articles
+* sections
+* figures
+* dates
+* author information
+
+**Project 4 — Documentation Website**
+
+Practice:
+
+* complex navigation
+* code blocks
+* headings
+* tables
+* accessibility
+
+**Project 5 — Registration System**
+
+Practice:
+
+* forms
+* validation
+* input types
+* fieldsets
+* file uploads
+
+**Project 6 — E-commerce Product Page**
+
+Practice:
+
+* semantic HTML
+* images
+* product information
+* forms
+* structured data
+
+**Project 7 — News Website**
+
+Practice:
+
+* article architecture
+* navigation
+* metadata
+* SEO
+* semantic markup
+
+**Project 8 — Accessible Website**
+
+Practice:
+
+* WCAG principles
+* keyboard navigation
+* screen readers
+* ARIA
+* accessible forms
+
+**Project 9 — Performance-Optimized Website**
+
+Practice:
+
+* responsive images
+* lazy loading
+* resource hints
+* script loading
+* Core Web Vitals
+
+**Project 10 — Complete HTML Website**
+
+Build a complete website containing:
+
+```text
+Website
+├── Header
+│   ├── Logo
+│   └── Navigation
+│
+├── Main
+│   ├── Hero
+│   ├── Sections
+│   ├── Articles
+│   ├── Images
+│   ├── Tables
+│   └── Forms
+│
+├── Sidebar
+│
+└── Footer
+```
+
+Then audit it for:
+
+```text
+HTML
+├── Semantic correctness
+├── Accessibility
+├── SEO
+├── Security
+├── Performance
+├── Responsiveness
+├── Validation
+└── Browser compatibility
+```
+</title></md></sn><sn><md>### **Recommended Learning Order**
+
+Do **not** try to memorize all HTML elements at once. Follow this progression:
+
+```text
+HTML Fundamentals
+        |
+        v
+Document Structure
+        |
+        v
+Text + Links + Images + Lists
+        |
+        v
+Tables
+        |
+        v
+Attributes
+        |
+        v
+Semantic HTML
+        |
+        v
+Forms
+        |
+        v
+Media + Embeds
+        |
+        v
+SVG + Canvas
+        |
+        v
+Accessibility
+        |
+        v
+SEO + Metadata
+        |
+        v
+HTML + CSS + JavaScript
+        |
+        v
+Responsive HTML
+        |
+        v
+Security + Performance
+        |
+        v
+Modern HTML APIs
+        |
+        v
+Web Components
+        |
+        v
+HTML Architecture
+        |
+        v
+Advanced Projects
+        |
+        v
+HTML Mastery
+```
+
++++ **Three Learning Levels**
+
+**Beginner**
+
+Complete **Chapters 1–12**.
+
+You should be able to create normal websites containing:
+
+* headings
+* paragraphs
+* links
+* images
+* lists
+* tables
+* basic forms
+* navigation
+* semantic page structure
+
+**Intermediate**
+
+Complete **Chapters 13–25**.
+
+You should understand:
+
+* advanced forms
+* multimedia
+* SVG
+* Canvas
+* interactive HTML
+* accessibility
+* metadata
+* SEO
+* JavaScript integration
+* CSS integration
+* responsive images
+* internationalization
+
+**Advanced**
+
+Complete **Chapters 26–39**.
+
+You should understand:
+
+* HTML security
+* performance
+* accessibility architecture
+* Web Components
+* Shadow DOM
+* progressive enhancement
+* HTML architecture
+* backend integration
+* documentation architecture
+* specifications
+* browser parsing
+* modern HTML APIs
+
+**Mastery**
+
+Complete **Chapter 40** and build several complete websites from scratch.
+
+At mastery level, the goal is not simply:
+
+&gt; "I know all HTML tags."
+
+The goal is:
+
+```text
+Requirement
+    |
+    v
+Choose the correct semantic element
+    |
+    v
+Build accessible structure
+    |
+    v
+Connect CSS
+    |
+    v
+Connect JavaScript
+    |
+    v
+Handle forms/data
+    |
+    v
+Optimize performance
+    |
+    v
+Apply SEO
+    |
+    v
+Apply security
+    |
+    v
+Validate and test
+    |
+    v
+Production-ready HTML
+```
++++
+</md></sn>
