@@ -19,7 +19,7 @@ Personal Area Network
     <tags>#04.different area network</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 07 2026 19:59:51 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 07 2026 20:12:21 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-aNnGZV8tOC</id>
     <duration></duration>
   </config>
@@ -110,5 +110,9 @@ Wide Area Network
 | CAN | Campus Area Network | ~5 km | University |
 | MAN | Metropolitan Area Network | ~50 km | City cable |
 | WAN | Wide Area Network | Global | Internet |
+
++++ ...
+![img](https://ipcisco.com/wp-content/uploads/2022/03/types-of-networks-ipcisco.png)
++++
 
 **Key idea:** The main differences are **geographic scope**, **ownership**, and **transmission medium** (wired vs. wireless). Networks can also nest — e.g., a WAN contains MANs, which contain LANs, which may contain PANs.</md></sn>
