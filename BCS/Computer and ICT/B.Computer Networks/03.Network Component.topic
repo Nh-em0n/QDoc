@@ -28,7 +28,7 @@ The major network components include:
     <tags>#03.network component</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 07 2026 11:31:29 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 07 2026 11:33:57 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TlJTnAfMf5</id>
     <duration></duration>
   </config>
@@ -214,7 +214,7 @@ A modem converts signals between the form used by a local network/device and the
 ![img](https://data-flair.training/blogs/wp-content/uploads/sites/2/2021/12/how-does-a-modem-work.webp)
 
 ```text
-Your Network  →  Modem  →  ISP Network  →  Internet
+Your Network  →  Router →  Modem  →  ISP Network  →  Internet
 ```
 
 **Main function:**
