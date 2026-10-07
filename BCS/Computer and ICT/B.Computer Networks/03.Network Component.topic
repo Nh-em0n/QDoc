@@ -28,7 +28,7 @@ The major network components include:
     <tags>#03.network component</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 07 2026 11:35:04 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 07 2026 11:38:10 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TlJTnAfMf5</id>
     <duration></duration>
   </config>
@@ -209,6 +209,8 @@ A router examines the **destination IP address** of a packet and uses its routin
 
 **Modem** stands for **Modulator-Demodulator**.
 
+Computer only reads digital signals whereas the internet only reads analog signals.So a device or system is require to handle this data conversion.
+
 A modem converts signals between the form used by a local network/device and the form required by the communication system of an ISP or other access network.
 
 ![img](https://data-flair.training/blogs/wp-content/uploads/sites/2/2021/12/how-does-a-modem-work.webp)
@@ -231,7 +233,9 @@ Your Network  → Switch/Hub →  Router →  Modem  →  ISP Network  →  Inte
 ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router1.png)
 ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router2.png)
 ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router3.png)
+A modem can connect a computer to internet without router
 ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router4.png)
+But to speread that data into multiple host a router is require.
 ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router5.png)
 ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router6.png)
 ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router7.png)
