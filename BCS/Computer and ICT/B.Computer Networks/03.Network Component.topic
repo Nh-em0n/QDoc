@@ -28,7 +28,7 @@ The major network components include:
     <tags>#03.network component</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 07 2026 09:37:58 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 07 2026 10:02:23 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TlJTnAfMf5</id>
     <duration></duration>
   </config>
@@ -103,4 +103,142 @@ Unlike a hub, a switch learns the **MAC addresses** of connected devices and use
 * Modern Ethernet switches are commonly used in LANs.
 :::
 :::
-</md></sn>
+</md></sn><sn><md>### Router
+
+A **router** `connects different networks` and determines where packets should be sent.
+
+A router examines the **destination IP address** of a packet and uses its routing information to determine the next destination.
+
+:::.row
+:::.col-12 .col-lg-8
+**Functions:**
+
+* Connects different networks.
+* Uses **IP addresses**.
+* Determines `suitable paths` for packets.
+* Separates broadcast domains.
+* Can perform `NAT, DHCP, firewalling`, and other functions depending on the device.
+
+**Example:** Your home Wi-Fi router connects your home LAN to your ISP's network and ultimately the Internet.
+:::
+
+:::.col-12 .col-lg-4
+```text
+Network A
+    |
+    v
+ ROUTER
+    |
+    +------&gt; Network B
+    |
+    +------&gt; Network C
+    |
+    +------&gt; Internet
+```
+:::
+:::
+
+
+</md></sn><sn><md>### Modem
+
+**Modem** stands for **Modulator-Demodulator**.
+
+A modem converts signals between the form used by a local network/device and the form required by the communication system of an ISP or other access network.
+
+![img](https://data-flair.training/blogs/wp-content/uploads/sites/2/2021/12/how-does-a-modem-work.webp)
+
+```text
+Your Network  →  Modem  →  ISP Network  →  Internet
+```
+
+**Main function:**
+
+* Performs the necessary `signal conversion` for a particular Internet access technology.
+* The exact signaling depends on the access technology(Cable / DSL / Fiber access).
+
+**Important:** A modem and router are not inherently the same thing. Many home devices combine a modem, router, switch, Wi-Fi access point, and other functions into one box.
+
+
+</md></sn><sn><md>### Gateway
+
+A **gateway** is a device or system that provides a `connection between networks or systems` that may use `different protocols, architectures`, or communication methods.
+
+In a typical IP network, the **default gateway** is usually the `router` that a host uses to reach destinations outside its local subnet.
+
+![img](https://media.geeksforgeeks.org/wp-content/uploads/20240312093035/Introduction-of-Gateways==-(1).gif)
+
+```text
+Computer  →  Switch  →  Default Gateway  →  Other Networks  →  Internet
+```
+
+For example:
+
+```text
+PC
+ |
+ | 192.168.1.10
+ v
+Router
+ | 192.168.1.1
+ |
+ v
+Internet
+```
+
+Here, `192.168.1.1` may be configured as the PC's **default gateway**.
+
+A gateway can also perform `protocol translation` in more specialized networks.
+</md></sn><sn><md>### Hub vs Switch vs Router vs Gateway
+
+| Component   | Main Purpose                                    | Address Used              | Typical OSI Layer              |
+| ----------- | ----------------------------------------------- | ------------------------- | ------------------------------ |
+| **NIC**     | Connects a `device to a network`                  | MAC address               | Layer 1/2                      |
+| **Hub**     | Broadcasts `signals to connected devices`         | None                      | Layer 1                        |
+| **Switch**  | Connects devices `within a LAN`                   | MAC address               | Layer 2                        |
+| **Router**  | Connects different `IP networks`                  | IP address                | Layer 3                        |
+| **Modem**   | Provides access-network `signal conversion`       | Depends on technology     | Depends on technology          |
+| **Gateway** | Connects/translates `between networks` or systems | Depends on implementation | Can operate at multiple layers |
+</md></sn><sn><md>## How They Work Together
+
+A simplified home network can look like this:
+
+```text
+                    INTERNET
+                       |
+                       |
+                     ISP
+                       |
+                    MODEM
+                       |
+                       |
+                    ROUTER
+                       |
+              +--------+--------+
+              |                 |
+           SWITCH              Wi-Fi
+              |                 |
+       +------+------+       Laptop
+       |      |      |
+      PC    PC    Printer
+       |
+      NIC
+```
+</md></sn><sn><md>### Data flow example
+
+Suppose **PC A wants to access a website**:
+
+```text
+PC A → NIC → Switch → Router → Modem / ISP Access Device → ISP → Internet → Web Server
+```
+
+Each component has a different responsibility:
+
+```text
+NIC      → Connects a device to the network
+Hub      → Broadcasts network signals
+Switch   → Connects devices and forwards frames using MAC addresses
+Router   → Connects networks and forwards packets using IP addresses
+Modem    → Handles signaling for the access network
+Gateway  → Provides a path/translation between networks or systems
+```
+</md></sn><sn></sn>
