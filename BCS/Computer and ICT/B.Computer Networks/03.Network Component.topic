@@ -28,7 +28,7 @@ The major network components include:
     <tags>#03.network component</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 07 2026 11:03:22 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 07 2026 11:06:10 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TlJTnAfMf5</id>
     <duration></duration>
   </config>
@@ -94,7 +94,7 @@ Unlike a hub, a switch learns the **MAC addresses** of connected devices and use
 
 :::.row
 :::.col-12 .col-lg-6
-![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/switch-diagram.jpeg)
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/switch2.png)
 :::
 
 :::.col-12 .col-lg-6
@@ -137,18 +137,7 @@ A router examines the **destination IP address** of a packet and uses its routin
 :::
 
 :::.col-12 .col-lg-4
-```text
-Network A
-    |
-    v
- ROUTER
-    |
-    +------&gt; Network B
-    |
-    +------&gt; Network C
-    |
-    +------&gt; Internet
-```
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/router8.png)
 :::
 :::
 
