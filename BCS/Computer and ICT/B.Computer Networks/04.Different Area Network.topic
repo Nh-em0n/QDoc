@@ -1,10 +1,114 @@
 
-  <sn></sn>
+  <sn><md>### **PAN**
+
+:::.row
+:::.col-12 .col-lg-6
+Personal Area Network
+- **Range:** ~1–10 meters
+- **Purpose:** Connects personal devices around one person
+- **Examples:** Bluetooth earbuds, smartwatch to phone, wireless keyboard/mouse
+- **Owner:** Single person
+:::
+
+:::.col-12 .col-lg-6
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/pan_diagram.jpeg)
+:::
+:::
+</md></sn>
   <config>
     <tags>#04.different area network</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 07 2026 19:28:43 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 07 2026 19:50:56 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-aNnGZV8tOC</id>
     <duration></duration>
   </config>
+<sn><md>### LAN
+
+:::.row
+:::.col-12 .col-lg-6
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/lan_diagram.jpeg)
+:::
+
+:::.col-12 .col-lg-6
+Local Area Network
+- **Range:** Up to ~1 km (a building or campus)
+- **Purpose:** Connects devices within a limited area
+- **Examples:** Home Wi-Fi, office network, school computer lab
+- **Speed:** High (100 Mbps – 10 Gbps)
+- **Owner:** Private (home, business)
+:::
+:::
+</md></sn><sn><md>### WLAN
+
+:::.row
+:::.col-12 .col-lg-6
+Wireless Local Area Network
+- **Range:** Similar to LAN (~100 m per access point)
+- **Purpose:** A LAN that uses wireless (Wi-Fi) instead of cables
+- **Examples:** Home Wi-Fi, café hotspots, airport Wi-Fi
+- **Note:** A subset of LAN — same scope, wireless medium
+:::
+
+:::.col-12 .col-lg-6
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/wan_diagram.jpeg)
+:::
+:::
+</md></sn><sn><md>### CAN
+
+:::.row
+:::.col-12 .col-lg-6
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/can_diagram.jpeg)
+:::
+
+:::.col-12 .col-lg-6
+Campus Area Network
+- **Range:** ~1–5 km (multiple buildings)
+- **Purpose:** Connects several LANs within a campus
+- **Examples:** University campus, corporate headquarters, military base
+- **Note:** Larger than LAN, smaller than MAN
+:::
+:::
+</md></sn><sn><md>### MAN
+
+:::.row
+:::.col-12 .col-lg-6
+Metropolitan Area Network
+- **Range:** ~5–50 km (a city)
+- **Purpose:** Connects LANs across a city
+- **Examples:** City-wide cable TV network, municipal broadband, bank branches across a city
+- **Owner:** Usually a large organization or ISP
+:::
+
+:::.col-12 .col-lg-6
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/man_diagram.jpeg)
+:::
+:::
+</md></sn><sn><md>### WAN
+
+:::.row
+:::.col-12 .col-lg-6
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/wan_diagram.jpeg)
+:::
+
+:::.col-12 .col-lg-6
+Wide Area Network
+- **Range:** Country, continent, or global
+- **Purpose:** Connects MANs/LANs over large distances
+- **Examples:** The Internet, corporate networks spanning countries, 4G/5G networks
+- **Owner:** Multiple organizations, telecom providers
+- **Speed:** Generally lower than LAN (due to distance)
+:::
+:::
+</md></sn><sn><md>### Quick Comparison Table
+
+| Type | Full Name | Range | Example |
+|------|-----------|-------|---------|
+| PAN | Personal Area Network | ~10 m | Bluetooth |
+| LAN | Local Area Network | ~1 km | Office network |
+| WLAN | Wireless LAN | ~100 m | Wi-Fi |
+| CAN | Campus Area Network | ~5 km | University |
+| MAN | Metropolitan Area Network | ~50 km | City cable |
+| WAN | Wide Area Network | Global | Internet |
+
+**Key idea:** The main differences are **geographic scope**, **ownership**, and **transmission medium** (wired vs. wireless). Networks can also nest — e.g., a WAN contains MANs, which contain LANs, which may contain PANs.</md></sn>
