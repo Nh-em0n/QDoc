@@ -28,7 +28,7 @@ The major network components include:
     <tags>#03.network component</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 07 2026 11:20:23 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 07 2026 11:31:29 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TlJTnAfMf5</id>
     <duration></duration>
   </config>
@@ -176,6 +176,22 @@ A router examines the **destination IP address** of a packet and uses its routin
 
 </md></sn><sn><md>### Switch Hub  vs Router
 
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/router9.png)
+
+- Hub-Switch connect and share information within local area network.If two LAN networks are in different location, to exchange data outside their own network ,a device needs to be able to read I.P addresses.
+
+- The router is the gateway of a network.
+
+- Routes data from one network to another based on their IP address.
+
+- A router received data of muliples IP addresses,It only receive data to its binded IP,else other data of different IP's rejected by router and sent off to another network.
+
+- Router at first check if the destination is current local network or not,if not then it router the data pack through different route in the internet and send data.
+
+- Router use IP addresses whereas hub-switch uses mac address.
+- Hub and switches create network and Routers are used to connect those network.
+
+
 +++ ...
 ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/hub-switch-router1.png)
 ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/hub-switch-router2.png)
@@ -189,10 +205,7 @@ A router examines the **destination IP address** of a packet and uses its routin
 ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/router7.png)
 ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/router8.png)
 ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/router9.png)
-+++
-
-
-</md></sn><sn><md>### Modem
++++</md></sn><sn><md>### Modem
 
 **Modem** stands for **Modulator-Demodulator**.
 
