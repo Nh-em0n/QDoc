@@ -1,10 +1,106 @@
 
-  <sn></sn>
+  <sn><md>### Network Components
+
+Network components are `hardware devices` that help computers and other devices **connect, communicate, and exchange data** over a network.
+
+:::.row
+:::.col-12 .col-lg-8
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/network-component.jpeg)
+:::
+
+:::.col-12 .col-lg-4
+The major network components include:
+
+1. **NIC (Network Interface Card)**
+2. **Hub**
+3. **Switch**
+4. **Router**
+5. **Modem**
+6. **Gateway**
+:::
+:::
+
++++ view more
+![img](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbsmoVXc4-wK4vglg1eJyjx-kJ2tIv2X9mLTKjzx-AuIcp7CG_lZYpADKi&amp;s=10)
++++
+</md></sn>
   <config>
     <tags>#03.network component</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Sep 22 2026 09:23:01 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 07 2026 09:37:58 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TlJTnAfMf5</id>
     <duration></duration>
   </config>
+<sn><md>### NIC 
+
+:::.row
+:::.col-12 .col-lg-6
+Network Interface Card
+A **NIC** is a hardware component that allows a computer or other device to connect to a network.
+
+**Functions:**
+
+* Connects a device to a network.
+* Converts computer `data into signals` that can travel through the network medium.
+* Receives network signals and converts them back into data.
+  ```
+  data ⇄ signal
+  ```
+* Provides a `MAC address` for network communication.
+:::
+
+:::.col-12 .col-lg-6
+![img](https://cdn.shopify.com/s/files/1/0736/7566/9719/files/SEOon_NICs_Basic_Knowledge.jpg?v=1758523240)
+:::
+:::
+
+**Types:**
+* Ethernet NIC — wired connection
+* Wireless NIC — Wi-Fi connection
+
+**Example:** The Ethernet port or Wi-Fi adapter in a laptop is associated with its NIC.
+</md></sn><sn><md>### Hub
+
+A **hub** is a basic networking device used to `connect multiple devices in a local network`.
+
+When a hub receives data, it `broadcasts the data to every connected device`.The devices check the destination information and determine whether the data is intended for them.
+
+
+:::.row
+:::.col-12 .col-lg-7
+**Characteristics:**
+
+* Works mainly at `OSI Layer 1` — Physical Layer.
+* Does not intelligently `!determine the destination` device.
+* Creates more `unnecessary network traffic`.
+* Generally operates using a `shared communication medium`.
+* Mostly `obsolete` in modern networks.
+:::
+
+:::.col-12 .col-lg-5
+![img](https://images.ctfassets.net/aoyx73g9h2pg/2BeY1nsgq7F1zV7TZezCeV/a01a704bbe01389eebedccdfe285801b/What-is-a-Computer-Network-Hub-Diagram.jpg)
+:::
+:::
+</md></sn><sn><md>### Switch
+
+A **switch** `connects multiple devices` within a LAN and forwards data to the [specific destination device]{.fg-teal}.
+
+Unlike a hub, a switch learns the **MAC addresses** of connected devices and uses its MAC address table to decide where to forward frames.
+
+:::.row
+:::.col-12 .col-lg-6
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/switch-diagram.jpeg)
+:::
+
+:::.col-12 .col-lg-6
+**Characteristics:**
+
+* Mainly operates at `OSI Layer 2` — Data Link Layer.
+* Uses **MAC addresses**.
+* `Reduces unnecessary traffic` compared with a hub.
+* Each switch port can provide a `separate collision domain`.
+* Modern Ethernet switches are commonly used in LANs.
+:::
+:::
+</md></sn>
