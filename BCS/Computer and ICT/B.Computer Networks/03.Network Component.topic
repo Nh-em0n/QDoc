@@ -28,7 +28,7 @@ The major network components include:
     <tags>#03.network component</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 07 2026 11:41:49 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 07 2026 11:42:36 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TlJTnAfMf5</id>
     <duration></duration>
   </config>
@@ -287,31 +287,6 @@ A gateway can also perform `protocol translation` in more specialized networks.
 | **Router**  | Connects different `IP networks`                  | IP address                | Layer 3                        |
 | **Modem**   | Provides access-network `signal conversion`       | Depends on technology     | Depends on technology          |
 | **Gateway** | Connects/translates `between networks` or systems | Depends on implementation | Can operate at multiple layers |
-</md></sn><sn><md>## How They Work Together
-
-A simplified home network can look like this:
-
-```text
-                    INTERNET
-                       |
-                       |
-                     ISP
-                       |
-                    MODEM
-                       |
-                       |
-                    ROUTER
-                       |
-              +--------+--------+
-              |                 |
-           SWITCH              Wi-Fi
-              |                 |
-       +------+------+       Laptop
-       |      |      |
-      PC    PC    Printer
-       |
-      NIC
-```
 </md></sn><sn><md>### Data flow example
 
 Suppose **PC A wants to access a website**:
