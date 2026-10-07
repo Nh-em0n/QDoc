@@ -28,7 +28,7 @@ The major network components include:
     <tags>#03.network component</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 07 2026 11:06:10 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 07 2026 11:20:23 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TlJTnAfMf5</id>
     <duration></duration>
   </config>
@@ -64,7 +64,7 @@ A **NIC** is a hardware component that allows a computer or other device to conn
 
 A **hub** is a basic networking device used to `connect multiple devices in a local network`.
 
-When a hub receives data, it `broadcasts the data to every connected device`.The devices check the destination information and determine whether the data is intended for them.
+It has multiple ports by which its bind multiple computer together and form local area network (LAN) . When any new data appar in the hub it copies that data to all port and send to all devices connected with it . When a hub receives data, it `broadcasts the data to every connected device`.The devices check the destination information and determine whether the data is intended for them.
 
 
 :::.row
@@ -90,6 +90,8 @@ When a hub receives data, it `broadcasts the data to every connected device`.The
 
 A **switch** `connects multiple devices` within a LAN and forwards data to the [specific destination device]{.fg-teal}.
 
+Swich also have multiple port by which it bind multiple computer and create local area network (LAN).Whenever a new data received in the switch it does not copied or send that data to all devices instead it has a mac address table of its connected devices.
+
 Unlike a hub, a switch learns the **MAC addresses** of connected devices and uses its MAC address table to decide where to forward frames.
 
 :::.row
@@ -114,8 +116,38 @@ Unlike a hub, a switch learns the **MAC addresses** of connected devices and use
 +++
 </md></sn><sn><md>### Switch vs Hub
 
+:::.row
+:::.col-12 .col-lg-6
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/hub2.png)
+:::
+:::.col-12 .col-lg-6
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/switch2.png)
+:::
+:::
+
+Both switch and hub has ports by which they connect local computer and share information (LAN).Their main difference is that hub sends received data to host and switch only send data to target destination.
+
+| Feature               | Hub                                             | Switch                                             |
+| --------------------- | ----------------------------------------------- | -------------------------------------------------- |
+| **Basic function**    | Connects multiple devices in a network          | Connects multiple devices in a network             |
+| **OSI Layer**         | Layer 1 — Physical                              | Layer 2 — Data Link                                |
+| **Address used**      | Does not use MAC addresses for forwarding       | Uses MAC addresses                                 |
+| **Data unit**         | Bits/signals                                    | Ethernet frames                                    |
+| **Data forwarding**   | Sends data to all connected ports               | Sends data to the intended destination port        |
+| **Intelligence**      | Less intelligent                                | More intelligent                                   |
+| **Traffic**           | Creates more unnecessary traffic                | Reduces unnecessary traffic                        |
+| **Collision domain**  | All ports share one collision domain            | Each port is generally a separate collision domain |
+| **Bandwidth**         | Shared among connected devices                  | Dedicated per port in typical full-duplex Ethernet |
+| **Performance**       | Lower                                           | Higher                                             |
+| **Security**          | Less secure because traffic is broadly repeated | Better isolation of unicast traffic                |
+| **MAC address table** | No                                              | Yes                                                |
+| **Duplex**            | Typically half-duplex                           | Typically full-duplex                              |
+| **Use today**         | Mostly obsolete                                 | Commonly used in modern LANs                       |
+| **Example**           | Basic Ethernet hub                              | 8-port/24-port Ethernet switch                     |
+
 +++ ...
 ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/hub-switch-router1.png)
+**collision domain** : A collision domain is a part of a network where two or more devices can transmit data at the same time and their signals may collide.
 +++
 </md></sn><sn><md>### Router
 
