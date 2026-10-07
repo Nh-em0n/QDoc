@@ -28,7 +28,7 @@ The major network components include:
     <tags>#03.network component</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 07 2026 11:38:10 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 07 2026 11:39:12 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TlJTnAfMf5</id>
     <duration></duration>
   </config>
@@ -164,6 +164,8 @@ A router examines the **destination IP address** of a packet and uses its routin
 * Determines `suitable paths` for packets.
 * Separates broadcast domains.
 * Can perform `NAT, DHCP, firewalling`, and other functions depending on the device.
+* Most router have built in switch inside them.
+* There are combined hardware that serve both router,modem and switch functionality. 
 
 **Example:** Your home Wi-Fi router connects your home LAN to your ISP's network and ultimately the Internet.
 :::
