@@ -28,7 +28,7 @@ The major network components include:
     <tags>#03.network component</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 07 2026 10:02:23 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 07 2026 10:50:39 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TlJTnAfMf5</id>
     <duration></duration>
   </config>
@@ -103,7 +103,7 @@ Unlike a hub, a switch learns the **MAC addresses** of connected devices and use
 * Modern Ethernet switches are commonly used in LANs.
 :::
 :::
-</md></sn><sn><md>### Router
+</md></sn><sn><md>### Switch vs Hub</md></sn><sn><md>### Router
 
 A **router** `connects different networks` and determines where packets should be sent.
 
@@ -139,7 +139,7 @@ Network A
 :::
 
 
-</md></sn><sn><md>### Modem
+</md></sn><sn><md>### Switch Hub  vs Router</md></sn><sn><md>### Modem
 
 **Modem** stands for **Modulator-Demodulator**.
 
@@ -159,7 +159,7 @@ Your Network  →  Modem  →  ISP Network  →  Internet
 **Important:** A modem and router are not inherently the same thing. Many home devices combine a modem, router, switch, Wi-Fi access point, and other functions into one box.
 
 
-</md></sn><sn><md>### Gateway
+</md></sn><sn><md>### Modem vs Router</md></sn><sn><md>### Gateway
 
 A **gateway** is a device or system that provides a `connection between networks or systems` that may use `different protocols, architectures`, or communication methods.
 
@@ -241,4 +241,4 @@ Router   → Connects networks and forwards packets using IP addresses
 Modem    → Handles signaling for the access network
 Gateway  → Provides a path/translation between networks or systems
 ```
-</md></sn><sn></sn>
+</md></sn>
