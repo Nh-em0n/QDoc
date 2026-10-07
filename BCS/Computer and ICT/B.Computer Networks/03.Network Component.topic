@@ -28,7 +28,7 @@ The major network components include:
     <tags>#03.network component</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 07 2026 11:39:12 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 07 2026 11:41:49 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TlJTnAfMf5</id>
     <duration></duration>
   </config>
@@ -319,6 +319,8 @@ Suppose **PC A wants to access a website**:
 ```text
 PC A → NIC → Switch → Router → Modem / ISP Access Device → ISP → Internet → Web Server
 ```
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/data-flow-through-network-component.jpeg)
 
 Each component has a different responsibility:
 
