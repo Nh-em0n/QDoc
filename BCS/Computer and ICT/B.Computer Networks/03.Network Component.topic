@@ -28,7 +28,7 @@ The major network components include:
     <tags>#03.network component</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 07 2026 11:01:34 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 07 2026 11:03:22 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TlJTnAfMf5</id>
     <duration></duration>
   </config>
@@ -191,7 +191,24 @@ Your Network  →  Modem  →  ISP Network  →  Internet
 **Important:** A modem and router are not inherently the same thing. Many home devices combine a modem, router, switch, Wi-Fi access point, and other functions into one box.
 
 
-</md></sn><sn><md>### Modem vs Router</md></sn><sn><md>### Gateway
+</md></sn><sn><md>### Modem vs Router
+
++++ ...
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router1.png)
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router2.png)
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router3.png)
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router4.png)
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router5.png)
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router6.png)
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router7.png)
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router8.png)
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router9.png)
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router10.png)
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router11.png)
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router12.png)
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router13.png)
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/modem_vs_router14.png)
++++</md></sn><sn><md>### Gateway
 
 A **gateway** is a device or system that provides a `connection between networks or systems` that may use `different protocols, architectures`, or communication methods.
 
