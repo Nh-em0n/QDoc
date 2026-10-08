@@ -1,7 +1,7 @@
 
   <sn><md>### Network Topologies
 
-**Network topology** refers to `the arrangement (physical or logical) of devices and connections` in a network. It determines how data flows between nodes.
+The `arrangement of hosts and hardware` within a network architecture is known as the **network topology**. It determines `how data flows between nodes`.
 
 ![img](https://www.dnsstuff.com/wp-content/uploads/2019/08/network-topology-types-1024x536.png)
 </md></sn>
@@ -9,7 +9,7 @@
     <tags>#05.network topology</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 08 2026 07:14:44 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 08 2026 07:21:49 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-F7BJjLOSVN</id>
     <duration></duration>
   </config>
