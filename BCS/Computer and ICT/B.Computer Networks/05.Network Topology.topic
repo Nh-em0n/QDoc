@@ -1,10 +1,139 @@
 
-  <sn></sn>
+  <sn><md>### Network Topologies
+
+**Network topology** refers to `the arrangement (physical or logical) of devices and connections` in a network. It determines how data flows between nodes.
+
+![img](https://www.dnsstuff.com/wp-content/uploads/2019/08/network-topology-types-1024x536.png)
+</md></sn>
   <config>
     <tags>#05.network topology</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 07 2026 20:27:26 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 08 2026 07:12:16 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-F7BJjLOSVN</id>
     <duration></duration>
   </config>
+<sn><md>### Bus Topology
+
+:::.row
+:::.col-12 .col-lg-8
+- **Structure:** All devices connect to a `single central backbone cable`.
+- **Data Flow:** Broadcast — signals travel `both directions`; terminators at each end absorb signals.
+- **Pros:** Cheap, simple, requires `less cable`.
+- **Cons:** If backbone fails, entire network fails; collisions common; hard to troubleshoot.
+- **Example:** Early Ethernet (10Base2).
+:::
+
+:::.col-12 .col-lg-4
+![img](https://www.cablify.ca/wp-content/uploads/2018/04/Bus-Topology-1.jpg)
+:::
+:::
+</md></sn><sn><md>### Star Topology
+
+:::.row
+:::.col-12 .col-lg-4
+![img](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLAaThXUy5Da1RVPPBLzN-VqhJMweGnXbFb7HhPO835g&amp;s=10)
+:::
+
+:::.col-12 .col-lg-8
+- **Structure:** All devices connect to a `central hub/switch`.
+- **Data Flow:** Devices `send data to the central device`, which forwards it.
+- **Pros:** Easy to add/remove devices; one cable failure doesn't affect others; easy troubleshooting.
+- **Cons:** If `central device fails`, whole network goes down; more cable needed.
+- **Example:** Most modern home/office networks.
+:::
+:::
+</md></sn><sn><md>### Ring Topology
+
+:::.row
+:::.col-12 .col-lg-8
+- **Structure:** Devices connected in a `closed loop`; each connects to `two neighbors`.
+- **Data Flow:** Data travels in `one direction` (or both in dual-ring), passing through each node.
+- **Pros:** No collisions; predictable performance; `equal access`.
+- **Cons:** `One break` can disrupt the whole ring (unless dual-ring); adding devices disrupts network.
+- **Example:** Token Ring, FDDI.
+:::
+
+:::.col-12 .col-lg-4
+![img](https://www.cablify.ca/wp-content/uploads/2018/04/Ring-Topology-1.jpg)
+:::
+:::
+</md></sn><sn><md>### Mesh Topology
+
+:::.row
+:::.col-12 .col-lg-4
+![img](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFHtLCUyexpA8gpFyrGPXO8V93chXjosp19-Uuoi6DmBoBf1IFmnEh4hc&amp;s=10)
+:::
+
+:::.col-12 .col-lg-8
+- **Structure:** Every device connects to every other device.
+- **Types:**
+  - **Full Mesh:** `Every node linked to every other` (*n(n-1)/2* links).
+  - **Partial Mesh:** Some nodes fully linked, others partially.
+- **Data Flow:** Multiple paths; data can be `rerouted if a link fails`.
+- **Pros:** Highly redundant, reliable, secure.
+- **Cons:** Expensive, complex wiring, hard to manage.
+- **Example:** Internet backbone, military networks.
+:::
+:::
+</md></sn><sn><md>### Tree (Hierarchical)
+
+:::.row
+:::.col-12 .col-lg-8
+- **Structure:** Star networks connected to a central backbone in a hierarchy.
+- **Data Flow:** Data moves up/down the hierarchy.
+- **Pros:** Scalable; easy to expand; good for large organizations.
+- **Cons:** If root/backbone fails, whole tree fails; depends on central points.
+- **Example:** Large corporate networks, cable TV systems.
+:::
+
+:::.col-12 .col-lg-4
+![img](https://www.cablify.ca/wp-content/uploads/2018/04/Tree-Topology-1.jpg)
+:::
+:::
+</md></sn><sn><md>### Hybrid Topology
+
+:::.row
+:::.col-12 .col-lg-4
+![img](https://www.cablify.ca/wp-content/uploads/2018/04/Hybrid-Topology.jpg)
+:::
+
+:::.col-12 .col-lg-8
+- **Structure:** Combination of `two or more topologies`.
+- **Data Flow:** Depends on `combined topologies`.
+- **Pros:** Flexible, scalable, reliable.
+- **Cons:** Complex, expensive to design and maintain.
+- **Example:** Star-Bus, Star-Ring (used in many enterprise networks).
+:::
+:::
+</md></sn><sn><md>### Point-to-Point Topology
+
+:::.row
+:::.col-12 .col-lg-8
+- **Structure:** Direct link `between two devices`.
+- **Data Flow:** Dedicated link.
+- **Pros:** Simple, fast, secure.
+- **Cons:** Not scalable; `limited` to two devices.
+- **Example:** Two routers connected via a leased line.
+:::
+
+:::.col-12 .col-lg-4
+![img](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2-4ttYvGmpKGi0WMwbBpdDqmTe21OzeExY3vPma88L-iNRtyLEpLr5FB0&amp;s=10)
+:::
+:::
+</md></sn><sn><md>### Point-to-Multipoint Topology
+
+:::.row
+:::.col-12 .col-lg-4
+![img](https://docs.digi.com/resources/documentation/digidocs/90001456-13/resources/images/rf_kits/communication_models_2_500x250.png)
+:::
+
+:::.col-12 .col-lg-8
+- **Structure:** `One central device connects to multiple endpoints`.
+- **Data Flow:** Central device shares link with many receivers.
+- **Pros:** Efficient use of medium; good for broadcasting.
+- **Cons:** Shared bandwidth; central device is a `bottleneck`.
+- **Example:** Wi-Fi access point, satellite links.
+:::
+:::
+</md></sn><sn></sn>
