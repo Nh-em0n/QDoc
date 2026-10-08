@@ -9,7 +9,7 @@
     <tags>#05.network topology</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 08 2026 07:12:16 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 08 2026 07:14:44 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-F7BJjLOSVN</id>
     <duration></duration>
   </config>
@@ -136,4 +136,37 @@
 - **Example:** Wi-Fi access point, satellite links.
 :::
 :::
-</md></sn><sn></sn>
+</md></sn><sn><md>### Wireless Mesh Topology
+
+:::.row
+:::.col-12 .col-lg-8
+- **Structure:** Like `mesh` but wireless; *nodes* act as `routers`.
+- **Data Flow:** Data hops node-to-node to reach destination.
+- **Pros:** Self-healing, no cabling, wide coverage.
+- **Cons:** Interference, latency with many hops.
+- **Example:** Smart home devices, city-wide Wi-Fi.
+:::
+
+:::.col-12 .col-lg-4
+![img](https://www.techtarget.com/rms/onlineImages/networking-wireless_mesh_mobile.jpg)
+:::
+:::
+</md></sn><sn><md>### Quick Comparison Table
+
+| Topology | Cost | Reliability | Scalability | Cable Needed | Fault Isolation |
+|----------|------|-------------|-------------|--------------|-----------------|
+| Bus | Low | Low | Low | Low | Poor |
+| Star | Medium | Medium | High | High | Good |
+| Ring | Medium | Medium | Low | Medium | Poor |
+| Mesh | High | Very High | Medium | Very High | Excellent |
+| Tree | Medium | Medium | High | Medium | Good |
+| Hybrid | High | High | High | Varies | Good |
+| Point-to-Point | Low | High | Low | Low | Excellent |
+</md></sn><sn><md>### Key Takeaways
+- **Physical topology** = actual wiring layout.
+- **Logical topology** = how data actually flows (can differ from physical).
+- **Star and hybrid** dominate modern networks.
+- **Mesh** is used where reliability is critical (backbones, military).
+- **Bus and ring** are mostly legacy but important for exams and theory.
+
+Choosing a topology depends on **cost, reliability, scalability, and fault tolerance** requirements.</md></sn>
