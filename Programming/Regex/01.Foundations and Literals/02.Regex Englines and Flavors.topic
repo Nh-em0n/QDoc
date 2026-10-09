@@ -1,10 +1,280 @@
 
-  <sn></sn>
+  <sn><md># Regex Engines and Flavors
+
+## The Big Picture
+
+"Regex" isn't one thing. There are **families** of engines with different capabilities, syntax, and performance characteristics. Knowing which flavor you're using determines what works, what breaks, and how fast it runs.
+
+Two orthogonal questions define any regex implementation:
+
+1. **What engine algorithm does it use?** (how it matches)
+2. **What syntax/features does it support?** (what you can write)
+
+---
+
+## Part 1: Engine Algorithms
+
+### 1. DFA (Deterministic Finite Automaton)
+
+- One active state at a time
+- **Linear time** — O(n) regardless of pattern
+- No backtracking → no ReDoS
+- **Cannot** support backreferences or lookaround (they exceed regular languages)
+- Finds *leftmost-longest* match (POSIX style)
+
+**Used by:** `egrep` (old), RE2 in DFA mode, some grep implementations, `lex`/`flex` internally
+
+### 2. NFA (Non-deterministic Finite Automaton)
+
+- Can be in many states at once (simulated)
+- **Linear time** — O(n × m)
+- No backtracking → no ReDoS
+- Supports captures (with extra bookkeeping)
+- Still can't do backreferences/lookaround in pure form
+
+**Used by:** RE2, Go's `regexp`, Rust's `regex`, Hyperscan
+
+### 3. Backtracking (the "traditional" engine)
+
+- Tries one path; on failure, backs up and tries another
+- **Exponential worst case** → catastrophic backtracking / ReDoS
+- Supports *everything*: backreferences, lookaround, recursion, atomic groups
+- Match order depends on greedy/lazy choices
+
+**Used by:** PCRE, Perl, Python `re`, JavaScript, Java `java.util.regex`, .NET, Ruby, PHP
+
+### 4. Hybrid / Two-pass
+
+- Run a fast DFA/NFA prefilter, then a backtracker for the hard parts
+- **Used by:** PCRE2 (JIT + auto-possessification), .NET (some optimizations), V8 (Irregexp uses a backtracking engine with optimizations)
+
+### The trade-off in one line
+
+```
+Fast &amp; safe (DFA/NFA)  ←──────────────→  Feature-rich (backtracking)
+   no backrefs                              backrefs, lookaround
+   linear time                              exponential risk
+```
+
+---
+
+## Part 2: The Major Flavors
+
+### POSIX
+
+The original standard. Two sub-flavors:
+
+| | BRE (Basic) | ERE (Extended) |
+|---|---|---|
+| `+ ? { }` | literal, need `\+` | special |
+| `( )` groups | need `\(` | special |
+| `\|` alternation | need `\|` | `|` |
+| Used by | `grep`, `sed`, `ed` | `grep -E`, `awk`, `egrep` |
+
+**Leftmost-longest** matching semantics. No backreferences in ERE (BRE has them). No lookaround.
+
+### PCRE (Perl Compatible Regular Expressions)
+
+The de facto standard for "rich" regex. Used by PHP, and the reference for many others.
+
+- Backreferences: `\1`, `\k<name>`
+- Lookahead/lookbehind: `(?=)`, `(?!)`, `(?&lt;=)`, `(?<!--)`
+- Named groups: `(?<name-->...)`
+- Atomic groups: `(?&gt;...)`
+- Possessive quantifiers: `a*+`
+- Recursion: `(?R)`, `(?1)`
+- Conditionals: `(?(1)yes|no)`
+- Verbs: `(*SKIP)`, `(*FAIL)`
+- Unicode properties: `\p{L}`, `\p{Script=Greek}`
+
+### Perl
+
+The origin of most modern features. PCRE is "Perl Compatible" because Perl came first.
+
+- All PCRE features plus Perl-specific ones
+- `\K` (reset match start)
+- Code assertions: `(?{ ... })`, `(??{ ... })`
+- `\G` (match at pos)
+- Best-in-class Unicode support
+
+### Python (`re`, `regex`)
+
+- `re` — stdlib, close to PCRE but missing some features
+- `regex` — third-party, adds `\p{}`, variable-length lookbehind, fuzzy matching, `(?V1)` mode
+
+Python-specific:
+- No `\K`, no `(?R)` in `re`
+- Fixed-width lookbehind only (in `re`)
+- `re.VERBOSE`, `re.ASCII`, `re.IGNORECASE` flags
+- Named groups: `(?P<name>...)`, backref `(?P=name)`
+
+### JavaScript (ECMAScript)
+
+- Based on a backtracking engine
+- `u` flag → Unicode mode (proper `\p{}`, code point handling)
+- `s` flag → dotall (`.` matches newline)
+- `y` flag → sticky (match at lastIndex)
+- `d` flag → indices for groups
+- Lookbehind supported (since ES2018)
+- Named groups `(?<name>...)` (ES2018)
+- **No** atomic groups, possessive quantifiers, recursion, conditionals
+- **No** inline flags except `(?i)` at start (and `(?i:...)` groups since ES2025)
+
+### Java (`java.util.regex`)
+
+- Backtracking, very close to PCRE
+- Atomic groups, possessive quantifiers, lookbehind (bounded)
+- `\Q...\E` quoting
+- **No** recursion, no conditionals
+- Lookbehind can be variable-length in newer Javas (bounded)
+
+### .NET
+
+- Backtracking, feature-rich
+- **Balancing groups** `(?<open>)(?&lt;-open&gt;)` — unique to .NET
+- Variable-length lookbehind
+- Right-to-left matching option
+- Conditionals, atomic groups, recursion-ish via balancing
+
+### Go (`regexp`)
+
+- RE2-derived NFA
+- **Linear time**, no ReDoS
+- **No** backreferences, no lookaround
+- POSIX and Perl-ish syntax modes
+- Great for untrusted input
+
+### Rust (`regex`)
+
+- NFA-based, **linear time**, no ReDoS
+- **No** backreferences, no lookaround (by design)
+- Unicode-first
+- For lookaround/backrefs, the `fancy-regex` crate wraps a backtracker
+
+### RE2 (Google)
+
+- C++ library, NFA-based
+- Linear time, safe for untrusted patterns
+- Used by Google products, BigQuery, etc.
+
+### Oniguruma / Onigmo
+
+- Backtracking, very feature-rich
+- Used by Ruby (Onigmo), PHP's mbstring, TextMate, some editors
+- Supports many Perl features plus its own
+
+### Vim / VSCode / Editors
+
+- Vim has its own flavor (magic/nomagic, `\v` very magic)
+- VSCode uses JS regex (with some Rust-side extensions for search)
+- Sublime uses Boost.Regex (PCRE-like)
+
+---
+
+## Part 3: Feature Comparison Table
+
+| Feature | POSIX ERE | PCRE | Perl | Python `re` | JS | Java | .NET | Go | Rust |
+|---|---|---|---|---|---|---|---|---|---|
+| Backreferences | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ |
+| Lookahead | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ |
+| Lookbehind | ✗ | ✓ | ✓ | fixed | ✓ | bounded | variable | ✗ | ✗ |
+| Named groups | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ | ✓ |
+| Atomic groups | ✗ | ✓ | ✓ | ✗* | ✗ | ✓ | ✓ | ✗ | ✗ |
+| Possessive `*+` | ✗ | ✓ | ✓ | ✗* | ✗ | ✓ | ✓ | ✗ | ✗ |
+| Recursion `(?R)` | ✗ | ✓ | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ |
+| Conditionals | ✗ | ✓ | ✓ | ✓ | ✗ | ✗ | ✓ | ✗ | ✗ |
+| `\p{}` Unicode | ✗ | ✓ | ✓ | ✓ | ✓ (u) | ✓ | ✓ | ✓ | ✓ |
+| `\K` | ✗ | ✓ | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ |
+| Linear time | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ | ✓ |
+| ReDoS safe | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ | ✓ |
+
+\* Python `regex` module adds these.
+
+---
+
+## Part 4: What This Means in Practice
+
+### If you're writing a pattern for untrusted input
+
+Use a **linear-time engine**: Go, Rust `regex`, RE2. They can't blow up. You give up backrefs and lookaround, but most real-world patterns don't need them.
+
+### If you're writing a pattern that needs backrefs/lookaround
+
+You need a **backtracking engine** (PCRE, Python, JS, Java, .NET). Now you must watch for:
+
+- **Catastrophic backtracking** — `(a+)+b` against `aaaaaaaaaaaaaaaaaaaaaa`
+- **Nested quantifiers** — `(a*)*`
+- **Overlapping alternations** — `(a|a)*`
+
+Mitigations: atomic groups `(?&gt;...)`, possessive quantifiers `a*+`, or rewriting the pattern.
+
+### If you're porting a pattern between languages
+
+Expect breakage. Common gotchas:
+
+| Pattern | Works in | Breaks in |
+|---|---|---|
+| `(?&lt;=a+)b` | .NET, Java (newer) | Python `re`, JS |
+| `(?R)` | PCRE, Perl | JS, Java, .NET, Python |
+| `\K` | PCRE, Perl | everything else |
+| `(?<name>...)` | PCRE, .NET, JS, Python* | older engines |
+| `\p{L}` | most | POSIX, old JS (no `u` flag) |
+| Possessive `a*+` | PCRE, Java, .NET | JS, Python `re` |
+| `\Q...\E` | PCRE, Java | JS, Python |
+| Backrefs | PCRE, JS, Java, .NET, Python | Go, Rust, RE2 |
+
+\* Python uses `(?P<name>...)` traditionally, `(?<name>...)` in newer versions.
+
+### If you're choosing an engine for a tool
+
+- **CLI search (grep-like):** RE2 or Rust `regex` for speed and safety
+- **Language built-ins:** whatever your language ships (Python `re`, JS RegExp, Go `regexp`)
+- **Editor:** usually JS or Oniguruma
+- **Log processing at scale:** RE2 / Hyperscan
+- **Need every feature:** PCRE2 or Perl
+
+---
+
+## Part 5: The Deeper Point
+
+The flavor wars come down to one fundamental tension:
+
+```
+Regular languages          Extended "regex"
+(finite automata)    ←────────────────────→   (Turing-ish)
+• linear time                                  • backrefs, recursion
+• no ReDoS                                     • exponential risk
+• safe for untrusted input                     • can match non-regular sets
+• DFA/NFA engines                              • backtracking engines
+```
+
+Theoretical "regex" = regular languages = DFA/NFA. Practical "regex" in PCRE/Perl/JS = a **programming language** that happens to look like regex. That's why:
+
+- `(?R)` can match balanced parens (not regular)
+- `\1` can match `aⁿbⁿ` (not regular)
+- These features **require** a backtracking engine
+- And backtracking is exactly what enables ReDoS
+
+So "which flavor" is really: **do you want the safety and speed of regular languages, or the power (and danger) of a Turing-flavored pattern language?**
+
+---
+
+## Summary
+
+| Question | Answer |
+|---|---|
+| What are the engine types? | DFA, NFA, backtracking, hybrid |
+| Which is fast/safe? | DFA/NFA (linear time, no ReDoS) |
+| Which is feature-rich? | Backtracking (PCRE, Perl, JS, Java, .NET) |
+| What are the main flavors? | POSIX, PCRE, Perl, Python, JS, Java, .NET, Go, Rust, Oniguruma, RE2 |
+| Why do patterns break when ported? | Different feature sets and semantics per flavor |
+| What's the core trade-off? | Regular-language safety vs. extended-feature power |
+| Which should I use? | Match the engine to your threat model and feature needs — untrusted input → linear engine; exotic features → backtracker with care |</name></name></name></open></name></name></name></md></sn>
   <config>
     <tags>#02.regex englines and flavors</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 09 2026 10:26:13 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 09 2026 10:26:32 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-tPWCzs1MxA</id>
     <duration></duration>
   </config>
