@@ -1,10 +1,109 @@
 
-  <sn></sn>
+  <sn><md>### How to Test Regex
+
+
+Regex is easy to get *almost* right. A pattern that works on your one example can fail on the next input, so test it against realistic data before trusting it.
+</md></sn>
   <config>
     <tags>#06.how to test regex</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 09 2026 11:52:38 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 09 2026 11:55:14 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-hUpDsMdq9g</id>
     <duration></duration>
   </config>
+<sn><md>### Online testers
+
+**regex101.com** is the best all-rounder.
+- Pick a flavor (PCRE, Python, JavaScript, Java, Go, .NET) so it matches your language.
+- Matches highlight live as you type.
+- An explanation panel breaks the pattern down piece by piece.
+- A debugger shows step by step how the engine matches, which helps you spot backtracking problems.
+- It generates code snippets and lets you save and share patterns by link.
+
+**Debuggex** draws your regex as a railroad diagram. It's excellent for understanding alternation `|`, groups, and quantifiers visually.
+**regexr.com** has a friendly interface, hover tooltips, a built-in cheat sheet, and a community pattern library. It's JavaScript-based.
+**regexper.com** only visualizes (no matching), but its diagrams are very clear for reading someone else's pattern.
+</md></sn><sn><md>### Language REPLs
+
+Testing in the same language you'll deploy in is the most reliable option, since flavors differ slightly.
+
+**Python**
+```python
+import re
+
+re.findall(r"c.t", "cat cot cut")      # ['cat', 'cot', 'cut']
+re.search(r"\d+", "Order 66")          # <re.match object;="" span="(6," 8),="" match="66">
+re.fullmatch(r"\d{3}", "123")          # matches only if the WHOLE string fits
+re.sub(r"\s+", " ", "a   b    c")      # 'a b c'
+```
+
+**JavaScript** (browser DevTools console or Node)
+```js
+"cat cot cut".match(/c.t/g)        // ["cat", "cot", "cut"]
+/\d+/.test("Order 66")             // true
+"a   b".replace(/\s+/g, " ")       // "a b"
+[..."a1b22".matchAll(/\d+/g)]      // all matches with positions
+```
+
+**Command line**
+```bash
+echo "cat cot" | grep -oE 'c.t'      # -o prints only the matching part
+grep -nE 'error|warn' app.log        # -n shows line numbers
+grep -P '\d+(?=px)' styles.css       # -P enables PCRE (lookaheads, \d, etc.)
+sed -E 's/[0-9]+/N/g' file.txt       # test substitutions
+```
+
+Note that plain `grep` uses a limited flavor. Use `-E` (extended) or `-P` (Perl-style) for modern syntax.
+
+</re.match></md></sn><sn><md>### Which method to use when
+
+| Situation | Best tool |
+|---|---|
+| Learning, or understanding a pattern | regex101 or Debuggex |
+| Building a pattern interactively | regex101, then paste into code |
+| Final verification | Your language's REPL or a unit test |
+| Searching logs and files | `grep -E` / `grep -P` |
+</md></sn><sn><md>### A solid testing routine
+
+1. **Write a test set first.** Make two lists: strings that **should** match and strings that **shouldn't**. Negative cases catch patterns that are too greedy.
+2. **Include edge cases:** empty string, leading and trailing spaces, extra punctuation, uppercase, very long input, and multi-line text.
+3. **Build incrementally.** Start with a tiny pattern, confirm it works, then add one piece at a time.
+4. **Match the flavor.** Confirm that the tester's flavor and flags (`i`, `g`, `m`, `s`) match what your code will use.
+5. **Test anchors deliberately.** Without `^` and `$`, a pattern matches *anywhere* in the string, which is the most common source of false positives. For example, `\d{3}` matches inside "12345".
+6. **Check performance** on long failing inputs. If regex101 reports many steps, or the debugger shows heavy backtracking, simplify nested quantifiers like `(a+)+`.
+</md></sn><sn><md>### Testing in real projects
+
+Put regex checks into automated tests so future edits don't break them:
+
+```python
+import re
+import pytest
+
+PHONE = re.compile(r"^\(\d{3}\) \d{3}-\d{4}$")
+
+@pytest.mark.parametrize("text", ["(555) 123-4567", "(000) 000-0000"])
+def test_valid(text):
+    assert PHONE.match(text)
+
+@pytest.mark.parametrize("text", ["555-123-4567", "(555)123-4567", "", "(555) 123-45678"])
+def test_invalid(text):
+    assert not PHONE.match(text)
+```
+
+This pattern, with valid and invalid lists side by side, documents your intent and catches regressions.
+</md></sn><sn><md>### Common pitfalls
+
+1. **Tester vs. code mismatch.** A pattern passes on regex101 (PCRE) but fails in JavaScript because of a missing feature such as lookbehind in older engines.
+2. **Forgetting the flags.** The tester has `g` or `i` on, but your code doesn't.
+3. **Double-escaping errors.** The pattern is right in the tester but wrong in a string literal. Use raw strings (`r"..."`) or regex literals.
+4. **Testing only the happy path.** If you never try bad input, you won't know when the pattern is too permissive.
+5. **Using `match` when you mean `search`.** In Python, `re.match` anchors at the start of the string and `re.search` scans the whole string. `re.fullmatch` requires the entire string to match.
+
+</md></sn><sn><md>### Quick practice
+
+1. Open regex101, choose the Python flavor, and paste `\d+\.\d{2}` with the text `Total: 19.99, tax: 1.5, fee: 0.75`. Which values match? (19.99 and 0.75; "1.5" fails because it has only one decimal digit.)
+2. Add `^` and `$` to `\d{3}` and test it against "123" and "12345". Compare the results with and without the anchors.
+3. Open the debugger on `.*foo` against a long string with no "foo" and watch how many steps the engine takes.
+
+</md></sn>
