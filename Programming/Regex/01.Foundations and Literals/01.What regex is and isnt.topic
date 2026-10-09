@@ -1,10 +1,112 @@
 
-  <sn></sn>
+  <sn><md>### What Regex *Is*
+
+![img](https://media.geeksforgeeks.org/wp-content/uploads/20251220171423685683/example_of_regular_expression.webp)
+
+A **regular expression** is a `compact notation` for describing **regular languages** — sets of strings that can be recognized by a finite automaton. At its core, regex is **pattern matching**: it answers the question *"does this string contain a substring of this shape?"*
+
+Formally, regex engines correspond to one of:
+
+- **Finite automata** (true "regular" languages) — regular expressions in the theoretical CS sense
+- **Backtracking engines with extensions** (PCRE, Python `re`, JavaScript) — these add features (backreferences, lookaround, recursion) that go *beyond* regular languages
+</md></sn>
   <config>
     <tags>#01.what regex is and isnt</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 09 2026 08:08:04 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 09 2026 08:17:46 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-cbjsN9Eb6f</id>
     <duration></duration>
   </config>
+<sn><md>### What regex is genuinely good at
+
+| Task | Example |
+|---|---|
+| Validation of fixed-format tokens | email-ish, phone numbers, zip codes |
+| Lexical scanning | identifiers, numbers, operators in a tokenizer |
+| Search &amp; replace | find/replace in editors, `sed`, `grep` |
+| Extraction | pull dates, URLs, key=value pairs from text |
+| Simple structural patterns | balanced single-level brackets (with recursion in PCRE) |
+</md></sn><sn><md>### The mental model
+
+Regex is a **local, stateless pattern matcher**. It looks at characters and asks "do these match my shape?" It has no concept of *meaning*, *context*, or *nesting depth* (except via non-regular extensions).
+
+</md></sn><sn><md>### What Regex *Isn't*
+
+- It isn't a parser
+
+	A **parser** builds a structured representation (a parse tree / AST) of input according to a **grammar**. It understands:
+
+	- **Hierarchy** — which construct contains which
+	- **Context** — what a token means *given where it appears*
+	- **Semantics** — what the structure *does*
+
+	Regex produces, at best, a flat list of captures. It cannot tell you that this `{` closes *that* `}`, or that this identifier is a variable declaration vs. a function call.
+
+- It can't handle arbitrary nesting
+
+	Classic example — balanced parentheses:
+
+	```
+	(())        ✓ easy enough with a counter, hard with pure regex
+	(()())      ✓
+	(((())))    ✓
+	```
+
+	Pure regex **cannot** match arbitrarily nested brackets. This is the classic pumping-lemma proof that `{ aⁿbⁿ }` (and balanced parens) are **not regular languages**.
+
+	Workarounds exist (PCRE recursion `(?R)`, .NET balancing groups), but they're bolted-on extensions, not regex proper — and they're fragile.
+
+- It can't do context-sensitive matching
+
+	- "Match an HTML `<div>` only if it's properly closed" → needs a parser
+	- "Match a C `for` loop body" → needs a parser
+	- "Match this identifier only if it's not a reserved word" → easier with a token stream + symbol table
+
+- It doesn't understand semantics
+
+	Regex can match `&lt;.*?&gt;` in HTML, but it can't tell you:
+	- whether that tag is well-formed
+	- whether attributes are valid
+	- whether the document is structurally sound
+
+	That's why the famous Stack Overflow answer says: **don't parse HTML with regex.**
+
+- It isn't a general-purpose text-processing solution
+
+	Complex regexes become:
+	- **Unreadable** ("write-only" code)
+	- **Slow** — catastrophic backtracking (ReDoS) is a real attack vector
+	- **Hard to debug** — one wrong character breaks everything silently
+</div></md></sn><sn><md>### The Boundary: Pattern Matching vs. Parsing
+
+```
+Pattern matching (regex)          Parsing (grammar + parser)
+─────────────────────────         ──────────────────────────
+Regular languages                 Context-free (+) languages
+Flat, local structure             Hierarchical, nested structure
+No memory of "what came before"   Stateful, stack-based
+Tokens, substrings                Trees, ASTs, semantics
+"Does this look like X?"          "What does this mean?"
+```
+</md></sn><sn><md>### Rule of thumb
+
+- **Regex** → tokenizing, validating fixed formats, extracting simple fields, search/replace
+- **Parser (or regex + parser combo)** → anything with nesting, context, or semantics
+
+A common, sane architecture:
+
+1. **Lexer** uses regex to split input into tokens
+2. **Parser** uses a grammar (recursive descent, PEG, etc.) to build structure from tokens
+
+Regex does step 1 well. Step 2 is where regex gives up and parsing begins.
+</md></sn><sn><md>### Summary
+
+| Question | Answer |
+|---|---|
+| What is regex? | A notation for regular languages; a pattern matcher |
+| What is it good for? | Tokens, formats, search/replace, extraction |
+| What is it *not*? | A parser, a grammar engine, a semantic analyzer |
+| Why? | It's a finite automaton — no stack, no unbounded memory, no context |
+| What to use instead? | A lexer + parser (or a proper grammar tool) for anything nested or context-sensitive |
+</md></sn>
