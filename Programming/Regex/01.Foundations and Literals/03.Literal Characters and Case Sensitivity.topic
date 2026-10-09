@@ -1,10 +1,104 @@
 
-  <sn></sn>
+  <sn><md>### What a literal character is
+
+A literal character matches itself. Letters, digits, spaces, and most punctuation are literals, so the pattern `hello` matches the exact text "hello" and nothing else. The engine reads the pattern left to right and looks for those characters in that exact order.
+
+```
+Pattern:  cat
+Text:     "The cat sat on a concatenated scatter."
+Matches:  "cat" in "cat", "concatenated", and "scatter"
+```
+
+Notice that `cat` matches inside larger words too. A regex doesn't know about words unless you tell it to (with word boundaries like `\b`, which come later).
+</md></sn>
   <config>
     <tags>#03.literal characters and case sensitivity</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 09 2026 10:38:33 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 09 2026 10:40:33 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-bQLmguEr5H</id>
     <duration></duration>
   </config>
+<sn><md>### Literals vs. metacharacters
+
+Not every character is literal. These twelve are **metacharacters** with special meaning in most flavors:
+
+```
+. ^ $ * + ? ( ) [ ] { } | \
+```
+
+Everything else is literal. So `a-b` is a plain three-character match, but `a.b` is not, because the dot is special. Escaping a metacharacter with a backslash turns it back into a literal (`a\.b`).
+
+One subtle point: some characters are literal in some places and special in others. A hyphen is literal in `a-b` but defines a range inside `[a-z]`. A `^` is an anchor at the start of a pattern but a negation inside `[^abc]`.
+
+
+</md></sn><sn><md>### Matching is sequential and exact
+
+Each literal must match in order, with no gaps:
+
+| Pattern | Text | Result |
+|---|---|---|
+| `dog` | "dog" | match |
+| `dog` | "d-o-g" | no match |
+| `dog` | "hotdog" | match (inside the word) |
+| `dog` | "do g" | no match |
+
+Spaces count as literals too. `New York` requires exactly one space between the words, so "New  York" (two spaces) fails.
+</md></sn><sn><md>### Case sensitivity
+
+By default, matching is **case sensitive**. Uppercase and lowercase are different characters to the engine:
+
+| Pattern | "cat" | "Cat" | "CAT" |
+|---|---|---|---|
+| `cat` | yes | no | no |
+| `Cat` | no | yes | no |
+</md></sn><sn><md>### Making it case insensitive
+
+Use the ignore-case flag. The syntax varies by language:
+
+```python
+# Python
+re.search("cat", "Cat", re.IGNORECASE)   # or re.I
+```
+
+```javascript
+// JavaScript
+/cat/i.test("Cat")   // true
+```
+
+```
+# Inline modifier (PCRE, Python, Java, .NET, and others)
+(?i)cat
+```
+
+```bash
+# grep
+grep -i "cat" file.txt
+```
+</md></sn><sn><md>### Partial case insensitivity
+
+Some engines let you scope the flag to part of a pattern: `(?i:cat)s` matches "Cats" and "CATs" but not "CATS" or "cat S". Support varies (JavaScript added modifier groups only recently), so check your engine.
+</md></sn><sn><md>### The manual alternative
+
+If flags aren't available, you can use character classes:
+
+```
+[Cc][Aa][Tt]
+```
+
+This matches any casing of "cat," but it's tedious and harder to read, so a flag is almost always better.
+</md></sn><sn><md>### Common pitfalls
+
+1. **Forgetting case.** Searching for `error` in logs will miss `ERROR` and `Error`. Use the `i` flag when casing is inconsistent.
+2. **Unintended substrings.** `cat` matching inside "category" surprises beginners. Add boundaries (`\bcat\b`) when you want whole words only.
+3. **Unescaped metacharacters in "literal" text.** Searching for `file.txt` also matches "fileXtxt". If you really want a literal string, escape it (`file\.txt`) or use your language's escape helper, such as `re.escape()` in Python.
+4. **Unicode case.** Case-insensitivity for non-English letters depends on the engine and flags. For example, matching "É" and "é" may require a Unicode flag (`re.UNICODE` or `u` in JavaScript).
+</md></sn><sn><md>### Quick practice
+
+Try these in regex101:
+
+- Pattern `Hello` against "Hello, hello, HELLO". How many matches? (One.)
+- Add the `i` flag. Now? (Three.)
+- Pattern `3.14` against "3.14 and 3x14". How many? (Two, because the dot is a wildcard.)
+- Change it to `3\.14`. Now? (One.)
+</md></sn>
