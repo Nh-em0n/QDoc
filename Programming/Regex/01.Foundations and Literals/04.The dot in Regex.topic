@@ -1,10 +1,117 @@
 
-  <sn></sn>
+  <sn><md>### The Dot `.` in Regex
+
+The dot matches `any single character except a newline`. It is the wildcard of regex: it doesn't care what the character is, only that `there is exactly one`.
+
+```
+Pattern:  c.t
+Text:     "cat cot cut c9t c-t ct c t coat"
+Matches:  cat, cot, cut, c9t, c-t,c t
+```
+
+`ct` fails because nothing sits between c and t. `coat` fails because two characters sit between them.
+</md></sn>
   <config>
     <tags>#04.the dot in regex</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 09 2026 11:09:44 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 09 2026 11:12:13 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-hzIZpeG74l</id>
     <duration></duration>
   </config>
+<sn><md>### It matches exactly one character
+
+Each dot consumes one character, no more and no less:
+
+| Pattern | Matches | Doesn't match |
+|---|---|---|
+| `a.c` | abc, a1c, a c, a.c | ac, abbc |
+| `a..c` | abbc, a12c | abc, ac |
+| `...` | any three characters | "ab" |
+
+To match a variable amount, combine it with a quantifier:
+
+| Pattern | Meaning |
+|---|---|
+| `.*` | zero or more of any character |
+| `.+` | one or more of any character |
+| `.?` | zero or one of any character |
+| `.{3}` | exactly three of any character |
+| `.{2,5}` | between two and five of any character |
+</md></sn><sn><md>### What it matches (and what it doesn't)
+
+The dot matches letters, digits, spaces, tabs, punctuation, and symbols. Even a literal period matches, since a period is a character.
+
+By default it does **not** match line breaks. In most engines that means `\n`, and some also exclude `\r`. So:
+
+```
+Pattern:  a.b
+Text:     "a\nb"
+Result:   no match
+```
+</md></sn><sn><md>### Making the dot match newlines
+
+Use the **dotall** (single-line) flag:
+
+```python
+# Python
+re.search(r"a.b", "a\nb", re.DOTALL)   # matches
+```
+
+```javascript
+// JavaScript
+/a.b/s.test("a\nb")   // true
+```
+
+```
+# Inline (PCRE, Java, .NET, Python)
+(?s)a.b
+```
+
+Note the naming confusion: "single-line" mode (`s`) is about the dot, while "multiline" mode (`m`) is about `^` and `$`. They are unrelated.
+
+If your engine lacks the flag, a common workaround is `[\s\S]`, which means "any whitespace or any non-whitespace," i.e. truly any character. (`[^]` works in JavaScript only.)
+</md></sn><sn><md>### Greedy vs. lazy: the classic dot trap
+
+`.*` is **greedy**: it grabs as much as it can, then backs off only if needed.
+
+```
+Pattern:  &lt;.*&gt;
+Text:     "<b>bold</b> and <i>italic</i>"
+Match:    "<b>bold</b> and <i>italic</i>"   (the whole thing)
+```
+
+It matched from the first `&lt;` to the very last `&gt;`. Often you want the shortest match instead. Add `?` to make it **lazy**:
+
+```
+Pattern:  &lt;.*?&gt;
+Matches:  "<b>", "</b>", "<i>", "</i>"
+```
+
+Another option is to be more specific: `&lt;[^&gt;]*&gt;` means "a `&lt;`, then anything that isn't `&gt;`, then `&gt;`." This is usually faster and more predictable than a lazy dot.
+</md></sn><sn><md>### Matching a literal period
+
+Because `.` is a wildcard, a real period needs escaping:
+
+| Pattern | Text "3.14 and 3x14" |
+|---|---|
+| `3.14` | matches both |
+| `3\.14` | matches only "3.14" |
+
+Inside a character class, the dot is already literal, so `[.]` also matches only a period.
+</md></sn><sn><md>### Common pitfalls
+
+1. **Forgetting to escape it.** `example.com` also matches "exampleXcom". Use `example\.com`.
+2. **Overusing `.*`.** It can swallow far more than intended, especially across a long line. Prefer a specific character class when you know what should be there.
+3. **Expecting it to cross lines.** A pattern like `start.*end` won't match if "start" and "end" are on different lines unless you enable dotall.
+4. **Performance.** Multiple greedy dots, such as `.*foo.*bar.*`, can cause heavy backtracking on long input that fails to match.
+5. **Unicode.** The dot generally matches one *code point*, not one visible character. An emoji or a letter with a combining accent may count as two or more dots in some engines.
+</md></sn><sn><md>### Quick practice
+
+Try these in regex101:
+
+- `b.g` against "bag big bug bg b g". Which match? (bag, big, bug, "b g")
+- `a.*z` against "a1z2z" matches how much? (All of it, because it's greedy.)
+- `a.*?z` against the same text? (Just "a1z".)
+- `file.txt` vs `file\.txt` against "file.txt fileXtxt". How many matches for each? (Two vs. one.)
+</md></sn>
