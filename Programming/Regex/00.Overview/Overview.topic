@@ -1,10 +1,184 @@
 
-  <sn></sn>
+  <sn><md>### Complete Regex Learning Path: From Basic to Advanced
+
++++ #### Foundations &amp; Literals
+
+- What regex is and isn't (pattern matching vs. parsing)
+- Regex engines and flavors (PCRE, JavaScript, Python `re`, RE2, POSIX)
+- Literal characters and case sensitivity
+- The dot `.` (any character except newline)
+- Escaping special characters (`\.`, `\*`, `\\`)
+- How to test regex (regex101, debuggex, language REPLs)
+
+**Goal:** Match exact strings and understand the concept of metacharacters.
+
++++
+
++++ #### Character Classes
+
+- `[abc]` — character sets
+- Ranges `[a-z]`, `[0-9]`, `[A-Za-z]`
+- Negation `[^abc]`
+- Predefined classes: `\d`, `\w`, `\s` (and their negations `\D`, `\W`, `\S`)
+- POSIX classes (`[:alpha:]`, `[:digit:]`) — where they apply
+- Inside vs. outside brackets: metacharacter behavior
+- Escaping inside character classes
+
+**Goal:** Match "any of these characters" patterns.
+
++++
+
++++ #### Quantifiers &amp; Repetition
+
+- `*` (0 or more), `+` (1 or more), `?` (0 or 1)
+- Exact `{n}`, range `{n,m}`, minimum `{n,}`
+- Greedy vs. lazy (`*?`, `+?`, `{n,m}?`)
+- Possessive quantifiers (`*+`, `++`) — PCRE/Java
+- Catastrophic backtracking (intro)
+
+**Goal:** Control how many times something repeats.
+
++++
+
++++ #### Anchors &amp; Boundaries
+
+- `^` and `$` (start/end of line)
+- `\A`, `\z`, `\Z` (string anchors — flavor-specific)
+- `\b` and `\B` (word boundaries)
+- Multiline mode (`m` flag)
+- `\G` (end of previous match)
+
+**Goal:** Anchor matches to positions.
+
++++
+
++++ #### Groups &amp; Capturing
+
+- Capturing groups `(...)`
+- Backreferences `\1`, `\2`
+- Named groups `(?<name>...)` / `(?P<name>...)`
+- Non-capturing groups `(?:...)`
+- Nested groups and numbering rules
+- Alternation `|` and how it interacts with groups
+
+**Goal:** Extract and reuse parts of matches.
+
++++
+
++++ #### Lookarounds
+
+- Positive lookahead `(?=...)`
+- Negative lookahead `(?!...)`
+- Positive lookbehind `(?&lt;=...)`
+- Negative lookbehind `(?<!--...)`
+- Variable-length lookbehind (PCRE, .NET, JS newer)
+- Lookaround nesting and combining
+
+**Goal:** Assert context without consuming it.
+
++++
+
++++ #### Flags & Modes
+
+- `i` (case-insensitive), `m` (multiline), `s` (dotall), `x` (extended/verbose)
+- `g` (global) and `y` (sticky) in JavaScript
+- `u` (Unicode) in JavaScript
+- `U` (ungreedy) in PCRE
+- Inline modifiers `(?i)`, `(?m:...)`
+
+**Goal:** Control engine behavior globally or locally.
+
++++
+
++++ #### Unicode & Advanced Character Handling
+
+- Unicode properties `\p{L}`, `\p{N}`, `\p{Script=Greek}`
+- `\X` (grapheme cluster)
+- Case folding and Unicode case-insensitivity
+- Line break conventions (`\r\n` vs. `\n`)
+- Normalization issues (NFC, NFD)
+
+**Goal:** Handle international text correctly.
+
++++
+
++++ #### Advanced Constructs
+
+- Atomic groups `(?-->...)`
+- Conditional patterns `(?(1)yes|no)`
+- Recursion `(?R)`, `(?1)` (PCRE)
+- Subroutines `(?&amp;name)`
+- Branch reset `(?|...)`
+- Inline comments `(?#...)` and free-spacing mode
+
+**Goal:** Write powerful, recursive, and complex patterns.
+
++++
+
++++ #### Performance &amp; Debugging
+
+- Backtracking mechanics (NFA vs. DFA engines)
+- Catastrophic backtracking and how to avoid it
+- Possessive quantifiers and atomic groups as remedies
+- ReDoS (Regular Expression Denial of Service)
+- Benchmarking and profiling
+- Writing maintainable regex (comments, spacing, testing)
+
+**Goal:** Write fast, safe regex that won't blow up.
+
++++
+
++++ #### Real-World Patterns (Applied Practice)
+
+- Email validation (and why "perfect" email regex is a myth)
+- URL/URI parsing
+- Date/time formats (ISO 8601, etc.)
+- Log file parsing
+- CSV (and its limits)
+- HTML/XML (and why you shouldn't)
+- Password strength rules
+- Tokenizing simple languages
+
+**Goal:** Apply knowledge to common problems and know when *not* to use regex.
+
++++
+
++++ #### Language-Specific APIs
+
+- **JavaScript:** `RegExp`, `match`, `matchAll`, `replace`, `split`, `exec`, lastIndex
+- **Python:** `re`, `re.compile`, `findall`, `finditer`, `sub`, raw strings
+- **PCRE (PHP, Perl, grep -P):** unique features
+- **Go (RE2):** no backreferences, linear time
+- **Java:** `Pattern`, `Matcher`
+- **sed/awk/grep:** basic vs. extended regex (BRE vs. ERE)
+
+**Goal:** Use regex idiomatically in your language.
+
++++
+
++++ #### Suggested Practice Resources
+
+- **regex101.com** — debug with explanations
+- **regexcrossword.com** — gamified learning
+- **RegexOne**, **RegexLearn** — interactive basics
+- **"Mastering Regular Expressions" by Jeffrey Friedl** — the definitive book
+- **rexegg.com** — advanced reference
+
++++
+
++++ #### Milestone Projects
+
+1. **Beginner:** Validate phone numbers, zip codes, hex colors
+2. **Intermediate:** Log parser, markdown link extractor, CSV tokenizer
+3. **Advanced:** Mini-template engine, JSON-ish tokenizer, simple regex-based lexer
+
++++
+</name></name></md></sn>
   <config>
     <tags>#overview</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 09 2026 08:01:55 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 09 2026 08:02:05 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Adims6cVOh</id>
     <duration></duration>
   </config>
