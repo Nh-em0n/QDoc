@@ -1,10 +1,140 @@
 
-  <sn></sn>
+  <sn><md>### Escaping Special Characters in Regex
+
+Some characters have special meaning in a regex. When you want one of them to match as plain text, you put a backslash `\` in front of it. The backslash tells the engine: "treat the next character literally."
+
+```
+Pattern:  3\.14
+Text:     "3.14 and 3x14"
+Match:    "3.14" only
+```
+
+Without the backslash, the dot is a wildcard and would also match "3x14".
+</md></sn>
   <config>
     <tags>#05.escaping special characters</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 09 2026 11:35:09 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Fri Oct 09 2026 11:37:33 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-dub1gqnve7</id>
     <duration></duration>
   </config>
+<sn><md>### The characters that need escaping
+
+Outside a character class, these are the usual metacharacters:
+
+```
+. * + ? ^ $ ( ) [ ] { } | \
+```
+
+| Want to match | Pattern | Example text |
+|---|---|---|
+| a period | `\.` | "end." |
+| an asterisk | `\*` | "2*3" |
+| a plus | `\+` | "1+1" |
+| a question mark | `\?` | "Really?" |
+| a caret | `\^` | "x^2" |
+| a dollar sign | `\$` | "$5" |
+| parentheses | `\(` `\)` | "f(x)" |
+| square brackets | `\[` `\]` | "[note]" |
+| curly braces | `\{` `\}` | "{id}" |
+| a pipe | `\|` | "a\|b" |
+| a backslash | `\\` | "C:\Users" |
+
+Example: to match `(555) 123-4567`, use `\(555\) 123-4567`.
+</md></sn><sn><md>### The backslash itself: `\\`
+
+Since `\` is the escape character, matching a literal backslash means escaping it with another one.
+
+```
+Pattern:  C:\\Users
+Text:     "C:\Users"
+```
+</md></sn><sn><md>### Escapes that are *not* literal: the reverse case
+
+A backslash before a **letter or digit** often gives it special meaning instead:
+
+| Escape | Meaning |
+|---|---|
+| `\d` | a digit |
+| `\w` | a word character |
+| `\s` | whitespace |
+| `\b` | a word boundary |
+| `\n` | newline |
+| `\t` | tab |
+
+So the backslash works in both directions: it makes special punctuation literal, and it makes some plain letters special. That's why `\d` matches a digit while `d` just matches the letter d.
+
+Escaping a character that isn't special, like `\@` or `\-`, is usually harmless but unnecessary. A few engines treat unknown escapes as errors, though, so don't escape letters or digits you don't mean to be special.
+</md></sn><sn><md>### Escaping inside character classes
+
+Inside `[...]`, most metacharacters are already literal, so you rarely need backslashes:
+
+| Pattern | Matches |
+|---|---|
+| `[.]` | a literal period |
+| `[*+?]` | an asterisk, plus, or question mark |
+| `[$]` | a dollar sign |
+
+The characters that still need care inside a class:
+
+- `]` closes the class, so write `[\]]` (or put it first: `[]abc]` in some engines)
+- `\` is still the escape character, so use `[\\]`
+- `^` negates the class only at the start, so `[a^]` is fine but `[\^a]` is safer
+- `-` makes a range between characters, so put it first or last (`[a-]`) or escape it (`[a\-z]`)
+</md></sn><sn><md>### The double-escaping problem
+
+In most languages, the backslash is special in **string literals** too, so the string gets processed before the regex engine sees it.
+
+```python
+# Python
+re.search("\\.", text)     # string "\\." → regex \.
+re.search(r"\.", text)     # raw string, much cleaner
+re.search("\\\\", text)    # matches one literal backslash
+re.search(r"\\", text)     # same thing, raw string
+```
+
+```javascript
+// Regex literal: no double escaping
+/\./.test("3.14")             // true
+
+// RegExp constructor with a string: double escaping returns
+new RegExp("\\.").test("3.14")  // true
+```
+
+Rule of thumb: use raw strings in Python (`r"..."`), regex literals in JavaScript, and verbatim strings in C# (`@"..."`) or raw strings in other languages, where available.
+</md></sn><sn><md>### Escaping user input automatically
+
+If part of your pattern comes from user input, such as a search term, don't hand-escape it. Use your language's helper:
+
+```python
+import re
+term = "file(1).txt"
+pattern = re.escape(term)        # file\(1\)\.txt
+re.search(pattern, text)
+```
+
+```javascript
+// JavaScript has no built-in, so a common helper is:
+const escape = s =&gt; s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&amp;");
+```
+
+This matters for correctness and for safety: unescaped user input can break your pattern or trigger catastrophic backtracking.
+</md></sn><sn><md>### Common pitfalls
+
+1. **Forgetting to escape the dot** in file names and domains: `example.com` also matches "exampleXcom".
+2. **Escaping in the string but not the regex**, e.g. writing `"\."` in Python without `r`, which gets passed along as a plain `.` (and triggers a warning in newer versions).
+3. **Too many or too few backslashes** when patterns pass through JSON, shell commands, or config files, where each layer adds its own escaping.
+4. **Escaping inside a class unnecessarily**, like `[\.]`. It works, but `[.]` is cleaner.
+5. **Flavor differences:** in some engines (POSIX basic `grep`, `sed`), `\(` and `\)` are the *grouping* operators and plain `(` `)` are literals, the opposite of PCRE. Check your tool's flavor.
+
+</md></sn><sn><md>### Quick practice
+
+Try these in regex101:
+
+- `1+1=2` against "1+1=2". Does it match? (No: `+` is a quantifier, so the engine looks for one or more 1s followed by "=2".)
+- `1\+1=2` against the same text. (Yes.)
+- `\$\d+\.\d{2}` against "Total: $19.99". (Matches "$19.99".)
+- `C:\\Users\\\w+` against "C:\Users\Sam". (Matches the whole path.)
+- `\(\d{3}\) \d{3}-\d{4}` against "(555) 123-4567". (Matches.)
+</md></sn>
