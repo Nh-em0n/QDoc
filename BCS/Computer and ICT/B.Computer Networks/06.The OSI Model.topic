@@ -16,7 +16,7 @@ The **OSI (`Open Systems Interconnection`) model** is a `conceptual framework`, 
     <tags>#06.the osi model</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Oct 11 2026 19:13:03 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Oct 11 2026 19:15:01 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-KIDxLheHlM</id>
     <duration></duration>
   </config>
@@ -40,7 +40,9 @@ The **OSI (`Open Systems Interconnection`) model** is a `conceptual framework`, 
 
 A common mnemonic, top to bottom: **"All People Seem To Need Data Processing."** Bottom to top: **"Please Do Not Throw Sausage Pizza Away."**
 
-</md></sn><sn><md>### OSI vs. TCP/IP
++++ ...
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/osi_model_neumonics.png)
++++</md></sn><sn><md>### OSI vs. TCP/IP
 
 :::.row
 :::.col-12 .col-lg-4
