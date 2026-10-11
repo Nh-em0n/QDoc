@@ -16,85 +16,11 @@ The **OSI (`Open Systems Interconnection`) model** is a `conceptual framework`, 
     <tags>#06.the osi model</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Oct 11 2026 19:23:11 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Oct 11 2026 19:24:55 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-KIDxLheHlM</id>
     <duration></duration>
   </config>
-<sn><md>### The Seven Layers
-
-![img](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS90HSxShmQjd3yCphemVKj2N1bX-k21CFCV_vZtKQy1w&amp;s=10)
-
-+++ ...
-![img](https://www.infosectrain.com/wp-content/uploads/2024/04/OSI-Model-Layers-1.jpg)
-+++
-
-| # | Layer | What it does | Data unit | Examples |
-|---|-------|--------------|-----------|----------|
-| 7 | **Application** | `Interface` for network services used by software | Data | HTTP, HTTPS, FTP, SMTP, DNS |
-| 6 | **Presentation** | `Translates, encrypts, and compresses` data | Data | TLS/SSL, JPEG, ASCII, MPEG |
-| 5 | **Session** | `Opens, manages, and closes` sessions between applications | Data | NetBIOS, RPC, session tokens |
-| 4 | **Transport** | End-to-end delivery, segmentation, error recovery, flow control | Segment (TCP) / Datagram (UDP) | TCP, UDP |
-| 3 | **Network** | Logical addressing and routing between networks | Packet | IP, ICMP, routers |
-| 2 | **Data Link** | `Node-to-node` delivery on the same network, MAC addressing, error detection | Frame | Ethernet, Wi-Fi (802.11), switches |
-| 1 | **Physical** | `Raw bit transmission` over a medium | Bits | Cables, fiber, hubs, radio signals |
-
-A common mnemonic, top to bottom: **"All People Seem To Need Data Processing."** Bottom to top: **"Please Do Not Throw Sausage Pizza Away."**
-
-+++ ...
-![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/osi_model_neumonics.png)
-+++</md></sn><sn><md>### OSI vs. TCP/IP
-
-:::.row
-:::.col-12 .col-lg-4
-- TCP/IP has four layers: Application (OSI 5-7), Transport (4), Internet (3), and Network Access (1-2). 
-- OSI is the `reference model` for understanding, while TCP/IP is what the internet actually uses.
-:::
-
-:::.col-12 .col-lg-8
-![img](https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2022_03_OSI-Model-vs-TCP-IP-Model-Difference.jpg)
-:::
-:::
-
-+++ ...
-
-| OSI (7 layers) | TCP/IP (4 layers) |
-|---|---|
-| Application, Presentation, Session | Application |
-| Transport | Transport |
-| Network | Internet |
-| Data Link, Physical | Network Access |
-
-The **TCP/IP model** is what's actually implemented on the internet, while OSI remains a reference/teaching model.
-
-![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/osi_tcp_model_diagram.png)
-+++
-
-</md></sn><sn><md>### Why It Matters
-
-- **Troubleshooting:** You can isolate problems `layer by layer`. 
-  - A dead cable is Layer 1, 
-  - a wrong IP is Layer 3, 
-  - a blocked port is Layer 4.
-- **Standardization:** Vendors can build interoperable products as long as they follow each layer's interface.
-- **Modularity:** A layer can change (say, Wi-Fi replacing Ethernet) without affecting the others.
-- **Design:** Guides how protocols and hardware are developed.
-- **Education:** Makes complex networking concepts easier to understand.
-
-</md></sn><sn><md>### How Data Flows
-
-When you send data, it moves **down** the stack on your machine. Each layer adds its own header, a process called `encapsulation`. The bits travel across the medium, and the receiving machine moves them **up** the stack, with each layer stripping its header (`decapsulation`).
-
-For example, loading a web page: 
-
-![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/how_data_flow_diagram.png)
-
-- your browser creates an HTTP request (Layer 7), 
-- TLS encrypts it (6), 
-- TCP splits it into segments (4), 
-- IP adds source and destination addresses (3), 
-- Ethernet or Wi-Fi wraps it in frames (2), and 
-- the network card sends it as signals (1).
-</md></sn><sn><md>![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/osi-model-cycle.jpeg)
+<sn><md>![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/osi-model-cycle.jpeg)
 
 
 :::.row
@@ -156,4 +82,78 @@ For example, loading a web page:
 - **Function:** Transmits raw bitstreams (0s and 1s) over physical media.
 - **Examples:** Cables (twisted pair, fiber), wireless signals, hubs, voltages, pin layouts
 - **Analogy:** The actual roads and wires the data travels on
+</md></sn><sn><md>### The Seven Layers
+
+![img](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS90HSxShmQjd3yCphemVKj2N1bX-k21CFCV_vZtKQy1w&amp;s=10)
+
++++ ...
+![img](https://www.infosectrain.com/wp-content/uploads/2024/04/OSI-Model-Layers-1.jpg)
++++
+
+| # | Layer | What it does | Data unit | Examples |
+|---|-------|--------------|-----------|----------|
+| 7 | **Application** | `Interface` for network services used by software | Data | HTTP, HTTPS, FTP, SMTP, DNS |
+| 6 | **Presentation** | `Translates, encrypts, and compresses` data | Data | TLS/SSL, JPEG, ASCII, MPEG |
+| 5 | **Session** | `Opens, manages, and closes` sessions between applications | Data | NetBIOS, RPC, session tokens |
+| 4 | **Transport** | End-to-end delivery, segmentation, error recovery, flow control | Segment (TCP) / Datagram (UDP) | TCP, UDP |
+| 3 | **Network** | Logical addressing and routing between networks | Packet | IP, ICMP, routers |
+| 2 | **Data Link** | `Node-to-node` delivery on the same network, MAC addressing, error detection | Frame | Ethernet, Wi-Fi (802.11), switches |
+| 1 | **Physical** | `Raw bit transmission` over a medium | Bits | Cables, fiber, hubs, radio signals |
+
+A common mnemonic, top to bottom: **"All People Seem To Need Data Processing."** Bottom to top: **"Please Do Not Throw Sausage Pizza Away."**
+
++++ ...
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/osi_model_neumonics.png)
++++</md></sn><sn><md>### How Data Flows
+
+When you send data, it moves **down** the stack on your machine. Each layer adds its own header, a process called `encapsulation`. The bits travel across the medium, and the receiving machine moves them **up** the stack, with each layer stripping its header (`decapsulation`).
+
+For example, loading a web page: 
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/how_data_flow_diagram.png)
+
+- your browser creates an HTTP request (Layer 7), 
+- TLS encrypts it (6), 
+- TCP splits it into segments (4), 
+- IP adds source and destination addresses (3), 
+- Ethernet or Wi-Fi wraps it in frames (2), and 
+- the network card sends it as signals (1).
+</md></sn><sn><md>### OSI vs. TCP/IP
+
+:::.row
+:::.col-12 .col-lg-4
+- TCP/IP has four layers: Application (OSI 5-7), Transport (4), Internet (3), and Network Access (1-2). 
+- OSI is the `reference model` for understanding, while TCP/IP is what the internet actually uses.
+:::
+
+:::.col-12 .col-lg-8
+![img](https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2022_03_OSI-Model-vs-TCP-IP-Model-Difference.jpg)
+:::
+:::
+
++++ ...
+
+| OSI (7 layers) | TCP/IP (4 layers) |
+|---|---|
+| Application, Presentation, Session | Application |
+| Transport | Transport |
+| Network | Internet |
+| Data Link, Physical | Network Access |
+
+The **TCP/IP model** is what's actually implemented on the internet, while OSI remains a reference/teaching model.
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/osi_tcp_model_diagram.png)
++++
+
+</md></sn><sn><md>### Why It Matters
+
+- **Troubleshooting:** You can isolate problems `layer by layer`. 
+  - A dead cable is Layer 1, 
+  - a wrong IP is Layer 3, 
+  - a blocked port is Layer 4.
+- **Standardization:** Vendors can build interoperable products as long as they follow each layer's interface.
+- **Modularity:** A layer can change (say, Wi-Fi replacing Ethernet) without affecting the others.
+- **Design:** Guides how protocols and hardware are developed.
+- **Education:** Makes complex networking concepts easier to understand.
+
 </md></sn>
