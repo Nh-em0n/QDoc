@@ -3,7 +3,9 @@
 :::.col-12 .col-lg-6
 ### The OSI Model
 
-The **OSI (`Open Systems Interconnection`) model** is a `conceptual framework`, published by `ISO` in the `1980`s, that `splits network communication` into **seven layers**. Each layer has one job, talks only to the layers directly above and below it, and communicates with the matching layer on the other machine. It's mostly a `teaching and troubleshooting` tool. Real networks run on the simpler `TCP/IP` model, but OSI vocabulary ("Layer 2 switch," "Layer 7 firewall") is used everywhere.
+- The **OSI (`Open Systems Interconnection`) model** is a `conceptual framework`, published by `ISO` in the `1980`s, that `splits network communication` into **seven layers**. 
+- Each layer has one job, talks only to the layers directly above and below it, and communicates with the matching layer on the other machine. 
+- It's mostly a `teaching and troubleshooting` tool. Real networks run on the simpler `TCP/IP` model, but OSI vocabulary ("Layer 2 switch," "Layer 7 firewall") is used everywhere.
 :::
 
 :::.col-12 .col-lg-6
@@ -16,7 +18,7 @@ The **OSI (`Open Systems Interconnection`) model** is a `conceptual framework`, 
     <tags>#06.the osi model</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Oct 11 2026 19:24:55 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Oct 11 2026 19:31:38 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-KIDxLheHlM</id>
     <duration></duration>
   </config>
