@@ -16,7 +16,7 @@ The **OSI (`Open Systems Interconnection`) model** is a `conceptual framework`, 
     <tags>#06.the osi model</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Oct 11 2026 19:06:44 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Oct 11 2026 19:13:03 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-KIDxLheHlM</id>
     <duration></duration>
   </config>
@@ -56,4 +56,26 @@ A common mnemonic, top to bottom: **"All People Seem To Need Data Processing."**
 +++ ...
 ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/osi_tcp_model_diagram.png)
 +++
-</md></sn>
+</md></sn><sn><md>### Why It Matters
+
+- **Troubleshooting:** You can isolate problems `layer by layer`. 
+  - A dead cable is Layer 1, 
+  - a wrong IP is Layer 3, 
+  - a blocked port is Layer 4.
+- **Standardization:** Vendors can build interoperable products as long as they follow each layer's interface.
+- **Modularity:** A layer can change (say, Wi-Fi replacing Ethernet) without affecting the others.
+</md></sn><sn><md>### How Data Flows
+
+When you send data, it moves **down** the stack on your machine. Each layer adds its own header, a process called `encapsulation`. The bits travel across the medium, and the receiving machine moves them **up** the stack, with each layer stripping its header (`decapsulation`).
+
+For example, loading a web page: 
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/how_data_flow_diagram.png)
+
+- your browser creates an HTTP request (Layer 7), 
+- TLS encrypts it (6), 
+- TCP splits it into segments (4), 
+- IP adds source and destination addresses (3), 
+- Ethernet or Wi-Fi wraps it in frames (2), and 
+- the network card sends it as signals (1).
+</md></sn><sn></sn>
