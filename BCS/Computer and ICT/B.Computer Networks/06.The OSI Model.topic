@@ -19,7 +19,7 @@
     <tags>#06.the osi model</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Oct 12 2026 14:32:32 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Oct 12 2026 18:00:30 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-KIDxLheHlM</id>
     <duration></duration>
   </config>
@@ -203,7 +203,7 @@ Operating as the `central bridge between software and hardware tiers`, the **Tra
 
   ```text
   01001100010101010101011110100101010010110101010 -&gt; [segment] [segment] [segment] [] [] ...
-  [segment] -&gt; port_num + data_chunk + seq_num
+  [segment] -&gt; port_num + data_chunk + seq_num + check_sum
   ```
 
 2. **Flow Control:** Matches data `transfer rates` between senders and receivers. If a fast server sends data faster than a receiver can process, the receiver signals the sender to reduce transmission speed to prevent data loss.
