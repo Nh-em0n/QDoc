@@ -19,85 +19,11 @@
     <tags>#06.the osi model</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Oct 12 2026 12:21:31 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Oct 12 2026 14:32:32 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-KIDxLheHlM</id>
     <duration></duration>
   </config>
-<sn><md>### The Seven Layers
-
-![img](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS90HSxShmQjd3yCphemVKj2N1bX-k21CFCV_vZtKQy1w&amp;s=10)
-
-+++ ...
-![img](https://www.infosectrain.com/wp-content/uploads/2024/04/OSI-Model-Layers-1.jpg)
-+++
-
-| # | Layer | What it does | Data unit | Examples |
-|---|-------|--------------|-----------|----------|
-| 7 | **Application** | `Interface` for network services used by software | Data | HTTP, HTTPS, FTP, SMTP, DNS |
-| 6 | **Presentation** | `Translates, encrypts, and compresses` data | Data | TLS/SSL, JPEG, ASCII, MPEG |
-| 5 | **Session** | `Opens, manages, and closes` sessions between applications | Data | NetBIOS, RPC, session tokens |
-| 4 | **Transport** | End-to-end delivery, segmentation, error recovery, flow control | Segment (TCP) / Datagram (UDP) | TCP, UDP |
-| 3 | **Network** | Logical addressing and routing between networks | Packet | IP, ICMP, routers |
-| 2 | **Data Link** | `Node-to-node` delivery on the same network, MAC addressing, error detection | Frame | Ethernet, Wi-Fi (802.11), switches |
-| 1 | **Physical** | `Raw bit transmission` over a medium | Bits | Cables, fiber, hubs, radio signals |
-
-A common mnemonic, top to bottom: **"All People Seem To Need Data Processing."** Bottom to top: **"Please Do Not Throw Sausage Pizza Away."**
-
-+++ ...
-![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/osi_model_neumonics.png)
-+++</md></sn><sn><md>### How Data Flows
-
-When you send data, it moves **down** the stack on your machine. Each layer adds its own header, a process called `encapsulation`. The bits travel across the medium, and the receiving machine moves them **up** the stack, with each layer stripping its header (`decapsulation`).
-
-For example, loading a web page: 
-
-![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/how_data_flow_diagram.png)
-
-- your browser creates an HTTP request (Layer 7), 
-- TLS encrypts it (6), 
-- TCP splits it into segments (4), 
-- IP adds source and destination addresses (3), 
-- Ethernet or Wi-Fi wraps it in frames (2), and 
-- the network card sends it as signals (1).
-</md></sn><sn><md>### OSI vs. TCP/IP
-
-:::.row
-:::.col-12 .col-lg-4
-- TCP/IP has four layers: Application (OSI 5-7), Transport (4), Internet (3), and Network Access (1-2). 
-- OSI is the `reference model` for understanding, while TCP/IP is what the internet actually uses.
-:::
-
-:::.col-12 .col-lg-8
-![img](https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2022_03_OSI-Model-vs-TCP-IP-Model-Difference.jpg)
-:::
-:::
-
-+++ ...
-
-| OSI (7 layers) | TCP/IP (4 layers) |
-|---|---|
-| Application, Presentation, Session | Application |
-| Transport | Transport |
-| Network | Internet |
-| Data Link, Physical | Network Access |
-
-The **TCP/IP model** is what's actually implemented on the internet, while OSI remains a reference/teaching model.
-
-![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/osi_tcp_model_diagram.png)
-+++
-
-</md></sn><sn><md>### Why It Matters
-
-- **Troubleshooting:** You can isolate problems `layer by layer`. 
-  - A dead cable is Layer 1, 
-  - a wrong IP is Layer 3, 
-  - a blocked port is Layer 4.
-- **Standardization:** Vendors can build interoperable products as long as they follow each layer's interface.
-- **Modularity:** A layer can change (say, Wi-Fi replacing Ethernet) without affecting the others.
-- **Design:** Guides how protocols and hardware are developed.
-- **Education:** Makes complex networking concepts easier to understand.
-
-</md></sn><sn><md>### The Messaging Analogy
+<sn><md>### The Messaging Analogy
 
 To understand the OSI model, consider a real-world scenario where a user sends a private message (such as "Ilu Ilu") to someone else via a messaging app like WhatsApp. For that single message to safely arrive on the recipient's phone, it must overcome approximately **70 distinct communication barriers**. These challenges include:
 
@@ -297,4 +223,173 @@ Operating as the `central bridge between software and hardware tiers`, the **Tra
 +++
   * **TCP (Transmission Control Protocol):** Connection-oriented, highly reliable, includes feedback mechanisms, but operates slower.
   * **UDP (User Datagram Protocol):** Connectionless, faster execution, does not require connection setup or feedback, suitable for real-time streaming.
+</md></sn><sn><md>### Network Layer
+
+**Layer 3:**
+The **Network Layer** handles `logical addressing, packet formation, and path selection` across interconnected networks.
+* **Data Unit:** **Packets** (segments from Layer 4 are wrapped into packets).
+* **Key Functions:**
+  1. **Logical Addressing:** Assigns `source and destination` **IP addresses** to each data packet so intermediate devices know where the packet originated and where it must go.
+  ```text
+  [packet] [packet] [packet] [packet]
+  [packet] -&gt; source_ip + port + data + seq + checksum + dest_ip
+  ```  
+  2. **Routing:** Routes packets across multiple intermediate network nodes from source to destination using IP addresses.
+  3. **Path Determination:** Determines the `optimal, shortest, and fastest` path for packets to traverse through the network.
+  +++ ...
+  ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/network-layer-packet-example.png)
+  ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/Screenshot%20From%202026-10-12%2011-41-46.png)
+  +++
+</md></sn><sn><md>### Data Link Layer
+
+The **Data Link Layer** handles `node-to-node communication` across a **local network** link.
+* **Data Unit:** **Frames**.
+  ![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/frame.png)
+* **Key Functions:**
+  1. **Framing:** Encloses Layer 3 packets with a **Header** (containing start flags and physical MAC addresses) and a **Trailer** (containing stop flags and error checks).
+  ```text
+  [frame] [frame] [frame] [] [] ...
+  [frame] -&gt; [header | packet | trailer]
+  [header] -&gt; start_frame + mac_address
+  [packet] -&gt; source_ip + port + data + seq + checksum + dest_ip
+  [tailer] -&gt; error_checksum + end_frame  
+  ```
+  2. **Physical Addressing (MAC Addressing):** Assigns `12-digit` alphanumeric **MAC (Media Access Control)** addresses assigned to the device's **Network Interface Card (NIC)**.
+     * *Difference between IP and MAC addresses:* **IP addresses** handle global routing across the internet, while **MAC addresses** manage local connectivity between directly linked devices (e.g., Wi-Fi routers, Bluetooth pairings, local switches).
+     ```
+     ip -&gt; network layer
+     mac address -&gt; data link layer
+     ```
+  3. **Local Flow &amp; Error Control:** Implements local flow management and uses **Checksums** in the trailer to detect and correct frame transmission errors.
+</md></sn><sn><md>### Physical Layer
+
+The **Physical Layer** is the lowest tier, responsible for transmitting unstructured raw binary bits (`0`s and `1`s) over physical communication media.
+
+```
+binary -&gt; physical signals
+```
+
+* **Key Function:** Converts digital binary bits into physical signals based on the transmission medium being used:
+  * **Electrical Signals:** Transmitted over `copper cables` (e.g., Ethernet cables).
+  * **Light Signals:** Transmitted over `fiber-optic cables`.
+  * **Radio Signals:** Transmitted wirelessly through the air (e.g., Wi-Fi, cellular).
+
+</md></sn><sn><md>### End-to-End Encapsulation &amp; Decapsulation Flow
+
+When data travels from sender to receiver, it undergoes a two-part transformation process across the 7 layers:
+
+```
+SENDER SIDE (Encapsulation)                       RECEIVER SIDE (Decapsulation)
+===========================                       =============================
+Layer 7: Application  (Data)     -----------&gt;     Layer 7: Application  (Data Presented)
+Layer 6: Presentation (Formatted)                 Layer 6: Presentation (Decrypted &amp; Translated)
+Layer 5: Session      (Managed)                   Layer 5: Session      (Session Closed)
+Layer 4: Transport    (Segments)                  Layer 4: Transport    (Reassembled Segments)
+Layer 3: Network      (Packets)                   Layer 3: Network      (Verified IP)
+Layer 2: Data Link    (Frames)                    Layer 2: Data Link    (Verified MAC)
+Layer 1: Physical     (Signals)  ===[Medium]===&gt;  Layer 1: Physical     (Signals to Bits)
+```
+</md></sn><sn><md>:::.row
+:::.col-12 .col-lg-6
+### Sender Side
+
+Encapsulation Flow
+
+1. **Application Layer:** User inputs message content (e.g., text in WhatsApp interface).
+2. **Presentation Layer:** Translates text to binary `0`s and `1`s, compresses the bit stream, and encrypts the payload using SSL.
+3. **Session Layer:** Opens and maintains an active session connection using APIs like NetBIOS, performing authentication and authorization checks.
+4. **Transport Layer:** Breaks data into **segments**, adds **sequence numbers**, appends **port numbers**, and inserts **checksums**.
+5. **Network Layer:** Converts segments into **packets** by prepending logical source and destination **IP addresses** and calculating the best network route.
+6. **Data Link Layer:** Wraps packets into **frames** by adding a **Header** (with source and destination **MAC addresses**) and a **Trailer** (with checksum error detection).
+7. **Physical Layer:** Encodes the frame bits into physical signals (electrical, light, or radio) and sends them across the transmission medium.
+:::
+
+:::.col-12 .col-lg-6
+### Receiver Side
+
+Decapsulation Flow
+
+1. **Physical Layer:** Receives incoming physical signals, converts them back into binary bits, and passes frames up to Layer 2.
+2. **Data Link Layer:** Validates the trailer checksum and target MAC address, strips the header and trailer, and forwards the packet to Layer 3.
+3. **Network Layer:** Verifies the destination IP address, strips the IP header, and passes the segment to Layer 4.
+4. **Transport Layer:** Checks segment sequence numbers, port numbers, and checksums, reassembles segments into proper order, and passes payload to Layer 5.
+5. **Session Layer:** Confirms session status and forwards data to Layer 6.
+6. **Presentation Layer:** Decrypts the encrypted data payload and translates binary bits back into human-readable text.
+7. **Application Layer:** Receives the fully decoded data payload and displays the original message in the recipient's application interface.
+:::
+:::
+</md></sn><sn><md>### The Seven Layers
+
+![img](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS90HSxShmQjd3yCphemVKj2N1bX-k21CFCV_vZtKQy1w&amp;s=10)
+
++++ ...
+![img](https://www.infosectrain.com/wp-content/uploads/2024/04/OSI-Model-Layers-1.jpg)
++++
+
+| # | Layer | What it does | Data unit | Examples |
+|---|-------|--------------|-----------|----------|
+| 7 | **Application** | `Interface` for network services used by software | Data | HTTP, HTTPS, FTP, SMTP, DNS |
+| 6 | **Presentation** | `Translates, encrypts, and compresses` data | Data | TLS/SSL, JPEG, ASCII, MPEG |
+| 5 | **Session** | `Opens, manages, and closes` sessions between applications | Data | NetBIOS, RPC, session tokens |
+| 4 | **Transport** | End-to-end delivery, segmentation, error recovery, flow control | Segment (TCP) / Datagram (UDP) | TCP, UDP |
+| 3 | **Network** | Logical addressing and routing between networks | Packet | IP, ICMP, routers |
+| 2 | **Data Link** | `Node-to-node` delivery on the same network, MAC addressing, error detection | Frame | Ethernet, Wi-Fi (802.11), switches |
+| 1 | **Physical** | `Raw bit transmission` over a medium | Bits | Cables, fiber, hubs, radio signals |
+
+A common mnemonic, top to bottom: **"All People Seem To Need Data Processing."** Bottom to top: **"Please Do Not Throw Sausage Pizza Away."**
+
++++ ...
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/osi_model_neumonics.png)
++++</md></sn><sn><md>### How Data Flows
+
+When you send data, it moves **down** the stack on your machine. Each layer adds its own header, a process called `encapsulation`. The bits travel across the medium, and the receiving machine moves them **up** the stack, with each layer stripping its header (`decapsulation`).
+
+For example, loading a web page: 
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/how_data_flow_diagram.png)
+
+- your browser creates an HTTP request (Layer 7), 
+- TLS encrypts it (6), 
+- TCP splits it into segments (4), 
+- IP adds source and destination addresses (3), 
+- Ethernet or Wi-Fi wraps it in frames (2), and 
+- the network card sends it as signals (1).
+</md></sn><sn><md>### OSI vs. TCP/IP
+
+:::.row
+:::.col-12 .col-lg-4
+- TCP/IP has four layers: Application (OSI 5-7), Transport (4), Internet (3), and Network Access (1-2). 
+- OSI is the `reference model` for understanding, while TCP/IP is what the internet actually uses.
+:::
+
+:::.col-12 .col-lg-8
+![img](https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2022_03_OSI-Model-vs-TCP-IP-Model-Difference.jpg)
+:::
+:::
+
++++ ...
+
+| OSI (7 layers) | TCP/IP (4 layers) |
+|---|---|
+| Application, Presentation, Session | Application |
+| Transport | Transport |
+| Network | Internet |
+| Data Link, Physical | Network Access |
+
+The **TCP/IP model** is what's actually implemented on the internet, while OSI remains a reference/teaching model.
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Computer%20and%20ICT/B.Computer%20Networks/assets/osi_tcp_model_diagram.png)
++++
+
+</md></sn><sn><md>### Why It Matters
+
+- **Troubleshooting:** You can isolate problems `layer by layer`. 
+  - A dead cable is Layer 1, 
+  - a wrong IP is Layer 3, 
+  - a blocked port is Layer 4.
+- **Standardization:** Vendors can build interoperable products as long as they follow each layer's interface.
+- **Modularity:** A layer can change (say, Wi-Fi replacing Ethernet) without affecting the others.
+- **Design:** Guides how protocols and hardware are developed.
+- **Education:** Makes complex networking concepts easier to understand.
+
 </md></sn>
