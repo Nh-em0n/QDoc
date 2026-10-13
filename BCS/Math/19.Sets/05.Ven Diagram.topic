@@ -1,10 +1,20 @@
 
-  <sn></sn>
+  <sn><md>### Venn-diagram
+
+![img](https://images.twinkl.co.uk/tw1n/image/private/t_630_eco/image_repo/63/cf/T2-M-261-Venn-Diagram-Template-1_ver_1.jpg)
+
+* **Creator:** **[John Venn](https://upload.wikimedia.org/wikipedia/commons/d/d7/John_Venn_2.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original) (1834–1883)** introduced the method of `representing sets using diagrams`.
+
+* **Name:** These visual representations are named **Venn diagrams** in his honor.
+* In a Venn diagram, geometric shapes are typically used to represent different sets:
+* **Rectangular Regions:** Generally used to represent the **Universal Set ($U$)**.
+* **Circular Regions:** Generally used to represent subsets within the universal set (e.g., set $A$, set $B$).
+</md></sn>
   <config>
     <tags>#05.ven diagram</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 13 2026 16:21:24 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 13 2026 16:47:33 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-S1ivshFtTp</id>
     <duration></duration>
   </config>
