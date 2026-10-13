@@ -14,7 +14,29 @@
     <tags>#05.ven diagram</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 13 2026 16:47:33 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 13 2026 16:52:28 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-S1ivshFtTp</id>
     <duration></duration>
   </config>
+<sn><md>### Common Venn Diagram Types Shown
+
+:::.row
+:::.col-12 .col-lg-6
+1. **Universal Set ($U$):**
+Represented by a shaded rectangular region.
+
+2. **Intersection of Sets ($A \cap B$):**
+Represented by two overlapping circles where only the overlapping middle region is shaded.
+
+3. **Union of Sets ($A \cup B$):**
+Represented by two overlapping circles where both complete circular regions are shaded together.
+:::
+
+:::.col-12 .col-lg-6
+![img](https://statisticseasily.com/wp-content/uploads/2024/01/The-Union-and-Intersection-of-Two-Sets-3-1024x576.jpg)
+:::
+:::
+
+Purpose &amp; Application
+By using Venn diagrams, the **properties of sets** and **operations on sets** can be easily determined and visually understood.
+</md></sn>
