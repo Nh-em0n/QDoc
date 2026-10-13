@@ -1,10 +1,35 @@
 
-  <sn></sn>
+  <sn><md>### Introduction to Sets
+
+* **Everyday Context:** The word "set" is commonly used in daily life (e.g., a tea set, sofa set, dinner set, or set of books).
+* **Historical Origin:** German mathematician [George Cantor](https://cdn.britannica.com/29/129929-004-45A7A5DD/Georg-Cantor.jpg) (1845–1918) introduced and detailed the mathematical concept of sets, establishing what is known as **Set Theory**.
+*  &gt;  A **set** is a `well-defined collection of objects` from the real or abstract/imaginary world
+* **Well-Defined Requirement:** It must be clear whether any given object belongs to the set or not.
+* **Key Characteristics:**
+	* Order does not matter.
+	* Elements are not repeated.
+
+</md></sn>
   <config>
     <tags>#02.introduction</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 13 2026 09:40:57 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 13 2026 09:55:03 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-asnrMF0jT3</id>
     <duration></duration>
   </config>
+<sn><md>### Key Terminology &amp; Notation
+
+| Concept | Description / Rule | Examples |
+| --- | --- | --- |
+| **Set Designation** | Represented using uppercase letters ($A, B, C, \dots, X, Y, Z$). | $A, B$ |
+| **Elements** | The individual objects within a set, usually denoted using lowercase letters ($a, b, c, \dots, x, y, z$). | $a, b, c$ |
+| **Enclosure Symbol** | Elements are enclosed within curly braces `{ }`. | $\{a, b, c\}$ |
+| **Membership Symbol ($\in$)** | Indicates that an item belongs to a set. Written as $x \in A$ and read as *"x is an element of A"* or *"x belongs to A"*. | If $B = \{m, n\}$, then $m \in B$ and $n \in B$. |
+
+[diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Math/19.Sets/resources/set-notation-diagram.jpeg)</md></sn><sn><md>#### Examples of Sets
+
+* **Rivers:** $\{\text{Tista}, \text{Meghna}, \text{Jamuna}, \text{Brahmaputra}\}$
+* **First two even natural numbers:** $\{2, 4\}$
+* **Factors of 6:** $\{1, 2, 3, 6\}$
+* **General collections:** First five English alphabets, countries of Asia, natural numbers.</md></sn>
