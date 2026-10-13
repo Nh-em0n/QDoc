@@ -1,10 +1,72 @@
 
-  <sn></sn>
+  <sn><md>### Set Operations {.text-center}
+
+:::.row
+:::.col-12 .col-lg-7
+### Union of Sets
+
+* **Definition:** The set formed by `combining all the elements of two or more sets` is called a union set.
+* **Notation:** Expressed as $A \cup B$ and read as *"A union B"*.
+* **Set Builder Form:** $A \cup B = \{x : x \in A \text{ or } x \in B\}$.
+:::
+
+:::.col-12 .col-lg-5
+![img](https://www.mathstopia.net/wp-content/uploads/2021/01/union-two-sets.jpg)
+:::
+:::
+
+
+**Example 7:** If $C = \{\text{Razzaq, Sakip, Alok}\}$ and $D = \{\text{Alok, Mushfiq}\}$, 
+then $C \cup D = \{\text{Razzaq, Sakip, Alok, Mushfiq}\}$.
+
+**Example 8:** If $R = \{x : x \text{ is factor of } 6\} = \{1, 2, 3, 6\}$ and $S = \{x : x \text{ is factor of } 8\} = \{1, 2, 4, 8\}$, 
+then $R \cup S = \{1, 2, 3, 4, 6, 8\}$.
+
+</md></sn>
   <config>
     <tags>#06.set operations</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 13 2026 17:12:22 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 13 2026 17:23:54 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-QKIWraj0so</id>
     <duration></duration>
   </config>
+<sn><md>:::.row
+:::.col-12 .col-lg-7
+### Intersection of Sets
+
+* **Definition:** The set formed by the `common elements of two or more sets` is called the intersection of sets.
+* **Notation:** Denoted as $A \cap B$ and read as *"A intersection B"*.
+* **Set Builder Form:** $A \cap B = \{x : x \in A \text{ and } x \in B\}$.
+:::
+
+:::.col-12 .col-lg-5
+![img](https://statisticseasily.com/wp-content/uploads/2024/01/The-Union-and-Intersection-of-Two-Sets-3-1024x576.jpg)
+:::
+:::
+
+**Example 9:** If $A = \{1, 3, 5\}$ and $B = \{5, 7\}$, 
+then $A \cap B = \{5\}$.
+
+**Example 10:** If $P = \{x : x \text{ is the multiple of } 2 \text{ and } x \le 8\} = \{2, 4, 6, 8\}$ and $Q = \{x : x \text{ is the multiple of } 4 \text{ and } x \le 12\} = \{4, 8, 12\}$, 
+then $P \cap Q = \{4, 8\}$.
+</md></sn><sn><md>:::.row
+:::.col-12 .col-lg-7
+### Disjoint Sets
+
+* **Definition:** If there is `no common element between two sets`, they are called disjoint sets.
+* **Condition:** Sets $A$ and $B$ are disjoint if and only if $A \cap B = \emptyset$.
+:::
+
+:::.col-12 .col-lg-5
+![img](https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/venn-diagram-of-disjoint-sets-1627558994.png)
+:::
+:::
+
+
+**Example 11:** If $A = \{x : x \text{ is odd natural number and } 1 &lt; x &lt; 7\} = \{3, 5\}$ and $B = \{x : x \text{ is factor of } 8\} = \{1, 2, 4, 8\}$, 
+then $A \cap B = \emptyset$, meaning $A$ and $B$ are disjoint sets.
+
+**Example 12:** If $C = \{3, 4, 5\}$ and $D = \{4, 5, 6\}$, 
+then $C \cup D = \{3, 4, 5, 6\}$ and $C \cap D = \{4, 5\}$.
+</md></sn>
