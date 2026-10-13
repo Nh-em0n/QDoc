@@ -10,7 +10,7 @@ A set can mainly be expressed using **two methods**:
     <tags>#03.methods of expressing</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 13 2026 10:29:48 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 13 2026 10:44:34 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-tndXmddE5a</id>
     <duration></duration>
   </config>
@@ -30,10 +30,11 @@ All elements of the set are `explicitly listed inside curly braces` `{ }` and se
 
 Instead of listing each element explicitly, specific `conditions or rules are defined` within curly braces `{ }` to determine the elements.
 
-* **Notation:**
+* **Notation:** 
+`A = {variable : variable coditions,,}`
 * A variable (e.g., $x$ or $y$) is placed before the colon `:` symbol.
 * The colon `:` symbol is read as **"such that"** (or in brief, "such").
-
+* After each condition we get closer to real elements belonging to the set
 * **Examples:**
 
 1. The set of natural even numbers smaller than 10:
