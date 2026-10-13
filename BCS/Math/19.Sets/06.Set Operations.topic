@@ -27,7 +27,7 @@ then $R \cup S = \{1, 2, 3, 4, 6, 8\}$.
     <tags>#06.set operations</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 13 2026 18:11:22 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 13 2026 19:30:55 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-QKIWraj0so</id>
     <duration></duration>
   </config>
@@ -69,4 +69,23 @@ then $A \cap B = \emptyset$, meaning $A$ and $B$ are disjoint sets.
 
 **Example 12:** If $C = \{3, 4, 5\}$ and $D = \{4, 5, 6\}$, 
 then $C \cup D = \{3, 4, 5, 6\}$ and $C \cap D = \{4, 5\}$.
+</md></sn><sn><md>:::.row
+:::.col-12 .col-lg-8
+### Power Sets
+
+* The set formed by `all the subsets of a given set` is called the power set of that set.
+* Denoted by $P(A)$.
+* **Example:** For $A = \{m, n\}$, the subsets are $\{m, n\}, \{m\}, \{n\}, \emptyset$, and the power set is $P(A) = \{\{m, n\}, \{m\}, \{n\}, \emptyset\}$.
+:::
+
+:::.col-12 .col-lg-4
+![img](https://media.geeksforgeeks.org/wp-content/uploads/20260223162218097817/12.webp)
+:::
+:::
+
+**Cardinality Rule:**
+* If a set $A$ has 0 elements, $P(A)$ has $1 = 2^0$ elements.
+* If a set $B$ has 1 element, $P(B)$ has $2 = 2^1$ elements.
+* If a set $C$ has 2 elements, $P(C)$ has $4 = 2^2$ elements.
+* In general, if a set has $n$ elements, the number of elements in its power set is $2^n$.
 </md></sn>
