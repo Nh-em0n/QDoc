@@ -1,10 +1,32 @@
 
-  <sn></sn>
+  <sn><md>### Qna
+
+- How many proper subsets does the set {2, 3, 4} have? → 7 (50th bcs)
+- A = {x : x is a natural number and x ≤ 5}. How many elements does P(A) have? → 32 (50th bcs)
+- What is the solution set of |3x − 1| &lt; 2? → (−1/3, 1) (50th bcs) *(inequality)*
+- What is the solution set of x² − (p+q)x + pq = 0? → {p, q} (50th bcs) *(inequality)*
+- If M = {a, b, 1, 2} and N = {1, 2}, then M − N = ? → {a, b} (49th bcs)
+- If A ⊂ B and B ⊂ A, which statement is true? → A = B (48th bcs)
+- Which of the following is a subset of every set? → ϕ (48th bcs)
+- A = {x ∈ N : 2 &lt; x ≤ 6}, B = {x ∈ N : x is even and x ≤ 8}. Then A ∩ B = ? → {4, 6} (47th bcs)
+- What is the solution set of |x − 5| &lt; 2, x ∈ N? → {4, 5, 6} (47th bcs) *(inequality)*
+- A = {x : x is divisible by 5 and 7, x &lt; 150}. How many elements does P(A) have? → 16 (46th bcs)
+- What is the solution set of x² − 7x + 12 ≤ 0? → [3, 4] (46th bcs) *(inequality)*
+- A = {x ∈ N : x² − 5x − 14 = 0}. Then A = ? → {7} (45th bcs)
+- A = {x ∈ N | 2 &lt; x ≤ 8}, B = {x ∈ N | x is prime and x ≤ 9}. Then A ∩ B = ? → {3, 5, 7} (43rd bcs)
+- P = {x : x is a factor of 12} and Q = {x : x is a multiple of 3 and x ≤ 12}. Then P − Q = ? → {1, 2, 4} (40th bcs)
+- C = {x : x is a negative integer and x² &lt; 18}. Which of the following are elements/subsets of C? → {-1, -2, -3, -4} (39th bcs)
+- A = {x : x is a Fibonacci number and x² &lt; 64}. How many elements does P(A) have? → 32 (38th bcs)
+- A = {x | x positive integer, x² &lt; 25}, B = {x | x prime, x² &lt; 25}, C = {x | x prime, x² = 25}. Then A ∩ B ∩ C = ? → ∅ (37th bcs)
+- A = {x : x is a prime number and x ≤ 5}. How many elements does P(A) have? → 8 (36th bcs)
+- If A = {1, 2, 3} and B = ∅, then A ∪ B = ? → {1, 2, 3} (34th bcs)
+- If A = {5, 15, 20, 30} and B = {3, 5, 15, 18, 20}, which represents A ∩ B? → {5, 15, 20} (33rd bcs)
+- If A = {1, 2, 3} and B = ∅, then A ∪ B = ? → {1, 2, 3} (23rd bcs)</md></sn>
   <config>
     <tags>#01.qna</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 13 2026 09:21:33 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 13 2026 09:28:28 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-C9cQb55pws</id>
     <duration></duration>
   </config>
