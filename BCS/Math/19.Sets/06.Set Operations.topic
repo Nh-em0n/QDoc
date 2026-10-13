@@ -27,7 +27,7 @@ then $R \cup S = \{1, 2, 3, 4, 6, 8\}$.
     <tags>#06.set operations</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 13 2026 17:23:54 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 13 2026 17:24:48 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-QKIWraj0so</id>
     <duration></duration>
   </config>
@@ -69,4 +69,13 @@ then $A \cap B = \emptyset$, meaning $A$ and $B$ are disjoint sets.
 
 **Example 12:** If $C = \{3, 4, 5\}$ and $D = \{4, 5, 6\}$, 
 then $C \cup D = \{3, 4, 5, 6\}$ and $C \cap D = \{4, 5\}$.
-</md></sn>
+</md></sn><sn><md>### Additional Examples
+
+**Example 13:** Express the set $E = \{x : x \text{ is a prime number and } x &lt; 30\}$ in the tabular method.
+*Solution:* The prime numbers less than 30 are $2, 3, 5, 7, 11, 13, 17, 19, 23, 29$.
+*Result:* $E = \{2, 3, 5, 7, 11, 13, 17, 19, 23, 29\}$.
+
+**Example 14:** If $A$ and $B$ are sets of all factors of 42 and 70 respectively, find $A \cap B$.
+*Factors of 42:* $1, 2, 3, 6, 7, 14, 21, 42 \implies A = \{1, 2, 3, 6, 7, 14, 21, 42\}$.
+*Factors of 70:* $1, 2, 5, 7, 10, 14, 35, 70 \implies B = \{1, 2, 5, 7, 10, 14, 35, 70\}$.
+*Result:* $A \cap B = \{1, 2, 7, 14\}$.</md></sn>
