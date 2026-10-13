@@ -1,10 +1,70 @@
 
-  <sn></sn>
+  <sn><md>### Methods of Expressing Sets
+
+A set can mainly be expressed using **two methods**:
+
+- Tabular Method A = [a,b,c,d..]
+- Set Builder Method A = {x:x,conditions of x}
+</md></sn>
   <config>
     <tags>#03.methods of expressing</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 13 2026 10:15:37 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 13 2026 10:24:48 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-tndXmddE5a</id>
     <duration></duration>
   </config>
+<sn><md>### Tabular Method
+
+All elements of the set are `explicitly listed inside curly braces` `{ }` and separated by `commas`.
+
+
+* **Examples:**
+
+* $A = \{1, 2, 3\}$
+* $B = \{x, y, z\}$
+* $C = \{100\}$
+* $D = \{\text{Rose}, \text{Tube-rose}\}$
+* $E = \{\text{Rahim}, \text{Sumon}, \text{Suvro}, \text{Changpai}\}$
+</md></sn><sn><md>### Set Builder Method
+
+Instead of listing each element explicitly, specific `conditions or rules are defined` within curly braces `{ }` to determine the elements.
+
+* **Notation:**
+* A variable (e.g., $x$ or $y$) is placed before the colon `:` symbol.
+* The colon `:` symbol is read as **"such that"** (or in brief, "such").
+
+* **Examples:**
+
+1. The set of natural even numbers smaller than 10:
+$A = \{x : x \text{ is a natural even number, } x &lt; 10\}$
+
+2. Converting $\{3, 6, 9, 12\}$ to Set Builder form:
+Observation:* Elements are natural numbers, multiples of 3, and $\le 12$.
+Set:* $\{y : y \text{ is a natural number, multiple of 3 and } y \le 12\}$
+</md></sn><sn><md>#### Worked Examples
+
+**Example 2:** Express $P = \{4, 8, 12, 16, 20\}$ in Set Builder method.
+
+**Solution:**
+The elements $4, 8, 12, 16, 20$ are even numbers, multiples of 4, and not greater than 20 ($x \le 20$).
+**Result:** $P = \{x : x \text{ is an even number, multiple of 4 and } x \le 20\}$
+
+---
+
+**Example 3:** Express $Q = \{x : x \text{ are all the factors of } 42\}$ in Tabular method.
+
+**Solution:**
+Find all factor pairs of 42:
+$$42 = 1 \times 42 = 2 \times 21 = 3 \times 14 = 6 \times 7$$
+
+
+The factors of 42 are: $1, 2, 3, 6, 7, 14, 21, 42$
+**Result:** $Q = \{1, 2, 3, 6, 7, 14, 21, 42\}$
+</md></sn><sn><md>#### Practice Activity
+
+1. **Problem 1:** Express the set $A = \{3, 6, 9, 12, 15, 18\}$ in **Set Builder method**.
+*Solution:* $A = \{x : x \text{ is a natural number, multiple of 3 and } x \le 18\}$
+
+2. **Problem 2:** Express the set $B = \{x : x \text{ is a factor of } 24\}$ in **Tabular method**.
+*Solution:* $B = \{1, 2, 3, 4, 6, 8, 12, 24\}$</md></sn>
