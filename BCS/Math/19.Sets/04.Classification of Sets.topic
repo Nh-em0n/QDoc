@@ -1,10 +1,66 @@
 
-  <sn></sn>
+  <sn><md>### Classification of Sets
+
+- Finite
+- Infinite
+- Empty
+- Subset
+- Universal
+- Complement
+
+[list of set.img](https://mathmonks.com/wp-content/uploads/2024/05/Types-of-Sets-in-Maths.jpg)
+</md></sn>
   <config>
     <tags>#04.classification of sets</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 13 2026 10:44:57 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 13 2026 10:57:39 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-AOSi1WqYpR</id>
     <duration></duration>
   </config>
+<sn><md>* **Finite Set:** A set whose number of elements can be determined by counting.
+*Examples:* $A = \{a, b, c, d\}$ (4 elements), $B = \{5, 10, 15, \dots, 100\}$ (20 elements).
+
+* **Infinite Set:** A set whose number of elements cannot be determined by counting and is innumerable.
+*Example:* The set of natural numbers $N = \{1, 2, 3, 4, \dots\}$. (Note: Only finite sets are discussed in this chapter.)
+
+* **Empty Set:** A set that contains no elements, expressed by the symbol $\emptyset$.
+</md></sn><sn><md>#### Subset
+
+* If all elements of a set can be used to form other sets, those formed sets are called **subsets** of the original set.
+
+* **Symbol:** Expressed using the symbol $\subseteq$.
+
+* **Example:** If $P = \{2, 3, 4, 5\}$ and $Q = \{3, 5\}$, then $Q$ is a subset of $P$ ($Q \subseteq P$) because the elements of $Q$ are also included in $P$.
+
+**Example 4:** Write the subsets of the set $A = \{1, 2, 3\}$
+**Solution:** The subsets of $A$ are $\{1, 2, 3\}, \{1, 2\}, \{1, 3\}, \{2, 3\}, \{1\}, \{2\}, \{3\}, \emptyset$.
+
+</md></sn><sn><md>#### Universal Set
+
+* A particular set that contains all the sets in a given discussion as its subsets.
+
+* **Symbol:** Expressed by the symbol $U$.
+
+* **Key Rule:** All sets are subsets of the universal set in a given context.
+
+* **Example:** In a school, the set of all students is a universal set, and the set of students in class eight is a subset of that universal set.
+
+
+**Example 5:** If $A = \{1, 2, 3, 4, 5, 6\}$, $B = \{1, 3, 5\}$, $C = \{3, 4, 5, 6\}$, determine the universal set
+**Solution:** Since the elements of $B$ ($1, 3, 5$) and $C$ ($3, 4, 5, 6$) are all included in set $A$, the universal set for $B$ and $C$ is $A$.
+</md></sn><sn><md>#### Complement of a Set
+
+If $U$ is a universal set and $A$ is a subset of $U$, the set of all elements in $U$ that are excluded from $A$ is called the complement set of $A$.
+
+* **Notation:** Denoted by $A^c$ or $A'$.
+
+* **Real-World Example:** In a class of 60 students, if 9 students are absent, the set of all students in class eight is the universal set, and the 9 absent students form the complement set of the $(60 - 9) = 51$ present students.
+
+
+**Example 6:** If $U = \{1, 2, 3, 4, 5, 6\}$ and $A = \{2, 4, 6\}$, determine $A^c$
+**Solution:**
+$A^c = \text{The complement set of } A$
+$= \text{The set of elements excluding the elements of } A$
+$= \{1, 3, 5\}$
+**Required Set:** $A^c = \{1, 3, 5\}$</md></sn><sn></sn>
