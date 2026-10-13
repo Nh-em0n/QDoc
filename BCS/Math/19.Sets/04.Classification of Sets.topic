@@ -9,12 +9,31 @@
 - Complement
 
 [list of set.img](https://mathmonks.com/wp-content/uploads/2024/05/Types-of-Sets-in-Maths.jpg)
+
++++ ...
+
+| Types | Meaning | Example with Symbol |
+|---|---|---|
+| **Empty Set or Null Set** | A set containing no elements. | $\phi$ or $\{ \}$ |
+| **Singleton Set or Unit Set** | A set containing only one element. | $\{5\}$ |
+| **Finite Set** | A set containing a countable number of elements. | $\{1, 8, 27, 64, 125, 216\}$ |
+| **Infinite Set** | A set with an uncountable number of elements. | $\{1, 2, 3, 4, \dots\}$ |
+| **Equivalent Set** | Sets with the same cardinality. | Set A = $\{2, 4, 6, 8\}$ and set B = $\{3, 6, 9, 12\}$ |
+| **Equal Set** | Sets containing exactly the same elements. | Set A = $\{7, 8\}$ and set B = $\{8, 7\}$ |
+| **Unequal Set** | Sets with at least one different element. | Set A = $\{7, 8, 9\}$ and set B = $\{7, 9, 11\}$ |
+| **Overlapping Set** | Sets with at least one common element. | Set A = $\{7, 11, 13\}$ and set B = $\{3, 5, 7, 11\}$ |
+| **Disjoint Set** | Sets with no common element. | Set A = $\{2, 3, 4\}$ and set B = $\{7, 8, 9\}$ |
+| **Subset** | A set where all elements are also members of another set. | $\{4, 6, 8\}$ is a subset of $\{0, 2, 4, 6, 8, 10\}$ |
+| **Power Set** | The set containing all the possible subsets of a given set. | The power set of A = $\{9, 10\}$ is $P(A) = \{\phi, \{9\}, \{10\}, \{9, 10\}\}$ |
+| **Universal Set** | A set containing all the elements related to a particular subject. | The set of complex numbers with respect to the set of natural numbers and real numbers |
+
++++
 </md></sn>
   <config>
     <tags>#04.classification of sets</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 13 2026 10:57:39 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 13 2026 11:23:17 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-AOSi1WqYpR</id>
     <duration></duration>
   </config>
