@@ -1,10 +1,40 @@
 
-  <sn></sn>
+  <sn><md>### Overview
+
+- path : self.field.bcs.math.set
+- objective : learning basic set concept
+
+- resources :
+  - [set_en_jsc](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Math/19.Sets/resources/Set_EN(jsc).pdf) 
+  - [set_bn_jsc](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Math/19.Sets/resources/Set_BN(jsc).pdf) 
+  - [set_en_ssc](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Math/19.Sets/resources/Set_EN(jsc).pdf) 
+  - [set_bn_ssc](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Math/19.Sets/resources/Set_BN(ssc).pdf) 
+  - [set_khairul](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/BCS/Math/19.Sets/resources/Khairul_math_set.pdf) 
+
+- datetime
+
+	| action | date |
+	|---|---|
+	| set up | 13-10-26 |
+	| created at | 13-10-26 |
+	| updated at | null |
+	| revised at | null |
+
+
+- topics
+  - Introduction
+  - Methods of Expressing  
+  - Classification of Sets  
+  - Ven Diagram
+  - Set Operations  
+  - Exercise  
+  - Summary  
+</md></sn>
   <config>
     <tags>#00.overview</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 13 2026 08:22:49 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 13 2026 09:15:07 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-Gi9l4nk1wk</id>
     <duration></duration>
   </config>
