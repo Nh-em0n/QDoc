@@ -1,5 +1,5 @@
 
-  <sn><md>## Proxy in JavaScript
+  <sn><md>### Proxy in JavaScript
 
 In JavaScript, a **Proxy** is a powerful object introduced in **ES6 (ECMAScript 2015)** that allows developers to intercept and customize the behavior of fundamental operations on objects. It provides a way to define custom behavior for actions like **reading**, **writing**, **deleting properties**, **function invocation**, and more.
 
@@ -20,7 +20,7 @@ const proxy = new Proxy(target, handler);
     <tags>#00.what is proxy</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 24 2025 08:19:35 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 14 2026 14:05:36 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-ZCSJqw2w5k</id>
     <duration></duration>
   </config>
