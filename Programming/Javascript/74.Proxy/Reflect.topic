@@ -1,5 +1,5 @@
 
-  <sn><md>### Reflect
+  <sn><md>#### Reflect
 
 In JavaScript, **`Reflect`** is a built-in global object introduced along with **Proxy** in ES6. It provides a set of **static methods** that mirror many of the low-level operations that the JavaScript engine itself performs — such as getting, setting, or deleting properties.
 
@@ -8,7 +8,7 @@ It is often used **inside Proxy handlers** to perform the *default behavior* aft
     <tags>#reflect</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Fri Oct 24 2025 08:42:31 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 14 2026 14:05:57 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-x98mSeQkLD</id>
     <duration></duration>
   </config>
