@@ -1,5 +1,5 @@
 
-  <sn><md>### Notification [Api]{.fg-teal}
+  <sn><md>### Notification [Api]{.fg-pink}
 
 The `Notification.requestPermission()` method is used to ask the user whether they want to receive **browser notifications** from a website.
 
@@ -26,7 +26,7 @@ Notification.requestPermission(function() {
     <tags>#01.requesting permission to send notifications</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 14 2026 15:00:11 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 14 2026 15:09:38 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-gi5XJEXp2c</id>
     <duration></duration>
   </config>
