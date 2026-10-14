@@ -1,20 +1,42 @@
 
-  <sn><md>### My Daily Routine
+  <sn><md>### Time Distribution
+
+```bash
+24hr
+│
+├── Work : 15hr
+│   ├── Primary   -&gt; 8h
+│   ├── Secondary -&gt; 4h
+│   └── Tertiary  -&gt; 3h
+│
+├── Sleep : 5h
+│
+├── Prayer : 1:40 hr
+│   ├── Fajr, Asr, Maghrib -&gt; 30 min
+│   ├── Johr, Esha          -&gt; 40 min
+│   └── Verse Practice      -&gt; 30 min
+│
+├── Meal -&gt; 40 min
+│
+├── Hygiene -&gt; 40 min
+│
+└── Extra -&gt; 1hr
+```</md></sn><sn><md>### Default Flow
 
 | Period   | Activity |
 | ----------- | :---------------: |
-| 11 pm - 4am   |    Sleep    |
-| 4-5  |     Fresh,Prayer    |
-| `5-1` |     `First Period of Main Work`    |
-| 1-3 |   Prayer,lunch,Nap   |
-| `3-11`   |  `Second Period of Main Work`    |
-| Extra 1 hours in 3-11 | for magrib,esha,dinner |
+|  3:40 (alarm) - 5 am | Fresh_20min <br> Tahajjud,Fjr Prayer_10min <br> Verse Revise_30min     |
+|  5 am - 1 pm | Primary Work |
+|  1-2 | Bath_20min <br> Johr_20min <br> Meal_12min |
+|  2-7 | Secondary Work_4h <br> Asr,Magrib_20min <br> others |
+|  7-10:30 | Tertiary Work_3h <br> Esha_20min |
+|  10:30-10:50 | Arrange-Bed_10min <br> Philosophy_youtube_then_sleep |
 </md></sn>
   <config>
     <tags>#02.my daily routine</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Jul 01 2026 12:26:45 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 14 2026 10:11:48 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-A5VZX4178t</id>
     <duration></duration>
   </config>
