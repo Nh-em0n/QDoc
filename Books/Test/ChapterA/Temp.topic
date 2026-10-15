@@ -48,6 +48,7 @@ The cation exchange capacity is usually measured by leaching the soil with an ex
 
 ---
 
+
 ### **Data Table:**
 
 | No. | IBR | FBR | Diff | Mean |
@@ -59,6 +60,7 @@ The cation exchange capacity is usually measured by leaching the soil with an ex
 
 ---
 
+::: .box border
 ### **Calculation:**
 
 $$\%N \text{ in soil} = \frac{14 \times 0.018 \times 250 \times 100}{1000 \times 10 \times 10} \times (T-B)$$
@@ -66,12 +68,13 @@ $$\%N \text{ in soil} = \frac{14 \times 0.018 \times 250 \times 100}{1000 \times
 $$= 0.063 \times (3.1 - 0.14)$$
 $$= 0.1865$$
 
-$$\therefore \text{CEC in soil} = \frac{0.1865 \times 1000}{14} = 13.32$$</md></sn>
+$$\therefore \text{CEC in soil} = \frac{0.1865 \times 1000}{14} = 13.32$$
+:::</md></sn>
   <config>
     <tags>#temp</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Apr 16 2026 07:19:47 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 15 2026 08:41:05 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-tXzTJx5XeD</id>
     <duration></duration>
   </config>
