@@ -60,9 +60,10 @@ The cation exchange capacity is usually measured by leaching the soil with an ex
 
 ---
 
-::: .box border
+
 ### **Calculation:**
 
+::: .box border
 $$\%N \text{ in soil} = \frac{14 \times 0.018 \times 250 \times 100}{1000 \times 10 \times 10} \times (T-B)$$
 
 $$= 0.063 \times (3.1 - 0.14)$$
@@ -74,7 +75,7 @@ $$\therefore \text{CEC in soil} = \frac{0.1865 \times 1000}{14} = 13.32$$
     <tags>#temp</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 15 2026 08:41:05 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 15 2026 08:45:04 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-tXzTJx5XeD</id>
     <duration></duration>
   </config>
