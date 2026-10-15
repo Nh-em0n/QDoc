@@ -1,10 +1,142 @@
 
-  <sn></sn>
+  <sn><md>### Infinity Hosting
+
+Sync a Local GitHub Repository to InfinityFree FTP (Without .git or .gitignore)
+
+You keep your website in a GitHub repository, but your host is InfinityFree, which gives you FTP rather than Git deployment. Every update means dragging files into an FTP client and hoping you didn't forget one, or worse, accidentally uploading your `.git` folder and `.gitignore` file to a public web server.
+
+This article shows several reliable ways to keep a local repository in sync with your InfinityFree account, with `.git/` and `.gitignore` always excluded. Pick the method that fits your workflow: a GUI client, a one-line command, or a fully automated GitHub Actions deploy.
+
+
+</md></sn>
   <config>
     <tags>#15.sync infinity hosting files locally</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 15 2026 18:46:35 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 15 2026 19:32:03 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-skKcCDmanp</id>
     <duration></duration>
   </config>
+<sn><md>#### Why exclude .git and .gitignore?
+
+- **`.git/`** holds your entire commit history, branches, and sometimes things you committed and later removed. On a public web server it can expose source code and secrets, and it bloats the upload with thousands of tiny files, which is slow on free hosting.
+- **`.gitignore`** is only meaningful to Git. It has no job on the server and can leak hints about your project structure.
+
+Neither belongs in `htdocs`, so every method below filters them out.
+</md></sn><sn><md>### What you need from InfinityFree
+
+Open your [InfinityFree client area](https://dash.infinityfree.com/accounts/),select ++Hosting Account++ Tab, note the FTP details in the right side:
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/rclone/02.Configuring%20Cloud%20Storage/assets/infinity_account_screenshot.png)
+
+| Setting | Typical value |
+| --- | --- |
+| FTP host | `ftpupload.net` (use the hostname shown in your account) |
+| Username | something like `if0_12345678` or `epiz_12345678` |
+| Password | your hosting account password |
+| Port | `21` default |
+| Remote folder | `htdocs` (your site's public root) |
+
+Two practical notes:
+
+- InfinityFree offers plain FTP. Never reuse that password elsewhere, and don't commit it to your repository.
+- Always upload into `htdocs` (or the folder of the domain you are deploying). Files placed outside it are not served.
+
+</md></sn><sn><md>### rclone 
+
+best one-command sync
+
+[rclone](https://rclone.org) is a cross-platform command-line tool that supports FTP and has powerful include/exclude filters.
+
+#### Create the FTP remote
+
+```bash
+rclone config
+```
+
+Choose `n` (new remote), name it `infinity`, pick the `ftp` storage type (may be `18` number in the given list), and enter:
+
+- host: `ftpupload.net`
+- user: your InfinityFree FTP username
+- port: `21`
+- password: your FTP password (rclone stores it obscured)
+
+Test the connection:
+
+```bash
+rclone lsd infinity:
+```
+
+You should see `htdocs` listed.
+</md></sn><sn><md>### Do a dry run first
+
+From the root of your local repository: Open Terminal then run
+
+```bash
+rclone sync . infinity:htdocs \
+  --exclude ".git/**" \
+  --exclude ".gitignore" \
+  --transfers 2 --checkers 2 \
+  --dry-run -v
+```
+
+What each part does:
+
+- `sync` makes the remote match the local folder, so files deleted locally are **deleted on the server**. Use `rclone copy` instead if you never want deletions.
+- `--exclude ".git/**"` skips the `.git` directory and everything under it, at any depth.
+- `--exclude ".gitignore"` skips any file named `.gitignore`. Use `/.gitignore` to exclude only the one in the repository root.
+- `--transfers 2 --checkers 2` keeps connections low. Free hosts often reject too many parallel FTP connections.
+- `--dry-run` shows what would happen without changing anything.
+</md></sn><sn><md>### Run it for real
+
+Remove `--dry-run`:
+
+```bash
+rclone sync . infinity:htdocs --exclude ".git/**" --exclude ".gitignore" --transfers 2 --checkers 2 -v
+```
+
+If every run re-uploads all files, the server may not report modification times reliably. Add `--size-only` so rclone compares by size instead.
+
+
+##### Optional: keep filters in a file
+
+Create `ftp-filter.txt` (keep it out of the upload as well):
+
+```text
+- .git/**
+- .gitignore
+- ftp-filter.txt
+- README.md
++ **
+```
+
+Then run:
+
+```bash
+rclone sync . infinity:htdocs --filter-from ftp-filter.txt --transfers 2 --checkers 2 -v
+```
+
+Rules are checked top to bottom and the first match wins, so the final `+ **` includes everything not already excluded.
+</md></sn><sn><md>### Make it a one-command habit
+
+Wrap your chosen command in a tiny script at the root of the repository.
+
+`deploy.sh`:
+
+```bash
+#!/usr/bin/env bash
+set -euo pipefail
+
+rclone sync . infinity:htdocs \
+  --exclude ".git/**" --exclude ".gitignore" \
+  --exclude "deploy.sh" \
+  --transfers 2 --checkers 2 -v
+```
+
+Now your routine is simply:
+
+```bash
+git pull
+./deploy.sh
+```
+</md></sn>
