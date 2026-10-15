@@ -1,10 +1,1206 @@
 
-  <sn></sn>
+  <sn><md>### Html
+
++++ index.html
+
+```html
+
+
+<!--
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  SUBLINE EDITOR                                                              ║
+║  A Sublime Text–style code editor in a single HTML file.                     ║
+║  Built with Bootstrap 5 (UI) + CodeMirror 5 (editing engine).                ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║  FILE MAP                                                                    ║
+║  1. <head>        Meta, Bootstrap CSS, CodeMirror CSS, custom styles         ║
+║  2. <body>        Markup: navbar, sidebar, tabs, editor, minimap, status bar,║
+║                   command palette modal, HTML preview modal, file input      ║
+║  3. <script>      Logic:                                                     ║
+║     3.1  Library loader        (loads CodeMirror modules sequentially)       ║
+║     3.2  init()                (runs once everything is loaded)              ║
+║          a. Helpers & constants     g. Minimap                               ║
+║          b. State & settings        h. File handling (open/drop/save)        ║
+║          c. CodeMirror instance     i. Command palette                       ║
+║          d. Settings / persistence  j. Command registry                      ║
+║          e. Tab management          k. Global shortcuts                      ║
+║          f. Status bar              l. Session restore & startup             ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+-->
+
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Subline Editor</title>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       STYLESHEETS
+       Bootstrap provides layout, navbar, dropdowns and modals.
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       APPLICATION SHELL
+       #app contains: navbar → #main (sidebar + editor) → #status
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <div id="app">
+
+    <!-- ─────────────────────────────────────────────────────────────────────
+         NAVBAR
+         Menus are plain Bootstrap dropdowns. Every item carries a
+         `data-cmd="Command Name"` attribute; a click handler in the script
+         looks that name up in the CMDS registry and runs it.
+         ───────────────────────────────────────────────────────────────────── -->
+    <nav class="navbar navbar-expand navbar-dark bg-dark py-0">
+      <span class="navbar-brand fs-6 ms-2 me-3">◆ Subline</span>
+
+      <ul class="navbar-nav">
+
+        <!-- File menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">File</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" data-cmd="New File">New File <small class="text-muted float-end ms-4">Alt+N</small></a></li>
+            <li><a class="dropdown-item" data-cmd="Open File...">Open File… <small class="text-muted float-end ms-4">Ctrl+O</small></a></li>
+            <li><a class="dropdown-item" data-cmd="Save">Save / Download <small class="text-muted float-end ms-4">Ctrl+S</small></a></li>
+            <li><a class="dropdown-item" data-cmd="Rename File">Rename File</a></li>
+            <li><a class="dropdown-item" data-cmd="Close Tab">Close Tab <small class="text-muted float-end ms-4">Alt+W</small></a></li>
+          </ul>
+        </li>
+
+        <!-- Edit menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Edit</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" data-cmd="Undo">Undo <small class="text-muted float-end ms-4">Ctrl+Z</small></a></li>
+            <li><a class="dropdown-item" data-cmd="Redo">Redo <small class="text-muted float-end ms-4">Ctrl+Y</small></a></li>
+            <li><a class="dropdown-item" data-cmd="Find">Find <small class="text-muted float-end ms-4">Ctrl+F</small></a></li>
+            <li><a class="dropdown-item" data-cmd="Replace">Replace <small class="text-muted float-end ms-4">Ctrl+H</small></a></li>
+            <li><a class="dropdown-item" data-cmd="Go to Line">Go to Line <small class="text-muted float-end ms-4">Ctrl+G</small></a></li>
+            <li><a class="dropdown-item" data-cmd="Toggle Comment">Toggle Comment <small class="text-muted float-end ms-4">Ctrl+/</small></a></li>
+            <li><a class="dropdown-item" data-cmd="Select Next Occurrence">Select Next Occurrence <small class="text-muted float-end ms-4">Ctrl+D</small></a></li>
+          </ul>
+        </li>
+
+        <!-- View menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">View</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" data-cmd="Toggle Sidebar">Toggle Sidebar</a></li>
+            <li><a class="dropdown-item" data-cmd="Toggle Minimap">Toggle Minimap</a></li>
+            <li><a class="dropdown-item" data-cmd="Toggle Word Wrap">Toggle Word Wrap</a></li>
+            <li><a class="dropdown-item" data-cmd="Distraction Free Mode">Distraction Free <small class="text-muted float-end ms-4">F11 / Esc</small></a></li>
+            <li><a class="dropdown-item" data-cmd="Font Larger">Font Larger <small class="text-muted float-end ms-4">Ctrl+=</small></a></li>
+            <li><a class="dropdown-item" data-cmd="Font Smaller">Font Smaller <small class="text-muted float-end ms-4">Ctrl+-</small></a></li>
+            <li><a class="dropdown-item" data-cmd="Preview HTML">Preview HTML <small class="text-muted float-end ms-4">Alt+P</small></a></li>
+          </ul>
+        </li>
+
+        <!-- Direct link to the command palette -->
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-cmd="Command Palette">Palette</a>
+        </li>
+      </ul>
+
+      <!-- Theme picker (options are filled in by JS from the THEMES list) -->
+      <select id="theme" class="form-select form-select-sm ms-auto me-2 w-auto"></select>
+    </nav>
+
+    <!-- ─────────────────────────────────────────────────────────────────────
+         MAIN AREA
+         Left:  #side   – list of open files
+         Right: #edwrap – tab strip, CodeMirror editor, minimap canvas
+         ───────────────────────────────────────────────────────────────────── -->
+    <div id="main">
+      <div id="side">
+        <div class="list-group list-group-flush" id="files"></div>
+      </div>
+
+      <div id="edwrap">
+        <ul class="nav nav-tabs" id="tabs"></ul>
+        <div id="edrow">
+          <div id="ed"></div>
+          <canvas id="mm"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────────────────────────────
+         STATUS BAR
+         Left:  cursor position, selection info, line count
+         Right: indentation selector, syntax (mode) selector, encoding label
+         ───────────────────────────────────────────────────────────────────── -->
+    <div id="status" class="bg-body-tertiary">
+      <span id="pos">Line 1, Column 1</span>
+      <span id="sel"></span>
+      <span id="len"></span>
+
+      <span class="ms-auto"></span>
+
+      <select id="indent" class="form-select form-select-sm">
+        <option value="s2">Spaces: 2</option>
+        <option value="s4" selected="">Spaces: 4</option>
+        <option value="t">Tab Size: 4</option>
+      </select>
+      <select id="mode" class="form-select form-select-sm"></select>
+      <span>UTF-8</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       MODALS & HIDDEN INPUTS
+       ═══════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Command palette: used for both "Command Palette" and "Go to File" -->
+  <div class="modal fade" id="palette" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="p-2">
+          <input id="pal-in" class="form-control" autocomplete="off">
+        </div>
+        <div class="list-group list-group-flush" id="pal-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HTML preview: renders the current buffer inside a sandboxed iframe -->
+  <div class="modal fade" id="prev" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header py-2">
+          <h6 class="modal-title">HTML Preview</h6>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <iframe id="frame" sandbox="allow-scripts" style="height:70vh;border:0;background:#fff"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden file input triggered by File → Open -->
+  <input type="file" id="fileIn" multiple="" hidden="">
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SCRIPTS
+       ═══════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Bootstrap JS bundle (dropdowns, modals) -->
+  
+
+
+
+
+
+
+```
++++
+</md></sn>
   <config>
     <tags>#all</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 15 2026 11:18:27 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 15 2026 11:22:46 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-c8BKgx9doI</id>
     <duration></duration>
   </config>
+<sn><md>### Stylesheet
+
++++ style.css
+
+```css
+
+  <!--
+    CodeMirror stylesheets (core, dialog, fold gutter, and every editor theme).
+    Loaded via @import so they are fetched alongside the page without extra
+    <link> tags.
+  -->
+  <style>
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css");
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/dialog/dialog.min.css");
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/fold/foldgutter.min.css");
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/monokai.min.css");
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css");
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/material.min.css");
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css");
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/solarized.min.css");
+  </style>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       CUSTOM STYLES
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <style>
+    /* ───────────────────────────────────────────────────────────────────────
+       PAGE LAYOUT
+       The app fills the whole viewport and never scrolls as a page.
+       Structure (top → bottom):  navbar / #main / #status
+       ─────────────────────────────────────────────────────────────────────── */
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    #app {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Middle region: sidebar on the left, editor area on the right.
+       min-height:0 lets flex children shrink and scroll internally. */
+    #main {
+      flex: 1;
+      display: flex;
+      min-height: 0;
+    }
+
+    /* ───────────────────────────────────────────────────────────────────────
+       SIDEBAR  (open-files list)
+       ─────────────────────────────────────────────────────────────────────── */
+    #side {
+      width: 200px;
+      overflow: auto;
+      border-right: 1px solid var(--bs-border-color);
+      font-size: .85rem;
+    }
+
+    #side .list-group-item {
+      cursor: pointer;
+      padding: .3rem .6rem;
+      border: 0;
+      border-radius: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* ───────────────────────────────────────────────────────────────────────
+       EDITOR AREA  (tab strip + editor + minimap)
+       ─────────────────────────────────────────────────────────────────────── */
+    #edwrap {
+      flex: 1;
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+    }
+
+    /* Tab strip scrolls horizontally instead of wrapping */
+    #tabs {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-size: .85rem;
+    }
+
+    #tabs .nav-link {
+      white-space: nowrap;
+      padding: .3rem .7rem;
+      border-radius: 0;
+    }
+
+    /* The little "×" close button on each tab */
+    #tabs .x {
+      opacity: .5;
+      margin-left: .5rem;
+      cursor: pointer;
+    }
+
+    #tabs .x:hover {
+      opacity: 1;
+    }
+
+    /* Row holding the CodeMirror instance and the minimap canvas */
+    #edrow {
+      flex: 1;
+      display: flex;
+      min-height: 0;
+    }
+
+    #ed {
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* CodeMirror fills its container; font size is driven by the --fs variable */
+    .CodeMirror {
+      height: 100%;
+      font-family: "Fira Code", Consolas, Menlo, monospace;
+      font-size: var(--fs, 14px);
+    }
+
+    /* ───────────────────────────────────────────────────────────────────────
+       MINIMAP  (canvas drawn in JS, see section "Minimap")
+       ─────────────────────────────────────────────────────────────────────── */
+    #mm {
+      width: 90px;
+      border-left: 1px solid var(--bs-border-color);
+      cursor: pointer;
+    }
+
+    /* ───────────────────────────────────────────────────────────────────────
+       STATUS BAR  (cursor position, selection, syntax & indent selectors)
+       ─────────────────────────────────────────────────────────────────────── */
+    #status {
+      font-size: .75rem;
+      padding: .15rem .75rem;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      border-top: 1px solid var(--bs-border-color);
+    }
+
+    #status select {
+      width: auto;
+      font-size: .75rem;
+      padding: 0 1.4rem 0 .3rem;
+    }
+
+    /* ───────────────────────────────────────────────────────────────────────
+       COMMAND PALETTE  (results list inside the modal)
+       ─────────────────────────────────────────────────────────────────────── */
+    #pal-list {
+      max-height: 50vh;
+      overflow: auto;
+    }
+
+    #pal-list .active {
+      background: var(--bs-primary);
+      color: #fff;
+    }
+
+    /* ───────────────────────────────────────────────────────────────────────
+       SMALL UTILITIES
+       ─────────────────────────────────────────────────────────────────────── */
+    /* Orange dot shown next to a tab/file that has unsaved changes */
+    .dot {
+      color: #fd7e14;
+    }
+
+    /* Distraction-free ("zen") mode hides every piece of chrome */
+    body.zen #side,
+    body.zen #mm,
+    body.zen nav,
+    body.zen #tabs,
+    body.zen #status {
+      display: none !important;
+    }
+
+    /* Highlight for trailing whitespace (reserved class) */
+    .cm-trailing {
+      background: rgba(255, 0, 0, .25);
+    }
+  </style>
+
+```
++++</md></sn><sn><md>#### Script
+
++++ script.js
+
+```js
+    /* ════════════════════════════════════════════════════════════════════════
+     * 3.1  LIBRARY LOADER
+     * ────────────────────────────────────────────────────────────────────────
+     * CodeMirror is modular: the core must be loaded first, then add-ons
+     * (search, folding, brackets…), language modes, and finally the keymap.
+     * Scripts are injected one at a time (in order) because each depends on
+     * the ones before it. When all are ready, init() starts the editor.
+     * If any file fails to load, a friendly error replaces the page.
+     * ════════════════════════════════════════════════════════════════════════ */
+    const CMB = "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/";
+
+    const libs = [
+      // Core
+      "codemirror.min.js",
+
+      // Add-ons: dialogs &amp; search
+      "addon/dialog/dialog.min.js",
+      "addon/search/searchcursor.min.js",
+      "addon/search/search.min.js",
+      "addon/search/jump-to-line.min.js",
+      "addon/search/match-highlighter.min.js",
+
+      // Add-ons: editing helpers
+      "addon/edit/matchbrackets.min.js",
+      "addon/edit/closebrackets.min.js",
+      "addon/edit/closetag.min.js",
+      "addon/comment/comment.min.js",
+      "addon/selection/active-line.min.js",
+
+      // Add-ons: code folding
+      "addon/fold/foldcode.min.js",
+      "addon/fold/foldgutter.min.js",
+      "addon/fold/brace-fold.min.js",
+      "addon/fold/xml-fold.min.js",
+      "addon/fold/indent-fold.min.js",
+      "addon/fold/comment-fold.min.js",
+
+      // Language modes
+      "mode/javascript/javascript.min.js",
+      "mode/xml/xml.min.js",
+      "mode/css/css.min.js",
+      "mode/htmlmixed/htmlmixed.min.js",
+      "mode/python/python.min.js",
+      "mode/markdown/markdown.min.js",
+      "mode/clike/clike.min.js",
+      "mode/sql/sql.min.js",
+      "mode/shell/shell.min.js",
+
+      // Sublime Text key bindings (Ctrl+D, Ctrl+Shift+K, etc.)
+      "keymap/sublime.min.js"
+    ];
+
+    (async () =&gt; {
+      for (const lib of libs) {
+        await new Promise((resolve, reject) =&gt; {
+          const script = document.createElement("script");
+          script.src = CMB + lib;
+          script.onload = resolve;
+          script.onerror = () =&gt; reject(lib);
+          document.head.appendChild(script);
+        });
+      }
+      init();
+    })().catch(err =&gt; {
+      document.body.innerHTML =
+        '<div class="p-4 text-danger">Failed to load ' + err + '. Check your internet connection.</div>';
+    });
+
+
+    /* ════════════════════════════════════════════════════════════════════════
+     * 3.2  init()
+     * ────────────────────────────────────────────────────────────────────────
+     * Everything below runs once all libraries are available. All editor
+     * state lives in this function's closure.
+     * ════════════════════════════════════════════════════════════════════════ */
+    function init() {
+
+      /* ──────────────────────────────────────────────────────────────────────
+       * a. HELPERS &amp; CONSTANTS
+       * ──────────────────────────────────────────────────────────────────────
+       * $       – shorthand for document.querySelector
+       * MODES   – supported languages as [label, CodeMirror mode, extensions]
+       * THEMES  – editor themes as [cm theme id, label, isDark(1/0)]
+       * modeFor – picks a MODES index from a filename's extension
+       *           (falls back to 0 = Plain Text)
+       * esc     – escapes HTML so filenames can't inject markup
+       * ────────────────────────────────────────────────────────────────────── */
+      const $ = selector =&gt; document.querySelector(selector);
+
+      const MODES = [
+        ["Plain Text", null,                          "txt"],
+        ["JavaScript", "javascript",                  "js"],
+        ["JSON",       { name: "javascript", json: true }, "json"],
+        ["HTML",       "htmlmixed",                   "html htm"],
+        ["CSS",        "css",                         "css"],
+        ["XML",        "xml",                         "xml svg"],
+        ["Python",     "python",                      "py"],
+        ["Markdown",   "markdown",                    "md"],
+        ["C",          "text/x-csrc",                 "c h"],
+        ["C++",        "text/x-c++src",               "cpp hpp"],
+        ["Java",       "text/x-java",                 "java"],
+        ["SQL",        "text/x-sql",                  "sql"],
+        ["Shell",      "shell",                       "sh bash"]
+      ];
+
+      const THEMES = [
+        ["monokai",         "Monokai",         1],
+        ["dracula",         "Dracula",         1],
+        ["material",        "Material",        1],
+        ["eclipse",         "Eclipse",         0],
+        ["solarized light", "Solarized Light", 0]
+      ];
+
+      const modeSel  = $("#mode");
+      const themeSel = $("#theme");
+
+      // Fill the two <select> dropdowns (value = index into the arrays)
+      MODES.forEach((m, i)  =&gt; modeSel.add(new Option(m[0], i)));
+      THEMES.forEach((t, i) =&gt; themeSel.add(new Option(t[1], i)));
+
+      const modeFor = name =&gt; {
+        const ext = (name.split(".").pop() || "").toLowerCase();
+        const idx = MODES.findIndex(m =&gt; m[2].split(" ").includes(ext));
+        return idx &lt; 0 ? 0 : idx;
+      };
+
+      const esc = s =&gt;
+        s.replace(/[&amp;&lt;&gt;"]/g, c =&gt; ({ "&amp;": "&amp;", "&lt;": "&lt;", "&gt;": "&gt;", '"': """ }[c]));
+
+
+      /* ──────────────────────────────────────────────────────────────────────
+       * b. STATE &amp; SETTINGS
+       * ──────────────────────────────────────────────────────────────────────
+       * S    – user settings (persisted in localStorage "subline.set")
+       *        theme: index in THEMES      fs:   font size in px
+       *        wrap:  word wrap on/off     side: sidebar visible
+       *        mm:    minimap visible
+       * tabs – array of open tab objects: { id, name, doc, mode, tabs? }
+       * cur  – the currently active tab
+       * uid  – counter for unique tab ids
+       * ────────────────────────────────────────────────────────────────────── */
+      let S = { theme: 0, fs: 14, wrap: false, side: true, mm: true };
+      let tabs = [];
+      let cur = null;
+      let uid = 0;
+
+      try {
+        Object.assign(S, JSON.parse(localStorage.getItem("subline.set") || "{}"));
+      } catch (e) { /* ignore corrupt settings */ }
+
+
+      /* ──────────────────────────────────────────────────────────────────────
+       * c. CODEMIRROR INSTANCE
+       * ──────────────────────────────────────────────────────────────────────
+       * A single editor is created; switching tabs simply swaps the document
+       * (cm.swapDoc) so undo history and cursor are kept per tab.
+       *
+       * extraKeys add shortcuts on top of the Sublime keymap:
+       *   Ctrl-H replace · Ctrl-S save · Ctrl-O open · Alt-N new · Alt-W close
+       *   Ctrl-Shift-P palette · Ctrl-P go-to-file · Alt-P HTML preview
+       *   Ctrl-= / Ctrl-- font size · F11 zen mode · Esc leave zen mode
+       *   Tab / Shift-Tab indent / outdent (inserts spaces unless tabs mode)
+       * ────────────────────────────────────────────────────────────────────── */
+      const cm = CodeMirror($("#ed"), {
+        lineNumbers: true,
+        keyMap: "sublime",
+        autoCloseBrackets: true,
+        autoCloseTags: true,
+        matchBrackets: true,
+        styleActiveLine: true,
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+        indentUnit: 4,
+        tabSize: 4,
+        highlightSelectionMatches: { showToken: /\w/, annotateScrollbar: false },
+        showCursorWhenSelecting: true,
+        lineWrapping: S.wrap,
+
+        extraKeys: {
+          "Ctrl-H":       "replace",
+          "Ctrl-S":       () =&gt; run("Save"),
+          "Ctrl-O":       () =&gt; run("Open File..."),
+          "Alt-N":        () =&gt; run("New File"),
+          "Alt-W":        () =&gt; run("Close Tab"),
+          "Ctrl-Shift-P": () =&gt; run("Command Palette"),
+          "Ctrl-P":       () =&gt; run("Go to File"),
+          "Alt-P":        () =&gt; run("Preview HTML"),
+          "Ctrl-=":       () =&gt; run("Font Larger"),
+          "Ctrl--":       () =&gt; run("Font Smaller"),
+          "F11":          () =&gt; run("Distraction Free Mode"),
+          "Esc":          () =&gt; document.body.classList.remove("zen"),
+
+          // Tab key: indent selection, or insert one indent unit
+          "Tab": c =&gt;
+            c.somethingSelected()
+              ? c.indentSelection("add")
+              : c.replaceSelection(
+                  c.getOption("indentWithTabs") ? "\t" : " ".repeat(c.getOption("indentUnit")),
+                  "end"
+                ),
+          "Shift-Tab": c =&gt; c.indentSelection("subtract")
+        }
+      });
+
+
+      /* ──────────────────────────────────────────────────────────────────────
+       * d. SETTINGS &amp; SESSION PERSISTENCE
+       * ──────────────────────────────────────────────────────────────────────
+       * save()          – writes settings S to localStorage
+       * persist()       – debounced (500 ms) snapshot of all open tabs
+       *                   (name, text, mode, clean flag) to localStorage,
+       *                   so work survives a page refresh
+       * applySettings() – pushes S into the UI: theme, font size, word wrap,
+       *                   sidebar &amp; minimap visibility; then saves + redraws
+       * ────────────────────────────────────────────────────────────────────── */
+      const save = () =&gt; {
+        try { localStorage.setItem("subline.set", JSON.stringify(S)); } catch (e) {}
+      };
+
+      const persist = (() =&gt; {
+        let timer;
+        return () =&gt; {
+          clearTimeout(timer);
+          timer = setTimeout(() =&gt; {
+            try {
+              localStorage.setItem("subline.tabs", JSON.stringify({
+                cur: tabs.indexOf(cur),
+                tabs: tabs.map(t =&gt; ({
+                  name:  t.name,
+                  text:  t.doc.getValue(),
+                  mode:  t.mode,
+                  clean: t.doc.isClean()
+                }))
+              }));
+            } catch (e) {}
+          }, 500);
+        };
+      })();
+
+      function applySettings() {
+        const theme = THEMES[S.theme];
+
+        cm.setOption("theme", theme[0]);
+        document.documentElement.setAttribute("data-bs-theme", theme[2] ? "dark" : "light");
+        themeSel.value = S.theme;
+
+        document.documentElement.style.setProperty("--fs", S.fs + "px");
+        cm.setOption("lineWrapping", S.wrap);
+
+        $("#side").style.display = S.side ? "" : "none";
+        $("#mm").style.display   = S.mm   ? "" : "none";
+
+        cm.refresh();
+        save();
+        drawMM();
+      }
+
+
+      /* ──────────────────────────────────────────────────────────────────────
+       * e. TAB MANAGEMENT
+       * ──────────────────────────────────────────────────────────────────────
+       * newTab()    – creates a tab with its own CodeMirror Doc
+       * activate()  – makes a tab current: swaps doc, mode, indent style
+       * renderTabs()– redraws the tab strip AND the sidebar file list;
+       *               shows an orange dot for unsaved tabs; updates the
+       *               browser title
+       * close()     – closes a tab (asks before discarding changes); always
+       *               leaves at least one tab open
+       * ────────────────────────────────────────────────────────────────────── */
+      function newTab(name = "untitled", text = "", mode) {
+        const doc = CodeMirror.Doc(text, null);
+        const tab = { id: ++uid, name, doc, mode: mode ?? modeFor(name) };
+        doc.markClean();
+        tabs.push(tab);
+        activate(tab);
+        return tab;
+      }
+
+      function activate(tab) {
+        cur = tab;
+        cm.swapDoc(tab.doc);
+        cm.setOption("mode", MODES[tab.mode][1]);
+        modeSel.value = tab.mode;
+        cm.setOption("indentWithTabs", tab.tabs || false);
+        renderTabs();
+        cm.focus();
+        status();
+        drawMM();
+        persist();
+      }
+
+      function renderTabs() {
+        const tabStrip = $("#tabs");
+        const fileList = $("#files");
+        tabStrip.innerHTML = "";
+        fileList.innerHTML = "";
+
+        tabs.forEach(tab =&gt; {
+          const dirty = !tab.doc.isClean();
+
+          // — Tab in the top strip —
+          const li = document.createElement("li");
+          li.className = "nav-item";
+          li.innerHTML =
+            `<a class="nav-link ${tab === cur ?" active"="" :="" ""}"="" href="#">` +
+            `${esc(tab.name)}${dirty ? ' <span class="dot">●</span>' : ""}` +
+            `<span class="x">×</span></a>`;
+          li.firstChild.onclick = e =&gt; {
+            e.target.classList.contains("x") ? close(tab) : activate(tab);
+            e.preventDefault();
+          };
+          tabStrip.appendChild(li);
+
+          // — Entry in the sidebar —
+          const a = document.createElement("a");
+          a.className = "list-group-item list-group-item-action " + (tab === cur ? "active" : "");
+          a.innerHTML = `<span>${esc(tab.name)}</span>${dirty ? '<span class="dot">●</span>' : ""}`;
+          a.onclick = () =&gt; activate(tab);
+          fileList.appendChild(a);
+        });
+
+        document.title = (cur ? cur.name : "") + " - Subline";
+      }
+
+      function close(tab) {
+        if (!tab.doc.isClean() &amp;&amp; !confirm(`Discard unsaved changes to ${tab.name}?`)) return;
+
+        const i = tabs.indexOf(tab);
+        tabs.splice(i, 1);
+
+        if (!tabs.length)        newTab();                                   // never leave zero tabs
+        else if (tab === cur)    activate(tabs[Math.min(i, tabs.length - 1)]); // pick a neighbour
+        else                     renderTabs();
+
+        persist();
+      }
+
+
+      /* ──────────────────────────────────────────────────────────────────────
+       * f. STATUS BAR &amp; EDITOR EVENTS
+       * ──────────────────────────────────────────────────────────────────────
+       * status() updates "Line X, Column Y", number of selected characters
+       * (or number of cursors) and total line count.
+       * Then editor/UI events are wired:
+       *   cursor move → status · change → redraw tabs/minimap/persist
+       *   scroll → minimap · mode &amp; theme selects · indent select
+       * ────────────────────────────────────────────────────────────────────── */
+      function status() {
+        const pos = cm.getCursor();
+        $("#pos").textContent = `Line ${pos.line + 1}, Column ${pos.ch + 1}`;
+
+        const count = cm.listSelections().length;
+        const text  = cm.getSelection();
+        $("#sel").textContent =
+          count &gt; 1 ? `${count} selections` :
+          text      ? `${text.length} chars selected` : "";
+
+        $("#len").textContent = `${cm.lineCount()} lines`;
+      }
+
+      cm.on("cursorActivity", status);
+      cm.on("change", () =&gt; { renderTabs(); drawMM(); persist(); });
+      cm.on("scroll", drawMM);
+
+      modeSel.onchange = () =&gt; {
+        cur.mode = +modeSel.value;
+        cm.setOption("mode", MODES[cur.mode][1]);
+        persist();
+      };
+
+      themeSel.onchange = () =&gt; {
+        S.theme = +themeSel.value;
+        applySettings();
+      };
+
+      // Indent selector: "s2" = 2 spaces, "s4" = 4 spaces, "t" = tabs
+      $("#indent").onchange = e =&gt; {
+        const v = e.target.value;
+        cm.setOption("indentWithTabs", v === "t");
+        cm.setOption("indentUnit", v === "s2" ? 2 : 4);
+        cm.setOption("tabSize",    v === "s2" ? 2 : 4);
+        cm.focus();
+      };
+
+
+      /* ──────────────────────────────────────────────────────────────────────
+       * g. MINIMAP
+       * ──────────────────────────────────────────────────────────────────────
+       * A tiny canvas overview of the file: each line is a thin bar whose
+       * length/offset mirrors the text length/indentation. A translucent
+       * rectangle shows the visible viewport.
+       * Click or drag on it to scroll the editor (mmScroll).
+       * ────────────────────────────────────────────────────────────────────── */
+      const mm = $("#mm");
+      const mx = mm.getContext("2d");
+
+      function drawMM() {
+        if (!S.mm) return;
+
+        const w = mm.width  = mm.clientWidth;
+        const h = mm.height = mm.clientHeight;
+        const n  = cm.lineCount();
+        const lh = Math.min(3, h / n);               // pixel height per line
+
+        mx.clearRect(0, 0, w, h);
+        mx.fillStyle   = getComputedStyle(document.body).color;
+        mx.globalAlpha = .35;
+
+        // Draw one bar per line of code
+        let y = 0;
+        cm.eachLine(line =&gt; {
+          const t   = line.text;
+          const ind = t.length - t.trimStart().length;
+          const len = Math.min(t.trim().length, Math.floor(w / 1.3));
+          if (len) mx.fillRect(2 + ind * 1.2, y, len * 1.2, Math.max(1, lh - 1));
+          y += lh;
+        });
+
+        // Draw the viewport indicator
+        const info = cm.getScrollInfo();
+        const k = n * lh / info.height;
+        mx.globalAlpha = .2;
+        mx.fillRect(0, info.top * k, w, Math.max(8, info.clientHeight * k));
+      }
+
+      let drag = false;
+
+      const mmScroll = e =&gt; {
+        const rect = mm.getBoundingClientRect();
+        const n    = cm.lineCount();
+        const lh   = Math.min(3, mm.clientHeight / n);
+        const info = cm.getScrollInfo();
+        cm.scrollTo(null, (e.clientY - rect.top) / (n * lh) * info.height - info.clientHeight / 2);
+      };
+
+      mm.onmousedown = e =&gt; { drag = true; mmScroll(e); };
+      window.addEventListener("mousemove", e =&gt; drag &amp;&amp; mmScroll(e));
+      window.addEventListener("mouseup",   () =&gt; drag = false);
+      window.addEventListener("resize",    () =&gt; { cm.refresh(); drawMM(); });
+
+
+      /* ──────────────────────────────────────────────────────────────────────
+       * h. FILE HANDLING
+       * ──────────────────────────────────────────────────────────────────────
+       * Open:     hidden </select><input type="file"> (multiple) or drag &amp; drop on editor
+       * readF():  reads a File as text and opens it in a new tab; if the only
+       *           tab is an empty, untouched "untitled", it is replaced
+       * download(): saves the active tab as a browser download and marks the
+       *           tab clean
+       * ────────────────────────────────────────────────────────────────────── */
+      const fin = $("#fileIn");
+      fin.onchange = () =&gt; {
+        [...fin.files].forEach(readF);
+        fin.value = "";
+      };
+
+      function readF(file) {
+        const reader = new FileReader();
+        reader.onload = () =&gt; {
+          // Replace a pristine empty "untitled" tab instead of leaving it behind
+          if (cur &amp;&amp; tabs.length === 1 &amp;&amp; cur.doc.isClean() &amp;&amp; !cur.doc.getValue() &amp;&amp; cur.name === "untitled") {
+            tabs.pop();
+          }
+          newTab(file.name, reader.result);
+        };
+        reader.readAsText(file);
+      }
+
+      const ed = $("#ed");
+      ed.ondragover = e =&gt; e.preventDefault();
+      ed.ondrop = e =&gt; {
+        e.preventDefault();
+        [...e.dataTransfer.files].forEach(readF);
+      };
+
+      function download(tab) {
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(new Blob([tab.doc.getValue()], { type: "text/plain" }));
+        a.download = tab.name;
+        a.click();
+        setTimeout(() =&gt; URL.revokeObjectURL(a.href), 1e3);
+        tab.doc.markClean();
+        renderTabs();
+        persist();
+      }
+
+
+      /* ──────────────────────────────────────────────────────────────────────
+       * i. COMMAND PALETTE
+       * ──────────────────────────────────────────────────────────────────────
+       * A reusable fuzzy-search popup (Bootstrap modal).
+       *   openPal(list, placeholder, callback)
+       *     list     – array of [label, ...payload]
+       *     callback – called with the chosen item
+       * Keyboard: ↑ / ↓ to move, Enter to run, type to filter.
+       * fuzzy("abc", "a_b_c") → true (characters appear in order).
+       * ────────────────────────────────────────────────────────────────────── */
+      const pm  = new bootstrap.Modal("#palette");
+      const pin = $("#pal-in");
+      const pl  = $("#pal-list");
+
+      let items = [];   // all candidate entries
+      let shown = [];   // entries matching the current query
+      let sel   = 0;    // highlighted index
+      let pcb   = null; // callback for the chosen item
+
+      const fuzzy = (query, text) =&gt; {
+        query = query.toLowerCase();
+        text  = text.toLowerCase();
+        let i = 0;
+        for (const c of text) if (c === query[i]) i++;
+        return i === query.length;
+      };
+
+      function openPal(list, placeholder, callback) {
+        items = list;
+        pcb = callback;
+        pin.placeholder = placeholder;
+        pin.value = "";
+        pm.show();
+        filter();
+      }
+
+      function filter() {
+        shown = items.filter(item =&gt; fuzzy(pin.value, item[0]));
+        sel = 0;
+        paint();
+      }
+
+      function paint() {
+        pl.innerHTML = "";
+        shown.forEach((item, i) =&gt; {
+          const a = document.createElement("a");
+          a.className = "list-group-item list-group-item-action py-1 " + (i === sel ? "active" : "");
+          a.textContent = item[0];
+          a.onclick = () =&gt; pick(i);
+          pl.appendChild(a);
+        });
+        pl.children[sel]?.scrollIntoView({ block: "nearest" });
+      }
+
+      function pick(i) {
+        const item = shown[i];
+        if (!item) return;
+        pm.hide();
+        setTimeout(() =&gt; pcb(item), 200);   // wait for the modal's fade-out
+      }
+
+      pin.oninput = filter;
+      pin.onkeydown = e =&gt; {
+        if (e.key === "ArrowDown")      { sel = Math.min(sel + 1, shown.length - 1); paint(); e.preventDefault(); }
+        else if (e.key === "ArrowUp")   { sel = Math.max(sel - 1, 0);                paint(); e.preventDefault(); }
+        else if (e.key === "Enter")     pick(sel);
+      };
+
+      $("#palette").addEventListener("shown.bs.modal",  () =&gt; pin.focus());
+      $("#palette").addEventListener("hidden.bs.modal", () =&gt; cm.focus());
+
+
+      /* ──────────────────────────────────────────────────────────────────────
+       * j. COMMAND REGISTRY  (CMDS)
+       * ──────────────────────────────────────────────────────────────────────
+       * Every feature is a named function in the CMDS object. The same names
+       * are used by menu items (data-cmd), the command palette and shortcuts.
+       *
+       * Small factories used below:
+       *   X(name)    – wraps a built-in CodeMirror command
+       *   sorted(f)  – applies a text transform f to the selection, or to the
+       *                whole document when nothing is selected
+       *   sel1(f)    – applies f to every selection separately
+       * ────────────────────────────────────────────────────────────────────── */
+      const X = name =&gt; () =&gt; cm.execCommand(name);
+
+      const sorted = f =&gt; () =&gt; {
+        const range = cm.somethingSelected()
+          ? cm.listSelections()[0]
+          : { anchor: { line: 0, ch: 0 }, head: { line: cm.lastLine(), ch: 1e9 } };
+        cm.replaceRange(f(cm.getRange(range.anchor, range.head)), range.anchor, range.head);
+      };
+
+      const sel1 = f =&gt; () =&gt; cm.replaceSelections(cm.getSelections().map(f));
+
+      const CMDS = {
+
+        /* ── File ─────────────────────────────────────────────────────────── */
+        "New File":      () =&gt; newTab(),
+        "Open File...":  () =&gt; fin.click(),
+        "Save":          () =&gt; download(cur),
+        "Rename File": () =&gt; {
+          const name = prompt("File name:", cur.name);
+          if (name) {
+            cur.name = name;
+            cur.mode = modeFor(name);
+            activate(cur);
+          }
+        },
+        "Close Tab":     () =&gt; close(cur),
+        "Close All Tabs": () =&gt; {
+          if (confirm("Close all tabs?")) { tabs = []; newTab(); }
+        },
+
+        /* ── Navigation / palette ─────────────────────────────────────────── */
+        "Go to File": () =&gt;
+          openPal(tabs.map(t =&gt; [t.name, t]), "Go to file...", item =&gt; activate(item[1])),
+        "Command Palette": () =&gt;
+          openPal(Object.keys(CMDS).map(k =&gt; [k]), "Type a command...", item =&gt; CMDS[item[0]]()),
+
+        /* ── Undo / redo / search ─────────────────────────────────────────── */
+        "Undo":          X("undo"),
+        "Redo":          X("redo"),
+        "Find":          X("find"),
+        "Find Next":     X("findNext"),
+        "Find Previous": X("findPrev"),
+        "Replace":       X("replace"),
+        "Replace All":   X("replaceAll"),
+        "Go to Line":    X("jumpToLine"),
+
+        /* ── Selection &amp; multi-cursor ─────────────────────────────────────── */
+        "Toggle Comment":           X("toggleComment"),
+        "Select Next Occurrence":   X("selectNextOccurrence"),
+        "Select All":               X("selectAll"),
+        "Select Line":              X("selectLine"),
+        "Add Cursor Above":         X("addCursorToPrevLine"),
+        "Add Cursor Below":         X("addCursorToNextLine"),
+        "Split Selection into Lines": X("splitSelectionByLine"),
+
+        /* ── Line operations ──────────────────────────────────────────────── */
+        "Duplicate Line":    X("duplicateLine"),
+        "Delete Line":       X("deleteLine"),
+        "Swap Line Up":      X("swapLineUp"),
+        "Swap Line Down":    X("swapLineDown"),
+        "Join Lines":        X("joinLines"),
+        "Insert Line After": X("insertLineAfter"),
+        "Insert Line Before": X("insertLineBefore"),
+
+        /* ── Indentation ──────────────────────────────────────────────────── */
+        "Indent":    () =&gt; cm.indentSelection("add"),
+        "Unindent":  () =&gt; cm.indentSelection("subtract"),
+        "Auto-Indent Selection": () =&gt; cm.execCommand("indentAuto"),
+
+        /* ── Code folding ─────────────────────────────────────────────────── */
+        "Fold All":       () =&gt; cm.execCommand("foldAll"),
+        "Unfold All":     () =&gt; cm.execCommand("unfoldAll"),
+        "Fold Current":   X("fold"),
+        "Unfold Current": X("unfold"),
+
+        /* ── Text transforms (selection or whole document) ────────────────── */
+        "Sort Lines":           sorted(t =&gt; t.split("\n").sort((a, b) =&gt; a.localeCompare(b)).join("\n")),
+        "Sort Lines (Reverse)": sorted(t =&gt; t.split("\n").sort((a, b) =&gt; b.localeCompare(a)).join("\n")),
+        "Remove Duplicate Lines": sorted(t =&gt; [...new Set(t.split("\n"))].join("\n")),
+        "Reverse Lines":        sorted(t =&gt; t.split("\n").reverse().join("\n")),
+        "Trim Trailing Whitespace": sorted(t =&gt; t.replace(/[ \t]+$/gm, "")),
+        "Convert Tabs to Spaces":   sorted(t =&gt; t.replace(/\t/g, " ".repeat(cm.getOption("tabSize")))),
+
+        /* ── Case transforms (per selection) ──────────────────────────────── */
+        "Transform to Uppercase": sel1(s =&gt; s.toUpperCase()),
+        "Transform to Lowercase": sel1(s =&gt; s.toLowerCase()),
+        "Transform to Title Case": sel1(s =&gt;
+          s.replace(/\w\S*/g, w =&gt; w[0].toUpperCase() + w.slice(1).toLowerCase())),
+
+        /* ── Utilities ────────────────────────────────────────────────────── */
+        "Format JSON": () =&gt; {
+          try {
+            cm.setValue(JSON.stringify(JSON.parse(cm.getValue()), null, 2));
+            cur.mode = 2;            // switch to JSON syntax
+            activate(cur);
+          } catch (e) { alert("Invalid JSON: " + e.message); }
+        },
+        "Minify JSON": () =&gt; {
+          try { cm.setValue(JSON.stringify(JSON.parse(cm.getValue()))); }
+          catch (e) { alert("Invalid JSON: " + e.message); }
+        },
+        "Word Count": () =&gt; {
+          const text = cm.getValue();
+          alert(`Words: ${(text.match(/\S+/g) || []).length}\nCharacters: ${text.length}\nLines: ${cm.lineCount()}`);
+        },
+
+        /* ── View ─────────────────────────────────────────────────────────── */
+        "Toggle Sidebar":   () =&gt; { S.side = !S.side; applySettings(); },
+        "Toggle Minimap":   () =&gt; { S.mm   = !S.mm;   applySettings(); },
+        "Toggle Word Wrap": () =&gt; { S.wrap = !S.wrap; applySettings(); },
+        "Distraction Free Mode": () =&gt; {
+          document.body.classList.toggle("zen");
+          cm.refresh();
+        },
+        "Font Larger":  () =&gt; { S.fs = Math.min(40, S.fs + 1); applySettings(); },
+        "Font Smaller": () =&gt; { S.fs = Math.max(8,  S.fs - 1); applySettings(); },
+        "Font Reset":   () =&gt; { S.fs = 14;                     applySettings(); },
+
+        /* ── Preview &amp; session ────────────────────────────────────────────── */
+        "Preview HTML": () =&gt; {
+          $("#frame").srcdoc = cm.getValue();
+          new bootstrap.Modal("#prev").show();
+        },
+        "Reset Session": () =&gt; {
+          if (confirm("Clear saved session?")) {
+            localStorage.clear();
+            location.reload();
+          }
+        }
+      };
+
+      // One palette command per theme: "Theme: Monokai", …
+      THEMES.forEach((t, i) =&gt; {
+        CMDS["Theme: " + t[1]] = () =&gt; { S.theme = i; applySettings(); };
+      });
+
+      // One palette command per language: "Syntax: Python", …
+      MODES.forEach((m, i) =&gt; {
+        CMDS["Syntax: " + m[0]] = () =&gt; {
+          cur.mode = i;
+          modeSel.value = i;
+          cm.setOption("mode", m[1]);
+        };
+      });
+
+      // Aliases used by the keymap above
+      function run(name)  { CMDS[name](); }
+      function exec(name) { CMDS[name](); }
+
+
+      /* ──────────────────────────────────────────────────────────────────────
+       * k. GLOBAL EVENT WIRING
+       * ──────────────────────────────────────────────────────────────────────
+       * • Navbar menu items (data-cmd) run their command on click.
+       * • Document-level shortcuts catch Ctrl/Cmd + S / Shift+P / P / O even
+       *   when the editor isn't focused, and block the browser's defaults.
+       * • Before the page unloads, unsaved work is persisted.
+       * ────────────────────────────────────────────────────────────────────── */
+      document.querySelectorAll("[data-cmd]").forEach(a =&gt; {
+        a.onclick = e =&gt; {
+          e.preventDefault();
+          CMDS[a.dataset.cmd]();
+        };
+      });
+
+      document.addEventListener("keydown", e =&gt; {
+        const k = e.key.toLowerCase();
+        const mod = e.ctrlKey || e.metaKey;
+
+        if      (mod &amp;&amp; k === "s")                { e.preventDefault(); CMDS.Save(); }
+        else if (mod &amp;&amp; e.shiftKey &amp;&amp; k === "p")  { e.preventDefault(); CMDS["Command Palette"](); }
+        else if (mod &amp;&amp; k === "p")                { e.preventDefault(); CMDS["Go to File"](); }
+        else if (mod &amp;&amp; k === "o")                { e.preventDefault(); fin.click(); }
+      });
+
+      window.addEventListener("beforeunload", () =&gt; {
+        if (tabs.some(t =&gt; !t.doc.isClean())) persist();
+      });
+
+
+      /* ──────────────────────────────────────────────────────────────────────
+       * l. SESSION RESTORE &amp; STARTUP
+       * ──────────────────────────────────────────────────────────────────────
+       * If a previous session exists in localStorage, reopen its tabs
+       * (unsaved ones keep their dirty state). Otherwise show a
+       * "welcome.md" tab (mode index 7 = Markdown) with a shortcut cheatsheet.
+       * Finally apply settings and draw the initial status bar.
+       * ────────────────────────────────────────────────────────────────────── */
+      let restored = false;
+
+      try {
+        const session = JSON.parse(localStorage.getItem("subline.tabs") || "null");
+        if (session &amp;&amp; session.tabs.length) {
+          session.tabs.forEach(t =&gt; {
+            const tab = newTab(t.name, t.text, t.mode);
+            if (t.clean) tab.doc.markClean();
+            else         tab.doc.setValue(t.text);
+          });
+          activate(tabs[Math.max(0, session.cur)]);
+          restored = true;
+        }
+      } catch (e) { /* ignore corrupt session */ }
+
+      if (!restored) {
+        const welcome = [
+          "# Welcome to Subline",
+          "",
+          "A Sublime Text-style editor built with Bootstrap 5 + CodeMirror.",
+          "",
+          "## Try these",
+          "- **Ctrl+Shift+P**  Command Palette (sort, transform, format JSON...)",
+          "- **Ctrl+P**  Go to open file",
+          "- **Ctrl+D**  Select next occurrence (multi-cursor)",
+          "- **Ctrl+Click**  Add a cursor anywhere",
+          "- **Ctrl+Shift+Up/Down**  Add cursor above/below",
+          "- **Ctrl+F / Ctrl+H / Ctrl+G**  Find / Replace / Go to line",
+          "- **Ctrl+/**  Toggle comment, **Ctrl+Shift+D** duplicate line",
+          "- **Ctrl+Shift+K**  Delete line, **Ctrl+J** join lines",
+          "- Drag &amp; drop files onto the editor to open them",
+          "- Your session is saved automatically in this browser.",
+          ""
+        ].join("\n");
+
+        newTab("welcome.md", welcome, 7);
+      }
+
+      applySettings();
+      status();
+    }
+
+```
++++</md></sn>
