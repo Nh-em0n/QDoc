@@ -14,7 +14,7 @@ Use this workflow when:
     <tags>#21.selectively merging files between git branches</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Aug 13 2026 08:30:32 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Oct 17 2026 17:54:54 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-XdSLEto2HD</id>
     <duration></duration>
   </config>
@@ -244,6 +244,25 @@ assets/
 | File deleted | Optional |
 | File renamed | Review carefully |
 | Same file edited differently | May cause conflict |
+</md></sn><sn><md>#### Restore only the files from the diff, automatically
+
+If you want to pipe the diff output into the restore command, so it only touches the modified files:
+
+```bash
+git diff --name-only user -- App/ | xargs git restore --source=user --
+```
+
+Or with `checkout` on older Git versions (before 2.23):
+
+```bash
+git diff --name-only user -- App/ | xargs git checkout user --
+```
+
+**Preview before restoring**
+
+```bash
+git diff --name-only user -- App/
+```
 </md></sn><sn><md>#### Step 6: 
 
 `Choose Your Merge Strategy` {.text-center}
