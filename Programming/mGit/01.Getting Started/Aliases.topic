@@ -4,7 +4,7 @@
     <tags>#aliases</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 20 2026 12:34:03 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 20 2026 12:51:36 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TrOK3o55s4</id>
     <duration></duration>
   </config>
@@ -24,7 +24,7 @@ git config --global alias.br branch
 git config --global alias.now "branch --show-current"
 git config --global alias.home "switch main"
 
-git config --global alias.delta '!f() { br="$1"; shift; git diff --name-status "$br" -- "$@"; }; f'
+git config --global alias.delta '!f() { br="$1"; shift; git diff --name-status -R "$br" -- "$@"; }; f'
 git config --global alias.bring '!f() { src="$1"; shift; git restore --source="$src" -- "$@"; }; f'
 
 
@@ -68,7 +68,7 @@ sudo nano .gifconfig
 	home = switch main
 	
        # delta and pull from other branch
-	delta = "!f() { br=\"$1\"; shift; git diff --name-status \"$br\" -- \"$@\"; }; f"
+	delta = "!f() { br=\"$1\"; shift; git diff --name-status -R \"$br\" -- \"$@\"; }; f"
 	bring = "!f() { src=\"$1\"; shift; git restore --source=\"$src\" -- \"$@\"; }; f"
 	
        # others
