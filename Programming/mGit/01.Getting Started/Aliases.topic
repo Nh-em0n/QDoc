@@ -4,7 +4,7 @@
     <tags>#aliases</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 20 2026 12:30:50 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 20 2026 12:34:03 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TrOK3o55s4</id>
     <duration></duration>
   </config>
@@ -134,4 +134,59 @@ then `"$@"` expands to two arguments: `My Folder/` and `App/`. Without the quote
 
 Rule of thumb: when you want to pass along "all the arguments" to another command, use `"$@"` with the quotes.
 
-+++</md></sn><sn></sn>
++++</md></sn><sn><md>### Examples
+
+```bash
+
+# changed  (git status -s)
+git changed
+
+# past / hist  (compact log with hash, message, relative time)
+git past
+git hist
+git past -5
+git hist --author="em0n"
+git hist -- src/app.js
+
+# put  (git commit -m)
+git put "fix login bug"
+git put "add navbar styles"
+
+# unstage  (git restore --staged --)
+git unstage index.php
+git unstage css/ js/app.js
+git unstage .
+
+# discard  (git restore --)
+git discard index.php
+git discard css/style.css
+git discard .
+
+# br  (git branch)
+git br
+git br feature-nav
+git br -d feature-nav
+git br -a
+
+# now  (current branch name)
+git now
+
+# home  (switch to main)
+git home
+
+# delta  (list files that differ from another branch)
+git delta main
+git delta feature-nav
+git delta main -- src/
+git delta origin/main -- index.php config.php
+
+# bring  (copy files from another branch/commit into working tree)
+git bring main index.php
+git bring feature-nav css/style.css js/app.js
+git bring HEAD~3 config.php
+git bring origin/main src/
+
+# aliases  (list all your aliases)
+git aliases
+
+```</md></sn>
