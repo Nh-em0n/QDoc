@@ -1,10 +1,273 @@
 
-  <sn></sn>
+  <sn><md># Renaming a Git Branch: Fixing Local and Remote Branch Name Mismatches
+
+## 1. Introduction
+
+In Git, renaming a local branch does not automatically rename the corresponding branch in a remote repository such as GitHub. This can result in two branches with different capitalization existing locally and remotely.
+
+In our QDoc-Dev project, we renamed the local branch `doc` to `Doc` and then ran `git push` without specifying `-u origin Doc`. Consequently, the local branch continued tracking the old remote branch `origin/doc`, while GitHub contained both `doc` and `Doc`.
+
+This article explains the problem, why it occurred, and how we solved it.
+
+## 2. Understanding the Problem
+
+Initially, the local branch was named `doc` and tracked the remote branch `origin/doc`.
+
+The tracking relationship was:
+
+```text
+Local branch:          doc
+Upstream branch:       origin/doc
+Remote repository:     GitHub
+```
+
+We renamed the local branch using:
+
+```bash
+git branch -m doc Doc
+```
+
+This changed the local branch name but did not automatically rename the remote branch on GitHub.
+
+We then executed:
+
+```bash
+git push
+```
+
+Because the push did not explicitly specify the destination branch or set a new upstream, the result depended on the existing upstream configuration and Git's push settings.
+
+Our subsequent command output showed that the local branch `Doc` was still tracking `origin/doc`.
+
+## 3. Identifying the Problem
+
+We used the following commands to inspect the repository.
+
+### 3.1 Check the remote repository
+
+```bash
+git remote -v
+```
+
+Output:
+
+```text
+origin  https://github.com/Nh-em0n/QDoc-Dev.git (fetch)
+origin  https://github.com/Nh-em0n/QDoc-Dev.git (push)
+```
+
+This confirmed that the repository was connected to GitHub through the remote named `origin`.
+
+### 3.2 Check local branches and their upstreams
+
+```bash
+git branch -vv
+```
+
+Relevant output:
+
+```text
+Doc  879e679 [origin/doc: ahead 5] handle repo fetch response error
+```
+
+This line revealed the main problem.
+
+- `Doc` was the local branch name.
+- `origin/doc` was its configured upstream.
+- `ahead 5` meant the local branch had five commits not reachable from the locally recorded `origin/doc` reference at that time.
+
+The branch name had changed locally, but its tracking relationship still pointed to the lowercase remote branch.
+
+### 3.3 List all local and remote-tracking branches
+
+```bash
+git branch -a
+```
+
+Relevant output:
+
+```text
+Doc
+remotes/origin/Doc
+remotes/origin/doc
+```
+
+Both remote-tracking references existed:
+
+- `origin/Doc` represented the uppercase remote branch.
+- `origin/doc` represented the lowercase remote branch.
+
+Git allows these names to coexist on GitHub because branch names are case-sensitive there.
+
+## 4. Why Did This Happen?
+
+The problem resulted from confusing three separate operations:
+
+1. Renaming a local branch.
+2. Publishing a branch to a remote repository.
+3. Configuring a local branch to track a remote branch.
+
+These operations are related, but they are not identical.
+
+### Renaming a local branch
+
+```bash
+git branch -m doc Doc
+```
+
+Renames the local branch. It does not rename the actual remote branch.
+
+### Pushing a branch
+
+```bash
+git push
+```
+
+Pushes according to the applicable upstream and push configuration. It does not necessarily publish the renamed branch under the desired remote name.
+
+### Setting an upstream
+
+```bash
+git push -u origin Doc
+```
+
+Publishes the local `Doc` branch to the remote branch `Doc` and configures `origin/Doc` as its upstream.
+
+The `-u` option is short for `--set-upstream`.
+
+## 5. How We Solved the Problem
+
+The solution was to establish the correct tracking relationship, delete the old remote branch, and clean up the stale tracking reference.
+
+### Step 1: Publish the renamed branch and set its upstream
+
+```bash
+git push -u origin Doc
+```
+
+This explicitly publishes the local `Doc` branch to GitHub and configures it to track `origin/Doc`.
+
+We then verified the relationship:
+
+```bash
+git branch -vv
+```
+
+The expected result was similar to:
+
+```text
+Doc  879e679 [origin/Doc] handle repo fetch response error
+```
+
+The important detail was that the upstream now showed `origin/Doc`, not `origin/doc`.
+
+### Step 2: Delete the old remote branch
+
+After confirming that the uppercase branch existed and the tracking relationship was correct, we deleted the lowercase remote branch:
+
+```bash
+git push origin --delete doc
+```
+
+This command deletes `doc` from the remote repository. It does not delete the local `Doc` branch.
+
+### Step 3: Remove stale remote-tracking references
+
+We ran:
+
+```bash
+git fetch --prune origin
+```
+
+The `--prune` option removes local remote-tracking references for branches that no longer exist on the remote.
+
+After the lowercase remote branch was deleted, this command removed the stale `origin/doc` reference.
+
+### Step 4: Verify the final result
+
+We used:
+
+```bash
+git branch -a
+git branch -vv
+```
+
+The desired state was:
+
+```text
+Local branch:
+Doc
+
+Remote-tracking branch:
+origin/Doc
+
+Upstream:
+Doc -&gt; origin/Doc
+```
+
+The lowercase `doc` branch and `origin/doc` tracking reference should no longer appear.
+
+## 6. Complete Command Sequence
+
+For a local branch already renamed to `Doc`, the complete sequence is:
+
+```bash
+# 1. Publish Doc and configure its upstream
+git push -u origin Doc
+
+# 2. Verify the tracking relationship
+git branch -vv
+
+# 3. Delete the old lowercase remote branch
+git push origin --delete doc
+
+# 4. Remove stale remote-tracking references
+git fetch --prune origin
+
+# 5. Verify the final state
+git branch -a
+git branch -vv
+```
+
+Run the deletion command only after confirming that the uppercase branch is published and contains the work you intend to keep. If the push is rejected or the branch contents differ unexpectedly, inspect the error and commit histories before deleting anything.
+
+## 7. Working with the Renamed Branch
+
+Once the branch is correctly configured, we can work normally:
+
+```bash
+git switch Doc
+git add .
+git commit -m "Update documentation"
+git push
+```
+
+Because local `Doc` tracks `origin/Doc`, a normal `git push` uses the configured upstream.
+
+Likewise, `git pull` normally fetches and integrates changes from the configured upstream, subject to the repository's pull configuration.
+
+## 8. Important Lessons
+
+- Renaming a local branch does not automatically rename its remote counterpart.
+- `git push` without explicit arguments depends on the branch's upstream and Git configuration.
+- `git push -u origin Doc` publishes the branch and establishes the desired upstream relationship.
+- `git push origin --delete doc` deletes the old lowercase branch from GitHub.
+- `git fetch --prune origin` removes stale remote-tracking references.
+- `git branch -vv` is one of the most useful commands for diagnosing branch-tracking problems.
+- GitHub permits branch names that differ only in capitalization, such as `doc` and `Doc`. However, case-only renames can be awkward on case-insensitive filesystems.
+
+## 9. Conclusion
+
+The main issue was not simply that the branch had two names. It was that the local branch `Doc` continued tracking `origin/doc`, while the desired remote branch was `origin/Doc`.
+
+We solved the problem by explicitly pushing the renamed branch with `-u`, deleting the old remote branch, and pruning stale remote-tracking references.
+
+The general principle is to **rename the local branch, configure the correct upstream, remove the obsolete remote branch, and verify the result**. This makes future `git push` and `git pull` operations work with the intended branch.</md></sn>
   <config>
     <tags>#branch rename mismatch issue</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 20 2026 14:19:01 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 20 2026 14:19:14 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-95Lfk06Etd</id>
     <duration></duration>
   </config>
