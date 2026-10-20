@@ -1,10 +1,65 @@
 
-  <sn></sn>
+  <sn><md>#### Git `bring` 
+
+sometimes we have to restore some folder or files or other branch.In this case the command is
+
+```bash
+git restore --soruce=branch -- path/
+```
+
+**Alias**
+```bash
+git config --global alias.bring '!f() { src="$1"; shift; git restore --source="$src" -- "$@"; }; f'
+```
++++ read
+- Aliases with `!` run from the repository’s top-level directory, not your current subfolder. So use paths relative to the repo root (e.g. App/), or you’ll hit “pathspec did not match” when running it from inside a subdirectory.
+- `src=$1` store first argument
+- `sift` remove the first argument
+- "$@" holds what’s left
++++
+
+##### Explanation
+
+```bash
+git bring main App/ Config/file.php
+# $1 = main
+# after shift: "$@" = App/ Config/file.php
+
+# so this :
+git restore --source="$src" -- "$@"
+
+# becomes
+git restore --source=main -- App/ Config/file.php
+
+```
+
++++ **Why the quotes matter**
+
+The quotes keep each argument intact, even if it contains spaces. If you ran:
+
+```bash
+git bring main "My Folder/" App/
+```
+
+then `"$@"` expands to two arguments: `My Folder/` and `App/`. Without the quotes, the shell would split `My Folder/` into `My` and `Folder/`, which breaks.
+
+**Related variables**
+
+| Variable | Meaning |
+|---|---|
+| `$1`, `$2`, ... | The first, second, ... argument |
+| `$@` | All arguments, kept as separate words (use as `"$@"`) |
+| `$*` | All arguments, but `"$*"` joins them into one single string |
+| `$#` | The number of arguments |
+
+Rule of thumb: when you want to pass along "all the arguments" to another command, use `"$@"` with the quotes.
+
++++</md></sn>
   <config>
     <tags>#aliases</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Tue Oct 20 2026 11:21:53 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Tue Oct 20 2026 11:22:57 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-TrOK3o55s4</id>
     <duration></duration>
   </config>
