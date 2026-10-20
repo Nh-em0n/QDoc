@@ -1,5 +1,30 @@
 
-  <sn><md>#### Git `bring` 
+  
+  <config>
+    <tags>#aliases</tags>
+    <thumbnail></thumbnail>
+    <heading></heading>
+    <udate>Tue Oct 20 2026 12:25:19 GMT+0600 (Bangladesh Standard Time)</udate>
+    <id>article-TrOK3o55s4</id>
+    <duration></duration>
+  </config>
+<sn><md>### Useful aliases
+
+```
+git config --global alias.changed "status -s"
+git config --global alias.past "log --pretty=format:"%C(magenta)%h%C(reset): %s - %C(blue)%cr%C(reset)"
+git config --global alias.hist "log --pretty=format:"%C(magenta)%h%C(reset): %s - %C(blue)%cr%C(reset)"
+git config --global alias.put "commit -m"
+
+git config --global alias.br branch
+git config --global alias.now "branch --show-current"
+git config --global alias.home "switch main"
+
+git config --global alias.delta '!f() { br="$1"; shift; git diff --name-status "$br" -- "$@"; }; f'
+git config --global alias.bring '!f() { src="$1"; shift; git restore --source="$src" -- "$@"; }; f'
+
+
+```</md></sn><sn><md>#### Git `bring` 
 
 sometimes we have to restore some folder or files or other branch.In this case the command is
 
@@ -54,12 +79,48 @@ then `"$@"` expands to two arguments: `My Folder/` and `App/`. Without the quote
 
 Rule of thumb: when you want to pass along "all the arguments" to another command, use `"$@"` with the quotes.
 
-+++</md></sn>
-  <config>
-    <tags>#aliases</tags>
-    <thumbnail></thumbnail>
-    <heading></heading>
-    <udate>Tue Oct 20 2026 11:22:57 GMT+0600 (Bangladesh Standard Time)</udate>
-    <id>article-TrOK3o55s4</id>
-    <duration></duration>
-  </config>
++++</md></sn><sn><md>#### .gitconfig
+
+last saved git config.
+
+**how to open**
+
+Go to terminal and type these command
+
+```
+subl ~/.gitconfig
+# if sublime is not installed then
+sudo nano .gifconfig
+```
+
+
+`.gitconfig`
+```text
+[user]
+	name = em0n
+	email = nazmulhossan2043@gmail.com
+[alias]
+	# basic things
+	changed = status -s	
+	past = log --pretty=format:\"%C(magenta)%h%C(reset): %s - %C(blue)%cr%C(reset)\"
+	hist = log --pretty=format:\"%C(magenta)%h%C(reset): %s - %C(blue)%cr%C(reset)\"	
+	put = commit -m	
+    # Undoing and cleaning
+    unstage   = restore --staged --
+    discard   = restore --	
+	# branch related	
+	br = branch	
+	now = branch --show-current
+	home = switch main
+	# delta and pull from other branch
+	delta = "!f() { br=\"$1\"; shift; git diff --name-status \"$br\" -- \"$@\"; }; f"
+	bring = "!f() { src=\"$1\"; shift; git restore --source=\"$src\" -- \"$@\"; }; f"
+	# others
+	aliases = config --get-regexp ^alias\\.
+[credential]
+	helper = store
+[diff]
+	tool = smerge
+[difftool "smerge"]
+	cmd = smerge \"$LOCAL\" \"$REMOTE\"
+```</md></sn>
