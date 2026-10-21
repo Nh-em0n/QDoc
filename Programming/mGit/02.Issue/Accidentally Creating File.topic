@@ -1,10 +1,48 @@
 
-  <sn></sn>
+  <sn><md>### Accidentaly created file
+
+If you accidentally created `update.md`, choose the command based on its current Git state.
+
+Check its status first:
+
+```
+git status --short update.md
+
+- `?? update.md` — untracked file.
+- `A  update.md` — staged addition.
+- ` M update.md` — modified tracked file.
+```
+
+---
+
+**Now**
+
+```
+# 1. If update.md is staged but not committed
+git rm --cached update.md
+
+# 2. If you want to remove it from Git and your computer
+git rm update.md
+
+# 3. If it is untracked (not staged)
+rm update.md
+```
+
+---
+
+If you want to keep `update.md` on your computer but remove it from Git's staging area:
+
+```
+git restore --staged update.md
+```
+
+This unstages the file without deleting it.
+</md></sn>
   <config>
     <tags>#accidentally creating file</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 21 2026 19:55:09 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 21 2026 19:55:27 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-rv1s0dYS70</id>
     <duration></duration>
   </config>
