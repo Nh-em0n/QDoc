@@ -7,6 +7,8 @@
 
 ```
 git <command> <pathspec> ':(exclude)<path>'
+#or
+git command pathspec ':!path'
 ```
 
 ---
@@ -15,16 +17,16 @@ git <command> <pathspec> ':(exclude)<path>'
 
 ```
 # Add all files except auth/
-git add . ':(exclude)auth/'
+git add . ':!auth/'
 
 # Show changes except auth/
-git status -- . ':(exclude)auth/'
+git status -- . ':!auth/'
 
 # List tracked files except those in auth/
-git ls-files -- . ':(exclude)auth/'
+git ls-files -- . ':!auth/'
 
 # Add all files except auth/ and config.php
-git add . ':(exclude)auth/' ':(exclude)config.php'
+git add . ':!auth/' ':(exclude)config.php'
 ```
 
 ---
@@ -33,10 +35,10 @@ git add . ':(exclude)auth/' ':(exclude)config.php'
 
 | Pattern                   | Meaning                                            |
 | ------------------------- | -------------------------------------------------- |
-| `:(exclude)auth/`         | Exclude the `auth/` directory                      |
-| `:(exclude)config.php`    | Exclude `config.php`                               |
-| `:(exclude)*.log`         | Exclude `.log` files                               |
-| `:(exclude)temp/*`        | Exclude files directly inside `temp/`              |
+| `:!auth/`         | Exclude the `auth/` directory                      |
+| `:!config.php`    | Exclude `config.php`                               |
+| `:!*.log`         | Exclude `.log` files                               |
+| `:!temp/*`        | Exclude files directly inside `temp/`              |
 | `:(exclude,glob)**/*.log` | Exclude `.log` files throughout the directory tree |
 | `:(top,exclude)auth/`     | Exclude the root-level `auth/` directory           |
 
@@ -59,7 +61,7 @@ QDoc-Dev/
 Running:
 
 ```
-git add . ':(exclude)auth/'
+git add . ':!auth/'
 ```
 
 stages matching files from `App/`, `content/`, `layout/`, and the root, but excludes `auth/`.
@@ -69,7 +71,7 @@ stages matching files from `App/`, `content/`, `layout/`, and the root, but excl
     <tags>#19.exclude option in git command</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 21 2026 19:14:20 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 21 2026 21:50:40 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-oBmJxmGfQ3</id>
     <duration></duration>
   </config>
