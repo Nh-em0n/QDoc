@@ -1,10 +1,75 @@
 
-  <sn></sn>
+  <sn><md>### Exclude in Git
+
+`:(exclude)` is a Git `pathspec exclusion pattern`. It tells Git to exclude the `auth/` directory from the paths matched by a command.
+
+**Syntax**
+
+```
+git <command> <pathspec> ':(exclude)<path>'
+```
+
+---
+
+#### Examples
+
+```
+# Add all files except auth/
+git add . ':(exclude)auth/'
+
+# Show changes except auth/
+git status -- . ':(exclude)auth/'
+
+# List tracked files except those in auth/
+git ls-files -- . ':(exclude)auth/'
+
+# Add all files except auth/ and config.php
+git add . ':(exclude)auth/' ':(exclude)config.php'
+```
+
+---
+
+#### Common pathspec patterns
+
+| Pattern                   | Meaning                                            |
+| ------------------------- | -------------------------------------------------- |
+| `:(exclude)auth/`         | Exclude the `auth/` directory                      |
+| `:(exclude)config.php`    | Exclude `config.php`                               |
+| `:(exclude)*.log`         | Exclude `.log` files                               |
+| `:(exclude)temp/*`        | Exclude files directly inside `temp/`              |
+| `:(exclude,glob)**/*.log` | Exclude `.log` files throughout the directory tree |
+| `:(top,exclude)auth/`     | Exclude the root-level `auth/` directory           |
+
+---
+
+#### How it works
+
+Suppose your project looks like this:
+
+```
+QDoc-Dev/
+├── App/
+├── auth/
+├── content/
+├── layout/
+├── config.php
+└── index.php
+```
+
+Running:
+
+```
+git add . ':(exclude)auth/'
+```
+
+stages matching files from `App/`, `content/`, `layout/`, and the root, but excludes `auth/`.
+
+&gt; Important: This exclusion applies only to that command. It does not permanently ignore `auth/`, remove previously staged files, or stop Git from tracking files already committed.</path></pathspec></command></md></sn>
   <config>
     <tags>#19.exclude option in git command</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Oct 21 2026 19:06:30 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Oct 21 2026 19:14:20 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-oBmJxmGfQ3</id>
     <duration></duration>
   </config>
