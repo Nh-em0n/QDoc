@@ -1,10 +1,62 @@
 
-  <sn></sn>
+  <sn><md>### CalVer
+
+CalVer (Calendar Versioning) is a versioning convention that uses the release date as the primary version identifier, rather than arbitrary or incrementing numbers. The core idea is to let the version number directly reflect **when** the software was released, making recency and support timelines immediately visible.
+
+---
+
+
+#### Core Components and Tokens
+
+CalVer defines a set of standard tokens that you combine to build a version scheme. The most common ones are:
+
+*   **YYYY**: Full year (e.g., 2026).
+*   **YY**: Short year, relative to 2000 (e.g., 26).
+*   **0M**: Zero-padded month (e.g., 01–12).
+*   **0D**: Zero-padded day (e.g., 01–31).
+*   **MICRO**: A sequential number that increments within the chosen time period (used for multiple releases in the same day/month).
+
+---
+
+
+#### Common Scheme Examples
+
+There is no single "correct" CalVer format; projects choose a scheme that fits their release cadence. Here are some widely used patterns:
+
+*   **`YYYY.0M.MICRO` (or `YY.0M.MICRO`)**: A very common scheme for monthly releases. The `MICRO` segment resets to 0 at the start of each month. For example, `2026.10.0`, then `2026.10.1` if a second release is needed in October.
+*   **`YYYY.0M.0D`**: Used by projects that release on a daily or irregular basis, where the exact date is the most important piece of information.
+*   **`YYYY.MM` (Major.Minor)**: A simpler two-segment scheme. **Ubuntu** is a famous adopter, using `YY.0M` (e.g., `24.04` for April 2024). This pairs well with predictable support cycles, as users can calculate support end-of-life directly from the version number.
+
+
+---
+
+#### A Practical Python Implementation Example
+
+If you are using Python, the `calver-scm` tool illustrates how CalVer can be automated from Git history. Its default configuration uses a monthly mode:
+
+```toml
+# pyproject.toml
+[tool.calver-scm]
+mode       = "month"   # Options: "year" | "month" | "week" | "day"
+scheme     = "YYYY.0M" # Produces versions like 2026.10
+patch      = true      # Enables the MICRO segment (2026.10.0, 2026.10.1, etc.)
+```
+
+This configuration would generate versions such as `2026.10.0` for the first release in October 2026, and `2026.10.1` for a subsequent patch release in the same month.
+
+---
+
+#### When to Use CalVer (and When Not To)
+
+CalVer is particularly well-suited for projects where **release dates are the primary signal of change**. This includes operating systems (Ubuntu), large platforms (Apple OS 26), or projects with continuous delivery where every change is essentially a "minor" update anyway.
+
+However, CalVer **does not inherently communicate semantic compatibility** (breaking changes vs. features vs. fixes). If your users rely on version numbers to know whether an upgrade will break their integration, CalVer alone is insufficient; you would need to supplement it with changelogs or a separate compatibility policy. For libraries with strict API contracts, a semantic scheme is usually more appropriate.
+</md></sn>
   <config>
     <tags>#15.2.calver versioning</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Oct 25 2026 08:00:28 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Oct 25 2026 08:00:42 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-zRMtR9YtjX</id>
     <duration></duration>
   </config>
