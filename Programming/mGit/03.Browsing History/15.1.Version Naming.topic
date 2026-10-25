@@ -1,10 +1,71 @@
 
-  <sn></sn>
+  <sn><md>### Version Naming
+
+The most widely used standard is **Semantic Versioning (SemVer 2.0.0)**.
+
+**Format**
+
+```
+MAJOR.MINOR.PATCH[-PRERELEASE][+BUILD]
+```
+
+Example: `2.4.1-beta.3+20261025`
+
+| Part | Bump it when | Example |
+|---|---|---|
+| **MAJOR** | You make breaking changes that aren't backward compatible | `1.9.2` → `2.0.0` |
+| **MINOR** | You add features in a backward-compatible way | `2.3.5` → `2.4.0` |
+| **PATCH** | You make backward-compatible bug fixes only | `2.4.0` → `2.4.1` |
+
+Lower numbers reset to 0 when a higher one bumps. Numbers are never zero-padded (`1.02.0` is invalid).
+
+#### Pre-release labels
+
+A hyphen after the version marks it as a pre-release, which sorts *lower* than the final release. The labels below are convention, not part of the SemVer spec.
+
+- **alpha** (`1.0.0-alpha.1`): early and unstable, internal testing, features incomplete.
+- **beta** (`1.0.0-beta.2`): feature complete, being tested by a wider group, bugs expected.
+- **rc** (`1.0.0-rc.1`): release candidate. It ships as final unless a serious bug turns up.
+- **Stable release** (`1.0.0`): no suffix.
+
+The precedence order is:
+
+```
+1.0.0-alpha.1 &lt; 1.0.0-alpha.2 &lt; 1.0.0-beta.1 &lt; 1.0.0-rc.1 &lt; 1.0.0
+```
+
+Pre-release identifiers are compared piece by piece (split on dots). Numeric parts compare as numbers, so `beta.2 &lt; beta.11`, but text parts compare alphabetically. Always use a dot-separated number (`beta.2`, not `beta2`), or sorting can go wrong.
+
+#### Build metadata
+
+`+` adds build info such as `1.0.0+20261025` or `1.0.0+git.a1b2c3d`. It is ignored when comparing versions.
+
+#### Other rules
+
+- `0.y.z` means initial development. Anything can change, and the public API shouldn't be considered stable.
+- `1.0.0` marks the first stable public API.
+- A released version must never be modified. Any change, even a typo fix, gets a new version.
+- Git tags usually carry a `v` prefix (`v1.4.2`), but the version itself doesn't include it.
+
+#### Alternatives
+
+- **CalVer** (`2026.10.25` or `26.10.1`): date-based, used by Ubuntu (`24.04`), pip, and Black. It suits projects that release on a schedule rather than by API compatibility.
+- **Simple build numbers** (`1`, `2`, `3`): used by some apps, browsers, and internal tools.
+- **Ecosystem variants:** Python's PEP 440 writes pre-releases as `1.0.0b1` or `1.0.0rc1`, while npm and Cargo follow SemVer's hyphen style.
+
+#### Quick example timeline
+
+```
+0.1.0 → 0.2.0 → 1.0.0-beta.1 → 1.0.0-beta.2 → 1.0.0-rc.1 → 1.0.0
+→ 1.0.1 (bug fix) → 1.1.0 (new feature) → 2.0.0-beta.1 → 2.0.0 (breaking change)
+```
+
+For a typical website or app, SemVer with `-beta.N` / `-rc.N` suffixes is the safest default. If you tell me what you're versioning (website, library, API), I can suggest which scheme fits best.</md></sn>
   <config>
     <tags>#15.1.version naming</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Oct 25 2026 07:48:21 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Oct 25 2026 07:49:26 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-c6jms6md4i</id>
     <duration></duration>
   </config>
