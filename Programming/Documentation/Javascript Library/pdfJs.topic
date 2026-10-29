@@ -8,7 +8,7 @@ A practical guide to **Mozilla's** `PDF.js` library: setup, every commonly used 
     <tags>#pdfjs</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 29 2026 14:47:56 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 29 2026 15:00:46 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-WLV1JEby1E</id>
     <duration></duration>
   </config>
@@ -311,4 +311,52 @@ Returns bytes of the PDF **including** changes made through annotation or form e
 ```js
 const bytes = await pdf.saveDocument();
 ```
-</md></sn>
+</md></sn><sn><md>### Other document methods
+
+| Method | Returns |
+| --- | --- |
+| `getJavaScript()` | Array of document-level JavaScript strings or `null` |
+| `getFieldObjects()` | Form field info by name or `null` |
+| `hasJSActions()` | `true` if the document or fields have JS actions |
+| `getOptionalContentConfig()` | Layers (OCG) configuration for toggling layer visibility |
+| `getPageMode()` / `getViewerPreferences()` / `getOpenAction()` | Initial view hints stored in the file |
+| `getMarkInfo()` | Tagged-PDF information for accessibility |
+| `getDownloadInfo()` | `{ length }`, available once the data is loaded |
+| `getStats()` | Internal stream and font statistics |
+| `cleanup()` | Frees cached resources (call after rendering many pages) |
+| `destroy()` | Terminates the worker for this document; call when closing it |
+
+```js
+// Closing a document correctly
+await pdf.cleanup();
+await pdf.destroy();
+```
+</md></sn><sn><md>### PDFPageProxy 
+
+A single page
+
+**Properties**
+
+| Property | Description |
+| --- | --- |
+| `pageNumber` | 1-based page number |
+| `rotate` | Intrinsic rotation (0, 90, 180, 270) |
+| `view` | `[xMin, yMin, xMax, yMax]` page box in PDF points (1 pt = 1/72 inch) |
+| `userUnit` | Scale for the page size unit (normally 1) |
+| `ref` | Object reference of the page |
+</md></sn><sn><md>### `getViewport({ scale, rotation, offsetX, offsetY, dontFlip })`
+
+Creates a `PageViewport`: the mapping between PDF coordinates and screen pixels. `scale: 1` means 72 DPI, so `1.5` gives about 108 DPI. `rotation` is **added** to the page's own rotation.
+
+![view_port_diagram](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/Documentation/Javascript%20Library/assets/view_port_diagram.jpeg)
+
+
+```js
+const vp = page.getViewport({ scale: 1 });
+const vpRotated = page.getViewport({ scale: 1, rotation: (page.rotate + 90) % 360 });
+
+// Fit to container width
+const base = page.getViewport({ scale: 1 });
+const fitWidth = page.getViewport({ scale: container.clientWidth / base.width });
+```
+</md></sn><sn></sn>
