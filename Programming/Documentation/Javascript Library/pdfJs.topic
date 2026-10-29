@@ -8,7 +8,7 @@ A practical guide to **Mozilla's** `PDF.js` library: setup, every commonly used 
     <tags>#pdfjs</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 29 2026 14:39:50 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 29 2026 14:47:56 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-WLV1JEby1E</id>
     <duration></duration>
   </config>
@@ -195,5 +195,120 @@ The whole document,Obtained from `await task.promise`.
 console.log(`Pages: ${pdf.numPages}`);
 const key = 'lastPage:' + pdf.fingerprints[0];
 localStorage.setItem(key, 5);
+```
+</md></sn><sn><md>#### `getPage(pageNumber)`
+
+Returns a `PDFPageProxy`. Page numbers start at **1**. Throws if out of range.
+
+```js
+const page = await pdf.getPage(3);
+```
+
+#### `getPageIndex(ref)` and `getDestination(id)`
+
+Used to resolve internal links. A destination is an array like `[ref, { name: 'XYZ' }, left, top, zoom]`; `getPageIndex` turns `ref` into a zero-based page index.
+
+```js
+async function goToNamedDest(name) {
+  const dest = await pdf.getDestination(name);   // array or null
+  if (!dest) return;
+  const pageIndex = await pdf.getPageIndex(dest[0]);
+  renderPage(pageIndex + 1);
+}
+```
+
+#### `getDestinations()`
+
+Returns an object of all named destinations: `{ name: destArray }`.
+
+</md></sn><sn><md>### `getOutline()`
+
+Returns the table of contents (bookmarks) as a tree, or `null` if none exists. Each item has `title`, `dest` (name or array), `url`, `items` (children), `bold`, `italic`, `color`.
+
+```js
+async function buildToc(pdf, container) {
+  const outline = await pdf.getOutline();
+  if (!outline) { container.textContent = 'No outline'; return; }
+
+  const makeList = (items) =&gt; {
+    const ul = document.createElement('ul');
+    for (const item of items) {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.textContent = item.title;
+      a.href = '#';
+      a.onclick = async (e) =&gt; {
+        e.preventDefault();
+        let dest = item.dest;
+        if (typeof dest === 'string') dest = await pdf.getDestination(dest);
+        if (!dest) return;
+        const idx = await pdf.getPageIndex(dest[0]);
+        renderPage(idx + 1);
+      };
+      li.append(a);
+      if (item.items.length) li.append(makeList(item.items));
+      ul.append(li);
+    }
+    return ul;
+  };
+  container.append(makeList(outline));
+}
+```
+</md></sn><sn><md>#### `getMetadata()`
+
+Returns `{ info, metadata, contentDispositionFilename, contentLength }`.
+
+```js
+const { info, metadata } = await pdf.getMetadata();
+console.log(info.Title, info.Author, info.Producer, info.CreationDate);
+console.log(info.PDFFormatVersion, info.IsEncrypted);
+console.log(metadata?.get('dc:title'));   // XMP metadata, may be null
+```
+
+#### `getPageLabels()`
+
+Returns an array of custom labels (for example `['i', 'ii', '1', '2']`) or `null`.
+
+#### `getPermissions()`
+
+Returns an array of permission flags or `null`. Compare with `pdfjsLib.PermissionFlag`.
+
+```js
+const perms = await pdf.getPermissions();
+if (perms &amp;&amp; !perms.includes(pdfjsLib.PermissionFlag.PRINT)) {
+  printBtn.disabled = true;
+}
+```
+
+#### `getAttachments()`
+
+Returns embedded files: `{ filename: { filename, content: Uint8Array } }` or `null`.
+
+```js
+const files = await pdf.getAttachments();
+for (const f of Object.values(files ?? {})) {
+  const blob = new Blob([f.content]);
+  const a = Object.assign(document.createElement('a'), {
+    href: URL.createObjectURL(blob), download: f.filename,
+  });
+  a.click();
+}
+```
+
+#### `getData()`
+
+Returns the original PDF bytes as a `Uint8Array`, which is useful for a Download button when the PDF came from a file input.
+
+```js
+const bytes = await pdf.getData();
+const blob = new Blob([bytes], { type: 'application/pdf' });
+```
+
+#### `saveDocument()`
+
+Returns bytes of the PDF **including** changes made through annotation or form editing (via `annotationStorage`). Use it instead of `getData()` when the user filled forms or added annotations.
+
+```js
+const bytes = await pdf.saveDocument();
 ```
 </md></sn>
