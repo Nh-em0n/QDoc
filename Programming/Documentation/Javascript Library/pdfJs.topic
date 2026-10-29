@@ -8,7 +8,7 @@ A practical guide to **Mozilla's** `PDF.js` library: setup, every commonly used 
     <tags>#pdfjs</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 29 2026 13:35:10 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 29 2026 13:39:51 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-WLV1JEby1E</id>
     <duration></duration>
   </config>
@@ -58,4 +58,63 @@ The typical flow is: **load document → get page → create viewport → render
   import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url'; // Vite syntax
   pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl;
   ```
+</md></sn><sn><md>### Key files in `pdfjs-dist/build`
+
+| File | Purpose |
+| --- | --- |
+| `pdf.mjs` / `pdf.min.mjs` | Main display-layer API |
+| `pdf.worker.mjs` / `pdf.worker.min.mjs` | Parser running in the worker |
+| `web/pdf_viewer.mjs` + `pdf_viewer.css` | Prebuilt viewer components and styles |
+| `cmaps/` | Character maps for CJK and special fonts |
+| `standard_fonts/` | Fallback fonts for PDFs that do not embed fonts |
+</md></sn><sn><md>### Quick Start: Render Page 1
+
+```js
+const loadingTask = pdfjsLib.getDocument('sample.pdf');
+const pdf = await loadingTask.promise;           // PDFDocumentProxy
+const page = await pdf.getPage(1);               // PDFPageProxy (1-based!)
+
+const viewport = page.getViewport({ scale: 1.5 });
+const canvas = document.getElementById('pdf-canvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = viewport.width;
+canvas.height = viewport.height;
+
+await page.render({ canvasContext: ctx, viewport }).promise;
+```
+
+Three objects matter most: 
+- **LoadingTask** (progress and cancel), 
+- **PDFDocumentProxy** (whole file), 
+- **PDFPageProxy** (one page).
+
+</md></sn><sn><md>### Loading: `getDocument(src)`
+
+`getDocument` starts loading and returns a **PDFDocumentLoadingTask**. `src` is either a string URL or a parameters object.
+
+**Loading from different sources**
+
+```js
+// 1. URL
+pdfjsLib.getDocument('https://example.com/file.pdf');
+
+// 2. Object with options
+pdfjsLib.getDocument({ url: 'file.pdf', withCredentials: true });
+
+// 3. Binary data (Uint8Array / ArrayBuffer), e.g. from a file input
+input.addEventListener('change', async (e) =&gt; {
+  const file = e.target.files[0];
+  const data = new Uint8Array(await file.arrayBuffer());
+  const pdf = await pdfjsLib.getDocument({ data }).promise;
+});
+
+// 4. Base64 string
+const raw = atob(base64String);
+const bytes = Uint8Array.from(raw, (c) =&gt; c.charCodeAt(0));
+pdfjsLib.getDocument({ data: bytes });
+```
+
+Note: PDF.js may transfer the buffer to the worker, which detaches it. Pass `data.slice()` if you need to reuse the original array.
+
 </md></sn>
