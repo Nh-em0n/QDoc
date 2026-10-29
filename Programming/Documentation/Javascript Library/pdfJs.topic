@@ -8,7 +8,7 @@ A practical guide to **Mozilla's** `PDF.js` library: setup, every commonly used 
     <tags>#pdfjs</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 29 2026 15:14:24 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 29 2026 15:25:56 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-WLV1JEby1E</id>
     <duration></duration>
   </config>
@@ -614,4 +614,152 @@ If you only need working external links and do not want the full layer, the manu
 console.log(pdfjsLib.version);                      // '4.10.38'
 console.log(pdfjsLib.Util.normalizeRect([100, 50, 10, 5]));  // [10, 5, 100, 50]
 ```
-</md></sn>
+</md></sn><sn><md>### The Prebuilt Viewer Components
+
+When you want a complete viewer without writing everything yourself, use `pdf_viewer.mjs`:
+
+| Class | Role |
+| --- | --- |
+| `EventBus` | Publish/subscribe bus all components share (`pagesinit`, `pagechanging`, `scalechanging`, `updatefindmatchescount`...) |
+| `PDFLinkService` | Handles internal/external links and navigation |
+| `PDFFindController` | Search with highlighting, whole word, case sensitivity |
+| `PDFViewer` | Manages page rendering, virtual scrolling, zoom, rotation |
+| `PDFHistory` | Browser history integration |
+| `PDFThumbnailViewer` | Sidebar thumbnails |
+
+```js
+import * as pdfjsLib from 'pdfjs-dist';
+import { EventBus, PDFViewer, PDFLinkService, PDFFindController } from 'pdfjs-dist/web/pdf_viewer.mjs';
+import 'pdfjs-dist/web/pdf_viewer.css';
+
+const container = document.getElementById('viewerContainer'); // must be position:absolute with overflow:auto
+const eventBus = new EventBus();
+const linkService = new PDFLinkService({ eventBus });
+const findController = new PDFFindController({ eventBus, linkService });
+
+const viewer = new PDFViewer({
+  container,
+  eventBus,
+  linkService,
+  findController,
+});
+linkService.setViewer(viewer);
+
+eventBus.on('pagesinit', () =&gt; {
+  viewer.currentScaleValue = 'page-width';   // 'auto' | 'page-fit' | 'page-actual' | number
+});
+
+const pdf = await pdfjsLib.getDocument('sample.pdf').promise;
+viewer.setDocument(pdf);
+linkService.setDocument(pdf, null);
+
+// Controls
+viewer.currentPageNumber = 4;       // go to page
+viewer.currentScale = 1.25;         // zoom
+viewer.pagesRotation = 90;          // rotate
+viewer.increaseScale();
+viewer.decreaseScale();
+
+// Search
+eventBus.dispatch('find', {
+  query: 'invoice', caseSensitive: false, highlightAll: true,
+  phraseSearch: true, findPrevious: false,
+});
+```
+</md></sn><sn><md>### Complete Mini Viewer
+
+```html
+
+
+
+  <input type="file" id="file" accept="application/pdf">
+  <button id="prev">Prev</button>
+  <button id="next">Next</button>
+  <span id="info"></span>
+  <button id="zoomOut">-</button>
+  <button id="zoomIn">+</button>
+  <div><canvas id="canvas"></canvas></div>
+
+  
+
+
+```
+</md></sn><sn><md>### Error Handling
+
+The loading promise rejects with named exceptions:
+
+| `error.name` | Meaning |
+| --- | --- |
+| `InvalidPDFException` | File is corrupt or not a PDF |
+| `MissingPDFException` | URL not found (404) |
+| `UnexpectedResponseException` | Server returned an unexpected HTTP status |
+| `PasswordException` | Password needed or wrong (`error.code` 1 or 2) |
+| `AbortException` | Loading was cancelled with `destroy()` |
+| `RenderingCancelledException` | A render was cancelled with `cancel()` (normal, not a real error) |
+
+```js
+try {
+  const pdf = await pdfjsLib.getDocument(url).promise;
+} catch (err) {
+  switch (err.name) {
+    case 'MissingPDFException': alert('File not found.'); break;
+    case 'InvalidPDFException': alert('This is not a valid PDF.'); break;
+    case 'PasswordException': alert('Password required.'); break;
+    default: console.error(err);
+  }
+}
+```
+</md></sn><sn><md>### Performance Best Practices
+
+1. **Render only visible pages.** Use `IntersectionObserver` and render a page when it approaches the viewport; the prebuilt `PDFViewer` already does this.
+2. **Call `page.cleanup()`** after finishing with a page and `pdf.cleanup()` after bulk work, to free memory.
+3. **Cancel stale renders** when the user zooms or flips pages quickly.
+4. **Limit canvas size.** Browsers cap canvas area (roughly 16 to 268 megapixels depending on device). Clamp `scale * dpr` for huge pages.
+5. **Keep the worker.** Create the worker once; do not recreate it per document. Call `destroy()` on documents you are done with.
+6. **Use range requests.** Server must send `Accept-Ranges: bytes` and CORS headers exposing `Content-Range`, `Content-Length`, `Accept-Ranges`; then large files open instantly.
+7. **Render thumbnails small.** Use a low scale (0.2 to 0.3) and `intent: 'display'`.
+
+</md></sn><sn><md>### Troubleshooting
+
+| Problem | Cause and fix |
+| --- | --- |
+| *Setting up fake worker failed* | `workerSrc` is missing or points to a wrong file/version. Match worker and library versions exactly. |
+| CORS error on a remote PDF | The server must allow your origin (`Access-Control-Allow-Origin`). Otherwise fetch it through your own backend. |
+| Blurry canvas | Account for `devicePixelRatio` (section 6). |
+| Missing or garbled CJK/special characters | Set `cMapUrl` and `cMapPacked: true`. |
+| Wrong fonts when fonts are not embedded | Set `standardFontDataUrl` or `useSystemFonts: true`. |
+| *Cannot use the same canvas during multiple render() operations* | Cancel the previous `RenderTask` first. |
+| `getPage` throws *Invalid page request* | Page numbers are 1-based and must be within `1..numPages`. |
+| Text layer misaligned | `--scale-factor` CSS variable not set, or `pdf_viewer.css` is not loaded. |
+| Works locally but not from `file://` | Browsers block modules and workers on `file://`. Serve with a local server (`npx serve`). |
+| `Buffer is detached` | Data array was transferred to the worker. Pass a copy (`data.slice()`). |
+
+</md></sn><sn><md>### Cheat Sheet
+
+```js
+// Load
+const pdf = await pdfjsLib.getDocument(src).promise;
+
+// Info
+pdf.numPages;  await pdf.getMetadata();  await pdf.getOutline();
+
+// Page
+const page = await pdf.getPage(n);
+const vp = page.getViewport({ scale: 1.5, rotation: 0 });
+
+// Draw
+await page.render({ canvasContext: ctx, viewport: vp }).promise;
+
+// Text and links
+const text = await page.getTextContent();
+const annots = await page.getAnnotations();
+
+// Save and close
+const bytes = await pdf.saveDocument();
+page.cleanup();  await pdf.destroy();
+```
+</md></sn><sn><md>### Where to Go Next
+
+- Official API reference: the PDF.js documentation site (`mozilla.github.io/pdf.js`) lists every class and parameter for each version.
+- The `examples/` folder in the PDF.js GitHub repository contains minimal, complete samples (`learning`, `mobile-viewer`, `components`).
+- Good practice projects: a viewer with thumbnails and outline, a text-search page, a page extractor that exports a page as an image (`canvas.toBlob`), and a form-filling tool using `getAnnotations` plus `saveDocument`.</md></sn>
