@@ -1,10 +1,61 @@
 
-  <sn></sn>
+  <sn><md>### PDF.js Complete Documentation
+
+A practical guide to **Mozilla's** `PDF.js` library: setup, every commonly used function, and working examples.
+*Examples use `pdfjs-dist` 4.x (ES modules). Version 5.x is nearly identical; differences are noted where they matter. Always check the API docs for your exact version.*
+</md></sn>
   <config>
     <tags>#pdfjs</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 29 2026 13:28:30 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 29 2026 13:35:10 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-WLV1JEby1E</id>
     <duration></duration>
   </config>
+<sn><md>### What PDF.js Is
+
+PDF.js is a JavaScript library that parses and renders PDF files in the browser (and Node.js) without plugins. It has three layers:
+
+- **Core layer** (`pdf.worker`): parses the PDF binary format. Runs in a Web Worker so the UI never freezes.
+- **Display layer** (`pdf.mjs`): the public API you call (`getDocument`, `getPage`, `render`...). It talks to the worker for you.
+- **Viewer layer** (`pdf_viewer`): a ready-made UI (zoom, search, thumbnails, sidebar). Optional; you can build your own with the display layer.
+
+The typical flow is: **load document → get page → create viewport → render to canvas**, then optionally add a text layer (selectable text) and an annotation layer (links, forms).
+
+
+</md></sn><sn><md>### Installation and Setup
+
+- Option A: **CDN** (quickest)
+
+  ```html
+  <canvas id="pdf-canvas"></canvas>
+  
+  ```
+  +++ pdf.js
+  ```js
+  /**
+  * PDF.js library + worker.
+  * Parsing runs in a Web Worker so the UI stays responsive.
+  */
+  import * as pdfjsLib from "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.149/build/pdf.min.mjs";
+
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+  "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.149/build/pdf.worker.min.mjs";
+
+  export { pdfjsLib };
+
+  ```
+  +++
+
+- Option B: **npm**
+
+  ```bash
+  npm install pdfjs-dist
+  ```
+
+  ```js
+  import * as pdfjsLib from 'pdfjs-dist';
+  import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url'; // Vite syntax
+  pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl;
+  ```
+</md></sn>
