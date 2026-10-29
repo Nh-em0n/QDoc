@@ -8,7 +8,7 @@ A practical guide to **Mozilla's** `PDF.js` library: setup, every commonly used 
     <tags>#pdfjs</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 29 2026 13:39:51 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 29 2026 14:39:50 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-WLV1JEby1E</id>
     <duration></duration>
   </config>
@@ -117,4 +117,83 @@ pdfjsLib.getDocument({ data: bytes });
 
 Note: PDF.js may transfer the buffer to the worker, which detaches it. Pass `data.slice()` if you need to reuse the original array.
 
+</md></sn><sn><md>### Important parameters
+
+| Parameter | Type | Meaning |
+| --- | --- | --- |
+| `url` | string | Remote or relative URL |
+| `data` | TypedArray / ArrayBuffer / string | Raw PDF bytes |
+| `httpHeaders` | object | Custom request headers, e.g. `{ Authorization: 'Bearer x' }` |
+| `withCredentials` | boolean | Send cookies on cross-site requests |
+| `password` | string | Password for encrypted PDFs |
+| `rangeChunkSize` | number | Bytes per range request (default 65536) |
+| `disableRange` | boolean | Disable partial (range) loading |
+| `disableStream` | boolean | Disable streaming fetch |
+| `disableAutoFetch` | boolean | Load only pages that are needed, not the whole file in the background |
+| `cMapUrl` | string | Folder URL of `cmaps/` (needed for many CJK PDFs) |
+| `cMapPacked` | boolean | Set `true` when using the packed `.bcmap` files |
+| `standardFontDataUrl` | string | Folder URL of `standard_fonts/` |
+| `useSystemFonts` | boolean | Use locally installed fonts when fonts are not embedded |
+| `isEvalSupported` | boolean | Set `false` under strict CSP (no `eval`) |
+| `enableXfa` | boolean | Render XFA forms |
+| `verbosity` | number | Log level: `0` errors, `1` warnings, `5` infos |
+
+```js
+const task = pdfjsLib.getDocument({
+  url: 'big.pdf',
+  cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/cmaps/',
+  cMapPacked: true,
+  standardFontDataUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/standard_fonts/',
+  disableAutoFetch: true,
+  disableStream: true,
+});
+```
+</md></sn><sn><md>### PDFDocumentLoadingTask members
+
+| Member | Description |
+| --- | --- |
+| `promise` | Resolves to the `PDFDocumentProxy` |
+| `onProgress` | Callback `({ loaded, total }) =&gt; {}` |
+| `onPassword` | Callback `(updatePassword, reason) =&gt; {}` for encrypted files |
+| `destroy()` | Cancels loading and frees the worker resources |
+
+```js
+const task = pdfjsLib.getDocument('large.pdf');
+
+task.onProgress = ({ loaded, total }) =&gt; {
+  if (total) progressBar.value = (loaded / total) * 100;
+};
+
+const pdf = await task.promise;
+```
+</md></sn><sn><md>### Password-protected PDFs
+
+```js
+const task = pdfjsLib.getDocument('locked.pdf');
+
+task.onPassword = (updatePassword, reason) =&gt; {
+  // reason === pdfjsLib.PasswordResponses.NEED_PASSWORD (1) or INCORRECT_PASSWORD (2)
+  const pwd = prompt(reason === 2 ? 'Wrong password, try again:' : 'Enter password:');
+  updatePassword(pwd);
+};
+
+const pdf = await task.promise;
+```
+</md></sn><sn><md>### PDFDocumentProxy 
+
+The whole document,Obtained from `await task.promise`.
+
+**Properties**
+
+| Property | Description |
+| --- | --- |
+| `numPages` | Total page count |
+| `fingerprints` | Array of unique hashes, handy as a key for saving per-document state (last page, zoom) |
+| `loadingTask` | The task that created it |
+
+```js
+console.log(`Pages: ${pdf.numPages}`);
+const key = 'lastPage:' + pdf.fingerprints[0];
+localStorage.setItem(key, 5);
+```
 </md></sn>
