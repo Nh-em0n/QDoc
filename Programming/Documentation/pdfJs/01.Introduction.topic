@@ -1,10 +1,28 @@
 
-  <sn></sn>
+  <sn><md>### PDF.js Complete Documentation
+
+A practical guide to **Mozilla's** `PDF.js` library: setup, every commonly used function, and working examples.
+
+*Examples use `pdfjs-dist` 4.x (ES modules). Version 5.x is nearly identical; differences are noted where they matter. Always check the API docs for your exact version.*
+
+</md></sn>
   <config>
     <tags>#01.introduction</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 29 2026 13:24:54 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 29 2026 13:27:38 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-dnA76dPJpo</id>
     <duration></duration>
   </config>
+<sn><md>### What PDF.js Is
+
+PDF.js is a JavaScript library that parses and renders PDF files in the browser (and Node.js) without plugins. It has three layers:
+
+- **Core layer** (`pdf.worker`): parses the PDF binary format. Runs in a Web Worker so the UI never freezes.
+- **Display layer** (`pdf.mjs`): the public API you call (`getDocument`, `getPage`, `render`...). It talks to the worker for you.
+- **Viewer layer** (`pdf_viewer`): a ready-made UI (zoom, search, thumbnails, sidebar). Optional; you can build your own with the display layer.
+
+The typical flow is: **load document → get page → create viewport → render to canvas**, then optionally add a text layer (selectable text) and an annotation layer (links, forms).
+
+
+</md></sn>
