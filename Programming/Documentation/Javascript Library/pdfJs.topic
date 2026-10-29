@@ -8,7 +8,7 @@ A practical guide to **Mozilla's** `PDF.js` library: setup, every commonly used 
     <tags>#pdfjs</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Thu Oct 29 2026 15:00:46 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Thu Oct 29 2026 15:14:24 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-WLV1JEby1E</id>
     <duration></duration>
   </config>
@@ -359,4 +359,259 @@ const vpRotated = page.getViewport({ scale: 1, rotation: (page.rotate + 90) % 36
 const base = page.getViewport({ scale: 1 });
 const fitWidth = page.getViewport({ scale: container.clientWidth / base.width });
 ```
-</md></sn><sn></sn>
+</md></sn><sn><md>### `render(params)`
+
+Draws the page and returns a **RenderTask**.
+
+| Parameter | Description |
+| --- | --- |
+| `canvasContext` | 2D context to draw into (v5 also accepts `canvas`) |
+| `viewport` | Result of `getViewport()` |
+| `transform` | `[a, b, c, d, e, f]` extra matrix, used for HiDPI |
+| `background` | CSS color for the page background (default white); `'rgba(0,0,0,0)'` for transparent |
+| `intent` | `'display'` (default) or `'print'` |
+| `annotationMode` | `pdfjsLib.AnnotationMode.DISABLE`, `ENABLE`, `ENABLE_FORMS`, `ENABLE_STORAGE` |
+| `optionalContentConfigPromise` | Custom layer visibility |
+
+RenderTask members: `promise` and `cancel()`.
+
+**Sharp rendering on HiDPI / Retina screens:**
+
+```js
+async function renderCrisp(page, canvas, scale) {
+  const dpr = window.devicePixelRatio || 1;
+  const viewport = page.getViewport({ scale });
+
+  canvas.width = Math.floor(viewport.width * dpr);
+  canvas.height = Math.floor(viewport.height * dpr);
+  canvas.style.width = Math.floor(viewport.width) + 'px';
+  canvas.style.height = Math.floor(viewport.height) + 'px';
+
+  const transform = dpr !== 1 ? [dpr, 0, 0, dpr, 0, 0] : null;
+  await page.render({
+    canvasContext: canvas.getContext('2d'),
+    viewport,
+    transform,
+  }).promise;
+}
+```
+
+**Avoiding render collisions (zoom spam):** a canvas can only have one active render. Cancel the previous one first.
+
+```js
+let currentTask = null;
+
+async function safeRender(page, canvas, scale) {
+  if (currentTask) {
+    currentTask.cancel();
+    currentTask = null;
+  }
+  const viewport = page.getViewport({ scale });
+  canvas.width = viewport.width;
+  canvas.height = viewport.height;
+  currentTask = page.render({ canvasContext: canvas.getContext('2d'), viewport });
+  try {
+    await currentTask.promise;
+  } catch (err) {
+    if (err.name !== 'RenderingCancelledException') throw err;
+  } finally {
+    currentTask = null;
+  }
+}
+```
+</md></sn><sn><md>### `getTextContent(params)`
+
+Returns `{ items, styles }`. Each item in `items` is a text run with `str`, `transform` (matrix: `[scaleX, skewY, skewX, scaleY, x, y]`), `width`, `height`, `dir`, `fontName`, `hasEOL`. Useful params: `includeMarkedContent`, `disableNormalization`.
+
+```js
+// Extract all text from a document
+async function extractAllText(pdf) {
+  let out = '';
+  for (let i = 1; i &lt;= pdf.numPages; i++) {
+    const page = await pdf.getPage(i);
+    const content = await page.getTextContent();
+    out += content.items.map((it) =&gt; it.str + (it.hasEOL ? '\n' : '')).join('') + '\n\n';
+    page.cleanup();
+  }
+  return out;
+}
+```
+
+**Simple search across pages:**
+
+```js
+async function searchPdf(pdf, term) {
+  const hits = [];
+  const needle = term.toLowerCase();
+  for (let i = 1; i &lt;= pdf.numPages; i++) {
+    const page = await pdf.getPage(i);
+    const { items } = await page.getTextContent();
+    const text = items.map((it) =&gt; it.str).join(' ').toLowerCase();
+    let idx = text.indexOf(needle);
+    while (idx !== -1) {
+      hits.push({ page: i, snippet: text.slice(Math.max(0, idx - 30), idx + 50) });
+      idx = text.indexOf(needle, idx + needle.length);
+    }
+  }
+  return hits;
+}
+```
+</md></sn><sn><md>### `streamTextContent(params)`
+
+Same data as `getTextContent` but as a `ReadableStream`. This is what `TextLayer` consumes internally; use it for very large pages.
+
+### `getAnnotations({ intent })`
+
+Returns an array of annotation objects: links, form widgets, highlights, notes. Common fields: `subtype`, `rect`, `url`, `dest`, `contents`, `fieldType`, `fieldName`, `fieldValue`, `color`.
+
+```js
+const annots = await page.getAnnotations();
+const links = annots.filter((a) =&gt; a.subtype === 'Link' &amp;&amp; a.url);
+console.log(links.map((l) =&gt; l.url));
+
+const fields = annots.filter((a) =&gt; a.subtype === 'Widget');
+fields.forEach((f) =&gt; console.log(f.fieldType, f.fieldName, f.fieldValue));
+```
+</md></sn><sn><md>### `getOperatorList()`
+
+Returns low-level drawing operations (`{ fnArray, argsArray }`). Compare `fnArray` values with `pdfjsLib.OPS`. Useful to detect and extract images.
+
+```js
+const ops = await page.getOperatorList();
+const imageOps = ops.fnArray.filter((fn) =&gt; fn === pdfjsLib.OPS.paintImageXObject).length;
+console.log(`Images on page: ${imageOps}`);
+```
+</md></sn><sn><md>### Other page methods
+
+| Method | Description |
+| --- | --- |
+| `getStructTree()` | Tagged-PDF structure (headings, paragraphs) for accessibility |
+| `getXfa()` | XFA form tree if the page is XFA |
+| `cleanup(resetStats?)` | Releases page resources; call after you finish with a page |
+</md></sn><sn><md>## PageViewport (coordinates and scaling)
+
+| Member | Description |
+| --- | --- |
+| `width`, `height` | Size in CSS pixels at the chosen scale |
+| `scale`, `rotation` | The values used to create it |
+| `viewBox` | The page's box in PDF space |
+| `transform` | The 6-number matrix mapping PDF to viewport |
+| `convertToViewportPoint(x, y)` | PDF point → `[x, y]` on screen |
+| `convertToPdfPoint(x, y)` | Screen point → PDF point |
+| `convertToViewportRectangle([x1, y1, x2, y2])` | PDF rectangle → screen rectangle |
+| `clone({ scale, rotation, ... })` | New viewport with overrides |
+
+**Example: click on the canvas and get PDF coordinates**
+
+```js
+canvas.addEventListener('click', (e) =&gt; {
+  const r = canvas.getBoundingClientRect();
+  const x = e.clientX - r.left;
+  const y = e.clientY - r.top;
+  const [pdfX, pdfY] = viewport.convertToPdfPoint(x, y);
+  console.log('PDF coordinates:', pdfX, pdfY);
+});
+```
+
+**Example: draw a box over a link annotation**
+
+```js
+for (const a of annots.filter((a) =&gt; a.subtype === 'Link')) {
+  const [x1, y1, x2, y2] = viewport.convertToViewportRectangle(a.rect);
+  const box = document.createElement('div');
+  Object.assign(box.style, {
+    position: 'absolute',
+    left: Math.min(x1, x2) + 'px',
+    top: Math.min(y1, y2) + 'px',
+    width: Math.abs(x2 - x1) + 'px',
+    height: Math.abs(y2 - y1) + 'px',
+    outline: '1px solid red',
+  });
+  pageWrapper.append(box);
+}
+```
+</md></sn><sn><md>### Text Layer 
+
+selectable, searchable text
+
+The canvas is only an image. To let users select and copy text, overlay a transparent layer of positioned `<span>` elements. Use the `TextLayer` class (exported from the main module in v4+) together with `pdf_viewer.css` (or at least the `.textLayer` rules).
+
+```html
+<div id="page" style="position:relative">
+  <canvas id="canvas"></canvas>
+  <div id="text-layer" class="textLayer"></div>
+</div>
+```
+
+```js
+async function renderWithText(page, scale) {
+  const viewport = page.getViewport({ scale });
+  const canvas = document.getElementById('canvas');
+  canvas.width = viewport.width;
+  canvas.height = viewport.height;
+  await page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
+
+  const textDiv = document.getElementById('text-layer');
+  textDiv.replaceChildren();
+  textDiv.style.setProperty('--scale-factor', viewport.scale);   // required by the CSS
+  textDiv.style.width = viewport.width + 'px';
+  textDiv.style.height = viewport.height + 'px';
+
+  const textLayer = new pdfjsLib.TextLayer({
+    textContentSource: page.streamTextContent(),
+    container: textDiv,
+    viewport,
+  });
+  await textLayer.render();
+}
+```
+
+`TextLayer` members: `render()` (returns a promise), `cancel()`, `textDivs` (array of created spans), `textContentItemsStr` (their strings; handy for highlighting search hits), `update({ viewport })` for re-layout on zoom.
+</span></md></sn><sn><md>### Annotation Layer (links, forms)
+
+The `AnnotationLayer` creates clickable links and form widgets over the canvas. Links need a **link service** that knows how to navigate; the prebuilt `SimpleLinkService` (from `pdf_viewer`) or `PDFLinkService` are typical choices.
+
+```js
+const annotations = await page.getAnnotations({ intent: 'display' });
+
+const annotationLayer = new pdfjsLib.AnnotationLayer({
+  div: annotationDiv,
+  accessibilityManager: null,
+  annotationCanvasMap: null,
+  page,
+  viewport: viewport.clone({ dontFlip: true }),
+});
+
+await annotationLayer.render({
+  annotations,
+  div: annotationDiv,
+  page,
+  viewport: viewport.clone({ dontFlip: true }),
+  linkService,                      // object with goToDestination, getDestinationHash, etc.
+  renderForms: true,
+});
+```
+
+If you only need working external links and do not want the full layer, the manual approach from section 7 (place `<a>` elements at converted rectangles) is a simple, dependable alternative.
+</a></md></sn><sn><md>### Utilities and Constants
+
+| Export | Description |
+| --- | --- |
+| `GlobalWorkerOptions.workerSrc` | Path/URL to the worker file (required) |
+| `version`, `build` | Library version and build id strings |
+| `Util` | Matrix helpers: `Util.transform(m1, m2)`, `Util.applyTransform(point, m)`, `Util.normalizeRect(rect)` |
+| `OPS` | Operator codes for `getOperatorList()` |
+| `AnnotationType` | Numeric annotation types (`LINK`, `TEXT`, `HIGHLIGHT`, `WIDGET`...) |
+| `AnnotationMode` | `DISABLE`, `ENABLE`, `ENABLE_FORMS`, `ENABLE_STORAGE` |
+| `PermissionFlag` | `PRINT`, `MODIFY_CONTENTS`, `COPY`, `MODIFY_ANNOTATIONS`... |
+| `PasswordResponses` | `NEED_PASSWORD`, `INCORRECT_PASSWORD` |
+| `getPdfFilenameFromUrl(url)` | Extracts a file name from a URL |
+| `isPdfFile(name)` | Checks the `.pdf` extension |
+| `PixelsPerInch` | Conversion constants (`PDF_TO_CSS_UNITS` = 96/72) |
+| `Util.getXfaPageViewport` | Viewport helper for XFA pages |
+
+```js
+console.log(pdfjsLib.version);                      // '4.10.38'
+console.log(pdfjsLib.Util.normalizeRect([100, 50, 10, 5]));  // [10, 5, 100, 50]
+```
+</md></sn>
