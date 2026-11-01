@@ -1,10 +1,1431 @@
 
-  <sn></sn>
+  <sn><md># Complete Guide to AppMan on Ubuntu Linux
+
+A practical installation, management, and troubleshooting manual for AppImage applications
+
+This manual covers AppMan from the beginning: what it is, how it works, how to install it on Ubuntu, how to install and manage AppImages, how to change installation directories, how to move existing applications to another drive, and how to uninstall applications completely.
+
+The commands are written primarily for Ubuntu, but most of the instructions also apply to other Debian-based Linux distributions.
+
+## 1. What is AppMan?
+
+[GitHub - ivan-hc/AppMan: AppImage Package Manager. "AppMan" is a redistribution of "AM" Application Manager, that does not require root privileges to install and manage apps: same code, same apps... two different behavior.](https://images.openai.com/static-rsc-4/b222w1pLwDyZypWQ-ZnzQuEkAgY1sbC7sKphI8kYEiXq-nC9C-TESaV64mSdbtr97dgfAztVAxMg0LQtuH4xdIvGMSDbpRJLfUb0rz3HB1wXNqjhxqZc2E0aeCzur9tC-l-EMVYqrhD9H6-cEyfsvuW-dsTinqx9apsUj2aGvPY?purpose=inline)
+
+AppMan
+
+Open-source • Bash-based • Rootless • Command-line
+
+Official project: [AppMan on GitHub](https://github.com/ivan-hc/AppMan?utm_source=chatgpt.com)
+
+AppMan is a Linux application manager developed by Ivan-HC. It helps you install, update, integrate, and uninstall AppImage applications and other portable Linux applications.
+
+Think of it as a package manager similar to APT, but focused on portable applications.
+
+For example:
+
+| Package manager | Main purpose                                |
+| --------------- | ------------------------------------------- |
+| APT             | Installs `.deb` packages                    |
+| Snap            | Installs Snap packages                      |
+| Flatpak         | Installs Flatpak applications               |
+| AppMan          | Manages AppImages and portable applications |
+
+### What makes AppMan different?
+
+Without AppMan, installing an AppImage generally involves:
+
+1. Downloading an AppImage manually.
+2. Moving it to a directory.
+3. Giving it executable permission.
+4. Creating a desktop launcher manually.
+5. Finding and downloading updates manually.
+6. Removing the application and its launcher manually.
+
+AppMan automates much of this process.
+
+Its main features include:
+
+- Installing applications from its application database.
+- Installing AppImage-only applications.
+- Creating application launchers.
+- Making applications available from the terminal.
+- Updating installed applications.
+- Uninstalling applications.
+- Installing applications without root privileges.
+- Choosing a custom installation directory.
+- Relocating applications to another directory or drive.
+- Supporting external AppImage sources.
+- Optional application sandboxing.
+
+An important distinction: AppMan does not turn every application into an AppImage. It can also manage certain portable applications distributed as archives or other supported formats. 
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&amp;sz=32)
+
+GitHub+1
+
+
+
+## 2. AppMan vs AM: What is the difference?
+
+AppMan and AM are closely related projects. They use the same underlying application-management engine but operate differently.
+
+| Feature                | AppMan                   | AM                                    |
+| ---------------------- | ------------------------ | ------------------------------------- |
+| Installation scope     | User-level               | System-level and user-level           |
+| Root privileges        | Not normally required    | Required for system-wide installation |
+| Application directory  | User-selected            | Usually `/opt`                        |
+| Command                | `appman`                 | `am`                                  |
+| Application management | Local applications       | Local and system applications         |
+| Suitable for           | Individual desktop users | Administrators and advanced users     |
+
+### Which one should you use?
+
+For a regular Ubuntu desktop, AppMan is a good choice.
+
+You can install and manage applications without running every installation command with `sudo`.
+
+For example:
+
+```
+appman -ia google-chrome
+```
+
+You do not need:
+
+```
+sudo appman -ia google-chrome
+```
+
+In fact, avoid running AppMan with `sudo`. It is designed to manage applications in your user environment.
+
+## 3. Understanding AppImage before using AppMan
+
+Before installing applications, it helps to understand what an AppImage actually is.
+
+### What is an AppImage?
+
+An AppImage is a portable application format for Linux.
+
+It usually contains an application and many of the libraries and resources required to run it.
+
+For example:
+
+```
+GoogleChrome.AppImage
+```
+
+You can download this file, make it executable, and run it without installing a traditional `.deb` package.
+
+### How does an AppImage work?
+
+[openSUSE Conference 2017: Your desktop application as a cross-distribution AppImage - Speaker Deck](https://images.openai.com/static-rsc-4/p99ZR8xOuZsjnnTOrRQRj5DBc71wIMLLbBrJlXTkHp5aqeUW1TeD8gOSv9N85lDZfE1xYKglFpeDmMOiEbtxpKwFw7-dtyvbmpsXlJbTzjZECas4z_GOXGQdHj05f9f_bvyqqR81q_KzjXZzzaoRR0hEh7Z7bYc0fs9HWg9Hw8Y?purpose=inline)
+
+[speakerdeck.com](https://speakerdeck.com/probonopd/opensuse-conference-2017-your-desktop-application-as-a-cross-distribution-appimage?utm_source=chatgpt.com)
+
+An AppImage generally contains:
+
+1. Runtime: Handles launching and mounting the application.
+2. SquashFS filesystem: Contains the application files.
+3. Application binaries: The actual executable programs.
+4. Libraries and resources: Dependencies, icons, themes and other resources.
+
+When you launch an AppImage:
+
+1. Linux executes its runtime.
+2. The runtime accesses the embedded filesystem.
+3. The application files become accessible.
+4. The main application executable starts.
+
+AppImages are generally self-contained, but they are not guaranteed to work on every Linux distribution. Some require additional system libraries or FUSE support.
+
+### AppImage vs traditional installation
+
+| Feature            | Traditional DEB        | AppImage                          |
+| ------------------ | ---------------------- | --------------------------------- |
+| Installation       | Package installation   | Usually just download and execute |
+| Root permission    | Usually required       | Usually not required              |
+| System integration | Package manager        | Optional integration              |
+| Updates            | APT repositories       | Application-specific              |
+| Removal            | APT uninstall          | Delete file or use manager        |
+| Portability        | Distribution-dependent | Generally portable                |
+
+### AppImage types
+
+There are two commonly encountered generations:
+
+- Type 1: Older AppImage format.
+- Type 2: Newer and more widely used AppImage format.
+
+Some older Type 2 applications require `libfuse2` to run.
+
+On Ubuntu, if you encounter a FUSE-related error, check your Ubuntu release and install the appropriate compatibility package:
+
+```
+sudo apt update
+sudo apt install libfuse2
+```
+
+Do not install this package automatically unless it is needed. Some newer Ubuntu releases use a differently named compatibility package.
+
+## 4. Installing AppMan on Ubuntu
+
+There are two ways to install AppMan.
+
+### Method 1: Official installer (recommended)
+
+This is the easiest and recommended method.
+
+Step 1. Install required dependencies
+
+Open your terminal:
+
+```
+sudo apt update
+sudo apt install curl wget grep sed coreutils
+```
+
+Step 2. Download the official installer
+
+```
+wget -q https://raw.githubusercontent.com/ivan-hc/AM/main/AM-INSTALLER
+```
+
+Step 3. Give it executable permission
+
+```
+chmod +x AM-INSTALLER
+```
+
+Step 4. Run the installer
+
+```
+./AM-INSTALLER
+```
+
+The installer will present two choices:
+
+```
+1. Install AM
+2. Install AppMan
+```
+
+Choose:
+
+```
+2
+```
+
+This installs AppMan in your user environment.
+
+Step 5. Remove the installer file
+
+```
+rm AM-INSTALLER
+```
+
+Installation complete
+
+### Method 2. Install AppMan using a single command
+
+If you prefer a one-line installation:
+
+```
+wget -q https://raw.githubusercontent.com/ivan-hc/AM/main/AM-INSTALLER \
+&amp;&amp; chmod +x AM-INSTALLER \
+&amp;&amp; ./AM-INSTALLER \
+&amp;&amp; rm AM-INSTALLER
+```
+
+Choose option 2 when prompted.
+
+### Where is AppMan installed?
+
+The installer normally places the executable here:
+
+```
+~/.local/bin/appman
+```
+
+Check its location:
+
+```
+which appman
+```
+
+Expected output:
+
+```
+/home/emon/.local/bin/appman
+```
+
+You can also use:
+
+```
+command -v appman
+```
+
+Check its version:
+
+```
+appman -v
+```
+
+Check available commands:
+
+```
+appman -h
+```
+
+### If the terminal cannot find AppMan
+
+Check whether the directory is in your PATH:
+
+```
+echo "$PATH"
+```
+
+If `~/.local/bin` is missing, add it to your Bash configuration:
+
+```
+echo 'export PATH="$HOME/.local/bin:$PATH"' &gt;&gt; ~/.bashrc
+```
+
+Reload the configuration:
+
+```
+source ~/.bashrc
+```
+
+Now try:
+
+```
+appman -h
+```
+
+Official installation instructions: [AppMan installation documentation](https://github.com/ivan-hc/AppMan?utm_source=chatgpt.com).
+
+## 5. First-time AppMan configuration
+
+When you run AppMan for the first time, it asks where you want to store your applications.
+
+This is one of AppMan's most useful features.
+
+For example, you might choose:
+
+```
+/home/emon/Applications
+```
+
+Or:
+
+```
+/home/emon/AppImages
+```
+
+Or a directory on another drive:
+
+```
+/mnt/data/Applications
+```
+
+AppMan uses this directory as its main application storage location.
+
+### Recommended directory structure
+
+I recommend keeping portable applications separate from your normal documents.
+
+For example:
+
+```
+/home/emon/
+│
+├── Applications/
+│   ├── GoogleChrome/
+│   ├── Firefox/
+│   ├── SublimeText/
+│   ├── Cursor/
+│   └── OtherApplications/
+│
+├── .local/
+│   ├── bin/
+│   └── share/
+│       └── applications/
+│
+└── .config/
+    └── appman/
+        └── appman-config
+```
+
+The `Applications` directory stores the application files, while `.local/bin` and `.local/share/applications` contain launch commands and desktop launchers.
+
+### Where is the configuration stored?
+
+AppMan's configuration file is:
+
+```
+~/.config/appman/appman-config
+```
+
+Read it:
+
+```
+cat ~/.config/appman/appman-config
+```
+
+You can also inspect the directory:
+
+```
+ls -lah ~/.config/appman/
+```
+
+Important: Do not simply edit the configuration file to change the application directory. Changing it changes where AppMan looks for applications; it does not automatically move existing installations. Use the relocation procedure described later. 
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&amp;sz=32)
+
+GitHub+1
+
+
+
+## 6. Finding applications available in AppMan
+
+AppMan maintains an online database of applications with installation scripts.
+
+You can search for applications rather than downloading AppImages manually.
+
+### Search for an application
+
+For example, search for Google Chrome:
+
+```
+appman -q google-chrome
+```
+
+Search for Firefox:
+
+```
+appman -q firefox
+```
+
+Search for Sublime Text:
+
+```
+appman -q sublime-text
+```
+
+The exact application identifier matters. Use the name shown in the search results.
+
+### Display available applications
+
+```
+appman -l
+```
+
+### Get information about an application
+
+```
+appman -a google-chrome
+```
+
+This can display application information and its source details.
+
+### Find the complete application database
+
+You can browse the online application catalog:
+
+[Portable Linux Apps – Application Database](https://portable-linux-apps.github.io/apps/?utm_source=chatgpt.com)
+
+This is useful when you do not know the exact application identifier.
+
+## 7. Installing Linux applications with AppMan
+
+AppMan supports several installation methods.
+
+### Method 1. Install a normal application
+
+The general syntax is:
+
+```
+appman -i APPLICATION_NAME
+```
+
+For example:
+
+```
+appman -i firefox
+```
+
+This installs an application using its available installation script.
+
+### Method 2. Install only AppImage applications
+
+If you specifically want AppImages and do not want AppMan to select other supported portable formats, use:
+
+```
+appman -ia APPLICATION_NAME
+```
+
+For example:
+
+```
+appman -ia google-chrome
+```
+
+Another example:
+
+```
+appman -ia obs-studio
+```
+
+The `-ia` option means install AppImage.
+
+This is particularly useful if your goal is to maintain a collection of AppImage applications.
+
+### Method 3. Install an AppImage with sandboxing
+
+AppMan also supports optional sandboxing.
+
+```
+appman -ia --sandbox APPLICATION_NAME
+```
+
+For example:
+
+```
+appman -ia --sandbox firefox
+```
+
+The shorter dedicated option is:
+
+```
+appman -ias firefox
+```
+
+Sandboxing can help restrict an application's access to parts of your system, but the actual protection depends on the sandbox configuration and application requirements.
+
+### Method 4. Install an AppImage from an external GitHub repository
+
+Sometimes an application is not included in AppMan's main database.
+
+AppMan provides an external GitHub installation option:
+
+```
+appman -e USER/REPOSITORY APPLICATION_NAME
+```
+
+For example, the syntax is:
+
+```
+appman -e developer/project myapplication
+```
+
+The repository must provide an AppImage that AppMan can identify and manage.
+
+### Method 5. Install a manually downloaded AppImage
+
+If you already have an AppImage file, you can integrate it into the desktop menu using AppMan's launcher integration:
+
+```
+appman --launcher /path/to/application.AppImage
+```
+
+For example:
+
+```
+appman --launcher ~/Downloads/MyApplication.AppImage
+```
+
+This is different from installing an application from the database: it integrates an existing AppImage rather than necessarily creating a fully managed AppMan installation.
+
+You can also use the `-e` option for supported external GitHub projects when you want AppMan to manage the application and its updates.
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&amp;sz=32)
+
+GitHub+1
+
+## 8. Where are installed applications stored?
+
+When AppMan installs an application, it does not simply put one `.AppImage` file into your Applications directory.
+
+It creates a dedicated directory for the application.
+
+For example, a Google Chrome installation might have a structure similar to:
+
+```
+~/Applications/
+│
+└── google-chrome/
+    │
+    ├── google-chrome
+    ├── AM-updater
+    ├── remove
+    │
+    └── icons/
+        └── google-chrome.png
+```
+
+It also creates integration files:
+
+```
+~/.local/bin/
+└── google-chrome
+
+~/.local/share/applications/
+└── google-chrome-AM.desktop
+```
+
+Here is what each component does:
+
+| File or directory              | Purpose                            |
+| ------------------------------ | ---------------------------------- |
+| `google-chrome/`               | Main application directory         |
+| `google-chrome`                | Application executable or AppImage |
+| `AM-updater`                   | Application update helper          |
+| `remove`                       | Application removal script         |
+| `icons/`                       | Application icons                  |
+| `~/.local/bin/`                | Command-line launcher              |
+| `~/.local/share/applications/` | Desktop application launcher       |
+
+The exact files depend on the application and its installation script.
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&amp;sz=32)
+
+GitHub+1
+
+## 9. Listing installed applications
+
+AppMan provides commands to see which applications are installed.
+
+### List installed applications
+
+```
+appman -f
+```
+
+This displays installed programs and their sizes.
+
+### Sort applications by name
+
+```
+appman -f --byname
+```
+
+### Display only the number of installed applications
+
+```
+appman -f --less
+```
+
+### Find the installation directory of an application
+
+You can inspect the application directory:
+
+```
+ls -lah ~/Applications/
+```
+
+For example:
+
+```
+ls -lah ~/Applications/google-chrome/
+```
+
+Find the command-line launcher:
+
+```
+which google-chrome
+```
+
+Find its desktop entry:
+
+```
+ls ~/.local/share/applications/
+```
+
+### Find the actual application executable
+
+For example:
+
+```
+find ~/Applications/google-chrome -maxdepth 2 -type f
+```
+
+This helps you understand where AppMan has placed the application's files.
+
+## 10. Updating installed applications
+
+One of the biggest advantages of AppMan is application update management.
+
+You do not need to manually visit every application's website to download updates.
+
+### Update all installed applications
+
+```
+appman -u
+```
+
+### Update a specific application
+
+```
+appman -u google-chrome
+```
+
+### Update applications with debugging information
+
+```
+appman -u --debug
+```
+
+This is useful when an application fails to update and you want to investigate the problem.
+
+### Update AppMan itself
+
+```
+appman -s
+```
+
+This synchronizes AppMan with its latest script version.
+
+### Check the current version
+
+```
+appman -v
+```
+
+Note: AppMan's updater depends on the application-specific installation script. Not every upstream application necessarily provides the same update mechanism. 
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&amp;sz=32)
+
+GitHub+1
+
+
+
+## 11. Uninstalling applications with AppMan
+
+You can uninstall an application without manually deleting all its files.
+
+### Method 1. Normal uninstall
+
+```
+appman -r APPLICATION_NAME
+```
+
+For example:
+
+```
+appman -r google-chrome
+```
+
+AppMan will ask you to confirm the removal.
+
+### Method 2. Uninstall without confirmation
+
+```
+appman -R APPLICATION_NAME
+```
+
+For example:
+
+```
+appman -R google-chrome
+```
+
+Be careful with uppercase `-R`: it removes the application without asking for confirmation.
+
+### Uninstall multiple applications
+
+```
+appman -r firefox google-chrome obs-studio
+```
+
+You can also use the non-interactive form:
+
+```
+appman -R firefox google-chrome obs-studio
+```
+
+### What happens when you uninstall an application?
+
+AppMan normally removes its managed application directory and associated integration files, including:
+
+- Application files.
+- Update helper.
+- Removal script.
+- Application command launcher.
+- Desktop launcher.
+- Associated application icons.
+
+Application-specific settings and user data may not be removed. These can remain in your home directory.
+
+For example:
+
+```
+~/.config/google-chrome/
+~/.cache/google-chrome/
+~/.local/share/google-chrome/
+```
+
+These directories may contain browser profiles, cache, extensions, and user settings.
+
+Important: If you want to preserve your browser profile, back it up before uninstalling. Do not blindly delete the entire `.config` or `.local/share` directories.
+
+## 12. Changing the installation directory
+
+This is one of the most important AppMan features.
+
+Suppose your current installation directory is:
+
+```
+/home/emon/Applications
+```
+
+But you want to use:
+
+```
+/mnt/data/Applications
+```
+
+There are two different situations:
+
+1. You have not installed any applications yet.
+2. You already have applications installed and want to move them.
+
+Let's examine both.
+
+### Situation A. Changing the directory before installing applications
+
+If AppMan has not been configured yet, you can set the location before its first run.
+
+For example:
+
+```
+appman_location="$HOME/Applications" appman
+```
+
+Or:
+
+```
+appman_location="/mnt/data/Applications" appman
+```
+
+This works only when AppMan's configuration file does not already exist.
+
+AppMan will use the specified directory when creating its configuration.
+
+### Situation B. Changing the directory after installing applications
+
+Suppose you already have these applications:
+
+```
+/home/emon/Applications/
+├── google-chrome/
+├── firefox/
+├── sublime-text/
+└── obs-studio/
+```
+
+You want to move everything to:
+
+```
+/mnt/data/Applications/
+```
+
+Do not simply change `appman-config`.
+
+Doing so changes the location AppMan expects to use for future operations, but does not relocate your existing applications.
+
+Instead, AppMan provides a dedicated relocation command.
+
+### Use the official relocation command
+
+```
+appman relocate
+```
+
+The relocation procedure removes and reinstalls your local/AppMan applications at a new location.
+
+Follow its prompts and choose the new directory.
+
+Recommended relocation method
+
+This is safer than manually moving directories because AppMan needs to maintain its application-management structure and integrations.
+
+Official documentation: [Changing the destination path](https://github.com/ivan-hc/AM?utm_source=chatgpt.com#how-to-set-the-path-to-local-apps). 
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&amp;sz=32)
+
+GitHub+1
+
+
+
+## 13. Installing AppMan applications on another drive
+
+You can store your applications on a different physical drive instead of your Ubuntu system SSD.
+
+For example:
+
+```
+Ubuntu SSD:
+/
+├── Ubuntu
+├── home
+└── .local
+
+Secondary drive:
+└── Applications
+    ├── google-chrome
+    ├── firefox
+    ├── sublime-text
+    └── obs-studio
+```
+
+This is useful when your system SSD has limited storage.
+
+### Step 1. Identify your drives
+
+Run:
+
+```
+lsblk -f
+```
+
+Find the partition where you want to store applications.
+
+For example:
+
+```
+NAME   FSTYPE LABEL  SIZE MOUNTPOINTS
+sda
+└─sda1 ext4   DATA   500G
+sdb
+└─sdb1 ext4   Ubuntu 100G /
+```
+
+The example assumes that `/dev/sda1` is the secondary data partition.
+
+Do not copy this device name blindly. Check your actual partition layout first.
+
+### Step 2. Find the mount point
+
+Run:
+
+```
+findmnt
+```
+
+Suppose your secondary drive is mounted at:
+
+```
+/mnt/data
+```
+
+### Step 3. Create an Applications directory
+
+```
+mkdir -p /mnt/data/Applications
+```
+
+### Step 4. Make sure your user can write to it
+
+For an ext4 partition dedicated to your personal applications:
+
+```
+sudo chown -R "$USER":"$USER" /mnt/data/Applications
+```
+
+Check:
+
+```
+touch /mnt/data/Applications/test.txt
+```
+
+If the command succeeds, your user can write there.
+
+Remove the test file:
+
+```
+rm /mnt/data/Applications/test.txt
+```
+
+For NTFS, ownership and permissions depend on how the partition is mounted. Configure its mount options rather than assuming `chown` will work as expected.
+
+### Step 5. Configure AppMan
+
+If this is your first AppMan configuration:
+
+```
+appman_location="/mnt/data/Applications" appman
+```
+
+If AppMan is already configured, use:
+
+```
+appman relocate
+```
+
+Select:
+
+```
+/mnt/data/Applications
+```
+
+### Important: Make sure the drive mounts reliably
+
+If your drive is mounted only when you manually click it in the file manager, AppMan applications may become unavailable when the drive is not mounted.
+
+For a permanently installed secondary drive, configure automatic mounting through `/etc/fstab` or Ubuntu's Disks utility.
+
+You can identify its UUID using:
+
+```
+sudo blkid
+```
+
+Prefer a stable UUID-based mount point such as:
+
+```
+/mnt/data
+```
+
+Do not configure AppMan to use a removable drive that may frequently be disconnected.
+
+## 14. Manually moving an existing installation
+
+Sometimes you may want to move application files yourself rather than using AppMan's relocation procedure.
+
+For example:
+
+```
+/home/emon/Applications
+```
+
+to:
+
+```
+/mnt/data/Applications
+```
+
+The recommended approach is still `appman relocate`.
+
+If you are performing a manual migration for recovery purposes, first back up your files and understand that simply copying the application directory does not update AppMan's configuration or recreate all the integration files.
+
+A basic file copy would look like:
+
+```
+mkdir -p /mnt/data/Applications
+cp -a ~/Applications/. /mnt/data/Applications/
+```
+
+However, this is only a file copy, not a completed AppMan relocation.
+
+Do not delete the old directory or change the configuration until you have verified the new installation and its launchers.
+
+For normal users, use the official relocation command instead.
+
+## 15. Removing AppMan itself
+
+There is a difference between uninstalling an application and uninstalling AppMan.
+
+If you want to remove AppMan completely, first uninstall the applications it manages.
+
+### Step 1. List installed applications
+
+```
+appman -f
+```
+
+### Step 2. Remove the applications
+
+For example:
+
+```
+appman -r google-chrome firefox sublime-text
+```
+
+### Step 3. Remove AppMan
+
+If you installed it using the official installer:
+
+```
+rm ~/.local/bin/appman
+```
+
+### Step 4. Remove its configuration (optional)
+
+```
+rm -rf ~/.config/appman
+```
+
+You can also inspect and remove AppMan's own cache and metadata if you no longer need them:
+
+```
+~/.cache/appman
+~/.local/share/AM
+```
+
+For example:
+
+```
+rm -rf ~/.cache/appman
+```
+
+Be careful: `~/.local/share/AM` can contain shared metadata used by AM/AppMan installations. Do not remove it if you still use another compatible installation.
+
+### Step 5. Remove the application directory (optional)
+
+Only after checking that you have removed or backed up everything you need:
+
+```
+rm -rf ~/Applications
+```
+
+If you used another directory, replace that path accordingly.
+
+## 16. Making AppMan applications visible in Ulauncher
+
+You mentioned using Ulauncher to search and launch Linux applications.
+
+AppMan creates desktop launcher files in:
+
+```
+~/.local/share/applications/
+```
+
+It also creates command-line launchers in:
+
+```
+~/.local/bin/
+```
+
+This desktop integration is important because application launchers allow desktop environments and application search tools to discover installed programs.
+
+### Check whether an application has a desktop launcher
+
+For example:
+
+```
+ls ~/.local/share/applications/ | grep -i chrome
+```
+
+You might see:
+
+```
+google-chrome-AM.desktop
+```
+
+### Check the launcher contents
+
+```
+cat ~/.local/share/applications/google-chrome-AM.desktop
+```
+
+A desktop launcher normally contains entries similar to:
+
+```
+[Desktop Entry]
+Type=Application
+Name=Google Chrome
+Exec=/home/emon/.local/bin/google-chrome
+Icon=/home/emon/Applications/google-chrome/icons/google-chrome.png
+Terminal=false
+Categories=Network;WebBrowser;
+```
+
+The actual entries depend on AppMan's installation script.
+
+### Refresh the desktop application database
+
+If you have `desktop-file-utils` installed:
+
+```
+sudo apt install desktop-file-utils
+```
+
+Then:
+
+```
+update-desktop-database ~/.local/share/applications
+```
+
+Restart Ulauncher or refresh its application index using its settings.
+
+### If Ulauncher still cannot find the application
+
+Check the following:
+
+1. The `.desktop` file exists.
+2. The `Exec` path points to an existing executable.
+3. The launcher is not hidden.
+4. The application directory is accessible.
+5. Ulauncher has refreshed its application index.
+
+You can also launch the application directly:
+
+```
+google-chrome
+```
+
+If this works but Ulauncher does not find it, the issue is likely with application discovery rather than AppMan itself.
+
+## 17. AppMan command reference
+
+Here is a quick reference to the most useful commands.
+
+| Command                         | Description                                |
+| ------------------------------- | ------------------------------------------ |
+| `appman -h`                     | Show help                                  |
+| `appman -v`                     | Show version                               |
+| `appman -q NAME`                | Search applications                        |
+| `appman -l`                     | List available applications                |
+| `appman -a NAME`                | Application information                    |
+| `appman -i NAME`                | Install an application                     |
+| `appman -ia NAME`               | Install an AppImage                        |
+| `appman -ias NAME`              | Install an AppImage with sandboxing        |
+| `appman -e USER/REPO NAME`      | Install from an external GitHub repository |
+| `appman -f`                     | List installed applications                |
+| `appman -f --byname`            | List installed apps alphabetically         |
+| `appman -u`                     | Update all applications                    |
+| `appman -u NAME`                | Update one application                     |
+| `appman -r NAME`                | Uninstall with confirmation                |
+| `appman -R NAME`                | Uninstall without confirmation             |
+| `appman relocate`               | Relocate installed applications            |
+| `appman -s`                     | Update AppMan itself                       |
+| `appman --launcher FILE`        | Integrate an existing AppImage             |
+| `appman --sandbox NAME`         | Run an application in a sandbox            |
+| `appman --disable-sandbox NAME` | Disable its sandbox                        |
+
+These are the principal commands; some options have additional flags and behavior depending on the application and AppMan version. 
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&amp;sz=32)
+
+GitHub+2
+
+
+
+## 18. Troubleshooting common problems
+
+### Problem 1. AppMan command not found
+
+Check:
+
+```
+which appman
+```
+
+If it is missing, check:
+
+```
+ls -l ~/.local/bin/appman
+```
+
+If the script exists but is not executable:
+
+```
+chmod +x ~/.local/bin/appman
+```
+
+Ensure `~/.local/bin` is in your PATH.
+
+### Problem 2. AppImage cannot execute
+
+Check permissions:
+
+```
+chmod +x application.AppImage
+```
+
+Try running it:
+
+```
+./application.AppImage
+```
+
+If you receive a FUSE-related error, investigate the required FUSE compatibility package for your Ubuntu version.
+
+### Problem 3. Application does not appear in the application menu
+
+Check:
+
+```
+ls ~/.local/share/applications/
+```
+
+Then inspect its `.desktop` file.
+
+### Problem 4. Application cannot update
+
+Run:
+
+```
+appman -u --debug APPLICATION_NAME
+```
+
+Check your internet connection, the application's upstream release availability, and any error shown by the installation script.
+
+### Problem 5. Application does not launch after moving to another drive
+
+Check:
+
+```
+findmnt /mnt/data
+```
+
+If the drive is not mounted, the application files may be inaccessible.
+
+Also check:
+
+```
+ls -lah /mnt/data/Applications/
+```
+
+### Problem 6. AppMan cannot write to the installation directory
+
+Check:
+
+```
+ls -ld /mnt/data/Applications
+```
+
+Test write access:
+
+```
+touch /mnt/data/Applications/test
+```
+
+If it fails, correct the filesystem mount permissions.
+
+### Problem 7. AppMan does not recognize a manually downloaded AppImage
+
+An AppImage downloaded manually is not automatically a managed AppMan installation.
+
+You can integrate it using:
+
+```
+appman --launcher ~/Downloads/application.AppImage
+```
+
+For fully managed installation and updating, use a supported AppMan application script or external repository installation.
+
+## 19. Recommended application-management workflow
+
+For a clean Ubuntu installation, I recommend following this workflow:
+
+```
+                 Ubuntu
+                    |
+                    |
+                 AppMan
+                    |
+                    |
+          Applications directory
+                    |
+          +---------+---------+
+          |         |         |
+       Chrome    Firefox   Sublime
+          |         |         |
+          +---------+---------+
+                    |
+             Desktop Launchers
+                    |
+               Ulauncher
+                    |
+             Launch applications
+```
+
+Your regular maintenance commands can be:
+
+Install an application:
+
+```
+appman -ia APPLICATION_NAME
+```
+
+Check installed applications:
+
+```
+appman -f
+```
+
+Update everything:
+
+```
+appman -u
+```
+
+Remove an application:
+
+```
+appman -r APPLICATION_NAME
+```
+
+Relocate your applications:
+
+```
+appman relocate
+```
+
+Update AppMan:
+
+```
+appman -s
+```
+
+## 20. Official documentation and useful resources
+
+| Resource                                                                                   | Purpose                                     |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------- |
+| [AppMan GitHub](https://github.com/ivan-hc/AppMan?utm_source=chatgpt.com)                  | AppMan-specific instructions                |
+| [AM GitHub](https://github.com/ivan-hc/AM?utm_source=chatgpt.com)                          | Main project and full command documentation |
+| [Application database](https://portable-linux-apps.github.io/apps/?utm_source=chatgpt.com) | Browse available applications               |
+| [AppImage official website](https://appimage.org/?utm_source=chatgpt.com)                  | Learn about AppImage                        |
+| [Report problems](https://github.com/ivan-hc/AM/issues?utm_source=chatgpt.com)             | Troubleshooting and bug reports             |
+
+## 21. My recommendations for your Ubuntu setup
+
+Considering your goal of keeping portable applications separate from the Ubuntu system, I recommend this arrangement:
+
+```
+Ubuntu SSD
+│
+├── Ubuntu operating system
+├── Home directory
+├── AppMan executable
+│   └── ~/.local/bin/appman
+│
+└── Application integration
+    ├── ~/.local/bin/
+    └── ~/.local/share/applications/
+
+Dedicated Applications storage
+│
+└── Applications/
+    ├── GoogleChrome/
+    ├── Firefox/
+    ├── SublimeText/
+    ├── SublimeMerge/
+    ├── Cursor/
+    └── OtherApplications/
+```
+
+Keep AppMan's configuration, launchers, and command-line integration in your home directory. Store the actual applications on your chosen data drive.
+
+One important precaution: because applications stored on another drive depend on that drive being mounted, make sure it mounts automatically before relying on those applications.
+
+The three most important commands to remember are:
+
+```
+appman -ia APPLICATION_NAME  # Install AppImage
+appman -u                   # Update applications
+appman relocate             # Move AppMan applications
+```
+
+You can use `appman -h` whenever you need to inspect the available commands.
+
+Documentation note: AppMan's official documentation is continuously updated. The command reference above is based on its documented interface; check the official repository if a particular option behaves differently in your installed version.</md></sn>
   <config>
     <tags>#appman</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Nov 01 2026 19:39:04 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Nov 01 2026 19:55:13 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-OMCFH7jIVp</id>
     <duration></duration>
   </config>
