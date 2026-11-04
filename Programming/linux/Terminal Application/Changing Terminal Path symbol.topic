@@ -1,10 +1,41 @@
 
-  <sn></sn>
+  <sn><md>To change your Ubuntu terminal prompt from `emon@emon:` to just `$`, you need to modify the `PS1` variable in your `~/.bashrc` file. The `PS1` variable controls the primary prompt string .
+
+Here is the step-by-step method:
+
+### 🛠️ How to Change the Prompt
+
+1.  **Open your `.bashrc` file** using a text editor like `nano`:
+    ```bash
+    nano ~/.bashrc
+    ```
+
+2.  **Find the `PS1` line**. It usually looks something like this (the exact text may vary slightly):
+    ```bash
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    ```
+    The `\u` stands for username, `\h` for hostname, and `\w` for the working directory.
+
+3.  **Replace the line** with the following to make your prompt just a dollar sign:
+    ```bash
+    PS1='\$ '
+    ```
+    *Note: Using `\$` ensures it shows `$` for a normal user and `#` for the root user .*
+
+4.  **Save and exit** the file (`Ctrl+O`, `Enter`, then `Ctrl+X` if using nano).
+
+5.  **Apply the changes** by running:
+    ```bash
+    source ~/.bashrc
+    ```
+
+After running the `source` command, your prompt should immediately change to just `$ `. This change will persist for all new terminal sessions you open.
+</md></sn>
   <config>
     <tags>#changing terminal path symbol</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Nov 04 2026 13:40:39 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Nov 04 2026 13:40:53 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-CG87rjQI5v</id>
     <duration></duration>
   </config>
