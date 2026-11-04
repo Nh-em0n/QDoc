@@ -1,10 +1,41 @@
 
-  <sn></sn>
+  <sn><md>### Theme
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/linux/Application/assets/sublime_theme_screenshot.png)
+
+- theme : **Default Dark**
+- theme-scheme : Catppuccin frappe
+
+**comment style**
+
+tab - preference - customize color scheme
+
+```json
+
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+{
+	"variables":
+	{
+	},
+	"globals":
+	{
+	},
+	"rules":
+	[
+	  { 
+	  	"scope" : "comment",
+	  	"font_style" : "normal"
+	  }
+	]
+}
+
+```
+</md></sn>
   <config>
     <tags>#sublime</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Nov 04 2026 12:17:29 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Nov 04 2026 12:21:30 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-BPepUq2t36</id>
     <duration></duration>
   </config>
