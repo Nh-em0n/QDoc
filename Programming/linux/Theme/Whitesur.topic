@@ -1,10 +1,47 @@
 
-  <sn></sn>
+  <sn><md>### Whitesur Theme
+
+![img](https://raw.githubusercontent.com/Nh-em0n/QDoc/main/Programming/linux/Theme/assets/whitesur_theme_screenshot.png)
+
+- Go to this github [repo](https://github.com/vinceliuice/WhiteSur-gtk-theme)
+- read the doc 
+- clone the repo
+  ```bash
+  git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
+  ``` 
+  it will clone the repo without `.git`
+- Open terminal in WhiteSur-gtk-theme you will this kind of file structure 
+  ```bash
+  $~/Downloads/WhiteSur-gtk-theme lt
+	.
+	├── clean-git.sh
+	├── COPYING
+	├── install.sh
+	├── libs
+	├── make-release.sh
+	├── other
+	├── parse-sass.sh
+	├── README.md
+	├── release
+	├── src
+	└── tweaks.sh
+  ```
+- Install by running the .install.sh script
+  ```bash
+  ./install.sh -t all -s nord -a all -n MacOs --shell -b blank
+  ```  
+  See all the options in the doc.I install all the theme with nord scheme label as Macos and setting shell bg to blank.
+  &gt; **Note :** Must include `-l` for gtk version &gt;= 4.0
+- Go to tweaks and change your desire theme for both sell and legacy application.
+- Uninstalling
+  - `./install.sh -r`
+  - Remove all the folder from ~home/.themes folder
+- Thank u    </md></sn>
   <config>
     <tags>#whitesur</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Nov 04 2026 19:45:16 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Nov 04 2026 20:15:55 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-23KhKiHihr</id>
     <duration></duration>
   </config>
