@@ -1,10 +1,53 @@
 
-  <sn></sn>
+  <sn><md>### Permanent Alias
+
+To make an alias permanent in bash, add it to your `~/.bashrc` file. Here's how:
+
+Step-by-step
+
+1. **Open `~/.bashrc`:**
+   ```bash
+   nano ~/.bashrc
+   ```
+
+2. **Add your alias** at the bottom of the file, for example:
+   ```bash
+   alias lt='tree -L 1'
+   alias gs='git status'
+   alias ..='cd ..'
+   ```
+
+3. **Save and exit** (`Ctrl+O`, `Enter`, `Ctrl+X` in nano).
+
+4. **Apply the changes** to your current shell:
+   ```bash
+   source ~/.bashrc
+   ```
+
+Now the alias will be available in every new terminal you open.
+
+##### Notes
+
+- **Format:** `alias name='command'` — no spaces around `=`, and quote the command if it contains spaces.
+- **Where it works:** `~/.bashrc` is loaded for **interactive non-login** shells (normal terminals). If you also want aliases in login shells (e.g., TTY login, SSH sessions on some setups), put them in `~/.bash_profile` or `~/.profile` instead — or source `.bashrc` from there:
+  ```bash
+  # in ~/.bash_profile
+  [ -f ~/.bashrc ] &amp;&amp; source ~/.bashrc
+  ```
+- **System-wide aliases** (for all users): add them to `/etc/bash.bashrc` (Debian/Ubuntu) or `/etc/bashrc` (RHEL/Fedora).
+- **Verify** an alias is active:
+  ```bash
+  alias ll
+  ```
+- **Temporarily remove** one in the current session:
+  ```bash
+  unalias ll
+  ```</md></sn>
   <config>
     <tags>#permanent alias</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Nov 04 2026 13:56:59 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Nov 04 2026 13:57:13 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-F77OAiBRKS</id>
     <duration></duration>
   </config>
