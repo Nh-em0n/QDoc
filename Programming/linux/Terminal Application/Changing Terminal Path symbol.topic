@@ -17,10 +17,24 @@ Here is the step-by-step method:
     The `\u` stands for username, `\h` for hostname, and `\w` for the working directory.
 
 3.  **Replace the line** with the following to make your prompt just a dollar sign:
-    ```bash
+```bash
+set_prompt() {
+  if [ "$PWD" = "$HOME" ]; then
+      # In home directory: just a colored $
+      PS1='\[\033[01;35m\]\$\[\033[00m\] '
+  else
+    # Elsewhere: show the path, then a colored $
+     PS1='\[\033[01;35m\]\$\[\033[00m\]\[\033[01;34m\]\w\[\033[00m\] '
+  fi
+}
+
+if [ "$color_prompt" = yes ]; then
+    PROMPT_COMMAND=set_prompt
+else
     PS1='\$ '
-    ```
-    *Note: Using `\$` ensures it shows `$` for a normal user and `#` for the root user .*
+fi
+```
+ *Note: Using `\$` ensures it shows `$` for a normal user and `#` for the root user .*
 
 4.  **Save and exit** the file (`Ctrl+O`, `Enter`, then `Ctrl+X` if using nano).
 
@@ -35,7 +49,7 @@ After running the `source` command, your prompt should immediately change to jus
     <tags>#changing terminal path symbol</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Nov 04 2026 13:40:53 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Nov 04 2026 14:11:43 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-CG87rjQI5v</id>
     <duration></duration>
   </config>
