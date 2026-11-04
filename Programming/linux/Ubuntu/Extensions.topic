@@ -1,10 +1,33 @@
 
-  <sn></sn>
+  <sn><md>### Active Extentions
+
+- CoverflowAltTab@palatis.blogspot.com
+- user-theme@gnome-shell-extensions.gcampax.github.com
+- gsconnect@andyholmes.github.io
+- fuzzy-application-search@mkhl.codeberg.page
+- extension-list@tu.berry
+- compiz-alike-magic-lamp-effect@hermes83.github.com
+- panel-corners@aunetx
+- compiz-windows-effect@hermes83.github.com
+- hidetopbar@mathieu.bidon.ca
+- transparent-top-bar@ftpix.com
+- category-sorted-app-grid@noobping.dev
+- add-username-toppanel@brendaw.com
+- snapd-prompting@canonical.com
+- snapd-search-provider@canonical.com
+- tiling-assistant@ubuntu.com
+- ubuntu-appindicators@ubuntu.com
+- ubuntu-dock@ubuntu.com
+- web-search-provider@ubuntu.com
+- wack-lockscreen-clock@rinzler69-wastaken.github.com
+- clipboard-history@alexsaveau.dev
+- netspeedsimplified@prateekmedia.extension
+- color-picker@tuberry</md></sn>
   <config>
     <tags>#extensions</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Wed Nov 04 2026 11:33:11 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Wed Nov 04 2026 11:36:23 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-RKOtOaPNi8</id>
     <duration></duration>
   </config>
