@@ -1,10 +1,76 @@
 
-  <sn></sn>
+  <sn><md>## How PDF.js does it
+
+When you pass a URL, PDF.js doesn't wait for the whole file. It uses `fetch()` and reads `response.body` as a stream, one chunk at a time. After each chunk it adds the chunk's byte length to a `loaded` counter, reads `total` from the `Content-Length` header, and calls `onProgress({ loaded, total })`.
+
+That's why the callback checks `if (total)`: if the server doesn't send `Content-Length`, `total` is unknown and a percentage can't be calculated.
+
+## A reusable fetch with progress
+
+```js
+async function fetchWithProgress(url, { onProgress, signal, ...options } = {}) {
+  const response = await fetch(url, { signal, ...options });
+  if (!response.ok) throw new Error(`HTTP ${response.status} ${response.statusText}`);
+
+  const total = Number(response.headers.get("Content-Length")) || 0;
+  const reader = response.body.getReader();
+  const chunks = [];
+  let loaded = 0;
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+
+    chunks.push(value);
+    loaded += value.length;
+    onProgress?.({ loaded, total });
+  }
+
+  // merge chunks into one Uint8Array
+  const data = new Uint8Array(loaded);
+  let offset = 0;
+  for (const chunk of chunks) {
+    data.set(chunk, offset);
+    offset += chunk.length;
+  }
+
+  return data; // Uint8Array
+}
+```
+
+### Usage
+
+```js
+const controller = new AbortController();
+
+const data = await fetchWithProgress("https://example.com/file.pdf", {
+  signal: controller.signal,
+  onProgress: ({ loaded, total }) =&gt; {
+    if (total) setProgress((loaded / total) * 100);
+    else console.log(`${loaded} bytes loaded`);
+  },
+});
+
+// pass the bytes straight to PDF.js
+const pdf = await pdfjsLib.getDocument({ data }).promise;
+
+// cancel anytime: controller.abort();
+```
+
+Passing `{ data }` means PDF.js doesn't fetch again, so you control the progress UI yourself.
+
+## Things to watch
+
+- **CORS:** for cross-origin files, the server must send `Access-Control-Expose-Headers: Content-Length`, or `total` will be `0`.
+- **Compression:** if the response is gzip/brotli encoded, `Content-Length` is the compressed size but `loaded` counts decompressed bytes, so the percentage can exceed 100. Clamp it with `Math.min(100, ...)`.
+- **Same-origin PDFs:** these usually work fine, since static servers normally send `Content-Length` for `.pdf` files.
+
+If you want, I can wire this into your `setProgress` function and the PDF viewer so the bar updates during loading.</md></sn>
   <config>
     <tags>#fetch with progress</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sun Nov 15 2026 17:07:48 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sun Nov 15 2026 17:08:10 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-L0aCqRGzbP</id>
     <duration></duration>
   </config>
