@@ -1,10 +1,1014 @@
 
-  <sn></sn>
+  <sn><md># Complete Guide to GitHub Pages
+
+GitHub Pages is a free static website hosting service provided by GitHub. It allows you to build, publish, and maintain websites directly from a GitHub repository without purchasing a hosting server.
+
+You can use GitHub Pages to create:
+
+- Personal portfolios and developer profiles
+- Documentation websites for software projects
+- Blogs and articles
+- Landing pages for applications
+- Project websites and product documentation
+- Educational websites and online notes
+- Vanilla HTML, CSS and JavaScript applications
+
+&gt; **Important:** GitHub Pages is **not** a website builder. It is a **static website hosting platform**. You create the website using your preferred technologies, push the files to GitHub, and GitHub publishes them.
+
+---
+
+## Table of Contents
+
+1. [How GitHub Pages Works](#1-how-github-pages-works)
+2. [Types of GitHub Pages Websites](#2-types-of-github-pages-websites)
+3. [Technologies Supported by GitHub Pages](#3-technologies-supported-by-github-pages)
+4. [Creating Your First GitHub Pages Website](#4-creating-your-first-github-pages-website)
+5. [Understanding the Different Publishing Methods](#5-understanding-the-different-publishing-methods)
+6. [How to Update Your Website](#6-how-to-update-your-website)
+7. [Using a Custom Domain](#7-using-a-custom-domain)
+8. [Jekyll and Static Site Generators](#8-jekyll-and-static-site-generators)
+9. [Repository Features Related to Website Development](#9-repository-features-related-to-website-development)
+10. [Can GitHub Pages Host Multiple Websites?](#10-can-github-pages-host-multiple-websites)
+11. [Can You Use Databases, APIs and Backend Functionality?](#11-can-you-use-databases-apis-and-backend-functionality)
+12. [Important GitHub Pages Limitations](#12-important-github-pages-limitations)
+13. [Website Security and Privacy](#13-website-security-and-privacy)
+14. [Common GitHub Pages Problems and Solutions](#14-common-github-pages-problems-and-solutions)
+15. [How to Monitor and Manage Deployments](#15-how-to-monitor-and-manage-deployments)
+16. [Recommended Website Development Workflow](#16-recommended-website-development-workflow)
+17. [Official GitHub Pages Resources](#17-official-github-pages-resources)
+18. [Final Understanding](#18-final-understanding)
+
+---
+
+## 1. How GitHub Pages Works
+
+Think of the process as three parts:
+
+1. **Development** — You write your website using HTML, CSS, JavaScript, or a static site generator.
+2. **Repository** — You upload your website source code to a GitHub repository.
+3. **Deployment** — GitHub Pages builds and publishes the website to a public URL.
+
+```
+Your website files
+index.html · style.css · script.js · assets/
+        │
+        ▼
+    Git push
+        │
+        ▼
+GitHub repository
+Your source code and version history
+        │
+        ▼
+GitHub Actions / Pages build
+        │
+        ▼
+Published website
+https://username.github.io/
+```
+
+GitHub Pages can publish from a repository branch **or** through a GitHub Actions workflow.
+
+---
+
+## 2. Types of GitHub Pages Websites
+
+There are two primary types.
+
+### A. User or Organization Website
+
+This is your main personal or organization website.
+
+| Item | Value |
+|------|-------|
+| **Repository name** | `username.github.io` |
+| **Example** | `emon.github.io` |
+| **Published URL** | `https://emon.github.io/` |
+
+You can use this website for your portfolio, personal blog, or a central landing page for all your projects.
+
+### B. Project Website
+
+A project website belongs to an individual repository.
+
+| Item | Value |
+|------|-------|
+| **Repository** | `QDoc` |
+| **Username** | `emon` |
+| **Published URL** | `https://emon.github.io/QDoc/` |
+
+You can create a separate website for every repository that needs one.
+
+### Comparison
+
+| Feature | User Website | Project Website |
+|---------|-------------|-----------------|
+| Repository name | `username.github.io` | Any repository |
+| URL | `/` | `/repository/` |
+| Purpose | Personal website | Individual project |
+| Number | One primary site per account | Multiple |
+
+---
+
+## 3. Technologies Supported by GitHub Pages
+
+GitHub Pages serves **static files**. You can use several technologies to create those files.
+
+| Technology | Supported | Purpose |
+|------------|-----------|---------|
+| HTML | Yes | Website structure |
+| CSS | Yes | Styling and layouts |
+| JavaScript | Yes | Interactivity |
+| TypeScript | After compilation | Application logic |
+| Markdown | Yes | Articles and documentation |
+| JSON | Yes | Static data |
+| SVG | Yes | Vector graphics |
+| React | After building | Component-based UI |
+| Vue | After building | Frontend applications |
+| Angular | After building | Frontend applications |
+| Vite | After building | Frontend development |
+| Jekyll | Native support | Static site generation |
+| PHP | No server execution | Backend |
+| Node.js | No server execution | Backend |
+| Python | No server execution | Backend |
+| MySQL | No | Database server |
+
+&gt; **Important distinction:** You can develop a React application, but GitHub Pages cannot execute your React source code directly. You must compile it into HTML, CSS and JavaScript first.
+&gt;
+&gt; Similarly, you can use JavaScript to communicate with external APIs, but GitHub Pages itself does not provide a backend server.
+
+---
+
+## 4. Creating Your First GitHub Pages Website
+
+Let's create a website from scratch using plain HTML, CSS and JavaScript.
+
+### Step 1 — Create a GitHub Repository
+
+1. Open GitHub → **Create a new repository**.
+2. Enter your repository name.
+3. Choose **Public** if you're using the free plan.
+4. Optionally select **Add a README file**.
+5. Click **Create repository**.
+
+For a personal website, name it:
+
+```
+yourusername.github.io
+```
+
+For a project website, you can use any repository name, such as:
+
+```
+my-website
+```
+
+### Step 2 — Create Your Website Files
+
+A simple project structure:
+
+```
+my-website/
+├── index.html      ← Entry point
+├── style.css
+├── script.js
+└── assets/
+    └── images/
+```
+
+&gt; GitHub Pages recognizes `index.html`, `index.md` or `README.md` as an entry file. For a conventional website, use `index.html`.
+
+### Step 3 — Write Your Website
+
+**Create `index.html`:**
+
+```html
+
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My GitHub Website</title>
+  <link rel="stylesheet" href="style.css">
+
+
+  <header>
+    <h1>Welcome to My Website</h1>
+    <p>Built and hosted with GitHub Pages.</p>
+  </header>
+
+  <main>
+    <h2>About Me</h2>
+    <p>This is my personal website.</p>
+    <button id="hello">Say Hello</button>
+    <p id="message"></p>
+  </main>
+
+  
+
+
+```
+
+**Create `style.css`:**
+
+```css
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  line-height: 1.7;
+  color: #263238;
+  background: #f8fafc;
+}
+
+header {
+  padding: 40px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+button {
+  padding: 10px 20px;
+  border: 0;
+  background: #0969da;
+  color: white;
+  cursor: pointer;
+}
+```
+
+**Create `script.js`:**
+
+```javascript
+document.getElementById("hello").addEventListener("click", () =&gt; {
+  document.getElementById("message").textContent =
+    "Hello! Welcome to my GitHub Pages website.";
+});
+```
+
+### Step 4 — Upload Your Files
+
+You have two options:
+
+**Option A: GitHub Website**
+
+1. Open your repository.
+2. Click **Add file** → **Upload files**.
+3. Upload your HTML, CSS and JavaScript files.
+4. Click **Commit changes**.
+
+**Option B: Git on Ubuntu**
+
+Since you use Ubuntu, you can manage your website directly from the terminal:
+
+```bash
+git clone https://github.com/USERNAME/REPOSITORY.git
+
+cd REPOSITORY
+
+# Add or edit your website files
+
+git add .
+git commit -m "Create website"
+git push origin main
+```
+
+### Step 5 — Enable GitHub Pages
+
+Open your repository:
+
+1. Go to **Settings**.
+2. Select **Pages** from the sidebar.
+3. Find **Build and deployment**.
+4. Under **Source**, select **Deploy from a branch**.
+5. Select **main**.
+6. Select **/(root)**.
+7. Click **Save**.
+
+After deployment, your website should be available at:
+
+```
+https://USERNAME.github.io/REPOSITORY/
+```
+
+For a personal website:
+
+```
+https://USERNAME.github.io/
+```
+
+&gt; The first deployment can take several minutes. You can find the published URL and deployment status in **Settings → Pages**.
+
+---
+
+## 5. Understanding the Different Publishing Methods
+
+This is one of the most important GitHub Pages concepts.
+
+There are two main publishing approaches.
+
+### Method A — Deploy from a Branch
+
+**Best for beginners.** GitHub takes files directly from a selected branch and folder.
+
+For example:
+
+```
+Repository
+│
+├── index.html
+├── style.css
+├── script.js
+└── images/
+```
+
+Settings:
+
+| Option | Value |
+|--------|-------|
+| Source | Deploy from a branch |
+| Branch | `main` |
+| Folder | `/(root)` |
+
+You can also publish from `main/docs/`. In that case, select `main` and `/docs`.
+
+Every time you push changes to the selected publishing source, GitHub automatically rebuilds and publishes the website.
+
+**Advantages:**
+
+- No build configuration required.
+- Simple deployment.
+- Perfect for HTML/CSS/JS projects.
+- Easy to manage through GitHub's website.
+
+**Disadvantages:**
+
+- Limited control over the build process.
+- Not ideal for complex frontend frameworks.
+- Your source and published files can be mixed.
+
+### Method B — Deploy Using GitHub Actions
+
+**Best for advanced projects.** GitHub Actions is an automation platform integrated into GitHub.
+
+It can automatically:
+
+1. Download your repository source.
+2. Install dependencies.
+3. Run your build command.
+4. Generate production files.
+5. Deploy the generated website.
+
+For example, if you use Vite:
+
+```
+Source code
+    ↓
+npm install
+    ↓
+npm run build
+    ↓
+dist/
+    ↓
+GitHub Pages
+```
+
+To enable it:
+
+1. Open **Settings → Pages**.
+2. Under **Source**, select **GitHub Actions**.
+3. Create a workflow inside `.github/workflows/`.
+
+**Example workflow:**
+
+```yaml
+name: Deploy Website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+Save it as:
+
+```
+.github/workflows/deploy.yml
+```
+
+&gt; This example deploys files from the repository root. If you use a build tool, add the build steps and change the artifact path to your output directory, such as `dist`.
+
+### Which Method Should You Use?
+
+| Situation | Recommended Method |
+|-----------|-------------------|
+| Simple HTML website | Branch |
+| Personal portfolio | Branch |
+| Documentation website | Either |
+| React application | Actions |
+| Vue application | Actions |
+| Vite project | Actions |
+| Automated build process | Actions |
+| Custom build scripts | Actions |
+
+---
+
+## 6. How to Update Your Website
+
+One of the best features of GitHub Pages is that you **don't need to manually upload** your website every time you make changes.
+
+Your workflow is:
+
+1. **Edit your local files** — Change `index.html`, CSS, JavaScript, images, etc.
+2. **Commit your changes**
+
+   ```bash
+   git add .
+   git commit -m "Update homepage"
+   ```
+
+3. **Push to GitHub**
+
+   ```bash
+   git push origin main
+   ```
+
+4. **Automatic deployment** — GitHub detects the changes and starts a deployment.
+5. **Website updated** — Your visitors receive the newly published version.
+
+There are several ways to update your website:
+
+| Method | How it works |
+|--------|-------------|
+| Git push | Push local changes |
+| GitHub editor | Edit files directly online |
+| Upload files | Upload replacement files |
+| GitHub Desktop | Commit and push graphically |
+| GitHub Actions | Build and deploy automatically |
+
+You can also manually trigger an Actions workflow using the `workflow_dispatch` event.
+
+&gt; **Important:** Updating the repository doesn't necessarily mean the website has updated immediately. Wait for the deployment to complete, then refresh the website. Browser caching can sometimes show an older version.
+
+---
+
+## 7. Using a Custom Domain
+
+By default, GitHub Pages gives you a domain like:
+
+```
+username.github.io
+```
+
+But you can connect your own domain:
+
+```
+www.example.com
+```
+
+or
+
+```
+docs.example.com
+```
+
+or
+
+```
+example.com
+```
+
+### Step 1 — Purchase a Domain
+
+You can purchase a domain from a registrar such as:
+
+- Cloudflare Registrar
+- Namecheap
+- Porkbun
+- GoDaddy
+
+### Step 2 — Configure GitHub Pages
+
+Go to:
+
+```
+Repository → Settings → Pages → Custom domain
+```
+
+Enter your domain:
+
+```
+www.example.com
+```
+
+Click **Save**.
+
+### Step 3 — Configure DNS Records
+
+Your DNS configuration depends on which domain you want to use.
+
+**For a subdomain** such as `www.example.com`, a typical configuration is:
+
+| Type | Name | Value |
+|------|------|-------|
+| CNAME | `www` | `username.github.io` |
+
+**For an apex domain** such as `example.com`, GitHub documents these A records:
+
+| Type | Name | Value |
+|------|------|-------|
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+
+IPv6 AAAA records are also documented by GitHub.
+
+### Step 4 — Enable HTTPS
+
+After DNS configuration:
+
+1. Wait for DNS propagation.
+2. Return to **Settings → Pages**.
+3. Wait for the HTTPS certificate to become available.
+4. Enable **Enforce HTTPS**.
+
+You should then have:
+
+```
+https://www.example.com
+```
+
+&gt; A custom domain is optional. You do not need to purchase a domain to use GitHub Pages.
+
+---
+
+## 8. Jekyll and Static Site Generators
+
+GitHub Pages has **native integration with Jekyll**.
+
+Jekyll converts Markdown, templates, layouts and other source files into a complete static website.
+
+For example:
+
+```
+my-website/
+│
+├── _config.yml
+├── _layouts/
+│   └── default.html
+├── _includes/
+│   └── navigation.html
+├── _posts/
+│   └── 2026-11-23-first-post.md
+├── assets/
+│   └── style.css
+└── index.md
+```
+
+### What Does Jekyll Provide?
+
+| Feature | Purpose |
+|---------|---------|
+| Layouts | Reuse common page structures |
+| Includes | Reuse navigation, footer and components |
+| Collections | Organize documentation and content |
+| Posts | Create blog articles |
+| Front matter | Store page metadata |
+| Liquid | Dynamic template rendering |
+| Plugins | Extend the build system |
+| Themes | Apply predefined website designs |
+
+For example, a Markdown blog article:
+
+```markdown
+---
+title: My First Article
+date: 2026-11-23
+---
+
+# Welcome
+
+This is my first blog post.
+```
+
+Jekyll can convert it into an HTML page automatically.
+
+### Other Static Site Generators
+
+You aren't restricted to Jekyll.
+
+| Tool | Best For |
+|------|----------|
+| **Vite** | Vanilla JavaScript, React and Vue applications. Generates production files, usually in `dist/`. |
+| **Astro** | Documentation, blogs, content-focused websites and fast landing pages. |
+| **Docusaurus** | Software documentation, versioned documentation, sidebars and search integrations. |
+| **Hugo** | Fast static site generation for blogs, documentation and content-heavy websites. |
+
+&gt; For these tools, use **GitHub Actions** to build the website and deploy its output.
+
+---
+
+## 9. Repository Features Related to Website Development
+
+GitHub offers several features that make website development easier.
+
+| GitHub Feature | What It Does |
+|----------------|-------------|
+| Repositories | Store your website source code |
+| Branches | Maintain separate development versions |
+| Commits | Track individual changes |
+| Pull requests | Review proposed changes |
+| Issues | Track bugs and improvements |
+| Discussions | Community communication |
+| Actions | Automate builds and deployments |
+| Releases | Publish versioned software |
+| Projects | Organize development tasks |
+| Environments | Control deployment environments |
+| Secrets | Store sensitive workflow credentials |
+| Webhooks | Notify external services of events |
+| Dependabot | Help identify dependency updates |
+
+### Branches and Website Development
+
+You don't have to make every change directly on `main`.
+
+For example:
+
+```
+main
+ │
+ ├── feature/new-homepage
+ │
+ ├── feature/dark-mode
+ │
+ └── fix/navigation
+```
+
+You can develop a feature on a separate branch, test it, and then merge it into `main`.
+
+If your Pages source is `main`, merging into `main` triggers a new deployment.
+
+### Pull Requests
+
+A typical workflow:
+
+1. Create a feature branch.
+2. Make changes.
+3. Push the branch.
+4. Open a pull request.
+5. Review the changes.
+6. Merge into `main`.
+7. GitHub Pages deploys the updated website.
+
+This is particularly useful when working with other developers.
+
+---
+
+## 10. Can GitHub Pages Host Multiple Websites?
+
+**Yes.** You can host multiple project websites under one GitHub account.
+
+For example:
+
+| Repository | Website |
+|------------|---------|
+| `emon.github.io` | `emon.github.io` |
+| `QDoc` | `emon.github.io/QDoc/` |
+| `Markdown-Editor` | `emon.github.io/Markdown-Editor/` |
+| `PDF-Tools` | `emon.github.io/PDF-Tools/` |
+| `Documentation` | `emon.github.io/Documentation/` |
+
+You can also configure custom domains for individual sites.
+
+This means you can maintain one central personal website and separate websites for your individual software projects.
+
+---
+
+## 11. Can You Use Databases, APIs and Backend Functionality?
+
+This is an important limitation.
+
+**GitHub Pages does not provide a server-side runtime.**
+
+| Functionality | GitHub Pages |
+|---------------|-------------|
+| HTML/CSS/JS | Yes |
+| Client-side routing | Yes |
+| LocalStorage | Yes |
+| IndexedDB | Yes |
+| Fetch external APIs | Yes |
+| Static JSON files | Yes |
+| PHP backend | No |
+| Node.js server | No |
+| Python backend | No |
+| MySQL database | No |
+| Private environment variables in frontend | No |
+
+However, you can connect your website to **external services**:
+
+```
+GitHub Pages website
+HTML + CSS + JavaScript
+        │
+        ▼
+HTTPS API requests
+        │
+        ├── Supabase (Database and authentication)
+        ├── Firebase (Database and authentication)
+        ├── Cloudflare Workers (Server-side functions)
+        └── External APIs (Third-party services)
+```
+
+For example, you could build a complete Markdown editor, PDF converter interface, or GitHub repository browser on GitHub Pages.
+
+&gt; **Remember:** API secrets must **never** be embedded in public JavaScript files. Put secret credentials in a secure backend or serverless function.
+
+---
+
+## 12. Important GitHub Pages Limitations
+
+GitHub Pages is excellent for static websites, but it has usage restrictions.
+
+| Limitation | Documented Guideline |
+|------------|---------------------|
+| Published site size | 1 GB |
+| Soft bandwidth limit | 100 GB/month |
+| Build time | 10 minutes |
+| Deployment frequency | Generally no more than 10 builds per hour |
+| Website type | Static websites |
+| HTTPS | Supported |
+| Custom domains | Supported |
+
+&gt; These are published GitHub Pages limits and guidelines, **not a promise of unlimited production hosting**. Check the current official documentation for exceptions and details.
+
+**Other considerations:**
+
+- No native server-side application execution.
+- No built-in database.
+- No built-in user account system.
+- No private API secret storage in client-side code.
+- Large dynamic applications may need external services.
+
+**Official documentation:** [GitHub Pages limits](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits)
+
+---
+
+## 13. Website Security and Privacy
+
+There are some important things to understand before publishing.
+
+### 1. Public Website Means Publicly Accessible Content
+
+Even if your repository is private on a plan that supports private repositories, the **published website may still be publicly accessible**. Private source code does not automatically mean private website content.
+
+### 2. Never Upload Secrets
+
+Avoid publishing:
+
+```
+.env
+API_SECRET
+DATABASE_PASSWORD
+PRIVATE_KEY
+ACCESS_TOKEN
+```
+
+### 3. Use HTTPS
+
+Enable **Enforce HTTPS** for your website.
+
+### 4. Be Careful with API Requests
+
+Only use public API endpoints or services designed to be accessed from browsers. Check CORS permissions and authentication requirements.
+
+### 5. Keep Dependencies Updated
+
+If you use npm packages, regularly check for vulnerabilities and outdated dependencies.
+
+---
+
+## 14. Common GitHub Pages Problems and Solutions
+
+| Problem | Possible Solution |
+|---------|-------------------|
+| 404 error | Check `index.html` and publishing source |
+| CSS not loading | Check file paths and capitalization |
+| JavaScript not loading | Verify script paths |
+| Website not updating | Check Actions deployment status |
+| Blank page | Inspect browser console |
+| Images not appearing | Verify relative paths |
+| Custom domain not working | Check DNS records |
+| HTTPS unavailable | Wait for certificate provisioning |
+| React routes return 404 | Configure SPA fallback routing |
+| Jekyll build failure | Inspect build logs and dependencies |
+
+### Important Project Website Issue: Relative Paths
+
+Suppose your project URL is:
+
+```
+https://emon.github.io/QDoc/
+```
+
+**Avoid** writing:
+
+```html
+
+```
+
+This requests:
+
+```
+https://emon.github.io/script.js
+```
+
+**Instead, use:**
+
+```html
+
+```
+
+Or configure your build tool's base path correctly.
+
+This is especially important for Vite, React and Vue applications deployed under a repository subdirectory.
+
+For Vite, for example:
+
+```javascript
+// vite.config.js
+
+import { defineConfig } from "vite";
+
+export default defineConfig({
+  base: "/QDoc/"
+});
+```
+
+If you use a custom domain at the root, your base path may instead be `/`.
+
+---
+
+## 15. How to Monitor and Manage Deployments
+
+GitHub provides a dedicated interface for monitoring your website.
+
+Open your repository and select the **Actions** tab.
+
+You can inspect:
+
+- Whether a deployment succeeded or failed.
+- Which commit triggered the deployment.
+- Which workflow executed.
+- Build and deployment logs.
+- Failed steps and error messages.
+- Previous deployment runs.
+- Manually rerun failed workflows.
+
+You can also visit:
+
+```
+Repository → Settings → Pages
+```
+
+This displays your publishing source, deployment information and website URL.
+
+---
+
+## 16. Recommended Website Development Workflow
+
+For a professional development process, I recommend **separating your source code from your deployment process**.
+
+```
+Development Environment
+Ubuntu desktop
+VS Code / Sublime Text / Terminal
+        │
+        ▼
+Source Code
+website/
+├── src/
+├── public/
+├── package.json
+├── index.html
+└── vite.config.js
+        │
+        ▼
+Version Control
+GitHub repository
+Branches, commits and pull requests
+        │
+        ▼
+Automated Deployment
+GitHub Actions
+Build and deploy on every push
+        │
+        ▼
+Production
+GitHub Pages
+Live website with HTTPS
+```
+
+**My suggested approach:**
+
+1. Write your website locally on Ubuntu.
+2. Use vanilla JavaScript or Vite, depending on project complexity.
+3. Store the source code in GitHub.
+4. Use GitHub Actions for automated deployment.
+5. Use a custom domain if you want a professional address.
+6. Keep your development and production environments separate.
+
+This workflow is scalable enough for personal websites, documentation and many frontend applications.
+
+---
+
+## 17. Official GitHub Pages Resources
+
+These are the most useful documentation pages to bookmark.
+
+| Topic | Resource |
+|-------|----------|
+| GitHub Pages documentation | [GitHub Pages Docs](https://docs.github.com/en/pages) |
+| Getting started | [GitHub Pages — Getting Started](https://docs.github.com/en/pages/getting-started-with-github-pages) |
+| Creating a website | [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) |
+| Publishing configuration | [Configure publishing sources](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) |
+| Custom domains | [Managing custom domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) |
+| GitHub Actions | [GitHub Actions documentation](https://docs.github.com/en/actions) |
+| Usage limits | [GitHub Pages limits](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits) |
+
+---
+
+## 18. Final Understanding
+
+| Question | Answer |
+|----------|--------|
+| Is GitHub Pages free? | Yes, subject to plan and usage limits |
+| Do I need a domain? | No |
+| Can I use my own domain? | Yes |
+| Can I update my website anytime? | Yes |
+| Does it automatically deploy? | Yes, when configured |
+| Can I host multiple websites? | Yes |
+| Can I use vanilla JavaScript? | Yes |
+| Can I use React and Vite? | Yes, after building |
+| Can I host a backend? | No |
+| Can I host documentation? | Yes |
+| Does it provide HTTPS? | Yes |
+| Can I use GitHub Actions? | Yes |
+
+&gt; **The central idea:** GitHub is where you store and manage your website's source code. GitHub Actions can build it, and GitHub Pages hosts the resulting static website.
+
+### What I Would Recommend Learning Next
+
+Since you're interested in vanilla JavaScript and building software projects, a particularly useful next step would be learning **how to deploy a complete vanilla JavaScript application using GitHub Pages**, including:
+
+- Multiple HTML pages
+- Routing
+- Assets
+- JSON data
+- Automated deployment
+
+That knowledge will let you publish actual software projects rather than just simple static webpages.
+
+---
+
+*End of Guide*</md></sn>
   <config>
     <tags>#guide</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Mon Nov 23 2026 12:57:36 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Mon Nov 23 2026 12:57:47 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-A2SivfLM3d</id>
     <duration></duration>
   </config>
