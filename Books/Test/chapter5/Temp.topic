@@ -1,10 +1,581 @@
 
-  <sn></sn>
+  <sn><md># The Quiet Interface: A Field Guide to Theming Bootstrap with Catppuccin
+
+*Field notes from a design system that had to survive four themes, two redesigns, and one very opinionated Friday code review.*
+
+By the maintenance team · Originally published in the BootCat notebook · Revised November 2026
+
+Most interfaces do not fail because they are ugly. They fail because they are loud. A button that shouts, a table that hums, a modal that arrives with its own lighting rig — each one is technically correct, and together they leave the person using the product tired for reasons they cannot put into words. This article is about the slower, less glamorous work of making an interface *quiet*: choosing a palette that supports reading, wiring it into a framework that was not designed around it, and keeping the whole thing coherent long after the initial excitement has worn off.
+
+The example throughout is a small one. We took a standard [Bootstrap 5.3][bs-docs] install — the grid, the utilities, the components, all of it — and remapped its colour system to [Catppuccin][palette-site], a family of four pastel palettes originally built for terminals. Nothing about Bootstrap's behaviour changed. The nav still collapses, the modal still traps focus, the form validation still does its job. What changed was the surface: the colours now agree with each other, and the interface got out of the way.
+
+That sounds like a cosmetic exercise. It is not. Colour choices determine which elements are discoverable, whether text remains readable at a glance, how a state change is noticed, and whether a product feels like it was made by one team or assembled from four different tutorials. The short version is ***nothing about the framework changed***; only the surface did. If you have ever inherited a stylesheet where `--blue`, `--primary`, and `#0d6efd` all mean roughly the same thing but not quite, you already understand the problem this article is about.
+
+---
+
+## The case for a quieter interface
+
+Quiet does not mean empty. A quiet interface still has hierarchy: the primary action reads first, the destructive action reads cautiously, and the metadata sits back where it belongs. Quiet means that every visual decision is *intentional enough to be boring*. Nothing is competing for attention unless it has earned it.
+
+### What "quiet" actually means in practice
+
+In practice, a quiet interface has three properties. They are easy to state and surprisingly hard to maintain.
+
+1. **Consistent surface hierarchy.** Backgrounds progress in a predictable direction. If `crust` is the frame and `base` is the page, a card should never appear to float *below* the page it sits on.
+2. **Restrained accents.** Accent colour is spent on state and action, not decoration. A purple border that appears nowhere except focus rings teaches people what purple means. The same purple on twelve badges teaches them nothing.
+3. **Legible defaults.** The ordinary state — the one a person sees ninety percent of the time — is the state that receives the most design attention. Error states get drama. Normal states get care.
+
+&gt; A theme is not a skin you paint over a finished product. It is a set of promises about what every colour will mean, everywhere, including in the states you forgot to screenshot.
+&gt;
+&gt; — from a code review that changed how we work
+&gt;
+&gt; &gt; Then name the promises before you name the colours.
+&gt; &gt;
+&gt; &gt; — the same reviewer, in a follow-up comment
+
+That last clause is the one that kept coming back to us. It is easy to theme the happy path: the landing page, the dashboard, the settings screen with all its toggles neatly aligned. The hard part is the disabled button inside a modal inside a table that is currently loading, at 2 a.m., in the light flavour, on a machine with a colour profile nobody has heard of. A theme that only works in the screenshot is not a theme. It is a costume.
+
+### Why a pastel palette helps
+
+Pastel palettes have a useful property: their hues are distinct but their *temperature* is similar. Mauve, teal, and peach all sit at comparable levels of brightness within a given flavour. That means an accent change signals a semantic change without also producing a jarring luminance jump. In a high-contrast neon palette, switching from blue to yellow can feel like the screen changed exposure. In Catppuccin, switching from blue to mauve feels like the interface changed its mind, which is exactly the message you want an accent to send.
+
+There is a trade-off, and we should name it honestly. Pastel palettes on dark backgrounds can drift towards low contrast if you reach for the decorative colours — `overlay0`, `surface2`, and their neighbours — for body text. The palette documentation is explicit about which colours are meant for text and which are meant for surfaces; treating that guidance as optional is how you end up with "stylish" paragraphs that are difficult to read. We kept body text on `text` and `subtext1`, and reserved the quieter greys for borders and disabled states[^contrast].
+
+---
+
+## Structure is not skin: knowing which layer you are changing
+
+The first useful decision in any theming project is to separate *structure* from *surface*. Bootstrap owns structure: the twelve-column grid, flex and gap utilities, spacing scales, breakpoint behaviour, the state machine behind a dropdown. Catppuccin owns surface: hue, saturation, lightness, and the relationships between foreground and background. The mistake we see most often is trying to solve a surface problem with structural tools — adding margin to make a low-contrast card feel less cramped, for example, when the actual problem is that the card background is only two steps away from the page background.
+
+| Layer | Owns | Should not own | Where it lives |
+|:---|:---|:---|:---|
+| Structure | Grid, spacing, sizing, layout, responsive behaviour | Colour meaning | Bootstrap utilities and component classes |
+| Surface | Text, background, border, accent, state colour | Column counts and gap sizes | CSS custom properties on `:root` and `[data-theme]` |
+| Semantics | Which colour means danger, success, focus | Hex values | Your own aliases (`--state-danger`, `--state-focus`) |
+| Behaviour | Theme persistence, system preference, transitions | Visual appearance | A small script, ideally under fifty lines |
+
+The middle two rows are where most of our initial confusion lived. We started by overriding Bootstrap's `--bs-primary` directly with a Catppuccin hex value. That worked until we wanted the same colour to mean "selected" in a list and "primary action" in a form. The fix was to introduce an intermediate layer of aliases — names that describe *intent* rather than hue — and point Bootstrap's variables at those aliases.
+
+### A mental model that survives upgrades
+
+Bootstrap's colour system is built on [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties). That is good news, because a custom property is just a name with a value attached, and names can be redirected. Our cascade looks like this:
+
+1. Catppuccin publishes flavour values (`--ctp-mocha-mauve`, `--ctp-latte-blue`, and so on) as raw palette tokens.
+2. We define intent aliases (`--state-focus`, `--surface-raised`, `--text-muted`) in terms of those raw tokens. The alias definition is the same for every flavour.
+3. Bootstrap's `--bs-*` variables are assigned from the intent aliases.
+4. Components consume Bootstrap's variables, exactly as they were designed to.
+
+This ordering matters. When a new Bootstrap version renames a variable, we edit one line in step three. When Catppuccin adjusts a hue, we edit one line in step one. When a product owner decides that focus rings should be peach instead of mauve, we edit one line in step two. Three different kinds of change, three different places to make them, and no archaeology.
+
+It also gives us a clean answer to the inevitable question, "can we just hard-code this one value?" Usually the answer is no, for a reason that has nothing to do with purity:
+
+```css
+/* Names describe intent; values describe the current flavour. */
+:root {
+  --state-focus: var(--ctp-mauve);
+  --state-danger: var(--ctp-red);
+  --state-success: var(--ctp-green);
+  --surface-page: var(--ctp-base);
+  --surface-raised: var(--ctp-mantle);
+  --surface-sunken: var(--ctp-crust);
+  --text-primary: var(--ctp-text);
+  --text-muted: var(--ctp-subtext1);
+  --border-subtle: var(--ctp-surface2);
+}
+```
+
+The build step that generates the `--ctp-*` variables for each flavour is deliberately boring. There is no cleverness in it, no conditional logic, and no runtime colour maths. If you want to see what it produces for a single flavour, our task runner writes a flat file:
+
+    export CTP_FLAVOR=mocha
+    npm run tokens:generate
+    npm run tokens:verify
+
+`tokens:verify` compares the generated values against the upstream palette and fails the build on a mismatch. We added it after a dependency update quietly changed a single hex value and made our focus ring indistinguishable from a link for three weeks. Nobody reported it, which tells you something about how quietly a small colour regression travels.
+
+---
+
+## Four flavours, one vocabulary
+
+Catppuccin calls its palettes *flavours*: Latte, Frappé, Macchiato, and Mocha. They share the same colour names — `rosewater`, `flamingo`, `pink`, `mauve`, `red`, `maroon`, `peach`, `yellow`, `green`, `teal`, `sky`, `sapphire`, `blue`, `lavender`, plus the neutrals — but each flavour assigns different values. That shared vocabulary is the whole trick. A theme switch does not have to remap meanings; it only has to swap a set of values.
+
+| Flavour | Character | Base | Best suited to | Watch out for |
+|:---|:---|:---|:---|:---|
+| **Latte** | Light, warm, gently desaturated | `#eff1f5` | Documentation, daytime dashboards, print-adjacent views | Borders disappearing into `base` |
+| **Frappé** | Dark, muted, low-key | `#303446` | Long reading sessions, low-light environments | Accents feeling *too* quiet for primary actions |
+| **Macchiato** | Dark, medium contrast, balanced | `#24273a` | General-purpose product UI | Nothing in particular; it is the safest default |
+| **Mocha** | Dark, rich, saturated | `#1e1e2e` | Marketing surfaces, code-heavy tools, night mode | Overusing saturated accents in dense tables |
+
+![The four Catppuccin flavours shown side by side, from the pale Latte palette through the three darker flavours](https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/demo.png)
+
+*Figure 1. The four flavours, side by side. The hues keep their names across the family; only their values change.*
+
+At a glance, the base surfaces run from Latte's ![Latte base swatch](https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/circles/latte_base.png) soft off-white, through Frappé's ![Frappé base swatch](https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/circles/frappe_base.png) muted slate and Macchiato's ![Macchiato base swatch](https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/circles/macchiato_base.png) indigo grey, to Mocha's ![Mocha base swatch](https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/circles/mocha_base.png) near-black violet. The little swatches are easy to underestimate. They are the foundation every other decision rests on.
+
+The four flavours are not four independent themes. They are one theme with four sets of values. This distinction changes how you test. You do not need to re-review the layout in every flavour; you need to review the *relationships* — is `text` readable on `base`, is `surface0` distinct from `surface1`, does the primary button still stand out from a secondary button? If those relationships hold in the extremes (Latte and Mocha), the middle flavours almost always follow. We still check all four, because "almost always" is how bugs get a foothold, but the extreme-first approach catches most problems early.
+
+&gt; [!TIP]
+&gt; Start with Latte and Mocha, not with your favourite flavour. They are the furthest apart in luminance, so a palette decision that works at both ends has a much better chance of working in the middle.
+
+One practical consequence: ~~hard-coded hex values~~ in component CSS became a thing we actively hunt for. A search for `#` in our component stylesheets is part of the release checklist, with a small allow-list for `transparent`, `currentColor`, and one shadow definition that is intentionally neutral. Everything else has to go through a token.
+
+---
+
+## Wiring the switcher
+
+A theme switcher is a small piece of code that attracts a surprising amount of complexity. There are four things it has to do: expose a control, remember the choice, respect the system preference when there is no choice, and avoid showing the wrong theme for a split second while the page loads. We'll take them in order.
+
+### The markup
+
+We put the control in the navigation bar as a simple group of buttons. The important part is the `data-set-theme` attribute; the script reads it and does one thing.
+
+```html
+<div class="btn-group btn-group-sm" role="group" aria-label="Choose a palette flavour">
+  <button type="button" class="btn btn-outline-primary" data-set-theme="system" aria-pressed="false">System</button>
+  <button type="button" class="btn btn-outline-primary" data-set-theme="latte" aria-pressed="false">Latte</button>
+  <button type="button" class="btn btn-outline-primary" data-set-theme="frappe" aria-pressed="false">Frappé</button>
+  <button type="button" class="btn btn-outline-primary" data-set-theme="macchiato" aria-pressed="false">Macchiato</button>
+  <button type="button" class="btn btn-outline-primary" data-set-theme="mocha" aria-pressed="false">Mocha</button>
+</div>
+```
+
+Two details are easy to miss. First, `aria-pressed` is updated by the script, so the control announces its state to a screen reader rather than merely looking selected. Second, "System" is a real option, not a hidden default. People who prefer their operating system to decide should be able to get back to that behaviour after experimenting.
+
+### The script
+
+The script is intentionally tiny. It stores one string, resolves `system` through `matchMedia`, and writes the result to the root element.
+
+```js
+const root = document.documentElement;
+const keys = document.querySelectorAll('[data-set-theme]');
+const media = window.matchMedia('(prefers-color-scheme: dark)');
+
+function resolve(choice) {
+  return choice === 'system'
+    ? (media.matches ? 'mocha' : 'latte')
+    : choice;
+}
+
+function apply(choice, persist = true) {
+  const flavour = resolve(choice);
+  root.dataset.theme = flavour;
+  root.dataset.bsTheme = flavour === 'latte' ? 'light' : 'dark';
+
+  keys.forEach((key) =&gt; {
+    key.setAttribute('aria-pressed', String(key.dataset.setTheme === choice));
+  });
+
+  if (persist) localStorage.setItem('ctp-theme', choice);
+}
+
+keys.forEach((key) =&gt; {
+  key.addEventListener('click', () =&gt; apply(key.dataset.setTheme));
+});
+
+media.addEventListener('change', () =&gt; {
+  if (localStorage.getItem('ctp-theme') === 'system') apply('system', false);
+});
+
+apply(localStorage.getItem('ctp-theme') ?? 'system', false);
+```
+
+Notice that we store the *choice*, not the resolved flavour. If a person selects "System" and later changes their operating system theme, our page follows. Storing `mocha` instead would freeze them in the past.
+
+### The first-paint problem
+
+The script above runs after the document has parsed, which means the browser may paint the default colours before the saved theme is applied. On a fast machine the flash lasts a frame. On a cold cache, in a browser with extensions, it can be long enough to be unpleasant — especially when the saved theme is dark and the default page is light.
+
+The fix is a few lines in the ``, before any stylesheet can render:
+
+```html
+
+```
+
+The `try` block is not paranoia. Storage access throws in private browsing modes and in embedded webviews with restrictive settings. A theme switcher should degrade to "default theme", not to "blank page".
+
+&gt; A note on transitions: it is tempting to animate every colour change with `transition: all .3s`. Don't. On a full-page theme switch that repaints hundreds of elements, *all* includes layout-affecting properties you did not mean to animate. We transition `background-color`, `color`, and `border-color` on a short list of components, and nothing else.
+
+---
+
+## Remapping Bootstrap tokens without fighting it
+
+Bootstrap exposes a large set of `--bs-*` custom properties. Most of them are derived from a smaller set of base colours; the others are component-specific. We override the base set and let Bootstrap's own derivations do the rest wherever possible. The exceptions are the focus ring and the table stripes, both of which we handle explicitly.
+
+```css
+:root,
+[data-theme='latte'],
+[data-theme='frappe'],
+[data-theme='macchiato'],
+[data-theme='mocha'] {
+  --bs-body-bg: var(--surface-page);
+  --bs-body-color: var(--text-primary);
+  --bs-border-color: var(--border-subtle);
+  --bs-secondary-color: var(--text-muted);
+  --bs-tertiary-bg: var(--surface-sunken);
+  --bs-emphasis-color: var(--text-primary);
+
+  --bs-primary: var(--ctp-blue);
+  --bs-secondary: var(--ctp-surface2);
+  --bs-success: var(--ctp-green);
+  --bs-info: var(--ctp-sky);
+  --bs-warning: var(--ctp-yellow);
+  --bs-danger: var(--ctp-red);
+
+  --bs-link-color: var(--ctp-blue);
+  --bs-link-hover-color: var(--ctp-lavender);
+  --bs-focus-ring-color: var(--state-focus);
+}
+
+[data-bs-theme='dark'] {
+  color-scheme: dark;
+}
+```
+
+The `color-scheme` declaration is small but important. It tells the browser to render form controls, scrollbars, and other native UI in a matching style. Without it, a carefully themed dark page can still show a bright white native date picker, which breaks the illusion instantly.
+
+### Which tokens are worth overriding
+
+Not every token deserves attention. Our rule is to override a token when its default value is visible *without the user asking for anything*. That gives us a short, defensible list:
+
+- **Always override**
+  - Body background and colour — these cover the entire viewport.
+  - Link colour and its hover state — the primary navigation affordance.
+  - Border colour — it defines every card, input, and table row.
+  - Focus ring colour — a state that must be unmistakable.
+  - Semantic colours: primary, success, danger, warning, info.
+- **Override only when needed**
+  - Placeholder colour, if the default is too faint in one flavour.
+  - Table stripe background, because transparency over a tinted surface behaves differently in Latte than in Mocha.
+  - Modal backdrop opacity, which we tune per flavour rather than globally.
+- **Leave alone**
+  - Spacing and sizing scales. They are structural, and our palette has nothing to say about them.
+  - Breakpoints and z-index values. Changing these to "fix" a colour problem is a sign you are solving the wrong problem.
+  - Transition timings, except where reduced motion requires it.
+
+That last category grows more important over time. Every token you override is a token you own, and every token you own is a token you must re-check when upstream changes. We keep a count in our release notes; it is currently thirty-one, down from sixty-eight in the first version.
+
+### When the cascade bites
+
+The most frustrating bug we shipped was not a colour mistake. It was a specificity mistake: a component stylesheet loaded after our theme file, setting `--bs-body-bg` on a wrapper element. Because custom properties inherit, that wrapper and everything inside it used the old colour, while the rest of the page followed the switcher. The visual result looked like a broken gradient.
+
+The fix was not `!important`. We moved token definitions into their own stylesheet and loaded it last, then scoped component overrides to classes that never set base tokens:
+
+```diff
+- .dashboard-panel { --bs-body-bg: #ffffff; }
++ .dashboard-panel { background: var(--bs-body-bg); }
+```
+
+The diff illustrates the general rule: components should *consume* tokens, never redefine the shared ones. A component may define a private token of its own — `--panel-accent`, for instance — but the moment it says `--bs-body-bg`, it has quietly opted out of the theme system.
+
+There is one legitimate use of `!important` in our stylesheet, and we comment it every time someone asks. Third-party widgets occasionally ship hard-coded colours with high specificity. We scope the override to the widget's container and document which version of the widget requires it. When that widget is upgraded, the override is the first thing we delete.
+
+---
+
+## Components after the swap
+
+Palette work only matters at the component level. This section walks through the pieces we touch most often and the details that surprised us.
+
+### Buttons and focus
+
+Primary buttons use a saturated accent — blue by default, mauve for the "create" action in our product, red for destructive operations. Secondary buttons use a surface colour with a subtle border. The difference should be readable in greyscale, which is a quick way to catch an accent choice that is really just a decoration choice.
+
+```css
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: var(--ctp-lavender);
+  --bs-btn-hover-border-color: var(--ctp-lavender);
+  --bs-btn-active-bg: var(--ctp-sapphire);
+  --bs-btn-disabled-bg: var(--ctp-surface2);
+  --bs-btn-disabled-border-color: transparent;
+}
+```
+
+The focus ring deserves a paragraph of its own. Bootstrap's default ring uses a translucent version of the component colour. On a dark background, translucent blue can land closer to the background than the button itself, which makes keyboard navigation feel uncertain. We use a solid mauve ring with a two-pixel offset, and verify it against every surface the button can appear on: page, card, modal, and table header.
+
+&gt; Reviewer's note, preserved because it is still true: "If you can find the focus ring only by squinting, it is not a focus ring. It is a rumour."
+
+### Forms
+
+Form controls are where `color-scheme` earns its keep. Text inputs, selects, checkboxes, and the native date picker all render differently depending on it. We also set an explicit `background-image` for the validation icons only when we can match their colour to the semantic token; otherwise we let Bootstrap's own icons stand, because a half-matched icon looks worse than a consistent default.
+
+```html
+<div class="mb-3">
+  <label for="email" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="email" placeholder="you@example.com" aria-describedby="emailHelp">
+  <div id="emailHelp" class="form-text">
+    We'll only use this to send build notifications.
+  </div>
+</div>
+<div class="form-check mb-3">
+  <input class="form-check-input" type="checkbox" id="subscribe">
+  <label class="form-check-label" for="subscribe">
+    Send me the monthly changelog
+  </label>
+</div>
+```
+
+Helper text is a quiet element that often gets too loud. We place it on `subtext1`, not on `overlay1`, and give it a size step down from the label. The information is secondary; the colour should say so without making it unreadable. In Latte especially, the difference between `subtext0` and `overlay2` is small enough that we avoid using both on the same screen.
+
+### Tables and alerts
+
+Tables carry the most surface area of any component, which makes them the fastest way to expose a weak palette. Stripes, hover states, and borders all have to work together. We use `surface0` for the stripe and `surface1` on hover, with `surface2` reserved for borders. The header row gets a slightly darker background and medium-weight text, but no accent colour — a coloured header tends to pull the eye away from the data.
+
+| State | Background | Text | Border | Timing |
+|:---|:---|:---|:---|:---|
+| Resting | `base` | `text` | `surface2` | — |
+| Hover | `surface0` | `text` | `surface2` | 120ms |
+| Selected | `surface1` | `text` | `blue` | immediate |
+| Disabled | `mantle` | `overlay1` | `surface1` | — |
+| Error row | `red` at 12% | `red` | `red` at 40% | immediate |
+
+Alerts follow a similar discipline. Each semantic alert uses its colour for the border and icon, but keeps the background close to the page surface. A full-saturation red panel is appropriate for a destructive confirmation, not for a form that rejected an email address. The severity of the colour should match the severity of the event.
+
+```html
+<div class="alert alert-warning d-flex align-items-center" role="alert">
+  <span class="badge rounded-pill text-bg-warning me-3">Heads up</span>
+  <div>
+    The build finished with <strong>three warnings</strong>.
+    Nothing failed, but the output changed.
+  </div>
+</div>
+```
+
+### Modals and layered surfaces
+
+Modals reveal whether your surface hierarchy is real. A modal backdrop dims the page; the modal itself must read as *above* it. In dark flavours we use `mantle` for the modal background and `crust` for the page beneath, so the layer order follows the palette's natural progression. In Latte we invert the logic: the page is `base`, the modal is `base` again with a stronger shadow, and the backdrop uses a neutral translucent overlay. Trying to use the same layering rule in both directions was our first significant mistake.
+
+- What worked in the end
+  - One rule for dark flavours: each layer is *lighter* than the one below it.
+  - One rule for Latte: each layer is *whiter* than the one below it, reinforced by shadow.
+  - The backdrop is never coloured with an accent. Its job is to recede.
+- What did not work
+  - A translucent mauve backdrop. It looked clever and made every modal feel like a celebration.
+  - A coloured modal header. It competed with the alert inside the modal and confused the hierarchy.
+  - Animating the backdrop separately from the dialog. The two arrived at different times and felt broken.
+
+### A review checklist that actually gets used
+
+We keep this list beside the pull request template. The checked items are the ones that have caught real regressions; the unchecked ones are reminders for the next release, not signs of unfinished work.
+
+- [x] Check the page in Latte and Mocha, not just the default flavour.
+- [x] Tab through every interactive element and confirm the focus ring is visible.
+- [x] Search changed stylesheets for `#` and justify every remaining hex value.
+- [x] Confirm `color-scheme` matches the selected flavour.
+- [ ] Capture updated screenshots for the documentation site.
+- [ ] Re-run the keyboard pass after the next Bootstrap minor upgrade.
+- [ ] Ask someone who has not seen the change to find the primary action in under three seconds.
+
+That last item is deliberately subjective. We have caught more hierarchy problems with that one informal test than with any automated check, because it measures what the interface *communicates* rather than what it contains.
+
+---
+
+## Accessibility is not a palette decision alone
+
+It is tempting to treat accessibility as a contrast calculation you perform once and file away. Contrast is necessary, but it is only the beginning. A theme also has to survive keyboard navigation, screen readers, reduced-motion preferences, forced-colour modes, and the simple fact that people use interfaces in environments you cannot control.
+
+### Contrast as a relationship, not a number
+
+We measure contrast between *pairs* that actually occur in the product: text on page, text on card, muted text on stripe, button label on button background, focus ring on every surface it can appear against. Measuring colours in isolation tells you very little. `subtext1` may have excellent contrast on `base` and fail completely on `surface2`.
+
+| Pair | Latte | Macchiato | Mocha | Target |
+|:---|---:|---:|---:|---:|
+| `text` on `base` | 12.1:1 | 13.4:1 | 13.6:1 | ≥ 7:1 |
+| `subtext1` on `base` | 7.4:1 | 10.3:1 | 10.6:1 | ≥ 7:1 |
+| `text` on `surface0` | 10.6:1 | 11.2:1 | 11.5:1 | ≥ 7:1 |
+| `blue` on `base` | 5.2:1 | 5.7:1 | 6.1:1 | ≥ 4.5:1 |
+| focus ring on `mantle` | 4.8:1 | 5.1:1 | 5.4:1 | ≥ 3:1 |
+
+These figures are from our own measurements of the flavour values in use; your rendered values will depend on the exact tokens you choose. The target column follows [WCAG 2.2][wcag] guidance: 4.5:1 for ordinary text, 7:1 for enhanced contrast, and 3:1 for non-text elements such as focus indicators[^motion]. We aim for the enhanced threshold on body copy because pastel palettes give us enough room to do so without sacrificing their character.
+
+### Motion and the people who don't want it
+
+A theme switch is animation-adjacent work. Even if you do not add a dedicated transition, the browser may animate native controls. Respecting `prefers-reduced-motion` is a few lines of CSS and one of the highest-value accessibility changes you can make.
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+```
+
+The `!important` declarations here are intentional and standard practice for this particular override: a user preference should win over component-level animation settings. This is the one case where the earlier "no `!important`" rule has an explicit exception, and the comment in the stylesheet says so.
+
+### Testing with a keyboard, not a mouse
+
+Automated contrast checks are useful, but they cannot tell you whether a focus order is sensible. Our manual pass follows a fixed sequence:
+
+1. Load the page with no saved theme, so the system preference decides the starting flavour.
+2. Press <kbd>Tab</kbd> from the very top and follow the ring through the navigation, including the flavour buttons.
+3. Open a modal with the keyboard, tab to the last control, and confirm focus does not escape behind the backdrop.
+4. Switch flavour *while the modal is open* and confirm the modal updates along with the page.
+5. Close the modal with <kbd>Escape</kbd> and confirm focus returns to the trigger.
+6. Repeat with `prefers-reduced-motion` enabled at the operating-system level.
+
+Step four is the one we added after a bug report. Our first switcher updated `document.documentElement` but left the modal's portal outside the styled tree, so the dialog kept the old colours while the rest of the page changed. It looked like a rendering glitch and was, in fact, a scope problem.
+
+---
+
+## A small refactor, start to finish
+
+Theory is cheap. This section documents an actual afternoon of work: taking one component from hard-coded Bootstrap defaults to a flavour-aware implementation. The component is a simple "build status" card with a title, a badge, and a progress element. Nothing about it is exotic, which is why it is a good example.
+
+### The starting point
+
+The original markup was fine. The CSS was where the trouble lived.
+
+```css
+.status-card {
+  background: #ffffff;
+  color: #212529;
+  border: 1px solid #dee2e6;
+  border-radius: .5rem;
+}
+
+.status-card .badge {
+  background: #0d6efd;
+}
+
+.status-card .progress-bar {
+  background: #198754;
+}
+```
+
+Three hard-coded neutral colours, two hard-coded accents, and no relationship to the rest of the page. In Latte it looked acceptable by accident. In Mocha it was a bright white rectangle floating in a dark interface.
+
+### Step 1: name the intent
+
+Before touching a value, we write down what each colour is *for*. This takes five minutes and regularly saves an hour of guesswork later.
+
+| Old value | Intent | Token |
+|:---|:---|:---|
+| `#ffffff` | Raised surface | `--surface-raised` |
+| `#212529` | Primary text | `--text-primary` |
+| `#dee2e6` | Subtle border | `--border-subtle` |
+| `#0d6efd` | Informational badge | `--bs-info` |
+| `#198754` | Progress / success | `--bs-success` |
+
+The table is not documentation for its own sake. It is the diff review: a reviewer can check the mapping without opening a colour picker.
+
+### Step 2: put the flavour behind a variable
+
+Now we rewrite the CSS using only tokens. The component no longer knows which flavour is active, and it no longer needs to.
+
+```css
+.status-card {
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--bs-border-radius);
+}
+
+.status-card .badge {
+  background: var(--bs-info);
+  color: var(--ctp-crust);
+}
+
+.status-card .progress-bar {
+  background: var(--bs-success);
+}
+```
+
+Note the badge text colour. A saturated `sky` badge works with a dark label in every flavour, because `crust` is dark in Latte and darker still in the other three. Choosing `white` instead would have failed in Latte, where `sky` is a light blue. This is the kind of relationship that only appears when you check both extremes.
+
+### Step 3: verify in all four flavours
+
+The verification is scripted, but the final look is not. We generate screenshots at a fixed viewport in each flavour and compare them side by side.
+
+```bash
+for flavour in latte frappe macchiato mocha; do
+  CTP_FLAVOR="$flavour" npm run storybook:screenshot -- --component=status-card
+done
+npm run a11y:check -- --pairs=status-card
+```
+
+The first command produces four images. The second checks the pairs we listed earlier, with the component's actual rendered backgrounds. Both have to pass before the pull request is reviewed. When a human finally looks at the four images, they are checking something no script can measure: does the card still feel like it belongs to the same product?
+
+---
+
+## Pitfalls I keep running into
+
+Every long-lived theming project accumulates a small museum of mistakes. These are ours, offered in the hope that yours will be shorter.
+
+- **Translucent black as a universal shade.** `rgba(0, 0, 0, 0.1)` looks neutral until you place it over a violet-tinted dark surface, where it reads as muddy brown. Use the palette's own surface steps instead.
+- **The "one more border" reflex.** When two surfaces are too similar, the first instinct is often to add a border. Sometimes the right fix is to pick surfaces that are further apart. Adding borders everywhere produces an interface made of boxes.
+- **Semantic colours used for decoration.** A green dot meaning "online" is useful. A green left border on every card because it looks fresh is not. Once a colour has a meaning, spending it on nothing dilutes it.
+  - Related: a yellow warning badge on a yellow informational callout. Two yellows with different meanings on one screen is one yellow too many.
+- **Forgetting disabled states.** Disabled controls need to be clearly inactive but not invisible. `overlay1` on `surface1` works in dark flavours; in Latte we use `subtext0` on `surface2` and accept the slightly stronger appearance.
+- **Assuming the system preference never changes.** People switch their operating system theme at night. If your switcher is set to "System", it must listen for that change.
+  - And if it is *not* set to "System", it must not follow the change. These are two different bugs and we have shipped both.
+- **Testing only on the default flavour.** A theme that works in Macchiato is a Macchiato theme. It is not yet a product theme.
+- **Letting a component redefine a shared token.** One component doing this is a curiosity. Three doing it is a system whose behaviour depends on stylesheet load order.
+- **Treating documentation as a chore.** When a token is undocumented, someone will invent a local replacement. We have found three different "muted text" colours in a single codebase, each created by a person who could not find the real one.
+
+The pattern behind most of these is the same: a local fix that solves today's screenshot while weakening tomorrow's system. The discipline is not harder than the shortcut; it just asks you to name what you are doing before you do it.
+
+---
+
+## Keeping the theme alive for years
+
+The hardest part of a theming project is the part after launch. Bootstrap releases minor versions. Catppuccin refines a hue. A new component arrives with its own opinion about borders. Without a maintenance rhythm, the theme slowly drifts back towards the framework defaults, and nobody notices until someone compares a screenshot from two years ago.
+
+Our release checklist is deliberately short enough that people actually run it:
+
+- [x] Regenerate tokens from the upstream palette and review the diff.
+- [x] Run the contrast-pair check across all four flavours.
+- [x] Tab through the main navigation and one modal in each flavour.
+- [x] Search for hard-coded colours in changed files.
+- [x] Confirm the first-paint script still runs before the stylesheet.
+- [ ] Update the documentation screenshots when a visual token changes.
+- [ ] Review the list of `!important` exceptions and remove any that are no longer needed.
+
+&gt; The goal is not to freeze the design. It is to make change legible. If you can explain, in one sentence, why every colour in a component is what it is, the theme is healthy. If you cannot, it is already drifting — you just have not measured it yet.
+
+### Documentation as a repair tool
+
+We keep three documents next to the code: a token table, a decision log, and a short page of "known exceptions". The token table maps intent names to flavour values. The decision log records why we chose a token, including the options we rejected. The exceptions page lists the handful of places where we knowingly break a rule, with the condition under which the exception may be removed.
+
+The decision log has been the most useful of the three. It turns arguments that happened once into answers that remain available. When someone asks why the focus ring is mauve rather than blue, the log says: blue is the primary action colour, and using it for focus would blur the distinction between "you can click this" and "the keyboard is here". Nobody has to re-litigate that choice, and more importantly, nobody has to guess whether it was deliberate.
+
+Further reading we return to often:
+
+- The [Bootstrap CSS variables reference][bs-vars], for the authoritative list of `--bs-*` tokens.
+- The project's home at <https: catppuccin.com="">, and the [palette page][palette-site] in particular, for flavour values and usage guidance.
+- The [WCAG 2.2 contrast guidance][wcag], for the numbers behind our accessibility targets.
+- The [MDN guide to `prefers-color-scheme`][mdn-scheme], for the details of system preference handling.
+- Our own [token generation script][tokens-repo], which is small enough to read in one sitting[^footnote].
+
+---
+
+## Closing: the point of quiet
+
+A quiet interface is not the absence of design. It is design that has done its arguing in advance, so that the person using the product does not have to do it in real time. Every token we named, every contrast pair we measured, and every keyboard pass we ran was a small argument settled before it could become a question in someone else's head.
+
+The result in this case is unremarkable in the best possible way. The navigation collapses when it should. The modal opens, traps focus, and closes with <kbd>Escape</kbd>. The buttons read clearly, the tables stay calm, and the four flavours feel like the same product seen under different lighting. Nothing about the interface asks to be admired. That is the compliment we were aiming for.
+
+If you take one thing from this article, let it be the ordering: name the intent, then attach a value, then let the framework consume it. Reversing that order produces a stylesheet that works today and resists you tomorrow. Keeping it produces a theme that can absorb four palettes, two redesigns, and one very opinionated Friday code review without falling apart.
+
+---
+
+[^contrast]: Catppuccin's official guidance distinguishes text colours from surface colours, and our palette tokens follow that distinction. Where we deviate, it is recorded in the decision log rather than left implicit in a stylesheet.
+[^motion]: We target enhanced contrast (7:1) for body copy where the palette allows it, and the standard 3:1 threshold for non-text indicators such as focus rings and component boundaries.
+[^footnote]: The token generator began as a forty-line shell script and grew to a small Node package when we needed the same values in three build targets. It still has no runtime dependencies.
+
+[bs-docs]: https://getbootstrap.com/docs/5.3/
+[bs-vars]: https://getbootstrap.com/docs/5.3/customize/css-variables/
+[palette-site]: https://catppuccin.com/palette/
+[wcag]: https://www.w3.org/TR/WCAG22/
+[mdn-scheme]: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
+[tokens-repo]: https://github.com/catppuccin/palette
+</https:></md></sn>
   <config>
     <tags>#temp</tags>
     <thumbnail></thumbnail>
     <heading></heading>
-    <udate>Sat Nov 28 2026 00:55:33 GMT+0600 (Bangladesh Standard Time)</udate>
+    <udate>Sat Nov 28 2026 00:56:30 GMT+0600 (Bangladesh Standard Time)</udate>
     <id>article-bBvXJZ788h</id>
     <duration></duration>
   </config>
